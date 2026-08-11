@@ -1,6 +1,6 @@
 # FeatureForDevice
 
-设备特性枚举。
+Enumerates device features.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 WIFI_P2P = 0
 ```
 
-Wi-Fi P2P（点对点连接），允许设备在没有接入点的情况下直接相互连接。禁用后，设备无法通过Wi-Fi P2P进行点对点连接，影响文件传输、游戏联机、屏幕共享等需要直接Wi-Fi连接的应用功能。
+Wi-Fi P2P (peer-to-peer connection), which allows devices to directly connect to each other without an access point. Once this feature is disallowed, devices cannot be connected through Wi-Fi P2P, affecting application functions that require direct Wi-Fi connections, such as file transfer, online gaming, and screen sharing.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Wi-Fi P2P（点对点连接），允许设备在没有接入点的情况下直�
 X_KEY = 1
 ```
 
-x键
+X key.
 
 **Since:** 26.1.0
 
@@ -52,7 +52,7 @@ x键
 LOCAL_INPUT = 2
 ```
 
-本地输入（包含键盘、鼠标、触控板、触摸屏等）被禁用后，无法通过本地输入进行操作。重启设备可解除禁用。在息屏状态下禁用会导致屏幕无法唤醒，若禁用后屏幕自动息屏，同样会导致无法唤醒屏幕。
+After local input (including the keyboard, mouse, touchpad, and touchscreen) is disabled, operations cannot be performed through local input. You can restart the device to cancel the disabling. If local input is disabled when the screen is off, the screen cannot be woken up. If the screen automatically turns off after this feature is disabled, the screen also cannot be woken up.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ LOCAL_INPUT = 2
 PACKET_FILTERING = 3
 ```
 
-网络包过滤
+Network packet filtering.
 
 **Since:** 26.1.0
 
@@ -88,7 +88,7 @@ PACKET_FILTERING = 3
 SUDO = 4
 ```
 
-超级用户执行
+Super user do.
 
 **Since:** 26.1.0
 
@@ -106,7 +106,7 @@ SUDO = 4
 TRAFFIC_REDIRECTION = 5
 ```
 
-网络流量重定向管控策略。禁用后，无法将TCP流量重定向到其它端口，取消禁用之后可恢复使用。当前仅支持PC/2in1设备使用。
+Policy for controlling network traffic redirection. After this capability is disabled, TCP traffic cannot be redirected to other ports. You can cancel the disabling to restore the feature. Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ TRAFFIC_REDIRECTION = 5
 CORE_DUMP = 6
 ```
 
-创建文件转储。禁用后，无法通过任务管理器创建文件转储。当前仅支持PC/2in1设备使用。
+Create a file dump. After this capability is disabled, file dumps cannot be created through the task manager.Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ CORE_DUMP = 6
 RS232 = 7
 ```
 
-RS-232串口管控策略。禁用后，无法通过RS-232串口传输数据。当前仅支持PC/2in1设备使用（部分设备不支持RS-232串口）。
+RS-232 serial port control policy. If this capability is disabled, data cannot be transmitted via the RS-232serial port. Currently, this capability is supported only on PCs/2-in-1 devices. (some devices do not support the RS-232 serial port).
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ RS-232串口管控策略。禁用后，无法通过RS-232串口传输数据。�
 DISK_ERASURE = 8
 ```
 
-磁盘擦除能力。禁用后，"磁盘擦除"入口将被置灰。当前仅支持PC/2in1设备使用。
+Disk erasure capability. Once disabled, the "Disk Erasure" entry will be grayed out. Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -178,9 +178,9 @@ DISK_ERASURE = 8
 BLUETOOTH = 9
 ```
 
-设备蓝牙能力。当已经通过  
-[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#adddisallowedbluetoothdevices)接口或者  
-[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices)接口设置了蓝牙设备禁用名单或者允许名单，再禁用设备蓝牙能力，会优先生效禁用设备蓝牙能力。直到设备蓝牙能力启用后，禁止或允许名单才会生效。
+Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is configured via  
+[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#adddisallowedbluetoothdevices)or  
+[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices),disabling Bluetooth via this API takes priority. The blocklist or trustlist will only take effect after Bluetooth is re-enabled.
 
 **Since:** 26.0.0
 
@@ -198,7 +198,7 @@ BLUETOOTH = 9
 MODIFY_DATE_TIME = 10
 ```
 
-设备修改系统时间能力。
+Device capability to modify system time.
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ MODIFY_DATE_TIME = 10
 PRINTER = 11
 ```
 
-设备打印能力。禁用了设备打印能力时，通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口开启某用户的打印能力，该用户下的打印能力仍然被禁用。
+Device printing capability. When the device printing capability has been disabled, enabling printing for a specific user via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API will not take effect. The printing capability remains disabled for that user.
 
 **Since:** 26.0.0
 
@@ -234,7 +234,7 @@ PRINTER = 11
 HDC = 12
 ```
 
-被其他设备通过hdc连接、调试的能力。设置禁用后，其他设备无法通过hdc连接、调试此设备。
+Capability for other devices to connect to and debug this device via HDC. Disabling this capability prevents external devices from connecting or debugging via HDC.
 
 **Since:** 26.0.0
 
@@ -252,7 +252,7 @@ HDC = 12
 MICROPHONE = 13
 ```
 
-设备麦克风能力。
+Device microphone capability.
 
 **Since:** 26.0.0
 
@@ -270,7 +270,8 @@ MICROPHONE = 13
 FINGERPRINT = 14
 ```
 
-设备指纹认证能力。当已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)设置了某用户禁用设备指纹认证能力时，再启用设备指纹认证能力，会报策略冲突。
+Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via  
+[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
 
 **Since:** 26.0.0
 
@@ -288,19 +289,14 @@ FINGERPRINT = 14
 USB = 15
 ```
 
-设备USB能力。禁用后外接的USB设备无法使用，即在当前设备为HOST模式时，无法外接其他DEVICE设备。
+Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices).
 
-以下五种情况再禁用设备USB能力，会报策略冲突。
+If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
 
-1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。
-
-2）通过[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy)接口设置了USB存储设备访问策略为只读/禁用。
-
-3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口添加了禁止使用的USB设备类型。
-
-4）通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。
-
-5）禁用USB转串口（[USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)）。
+1. A list of allowed USB devices has been configured via the  
+[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices) API.2. USB storage device access policy has been set to read-only or disabled via the  
+[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy) API.3. Specific USB device types have been blocked via the  
+[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices) API.4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API.5. USB-to-serial conversion ([USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)) is disabled.
 
 **Since:** 26.0.0
 
@@ -318,7 +314,7 @@ USB = 15
 WIFI = 16
 ```
 
-设备Wi-Fi能力。
+Device Wi-Fi capability.
 
 **Since:** 26.0.0
 
@@ -336,7 +332,7 @@ WIFI = 16
 TETHERING = 17
 ```
 
-网络共享能力（设备已有网络共享给其他设备的能力，即共享热点能力）。
+Network tethering capability (the ability to share the device's internet connection with other devices, that is,hotspot sharing).
 
 **Since:** 26.0.0
 
@@ -354,7 +350,7 @@ TETHERING = 17
 INACTIVE_USER_FREEZE = 18
 ```
 
-非活跃用户运行能力。禁用后，非UIAbility进程一般不会被冻结，UIAbility申请短时任务、长时任务、延迟任务或能效资源等后台运行任务也不会被冻结。当前仅支持PC/2in1设备使用。企业空间场景下，系统切换到企业空间用户，个人空间用户属于非活跃用户。
+Capability of freezing inactive users. When this capability is disabled, non-**UIAbility** processes will generally not be frozen, and background tasks requested by **UIAbility** (such as transient tasks, continuous tasks, deferred tasks, or energy efficiency resources) will also not be frozen. Currently, this capability is supported only on PCs/2-in-1 devices. When the system switches to the enterprise space user, the personal space users are inactive users.
 
 **Since:** 26.0.0
 
@@ -372,7 +368,7 @@ INACTIVE_USER_FREEZE = 18
 CAMERA = 19
 ```
 
-设备相机能力。
+Device camera capability.
 
 **Since:** 26.0.0
 
@@ -390,8 +386,8 @@ CAMERA = 19
 MTP_CLIENT = 20
 ```
 
-MTP客户端能力（包含读取和写入），当前仅支持PC/2in1设备使用。MTP（MediaTransferProtocol，媒体传输协议），该协议允许用户在移动设备上线性访问媒体文件。当已经通过  
-[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)设置了某用户禁用MTP客户端写入能力时，再禁用MTP客户端能力，会报策略冲突。
+Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via  
+[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
 
 **Since:** 26.0.0
 
@@ -409,7 +405,7 @@ MTP客户端能力（包含读取和写入），当前仅支持PC/2in1设备使�
 MTP_SERVER = 21
 ```
 
-MTP服务端能力，当前仅支持手机、平板设备使用。
+MTP server capability, currently supported only on phone and tablets.
 
 **Since:** 26.0.0
 
@@ -427,7 +423,9 @@ MTP服务端能力，当前仅支持手机、平板设备使用。
 SAMBA_CLIENT = 22
 ```
 
-samba客户端能力，当前仅支持PC/2in1设备使用。samba是在Linux和UNIX系统上实现SMB协议的一个免费软件，由服务器及客户端程序构成。SMB（Server Message Block，信息服务块）是一种在局域网上共享文件和打印机的一种通信协议，它为局域网内的不同计算机之间提供文件及打印机等资源的共享服务。SMB协议是客户机/服务器型协议，客户机通过该协议可以访问服务器上的共享文件系统、打印机及其他资源。
+Samba client capability, currently supported only on PC/2-in-1 devices.
+
+Samba is a free software that implements the SMB protocol on Linux and UNIX systems, consisting of both server and client programs. Server Message Block (SMB) is a communication protocol for sharing files and printers over the local area network (LAN). It provides resource-sharing services, such as files and printers, among different computers within the LAN. As a client/server protocol, SMB allows clients to access shared resources hosted on servers.
 
 **Since:** 26.0.0
 
@@ -445,7 +443,7 @@ samba客户端能力，当前仅支持PC/2in1设备使用。samba是在Linux和U
 SAMBA_SERVER = 23
 ```
 
-samba服务端能力，当前仅支持PC/2in1设备使用。
+Samba server capability, currently supported only on PC/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -463,8 +461,8 @@ samba服务端能力，当前仅支持PC/2in1设备使用。
 BACKUP_AND_RESTORE = 24
 ```
 
-备份和恢复能力，禁用后设备的"设置--系统--备份和恢复"、"设置--云空间"置灰，当前仅支持手机、平板使用。如果要完全禁用设备的备份和恢复能力，建议同时调用  
-[applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync)接口禁止具备备份和恢复能力的应用运行，如备份和恢复、手机助手、云空间应用。
+Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore**and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call  
+[applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync)to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
 
 **Since:** 26.0.0
 
@@ -482,7 +480,7 @@ BACKUP_AND_RESTORE = 24
 MAINTENANCE_MODE = 25
 ```
 
-设备维修模式能力。
+Device maintenance mode capability.
 
 **Since:** 26.0.0
 
@@ -500,7 +498,7 @@ MAINTENANCE_MODE = 25
 MMS = 26
 ```
 
-multimedia messaging service，设备接收、发送彩信的能力，当前仅支持手机、平板设备使用。
+Multimedia Messaging Service (MMS) capability to receive and send multimedia messages. Currently, this feature is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -518,7 +516,7 @@ multimedia messaging service，设备接收、发送彩信的能力，当前仅�
 SMS = 27
 ```
 
-short messaging service，设备接收、发送短信的能力，当前仅支持手机、平板设备使用。
+Short Messaging Service (SMS) capability to receive and send SMS messages. Currently, this feature is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -536,7 +534,7 @@ short messaging service，设备接收、发送短信的能力，当前仅支持
 MOBILE_DATA = 28
 ```
 
-蜂窝数据能力，当前仅支持手机、平板设备使用。
+Cellular data capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -554,7 +552,7 @@ MOBILE_DATA = 28
 AIRPLANE_MODE = 29
 ```
 
-飞行模式能力，当前仅支持手机、平板设备使用。
+Airplane mode capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -572,7 +570,7 @@ AIRPLANE_MODE = 29
 VPN = 30
 ```
 
-Virtual Private Network（虚拟专用网络），VPN能力。
+Virtual Private Network (VPN) capability.
 
 **Since:** 26.0.0
 
@@ -590,8 +588,8 @@ Virtual Private Network（虚拟专用网络），VPN能力。
 NOTIFICATION = 31
 ```
 
-设备通知能力。禁用后，由系统应用和第三方应用发出的通知将不会显示，而系统服务通知能力不受影响。当此设备已经通过  
-[addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addallowednotificationbundles)设置了应用通知允许名单之后，再禁用设备通知能力，会抛出错误码9200010。
+Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via  
+[addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addallowednotificationbundles),error code 9200010 will be reported.
 
 **Since:** 26.0.0
 
@@ -609,7 +607,7 @@ NOTIFICATION = 31
 NFC = 32
 ```
 
-Near Field Communication（近距离无线通信），NFC能力，当前仅支持手机、平板设备使用。
+Near Field Communication (NFC) capability, which is supported only on phones and tablets.
 
 **Since:** 26.0.0
 
@@ -627,7 +625,7 @@ Near Field Communication（近距离无线通信），NFC能力，当前仅支�
 PRIVATE_SPACE = 33
 ```
 
-创建隐私空间能力，当前仅支持手机、平板使用。对已创建的隐私空间无效。
+Privacy space creation capability, which is supported only on smartphones and tablets. This setting does not affect existing private spaces.
 
 **Since:** 26.0.0
 
@@ -645,7 +643,7 @@ PRIVATE_SPACE = 33
 TELEPHONE_CALL = 34
 ```
 
-设备通话能力，禁用后电话无法呼入和呼出。当前仅支持手机、平板设备使用。
+Call capability. Disabling this feature blocks incoming or outgoing calls. Currently, this feature is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -663,7 +661,7 @@ TELEPHONE_CALL = 34
 APP_CLONE = 35
 ```
 
-[应用分身能力](../../../quick-start/app-clone.md)，禁用后无法创建应用分身。对已创建的应用分身无效。
+[Application clone capability](../../../quick-start/app-clone.md). When this feature is disabled, new application clones cannot be created. This feature is invalid for the application clone that has been created.
 
 **Since:** 26.0.0
 
@@ -681,9 +679,9 @@ APP_CLONE = 35
 EXTERNAL_STORAGE_CARD = 36
 ```
 
-外置存储能力，禁用后设备无法使用外置存储，并且当前已连接的外置存储会被卸载。如果外置存储卸载时有文件正在被使用，可能会导致卸载失败，返回9200013错误码。
+External storage capability. Disabling this feature prohibits the use of external storage and unmounts currently connected external storage. If files are in use during unmounting, unmounting may fail with error code 9200013.
 
-外置存储禁用后重新启用，需要手动重新连接外置存储。
+After external storage is disabled and then enabled again, you need to manually reconnect the external storage.
 
 **Since:** 26.0.0
 
@@ -701,7 +699,7 @@ EXTERNAL_STORAGE_CARD = 36
 RANDOM_MAC = 37
 ```
 
-Wi-Fi连接时使用随机MAC能力，设置禁用后，连接Wi-Fi仅能使用设备物理MAC。
+Random MAC address capability for Wi-Fi connections. When this feature is disabled, only the device's physical MAC address can be used for Wi-Fi connections.
 
 **Since:** 26.0.0
 
@@ -719,7 +717,8 @@ Wi-Fi连接时使用随机MAC能力，设置禁用后，连接Wi-Fi仅能使用�
 UNMUTE_DEVICE = 38
 ```
 
-设备媒体播放声音能力，设置禁用后，设备媒体播放将静音，[蜂窝通话](../../../media/audio/audio-call-overview.md)能力不受影响。
+Device audio playback capability. When this feature is disabled, media playback will be muted, while  
+[cellular calls](../../../media/audio/audio-call-overview.md) remain unaffected.
 
 **Since:** 26.0.0
 
@@ -737,7 +736,9 @@ UNMUTE_DEVICE = 38
 HDC_REMOTE = 39
 ```
 
-设备通过hdc调试其他设备的能力，当前仅支持PC/2in1设备设置。设置禁用后，无法通过hdc调试手机、平板、PC、智能手表等设备。
+Capability of the device to debug other devices through HDC. Currently, this feature can be set only for PCs/2-in  
+-1 devices. Disabling this capability prevents debugging smartphones, tablets, PCs, smart watches, and other  
+devices via HDC.
 
 **Since:** 26.0.0
 
@@ -755,7 +756,7 @@ HDC_REMOTE = 39
 VIRTUAL_SERVICE = 40
 ```
 
-设备虚拟化服务能力，即利用硬件资源的冗余，以虚拟化方式运行其他平台（如Linux、Windows）的能力。设置禁用设备虚拟化服务能力时，建议同时卸载与虚拟化服务相关的应用，并禁止其再次安装。
+Device virtualization service capability, which refers to the system capability of running other operating system platforms (such as Linux and Windows) through virtualization technology by leveraging the redundancy of the device's hardware resources. If this capability is disabled, it is advised to uninstall all applications related to the virtualization service and prohibit their reinstallation.
 
 **Since:** 26.0.0
 
@@ -773,11 +774,10 @@ VIRTUAL_SERVICE = 40
 USB_SERIAL = 41
 ```
 
-设备USB转串口能力。禁用后外接的USB转串口设备无法使用。以下两种情况再禁用设备USB转串口能力，会报策略冲突。
+Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict:
 
-1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。
-
-2）禁用设备USB能力（[USB](arkts-mdm-restrictions-featurefordevice-e.md)）。
+1. A list of allowed USB devices has been configured via the  
+[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices) API.2. The device ([USB](arkts-mdm-restrictions-featurefordevice-e.md)) capability has been disabled.
 
 **Since:** 26.0.0
 
@@ -795,7 +795,7 @@ USB_SERIAL = 41
 SCREEN_SHOT = 42
 ```
 
-截屏能力，禁用后无法进行截屏操作。
+Screenshot capability. After this capability is disabled, screenshots cannot be taken.
 
 **Since:** 26.0.0
 
@@ -813,7 +813,7 @@ SCREEN_SHOT = 42
 SCREEN_RECORD = 43
 ```
 
-录屏能力，禁用后无法进行录屏操作。
+Screen recording capability. After this capability is disabled, screen recording cannot be performed.
 
 **Since:** 26.0.0
 
@@ -831,7 +831,7 @@ SCREEN_RECORD = 43
 DISK_RECOVERY_KEY = 44
 ```
 
-恢复[密钥导出](../../../security/UniversalKeystoreKit/huks-export-key-arkts.md)能力，当前仅支持PC/2in1设备使用。
+[Key export](../../../security/UniversalKeystoreKit/huks-export-key-arkts.md) recovery capability. Currently, it is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -849,7 +849,7 @@ DISK_RECOVERY_KEY = 44
 NEAR_LINK = 45
 ```
 
-星闪（NearLink）能力。
+NearLink capability.
 
 **Since:** 26.0.0
 
@@ -867,7 +867,7 @@ NEAR_LINK = 45
 DEVELOPER_MODE = 46
 ```
 
-开发者模式，禁用后设备重启生效。
+Developer mode. Disabling this feature takes effect after the device is restarted.
 
 **Since:** 26.0.0
 
@@ -885,7 +885,7 @@ DEVELOPER_MODE = 46
 RESET_FACTORY = 47
 ```
 
-恢复出厂设置能力。
+Factory reset capability.
 
 **Since:** 26.0.0
 
@@ -903,7 +903,7 @@ RESET_FACTORY = 47
 REMOTE_DESK = 48
 ```
 
-远程桌面能力。
+Remote desktop capability.
 
 **Since:** 26.0.0
 
@@ -921,7 +921,7 @@ REMOTE_DESK = 48
 REMOTE_DIAGNOSIS = 49
 ```
 
-远程诊断能力。
+Remote diagnosis capability.
 
 **Since:** 26.0.0
 
@@ -939,7 +939,7 @@ REMOTE_DIAGNOSIS = 49
 OTA_UPDATE = 50
 ```
 
-公网系统升级能力。
+Public network system upgrade capability.
 
 **Since:** 26.0.0
 

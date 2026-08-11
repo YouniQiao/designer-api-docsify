@@ -23,7 +23,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
     options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
 ```
 
-通过组件范围获取组件截图。
+Get a component snapshot by component range.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID detected. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
-| 202 | The caller is not a system application. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID detected. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 

@@ -1,6 +1,6 @@
 # IconOptions
 
-定义图标选项。
+Defines the icon options.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 color?: ResourceColor
 ```
 
-图标颜色。不传入时使用默认颜色（浅色模式为'#99182431'，表示深灰色，60%不透明度，深色模式为'#99ffffff'，表示白色，60%不透明度）。
+Icon color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -38,7 +38,7 @@ color?: ResourceColor
 size?: Length
 ```
 
-图标尺寸，不传入单位时默认单位为vp，不支持百分比。传入百分比时，不生效。
+Icon size. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -60,7 +60,7 @@ size?: Length
 src?: ResourceStr
 ```
 
-图标/图片源。不传入时使用系统默认图标。
+Image source of the icon.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

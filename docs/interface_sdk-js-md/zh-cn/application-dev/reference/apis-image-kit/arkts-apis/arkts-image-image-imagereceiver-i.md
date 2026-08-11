@@ -22,12 +22,6 @@ ImageReceiver类，用于获取组件surface id、接收最新的图片和读取
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## getReceivingSurfaceId
 
 ```TypeScript

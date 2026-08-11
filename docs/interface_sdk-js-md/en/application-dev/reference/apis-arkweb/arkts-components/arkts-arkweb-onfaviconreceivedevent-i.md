@@ -1,6 +1,6 @@
 # OnFaviconReceivedEvent
 
-定义应用为当前页面接收到新的网站图标（favicon）时的回调函数。
+Defines the triggered callback when the application receive a new favicon for the current web page.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 favicon: PixelMap
 ```
 
-接收到的favicon图标的PixelMap对象。
+Received the Favicon icon for the PixelMap object.
 
 **Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 

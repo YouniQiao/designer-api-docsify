@@ -1,24 +1,8 @@
 # InputMethodController
 
-下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)获取到InputMethodController实例，再通过实例调用对应方法。
-
-InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：
-
-- **绑定管理**：通过  
-[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和detach必须配对使用。  
-- **键盘控制**：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉  
-起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
-- **编辑框状态同步**：通过  
-[updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor)、  
-[changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection)、  
-[updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。  
-- **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。
-
-典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()`
-
-> **注意：**
-> 
-> attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
+A control class that encapsulates APIs for input method management, which can only be invoked after an   
+**InputMethodController** instance is obtained via   
+[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
 
 **Since:** 6
 
@@ -40,17 +24,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-自绘控件绑定输入法。使用callback异步回调。
-
-**含义/功能**：建立自绘控件与输入法应用之间的绑定关系，是自绘控件使用输入法功能的前提。
-
-**使用场景：**自绘控件（非系统原生编辑框）需要与输入法交互时，必须先调用此接口建立绑定。原生编辑框获焦时系统自动绑定，无需调用此接口。
-
-**使用后效果**：绑定成功后，自绘控件可调用showTextInput/hideTextInput控制键盘显隐、调用updateCursor/changeSelection同步编辑框状态、订阅输入法事件等。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：自绘控件所在窗口需处于获焦状态，否则绑定会失败。
+Attach application to the input method service.
 
 **Since:** 10
 
@@ -64,17 +38,17 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | 绑定输入法成功后，是否拉起输入法键盘。 &lt;br&gt;- true表示拉起。 &lt;br&gt;- false表示不拉起。 |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | 编辑框的配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of attach. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -101,7 +75,7 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。
+Attach application to the input method service.
 
 **Since:** 10
 
@@ -115,22 +89,22 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | 绑定输入法成功后，是否拉起输入法键盘。 &lt;br&gt;- true表示拉起。 &lt;br&gt;- false表示不拉起。 |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | 编辑框的配置信息。 |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -155,7 +129,7 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。
+Attach application to the input method service.
 
 **Since:** 15
 
@@ -169,23 +143,23 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | 绑定输入法成功后，是否拉起输入法键盘。 &lt;br&gt;- true表示拉起。 &lt;br&gt;- false表示不拉起。 |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | 编辑框的配置信息。 |
-| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | 请求键盘输入的原因。 |
+| showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | requestKeyboardReason of show the keyboard . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -212,7 +186,7 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。
+Attach application to the input method service with UI context.
 
 **Since:** 23
 
@@ -228,22 +202,22 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | UIContext实例对象。 |
-| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | 编辑框的配置信息。 |
-| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | 绑定附加选项。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | indicates the ui context where the attachment will be performed. |
+| textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | indicates the attach options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -277,7 +251,7 @@ ArkTS-Sta:
 changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void
 ```
 
-当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用callback异步回调。
+Notify the input method the selected text and the selection range of the current application text has changed.
 
 **Since:** 10
 
@@ -291,19 +265,19 @@ changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 整个输入文本。 |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 所选文本的起始位置。该参数应为大于或等于0的整数。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 所选文本的结束位置。该参数应为大于或等于0的整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当文本信息更新成功时，err为undefined；否则为错误对象。 |
+| text | string | Yes | the whole input text. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | start position of selected text. |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | end position of selected text. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of changeSelection. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -331,7 +305,7 @@ ArkTS-Sta:
 changeSelection(text: string, start: int, end: int): Promise<void>
 ```
 
-当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用promise异步回调。
+Notify the input method the selected text and the selection range of the current application text has changed.
 
 **Since:** 10
 
@@ -345,24 +319,24 @@ changeSelection(text: string, start: int, end: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 整个输入文本。 |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 所选文本的起始位置。该参数应为大于或等于0的整数。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 所选文本的结束位置。该参数应为大于或等于0的整数。 |
+| text | string | Yes | the selected text. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | start position of selected text. |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | end position of selected text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -382,15 +356,7 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 detach(callback: AsyncCallback<void>): void
 ```
 
-自绘控件解除与输入法的绑定。使用callback异步回调。
-
-**含义/功能**：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。
-
-**使用场景：**自绘控件不再需要与输入法交互时调用（如页面切换、编辑框被销毁等）。
-
-**使用后效果**：解除绑定后，不能再调用showTextInput、hideTextInput、updateCursor等需要绑定状态的接口。输入法软键盘将被隐藏。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
+Detach the applications from the input method manager service.
 
 **Since:** 10
 
@@ -404,14 +370,14 @@ detach(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当解绑定输入法成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of detach. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -433,15 +399,7 @@ inputMethod.getController().detach((err: BusinessError) => {
 detach(): Promise<void>
 ```
 
-自绘控件解除与输入法的绑定。使用promise异步回调。
-
-**含义/功能**：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。
-
-**使用场景：**自绘控件不再需要与输入法交互时调用。
-
-**使用后效果**：解除绑定后，不能再调用需要绑定状态的接口。输入法软键盘将被隐藏。
-
-**异步返回方式**：使用Promise异步回调。成功时无返回结果；失败时返回BusinessError对象。
+Detach the applications from the input method manager service.
 
 **Since:** 10
 
@@ -455,14 +413,14 @@ detach(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -482,7 +440,7 @@ inputMethod.getController().detach().then(() => {
 discardTypingText(): Promise<void>
 ```
 
-编辑框应用发送“清空正在输入的文字”命令到输入法。使用promise异步回调。
+Discard the typing text
 
 **Since:** 20
 
@@ -496,15 +454,15 @@ discardTypingText(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800015 | the other side does not accept the request. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
 
 ## Examples
 
@@ -524,23 +482,7 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-隐藏输入法软键盘。使用callback异步回调。
-
-**含义/功能**：强制隐藏当前输入法的软键盘。
-
-**使用场景：**系统应用需要强制隐藏输入法软键盘时使用。
-
-**使用后效果**：输入法软键盘被隐藏。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：编辑框与输入法绑定时才能调用。
-
-**相似接口差异点及选取原则**：
-
-- **hideSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。  
-- **hideTextInput**：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。  
-- **选取原则**：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。
+Hide soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
@@ -556,15 +498,15 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当软键盘隐藏成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of hideSoftKeyboard. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -586,7 +528,7 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-隐藏输入法软键盘。使用Promise异步回调。
+Hide soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
@@ -602,15 +544,15 @@ hideSoftKeyboard(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -630,18 +572,7 @@ inputMethod.getController().hideSoftKeyboard().then(() => {
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-退出文本编辑状态。使用callback异步回调。
-
-**含义/功能**：隐藏软键盘，使编辑框退出文本编辑状态。
-
-**使用场景：**自绘控件不再需要输入时调用，如用户点击了编辑框外的区域、切换到其他页面等。
-
-**使用后效果**：软键盘被隐藏，编辑框退出编辑状态。调用此接口不会解除与输入法的绑定，再次调用showTextInput可重新进入编辑状态。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：需先调用  
-[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)完成绑定，且已调用showTextInput进入编辑状态。
+Hide the text input and stop typing.
 
 **Since:** 10
 
@@ -655,15 +586,15 @@ hideTextInput(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当成功退出编辑状态时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of hideTextInput. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -685,7 +616,7 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 hideTextInput(): Promise<void>
 ```
 
-退出文本编辑状态。使用promise异步回调。
+Hide the text input and stop typing.
 
 **Since:** 10
 
@@ -699,15 +630,15 @@ hideTextInput(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -727,7 +658,7 @@ inputMethod.getController().hideTextInput().then(() => {
 off(type: 'selectByRange', callback?: Callback<Range>): void
 ```
 
-取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
+Unregister the callback of selectedByRange.
 
 **Since:** 10
 
@@ -741,8 +672,8 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectByRange' | Yes | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | the callback of 'selectByRange', when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be left blank. |
 
 ## Examples
 
@@ -764,7 +695,7 @@ inputMethodController.off('selectByRange');
 off(type: 'selectByMovement', callback?: Callback<Movement>): void
 ```
 
-取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+Unregister the callback of selectedByMovement.
 
 **Since:** 10
 
@@ -778,8 +709,8 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectByMovement' | Yes | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | the callback of 'selectByMovement', when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be left blank. |
 
 ## Examples
 
@@ -801,7 +732,7 @@ inputMethodController.off('selectByMovement');
 off(type: 'insertText', callback?: (text: string) => void): void
 ```
 
-取消订阅输入法应用插入文本事件。
+Unregister the callback of insertText.
 
 **Since:** 10
 
@@ -815,8 +746,8 @@ off(type: 'insertText', callback?: (text: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'insertText' | Yes | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。&lt;br/&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'insertText' | Yes | event type, fixed as 'insertText'. |
+| callback | (text: string) =&gt; void | No | the callback of 'insertText', when subscriber unsubscribes all callback functions of event 'insertText', this parameter can be left blank. |
 
 ## Examples
 
@@ -838,7 +769,7 @@ inputMethodController.off('insertText');
 off(type: 'deleteLeft', callback?: (length: number) => void): void
 ```
 
-取消订阅输入法应用向左删除文本事件。
+Unregister the callback of deleteLeft.
 
 **Since:** 10
 
@@ -852,8 +783,8 @@ off(type: 'deleteLeft', callback?: (length: number) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deleteLeft' | Yes | 设置监听，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'deleteLeft' | Yes | event type, fixed as 'deleteLeft'. |
+| callback | (length: number) =&gt; void | No | the callback of 'deleteLeft', when subscriber unsubscribes all callback functions of event 'deleteLeft', this parameter can be left blank. |
 
 ## Examples
 
@@ -875,7 +806,7 @@ inputMethodController.off('deleteLeft');
 off(type: 'deleteRight', callback?: (length: number) => void): void
 ```
 
-取消订阅输入法应用向右删除文本事件。
+Unregister the callback of deleteRight.
 
 **Since:** 10
 
@@ -889,8 +820,8 @@ off(type: 'deleteRight', callback?: (length: number) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deleteRight' | Yes | 设置监听类型，固定取值为`deleteRight`。 |
-| callback | (length: number) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'deleteRight' | Yes | event type, fixed as 'deleteRight'. |
+| callback | (length: number) =&gt; void | No | the callback of 'deleteRight', when subscriber unsubscribes all callback functions of event 'deleteRight', this parameter can be left blank. |
 
 ## Examples
 
@@ -911,7 +842,7 @@ inputMethodController.off('deleteRight');
 off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-取消订阅输入法应用发送输入法软键盘状态事件。
+Unregister the callback of sendKeyboardStatus.
 
 **Since:** 10
 
@@ -925,8 +856,8 @@ off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sendKeyboardStatus' | Yes | 设置监听类型，固定取值为'sendKeyboardStatus'。 |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'sendKeyboardStatus' | Yes | event type, fixed as 'sendKeyboardStatus'. |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | the callback of 'sendKeyboardStatus', when subscriber unsubscribes all callback functions of event 'sendKeyboardStatus', this parameter can be left blank. |
 
 ## Examples
 
@@ -948,7 +879,7 @@ inputMethodController.off('sendKeyboardStatus');
 off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void
 ```
 
-取消订阅输入法应用发送功能键事件。
+Unregister the callback of sendFunctionKey.
 
 **Since:** 10
 
@@ -962,8 +893,8 @@ off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sendFunctionKey' | Yes | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'sendFunctionKey' | Yes | event type, fixed as 'sendFunctionKey'. |
+| callback | (functionKey: FunctionKey) =&gt; void | No | the callback of 'sendFunctionKey', when subscriber unsubscribes all callback functions of event 'sendFunctionKey', this parameter can be left blank. |
 
 ## Examples
 
@@ -985,7 +916,7 @@ inputMethodController.off('sendFunctionKey');
 off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 ```
 
-取消订阅输入法应用移动光标事件。
+Unregister the callback of moveCursor.
 
 **Since:** 10
 
@@ -999,8 +930,8 @@ off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'moveCursor' | Yes | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'moveCursor' | Yes | event type, fixed as 'moveCursor'. |
+| callback | (direction: Direction) =&gt; void | No | the callback of 'moveCursor', when subscriber unsubscribes all callback functions of event 'moveCursor', this parameter can be left blank. |
 
 ## Examples
 
@@ -1022,7 +953,7 @@ inputMethodController.off('moveCursor');
 off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 ```
 
-取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+Unregister the callback of handleExtendAction.
 
 **Since:** 10
 
@@ -1036,8 +967,8 @@ off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'handleExtendAction' | Yes | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'handleExtendAction' | Yes | event type, fixed as 'handleExtendAction'. |
+| callback | (action: ExtendAction) =&gt; void | No | the callback of 'handleExtendAction', when subscriber unsubscribes all callback functions of event 'handleExtendAction', this parameter can be left blank. |
 
 ## Examples
 
@@ -1059,7 +990,7 @@ inputMethodController.off('handleExtendAction');
 off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 ```
 
-取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+Unregister the callback of getLeftTextOfCursor event.
 
 **Since:** 10
 
@@ -1073,8 +1004,8 @@ off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getLeftTextOfCursor' | Yes | 设置监听类型，固定取值为'getLeftTextOfCursor'。 |
-| callback | (length: number) =&gt; string | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'getLeftTextOfCursor' | Yes | event type, fixed as 'getLeftTextOfCursor'. |
+| callback | (length: number) =&gt; string | No | the callback of 'getLeftTextOfCursor', when subscriber unsubscribes all callback functions of event 'getLeftTextOfCursor', this parameter can be left blank. |
 
 ## Examples
 
@@ -1096,7 +1027,7 @@ inputMethodController.off('getLeftTextOfCursor');
 off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 ```
 
-取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 10
 
@@ -1110,8 +1041,8 @@ off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getRightTextOfCursor' | Yes | 设置监听类型，固定取值为'getRightTextOfCursor'。 |
-| callback | (length: number) =&gt; string | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'getRightTextOfCursor' | Yes | event type, fixed as 'getRightTextOfCursor'. |
+| callback | (length: number) =&gt; string | No | the callback of 'getRightTextOfCursor', when subscriber unsubscribes all callback functions of event 'getRightTextOfCursor', this parameter can be left blank. |
 
 ## Examples
 
@@ -1133,7 +1064,7 @@ inputMethodController.off('getRightTextOfCursor');
 off(type: 'getTextIndexAtCursor', callback?: () => number): void
 ```
 
-取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 10
 
@@ -1147,8 +1078,8 @@ off(type: 'getTextIndexAtCursor', callback?: () => number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getTextIndexAtCursor' | Yes | 设置监听类型，固定取值为'getTextIndexAtCursor'。 |
-| callback | () =&gt; number | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'getTextIndexAtCursor' | Yes | event type, fixed as 'getTextIndexAtCursor'. |
+| callback | () =&gt; number | No | the callback of 'getTextIndexAtCursor', when subscriber unsubscribes all callback functions of event 'getTextIndexAtCursor', this parameter can be left blank. |
 
 ## Examples
 
@@ -1170,7 +1101,7 @@ inputMethodController.off('getTextIndexAtCursor');
 off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 ```
 
-取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
+Unsubscribe 'setPreviewText' event.
 
 **Since:** 17
 
@@ -1184,8 +1115,8 @@ off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setPreviewText' | Yes | 设置监听类型，固定取值为'setPreviewText'。 |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'setPreviewText' | Yes | the type of unsubscribe event. |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | optional, the callback of off('setPreviewText'). |
 
 ## Examples
 
@@ -1217,7 +1148,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 off(type: 'finishTextPreview', callback?: Callback<void>): void
 ```
 
-取消订阅结束文本预览事件。使用callback异步回调。
+Unsubscribe 'finishTextPreview' event.
 
 **Since:** 17
 
@@ -1231,8 +1162,8 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'finishTextPreview' | Yes | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'finishTextPreview' | Yes | the type of unsubscribe event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback of off('finishTextPreview'). |
 
 ## Examples
 
@@ -1265,7 +1196,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 offDeleteLeft(callback?: Callback<int>): void
 ```
 
-取消订阅输入法应用向左删除文本事件。
+Unregister the callback of deleteLeft.
 
 **Since:** 23
 
@@ -1279,7 +1210,7 @@ offDeleteLeft(callback?: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | the callback called when the input method deletes text to the left of the cursor. |
 
 ## offDeleteRight
 
@@ -1287,7 +1218,7 @@ offDeleteLeft(callback?: Callback<int>): void
 offDeleteRight(callback?: Callback<int>): void
 ```
 
-取消订阅输入法应用向右删除文本事件。
+Unregister the callback of deleteRight.
 
 **Since:** 23
 
@@ -1301,7 +1232,7 @@ offDeleteRight(callback?: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 to the right of the cursor. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | the callback called when the input method deletes text to the right of the cursor. |
 
 ## offFinishTextPreview
 
@@ -1309,7 +1240,7 @@ offDeleteRight(callback?: Callback<int>): void
 offFinishTextPreview(callback?: Callback<void>): void
 ```
 
-取消订阅结束文本预览事件。使用callback异步回调。
+Unsubscribe 'finishTextPreview' event.
 
 **Since:** 23
 
@@ -1323,7 +1254,7 @@ offFinishTextPreview(callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the input method finishes text preview. |
 
 ## offGetLeftTextOfCursor
 
@@ -1331,7 +1262,7 @@ offFinishTextPreview(callback?: Callback<void>): void
 offGetLeftTextOfCursor(callback?: GetTextCallback): void
 ```
 
-取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+Unregister the callback of getLeftTextofCursor event.
 
 **Since:** 23
 
@@ -1345,7 +1276,7 @@ offGetLeftTextOfCursor(callback?: GetTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | No | the callback called when the input method gets text to the left of the cursor. The callback must be a synchronization method and will block the input method application. |
 
 ## offGetRightTextOfCursor
 
@@ -1353,7 +1284,7 @@ offGetLeftTextOfCursor(callback?: GetTextCallback): void
 offGetRightTextOfCursor(callback?: GetTextCallback): void
 ```
 
-取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 23
 
@@ -1367,7 +1298,7 @@ offGetRightTextOfCursor(callback?: GetTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | No | the callback called when the input method gets text to the right of the cursor. The callback must be a synchronization method and will block the input method application. |
 
 ## offGetTextIndexAtCursor
 
@@ -1375,7 +1306,7 @@ offGetRightTextOfCursor(callback?: GetTextCallback): void
 offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 ```
 
-取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 23
 
@@ -1391,7 +1322,7 @@ offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | No | the callback called when the input method gets cursor index. |
 
 ## offHandleExtendAction
 
@@ -1399,7 +1330,7 @@ offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 offHandleExtendAction(callback?: Callback<ExtendAction>): void
 ```
 
-取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+Unregister the callback of handleExtendAction.
 
 **Since:** 23
 
@@ -1413,7 +1344,7 @@ offHandleExtendAction(callback?: Callback<ExtendAction>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | No | the callback called when the input method sends extend action. |
 
 ## offInsertText
 
@@ -1421,7 +1352,7 @@ offHandleExtendAction(callback?: Callback<ExtendAction>): void
 offInsertText(callback?: Callback<string>): void
 ```
 
-取消订阅输入法应用插入文本事件。
+Unregister the callback of insertText.
 
 **Since:** 23
 
@@ -1435,7 +1366,7 @@ offInsertText(callback?: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | the callback called when the input method inserts text. |
 
 ## offMoveCursor
 
@@ -1443,7 +1374,7 @@ offInsertText(callback?: Callback<string>): void
 offMoveCursor(callback?: Callback<Direction>): void
 ```
 
-取消订阅输入法应用移动光标事件。
+Unregister the callback of moveCursor.
 
 **Since:** 23
 
@@ -1457,7 +1388,7 @@ offMoveCursor(callback?: Callback<Direction>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | No | the callback called when the input method moves cursor. |
 
 ## offSelectByMovement
 
@@ -1465,7 +1396,7 @@ offMoveCursor(callback?: Callback<Direction>): void
 offSelectByMovement(callback?: Callback<Movement>): void
 ```
 
-取消订阅输入法应用按光标移动方向，选中文本事件
+Unregister the callback of selectedByMovement.
 
 **Since:** 23
 
@@ -1479,7 +1410,7 @@ offSelectByMovement(callback?: Callback<Movement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | the callback called when the input method selects text by movement. |
 
 ## offSelectByRange
 
@@ -1487,7 +1418,7 @@ offSelectByMovement(callback?: Callback<Movement>): void
 offSelectByRange(callback?: Callback<Range>): void
 ```
 
-取消订阅输入法应用按范围选中文本事件。
+Unregister the callback of selectedByRange.
 
 **Since:** 23
 
@@ -1501,7 +1432,7 @@ offSelectByRange(callback?: Callback<Range>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | the callback called when the input method selects text by range. |
 
 ## offSendFunctionKey
 
@@ -1509,7 +1440,7 @@ offSelectByRange(callback?: Callback<Range>): void
 offSendFunctionKey(callback?: Callback<FunctionKey>): void
 ```
 
-取消订阅输入法应用发送功能键事件。
+Unregister the callback of sendFunctionKey.
 
 **Since:** 23
 
@@ -1523,7 +1454,7 @@ offSendFunctionKey(callback?: Callback<FunctionKey>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | No | the callback called when the input method send function key. |
 
 ## offSendKeyboardStatus
 
@@ -1531,7 +1462,7 @@ offSendFunctionKey(callback?: Callback<FunctionKey>): void
 offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 ```
 
-取消订阅输入法应用发送输入法软键盘状态事件。
+Unregister the callback of sendKeyboardStatus.
 
 **Since:** 23
 
@@ -1545,7 +1476,7 @@ offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardStatus&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardStatus&gt; | No | the callback called when the inputmethod send keyboard's status. |
 
 ## offSetPreviewText
 
@@ -1553,7 +1484,7 @@ offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 offSetPreviewText(callback?:SetPreviewTextCallback): void
 ```
 
-取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
+Unsubscribe 'setPreviewText' event.
 
 **Since:** 23
 
@@ -1569,7 +1500,7 @@ offSetPreviewText(callback?:SetPreviewTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | optional, the callback called when the input method sets preview text. |
 
 ## on('selectByRange')
 
@@ -1577,7 +1508,7 @@ offSetPreviewText(callback?:SetPreviewTextCallback): void
 on(type: 'selectByRange', callback: Callback<Range>): void
 ```
 
-订阅输入法应用按范围选中文本事件。使用callback异步回调。
+Register a callback and when IME sends select event with range of selection,the callback will be invoked.
 
 **Since:** 10
 
@@ -1591,14 +1522,14 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectByRange' | Yes | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | 回调函数，返回需要选中的文本范围。&lt;br/&gt;根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | processes selectByRange command. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1614,7 +1545,7 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 on(type: 'selectByMovement', callback: Callback<Movement>): void
 ```
 
-订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+Register a callback and when IME sends select event witch movement of cursor,the callback will be invoked.
 
 **Since:** 10
 
@@ -1628,14 +1559,14 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectByMovement' | Yes | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | 回调函数，返回光标移动的方向。&lt;br/&gt;根据传入的光标移动方向，选中编辑框中相应文本。 |
+| type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | processes selectByMovement command. The movement of cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to the movement. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1651,7 +1582,7 @@ inputMethod.getController().on('selectByMovement', (movement: inputMethod.Moveme
 on(type: 'insertText', callback: (text: string) => void): void
 ```
 
-订阅输入法应用插入文本事件。使用callback异步回调。
+Register a callback and when IME sends insert text event, the callback will be invoked.
 
 **Since:** 10
 
@@ -1665,15 +1596,15 @@ on(type: 'insertText', callback: (text: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'insertText' | Yes | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | Yes | 回调函数，返回需要插入的文本内容。&lt;br/&gt;根据传入的文本，在回调函数中操作编辑框中的内容。 |
+| type | 'insertText' | Yes | event type, fixed as 'insertText'. |
+| callback | (text: string) =&gt; void | Yes | processes insertText command. The text of insert is provided for this callback. Subscribers are expected to process the inserted text and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1702,7 +1633,7 @@ inputMethodController.off('insertText');
 on(type: 'deleteLeft', callback: (length: number) => void): void
 ```
 
-订阅输入法应用向左删除文本事件。使用callback异步回调。
+Register a callback and when IME sends delete left event with length,the callback will be invoked.
 
 **Since:** 10
 
@@ -1716,15 +1647,15 @@ on(type: 'deleteLeft', callback: (length: number) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deleteLeft' | Yes | 设置监听类型，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | Yes | 回调函数，返回需要向左删除的文本长度。&lt;br/&gt;根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| type | 'deleteLeft' | Yes | event type, fixed as 'deleteLeft'. |
+| callback | (length: number) =&gt; void | Yes | processes deleteLeft command. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1740,7 +1671,7 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 on(type: 'deleteRight', callback: (length: number) => void): void
 ```
 
-订阅输入法应用向右删除文本事件。使用callback异步回调。
+Register a callback and when IME sends delete right event with length,the callback will be invoked.
 
 **Since:** 10
 
@@ -1754,15 +1685,15 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deleteRight' | Yes | 设置监听类型，固定取值为'deleteRight'。 |
-| callback | (length: number) =&gt; void | Yes | 回调函数，返回需要向右删除的文本长度。&lt;br/&gt;根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| type | 'deleteRight' | Yes | event type, fixed as 'deleteRight'. |
+| callback | (length: number) =&gt; void | Yes | processes deleteRight command. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1778,7 +1709,7 @@ inputMethod.getController().on('deleteRight', (length: number) => {
 on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void
 ```
 
-订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
+Register a callback and when IME sends keyboard status, the callback will be invoked.
 
 **Since:** 10
 
@@ -1792,15 +1723,15 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sendKeyboardStatus' | Yes | 设置监听类型，固定取值为'sendKeyboardStatus'。 |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | 回调函数，返回软键盘状态。&lt;br/&gt;根据传入的软键盘状态，在回调函数中做相应操作。 |
+| type | 'sendKeyboardStatus' | Yes | event type, fixed as 'sendKeyboardStatus'. |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | processes sendKeyboardStatus command. The keyboardStatus is provided for this callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1816,7 +1747,7 @@ inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMetho
 on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 ```
 
-订阅输入法应用发送功能键事件。使用callback异步回调。
+Register a callback and when IME sends functionKey, the callback will be invoked.
 
 **Since:** 10
 
@@ -1830,15 +1761,15 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sendFunctionKey' | Yes | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | Yes | 回调函数，返回输入法应用发送的功能键信息。&lt;br/&gt;根据返回的功能键信息，做相应操作。 |
+| type | 'sendFunctionKey' | Yes | event type, fixed as 'sendFunctionKey'. |
+| callback | (functionKey: FunctionKey) =&gt; void | Yes | processes sendFunctionKey command. The functionKey is provided for this callback.Subscribers are expected to complete the corresponding task based on the value of functionKey. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1854,7 +1785,7 @@ inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.Func
 on(type: 'moveCursor', callback: (direction: Direction) => void): void
 ```
 
-订阅输入法应用移动光标事件。使用callback异步回调。
+Register a callback and when IME sends move cursor, the callback will be invoked.
 
 **Since:** 10
 
@@ -1868,15 +1799,15 @@ on(type: 'moveCursor', callback: (direction: Direction) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'moveCursor' | Yes | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | Yes | 回调函数，返回光标信息。&lt;br/&gt;根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+| type | 'moveCursor' | Yes | event type, fixed as 'moveCursor'. |
+| callback | (direction: Direction) =&gt; void | Yes | processes moveCursor command. The direction of cursor is provided for this callback. Subscribers are expected to move the cursor and update changes in editor by changeSelection and updateCursor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1892,7 +1823,7 @@ inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) 
 on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 ```
 
-订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+Register a callback and when IME sends extend action code, the callback will be invoked.
 
 **Since:** 10
 
@@ -1906,15 +1837,15 @@ on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'handleExtendAction' | Yes | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | Yes | 回调函数，返回扩展编辑操作类型。&lt;br/&gt;根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+| type | 'handleExtendAction' | Yes | event type, fixed as 'handleExtendAction'. |
+| callback | (action: ExtendAction) =&gt; void | Yes | processes handleExtendAction command. The action code is provided for this callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1930,7 +1861,7 @@ inputMethod.getController().on('handleExtendAction', (action: inputMethod.Extend
 on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 ```
 
-订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+Register a callback and when input method ability gets left text of cursor, the callback will be invoked.
 
 **Since:** 10
 
@@ -1944,15 +1875,15 @@ on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getLeftTextOfCursor' | Yes | 设置监听类型，固定取值为'getLeftTextOfCursor'。 |
-| callback | (length: number) =&gt; string | Yes | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
+| type | 'getLeftTextOfCursor' | Yes | event type, fixed as 'getLeftTextOfCursor'. |
+| callback | (length: number) =&gt; string | Yes | processes getLeftTextOfCursor command. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -1970,7 +1901,7 @@ inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
 on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 ```
 
-订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+Register a callback and when input method ability gets right text of cursor, the callback will be invoked.
 
 **Since:** 10
 
@@ -1984,15 +1915,15 @@ on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getRightTextOfCursor' | Yes | 设置监听类型，固定取值为'getRightTextOfCursor'。 |
-| callback | (length: number) =&gt; string | Yes | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
+| type | 'getRightTextOfCursor' | Yes | event type, fixed as 'getRightTextOfCursor'. |
+| callback | (length: number) =&gt; string | Yes | processes getRightTextOfCursor command. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -2010,7 +1941,7 @@ inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
 on(type: 'getTextIndexAtCursor', callback: () => number): void
 ```
 
-订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+Register a callback and when input method ability gets the text index at cursor, the callback will be invoked.
 
 **Since:** 10
 
@@ -2024,15 +1955,15 @@ on(type: 'getTextIndexAtCursor', callback: () => number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'getTextIndexAtCursor' | Yes | 设置监听类型，固定取值为'getTextIndexAtCursor'。 |
-| callback | () =&gt; number | Yes | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
+| type | 'getTextIndexAtCursor' | Yes | event type, fixed as 'getTextIndexAtCursor'. |
+| callback | () =&gt; number | Yes | processes getTextIndexAtCursor command. The callback must be a synchronization method, and should return the text index at the cursor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## Examples
 
@@ -2050,7 +1981,7 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
+&lt;p&gt;Subscribe 'setPreviewText' event.&lt;/p&gt;&lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 17
 
@@ -2064,14 +1995,14 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'setPreviewText' | Yes | 设置监听类型，固定取值为'setPreviewText'。 |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | Yes | 回调函数。用于接收文本预览的内容并返回。 |
+| type | 'setPreviewText' | Yes | the type of subscribe event. |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | Yes | the callback of on('setPreviewText'). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## Examples
 
@@ -2103,7 +2034,7 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-订阅结束文本预览事件。使用callback异步回调。
+&lt;p&gt;Subscribe 'finishTextPreview' event.&lt;/p&gt;&lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 17
 
@@ -2117,14 +2048,14 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'finishTextPreview' | Yes | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| type | 'finishTextPreview' | Yes | the type of subscribe event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback of on('finishTextPreview'). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## Examples
 
@@ -2157,7 +2088,7 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 onDeleteLeft(callback: Callback<int>): void
 ```
 
-订阅输入法应用向左删除文本事件。使用callback异步回调。
+Register a callback and when IME sends delete left event with length,the callback will be invoked.
 
 **Since:** 23
 
@@ -2171,13 +2102,13 @@ onDeleteLeft(callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回需要向左删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the input method deletes text to the left of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onDeleteRight
 
@@ -2185,7 +2116,7 @@ onDeleteLeft(callback: Callback<int>): void
 onDeleteRight(callback: Callback<int>): void
 ```
 
-订阅输入法应用向右删除文本事件。使用callback异步回调。
+Register a callback and when IME sends delete right event with length,the callback will beinvoked.
 
 **Since:** 23
 
@@ -2199,13 +2130,13 @@ onDeleteRight(callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回需要向右删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called whenthe input method deletes text to theright of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onFinishTextPreview
 
@@ -2213,7 +2144,7 @@ onDeleteRight(callback: Callback<int>): void
 onFinishTextPreview(callback: Callback<void>): void
 ```
 
-订阅结束文本预览事件。使用callback异步回调。使用预览文本功能，需在调用attach前订阅此事件，并和on('setPreviewText')一起订阅。
+&lt;p&gt;Subscribe 'finishTextPreview' event.&lt;/p&gt;&lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 23
 
@@ -2227,7 +2158,7 @@ onFinishTextPreview(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the input method finishes text preview. |
 
 ## onGetLeftTextOfCursor
 
@@ -2235,7 +2166,7 @@ onFinishTextPreview(callback: Callback<void>): void
 onGetLeftTextOfCursor(callback: GetTextCallback): void
 ```
 
-订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调
+Register a callback and when input method ability gets left text of cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2249,13 +2180,13 @@ onGetLeftTextOfCursor(callback: GetTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | Yes | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | Yes | the callback called when the input method gets text to the left of the cursor. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onGetRightTextOfCursor
 
@@ -2263,7 +2194,7 @@ onGetLeftTextOfCursor(callback: GetTextCallback): void
 onGetRightTextOfCursor(callback: GetTextCallback): void
 ```
 
-订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+Register a callback and when input method ability gets right text of cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2277,13 +2208,13 @@ onGetRightTextOfCursor(callback: GetTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | Yes | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | Yes | the callback called when the input method gets text to the right of the cursor. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onGetTextIndexAtCursor
 
@@ -2291,7 +2222,7 @@ onGetRightTextOfCursor(callback: GetTextCallback): void
 onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 ```
 
-订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+Register a callback and when input method ability gets the text index at cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2305,13 +2236,13 @@ onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | Yes | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
+| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | Yes | the callback called when input method the gets cursor index. The callback must be a synchronization method, and should return the text index at the cursor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onHandleExtendAction
 
@@ -2319,7 +2250,7 @@ onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 onHandleExtendAction(callback: Callback<ExtendAction>): void
 ```
 
-订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+Register a callback and when IME sends extend action code, the callback will be invoked.
 
 **Since:** 23
 
@@ -2333,13 +2264,13 @@ onHandleExtendAction(callback: Callback<ExtendAction>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | Yes | 回调函数，返回扩展编辑操作类型。 根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | Yes | the callback called when the input method sends extend action. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onInsertText
 
@@ -2347,7 +2278,7 @@ onHandleExtendAction(callback: Callback<ExtendAction>): void
 onInsertText(callback: Callback<string>): void
 ```
 
-订阅输入法应用插入文本事件。使用callback异步回调。
+Register a callback and when IME sends insert text event, the callback will be invoked.
 
 **Since:** 23
 
@@ -2361,13 +2292,13 @@ onInsertText(callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数，返回需要插入的文本内容。 根据传入的文本，在回调函数中操作编辑框中的内容。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the input method inserts text. Subscribers are expected to process the inserted text and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onMoveCursor
 
@@ -2375,7 +2306,7 @@ onInsertText(callback: Callback<string>): void
 onMoveCursor(callback: Callback<Direction>): void
 ```
 
-订阅输入法应用移动光标事件。使用callback异步回调。
+Register a callback and when IME sends move cursor, the callback will be invoked.
 
 **Since:** 23
 
@@ -2389,13 +2320,13 @@ onMoveCursor(callback: Callback<Direction>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | Yes | 回调函数，返回光标信息。 根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | Yes | the callback called when the input method moves cursor. The direction of cursor is provided for this callback. Subscribers are expected to move the cursor and update changes in editor by changeSelection and updateCursor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onSelectByMovement
 
@@ -2403,7 +2334,7 @@ onMoveCursor(callback: Callback<Direction>): void
 onSelectByMovement(callback: Callback<Movement>): void
 ```
 
-订阅输入法应用按光标移动方向，选中文本事件。
+Register a callback and when IME sends select event witch movement of cursor,the callback will be invoked.
 
 **Since:** 23
 
@@ -2417,7 +2348,7 @@ onSelectByMovement(callback: Callback<Movement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | 回调函数，返回光标移动的方向。 根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | the callback called when the input method selects text by movement. The movement of the cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to themovement. |
 
 ## onSelectByRange
 
@@ -2425,7 +2356,7 @@ onSelectByMovement(callback: Callback<Movement>): void
 onSelectByRange(callback: Callback<Range>): void
 ```
 
-订阅输入法应用按范围选中文本事件。使用callback异步回调。
+Register a callback and when IME sends select event with range of selection,the callback will be invoked.
 
 **Since:** 23
 
@@ -2439,7 +2370,7 @@ onSelectByRange(callback: Callback<Range>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | 回调函数，返回需要选中的文本范围。 根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | the callback called when the input method selects text by range. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
 
 ## onSendFunctionKey
 
@@ -2447,7 +2378,7 @@ onSelectByRange(callback: Callback<Range>): void
 onSendFunctionKey(callback: Callback<FunctionKey>): void
 ```
 
-订阅输入法应用发送功能键事件。使用callback异步回调。
+Register a callback and whenIME sends functionKey, the callback will be invoked.
 
 **Since:** 23
 
@@ -2461,13 +2392,13 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | Yes | 回调函数，返回输入法应用发送的功能键信息。 根据返回的功能键信息，做相应操作。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | Yes | the callback called when the input method send function key. The functionKey is provided for this callback. Subscribers are expected to complete the corresponding task based on the value of functionKey. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onSendKeyboardStatus
 
@@ -2475,7 +2406,7 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 ```
 
-订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
+Register a callback and when IME sends keyboard status, the callback will be invoked.
 
 **Since:** 23
 
@@ -2489,13 +2420,13 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardStatus&gt; | Yes | 回调函数，返回软键盘状态。 根据传入的软键盘状态，在回调函数中做相应操作。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardStatus&gt; | Yes | the callback called when the input method send keyboard's status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800009 | input method client detached. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
 ## onSetPreviewText
 
@@ -2503,7 +2434,7 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 onSetPreviewText(callback: SetPreviewTextCallback): void
 ```
 
-订阅输入法应用操作文本预览内容的事件。使用callback异步回调。使用预览文本功能，需在调用attach前订阅此事件，并和on('finishTextPreview')一起订阅。
+&lt;p&gt;Subscribe 'setPreviewText' event.&lt;/p&gt;&lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 23
 
@@ -2517,7 +2448,7 @@ onSetPreviewText(callback: SetPreviewTextCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | Yes | 回调函数。用于接收文本预览的内容并返回。 |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | Yes | the callback called when the input method setspreview text. |
 
 ## recvMessage
 
@@ -2525,7 +2456,7 @@ onSetPreviewText(callback: SetPreviewTextCallback): void
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-注册或取消注册MessageHandler。
+Start receiving message from input method.
 
 **Since:** 15
 
@@ -2539,13 +2470,13 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | 该对象通过 [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定 义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 &lt;br&gt;若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其 [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | optional, the handler of the custom message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## Examples
 
@@ -2572,9 +2503,7 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-发送自定义通信至输入法应用。使用Promise异步回调。  
-> 
-> msgId最大限制256B，msgParam最大限制128KB。
+Send message to input method.
 
 **Since:** 15
 
@@ -2588,25 +2517,25 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | 需要发送至输入法应用的自定义数据的标识符。 |
-| msgParam | ArrayBuffer | No | 需要发送至输入法应用的自定义数据的消息体。 |
+| msgId | string | Yes | the identifier of the message. Max size is 256B. |
+| msgParam | ArrayBuffer | No | the param of the custom message. Max size is 128KB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
-| 12800016 | input method client is not editable. |
-| 12800009 | input method client detached. |
-| 12800015 | the other side does not accept the request. |
-| 12800014 | the input method is in basic mode. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Incorrect parameter length. |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
+| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) | the input method is in basic mode. |
 
 ## Examples
 
@@ -2634,7 +2563,7 @@ ArkTS-Sta:
 setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-设置要避让软键盘的窗口。使用callback异步回调。
+Inform the system of the window ID of the application currently bound to the input method.After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
 
@@ -2648,17 +2577,17 @@ setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 绑定输入法应用的应用程序所在的窗口Id。该参数应为整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为undefined；否则为错误对象。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the window ID of the application currently bound to the input method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCallingWindow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2687,7 +2616,7 @@ ArkTS-Sta:
 setCallingWindow(windowId: int): Promise<void>
 ```
 
-设置要避让软键盘的窗口。使用promise异步回调。
+Inform the system of the window ID of the application currently bound to the input method.After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
 
@@ -2701,22 +2630,22 @@ setCallingWindow(windowId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 绑定输入法应用的应用程序所在的窗口Id。该参数应为整数。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the window ID of the application currently bound to the input method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2737,23 +2666,7 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-显示输入法软键盘。使用callback异步回调。
-
-**含义/功能**：强制显示当前输入法的软键盘。
-
-**使用场景：**系统应用需要强制显示输入法软键盘时使用（如设置应用测试输入法）。
-
-**使用后效果**：输入法软键盘弹出显示。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：编辑框与输入法绑定时才能调用。
-
-**相似接口差异点及选取原则**：
-
-- **showSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。  
-- **showTextInput**：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。  
-- **选取原则**：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。
+Show soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
@@ -2769,15 +2682,15 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当软键盘显示成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of showSoftKeyboard. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2799,7 +2712,7 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 showSoftKeyboard(): Promise<void>
 ```
 
-显示输入法软键盘。使用Promise异步回调。
+Show soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
@@ -2815,15 +2728,15 @@ showSoftKeyboard(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2843,18 +2756,7 @@ inputMethod.getController().showSoftKeyboard().then(() => {
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-进入文本编辑状态。使用callback异步回调。
-
-**含义/功能**：拉起软键盘，使编辑框进入文本编辑状态。
-
-**使用场景：**自绘控件绑定输入法后，需要显示软键盘开始文本输入时调用。
-
-**使用后效果**：软键盘弹出，编辑框进入可输入的文本编辑状态。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：需先调用  
-[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)完成绑定，否则会报12800009错误。
+Show the text input and start typing.
 
 **Since:** 10
 
@@ -2868,15 +2770,15 @@ showTextInput(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。若成功进入编辑状态，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of showTextInput. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2898,7 +2800,7 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
 showTextInput(): Promise<void>
 ```
 
-进入文本编辑状态。使用promise异步回调。
+Show the text input and start typing.
 
 **Since:** 10
 
@@ -2912,15 +2814,15 @@ showTextInput(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2940,7 +2842,7 @@ inputMethod.getController().showTextInput().then(() => {
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-进入文本编辑状态。使用promise异步回调。
+Show the text input and start typing.
 
 **Since:** 15
 
@@ -2954,21 +2856,21 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | 请求键盘输入的原因。 |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | requestKeyboardReason of show the keyboard . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -2990,7 +2892,7 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-结束输入会话。使用callback异步回调。
+Stop input
 
 **Since:** 6
 
@@ -3008,7 +2910,7 @@ stopInput(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of stopInput. |
 
 ## Examples
 
@@ -3034,7 +2936,7 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-结束输入会话。使用promise异步回调。
+Stop input
 
 **Since:** 6
 
@@ -3052,7 +2954,7 @@ stopInput(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示会话结束成功；返回false表示会话结束失败。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 ## Examples
 
@@ -3076,17 +2978,7 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-结束输入会话。使用callback异步回调。
-
-**含义/功能**：结束当前的输入会话，隐藏软键盘。
-
-**使用场景：**应用需要主动结束输入会话时调用（如用户完成了输入操作）。
-
-**使用后效果**：软键盘被隐藏，输入会话结束。与hideTextInput不同，stopInputSession直接结束会话而不需要先进入编辑状态。
-
-**异步返回方式**：使用callback异步回调。成功时err为undefined，data为true；失败时返回BusinessError对象。
-
-**前提条件/前置操作**：编辑框与输入法绑定时才能调用，即点击编辑控件后。
+Stop input session
 
 **Since:** 9
 
@@ -3100,14 +2992,14 @@ stopInputSession(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当结束输入会话成功时，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of stopInputSession. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -3133,7 +3025,7 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 stopInputSession(): Promise<boolean>
 ```
 
-结束输入会话。使用promise异步回调。
+Stop input session
 
 **Since:** 9
 
@@ -3147,14 +3039,14 @@ stopInputSession(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示结束输入会话成功，返回false表示结束输入会话失败。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -3178,7 +3070,7 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 ```
 
-更新编辑框属性信息。使用callback异步回调。
+Update InputAttribute information of input text.
 
 **Since:** 10
 
@@ -3192,17 +3084,17 @@ updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | 编辑框属性对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当编辑框属性信息更新成功时，err为undefined；否则为错误对象。 |
+| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | the InputAttribute object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateAttribute. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -3225,7 +3117,7 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
 updateAttribute(attribute: InputAttribute): Promise<void>
 ```
 
-更新编辑框属性信息。使用promise异步回调。
+Update InputAttribute information of input text.
 
 **Since:** 10
 
@@ -3239,22 +3131,22 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | 编辑框属性对象。 |
+| attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | the InputAttribute object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -3275,7 +3167,7 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
 updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 ```
 
-当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用callback异步回调。
+Update Cursor and notify the input method that the current application cursor has changed.
 
 **Since:** 10
 
@@ -3289,17 +3181,17 @@ updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | 光标信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当光标信息更新成功时，err为undefined；否则为错误对象。 |
+| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | the CursorInfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateCursor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -3327,7 +3219,7 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
 updateCursor(cursorInfo: CursorInfo): Promise<void>
 ```
 
-当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用promise异步回调。
+Update Cursor and notify the input method that the current application cursor has changed.
 
 **Since:** 10
 
@@ -3341,22 +3233,22 @@ updateCursor(cursorInfo: CursorInfo): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | 光标信息。 |
+| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | the CursorInfo object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800009 | input method client detached. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

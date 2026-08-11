@@ -1,6 +1,7 @@
 # VideoOutput
 
-录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+VideoOutput implements output information used in a video session. It inherits from   
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -24,11 +25,13 @@ import { camera } from 'kits/@kit.CameraKit';
 enableMirror(enabled: boolean): void
 ```
 
-启用/关闭镜像录像。
+Enables or disables mirror recording.
 
-- 调用该接口前，需要通过[isMirrorSupported](arkts-camera-camera-videooutput-i.md#ismirrorsupported)查询是否支录像镜像功能。  
-- 启用/关闭录像镜像后，需要通过[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation)获取录像旋转角度以及  
-[updateRotation](@ohos.multimedia.media:media.AVRecorder.updateRotation)更新旋转角度。
+- Before calling this API, check whether mirror recording is supported by using   
+[isMirrorSupported](arkts-camera-camera-videooutput-i.md#ismirrorsupported).  
+- After enabling or disabling mirror recording, call   
+[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and   
+[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
 
 **Since:** 15
 
@@ -44,15 +47,15 @@ enableMirror(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 启用/关闭镜像录像。true为开启镜像录像，false为关闭镜像录像。 |
+| enabled | boolean | Yes | Whether to enable mirror recording. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 14 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 
 ## getActiveFrameRate
 
@@ -60,9 +63,9 @@ enableMirror(enabled: boolean): void
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。
+Obtains the configured frame rate range.
 
-使用[setFrameRate](arkts-camera-camera-videooutput-i.md#setframerate)对录像流设置过帧率后可查询。
+This API is valid only after [setFrameRate](arkts-camera-camera-videooutput-i.md#setframerate) is called to set a frame rate range for video streams.
 
 **Since:** 12
 
@@ -78,7 +81,7 @@ getActiveFrameRate(): FrameRateRange
 
 | Type | Description |
 | --- | --- |
-| [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | 帧率范围 |
+| [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | Frame rate range. |
 
 ## getActiveProfile
 
@@ -86,7 +89,7 @@ getActiveFrameRate(): FrameRateRange
 getActiveProfile(): VideoProfile
 ```
 
-获取当前生效的配置信息。
+Obtains the profile that takes effect currently.
 
 **Since:** 12
 
@@ -102,13 +105,13 @@ getActiveProfile(): VideoProfile
 
 | Type | Description |
 | --- | --- |
-| [VideoProfile](arkts-camera-camera-videoprofile-i.md) | 当前生效的配置信息 |
+| [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Profile obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getSupportedFrameRates
 
@@ -116,7 +119,7 @@ getActiveProfile(): VideoProfile
 getSupportedFrameRates(): Array<FrameRateRange>
 ```
 
-查询支持的帧率范围。
+Obtains the supported frame rates.
 
 **Since:** 12
 
@@ -132,7 +135,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FrameRateRange&gt; | 支持的帧率范围列表。若接口调用失败，返回undefined。 |
+| Array&lt;FrameRateRange&gt; | Array of supported frame rates. If the API call fails, undefined is returned. |
 
 ## getVideoRotation
 
@@ -146,10 +149,12 @@ ArkTS-Sta:
 getVideoRotation(deviceDegree?: int): ImageRotation
 ```
 
-获取录像旋转角度。
+Obtains the video rotation angle.
 
-- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
-- 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation   
+of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's   
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 12
 
@@ -167,20 +172,20 @@ getVideoRotation(deviceDegree?: int): ImageRotation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 设备旋转角度，单位度，取值范围[0, 360]。 &lt;br&gt; 从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行录像旋转角度计算。<br>**Since:** 23 |
+| deviceDegree | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. &lt;br&gt; Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageRotation](arkts-camera-camera-imagerotation-e.md) | 返回录像旋转角度。若接口调用失败，返回undefined。 |
+| [ImageRotation](arkts-camera-camera-imagerotation-e.md) | Returns the rotation angle of a video. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## isMirrorSupported
 
@@ -188,7 +193,7 @@ getVideoRotation(deviceDegree?: int): ImageRotation
 isMirrorSupported(): boolean
 ```
 
-查询是否支持镜像录像。
+Checks whether mirror recording is supported.
 
 **Since:** 15
 
@@ -204,13 +209,13 @@ isMirrorSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否支持镜像录像，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
+| boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 14 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 
 ## off('frameStart')
 
@@ -218,11 +223,11 @@ isMirrorSupported(): boolean
 off(type: 'frameStart', callback?: AsyncCallback<void>): void
 ```
 
-注销监听录像开始。
+Unsubscribes from video recording start events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -238,8 +243,8 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | 监听事件，固定为'frameStart'，videoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameEnd')
 
@@ -247,7 +252,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-注销监听录像结束。
+Unsubscribes from video recording stop events.
 
 **Since:** 10
 
@@ -263,8 +268,8 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | 监听事件，固定为'frameEnd'，videoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
 
@@ -272,7 +277,7 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-注销监听录像输出发生错误。
+Unsubscribes from VideoOutput error events.
 
 **Since:** 10
 
@@ -288,8 +293,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，photoOutput创建成功后可监听。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## offError
 
@@ -363,11 +368,11 @@ Unsubscribes from frame start event callback.
 on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-监听录像开始，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -383,8 +388,8 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | 监听事件，固定为'frameStart'，videoOutput创建成功后可监听。底层第一次曝光时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取结果。 只要有该事件返回就证明录像开始。 |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. The event is triggered and the corresponding information is returned when the bottom layer starts exposure for the first time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording starts as long as this event is returned. |
 
 ## on('frameEnd')
 
@@ -392,7 +397,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-监听录像结束，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -408,8 +413,8 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | 监听事件，固定为'frameEnd'，videoOutput创建成功后可监听。录像完全结束最后一帧时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取结果。 只要有该事件返回就证明录像结束。 |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. This event is triggered and returned when the last frame of recording is complete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording ends as long as this event is returned. |
 
 ## on('error')
 
@@ -417,11 +422,11 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听录像输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -437,8 +442,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，videoOutput创建成功后可监听。录像接口调用出现错误时触发该事件并返回对应错误码，比如调用 [start](arkts-camera-camera-videooutput-i.md#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)接口时出现错误返 回对应错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a videoOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a recording-related API such as [start](arkts-camera-camera-videooutput-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## onError
 
@@ -518,16 +523,18 @@ ArkTS-Sta:
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-设置录像流帧率范围，设置的范围必须在支持的帧率范围内。
+Sets a frame rate range for video streams. The range must be within the supported frame rate range,
 
-进行设置前，可通过[getSupportedFrameRates](arkts-camera-camera-videooutput-i.md#getsupportedframerates)查询支持的帧率范围。
+which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-videooutput-i.md#getsupportedframerates).
 
-> **说明：**
+> **NOTE：**
 > 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
 > 
-> 接口调用前，先调用[getActiveFrameRate](arkts-camera-camera-videooutput-i.md#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则
-> 下发的帧率不会生效。
+> Before calling this API, call [getActiveFrameRate](arkts-camera-camera-videooutput-i.md#getactiveframerate) to obtain the
+> current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
+> delivered frame rate is not applied.
 
 **Since:** 12
 
@@ -543,15 +550,15 @@ setFrameRate(minFps: int, maxFps: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最小帧率，单位：fps。当传入的最大值小于最小值时，传参异常，接口不生效。 |
-| maxFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大帧率，单位：fps。当传入的最小值大于最大值时，传参异常，接口不生效。 |
+| minFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, the API does not take effect. |
+| maxFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, the API does not take effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400110 | Unresolved conflicts with current configurations. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
 
 ## start
 
@@ -559,7 +566,7 @@ setFrameRate(minFps: int, maxFps: int): void
 start(callback: AsyncCallback<void>): void
 ```
 
-启动录制，通过注册回调函数获取结果。使用callback异步回调。
+Starts video recording. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -575,14 +582,14 @@ start(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动录制成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -590,7 +597,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-启动录制。使用Promise异步回调。
+Starts video recording. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -606,14 +613,14 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -621,7 +628,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-结束录制，通过注册回调函数获取结果。使用callback异步回调。
+Stops video recording. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -637,7 +644,7 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当结束录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -645,7 +652,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-结束录制。使用Promise异步回调。
+Stops video recording. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -661,5 +668,5 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

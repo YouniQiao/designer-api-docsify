@@ -1,6 +1,6 @@
 # SequenceRunner
 
-表示串行队列的任务，用于执行一组需要串行执行的任务。
+Implements a serial queue, in which all tasks are executed in sequence.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 constructor(priority?: Priority)
 ```
 
-SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
+A constructor used to create a **SequenceRunner** instance.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 ## Examples
 
@@ -52,13 +52,14 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 constructor(name: string, priority?: Priority)
 ```
 
-SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该实例表示一个全局串行队列。如果传入的名字与已有名字相同，将返回同一个串行队列。
+A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 底层通过单例模式保证了：创建同名串行队列时，获取到同一个实例。
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue
+> with the same name is created.
 > 
-> - 无法修改串行队列的优先级。
+> - The priority of a serial queue cannot be modified.
 
 **Since:** 12
 
@@ -74,8 +75,8 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 串行队列的名字。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| name | string | Yes | Name of a serial queue. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 ## Examples
 
@@ -89,13 +90,13 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 execute(task: Task): Promise<Object>
 ```
 
-执行串行任务。使用该方法前需先构造**SequenceRunner**实例。串行队列不能执行任务组任务、其他串行队列任务、异步队列任务、有依赖关系的任务和已执行的任务。使用Promise异步回调。
+Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner**instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 不支持加入存在依赖的任务。
+> - Tasks that depend others cannot be added to the serial queue.
 > 
-> - 前面的任务执行失败或取消不会影响后续任务的执行。
+> - The failure or cancellation of a task does not affect the execution of subsequent tasks in the serial queue.
 
 **Since:** 11
 
@@ -111,23 +112,23 @@ execute(task: Task): Promise<Object>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | 需要添加到串行任务队列中的任务。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the serial queue. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise对象，返回任务执行的结果。 |
+| Promise&lt;Object&gt; | Promise used to return the task execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200025 | dependent task not allowed. |
-| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| 10200003 | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
-| 10200051 | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
-| 10200006 | An exception occurred during serialization. |
+| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ArrowPosition
 
-箭头的位置。
+Enumerates arrow positions.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 END = 0
 ```
 
-文字在前，箭头在后。
+The text is in front of the arrow.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ END = 0
 START = 1
 ```
 
-箭头在前，文字在后。
+The arrow is in front of the text.
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # NotificationContent
 
-通知内容。
+Describes the notification contents.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 liveView?: NotificationLiveViewContent
 ```
 
-普通实况窗类型通知内容。
+Common live view.
 
 **Type:** [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md)
 

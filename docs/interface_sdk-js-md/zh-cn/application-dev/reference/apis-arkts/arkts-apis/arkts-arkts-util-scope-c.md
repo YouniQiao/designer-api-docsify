@@ -14,12 +14,6 @@ Scope 接口用于描述字段的有效范围。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
-
 ## clamp
 
 ```TypeScript

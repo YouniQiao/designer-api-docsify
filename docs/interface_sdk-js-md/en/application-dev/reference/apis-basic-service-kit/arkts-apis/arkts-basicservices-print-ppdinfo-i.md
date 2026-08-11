@@ -1,6 +1,6 @@
 # PpdInfo
 
-定义打印机所使用驱动的PPD文件信息的接口。
+defines ppd info.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 manufacturer: string
 ```
 
-表示当前PPD文件内的打印机厂商名称。
+Manufacturer.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ manufacturer: string
 nickName: string
 ```
 
-表示当前PPD文件内的打印机别名。
+Nick name.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ nickName: string
 ppdName: string
 ```
 
-表示当前PPD文件的名称。
+Ppd name.
 
 **Type:** string
 

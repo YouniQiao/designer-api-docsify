@@ -1,7 +1,7 @@
 # Scenarios
 
-表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于  
-[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
+Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) lifecycle callback is not triggered. It is used in the  
+[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) API.
 
 **Since:** 20
 
@@ -17,7 +17,7 @@
 SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 ```
 
-&lt;!--RP1--&gt;系统接口[missionManager.moveMissionToFront](./js-apis-app-ability-missionManager-sys.md#missionmanagermovemissiontofront-2)接口触发的UIAbility到前台场景。&lt;!--RP1End--&gt;
+&lt;!--RP1--&gt;A scenario where the system API [missionManager.moveMissionToFront](./js-apis-app-ability-missionManager-sys.md#missionmanagermovemissiontofront-2) is called to move the UIAbility to the foreground.&lt;!--RP1End--&gt;
 
 **Since:** 20
 
@@ -37,7 +37,7 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 SCENARIO_SHOW_ABILITY = 0x00000002
 ```
 
-[showAbility](arkts-ability-uiabilitycontext-c.md#showability)接口触发的UIAbility到前台场景。
+A scenario where the [showAbility](arkts-ability-uiabilitycontext-c.md#showability) API is called  to move the UIAbility to the foreground.
 
 **Since:** 20
 
@@ -57,7 +57,8 @@ SCENARIO_SHOW_ABILITY = 0x00000002
 SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 ```
 
-[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backtocallerabilitywithresult)接口触发的UIAbility到前台场景。
+A scenario where the  
+[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backtocallerabilitywithresult) API is called to move the UIAbility to the foreground.
 
 **Since:** 20
 

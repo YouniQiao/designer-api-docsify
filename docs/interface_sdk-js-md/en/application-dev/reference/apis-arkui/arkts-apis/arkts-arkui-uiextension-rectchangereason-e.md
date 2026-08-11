@@ -1,6 +1,7 @@
 # RectChangeReason
 
-组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化的原因。
+Enumerates the reasons for changes in the rectangle (position and size) of the component (**EmbeddedComponent** or  
+**UIExtensionComponent**).
 
 **Since:** 14
 
@@ -16,7 +17,7 @@
 HOST_WINDOW_RECT_CHANGE = 0x0001
 ```
 
-组件所在的宿主窗口矩形变化。
+The rectangle of the host window containing the component changes.
 
 **Since:** 14
 

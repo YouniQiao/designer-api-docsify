@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function allocUninitializedFromPool(size: number): FastBuffer
 ```
 
-从缓冲池中创建指定大小未初始化的FastBuffer对象。调用[fill](arkts-arkts-fastbuffer-fastbuffer-c.md#fill)函数初始化该对象。
+Allocates a new FastBuffer for a fixed size bytes. The FastBuffer will not be initially filled.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function allocUninitializedFromPool(size: number): FastBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
+| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 未初始化的FastBuffer实例。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 ## Examples
 

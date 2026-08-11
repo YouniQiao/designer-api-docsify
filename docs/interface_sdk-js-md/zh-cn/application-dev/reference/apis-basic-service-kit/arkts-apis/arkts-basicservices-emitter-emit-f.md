@@ -1,11 +1,5 @@
 # emit
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## emit
 
 ```TypeScript
@@ -39,12 +33,36 @@ function emit(event: InnerEvent, data?: EventData): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let eventData: emitter.EventData = {
   data: {
     "content": "content",
     "id": 1,
   }
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // 现在类型兼容
 };
 
 let innerEvent: emitter.InnerEvent = {
@@ -92,12 +110,12 @@ function emit(eventId: string, data?: EventData): void
 ```TypeScript
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter.emit('eventId', eventData);
+emitter.emit("eventId", eventData);
 ```
 
 
@@ -125,6 +143,12 @@ function emit(eventId: string): void
 | --- | --- | --- | --- |
 | eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 
+## 示例
+
+```TypeScript
+emitter.emit("eventId");
+```
+
 
 ## emit
 
@@ -150,6 +174,23 @@ function emit(eventId: string, data: EventData): void
 | --- | --- | --- | --- |
 | eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 是 | 事件携带的数据。 |
+
+## 示例
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // 现在类型兼容
+};
+
+emitter.emit("eventId", eventData);
+```
 
 
 ## emit
@@ -200,7 +241,7 @@ class Sample {
 let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
-emitter.emit('eventId', eventData);
+emitter.emit("eventId", eventData);
 ```
 
 
@@ -264,6 +305,8 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let eventData: emitter.EventData = {
   data: {
@@ -276,7 +319,7 @@ let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
 };
 
-emitter.emit('eventId', options, eventData);
+emitter.emit("eventId", options, eventData);
 ```
 
 
@@ -305,6 +348,16 @@ function emit(eventId: string, options: Options): void
 | eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
 
+## 示例
+
+```TypeScript
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit("eventId", options);
+```
+
 
 ## emit
 
@@ -331,6 +384,25 @@ function emit(eventId: string, options: Options, data: EventData): void
 | eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 是 | 事件携带的数据，默认为空。 |
+
+## 示例
+
+```TypeScript
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // 现在类型兼容
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit("eventId", options, eventData);
+```
 
 
 ## emit
@@ -367,6 +439,8 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 @Sendable
 class Sample {
@@ -386,7 +460,30 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter.emit('eventId', options, eventData);
+emitter.emit("eventId", options, eventData);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit("eventId", options, eventData);
 ```
 
 

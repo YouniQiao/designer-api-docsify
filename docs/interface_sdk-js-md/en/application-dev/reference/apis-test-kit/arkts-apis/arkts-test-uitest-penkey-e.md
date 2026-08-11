@@ -1,6 +1,6 @@
 # PenKey
 
-笔按键类型枚举。
+Pen key type enum.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 HANDWRITING = 0
 ```
 
-手写键。
+Handwriting key.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ HANDWRITING = 0
 SMART = 1
 ```
 
-智慧键。
+Smart key.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ SMART = 1
 AIR_MOUSE = 2
 ```
 
-空鼠键。
+Air mouse key.
 
 **Since:** 26.0.0
 

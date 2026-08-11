@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat
 ```
 
-通过框架字符串获取SimpleNumberFormat对象。
+Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 **Since:** 23
 
@@ -28,18 +28,18 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | 合法的框架字符串，支持的字符及含义请参考 [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons)。 |
-| locale | Intl.Locale | No | 区域对象。默认值：系统区域对象。 |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
+| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 

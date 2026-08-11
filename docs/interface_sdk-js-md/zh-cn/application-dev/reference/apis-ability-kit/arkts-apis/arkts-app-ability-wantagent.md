@@ -6,12 +6,6 @@ WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象�
  [通知模块](../../../notification/notification-with-wantagent.md)。
 
 
-## 导入模块
-
-```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 命名空间

@@ -1,6 +1,6 @@
 # PopupOptions
 
-PopupOptions定义Popup的具体样式参数。
+Defines the popup options.
 
 **Since:** 23
 
@@ -25,11 +25,9 @@ buttons?: [
   ]
 ```
 
-设置popup操作按钮，按钮最多设置两个。 
+The buttons of Popup. Setting undefined means that the button will not be displayed.
 
-默认不显示按钮。
-
-**Type:** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
+**Type:** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
 
 **Since:** 23
 
@@ -47,9 +45,7 @@ buttons?: [
 direction?: Direction
 ```
 
-布局方向。
-
-默认值：Direction.Auto
+Indicates the attribute of the current popup direction.
 
 **Type:** [Direction](arkts-arkui-direction-e.md)
 
@@ -71,13 +67,7 @@ direction?: Direction
 icon?: PopupIconOptions
 ```
 
-设置popup图标。
-
-**说明：**
-
-当width和height设置异常值或0时不显示。
-
-默认不显示图标。
+The icon of Popup.
 
 **Type:** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
@@ -97,13 +87,7 @@ icon?: PopupIconOptions
 maxWidth?: Dimension
 ```
 
-设置popup的最大宽度，通过此接口popup可以自定义宽度显示。
-
-**说明：**
-
-1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
-
-默认值：400vp
+Set the max width of the popup.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -125,17 +109,7 @@ maxWidth?: Dimension
 message?: PopupTextOptions
 ```
 
-设置popup内容文本。
-
-**说明：**
-
-message不支持设置fontWeight。 
-
-默认不显示内容文本。
-
-**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
-
-**ArkTS-Sta起始版本：** 23
+The message of Popup.
 
 **Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
@@ -155,7 +129,7 @@ message不支持设置fontWeight。
 onClose?: VoidCallback
 ```
 
-设置popup关闭按钮回调函数。
+The close button callback of Popup.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -175,13 +149,7 @@ onClose?: VoidCallback
 showClose?: boolean | Resource
 ```
 
-设置popup关闭按钮。
-
-true：显示关闭按钮；false：不显示关闭按钮。
-
-Resource：显示对应的图标。
-
-默认值：true
+The show close of Popup.
 
 **Type:** boolean \| Resource
 
@@ -203,9 +171,7 @@ Resource：显示对应的图标。
 title?: PopupTextOptions
 ```
 
-设置popup标题文本。 
-
-默认不显示标题文本。
+The title of Popup.
 
 **Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 

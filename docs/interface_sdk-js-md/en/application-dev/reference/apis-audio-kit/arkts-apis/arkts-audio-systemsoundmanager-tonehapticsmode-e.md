@@ -1,12 +1,6 @@
 # ToneHapticsMode
 
-枚举，系统铃音场景的振动模式。
-
-| 名称 | 值 | 说明 |  
-| ----------------------------- | -- | -------------------- |  
-| NONE | 0 | 无振动模式。 |  
-| SYNC | 1 | 与铃音同步模式。 |  
-| NON_SYNC | 2 | 非同步模式。 |
+Enum for haptics mode in tone scenario.
 
 **Since:** 14
 
@@ -22,7 +16,7 @@
 NONE = 0
 ```
 
-无振动模式。
+None haptics mode.
 
 **Since:** 14
 
@@ -38,7 +32,7 @@ NONE = 0
 SYNC = 1
 ```
 
-与铃音同步模式。
+Haptics is synchronized with tone.
 
 **Since:** 14
 
@@ -54,7 +48,7 @@ SYNC = 1
 NON_SYNC = 2
 ```
 
-非同步模式。
+Haptics is out of synchronize with tone.
 
 **Since:** 14
 

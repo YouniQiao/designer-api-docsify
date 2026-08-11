@@ -1,6 +1,6 @@
 # CipherResponse
 
-调用cipher接口后，返回的内容。
+Defines the response to the cipher interface called.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.Cr
 text: string
 ```
 
-返回的内容。
+Response content.
 
 **Type:** string
 

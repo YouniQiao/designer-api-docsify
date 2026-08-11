@@ -1,78 +1,84 @@
 # TranslateResult
 
-Translation Result
+平移信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-componentUtils-export interface TranslateResult--><!--Device-componentUtils-export interface TranslateResult-End-->
+<!--Device-componentUtils-interface TranslateResult--><!--Device-componentUtils-interface TranslateResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
-```
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Indicates the translation distance of the x-axis, in vp.
+x轴平移距离。
 
-**类型：** double
+单位: vp
 
-**起始版本：** 23
+**类型：** number
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TranslateResult-x: double--><!--Device-TranslateResult-x: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TranslateResult-x: number--><!--Device-TranslateResult-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Indicates the translation distance of the y-axis, in vp.
+y轴平移距离。
 
-**类型：** double
+单位: vp
 
-**起始版本：** 23
+**类型：** number
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TranslateResult-y: double--><!--Device-TranslateResult-y: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TranslateResult-y: number--><!--Device-TranslateResult-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
-Indicates the translation distance of the z-axis, in vp.
+z轴平移距离。
 
-**类型：** double
+单位: vp
 
-**起始版本：** 23
+**类型：** number
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TranslateResult-z: double--><!--Device-TranslateResult-z: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TranslateResult-z: number--><!--Device-TranslateResult-z: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

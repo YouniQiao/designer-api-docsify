@@ -1,6 +1,6 @@
 # ButtonFrameNode
 
-定义Button类型的FrameNode。
+Define the Button type of FrameNode.
 
 **Inheritance/Implementation:** ButtonFrameNode extends [TypedFrameNode<ButtonAttribute>](TypedFrameNode<ButtonAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(): ButtonAttribute
 ```
 
-初始化Button类型的FrameNode。
+Initialize Button FrameNode.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ abstract initialize(): ButtonAttribute
 abstract initialize(value: ButtonOptions): ButtonAttribute
 ```
 
-初始化Button类型的FrameNode。
+Initialize Button FrameNode.
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ abstract initialize(value: ButtonOptions): ButtonAttribute
 abstract initialize(label: ResourceStr, options?: ButtonOptions): ButtonAttribute
 ```
 
-初始化Button类型的FrameNode。
+Initialize Button FrameNode.
 
 **Since:** 23
 

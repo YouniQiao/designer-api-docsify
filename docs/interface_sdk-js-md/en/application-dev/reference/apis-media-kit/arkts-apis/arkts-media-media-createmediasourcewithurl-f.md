@@ -12,7 +12,7 @@ import { media } from 'kits/@kit.MediaKit';
 function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource
 ```
 
-创建流媒体预下载媒体来源实例方法。
+Creates a media source for streaming media to be pre-downloaded.
 
 **Since:** 12
 
@@ -28,21 +28,21 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 流媒体预下载媒体来源url，支持的流媒体格式：HLS、HTTP-FLV、Dash、Https。&lt;br&gt; - 本地m3u8的fd路径。 |
-| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | 支持流媒体预下载HttpHeader自定义。不传时为网络请求默认的HttpHeader。<br>**Since:** 13 |
+| url | string | Yes | URL of the media source. The following streaming media formats are supported: HLS, HTTP- FLV, DASH, and HTTPS.&lt;br&gt; - FD path of the local M3U8 file. |
+| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | HTTP header customized for streaming media pre-download. If this parameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource返回值。 |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 5400101 | No memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 
 
 ## createMediaSourceWithUrl
@@ -72,12 +72,12 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 5400101 | No memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 

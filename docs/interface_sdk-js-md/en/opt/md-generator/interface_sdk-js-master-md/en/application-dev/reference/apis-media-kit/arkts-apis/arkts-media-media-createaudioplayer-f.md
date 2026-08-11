@@ -1,0 +1,37 @@
+# createAudioPlayer
+
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
+## createAudioPlayer
+
+```TypeScript
+function createAudioPlayer(): AudioPlayer
+```
+
+Creates an AudioPlayer instance in synchronous mode.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback:
+
+<!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AudioPlayer
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) |
+
+## Examples
+
+```TypeScript
+let audioPlayer: media.AudioPlayer = media.createAudioPlayer();
+```

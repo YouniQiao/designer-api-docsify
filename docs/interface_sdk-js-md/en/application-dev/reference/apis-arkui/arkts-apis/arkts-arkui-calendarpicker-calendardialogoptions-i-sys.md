@@ -1,13 +1,6 @@
 # CalendarDialogOptions
 
-日历选择器弹窗选项。
-
-继承自[CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)。
-
-> **说明：**
-> 
-> 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够
-> 完整显示的最小窗口宽度为386vp。
+Defines the DatePickerDialogOptions for Calendar Picker Dialog.
 
 **Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)
 
@@ -25,7 +18,7 @@
 distortionMode?: DistortionMode
 ```
 
-设置对话框的形变动画模式。
+Sets the distortion animation Mode of the dialog.
 
 **Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
@@ -49,7 +42,7 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置对话框的边缘光动画模式。
+Sets the edgeLight animation Mode of the dialog.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 

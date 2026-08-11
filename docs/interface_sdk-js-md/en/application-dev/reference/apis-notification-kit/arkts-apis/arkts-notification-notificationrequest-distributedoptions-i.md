@@ -1,6 +1,6 @@
 # DistributedOptions
 
-描述跨设备协同选项。预留能力，暂未支持。
+Describes options for cross-device notifications. Not supported currently.
 
 **Since:** 8
 
@@ -16,10 +16,10 @@
 isDistributed?: boolean
 ```
 
-是否支持跨设备协同通知。默认为true。
+Whether cross-device notifications are supported. The default value is **true**.
 
-- true：支持跨设备协同通知。  
-- false：不支持跨设备协同通知。
+- **true**: cross-device notifications are supported.  
+- **false**: cross-device notifications are not supported.
 
 **Type:** boolean
 
@@ -39,7 +39,7 @@ isDistributed?: boolean
 supportDisplayDevices?: Array<string>
 ```
 
-可以同步通知到的设备列表。
+List of the devices to which the notification can be synchronized.
 
 **Type:** Array&lt;string&gt;
 
@@ -57,7 +57,7 @@ supportDisplayDevices?: Array<string>
 supportOperateDevices?: Array<string>
 ```
 
-可以打开通知的设备列表。
+List of the devices on which the notification can be opened.
 
 **Type:** Array&lt;string&gt;
 

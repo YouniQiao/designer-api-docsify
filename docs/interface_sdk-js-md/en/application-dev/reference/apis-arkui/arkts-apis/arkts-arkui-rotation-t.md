@@ -4,7 +4,7 @@
 export type Rotation = Vector3
 ```
 
-用于设置组件的旋转角度。
+Rotation info.
 
 **Since:** 23
 

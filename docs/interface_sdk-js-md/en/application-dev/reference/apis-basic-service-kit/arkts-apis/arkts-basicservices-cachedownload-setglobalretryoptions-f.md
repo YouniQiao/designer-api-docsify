@@ -30,17 +30,3 @@ Sets retry options for all tasks.Used when task-specific retry configuration is 
 | --- | --- | --- | --- |
 | options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | No | Task retry configurations. &lt;br&gt;Default value: Refer to the default value of RetryOptions. |
 
-## Examples
-
-```TypeScript
-try {
-  // Set the maximum number of retries for a task globally.
-  cacheDownload.setGlobalRetryOptions({
-    maxRetryCount: 1
-  });
-  cacheDownload.download("https://www.example.com", {});
-} catch (err) {
-  console.error(`Failed to download the resource. err code: ${err?.code}, err message: ${err?.message}`);
-}
-```
-

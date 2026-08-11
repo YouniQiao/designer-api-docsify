@@ -1,11 +1,5 @@
 # grantUriPermissionByKey（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## grantUriPermissionByKey
 
 ```TypeScript
@@ -43,14 +37,14 @@ function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 16000092 | No permission to authorize the URI. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000094 | The target token ID is invalid. |
-| 16000058 | Invalid URI flag. |
-| 16000091 | Failed to get the file URI from the key. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [16000092](../errorcode-ability.md#16000092-无权限授权uri) | No permission to authorize the URI. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000094](../errorcode-ability.md#16000094-目标应用的token-id无效) | The target token ID is invalid. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000091](../errorcode-ability.md#16000091-根据key获取文件uri数据失败) | Failed to get the file URI from the key. |
 
 ## 示例
 
@@ -70,12 +64,13 @@ export default class EntryAbility extends UIAbility {
       let key: string = 'udmf://SystemShare/com.example.test/ap\\t5kKMYTOSHBh9\\f1@817VnBBvxI[e';
       // 可以通过bundleManager.getApplicationInfo接口获取targetTokenId
       // 假设获取的targetTokenId为1001
-      let targetTokenId: number = 1001;
+      let targetTokenId = 1001;
       uriPermissionManager.grantUriPermissionByKey(key,
         wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetTokenId)
         .then(() => {
           console.info('grantUriPermissionByKey succeeded.');
-        }).catch((error: BusinessError) => {
+        }).catch((err: Error) => {
+        let error = err as BusinessError;
         console.error('grantUriPermissionByKey failed: ' + JSON.stringify(error));
       });
     } catch (error) {

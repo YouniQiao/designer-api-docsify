@@ -18,14 +18,7 @@ Define DigitIndicator, the indicator type is digit.
 constructor()
 ```
 
-DotIndicator的构造函数。
-
-> **说明：**
-> 
-> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
-> 
-> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
+Constructor.
 
 **Since:** 23
 
@@ -43,7 +36,7 @@ DotIndicator的构造函数。
 digitFont(value: Font | undefined): this
 ```
 
-Swiper组件数字导航点的字体样式。
+Set the digital indicator font (just support font size and weight).
 
 **Since:** 23
 
@@ -59,7 +52,7 @@ Swiper组件数字导航点的字体样式。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | 设置Swiper组件数字导航点的字体样式。&lt;br/&gt;只支持Font中size和weight参数，family和style设置不生效。&lt;br/&gt;默认值：{ size:?14,?weight:?FontWeight.Normal?}&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | the indicator font size and weight, default value is { size: 14, weight: FontWeight.Normal }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -73,7 +66,7 @@ Swiper组件数字导航点的字体样式。
 fontColor(value: ResourceColor | undefined): this
 ```
 
-Swiper组件数字导航点的字体颜色。
+Set font color of the digital indicator.
 
 **Since:** 23
 
@@ -89,7 +82,7 @@ Swiper组件数字导航点的字体颜色。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431'，黑色。&lt;br/&gt;取值为undefined时，按默认值处理 。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator font color, default value is { #FF182431 }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -103,7 +96,7 @@ Swiper组件数字导航点的字体颜色。
 selectedDigitFont(value: Font | undefined): this
 ```
 
-选中Swiper组件数字导航点的字体样式。
+Set the digital indicator font (just support font size and weight).
 
 **Since:** 23
 
@@ -119,7 +112,7 @@ selectedDigitFont(value: Font | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | 设置选中Swiper组件数字导航点的字体样式。&lt;br/&gt;默认值：{?size:?14,?weight:?FontWeight.Normal?}&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | the indicator font size and weight when selected, default value is { size: 14, weight: FontWeight.Normal }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -133,7 +126,7 @@ selectedDigitFont(value: Font | undefined): this
 selectedFontColor(value: ResourceColor | undefined): this
 ```
 
-选中Swiper组件数字导航点的字体颜色。
+Set font color of the digital indicator when selected.
 
 **Since:** 23
 
@@ -149,7 +142,7 @@ selectedFontColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置选中Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431'，黑色。&lt;br/&gt;取值为undefined时，按默认值 处理。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator font color when selected, default value is { #FF182431 }, undefined means setting to default value. |
 
 **Return value:**
 

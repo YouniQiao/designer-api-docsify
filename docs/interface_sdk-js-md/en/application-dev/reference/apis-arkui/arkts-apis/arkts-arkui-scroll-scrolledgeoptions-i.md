@@ -1,6 +1,6 @@
 # ScrollEdgeOptions
 
-滚动到边缘位置的参数选项。
+Provides parameters for scrolling to the edge of a scrollable container.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 velocity?: double
 ```
 
-设置滚动到容器边缘的固定速度。如果设置小于等于0的值，参数不生效。
+Fixed velocity for scrolling to the edge of the container.If the value specified is less than or equal to 0, the parameter will not take effect.
 
 **Type:** double
 

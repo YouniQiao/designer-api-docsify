@@ -4,7 +4,7 @@
 export type MissionListener = _MissionListener
 ```
 
-定义系统任务状态监听。
+MissionListener registered by app.
 
 **Since:** 9
 

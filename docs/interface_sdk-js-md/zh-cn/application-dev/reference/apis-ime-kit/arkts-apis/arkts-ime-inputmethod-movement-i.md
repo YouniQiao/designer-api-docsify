@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## direction
 
 ```TypeScript
@@ -24,7 +18,7 @@ direction: Direction
 
 选中文本时，光标的移动方向。
 
-**类型：** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
+**类型：** [Direction](arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 10
 

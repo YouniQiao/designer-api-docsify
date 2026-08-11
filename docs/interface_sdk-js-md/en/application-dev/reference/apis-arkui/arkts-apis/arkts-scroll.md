@@ -6,37 +6,37 @@
 
 | Name | Description |
 | --- | --- |
-| [Scroller](arkts-arkui-scroll-scroller-c.md) | 可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arclist.md)、  [ArcScrollBar](arkts-arkui-arcscrollbar.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、Scroll、[ScrollBar](scroll_bar)、  [Grid](arkts-arkui-grid-grid-f.md#grid)、[WaterFlow](water_flow)上。 |
+| [Scroller](arkts-arkui-scroll-scroller-c.md) | Defines a controller for scrollable container components.  &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase.&lt;br&gt;2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component.Otherwise, depending on the API called, it may have no effect or throw an exception.&lt;br&gt;3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called.Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component,the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively.&lt;/p&gt; |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md) | 初始滚动偏移量的参数选项。 |
-| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | 滑动偏移量对象。 |
-| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md) | [OnScrollFrameBeginCallback]返回的实际相对上一帧滚动偏移量。 |
-| [ScrollAnimationOptions](arkts-arkui-scroll-scrollanimationoptions-i.md) | 自定义滚动动效的参数选项。 |
-| [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md) | 滚动到边缘位置的参数选项。 |
-| [ScrollOptions](arkts-arkui-scroll-scrolloptions-i.md) | 滚动到指定位置的参数选项。 |
-| [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md) | 翻页模式的参数选项。 |
-| [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md) | 限位滚动模式对象。 |
-| [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | 滑动到指定Index的参数选项。 |
-| [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md) | frameNode中[getEvent('Scroll')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventscroll19)方法的返回值，可用于给Scroll节点设置滚动事件。  UIScrollEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
+| [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md) | Provides parameters for setting the initial scrolling offset. |
+| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | Represents the offset values resulting from a scroll operation. |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md) | The data returned by the event handler when onScrollFrameBegin. |
+| [ScrollAnimationOptions](arkts-arkui-scroll-scrollanimationoptions-i.md) | Provides parameters for customizing scroll animations. |
+| [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md) | Provides parameters for scrolling to the edge of a scrollable container. |
+| [ScrollOptions](arkts-arkui-scroll-scrolloptions-i.md) | Provides parameters for scrolling to a specific position in a scrollable container. |
+| [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md) | Provides parameters for page scrolling behavior. |
+| [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md) | Defines a scroll snapping mode object. |
+| [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | Provides parameters for scrolling to a specific index. |
+| [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md) | Defines a UIScrollableCommonEvent which is used to set different common event to target component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md) | 对齐方式枚举。 |
-| [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md) | 滚动方向枚举。 |
+| [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md) | Enumerates alignment modes. |
+| [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md) | Enumerates the scrolling directions. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | 滚动到边缘时触发的回调。 |
-| [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Scroll每帧滚动前触发的回调。 |
-| [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | Scroll每帧缩放完成时触发的回调。 |
-| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Scroll滚动时触发的回调。 |
-| [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Scroll滚动前触发的回调。 |
+| [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | Represents the callback triggered when scrolling reaches an edge. |
+| [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Represents the callback triggered before each frame scrolling starts. |
+| [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | Called when the scaling of each frame is complete. |
+| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;If the &lt;em&gt;onScrollFrameBegin&lt;/em&gt; event and &lt;em&gt;scrollBy&lt;/em&gt; method are used to implement nested scrolling,set the &lt;em&gt;edgeEffect&lt;/em&gt; attribute of the scrollable child component to &lt;em&gt;None&lt;/em&gt;. For example,if a &lt;em&gt;List&lt;/em&gt; is nested in the &lt;em&gt;Scroll&lt;/em&gt; component, &lt;em&gt;edgeEffect&lt;/em&gt; of the &lt;em&gt;List&lt;/em&gt; must be set to &lt;em&gt;EdgeEffect.None&lt;/em&gt;.&lt;/p&gt; |
+| [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scroll can scroll. |
 

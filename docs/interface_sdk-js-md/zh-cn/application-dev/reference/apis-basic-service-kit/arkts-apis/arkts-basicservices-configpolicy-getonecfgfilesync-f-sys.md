@@ -1,11 +1,5 @@
 # getOneCfgFileSync（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getOneCfgFileSync
 
 ```TypeScript
@@ -42,5 +36,5 @@ function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: st
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3.Parameter verification failed. |
 

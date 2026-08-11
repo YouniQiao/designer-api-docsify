@@ -1,6 +1,6 @@
 # RRect (System API)
 
-圆角矩形。
+Round rect.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 height: double
 ```
 
-动画目标窗口的高度大小。
+Height of the round rect, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ height: double
 left: double
 ```
 
-动画目标窗口左上角相对于屏幕的横坐标。
+The X-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ left: double
 radius: double
 ```
 
-动画目标窗口的圆角大小。
+Radius of the round corner of the round rect, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -84,7 +84,7 @@ radius: double
 top: double
 ```
 
-动画目标窗口左上角相对于屏幕的纵坐标。
+The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -104,7 +104,7 @@ top: double
 width: double
 ```
 
-动画目标窗口的宽度大小。
+Width of the round rect, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

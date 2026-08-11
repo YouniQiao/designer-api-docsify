@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function clearData(): void
 ```
 
-应用事件打点数据清理方法，将当前应用存储在本地的打点数据进行清除。
+Clears local logging data of the application.
 
 **Since:** 9
 

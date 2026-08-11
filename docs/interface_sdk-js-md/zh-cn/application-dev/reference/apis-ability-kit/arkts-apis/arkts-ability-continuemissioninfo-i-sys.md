@@ -131,7 +131,7 @@ wantParam: Record<string, Object>
 
 表示扩展参数。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 11
 

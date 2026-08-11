@@ -43,6 +43,7 @@ Defines the text style and layout manager for the component whose {@link type} i
 | -- | -- | -- |
 | [OH_ArkUI_StyledStringKey](#oh_arkui_styledstringkey) | OH_ArkUI_StyledStringKey | Enumerates the styles of a styled string. |
 | [OH_ArkUI_SuperscriptStyle](#oh_arkui_superscriptstyle) | OH_ArkUI_SuperscriptStyle | Enumerates the text superscript and subscript styles. |
+| [OH_ArkUI_TextEncoding](#oh_arkui_textencoding) | OH_ArkUI_TextEncoding | Enumerates the text encoding types supported by ArkUI text layout query APIs. |
 
 ### Function
 
@@ -273,8 +274,11 @@ Defines the text style and layout manager for the component whose {@link type} i
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphPositionAtCoordinate(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_Drawing_PositionAndAffinity** outPos)](#oh_arkui_textlayoutmanager_getglyphpositionatcoordinate) | Gets the glyph position at coordinate. |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetLineMetrics(ArkUI_TextLayoutManager* layoutManager, int32_t lineNumber, OH_Drawing_LineMetrics* outMetrics)](#oh_arkui_textlayoutmanager_getlinemetrics) | Get line metrics information. |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinate(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_Drawing_PositionAndAffinity** outPos)](#oh_arkui_textlayoutmanager_getcharacterpositionatcoordinate) | Gets the character position at coordinate. |
+| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithEncoding(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_ArkUI_TextEncoding encoding, OH_Drawing_PositionAndAffinity** outPos)](#oh_arkui_textlayoutmanager_getcharacterpositionatcoordinatewithencoding) | Gets the character position at coordinate based on the specified encoding type. |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)](#oh_arkui_textlayoutmanager_getglyphrangeforcharacterrange) | Get the glyph range produced by the specified range of characters. |
+| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)](#oh_arkui_textlayoutmanager_getglyphrangeforcharacterrangewithencoding) | Get the glyph range produced by the specified range of characters based on the specified encoding type. |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)](#oh_arkui_textlayoutmanager_getcharacterrangeforglyphrange) | Get the character range that maps to the glyphs in the given glyph range. |
+| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)](#oh_arkui_textlayoutmanager_getcharacterrangeforglyphrangewithencoding) | Get the character range that maps to the glyphs in the given glyph range based on the specified encoding type. |
 | [ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetLinearGradient(OH_ArkUI_ParagraphStyle* paragraphStyle, const OH_ArkUI_LinearGradientOptions* linearGradient)](#oh_arkui_paragraphstyle_setlineargradient) | Set linear gradient of paragraph style. |
 | [ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetLinearGradient(const OH_ArkUI_ParagraphStyle* paragraphStyle, OH_ArkUI_LinearGradientOptions* linearGradient)](#oh_arkui_paragraphstyle_getlineargradient) | Get linear gradient of paragraph style. |
 | [ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetRadialGradient(OH_ArkUI_ParagraphStyle* paragraphStyle, const OH_ArkUI_RadialGradientOptions* radialGradient)](#oh_arkui_paragraphstyle_setradialgradient) | Set radial gradient of paragraph style. |
@@ -331,6 +335,23 @@ Enumerates the text superscript and subscript styles.
 | OH_ARKUI_SUPERSCRIPTSTYLE_NORMAL = 0 |  |
 | OH_ARKUI_SUPERSCRIPTSTYLE_SUPERSCRIPT |  |
 | OH_ARKUI_SUPERSCRIPTSTYLE_SUBSCRIPT |  |
+
+### OH_ArkUI_TextEncoding
+
+```c
+enum OH_ArkUI_TextEncoding
+```
+
+**Description**
+
+Enumerates the text encoding types supported by ArkUI text layout query APIs.
+
+**Since**: 26.0.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_TEXT_ENCODING_UTF8 = 0 |  |
+| OH_ARKUI_TEXT_ENCODING_UTF16 = 1 |  |
 
 
 ## Function description
@@ -5925,7 +5946,7 @@ Sets the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| const OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [const OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -5953,7 +5974,7 @@ Obtains the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -6092,7 +6113,7 @@ Obtains the range of the content to be replaced in the text change information.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | uint32_t* start | Pointer to the start index of the range of the content to be replaced. |
 | uint32_t* end | Pointer to the end index of the range of the content to be replaced. |
 
@@ -6121,7 +6142,7 @@ Obtains the styled string used for replacement in the text change information.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
@@ -6149,7 +6170,7 @@ Obtains the styled string of the previewed content in the text change informatio
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
@@ -6310,6 +6331,34 @@ Gets the character position at coordinate.
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
+### OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithEncoding()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithEncoding(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_ArkUI_TextEncoding encoding, OH_Drawing_PositionAndAffinity** outPos)
+```
+
+**Description**
+
+Gets the character position at coordinate based on the specified encoding type.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
+| double dx | Indicates the positionX of typography to set. |
+| double dy | Indicates the positionY of typography to set. |
+| [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character position. |
+| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+
 ### OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange()
 
 ```c
@@ -6337,6 +6386,34 @@ Get the glyph range produced by the specified range of characters.
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
+### OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEncoding()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)
+```
+
+**Description**
+
+Get the glyph range produced by the specified range of characters based on the specified encoding type.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* charRange | The character range. |
+| [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for <b>charRange</b>. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+
 ### OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange()
 
 ```c
@@ -6363,6 +6440,34 @@ Get the character range that maps to the glyphs in the given glyph range.
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+
+### OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEncoding()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)
+```
+
+**Description**
+
+Get the character range that maps to the glyphs in the given glyph range based on the specified encoding type.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
+| [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetLinearGradient()
 

@@ -1,8 +1,8 @@
 # TextController
 
-Text组件的控制器。
+Defines the controller of the **Text** component.
 
-## 导入对象
+## Objects to Import
 
 ```ts controller: TextController = new TextController()```
 
@@ -20,7 +20,7 @@ Text组件的控制器。
 closeSelectionMenu(): void
 ```
 
-关闭自定义选择菜单或系统默认选择菜单。
+Closes the custom or default text selection menu.
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ closeSelectionMenu(): void
 getLayoutManager(): LayoutManager
 ```
 
-获取布局管理器对象。
+Obtains the **LayoutManager** object.
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ getLayoutManager(): LayoutManager
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | 布局管理器对象，用于获取文本布局信息，包括行数、字形位置、行信息、字符绘制区域等。 |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
 
 ## setStyledString
 
@@ -66,7 +66,7 @@ getLayoutManager(): LayoutManager
 setStyledString(value: StyledString): void
 ```
 
-触发绑定或更新属性字符串。
+Binds to or updates the specified styled string.
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ setStyledString(value: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类[MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -93,21 +93,29 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
                    options?: SelectionOptions): void
 ```
 
-设置文本选择区域并高亮显示。
+Sets the text selection area, which will be highlighted.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当[copyOption](TextAttribute#copyOption)设置为CopyOptions.None时，设置setTextSelection不生效。
+> If [copyOption](TextAttribute#copyOption) is set to **CopyOptions.None**, the setting of
+> **setTextSelection** does not take effect.
 > 
-> 当[textOverflow](TextAttribute#textOverflow)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
+> If [textOverflow](TextAttribute#textOverflow) is set to **TextOverflow.MARQUEE**, the setting of
+> **setTextSelection** does not take effect.
 > 
-> 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
+> If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be
+> selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the
+> text content. If the value is less than 0, the value **0** will be used. If the value is greater than
+> **textSize**, **textSize** will be used.
 > 
-> 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。clip设置为false时，超出父组件的文本选中区域生效。
+> If the selection range falls within a truncated or invisible area, selection is ignored. When truncation is
+> disabled, selection can extend beyond the parent component's bounds.
 > 
-> 如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
+> On PC or 2-in-1 devices, calling **setTextSelection** does not show the menu even if **options** is set to
+> **MenuPolicy.SHOW**.
 > 
-> 当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
+> When an emoji is truncated by the selection range, the emoji is selected if its start position is within the
+> specified text selection range.
 
 **Since:** 23
 
@@ -125,7 +133,7 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | Yes | 文本选择区域起始位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | number \| undefined | Yes | 文本选择区域结束位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | 选中文字时的配置。 &lt;br&gt;默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| selectionStart | number \| undefined | Yes | Start position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| selectionEnd | number \| undefined | Yes | End position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
 

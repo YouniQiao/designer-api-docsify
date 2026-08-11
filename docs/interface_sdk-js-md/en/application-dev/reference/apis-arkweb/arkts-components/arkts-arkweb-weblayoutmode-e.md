@@ -1,6 +1,6 @@
 # WebLayoutMode
 
-Web布局模式的配置。
+Enum type supplied to {@link layoutMode} for setting the web layout mode.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Web布局模式的配置。
 NONE = 0
 ```
 
-Web布局跟随系统。
+Web layout follows the system.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Web布局跟随系统。
 FIT_CONTENT = 1
 ```
 
-Web基于页面大小的自适应网页布局。
+Adaptive web layout based on page size.
 
 **Since:** 11
 

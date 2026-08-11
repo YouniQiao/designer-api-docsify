@@ -1,11 +1,12 @@
 # PBKDF2Spec
 
-密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为PBKDF2密钥派生函数进行密钥派生时的输入。
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is used as a parameter for PBKDF2 key derivation.
 
-> **说明：**
+> **NOTE：**
 > 
-> password 是原始密码。如果使用 string 类型，需直接传入用于密钥派生的数据，而不是 HexString 或 base64 等字符串类型，并确保该字符串
-> 为 UTF-8 编码，否则派生结果会有差异。
+> **password** is the original password. If **password** of the string type is used, pass in the actual data for
+> key derivation, rather than a HexString or Base64-encoded value. In addition, the string must be encoded in
+> UTF-8, as other encodings may alter the derivation outcome.
 
 **Inheritance/Implementation:** PBKDF2Spec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -31,7 +32,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 iterations: int
 ```
 
-迭代次数，需要为正整数。
+Number of iterations. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -53,7 +54,7 @@ iterations: int
 keySize: int
 ```
 
-派生得到的密钥字节长度，单位为bytes。
+Length of the derived key, in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -75,7 +76,7 @@ keySize: int
 password: string | Uint8Array
 ```
 
-用户输入的原始密码。
+Original password entered by the user.
 
 **Type:** string \| Uint8Array
 
@@ -97,7 +98,7 @@ password: string | Uint8Array
 salt: Uint8Array
 ```
 
-盐值。
+Salt value.
 
 **Type:** Uint8Array
 

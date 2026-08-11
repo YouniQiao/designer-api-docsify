@@ -1,6 +1,6 @@
 # WindowType
 
-窗口类型枚举。
+Enumerates the window types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 TYPE_APP = 0
 ```
 
-表示应用子窗口。
+Child window of an application.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ TYPE_APP = 0
 TYPE_SYSTEM_ALERT = 1
 ```
 
-表示系统告警窗口。
+System alert window.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ TYPE_SYSTEM_ALERT = 1
 TYPE_FLOAT = 8
 ```
 
-表示全局悬浮窗。
+Global floating window.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ TYPE_FLOAT = 8
 TYPE_DIALOG = 16
 ```
 
-表示模态窗口。
+Modal window.
 
 **Since:** 10
 
@@ -92,9 +92,9 @@ TYPE_DIALOG = 16
 TYPE_MAIN = 32
 ```
 
-表示应用主窗口。
+Main window of an application.
 
-此窗口类型不支持在创建窗口时使用。
+This window type cannot be used during window creation.
 
 **Since:** 18
 

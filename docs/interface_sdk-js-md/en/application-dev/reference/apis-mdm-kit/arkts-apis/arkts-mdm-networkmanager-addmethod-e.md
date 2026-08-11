@@ -1,6 +1,6 @@
 # AddMethod
 
-添加网络包方法。
+Enumerates the methods used to add the network packets.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 APPEND = 0
 ```
 
-追加。
+Append the packet.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ APPEND = 0
 INSERT = 1
 ```
 
-插入。
+Insert the packet.
 
 **Since:** 10
 

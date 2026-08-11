@@ -1,6 +1,6 @@
 # GridItemOptions
 
-GridItem样式对象。
+Defines the grid item options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ GridItem样式对象。
 style?: GridItemStyle
 ```
 
-设置GridItem样式。
+Describes the GridItem style.
 
 **Type:** [GridItemStyle](arkts-arkui-griditem-griditemstyle-e.md)
 

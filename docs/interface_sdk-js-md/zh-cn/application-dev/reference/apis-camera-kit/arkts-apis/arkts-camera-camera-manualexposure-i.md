@@ -12,12 +12,6 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getExposure
 
 ArkTS-Dyn:
@@ -50,9 +44,9 @@ Obtains the manual exposure duration in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -101,8 +95,8 @@ Gets current exposure value.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, session or inputdevice maybe abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, session or inputdevice maybe abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setExposure
 
@@ -137,9 +131,9 @@ Sets the manual exposure duration. Before using this API, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed.<br>**适用版本：** 12+ |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## setExposureDuration
 
@@ -175,5 +169,5 @@ Sets Exposure duration value, units: microseconds.This control is only effective
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

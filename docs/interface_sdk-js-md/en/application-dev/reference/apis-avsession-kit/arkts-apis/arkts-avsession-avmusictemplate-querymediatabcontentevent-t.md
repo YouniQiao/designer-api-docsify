@@ -4,7 +4,7 @@
 type QueryMediaTabContentEvent = (tabId: string) => Promise<MediaTabContent>
 ```
 
-媒体标签页内容查询事件。使用Promise异步回调。
+The query media tab content event.
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ type QueryMediaTabContentEvent = (tabId: string) => Promise<MediaTabContent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | 标签页的ID。 |
+| tabId | string | Yes | tab id |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | Promise对象，返回媒体标签页内容。 |
+| Promise&lt;MediaTabContent&gt; | (MediaTabContent) returned through promise |
 

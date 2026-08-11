@@ -1,6 +1,6 @@
 # CloseSwipeActionOptions
 
-收起[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态[ListItem](./list_item)回调事件集合，用于设置收起动画完成后回调事件。
+Implements the callbacks and events for the [ListItem](list_item) in the [expanded](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)state.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 onFinish?: ()=>void
 ```
 
-在收起动画完成后触发。未设置此属性时不触发回调。
+Triggered after the collapse animation is complete.
 
 **Since:** 11
 

@@ -1,10 +1,11 @@
 # AuxiliaryPictureType
 
-表示辅助图的图像类型的枚举。
+Enumerates the auxiliary pictures types.
 
-辅助图不直接参与图片显示，且并非所有图片中都含有辅助图。
+Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures.
 
-在获取和使用特定辅助图前，应首先调用Picture的[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)方法尝试获取该辅助图。
+Before obtaining and using a specific auxiliary picture, call   
+[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture to obtain the auxiliary picture.
 
 **Since:** 13
 
@@ -20,11 +21,12 @@
 GAINMAP = 1
 ```
 
-增益图（Gain Map）。
+Gain map.
 
-用于更准确地生成HDR图像。
+It is used to generate HDR images more accurately.
 
-HDR合成通常需要同时使用SDR主图、增益图和HDR元数据（[getMetadata](arkts-image-image-pixelmap-i.md#getmetadata)）共同计算亮度映射关系。
+HDR synthesis usually involves using the SDR main image, gain map, and   
+[HDR metadata](arkts-image-image-pixelmap-i.md#getmetadata) to calculate the luminance mapping.
 
 **Since:** 13
 
@@ -40,11 +42,11 @@ HDR合成通常需要同时使用SDR主图、增益图和HDR元数据（[getMeta
 DEPTH_MAP = 2
 ```
 
-深度图（Depth Map）。
+Depth map.
 
-用于存储每个像素与摄像头之间的距离信息，提供场景的三维结构。
+It is used to store the distance between each pixel and the camera, and provides the 3D structure of the scene.
 
-可用于3D重建、背景分离和场景理解等任务。
+It is useful for tasks like 3D reconstruction, background separation, and scene understanding.
 
 **Since:** 13
 
@@ -60,11 +62,11 @@ DEPTH_MAP = 2
 UNREFOCUS_MAP = 3
 ```
 
-未重对焦原图（UnReFocus Map）。
+Unrefocus map.
 
-用于保存拍摄时未重对焦的图片像素内容。
+It is used to store the pixel content that is not refocused during capture.
 
-可用于人像虚化等后期处理，便于用户自由选择焦点区域。
+It is useful for post-processing effects such as portrait blurring, allowing users to select focus areas freely.
 
 **Since:** 13
 
@@ -80,11 +82,11 @@ UNREFOCUS_MAP = 3
 LINEAR_MAP = 4
 ```
 
-线性图（Linear Map）。
+Linear map.
 
-以线性方式记录光照、颜色或其他视觉要素，为图像处理提供补充信息。
+It records lighting, color, or other visual elements linearly, providing additional data for image processing.
 
-可用于视觉效果增强与色彩后期处理。
+It is useful for visual effect enhancement and color post-processing.
 
 **Since:** 13
 
@@ -100,11 +102,11 @@ LINEAR_MAP = 4
 FRAGMENT_MAP = 5
 ```
 
-水印裁剪图（Fragment Map）。
+Fragment map.
 
-记录原图中被水印遮挡的区域，可能是从原图裁剪得到，也可能只是填充特定数值的像素数据作为占位符。
+It records areas of the original image obscured by watermarks. These areas might be cropped from the original image or filled with placeholder pixel data.
 
-可用于水印移除、原图恢复等场景。
+It is useful for watermark removal and original image restoration.
 
 **Since:** 13
 
@@ -120,7 +122,7 @@ FRAGMENT_MAP = 5
 LHDR_GAINMAP = 10
 ```
 
-特殊增益图（LHDR Gain Map）。
+LHDR gain map.
 
 **Since:** 26.0.0
 

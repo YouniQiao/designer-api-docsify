@@ -1,6 +1,6 @@
 # SelectOption
 
-下拉菜单项的信息。
+The declare of selectOption.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 icon?: ResourceStr
 ```
 
-下拉选项图片。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Option icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -38,11 +36,7 @@ icon?: ResourceStr
 symbolIcon?: SymbolGlyphModifier
 ```
 
-下拉选项Symbol图片。
-
-symbolIcon优先级高于icon。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Indicates the symbol icon of this menu item.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -62,9 +56,7 @@ symbolIcon优先级高于icon。
 value: ResourceStr
 ```
 
-下拉选项内容。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Option string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

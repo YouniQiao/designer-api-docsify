@@ -1,6 +1,6 @@
 # Scene
 
-定义3D场景.
+Defines the 3d scene.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 ```
 
-从SceneLoadParams创建新场景.
+Create a new scene from a SceneLoadParams.
 
 **Since:** 26.0.0
 
@@ -34,12 +34,12 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 创建场景的资源 |
-| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | 场景加载参数 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c-sys.md)&gt; | 返回场景的Promise |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c-sys.md)&gt; | Promise used to return a scene |
 

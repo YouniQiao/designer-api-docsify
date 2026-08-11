@@ -1,6 +1,6 @@
 # UkeyAuthRequest
 
-USB Key PIN码认证请求。
+USB key PIN authentication request.
 
 **Since:** 22
 
@@ -22,7 +22,8 @@ import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 keyUri: string
 ```
 
-表示USB Key证书凭据的唯一标识符，长度限制256字节以内。该参数值可通过调用[openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog)接口返回的CertReference中获取。
+Unique identifier of the USB Key credential. The value contains up to 256 bytes.The value of this parameter can be obtained from the CertReference returned by invoking the  
+[openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) interface.
 
 **Type:** string
 

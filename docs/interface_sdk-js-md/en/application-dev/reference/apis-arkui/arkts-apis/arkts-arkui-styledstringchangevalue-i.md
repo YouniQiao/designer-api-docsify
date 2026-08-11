@@ -1,6 +1,6 @@
 # StyledStringChangeValue
 
-属性字符串的文本变化信息。
+Describes the text changes of the styled string.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 previewText?: StyledString
 ```
 
-预览内容属性字符串。
+Styled string for preview content.
 
-该属性用于表示语音输入、拍摄输入、输入法预上屏场景下的未提交上屏的临时输入内容。
+Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre-composition.
 
 **Type:** [StyledString](arkts-arkui-styledstring-c.md)
 
@@ -40,7 +40,7 @@ previewText?: StyledString
 range: TextRange
 ```
 
-即将被替换的属性字符串子串在原字符串中的范围。
+Range of the styled string to be replaced in the original string.
 
 **Type:** [TextRange](arkts-arkui-textrange-i.md)
 
@@ -62,7 +62,7 @@ range: TextRange
 replacementString: StyledString
 ```
 
-用于替换的属性字符串。
+Styled string used for replacement.
 
 **Type:** [StyledString](arkts-arkui-styledstring-c.md)
 

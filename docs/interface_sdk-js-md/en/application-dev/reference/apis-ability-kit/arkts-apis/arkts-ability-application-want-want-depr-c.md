@@ -1,6 +1,7 @@
 # Want
 
-Want是对象间信息传递的载体，可以用于应用组件间的信息传递。Want的使用场景之一是作为startAbility的参数，其包含了指定的启动目标，以及启动时需携带的相关数据，如bundleName和abilityName字段分别指明目标Ability所在应用Bundle名称以及对应包内的Ability名称。当Ability A需要启动Ability B并传入一些数据时，可使用Want作为载体将这些数据传递给Ability B。
+Want is a carrier for information transfer between objects (application components). Want can be used as a parameter of **startAbility** to specify a startup target and information that needs to be carried during startup, for example,  
+ **bundleName** and **abilityName**, which respectively indicate the bundle name of the target ability and the ability name in the bundle. When ability A needs to start ability B and transfer some data to ability B, it can use Want a carrier to transfer the data.
 
 **Since:** 8
 
@@ -20,7 +21,7 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 abilityName?: string
 ```
 
-表示待启动的Ability名称。如果在Want中该字段同时指定了BundleName和AbilityName，则Want可以直接匹配到指定的Ability。AbilityName需要在一个应用的范围内保证唯一。
+Name of the ability. If both **bundleName** and **abilityName** are specified in a Want object, the Want object can  match a specific ability. The value of **abilityName** must be unique in an application.
 
 **Type:** string
 
@@ -42,9 +43,8 @@ abilityName?: string
 action?: string
 ```
 
-表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，您可以定义该字段，配合uri或parameters来表示对数据要执行的操作。具体参考：  
-[action说明](arkts-ability-wantconstant-action-depr-e.md)。隐式Want定义及匹配规则参考：  
-[显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
+Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and  use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details,see [action](arkts-ability-wantconstant-action-e.md). For details about the definition and matching rules of implicit Want, see  
+[Matching Rules of Explicit Want and Implicit Want](../../../application-models/explicit-implicit-want-mappings.md).
 
 **Type:** string
 
@@ -66,7 +66,7 @@ action?: string
 bundleName?: string
 ```
 
-表示Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ bundleName?: string
 deviceId?: string
 ```
 
-表示运行指定Ability的设备ID。如果未设置该字段，则表明指定本设备。
+ID of the device running the ability. If this field is unspecified, the local device is used.
 
 **Type:** string
 
@@ -110,8 +110,9 @@ deviceId?: string
 entities?: Array<string>
 ```
 
-表示目标Ability额外的类别信息（如：浏览器、视频播放器）。在隐式Want中是对action字段的补充。在隐式Want中，您可以定义该字段，来过滤匹配Ability类型。具体参考：  
-[entity说明](arkts-ability-wantconstant-entity-depr-e.md)。
+Additional category information (such as browser and video player) of the ability. It is a supplement to the  
+**action** field for implicit Want. and is used to filter ability types. For details, see  
+[entity](arkts-ability-wantconstant-entity-depr-e.md).
 
 **Type:** Array&lt;string&gt;
 
@@ -133,7 +134,8 @@ entities?: Array<string>
 flags?: number
 ```
 
-表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-e.md)。
+How the Want object will be handled. By default, numbers are passed in. For details, see  
+[flags](arkts-ability-wantconstant-flags-e.md).
 
 **Type:** number
 
@@ -155,17 +157,18 @@ flags?: number
 parameters?: { [key: string]: any }
 ```
 
-表示WantParams描述，由开发者自行决定传入的键值对。默认会携带以下key值：
+Want parameters in the form of custom key-value (KV) pairs. By default, the following keys are carried:
 
-ohos.aafwk.param.callerPid 表示拉起方的pid。
+**ohos.aafwk.param.callerPid**: PID of the caller.
 
-ohos.aafwk.param.callerToken 表示拉起方的token。
+**ohos.aafwk.param.callerToken**: token of the caller.
 
-ohos.aafwk.param.callerUid 表示[bundleInfo](js-apis-bundle-BundleInfo.md#bundleinfodeprecated)中的uid，应用包里应用程序的uid。
+**ohos.aafwk.param.callerUid**: UID in [bundleInfo](js-apis-bundle-BundleInfo.md#bundleinfodeprecated), that is,the application UID in the bundle information.
 
-- component.startup.newRules：表示是否启用新的管控规则。  
-- moduleName：表示拉起方的模块名，该字段的值即使定义成其他字符串，在传递到另一端时会被修改为正确的值。  
-- ohos.dlp.params.sandbox：表示dlp文件才会有。
+- **component.startup.newRules**: whether to enable the new control rule.  
+- **moduleName**: module name of the caller. No matter what this field is set to, the correct module name will be  
+sent to the peer.  
+- **ohos.dlp.params.sandbox**: available only for DLP files.
 
 **Type:** { [key: string]: any }
 
@@ -187,7 +190,7 @@ ohos.aafwk.param.callerUid 表示[bundleInfo](js-apis-bundle-BundleInfo.md#bundl
 type?: string
 ```
 
-表示MIME type类型描述，打开文件的类型，主要用于文管打开文件。比如：'text/xml' 、 'image/*'等，MIME定义参考：https://www.iana.org/assignments/media-types/media-types.xhtml?utm_source=ld246.com。
+MIME type, that is, the type of the file to open, for example, **'text/xml'** and **'image/*'**. For details about the MIME type definition, see https://www.iana.org/assignments/media-types/media-types.xhtml?utm_source=ld246.com.
 
 **Type:** string
 
@@ -209,7 +212,7 @@ type?: string
 uri?: string
 ```
 
-表示Uri描述。如果在Want中指定了Uri，则Want将匹配指定的Uri信息，包括scheme、schemeSpecificPart、authority和path信息。
+URI information to match. If **Uri** is specified in a Want object, the Want object will match the specified URI information, including **scheme**, **schemeSpecificPart**, **authority**, and **path**.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # CallbackParamV2
 
-节点回调参数接口，用于传递节点事件回调的参数信息。
+Declare CallbackParamV2
 
 **Since:** 26.0.0
 
@@ -22,13 +22,7 @@ import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, 
 childIndex?: int
 ```
 
-返回子索引。
-
-取值范围：大于等于-1。
-
-默认值：-1
-
-仅在节点移动事件中有效，表示移动后的位置索引。
+Get the childIndex.
 
 **Type:** int
 
@@ -48,9 +42,7 @@ childIndex?: int
 currentNodeId: int
 ```
 
-返回当前子节点id。
-
-取值范围：大于等于0。
+Get the currentNodeId.
 
 **Type:** int
 
@@ -70,11 +62,7 @@ currentNodeId: int
 parentNodeId?: int
 ```
 
-返回当前父节点id。
-
-取值范围：大于等于-1。
-
-默认值：-1
+ID of the current parent node.
 
 **Type:** int
 

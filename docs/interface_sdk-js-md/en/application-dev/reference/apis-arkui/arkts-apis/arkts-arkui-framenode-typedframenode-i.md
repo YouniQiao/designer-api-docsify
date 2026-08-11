@@ -1,6 +1,6 @@
 # TypedFrameNode
 
-TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md)，用于声明具体类型的FrameNode，支持Text、Image、Button、Column等多种组件类型，适用于通过代码动态创建具体类型组件节点的场景。
+Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints.
 
 **Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
@@ -18,7 +18,7 @@ TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md)，用于声明具
 readonly attribute: T
 ```
 
-该接口用于获取对应组件的属性设置对象，以设置/更新组件的通用、私有属性。
+Attribute configuration object for setting or updating common and specific attributes of the component.
 
 **Type:** T
 
@@ -40,7 +40,7 @@ readonly attribute: T
 initialize: C
 ```
 
-该接口用于传入对应组件的构造参数，以设置/更新组件的初始值。
+Construction parameters for creating a component, used to set or update the component's initial values.
 
 **Type:** C
 

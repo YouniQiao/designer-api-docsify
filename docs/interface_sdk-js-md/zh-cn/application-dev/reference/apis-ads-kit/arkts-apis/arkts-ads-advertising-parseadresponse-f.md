@@ -1,11 +1,5 @@
 # parseAdResponse
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
-```
-
 ## parseAdResponse
 
 ```TypeScript
@@ -34,10 +28,10 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Device not supported. |
-| 21800005 | Failed to parse the ad response. |
-| 21800001 | System internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
+| [21800005](../errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

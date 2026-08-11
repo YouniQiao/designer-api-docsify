@@ -1,6 +1,6 @@
 # @ohos.file.hash
 
-该模块提供文件哈希处理能力，对文件内容进行哈希处理。
+The **FileHash** module implements hash processing on files.
 
 **Since:** 9
 
@@ -22,13 +22,13 @@ import { hash } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md#createhash) | 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。 |
-| [hash](arkts-corefile-hash-f.md#hash) | 计算文件的哈希值，使用Promise异步回调。 |
-| [hash](arkts-corefile-hash-f.md#hash-1) | 计算文件的哈希值，使用callback异步回调。 |
+| [createHash](arkts-corefile-hash-createhash-f.md#createhash) | Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm. |
+| [hash](arkts-corefile-hash-f.md#hash) | Calculates a hash value for a file. This API uses a promise to return the result. |
+| [hash](arkts-corefile-hash-f.md#hash-1) | Calculates a hash value for a file. This API uses an asynchronous callback to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。 |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use  [createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a  **HashStream** instance. |
 

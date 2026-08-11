@@ -1,6 +1,6 @@
 # ContextMenuSourceType
 
-触发上下文菜单的事件来源。
+Enumerates the event source types that trigger the context menu.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 None = 0
 ```
 
-其他事件来源。
+Other event sources.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ None = 0
 Mouse = 1
 ```
 
-鼠标事件。
+Mouse event.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Mouse = 1
 LongPress = 2
 ```
 
-长按事件。
+Long press event.
 
 **Since:** 9
 

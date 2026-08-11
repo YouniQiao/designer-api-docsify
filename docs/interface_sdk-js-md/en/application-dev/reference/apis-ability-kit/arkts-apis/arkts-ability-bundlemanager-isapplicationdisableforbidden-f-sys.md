@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex: int): boolean
 ```
 
-以同步方法查询指定用户下指定应用或分身应用是否被设置禁止停用。
+Synchronously queries whether a specified application or application clone of a specified user is set to forbid being disabled.If you need to check whether an application is forbidden to be disabled under the current user,ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for.If you need to check whether an application is forbidden to be disabled under other users,ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
 
 **Since:** 24
 
@@ -32,43 +32,23 @@ function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示应用的包名。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，取值范围：大于等于0。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID, which can be obtained by calling getOsAccountLocalId. The value is greater than or equal to 0. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the application. The value ranges from 0 to 5. The value 0 indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 指定应用是否被设置禁止停用。&lt;br/&gt;返回true表示指定应用已被设置禁止停用，返回false表示指定应用没有被设置禁止停用。 |
+| boolean | Whether a specified application is set to forbid being disabled. The value true indicates that the specified application is set to forbid being disabled, and false indicates that the specified application is not set to forbid being disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700061 | The specified app index is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Non-system APP calling system API. |
-| 17700004 | The specified user ID is not found. |
-| 17700001 | The specified bundle is not found. |
-
-## Examples
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.example.myapplication';
-let userId: number = 100;
-let appIndex: number = 0;
-
-try {
-  let data = bundleManager.isApplicationDisableForbidden(bundleName, userId, appIndex);
-  hilog.info(0x0000, 'testTag', 'isApplicationDisableForbidden successfully: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'isApplicationDisableForbidden failed: %{public}s', message);
-}
-```
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Non-system APP calling system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 

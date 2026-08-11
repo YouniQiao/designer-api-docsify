@@ -1,6 +1,6 @@
 # Filter
 
-过滤条件。
+Defines the filter criteria.
 
 **Since:** 10
 
@@ -22,11 +22,11 @@ import { request } from 'kits/@kit.BasicServicesKit';
 action?: Action
 ```
 
-任务操作选项。
+Task action.
 
-- UPLOAD表示上传任务。  
-- DOWNLOAD表示下载任务。  
-- 如果未填写，则查询所有任务。
+- **UPLOAD**: Upload tasks.  
+- **DOWNLOAD**: Download tasks.  
+- If this parameter is not set, all tasks are queried.
 
 **Type:** [Action](arkts-basicservices-agent-action-e.md)
 
@@ -44,7 +44,7 @@ action?: Action
 after?: long
 ```
 
-开始的Unix时间戳（毫秒），默认值为调用时刻减24小时。
+Unix timestamp of the start time, in milliseconds. The default value is the invoking time minus 24 hours.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ after?: long
 before?: long
 ```
 
-结束的Unix时间戳（毫秒），默认为调用时刻。
+Unix timestamp of the end time, in milliseconds. The default value is the invoking time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -80,11 +80,11 @@ before?: long
 mode?: Mode
 ```
 
-任务模式。
+Task mode.
 
-- FOREGROUND表示前台任务。  
-- BACKGROUND表示后台任务。  
-- 如果未填写，则查询所有任务。
+- **FOREGROUND**: foreground task.  
+- **BACKGROUND**: background task.  
+- If this parameter is not set, all tasks are queried.
 
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
@@ -102,7 +102,7 @@ mode?: Mode
 state?: State
 ```
 
-指定任务的状态。如果未填写，则查询所有任务。
+Task state. If this parameter is not set, all tasks are queried.
 
 **Type:** [State](arkts-basicservices-agent-state-e.md)
 

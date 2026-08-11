@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
 ```
 
-创建虚拟屏幕，使用Promise异步回调。
+Creates a virtual screen. This API uses a promise to return the result.
 
 **Since:** 16
 
@@ -28,22 +28,22 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Yes | 用于创建虚拟屏幕的参数。 |
+| config | [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Yes | Virtual screen parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回创建的虚拟屏幕的ScreenId。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the screen ID of the created virtual screen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ class VirtualScreenConfig {
   supportsFocus ?: boolean = true;
 }
 
-let config: VirtualScreenConfig = {
+let config : VirtualScreenConfig = {
   name: 'screen01',
   width: 1080,
   height: 2340,
@@ -69,9 +69,9 @@ let config: VirtualScreenConfig = {
 };
 
 display.createVirtualScreen(config).then((screenId: number) => {
-  console.info(`Succeeded in creating the virtual screen. ScreenId: ${screenId}`);
+  console.info(`Succeeded in creating the virtual screen.ScreenId : ${screenId}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to create the virtual screen. Code:${err.code},message is ${err.message}`);
 });
 ```
 

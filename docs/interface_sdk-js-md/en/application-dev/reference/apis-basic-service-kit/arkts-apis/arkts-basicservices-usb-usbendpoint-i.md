@@ -1,6 +1,7 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usb-usbinterface-i.md)获取。
+Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
+[USBInterface](arkts-basicservices-usb-usbinterface-i.md).
 
 **Since:** 8
 
@@ -26,7 +27,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 address: number
 ```
 
-端点地址。
+Endpoint address.
 
 **Type:** number
 
@@ -48,7 +49,7 @@ address: number
 attributes: number
 ```
 
-端点属性。
+Endpoint attributes.
 
 **Type:** number
 
@@ -70,7 +71,7 @@ attributes: number
 direction: USBRequestDirection
 ```
 
-端点的方向。
+Endpoint direction.
 
 **Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
@@ -92,7 +93,7 @@ direction: USBRequestDirection
 interfaceId: number
 ```
 
-端点所属的接口的唯一标识。
+Unique ID of the interface to which the endpoint belongs.
 
 **Type:** number
 
@@ -114,7 +115,7 @@ interfaceId: number
 interval: number
 ```
 
-端点间隔。
+Endpoint interval.
 
 **Type:** number
 
@@ -136,7 +137,7 @@ interval: number
 maxPacketSize: number
 ```
 
-端点最大数据包大小。
+Maximum size of data packets on the endpoint.
 
 **Type:** number
 
@@ -158,7 +159,7 @@ maxPacketSize: number
 number: number
 ```
 
-端点号。
+Endpoint number.
 
 **Type:** number
 
@@ -180,7 +181,7 @@ number: number
 type: number
 ```
 
-端点类型。
+Endpoint type.
 
 **Type:** number
 

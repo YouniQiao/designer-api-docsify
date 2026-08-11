@@ -1,6 +1,6 @@
 # ComponentRecycle
 
-定义ComponentRecycle方法装饰器
+Define ComponentRecycle Method Decorator.
 
 **Since:** 24
 

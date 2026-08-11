@@ -1,6 +1,6 @@
 # PictureLightDegree (System API)
 
-图片颜色明亮度的枚举。
+Enum for the brightness of image colors.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
 ```
 
-未知明亮度的图片。
+Image with unknown brightness.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
 EXTREMELY_LIGHT_COLOR_PICTURE = 1
 ```
 
-极亮色图片。
+Extremely bright image.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ EXTREMELY_LIGHT_COLOR_PICTURE = 1
 LIGHT_COLOR_PICTURE = 2
 ```
 
-亮色图片。
+Bright image.
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ LIGHT_COLOR_PICTURE = 2
 DARK_COLOR_PICTURE = 3
 ```
 
-暗色图片。
+Dark image.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ DARK_COLOR_PICTURE = 3
 EXTREMELY_DARK_COLOR_PICTURE = 4
 ```
 
-极暗色图片。
+Extremely dark image.
 
 **Since:** 26.0.0
 
@@ -128,7 +128,7 @@ EXTREMELY_DARK_COLOR_PICTURE = 4
 FLOWERY_PICTURE = 5
 ```
 
-花色图片。
+Colorful image.
 
 **Since:** 26.0.0
 
@@ -150,7 +150,7 @@ FLOWERY_PICTURE = 5
 EXTREMELY_FLOWERY_PICTURE = 6
 ```
 
-极花色图片。
+Extremely colorful image.
 
 **Since:** 26.0.0
 

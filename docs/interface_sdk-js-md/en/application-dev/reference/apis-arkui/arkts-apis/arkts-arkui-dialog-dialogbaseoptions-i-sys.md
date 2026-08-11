@@ -1,6 +1,6 @@
 # DialogBaseOptions
 
-所有Dialog类型共享的基本选项。
+Base options shared by all dialog types.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 distortionMode?: DistortionMode
 ```
 
-设置对话框的变形动画模式。
+Sets the distortion animation Mode of the dialog.
 
 **Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
@@ -46,7 +46,7 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置对话框的edgeLight动画模式。
+Sets the edgeLight animation Mode of the dialog.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 

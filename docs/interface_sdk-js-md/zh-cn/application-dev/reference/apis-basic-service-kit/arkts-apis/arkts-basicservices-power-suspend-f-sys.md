@@ -1,11 +1,5 @@
 # suspend（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## suspend
 
 ```TypeScript
@@ -37,18 +31,18 @@ function suspend(isImmediate?: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 19+ |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 19+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
 ## 示例
 
 ```TypeScript
 try {
     power.suspend();
-} catch (err) {
-    console.error(`Failed to suspend device. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('suspend failed, err: ' + err);
 }
 ```
 

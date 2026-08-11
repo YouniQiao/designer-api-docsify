@@ -40,7 +40,7 @@ reusePool: ReusePoolOwnership = ReusePoolOwnership.OFF
 
 自定义组件的重用类型。默认值为OFF。
 
-**类型：** [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md)
+**类型：** [ReusePoolOwnership](../arkts-components/arkts-arkui-reusepoolownership-t.md)
 
 **起始版本：** 26.0.0
 

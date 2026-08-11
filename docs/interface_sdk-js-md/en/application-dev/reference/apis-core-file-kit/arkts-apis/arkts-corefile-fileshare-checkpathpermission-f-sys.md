@@ -12,7 +12,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>
 ```
 
-异步方法校验所选择的多个文件或目录是否有临时或持久化授权，使用Promise异步回调。
+Check permissions for the path.
 
 **Since:** 15
 
@@ -30,24 +30,24 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标应用的访问令牌标识。 |
-| policies | Array&lt;PathPolicyInfo&gt; | Yes | 需要查询授权状态的路径策略信息数组。 |
-| policyType | [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Yes | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
+| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Token ID of the application. |
+| policies | Array&lt;PathPolicyInfo&gt; | Yes | Policy information to check on paths. |
+| policyType | [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Yes | Persistent or temporary type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回授权状态校验结果数组。返回true表示授权类型匹配policyType的查询类型，否则返回false。 |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the permission state of paths. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | The caller is not a system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 13900042 | Out of memory. |
 
 ## Examples
@@ -58,26 +58,27 @@ import { fileShare } from '@kit.CoreFileKit';
 async function checkPersistentPermissionExample() {
   try {
     let pathPolicyInfo1: fileShare.PathPolicyInfo = {
-      path: '/storage/Users/currentUser/Documents/1.txt',
+      path: "/storage/Users/currentUser/Documents/1.txt",
       operationMode: fileShare.OperationMode.READ_MODE,
     }
     let pathPolicyInfo2: fileShare.PathPolicyInfo = {
-      path: '/storage/Users/currentUser/Desktop/2.txt',
+      path: "/storage/Users/currentUser/Desktop/2.txt",
       operationMode: fileShare.OperationMode.READ_MODE,
     }
 
     let policies: Array<fileShare.PathPolicyInfo> = [pathPolicyInfo1, pathPolicyInfo2];
     let policyType: fileShare.PolicyType = fileShare.PolicyType.PERSISTENT_TYPE;
-    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    let tokenid = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
 
-    fileShare.checkPathPermission(tokenID, policies, policyType).then((result: Array<boolean>) => {
-      for (let hasPermission of result) {
-        console.info('check permission result is', hasPermission);
+    fileShare.checkPathPermission(tokenid, policies, policyType).then((result:Array<boolean>) => {
+      for (let x of result) {
+        console.info('check permission result is', x);
       }
-    });
-    console.info('checkPathPermission finish');
-  } catch (error) {
-    console.info(`checkPathPermission error, Code: ${error.code}, message: ${error.message}`);
+    })
+    console.info("checkPathPermission finish");
+  }
+  catch (error) {
+    console.info(error.code + 'checkPathPermission error' + error.message);
   }
 }
 ```

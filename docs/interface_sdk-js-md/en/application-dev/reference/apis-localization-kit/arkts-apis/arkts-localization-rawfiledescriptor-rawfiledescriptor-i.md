@@ -1,6 +1,6 @@
 # RawFileDescriptor
 
-本模块提供rawfile文件所在HAP包的文件描述符信息，包括文件描述符、rawfile文件的起始偏移和文件长度。
+This module provides file descriptor information of the HAP where the `rawfile` file is located, including the file descriptor, start offset, and file length.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 fd: int
 ```
 
-文件描述符。
+File descriptor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -36,7 +36,7 @@ fd: int
 length: long
 ```
 
-文件长度，表示rawfile文件的大小。单位为Byte。
+File length, indicating the size of the `rawfile` file. The unit is bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -56,7 +56,7 @@ length: long
 offset: long
 ```
 
-起始偏移量，表示rawfile文件在HAP包中的起始位置。单位为Byte。
+Start offset, indicating the start position of the `rawfile` file in the HAP. The unit is bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

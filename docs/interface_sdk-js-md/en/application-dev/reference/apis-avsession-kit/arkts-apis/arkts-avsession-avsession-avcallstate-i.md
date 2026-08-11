@@ -1,6 +1,6 @@
 # AVCallState
 
-通话状态相关属性。
+Used to indicate the call state of the current call.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 muted: boolean
 ```
 
-表示通话mic是否静音。 true表示是静音，false表示不是静音。
+Current muted status.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ muted: boolean
 state: CallState
 ```
 
-当前通话状态。
+Current call state. See {@link CallState}
 
 **Type:** [CallState](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-callstate-e.md)
 

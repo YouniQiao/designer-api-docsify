@@ -1,6 +1,6 @@
-# @arkts.collections(定义ArkTS的集合)
+# @arkts.collections(Defines the collections for ArkTS)
 
-ArkTS集合。
+ArkTS collections.
 
 **Since:** 23
 
@@ -22,5 +22,5 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) | 按顺序排列的比特值集合，每个比特值只能是0或1。如果多个线程同时访问BitVector实例，并且至少有一个线程修改了数组结构，则必须在外部进行同步。 |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | An ordered collections of bit values, which are either 0 or 1.If multiple threads access a BitVector instance concurrently, and at least one of the threads modifies the array structurally,it must be synchronized externally. |
 

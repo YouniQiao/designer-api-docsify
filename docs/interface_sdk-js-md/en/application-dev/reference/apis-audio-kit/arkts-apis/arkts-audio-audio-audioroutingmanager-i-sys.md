@@ -1,12 +1,13 @@
 # AudioRoutingManager
 
-音频路由管理。
+This interface implements audio routing management.
 
-在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
+Before calling any API in AudioRoutingManager, you must use  
+[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface首批接口从API version 9开始支持。
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
 
@@ -60,9 +61,9 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -102,7 +103,7 @@ async function excludeOutputDevices(){
 getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 ```
 
-获取当前音频设备情况下的活动输出设备描述符。激活策略与系统的音频设备策略相关。
+Gets the active output device descriptors for the current audio device.The activation policy is related to the audio device policy of the system.
 
 **Since:** 26.0.0
 
@@ -120,13 +121,13 @@ getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | 当前激活的输出设备信息 |
+| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to get the output device descriptors. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system application. |
 
 ## getExcludedDevices
 
@@ -162,8 +163,8 @@ Get excluded devices by filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -212,8 +213,8 @@ Get the preferred input device for the target audio capturer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -271,8 +272,8 @@ Get the preferred output devices by the target audio renderer filter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -303,7 +304,7 @@ async function selectOutputDeviceByFilter(){
 off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes to preferred output device change events.
+UnSubscribes to prefer output device change events.
 
 **Since:** 21
 
@@ -326,8 +327,8 @@ Unsubscribes to preferred output device change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -359,7 +360,7 @@ audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDe
 offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消订阅首选输入设备更改事件。
+Unsubscribes to preferred input device change events.
 
 **Since:** 26.0.0
 
@@ -377,14 +378,14 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | 要侦听的事件类型。只有 支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## offPreferredOutputDeviceChangeByFilter
 
@@ -392,7 +393,7 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes to preferred output device change events.
+UnSubscribes to preferred output device change events.
 
 **Since:** 24
 
@@ -414,8 +415,8 @@ Unsubscribes to preferred output device change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## on('preferredOutputDeviceChangeByFilter')
 
@@ -423,7 +424,7 @@ Unsubscribes to preferred output device change events.
 on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to preferred output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
+Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **Since:** 21
 
@@ -441,15 +442,15 @@ Subscribes to preferred output device change events. When preferred device for t
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -473,7 +474,7 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-订阅首选输入设备变更事件。当目标音频的首选设备捕获器过滤器更改，已注册的客户端将收到回调。
+Subscribes to preferred input device change events. When the preferred device for target audio capturer filter changes, registered clients will receive a callback.
 
 **Since:** 26.0.0
 
@@ -491,16 +492,16 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | Yes | 过滤capturer。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | 回调用于接收首选设备变更信息。 |
+| filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for capturer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback to receive information about the changed preferred devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## onPreferredOutputDeviceChangeByFilter
 
@@ -508,7 +509,7 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to preferred output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
+Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **Since:** 24
 
@@ -525,15 +526,15 @@ Subscribes to preferred output device change events. When preferred device for t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## restoreOutputDeviceByFilter
 
@@ -541,7 +542,7 @@ Subscribes to preferred output device change events. When preferred device for t
 restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 ```
 
-将所需音频播放流的输出设备策略恢复为默认。
+Restores the output device for the specified audio renderer filter to the default strategy.
 
 **Since:** 26.0.0
 
@@ -559,7 +560,7 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | 要恢复策略的音频播放流筛选属性 |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter of audio renderer to restore. |
 
 **Return value:**
 
@@ -571,8 +572,8 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## selectInputDevice
 
@@ -726,8 +727,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -1043,7 +1044,7 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for affected AudioRenderers. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for affected AudioRenderer. |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device to select. |
 | strategy | [AudioDevcieSelectStrategy](arkts-audio-audio-audiodevcieselectstrategy-e-sys.md) | Yes | Target audio device select strategy. |
 
@@ -1051,15 +1052,15 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 202 - Not system App. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## Examples
 
@@ -1103,7 +1104,7 @@ audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, output
 unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>
 ```
 
-Unexclude output devices.
+Unexclude output devices. This function will unexclude target output devices belong to specific usage.
 
 **Since:** 18
 
@@ -1135,9 +1136,9 @@ Unexclude output devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -1208,9 +1209,9 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permisson denied.<br>**Applicable version:** 18 - 22 |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permisson denied.<br>**Applicable version:** 18 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

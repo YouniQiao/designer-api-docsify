@@ -1,6 +1,8 @@
 # EventHub
 
-EventHub是系统提供的基于发布-订阅模式实现的事件通信机制。通过事件名，实现了发送方和订阅方之间的解耦，支持不同业务模块间的高效数据传递和状态同步。主要用于[UIAbility组件与UI的数据通信](../../../application-models/uiability-data-sync-with-ui.md)。不同的Context对象拥有不同的EventHub对象，不同EventHub对象之间无法直接通信。事件的订阅、取消订阅、触发都作用在某一个具体的EventHub对象上。由于Worker、Taskpool通过Actor模型实现[多线程并发](../../../arkts-utils/multi-thread-concurrency-overview.md#多线程并发模型)，不同虚拟机实例之间拥有独占的内存，因此EventHub对象不能用于线程间的数据通信。
+EventHub is an event communication mechanism based on the publish-subscribe pattern. It decouples senders and subscribers through event names, supporting efficient data transfer and state synchronization between different service modules.It is primarily used for  
+[data communication between UIAbility components and UI pages](../../../application-models/uiability-data-sync-with-ui.md).Different Context objects have different EventHub objects, and different EventHub objects cannot communicate directly  with each other. Event subscription, unsubscription, and triggering all take place on a specific EventHub object.Since Worker and TaskPool implement  
+[multithreaded concurrency](../../../arkts-utils/multi-thread-concurrency-overview.md#multithreaded-concurrency-models) through the actor model, where different virtual machine instances have exclusive memory, EventHub objects cannot be  used for inter-thread data communication.
 
 **Since:** 9
 
@@ -16,7 +18,7 @@ EventHub是系统提供的基于发布-订阅模式实现的事件通信机制�
 emit(event: string, ...args: Object[]): void
 ```
 
-触发指定事件。
+Trigger the event callbacks.
 
 **Since:** 9
 
@@ -34,14 +36,14 @@ emit(event: string, ...args: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件名称。 |
-| args | Object[] | Yes | 可变参数，事件触发时，传递给回调函数的参数。 |
+| event | string | Yes | Indicates the event. |
+| args | Object[] | Yes | Indicates the callback arguments. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## emit
 
@@ -49,7 +51,7 @@ emit(event: string, ...args: Object[]): void
 emit(event: string, ...args: (Object|null|undefined)[]): void
 ```
 
-触发指定事件。
+Trigger the event callbacks.
 
 **Since:** 23
 
@@ -65,8 +67,8 @@ emit(event: string, ...args: (Object|null|undefined)[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件名称。 |
-| args | (Object\|null\|undefined)[] | Yes | 可变参数，事件触发时，传递给回调函数的参数。 |
+| event | string | Yes | Indicates the event. |
+| args | (Object\|null\|undefined)[] | Yes | Indicates the callback arguments. |
 
 ## off
 
@@ -74,10 +76,10 @@ emit(event: string, ...args: (Object|null|undefined)[]): void
 off(event: string, callback?: Function): void
 ```
 
-取消订阅指定事件。
+Unsubscribes from an event.
 
-- 传入callback：取消指定的callback对指定事件的订阅，当该事件触发后，将不会回调该callback。  
-- 不传callback：取消所有callback对指定事件的订阅。
+- If **callback** is specified, this API unsubscribes from the given event with the specified callback.  
+- If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
 
 **Since:** 9
 
@@ -95,14 +97,14 @@ off(event: string, callback?: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件名称。 |
-| callback | Function | No | 事件回调。如果不传callback，则取消订阅该事件下所有callback。 |
+| event | string | Yes | Event name. |
+| callback | Function | No | Callback for the event. If **callback** is unspecified, the given event with all callbacks is unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on
 
@@ -110,11 +112,12 @@ off(event: string, callback?: Function): void
 on(event: string, callback: Function): void
 ```
 
-订阅指定事件。
+Subscribes to an event.
 
-> **说明：**
+> **NOTE：**
 > 
-> callback被emit触发时，调用方是EventHub对象，如果要修改callback中this的指向，可以使用箭头函数。
+> When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of
+> **this** in **callback**, use an arrow function.
 
 **Since:** 9
 
@@ -132,12 +135,12 @@ on(event: string, callback: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件名称。 |
-| callback | Function | Yes | 事件回调，事件触发后调用。 |
+| event | string | Yes | Event name. |
+| callback | Function | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

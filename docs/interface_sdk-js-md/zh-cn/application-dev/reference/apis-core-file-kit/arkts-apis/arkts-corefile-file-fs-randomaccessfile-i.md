@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## close
 
 ```TypeScript
@@ -78,7 +72,7 @@ getReadStream(): ReadStream
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -121,7 +115,7 @@ getWriteStream(): WriteStream
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -186,6 +180,8 @@ read(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { ReadOptions } from '@kit.CoreFileKit';
@@ -202,6 +198,32 @@ let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
   console.info(`Succeeded in reading, read length: ${readLength}`);
 }).catch((err: BusinessError) => {
+  console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: long = 4096;
+let readOption: ReadOptions = {
+  offset: 1,
+  length: 5
+};
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.read(arrayBuffer, readOption).then((readLength: long) => {
+  console.info(`Succeeded in reading, read length: ${readLength}`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   randomAccessFile.close();
@@ -248,6 +270,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -258,6 +282,30 @@ let length: number = 20;
 
 let arrayBuffer = new ArrayBuffer(length);
 randomAccessFile.read(arrayBuffer, (err: BusinessError, readLength: number) => {
+  if (err) {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (readLength) {
+      console.info(`Succeeded in reading, size is: ${readLength}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: long = 20;
+
+let arrayBuffer = new ArrayBuffer(length);
+randomAccessFile.read(arrayBuffer, (err: BusinessError | null, readLength: long | undefined) => {
   if (err) {
     console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -314,6 +362,8 @@ read(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { ReadOptions } from '@kit.CoreFileKit';
@@ -328,6 +378,34 @@ let readOption: ReadOptions = {
 };
 let arrayBuffer = new ArrayBuffer(length);
 randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: number) => {
+  if (err) {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (readLength) {
+      console.info(`Succeeded in reading, size is: ${readLength}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: long = 20;
+let readOption: ReadOptions = {
+  offset: 1,
+  length: 5
+};
+let arrayBuffer = new ArrayBuffer(length);
+randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError | null, readLength: long | undefined) => {
   if (err) {
     console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -389,11 +467,26 @@ readSync(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let filePath = pathDir + "/test.txt";
 let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
 let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let length: number = 4096;
+let arrayBuffer = new ArrayBuffer(length);
+let readLength = randomAccessFile.readSync(arrayBuffer);
+randomAccessFile.close();
+fileIo.closeSync(file);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: long = 4096;
 let arrayBuffer = new ArrayBuffer(length);
 let readLength = randomAccessFile.readSync(arrayBuffer);
 randomAccessFile.close();
@@ -492,6 +585,8 @@ write(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { WriteOptions } from '@kit.CoreFileKit';
@@ -509,6 +604,33 @@ let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => {
   console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
 }).catch((err: BusinessError) => {
+  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: number = 4096;
+let writeOption: WriteOptions = {
+  offset: 1,
+  length: 5,
+  encoding: 'utf-8'
+};
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: long) => {
+  console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   randomAccessFile.close();
@@ -558,6 +680,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -567,6 +691,29 @@ let randomAccessFile = fileIo.createRandomAccessFileSync(file);
 let bufferLength: number = 4096;
 let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.write(arrayBuffer, (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: long = 4096;
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.write(arrayBuffer, (err: BusinessError | null, bytesWritten: long | undefined) => {
   if (err) {
     console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -626,6 +773,8 @@ write(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { WriteOptions } from '@kit.CoreFileKit';
@@ -641,6 +790,35 @@ let writeOption: WriteOptions = {
 };
 let arrayBuffer = new ArrayBuffer(bufferLength);
 randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  randomAccessFile.close();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let bufferLength: long = 4096;
+let writeOption: WriteOptions = {
+  offset: 1,
+  length: bufferLength,
+  encoding: 'utf-8'
+};
+let arrayBuffer = new ArrayBuffer(bufferLength);
+randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError | null, bytesWritten: long | undefined) => {
   if (err) {
     console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
   } else {

@@ -10,12 +10,6 @@ DatePickerComponentOptions定义日期时间选择器组件的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
-```
-
 ## dateOptions
 
 ```TypeScript

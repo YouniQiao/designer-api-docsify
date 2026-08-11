@@ -4,7 +4,7 @@
 type DenormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 ```
 
-服务端使用的URI转换为用户传入的初始URI操作的属性类型。
+Callback function called when converting the given normalized URI into a denormalized URI.
 
 **Since:** 23
 

@@ -1,11 +1,5 @@
 # getFreeSizeSync
 
-## 导入模块
-
-```TypeScript
-import { statfs } from 'kits/@kit.CoreFileKit';
-```
-
 ## getFreeSizeSync
 
 ```TypeScript

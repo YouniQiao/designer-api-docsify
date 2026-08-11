@@ -4,7 +4,7 @@
 export type ContentWillScrollCallback = (result: SwiperContentWillScrollResult) => boolean
 ```
 
-Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动。
+The callback of onContentWillScroll.
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [SwiperContentWillScrollResult](arkts-arkui-swiper-swipercontentwillscrollresult-i.md) | Yes | 即将滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
+| result | [SwiperContentWillScrollResult](arkts-arkui-swiper-swipercontentwillscrollresult-i.md) | Yes | the result of swiper ContentWillScrollCallback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Swiper是否响应本次滑动，true表示响应，false表示不响应。 |
+| boolean | whether to allow scroll, true indicating can scroll and false indicating can not scroll. |
 

@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
-```
-
 ## create
 
 ```TypeScript
@@ -39,7 +33,7 @@ function create(context: Context, source: object): DataObject
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -66,7 +60,7 @@ let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DataObject = distributedDataObject.create(context, source);
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 导入模块
@@ -82,6 +76,36 @@ class SourceObject {
   isVis: boolean
 
   constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let source: SourceObject = new SourceObject('jack', 18, false);
+        g_object = distributedDataObject.create(this.context, source);
+    }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 导入模块
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import distributedDataObject from '@ohos.data.distributedDataObject';
+
+let g_object: distributedDataObject.DataObject | null = null;
+
+class SourceObject {
+  name: string
+  age: int
+  isVis: boolean
+
+  constructor(name: string, age: int, isVis: boolean) {
     this.name = name;
     this.age = age;
     this.isVis = isVis;

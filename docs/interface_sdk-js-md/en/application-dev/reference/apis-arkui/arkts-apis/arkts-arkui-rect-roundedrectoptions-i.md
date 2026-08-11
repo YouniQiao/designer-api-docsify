@@ -1,6 +1,6 @@
 # RoundedRectOptions
 
-用于描述Rect绘制属性。
+Define options used to construct a rectangle with rounded corners.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 height?: Length
 ```
 
-高度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+Rectangle height.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -38,9 +36,7 @@ Anonymous Object Rectification
 radiusHeight?: Length
 ```
 
-圆角高度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+Height of the corner radius.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,9 +56,7 @@ Anonymous Object Rectification
 radiusWidth?: Length
 ```
 
-圆角宽度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+Width of the corner radius.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -82,9 +76,7 @@ Anonymous Object Rectification
 width?: Length
 ```
 
-宽度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+Rectangle width.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

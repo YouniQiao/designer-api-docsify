@@ -1,6 +1,6 @@
 # PrintResolution
 
-定义打印分辨率的接口。
+Defines the resolution for printing.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 horizontalDpi: int
 ```
 
-表示水平DPI。单位：DPI。
+Horizontal DPI.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ horizontalDpi: int
 id: string
 ```
 
-表示分辨率ID。
+Resolution ID.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ id: string
 verticalDpi: int
 ```
 
-表示垂直DPI。单位：DPI。
+Vertical DPI.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

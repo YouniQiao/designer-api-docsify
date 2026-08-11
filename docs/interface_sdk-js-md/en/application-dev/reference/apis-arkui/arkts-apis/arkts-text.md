@@ -6,24 +6,24 @@
 
 | Name | Description |
 | --- | --- |
-| [ExtendableText](arkts-arkui-text-extendabletext-c.md) | 定义扩展文本组件 |
-| [TextController](arkts-arkui-text-textcontroller-c.md) | Text组件的控制器。 |
+| [ExtendableText](arkts-arkui-text-extendabletext-c.md) | Defines the Extendable Text. |
+| [TextController](arkts-arkui-text-textcontroller-c.md) | Defines the controller of Text. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [TextMarqueeOptions](arkts-arkui-text-textmarqueeoptions-i.md) | Marquee初始化参数。 |
-| [TextOptions](arkts-arkui-text-textoptions-i.md) | Text初始化参数。 |
-| [TextOverflowOptions](arkts-arkui-text-textoverflowoptions-i.md) | 文本超长显示方式对象。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [TextMarqueeOptions](arkts-arkui-text-textmarqueeoptions-i.md) | Defines the marquee options. |
+| [TextOptions](arkts-arkui-text-textoptions-i.md) | Defines the options of Text. |
+| [TextOverflowOptions](arkts-arkui-text-textoverflowoptions-i.md) | Text overflow options.  Anonymous Object Rectification. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MarqueeStartPolicy](arkts-arkui-text-marqueestartpolicy-e.md) | Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。 |
-| [MarqueeState](arkts-arkui-text-marqueestate-e.md) | Marquee状态回调的返回值。 |
-| [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md) | 跑马灯组件属性更新后，跑马灯的滚动策略。 |
-| [TextResponseType](arkts-arkui-text-textresponsetype-e.md) | 选择菜单的响应类型。 |
-| [TextSpanType](arkts-arkui-text-textspantype-e.md) | [Span](../../../reference/apis-arkui/arkui-ts/ts-basic-components-span.md)类型信息。 |
+| [MarqueeStartPolicy](arkts-arkui-text-marqueestartpolicy-e.md) | Defines marquee start policy. |
+| [MarqueeState](arkts-arkui-text-marqueestate-e.md) | Defines marquee state. |
+| [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md) | Marquee scrolling policy after text update. |
+| [TextResponseType](arkts-arkui-text-textresponsetype-e.md) | ResponseType for contextMenu  &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The order for menu type matching is as follows. When the user interacts with text,the system follows this order to decides which type of menu to display.&lt;ol&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt; |
+| [TextSpanType](arkts-arkui-text-textspantype-e.md) | Defines span type.  &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The order for menu type matching is as follows.&lt;br&gt;When the user interacts with text, the system follows this order to decides which type of menu to display.&lt;ol&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt; |
 

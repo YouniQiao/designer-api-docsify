@@ -47,45 +47,26 @@ import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
-let modelFile = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
-    
+    let modelFile = '/path/to/xxx.ms';
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
-    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
-    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-    if (modelInputs == null || modelInputs.length === 0) {
-      console.error(`Failed to get model inputs. Model file: ${modelFile}`);
-      return;
-    }
-    
     modelInputs[0].setData(inputBuffer);
-    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}`);
-    
     mindSporeLiteModel.predict(modelInputs).then((mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
-      if (mindSporeLiteTensor == null || mindSporeLiteTensor.length === 0) {
-        console.error(`Failed to get prediction output. Model file: ${modelFile}`);
-      } else {
-        let output = new Float32Array(mindSporeLiteTensor[0].getData());
-        console.info(`Succeeded in prediction. Output length: ${output.length}`);
-        for (let i = 0; i < Math.min(5, output.length); i++) {
-          console.info(`Output[${i}]: ${output[i].toString()}`);
-        }
+      let output = new Float32Array(mindSporeLiteTensor[0].getData());
+      for (let i = 0; i < output.length; i++) {
+        console.info(output[i].toString());
       }
-    }).catch((error: Error) => {
-      console.error(`Failed to execute prediction. Model file: ${modelFile}, Error: ${error.message}`);
-    });
+    })
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 
@@ -126,31 +107,20 @@ import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
-let modelFile = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
-    
+    let modelFile = '/path/to/xxx.ms';
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
-    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
-    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-    if (modelInputs == null || modelInputs.length === 0) {
-      console.error(`Failed to get model inputs. Model file: ${modelFile}`);
-      return;
-    }
-    
     modelInputs[0].setData(inputBuffer);
-    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}, Buffer size: ${inputBuffer.byteLength}`);
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 

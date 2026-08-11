@@ -1,6 +1,6 @@
 # TextMenuItemId
 
-自定义菜单项的Id值。用于识别菜单选项，内置菜单项Id值见下列属性表格。
+Defines the TextMenuItemId.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 equals(id: TextMenuItemId): boolean
 ```
 
-判断TextMenuItemId是否相等。
+Judge if two TextMenuItemId are equal.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ equals(id: TextMenuItemId): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | 需要比较的TextMenuItemId对象。 |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | id TextMenuItemId. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ equals(id: TextMenuItemId): boolean
 static of(id: ResourceStr): TextMenuItemId
 ```
 
-根据id创建TextMenuItemId。
+Init a TextMenuItemId with id.
 
 **Since:** 23
 
@@ -62,13 +62,13 @@ static of(id: ResourceStr): TextMenuItemId
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | The id of the TextMenuItemId. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 根据传入id创建的菜单项标识对象，用于识别菜单选项。 |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Returns the TextMenuItemId object. |
 
 ## AI_WRITER
 
@@ -76,7 +76,7 @@ static of(id: ResourceStr): TextMenuItemId
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-可对选中的文本进行润色、摘要提取、排版等，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
+Indicates the TextMenuItemId to help with text creation by invoking large models.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -96,7 +96,7 @@ static readonly AI_WRITER: TextMenuItemId
 static readonly CAMERA_INPUT: TextMenuItemId
 ```
 
-拍摄输入，为一级菜单项。
+Indicates the TextMenuItemId to recognize the text in the picture and input it into the text view.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -116,7 +116,7 @@ static readonly CAMERA_INPUT: TextMenuItemId
 static readonly COLLABORATION_SERVICE: TextMenuItemId
 ```
 
-互通服务，为一级菜单项。
+Indicates the TextMenuItemId for collaboration service menu items.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -136,7 +136,7 @@ static readonly COLLABORATION_SERVICE: TextMenuItemId
 static readonly COPY: TextMenuItemId
 ```
 
-默认复制，为一级菜单项。
+Indicates the TextMenuItemId to copy the currently selected text to the clipboard.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -156,7 +156,7 @@ static readonly COPY: TextMenuItemId
 static readonly CUT: TextMenuItemId
 ```
 
-默认剪切，为一级菜单项。
+Indicates the TextMenuItemId to copy and delete the currently selected text.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -176,7 +176,7 @@ static readonly CUT: TextMenuItemId
 static readonly PASTE: TextMenuItemId
 ```
 
-默认粘贴，为一级菜单项。
+Indicates the TextMenuItemId to copy the current contents of the clipboard into the text view.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -196,7 +196,7 @@ static readonly PASTE: TextMenuItemId
 static readonly SEARCH: TextMenuItemId
 ```
 
-搜索，为一级菜单项。对选中的文本提供搜索服务，拉起浏览器搜索选中文本内容。
+Indicates the TextMenuItemId to search the selected content.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -216,7 +216,7 @@ static readonly SEARCH: TextMenuItemId
 static readonly SELECT_ALL: TextMenuItemId
 ```
 
-默认全选，为一级菜单项。
+Indicates the TextMenuItemId to select all text in a text view.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -236,7 +236,7 @@ static readonly SELECT_ALL: TextMenuItemId
 static readonly SHARE: TextMenuItemId
 ```
 
-分享，为一级菜单项。对选中的文本提供分享服务，拉起分享窗口分享选中文本内容。
+Indicates the TextMenuItemId to share the selected content.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -256,7 +256,7 @@ static readonly SHARE: TextMenuItemId
 static readonly TRANSLATE: TextMenuItemId
 ```
 
-翻译，为一级菜单项。对选中的文本提供翻译服务。
+Indicates the TextMenuItemId to translate the selected content.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -276,7 +276,7 @@ static readonly TRANSLATE: TextMenuItemId
 static readonly address: TextMenuItemId
 ```
 
-导航前往，为一级菜单项。对选中的地址提供跳转服务，拉起地图应用。
+Indicates the TextMenuItemId to open map.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -296,7 +296,7 @@ static readonly address: TextMenuItemId
 static readonly askAI: TextMenuItemId
 ```
 
-对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
+Indicates the TextMenuItemId for asking AI.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -316,7 +316,7 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、TextArea或RichEditor组件。
+Indicates the TextMenuItemId for auto fill.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -336,7 +336,7 @@ static readonly autoFill: TextMenuItemId
 static readonly dateTime: TextMenuItemId
 ```
 
-新建日程，为一级菜单项。对选中的日期和时间提供跳转服务，拉起新建日程页面。
+Indicates the TextMenuItemId to open calendar.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -356,7 +356,7 @@ static readonly dateTime: TextMenuItemId
 static readonly email: TextMenuItemId
 ```
 
-新建邮件，为一级菜单项。对选中的邮箱地址提供跳转服务，拉起邮箱应用。
+Indicates the TextMenuItemId to open email.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -376,7 +376,7 @@ static readonly email: TextMenuItemId
 static readonly passwordVault: TextMenuItemId
 ```
 
-密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、TextArea或RichEditor组件。
+Indicates the TextMenuItemId for password vault.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -396,7 +396,7 @@ static readonly passwordVault: TextMenuItemId
 static readonly phoneNumber: TextMenuItemId
 ```
 
-呼叫，为一级菜单项。对选中的电话号码提供跳转服务，拉起电话拨号页面。
+Indicates the TextMenuItemId to call the phone number.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -416,7 +416,7 @@ static readonly phoneNumber: TextMenuItemId
 static readonly url: TextMenuItemId
 ```
 
-打开链接，为一级菜单项。对选中的URL提供跳转服务，拉起浏览器搜索或者应用页面。
+Indicates the TextMenuItemId to open url.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 

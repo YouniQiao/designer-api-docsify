@@ -12,7 +12,8 @@ import { display } from 'kits/@kit.ArkUI';
 function getBrightnessInfo(displayId: long): BrightnessInfo
 ```
 
-获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
+Obtains the screen brightness information of a display. If the screen does not support HDR, the  
+**currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
 
 **Since:** 22
 
@@ -28,30 +29,19 @@ function getBrightnessInfo(displayId: long): BrightnessInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | 返回displayId对应屏幕的亮度信息。 |
+| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Screen brightness information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400003 | This display manager service works abnormally. |
-
-## Examples
-
-```TypeScript
-try {
-  let brightnessInfo = display.getBrightnessInfo(0);
-  console.info(`brightness info: ${JSON.stringify(brightnessInfo)}`);
-} catch (error) {
-  console.error(`Failed to getDisplayBrightness. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getBrightnessInfo can not work correctly due to limited device capabilities. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 

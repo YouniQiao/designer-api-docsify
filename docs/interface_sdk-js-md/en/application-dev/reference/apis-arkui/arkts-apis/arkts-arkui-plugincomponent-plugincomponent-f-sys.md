@@ -8,7 +8,7 @@ export declare function PluginComponent(
 ): PluginComponentAttribute
 ```
 
-创建插件组件，用于显示外部应用提供的UI。
+Defines PluginComponent Component.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ export declare function PluginComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](../arkts-components/arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | 定义用于构造插件组件的选项。 |
+| options | [PluginComponentOptions](../arkts-components/arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 
@@ -43,11 +43,11 @@ export declare function PluginComponent(
 ): PluginComponentAttribute
 ```
 
-定义PluginComponent组件。它要求在组件属性设置开始时调用setPluginComponentOptions，并在组件属性设置结束时调用applyAttributeFinish。
+Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,11 +63,11 @@ export declare function PluginComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PluginComponentAttribute&gt; | Yes | 用于设置plugincomponent属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PluginComponentAttribute&gt; | Yes | the callback to set up plugincomponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) | PluginComponent的属性。 |
+| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) | The attribute of the PluginComponent. |
 

@@ -44,7 +44,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. The type of the input parameter is not ColorMetrics. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. The type of the input parameter is not ColorMetrics. |
 
 ## colorWithSpace
 
@@ -144,8 +144,8 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 180003 | Failed to obtain the color resource. |
-| 401 | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
+| [180003](../errorcode-event.md#180003-该事件不是克隆事件) | Failed to obtain the color resource. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
 
 ## rgba
 

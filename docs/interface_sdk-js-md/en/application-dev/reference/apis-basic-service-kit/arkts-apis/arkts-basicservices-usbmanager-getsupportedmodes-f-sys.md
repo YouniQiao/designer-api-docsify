@@ -12,7 +12,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function getSupportedModes(portId: number): PortModeType
 ```
 
-获取指定的端口支持的模式列表的组合掩码。
+Obtains the mask combination for the supported mode list of a given USB port.
 
 **Since:** 9
 
@@ -32,17 +32,17 @@ function getSupportedModes(portId: number): PortModeType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | 端口号。 |
+| portId | number | Yes | Port number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | 支持的模式列表的组合掩码。 |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

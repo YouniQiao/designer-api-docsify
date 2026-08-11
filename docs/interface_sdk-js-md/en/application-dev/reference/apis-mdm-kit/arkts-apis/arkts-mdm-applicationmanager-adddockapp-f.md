@@ -12,23 +12,29 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void
 ```
 
-根据位置索引添加应用到PC/2in1设备的底部快捷栏，添加后用户可以通过点击快捷栏的应用图标直接启动应用，应用图标为应用在桌面上显示的默认图标。
+Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on the location index. Then users can tap the application icon in the shortcut bar to directly launch the application. The application icon is the default icon displayed on the home screen.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1.若位置0或1上已存在“应用中心”或“任务中心”，则尝试向该位置添加应用会返回错误码9201019；若该位置为其他应用，则可正常添加。
+> 1. If location 0 or 1 is already occupied by the application center or task center, adding an application to that
+> location returns error code 9201019. If that location is occupied by another app, the addition succeeds.
 > 
-> 2.以下应用不可通过本接口添加到快捷栏：“应用中心”、“任务中心”、“文件管理”、“回收站”。
+> 2. The following applications cannot be added to the shortcut bar using this API: Application Center, Task
+> Center, Files, and Recycle Bin.
 > 
-> 3.仅支持添加具有应用程序入口（即有图标）的应用，无图标的应用不支持添加。
+> 3. Only applications with an entry (that is, an icon) can be added.
 > 
-> 4.仅支持配置当前用户下的快捷栏，每个用户的快捷栏最多可容纳100个应用。
+> 4. Only the shortcut bar of the current user can be configured. Each user's shortcut bar can contain a maximum of
+> 100 applications.
 > 
-> 5.在已有应用的位置插入新应用时，新应用将直接占用该位置，原应用及其后的应用依次向后顺移一位。
+> 5. When a new application is inserted into an occupied location, the new application will directly take that
+> location, and the original application along with all subsequent applications will shift back by one location.
 > 
-> 6.若不传index参数，或传入的index值大于快捷栏当前应用数量，则新应用默认追加到快捷栏末尾。
+> 6. If the **index** parameter is not passed or the passed value is greater than the number of applications in the
+> shortcut bar, the new application is added to the end of the shortcut bar by default.
 > 
-> 7.通过本接口添加应用到快捷栏后，用户可以手动移除或调整应用的位置。
+> 7. After an application is added to the shortcut bar using this API, users can manually remove the application or
+> adjust its position.
 
 **Since:** 24
 
@@ -46,47 +52,24 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleName | string | Yes | 应用的包名。 |
-| abilityName | string | Yes | 应用的Ability名称，仅支持应用程序入口Ability。 |
-| index | number | No | 应用在快捷栏中的位置索引，默认值为99。 &lt;br&gt;取值范围：[0,100)。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| bundleName | string | Yes | Bundle name of the application. |
+| abilityName | string | Yes | Ability name of the application. Only the application entry ability is supported. |
+| index | number | No | Location index of the application in the shortcut bar. The value range is [0, 100). The default value is 99. &lt;br&gt;Value range: [0,100). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 9200015 | The ability does not exist. |
-| 9201018 | The application is inoperable. |
-| 9201019 | The location is inoperable. |
-| 9201013 | The number of applications in the Dock has reached the maximum. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9201014 | The application is already in the Dock. |
-| 9201015 | The application is not installed. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace it as required.
-  let bundleName: string = 'com.example.exampleapplication';
-  let abilityName: string = 'EntryAbility';
-  applicationManager.addDockApp(wantTemp, bundleName, abilityName, 3);
-  console.info('Succeeded in adding dock app.');
-} catch(err) {
-  console.error(`Failed to add dock app. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9200015](../errorcode-enterpriseDeviceManager.md#9200015-component-not-exist) | The ability does not exist. |
+| [9201018](../errorcode-enterpriseDeviceManager.md#9201018-specified-application-inoperable) | The application is inoperable. |
+| [9201019](../errorcode-enterpriseDeviceManager.md#9201019-specified-location-inoperable) | The location is inoperable. |
+| [9201013](../errorcode-enterpriseDeviceManager.md#9201013-number-of-applications-in-dock-reaches-maximum) | The number of applications in the Dock has reached the maximum. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201014](../errorcode-enterpriseDeviceManager.md#9201014-specified-application-already-in-docker) | The application is already in the Dock. |
+| [9201015](../errorcode-enterpriseDeviceManager.md#9201015-specified-application-not-installed) | The application is not installed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

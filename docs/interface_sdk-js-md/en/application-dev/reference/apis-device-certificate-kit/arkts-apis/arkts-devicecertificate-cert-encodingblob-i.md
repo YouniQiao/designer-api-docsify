@@ -1,6 +1,6 @@
 # EncodingBlob
 
-表示一个编码后的二进制数据块。
+Represents an encoded binary data block.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 data: Uint8Array
 ```
 
-编码数据。
+Encoded data.
 
 **Type:** Uint8Array
 
@@ -42,7 +42,7 @@ data: Uint8Array
 encodingFormat: EncodingFormat
 ```
 
-编码格式。
+Encoding format.
 
 **Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 

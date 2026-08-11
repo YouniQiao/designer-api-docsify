@@ -1,6 +1,6 @@
 # LengthMetricsUnit
 
-长度属性单位枚举。
+Enumerates the length metrics unit.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-长度类型，用于描述以默认的vp像素单位为单位的长度。
+The default length metrics unit.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 PX = 1
 ```
 
-长度类型，用于描述以px像素单位为单位的长度。
+The pixel length metrics unit.
 
 **Since:** 23
 

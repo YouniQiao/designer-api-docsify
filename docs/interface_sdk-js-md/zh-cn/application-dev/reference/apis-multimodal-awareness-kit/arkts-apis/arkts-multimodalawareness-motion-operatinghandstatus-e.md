@@ -1,6 +1,6 @@
 # OperatingHandStatus
 
-Defines the status of the operating hand.
+触控操作手状态信息。
 
 **起始版本：** 15
 
@@ -16,7 +16,7 @@ Defines the status of the operating hand.
 UNKNOWN_STATUS = 0
 ```
 
-Unknown status.
+表示未识别。
 
 **起始版本：** 15
 
@@ -32,7 +32,7 @@ Unknown status.
 LEFT_HAND_OPERATED = 1
 ```
 
-Left hand in use.
+表示触控操作手是左手。
 
 **起始版本：** 15
 
@@ -48,7 +48,7 @@ Left hand in use.
 RIGHT_HAND_OPERATED = 2
 ```
 
-Right hand in use.
+表示触控操作手是右手。
 
 **起始版本：** 15
 

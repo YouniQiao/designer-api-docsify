@@ -1,11 +1,5 @@
 # search
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## search
 
 ```TypeScript
@@ -32,8 +26,24 @@ function search(callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.search((err: BusinessError<void> | null, data: Array<string> | undefined) => {
+  if (err) {
+    console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in searching a upload task. `);
+});
+```
 
 
 ## search
@@ -63,8 +73,28 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: request.agent.Filter = {
+  action: request.agent.Action.UPLOAD,
+  mode: request.agent.Mode.BACKGROUND
+}
+request.agent.search(filter, (err: BusinessError<void> | null, data: Array<string> | undefined) => {
+  if (err) {
+    console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in searching a upload task. `);
+});
+```
 
 
 ## search
@@ -99,6 +129,24 @@ function search(filter?: Filter): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: request.agent.Filter = {
+  action: request.agent.Action.UPLOAD,
+  mode: request.agent.Mode.BACKGROUND
+}
+request.agent.search(filter).then((data: Array<string>) => {
+  console.info(`Succeeded in searching a upload task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 

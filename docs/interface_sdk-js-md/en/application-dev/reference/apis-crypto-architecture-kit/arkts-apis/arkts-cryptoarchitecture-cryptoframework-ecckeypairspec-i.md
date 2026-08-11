@@ -1,8 +1,9 @@
 # ECCKeyPairSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公私钥包含的全量参数。
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify full parameters of the public and private keys in the ECC algorithm.
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
 **Inheritance/Implementation:** ECCKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 params: ECCCommonParamsSpec
 ```
 
-指定ECC算法中公私钥都包含的公共参数。
+Common parameters of the public and private keys in the ECC algorithm.
 
 **Type:** [ECCCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md)
 
@@ -50,7 +51,7 @@ params: ECCCommonParamsSpec
 pk: Point
 ```
 
-指定ECC算法的公钥pk。
+Public key **pk** in the ECC algorithm.
 
 **Type:** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 
@@ -72,7 +73,7 @@ pk: Point
 sk: bigint
 ```
 
-ECC算法中的私钥sk。
+Private key **sk** in the ECC algorithm.
 
 **Type:** bigint
 

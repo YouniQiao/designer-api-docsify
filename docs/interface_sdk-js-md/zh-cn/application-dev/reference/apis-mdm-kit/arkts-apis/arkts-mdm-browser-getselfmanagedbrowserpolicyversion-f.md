@@ -1,11 +1,5 @@
 # getSelfManagedBrowserPolicyVersion
 
-## 导入模块
-
-```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
-```
-
 ## getSelfManagedBrowserPolicyVersion
 
 ```TypeScript

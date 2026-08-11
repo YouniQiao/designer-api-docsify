@@ -4,7 +4,7 @@
 type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 ```
 
-忽略重复点击功能开启时（[ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick)设置为true)，忽略重复点击的配置(即设置的RepeatClickInterval的值)生效；忽略重复点击功能关闭时（[ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick)设置为false)，显示为正常类型。
+Defines the interval between repeated clicks.The configuration of **RepeatClickInterval** takes effect when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **true**; the normal type is used when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **false**.
 
 **Since:** 11
 
@@ -18,9 +18,9 @@ type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 
 | Type | Description |
 | --- | --- |
-| 'Shortest' | 表示最短。 |
-| 'Short' | 表示短。 |
-| 'Medium' | 表示中。 |
-| 'Long' | 表示长。 |
-| 'Longest' | 表示最长。 |
+| 'Shortest' | Shortest. |
+| 'Short' | Short. |
+| 'Medium' | Medium. |
+| 'Long' | Long. |
+| 'Longest' | Longest. |
 

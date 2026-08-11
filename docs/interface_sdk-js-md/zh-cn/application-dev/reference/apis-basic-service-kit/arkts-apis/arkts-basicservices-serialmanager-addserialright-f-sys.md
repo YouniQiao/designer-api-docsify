@@ -1,11 +1,5 @@
 # addSerialRight（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addSerialRight
 
 ```TypeScript
@@ -37,23 +31,22 @@ function addSerialRight(tokenId: int, portId: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 31400003 | PortId does not exist. |
-| 14400005 | Database operation exception. |
-| 31400001 | Serial port management exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) | PortId does not exist. |
+| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) | Database operation exception. |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) | Serial port management exception. |
 
 ## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
+import { JSON } from '@kit.ArkTS';
+import serialManager from '@ohos.usbManager.serial';
 
-
+// 获取串口列表
 function addSerialRight() {
-  // 获取串口列表
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('portList: ', JSON.stringify(portList));
   if (portList === undefined || portList.length === 0) {
@@ -61,22 +54,20 @@ function addSerialRight() {
     return;
   }
 
-  let portId: number = portList[0].portId;
+  let portId: int = portList[0].portId;
+  // 串口增加权限
   let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
   bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
     console.info('getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
     let tokenId = bundleInfo.appInfo.accessTokenId;
     try {
-      // 串口增加权限
       serialManager.addSerialRight(tokenId, portId);
       console.info('addSerialRight success, portId: ' + portId);
     } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to add serial right. Code: ${err.code}, message: ${err.message}`);
+      console.error('addSerialRight error, ' + JSON.stringify(error));
     }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get bundle info for self. Code: ${error.code}, message: ${error.message}`);
+  }).catch((error) => {
+    console.error('getBundleInfoForSelf failed, error = ' + JSON.stringify(error));
   });
 }
 ```

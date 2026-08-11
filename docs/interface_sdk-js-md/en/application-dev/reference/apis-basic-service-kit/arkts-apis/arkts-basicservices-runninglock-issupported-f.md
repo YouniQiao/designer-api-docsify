@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function isSupported(type: RunningLockType): boolean
 ```
 
-查询系统是否支持该类型的锁。
+Checks whether a specified type of {@link RunningLock} is supported.
 
 **Since:** 9
 
@@ -26,19 +26,19 @@ function isSupported(type: RunningLockType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型；该参数必须是一个枚举类。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the running lock. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示支持，返回false表示不支持。 |
+| boolean | The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## Examples
 

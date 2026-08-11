@@ -1,6 +1,6 @@
 # Preload
 
-播放器预加载媒体数据。
+Enumerates how the player preloads media data.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不预加载。
+No media data is preloaded.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NONE = 0
 METADATA = 1
 ```
 
-只预加载媒体的元数据。
+Only the metadata of the media is preloaded.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ METADATA = 1
 AUTO = 2
 ```
 
-预加载足够多的媒体数据，以保证能流畅地播放。
+A sufficient amount of media data is preloaded to ensure smooth playback
 
 **Since:** 23
 

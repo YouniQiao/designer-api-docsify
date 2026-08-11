@@ -1,10 +1,10 @@
 # EccSignatureSpec
 
-包含（r、s）的ECC/SM2签名数据的对象。
+Represents the ECC/SM2 signature data that contains (r, s).
 
-> **说明：**
+> **NOTE：**
 > 
-> r和s的长度各为256位。
+> **r** and **s** are each 256 bits long.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 r: bigint
 ```
 
-r分量。
+Randomized value derived from the elliptic curve calculation using the ephemeral private key during signature generation.
 
 **Type:** bigint
 
@@ -46,7 +46,7 @@ r分量。
 s: bigint
 ```
 
-s分量。
+Signature component, computed using the signer's private key, r, and the hashed message.
 
 **Type:** bigint
 

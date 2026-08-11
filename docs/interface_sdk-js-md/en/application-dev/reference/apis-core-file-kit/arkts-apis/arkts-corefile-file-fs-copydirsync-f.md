@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function copyDirSync(src: string, dest: string, mode?: number): void
 ```
 
-以同步方法复制源目录至目标路径下。
+Copies the source directory to the destination path. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -26,9 +26,9 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| mode | number | No | 复制模式，默认值为0。&lt;br/&gt;- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录 下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。&lt;br/&gt;- mode为1，文件级别强制覆盖。目 标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| mode | number | No | Copy mode. The default value is **0**.&lt;br&gt;- **0**: Throw an exception if a file conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.&lt;br&gt;- **1**: Forcibly overwrite the files with the same name in the destination directory.&lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
 
 **Error codes:**
 

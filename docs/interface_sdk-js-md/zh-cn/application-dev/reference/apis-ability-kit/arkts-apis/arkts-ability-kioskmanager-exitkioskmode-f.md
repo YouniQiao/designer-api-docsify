@@ -1,11 +1,5 @@
 # exitKioskMode
 
-## 导入模块
-
-```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
-```
-
 ## exitKioskMode
 
 ```TypeScript
@@ -40,12 +34,14 @@ function exitKioskMode(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000112 | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
-| 16000050 | Failed to connect to the system service. |
-| 16000110 | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000112](../errorcode-ability.md#16000112-当前系统没有应用进入kiosk模式) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { common, kioskManager } from '@kit.AbilityKit';
@@ -68,6 +64,42 @@ struct Index {
             })
             .catch((error: BusinessError) => {
               hilog.error(0x0000, 'testTag', '%{public}s', `exitKioskMode failed. Code: ${error.code}, message: ${error.message}`);
+            });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { common, kioskManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Entry, Component, Column, Button } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private uiAbilityContext: common.UIAbilityContext | undefined =
+    this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      Button('exitKioskMode').margin({ top: 10 })
+        .onClick(() => {
+          let context: common.UIAbilityContext = this.uiAbilityContext as common.UIAbilityContext;
+          kioskManager.exitKioskMode(context)
+            .then(() => {
+              hilog.info(0x0000, 'testTag', '%{public}s', 'exitKioskMode success');
+            })
+            .catch((err: Error) => {
+              let error = err as BusinessError;
+              hilog.error(0x0000, 'testTag', '%{public}s', `exitKioskMode failed:${JSON.stringify(error)}`);
             });
         })
     }

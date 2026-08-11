@@ -1,5 +1,7 @@
 # Observed
 
+Defining Observed annotation Observed is used to decorate a class.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

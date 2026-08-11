@@ -1,6 +1,6 @@
 # BundleInfoGetFlag
 
-包信息获取标志，指示需要获取的包信息的内容。
+Enumerates the bundle flags, which indicate the type of bundle information to obtain.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-用于获取默认包信息，不包含applicationInfo、signatureInfo的信息。
+Obtains the default bundle information, excluding **applicationInfo** and **signatureInfo**.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 WITH_APPLICATION_INFO = 1 << 0
 ```
 
-用于获取默认包信息和applicationInfo的信息，获取的applicationInfo中不包含iconData的信息。
+Obtains the default bundle information and **applicationInfo** (excluding **iconData**).
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ WITH_APPLICATION_INFO = 1 << 0
 WITH_SIGNATURE_INFO = 1 << 1
 ```
 
-用于获取默认包信息和signatureInfo的信息。
+Obtains the default bundle information and **signatureInfo**.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ WITH_SIGNATURE_INFO = 1 << 1
 WITH_APPLICATION_ICON_INFO = 1 << 2
 ```
 
-用于获取默认包信息和applicationInfo的iconData信息。
+Obtains the default bundle information and **applicationInfo** (including **iconData**).
 
 **Since:** 23
 

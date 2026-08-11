@@ -1,6 +1,6 @@
 # EditableTitleV2Options
 
-标题配置选项接口。
+Indicates the options of the title.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 mainTitle?: ResourceStr
 ```
 
-主标题内容。
+Main title content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -42,7 +42,7 @@ mainTitle?: ResourceStr
 subTitle?: ResourceStr
 ```
 
-副标题内容。需要在标题下方显示补充说明信息时传入此参数。
+Subtitle content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

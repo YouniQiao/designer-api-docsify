@@ -1,6 +1,6 @@
 # FontVariationAxis
 
-字体可变轴信息。
+Represents the font variable axis information.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 defaultValue: double
 ```
 
-字体可变轴的默认值。
+Default value of the font variable axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ defaultValue: double
 flags: int
 ```
 
-字体可变轴的标志位，用于标记某个可变轴是否应该对用户隐藏，值为0或1。值为0时表示该轴对用户可见，值为1时表示该轴应隐藏。
+Flag of the font variable axis, which is used to indicate whether a variable axis should be hidden from users.The value can be **0** or **1**. The value **0** indicates that the axis is visible to users, and the value **1**indicates that the axis should be hidden.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ flags: int
 key: string
 ```
 
-字体可变轴的关键字标识。
+Keyword identifier of the font variable axis.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ key: string
 localName: string
 ```
 
-字体可变轴的本地化名称，可以为空。
+Localized name of the font variable axis, which can be empty.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ localName: string
 maxValue: double
 ```
 
-字体可变轴的最大值。
+Maximum value of the font variable axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -122,7 +122,7 @@ maxValue: double
 minValue: double
 ```
 
-字体可变轴的最小值。
+Minimum value of the font variable axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -142,7 +142,7 @@ minValue: double
 name: string
 ```
 
-字体可变轴的英文名称。
+English name of the font variable axis.
 
 **Type:** string
 

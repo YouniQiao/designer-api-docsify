@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
-## 导入模块
-
-```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
-```
-
 ## touchDown
 
 ```TypeScript
@@ -54,10 +48,10 @@ touchDown(touch: TouchPoint): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| 4300002 | The display does not exist. |
-| 3800001 | Input service exception. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -148,9 +142,9 @@ touchMove(touch: TouchPoint): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| 3800001 | Input service exception. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -192,9 +186,9 @@ touchUp(touch: TouchPoint): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 4300001 | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| 3800001 | Input service exception. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 

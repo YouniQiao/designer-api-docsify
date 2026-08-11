@@ -1,6 +1,6 @@
 # FoldStatusInfo
 
-相机管理器回调返回的接口实例，表示折叠机折叠状态信息。
+Describes the fold state information about a foldable device.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly foldStatus: FoldStatus
 ```
 
-折叠屏折叠状态。
+Fold state.
 
 **Type:** [FoldStatus](../../apis-arkui/arkts-apis/arkts-arkui-enums-foldstatus-e.md)
 
@@ -42,7 +42,7 @@ readonly foldStatus: FoldStatus
 readonly supportedCameras: Array<CameraDevice>
 ```
 
-当前折叠状态所支持的相机信息列表。
+List of cameras supported in the current fold state.
 
 **Type:** Array&lt;CameraDevice&gt;
 

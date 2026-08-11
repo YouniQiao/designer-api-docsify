@@ -12,7 +12,7 @@ import { recent } from 'kits/@kit.CoreFileKit';
 function add(uri: string): void
 ```
 
-将uri对应的文件加入最近访问列表。
+Adds the file of the specified URI to the recent file list.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ function add(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 公共目录文件类URI。 |
+| uri | string | Yes | File URI. |
 
 **Error codes:**
 

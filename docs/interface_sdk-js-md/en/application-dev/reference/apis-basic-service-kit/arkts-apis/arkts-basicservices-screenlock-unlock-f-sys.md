@@ -34,10 +34,10 @@ Unlock the screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 202 | permission verification failed, application which is not a system application uses system API. |
-| 13200003 | Invalid use. |
-| 13200002 | the screenlock management service is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
 ## Examples
 
@@ -82,9 +82,9 @@ Unlock the screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | permission verification failed, application which is not a system application uses system API. |
-| 13200003 | Invalid use. |
-| 13200002 | the screenlock management service is abnormal. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
 ## Examples
 

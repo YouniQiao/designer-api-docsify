@@ -12,7 +12,7 @@ import { Environment } from 'kits/@kit.CoreFileKit';
 function getUserDataDir(): Promise<string>
 ```
 
-异步方法获取公共文件根目录，使用promise异步回调。
+Obtains the root directory of user files. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -28,14 +28,14 @@ function getUserDataDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 返回公共文件根目录。 |
+| Promise&lt;string&gt; | Promise used to return the root directory of user files. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 202 | The caller is not a system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 13900042 | Unknown error |
 
 
@@ -45,7 +45,7 @@ function getUserDataDir(): Promise<string>
 function getUserDataDir(callback: AsyncCallback<string>): void
 ```
 
-异步方法获取公共文件根目录，使用callback异步回调。
+Obtains the root directory of user files. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -61,13 +61,13 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步获取公共文件根目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the root directory of user files. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 202 | The caller is not a system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 13900042 | Unknown error |
 

@@ -12,14 +12,16 @@ import { uriPermissionManager } from 'kits/@kit.AbilityKit';
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void
 ```
 
-撤销授权指定应用的URI。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -38,20 +40,20 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| targetBundleName | string | Yes | 被撤销授权uri的应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| targetBundleName | string | Yes | Bundle name of the application, from which the permission is revoked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000050 | Internal error. |
-| 201 | Permission denied.<br>**Applicable version:** 10 - 11 |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 11 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 
@@ -77,11 +79,16 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<void>): void
 ```
 
-撤销授权指定应用的URI。使用callback异步回调。
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -97,18 +104,18 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| targetBundleName | string | Yes | 被撤销授权uri的应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| targetBundleName | string | Yes | Bundle name of the application, from which the permission is revoked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
 ## revokeUriPermission
@@ -117,14 +124,16 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -143,25 +152,25 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| targetBundleName | string | Yes | 被授权URI的应用包名。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000050 | Internal error. |
-| 201 | Permission denied.<br>**Applicable version:** 10 - 11 |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 11 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 
@@ -187,11 +196,16 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<void>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。
+Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -207,23 +221,23 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| targetBundleName | string | Yes | 被授权URI的应用包名。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
 ## revokeUriPermission
@@ -232,16 +246,19 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<voi
 function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
+> - This API can be used to revoke the URI permission of another application obtained by this application or URI
+> permission granted by this application.
 > 
-> - 该接口支持撤销授权给分身应用的URI权限，需要指定目标应用的应用包名和分身索引。
+> - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the
+> application bundle name and index of the cloned application.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 14
 
@@ -257,26 +274,26 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| targetBundleName | string | Yes | 被授权应用的应用包名。 |
-| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 被授权应用的分身索引，有效范围为[0, 1000], 取值为0时表示主应用。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| targetBundleName | string | Yes | Bundle name of the target application. |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000081 | Failed to obtain the target application information. |
-| 16000050 | Internal error. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 

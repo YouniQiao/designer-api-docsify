@@ -1,6 +1,6 @@
 # Descriptor
 
-USB描述符的枚举。
+Enumerates USB descriptors.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ USB描述符的枚举。
 INTERFACE = 0
 ```
 
-接口描述符。
+Interface descriptor.
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ INTERFACE = 0
 DEVICE = 1
 ```
 
-设备描述符。
+Device descriptor.
 
 **Since:** 14
 

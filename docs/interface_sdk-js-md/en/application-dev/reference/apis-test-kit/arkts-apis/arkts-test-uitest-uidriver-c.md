@@ -1,10 +1,6 @@
 # UiDriver
 
-UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
+The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**.
 
 **Since:** 8
 
@@ -30,12 +26,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 assertComponentExist(by: By): Promise<void>
 ```
 
-断言API，用于断言当前界面存在满足给出的目标控件属性的控件；如果控件不存在，该API将抛出JS异常，使当前测试用例失败。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertcomponentexist)替
-> 代。
+Asserts that a component that matches the given attributes exists on the current page. If the component does not exist, the API throws a JS exception, causing the current test case to fail. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -53,21 +44,21 @@ assertComponentExist(by: By): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000003 | if the assertion failed. |
-| 401 | if the input parameters are invalid. |
-| 17000002 | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -87,11 +78,7 @@ async function demo() {
 click(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
+Clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -109,14 +96,14 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -136,11 +123,12 @@ async function demo() {
 static create(): UiDriver
 ```
 
-静态方法，构造一个UiDriver对象，并返回该对象。
+Creates a **UiDriver** object and returns the object created. This API is a static API.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create)替代。
+> This method is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
 
 **Since:** 8
 
@@ -158,7 +146,7 @@ static create(): UiDriver
 
 | Type | Description |
 | --- | --- |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) | 返回构造的UiDriver对象。 |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | UiDriver** object created. |
 
 ## Examples
 
@@ -177,11 +165,7 @@ async function demo() {
 delayMs(duration: number): Promise<void>
 ```
 
-UiDriver对象在给定的时间内延时。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
+Delays a duration of time. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -199,13 +183,13 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | 给定的时间。 |
+| duration | number | Yes | Specified time, in ms. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -225,11 +209,7 @@ async function demo() {
 doubleClick(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
+Double-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -247,14 +227,14 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -274,11 +254,7 @@ async function demo() {
 findComponent(by: By): Promise<UiComponent>
 ```
 
-在UiDriver对象中，根据给出的目标控件属性要求查找目标控件。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
+Searches this **UiDriver** object for the target component that matches the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -296,13 +272,13 @@ findComponent(by: By): Promise<UiComponent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiComponent&gt; | Promise对象，返回控件对象。 |
+| Promise&lt;UiComponent&gt; | Promise used to return the component. |
 
 ## Examples
 
@@ -322,11 +298,7 @@ async function demo() {
 findComponents(by: By): Promise<Array<UiComponent>>
 ```
 
-在UiDriver对象中，根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
+Searches this **UiDriver** object for all components that match the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -344,13 +316,13 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UiComponent&gt;&gt; | Promise对象，返回控件对象的列表。 |
+| Promise&lt;Array&lt;UiComponent&gt;&gt; | Promise used to return the list of components. |
 
 ## Examples
 
@@ -370,11 +342,7 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
+Long-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -392,14 +360,14 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| x | number | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
+| y | number | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -419,11 +387,7 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressback)替代。
+Presses the Back button on this **UiDriver** object. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -441,7 +405,7 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -461,11 +425,7 @@ async function demo() {
 screenCap(savePath: string): Promise<boolean>
 ```
 
-UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
+Captures the current screen of this **UiDriver** object and saves it as a PNG image to the given save path. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -483,13 +443,13 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savePath | string | Yes | 文件保存路径。 |
+| savePath | string | Yes | File save path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the screenshot operation is successful. The value **true* The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -509,11 +469,7 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目的坐标点。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[swipe&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#swipe)替代。
+Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API  uses a promise to return the result.
 
 **Since:** 8
 
@@ -531,16 +487,16 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | number | Yes | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
-| starty | number | Yes | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
-| endx | number | Yes | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
-| endy | number | Yes | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| startx | number | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| starty | number | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| endx | number | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
+| endy | number | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -560,11 +516,7 @@ async function demo() {
 triggerKey(keyCode: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：通过key值找到对应键并点击。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
+Triggers a key event by passing the key code value. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -582,19 +534,19 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
 ```TypeScript
 // xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
+import { Driver, UiDriver } from '@kit.TestKit';
 import { KeyCode } from '@kit.InputKit';
 
 async function demo() {

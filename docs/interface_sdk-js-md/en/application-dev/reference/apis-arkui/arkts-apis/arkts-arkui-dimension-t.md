@@ -4,7 +4,7 @@
 declare type Dimension = PX | VP | FP | LPX | Percentage | Resource
 ```
 
-定义具有数值和单位（vp|px|fp|lpx|%）以及资源的尺寸属性。
+Defines the dimension property with number with units(vp|px|fp|lpx|%), and resource.
 
 **Since:** 23
 

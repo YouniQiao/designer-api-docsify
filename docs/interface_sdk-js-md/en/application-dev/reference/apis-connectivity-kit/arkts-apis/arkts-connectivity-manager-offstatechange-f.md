@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function offStateChange(callback?: Callback<NearlinkState>): void
 ```
 
-取消订阅状态变更事件。
+Unsubscribes from state change events.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function offStateChange(callback?: Callback<NearlinkState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NearlinkState&gt; | No | 用于监听状态改变事件的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NearlinkState&gt; | No | Callback used to listen for the state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

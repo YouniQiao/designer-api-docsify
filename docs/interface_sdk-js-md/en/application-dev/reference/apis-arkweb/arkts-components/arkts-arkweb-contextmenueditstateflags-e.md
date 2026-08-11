@@ -1,6 +1,7 @@
 # ContextMenuEditStateFlags
 
-支持以按位或的方式使用此枚举。例如，如果需要同时支持CAN_CUT、CAN_COPY和CAN_SELECT_ALL，可使用CAN_CUT | CAN_COPY | CAN_SELECT_ALL或11。
+Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support  
+**CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL**.
 
 **Since:** 9
 
@@ -16,7 +17,7 @@
 NONE = 0
 ```
 
-不可编辑。
+Editing is not allowed.
 
 **Since:** 9
 
@@ -34,7 +35,7 @@ NONE = 0
 CAN_CUT = 1 << 0
 ```
 
-支持剪切。
+Cutting is supported.
 
 **Since:** 9
 
@@ -52,7 +53,7 @@ CAN_CUT = 1 << 0
 CAN_COPY = 1 << 1
 ```
 
-支持拷贝。
+Copying is supported.
 
 **Since:** 9
 
@@ -70,7 +71,7 @@ CAN_COPY = 1 << 1
 CAN_PASTE = 1 << 2
 ```
 
-支持粘贴。
+Pasting is supported.
 
 **Since:** 9
 
@@ -88,7 +89,7 @@ CAN_PASTE = 1 << 2
 CAN_SELECT_ALL = 1 << 3
 ```
 
-支持全选。
+Selecting all is supported.
 
 **Since:** 9
 

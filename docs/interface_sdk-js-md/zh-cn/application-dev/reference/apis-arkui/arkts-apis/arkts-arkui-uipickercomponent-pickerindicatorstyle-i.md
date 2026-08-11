@@ -192,7 +192,7 @@ type: PickerIndicatorType
 
 当type的值为小数时，使用向下取整后的整数；当type的值不在PickerIndicatorType枚举范围内时，使用默认值。
 
-**类型：** [PickerIndicatorType](arkts-arkui-uipickercomponent-pickerindicatortype-e.md)
+**类型：** [PickerIndicatorType](../arkts-components/arkts-arkui-pickerindicatortype-e.md)
 
 **起始版本：** 23
 

@@ -13,12 +13,6 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
  > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
 
-## 导入模块
-
-```TypeScript
-import { LightWeightMap } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

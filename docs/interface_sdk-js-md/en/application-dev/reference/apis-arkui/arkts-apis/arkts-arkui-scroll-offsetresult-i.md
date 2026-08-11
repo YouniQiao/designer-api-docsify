@@ -1,6 +1,6 @@
 # OffsetResult
 
-滑动偏移量对象。
+Represents the offset values resulting from a scroll operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 xOffset: double
 ```
 
-水平滑动偏移。
+Horizontal scrolling offset.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ xOffset: double
 yOffset: double
 ```
 
-竖直滑动偏移。
+Vertical scrolling offset.
 
 **Type:** double
 

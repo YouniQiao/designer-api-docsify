@@ -1,10 +1,12 @@
 # WaterFlowSections
 
-瀑布流分组信息。
+Describes the water flow item sections.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用splice、push、update修改分组信息后需要保证所有分组子组件总数与瀑布流实际子组件总数一致，否则会出现瀑布流因为不能正常布局而无法滑动的问题。
+> After the section information is modified using **splice**, **push**, and **update**, ensure that the total number
+> of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any
+> failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
 
 **Since:** 12
 
@@ -20,7 +22,7 @@
 constructor()
 ```
 
-创建一个瀑布流分组。
+A constructor used to create a **WaterFlowSections** object.
 
 **Since:** 12
 
@@ -40,7 +42,7 @@ constructor()
 length(): number
 ```
 
-获取瀑布流中分组数量。
+Obtains the number of sections in the **WaterFlow** component.
 
 **Since:** 12
 
@@ -58,7 +60,7 @@ length(): number
 
 | Type | Description |
 | --- | --- |
-| number | 瀑布流中分组数量。 |
+| number | Number of sections in the **WaterFlow** component. |
 
 ## push
 
@@ -66,7 +68,7 @@ length(): number
 push(section: SectionOptions): boolean
 ```
 
-将指定分组添加到瀑布流末尾。
+Adds the specified sections to the end of the **WaterFlow** component.
 
 **Since:** 12
 
@@ -84,13 +86,13 @@ push(section: SectionOptions): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| section | [SectionOptions](../arkts-apis/arkts-arkui-waterflow-sectionoptions-c.md) | Yes | 添加到瀑布流末尾的分组，包含该分组的FlowItem数量、列数/行数、间距、外边距和主轴大小回调等配置信息。 |
+| section | [SectionOptions](../arkts-apis/arkts-arkui-waterflow-sectionoptions-c.md) | Yes | Sections to add to the end of the **WaterFlow** component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 分组添加成功返回true，添加失败（新分组的itemsCount不是非负数）返回false。 |
+| boolean | Returns **true** if the section is successfully added; returns **false** if the addition fails (**itemsCount** of the new section is not a non-negative number). |
 
 ## splice
 
@@ -98,7 +100,7 @@ push(section: SectionOptions): boolean
 splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): boolean
 ```
 
-移除或者替换已存在的分组和/或添加新分组。
+Changes sections by removing or replacing an existing section and/or adding a section.
 
 **Since:** 12
 
@@ -116,15 +118,15 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 从0开始计算的索引，会转换为整数，表示要开始改变分组的位置。&lt;br/&gt;**说明：** &lt;br/&gt;1. 如果索引是负数，则从末尾开始计算，使用 `start + WaterFlowSections.length()`。&lt;br/&gt;2. 如果 `start &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果 `start &gt;&lt;br/&gt;3. 如果 `start >= WaterFlowSections.length()`，则在最后添加新分组。 |
-| deleteCount | number | No | 表示要从start开始删除的分组数量。&lt;br/&gt;**说明：** &lt;br/&gt;1. 如果省略了deleteCount，或者其值大于或等于由start指定的位置到 WaterFlowSections末尾的分组数量，那么从start到WaterFlowSections末尾的所有分组将被删除。&lt;br/&gt;2. 如果deleteCount是0或者负数，则不会删除任何分组。 |
-| sections | Array&lt;SectionOptions&gt; | No | 表示要从start开始加入的分组。如果不指定，`splice()`将只从瀑布流中删除分组。 |
+| start | number | Yes | Zero-based index at which the changing starts. The value is converted to an integer.&lt;br&gt; **NOTE：**&lt;br&gt;1. A negative index counts back from the end of the section list. **start + WaterFlowSections.length()** is used.&lt;br&gt;2. If **start** &lt; -**WaterFlowSections.length()**, **0** is used.<br>3. If **start** &gt;&lt;br&gt;3. If **start** >= **WaterFlowSections.length()**, a new section is added at the end. |
+| deleteCount | number | No | Number of sections to be deleted from the position specified by **start**.&lt;br&gt; **NOTE：**&lt;br&gt;1. If **deleteCount** is omitted, or if its value is greater than or equal to the number of sections from the position specified by **start** to the end of the **WaterFlowSections**, then all sections from the position specified by **start** to the end of the **WaterFlowSections** will be deleted.&lt;br&gt;2. If **deleteCount** is **0** or a negative number, no sections are deleted. |
+| sections | Array&lt;SectionOptions&gt; | No | Sections to add to the section list, beginning from the position specified by **start**. If no section is specified, **splice()** will only delete sections from the **WaterFlow** component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 分组修改成功返回true；修改失败（要加入的分组中有任意分组的itemsCount不是非负数）返回false。 |
+| boolean | Returns **true** if the sections are successfully modified and returns **false** if the modification fails (**itemsCount** of any section to be added is not a non-negative number). |
 
 ## update
 
@@ -132,7 +134,7 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 update(sectionIndex:number, section: SectionOptions): boolean
 ```
 
-修改指定索引分组的配置信息。
+Updates the configuration of a specified water flow item section.
 
 **Since:** 12
 
@@ -150,14 +152,14 @@ update(sectionIndex:number, section: SectionOptions): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sectionIndex | number | Yes | 从0开始计算的索引，会转换为整数，表示要修改的分组的位置。&lt;br/&gt;**说明：** &lt;br/&gt;1. 如果索引是负数，则从末尾开始计算，使用 `sectionIndex + WaterFlowSections.length()`。&lt;br/&gt;2. 如果`sectionIndex &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果`sectionIndex &gt;&lt;br/&gt;3. 如果`sectionIndex >= WaterFlowSections.length()`，则在最后添加新分组。 |
-| section | [SectionOptions](../arkts-apis/arkts-arkui-waterflow-sectionoptions-c.md) | Yes | 新的分组信息，用于替换指定索引位置的FlowItem分组配置，包括FlowItem数量、列数/行数、间距、外边距和主轴大小回调等。 |
+| sectionIndex | number | Yes | Zero-based index of the water flow item section to update. The value is converted to an integer.&lt;br&gt;**NOTE：**&lt;br&gt;1. A negative index counts back from the end of the section list. **sectionIndex + WaterFlowSections.length()** is used.&lt;br&gt;2. If **sectionIndex** &lt; - **WaterFlowSections.length()**, **0** is used.<br>3. If **sectionIndex** &gt;&lt;br&gt;3. If **sectionIndex** >= **WaterFlowSections.length()**, a new section is added at the end. |
+| section | [SectionOptions](../arkts-apis/arkts-arkui-waterflow-sectionoptions-c.md) | Yes | New section configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 分组是否更新成功。分组更新成功返回true，更新失败（新分组的itemsCount不是非负数）返回false。 |
+| boolean | Returns whether the update is successful. If the value of **itemsCount** in any section to add is not a non-negative integer, **false** is returned. |
 
 ## values
 
@@ -165,7 +167,7 @@ update(sectionIndex:number, section: SectionOptions): boolean
 values(): Array<SectionOptions>
 ```
 
-获取瀑布流中所有分组配置信息。
+Obtains the configuration of all sections in the **WaterFlow** component.
 
 **Since:** 12
 
@@ -183,5 +185,5 @@ values(): Array<SectionOptions>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SectionOptions&gt; | 瀑布流中所有分组配置信息。 |
+| Array&lt;SectionOptions&gt; | Configuration of all sections in the **WaterFlow** component. |
 

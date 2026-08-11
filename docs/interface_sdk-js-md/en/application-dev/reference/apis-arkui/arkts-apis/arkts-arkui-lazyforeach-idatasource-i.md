@@ -1,6 +1,6 @@
 # IDataSource
 
-LazyForEach的数据源。ArkTS-Sta中IDataSource强制要求声明`&lt;T&gt;`类型。
+Developers need to implement this interface to provide data to LazyForEach component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ LazyForEach的数据源。ArkTS-Sta中IDataSource强制要求声明`&lt;T&gt;`�
 getData(index: int): T
 ```
 
-获取索引值index对应的数据。
+Return the data of index.
 
 **Since:** 23
 
@@ -25,6 +25,8 @@ getData(index: int): T
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IDataSource-getData(index: int): T--><!--Device-IDataSource-getData(index: int): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -36,7 +38,7 @@ getData(index: int): T
 
 | Type | Description |
 | --- | --- |
-| T | 获取索引值index对应的数据，由数据源决定具体类型。 |
+| T |  |
 
 ## registerDataChangeListener
 
@@ -44,7 +46,7 @@ getData(index: int): T
 registerDataChangeListener(listener: DataChangeListener): void
 ```
 
-注册数据改变的监听器。
+Register data change listener.
 
 **Since:** 23
 
@@ -68,7 +70,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 totalCount(): int
 ```
 
-获得数据总数。
+Total data count.
 
 **Since:** 23
 
@@ -78,11 +80,13 @@ totalCount(): int
 
 <!--Device-IDataSource-totalCount(): int--><!--Device-IDataSource-totalCount(): int-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 获得数据总数，由数据源决定实际大小。 |
+| int |  |
 
 ## unregisterDataChangeListener
 
@@ -90,7 +94,7 @@ totalCount(): int
 unregisterDataChangeListener(listener: DataChangeListener): void
 ```
 
-注销数据改变的监听器。
+Unregister data change listener.
 
 **Since:** 23
 

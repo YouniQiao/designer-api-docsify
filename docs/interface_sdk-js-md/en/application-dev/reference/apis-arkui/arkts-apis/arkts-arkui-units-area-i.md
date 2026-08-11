@@ -1,6 +1,6 @@
 # Area
 
-区域类型，用于存储元素所占的区域信息。
+Defines the area property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 globalPosition: Position
 ```
 
-目标元素左上角在当前窗口坐标系中的位置。
+Defines the global position.
 
 **Type:** [Position](arkts-arkui-display-position-i.md)
 
@@ -36,9 +36,7 @@ globalPosition: Position
 height: Length
 ```
 
-目标元素的高度。
-
-单位：vp
+Defines the height property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -58,7 +56,7 @@ height: Length
 position: Position
 ```
 
-目标元素左上角在以父元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的位置。
+Defines the local position.
 
 **Type:** [Position](arkts-arkui-display-position-i.md)
 
@@ -78,9 +76,7 @@ position: Position
 width: Length
 ```
 
-目标元素的宽度。
-
-单位：vp
+Defines the width property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

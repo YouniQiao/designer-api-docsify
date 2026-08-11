@@ -1,6 +1,6 @@
 # NotificationCheckRequest (System API)
 
-描述通知的鉴权信息。
+Describes the notification authentication information.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 contentType: notificationManager.ContentType
 ```
 
-通知类型。
+Notification type.
 
 **Type:** notificationManager.ContentType
 
@@ -38,7 +38,7 @@ contentType: notificationManager.ContentType
 extraInfoKeys: Array<string>
 ```
 
-实况通知的附加信息。
+Extra information about the live view.
 
 **Type:** Array&lt;string&gt;
 
@@ -58,7 +58,7 @@ extraInfoKeys: Array<string>
 slotType: notificationManager.SlotType
 ```
 
-渠道类型。
+Notification slot type.
 
 **Type:** notificationManager.SlotType
 

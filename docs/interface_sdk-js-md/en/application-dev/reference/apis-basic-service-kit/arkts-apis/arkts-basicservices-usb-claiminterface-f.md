@@ -12,9 +12,10 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number
 ```
 
-注册通信接口。
+Claims a USB interface.
 
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限；调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice)接口得到devicepipe作为参数。
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and USB interfaces,call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call  
+[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
@@ -32,15 +33,15 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址。 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要获取接口的索引。 |
-| force | boolean | No | 可选参数，是否强制获取。默认值为false?，表示不强制获取。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to claim. |
+| force | boolean | No | Whether to forcibly claim the USB interface. The default value is **false**, indicating not to forcibly claim the USB interface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 注册通信接口成功返回0；注册通信接口失败返回其他错误码。 |
+| number | Returns **0** if the USB interface is successfully claimed; returns an error code otherwise. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # TextAlign
 
-Alignment of text.
+The horizontal alignment of the text paragraph.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ Alignment of text.
 ## Center
 
 ```TypeScript
-Center = 0
+Center
 ```
 
-Center the text.
+Horizontally centered.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ Center the text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-Center = 0--><!--Device-TextAlign-Center = 0-End-->
+<!--Device-TextAlign-Center--><!--Device-TextAlign-Center-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
 
 ```TypeScript
-Start = 1
+Start
 ```
 
-The text is aligned in the same direction as the writing
+Aligned with the start.
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ The text is aligned in the same direction as the writing
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-Start = 1--><!--Device-TextAlign-Start = 1-End-->
+<!--Device-TextAlign-Start--><!--Device-TextAlign-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
 
 ```TypeScript
-End = 2
+End
 ```
 
-The text is aligned in the opposite direction of writing
+Aligned with the end.
 
 **Since:** 7
 
@@ -66,17 +66,17 @@ The text is aligned in the opposite direction of writing
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextAlign-End = 2--><!--Device-TextAlign-End = 2-End-->
+<!--Device-TextAlign-End--><!--Device-TextAlign-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## JUSTIFY
 
 ```TypeScript
-JUSTIFY = 3
+JUSTIFY
 ```
 
-Justify the text.
+Aligned with both margins.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Justify the text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-TextAlign-JUSTIFY = 3--><!--Device-TextAlign-JUSTIFY = 3-End-->
+<!--Device-TextAlign-JUSTIFY--><!--Device-TextAlign-JUSTIFY-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +98,7 @@ Justify the text.
 LEFT = 4
 ```
 
-文本在左侧对齐。
+The text is aligned in the left direction.
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ LEFT = 4
 RIGHT = 5
 ```
 
-文本在右侧对齐。
+The text is aligned in the right direction.
 
 **Since:** 23
 

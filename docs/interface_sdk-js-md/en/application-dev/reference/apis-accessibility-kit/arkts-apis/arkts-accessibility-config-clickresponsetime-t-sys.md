@@ -4,7 +4,7 @@
 type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 ```
 
-用于不同时间长短的点击重复时间。
+Defines the length of time for a click.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 | Type | Description |
 | --- | --- |
-| 'Short' | 表示短 (默认)。 |
-| 'Medium' | 表示中。 |
-| 'Long' | 表示长。 |
+| 'Short' | Short (default). |
+| 'Medium' | Medium. |
+| 'Long' | Long. |
 

@@ -12,12 +12,6 @@ Absolute euler angles relative to the home position.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## pitch
 
 ```TypeScript

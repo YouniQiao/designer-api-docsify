@@ -1,6 +1,6 @@
 # SetOsAccountTypeOptions (System API)
 
-设置系统账号类型的选项。
+Defines the options for setting the OS account type.
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 token?: Uint8Array
 ```
 
-表示从认证管理接口获取的token，默认为空。
+Token obtained from the authentication management API. The value is left empty by default.
 
 **Type:** Uint8Array
 

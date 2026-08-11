@@ -1,11 +1,5 @@
 # showDialog
 
-## 导入模块
-
-```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
-```
-
 ## showDialog
 
 ```TypeScript

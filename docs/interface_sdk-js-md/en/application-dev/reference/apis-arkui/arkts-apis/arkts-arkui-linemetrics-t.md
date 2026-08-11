@@ -4,7 +4,7 @@
 declare type LineMetrics = import('../api/@ohos.graphics.text').default.LineMetrics
 ```
 
-用于描述文本布局中单行文字的度量信息。
+Describes the measurement information of a single line in the text layout.
 
 **Since:** 12
 

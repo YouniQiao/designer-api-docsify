@@ -1,6 +1,6 @@
 # BoidsSimGravityParameters (System API)
 
-Boids模拟引力场参数。
+Boids simulation gravity field parameters.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Boids模拟引力场参数。
 accelerationMag?: double
 ```
 
-施加于boid、方向指向实体的吸引加速度大小。取值范围：[0, +∞)。默认值：0.0
+Magnitude of gravitational acceleration applied toward the entity. Range: [0, +inf). Default: 0.0If a value exceeding the valid range is assigned, it will be clamped.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ accelerationMag?: double
 radius?: double
 ```
 
-作用半径。实体在此距离范围内的boid会受到吸引（边界处力为零）。取值范围：[0, +∞)。默认值：0.0
+Radius of influence. Boids strictly within this distance from the entity are attracted(force is zero at the boundary). Range: [0, +inf). Default: 0.0If a value exceeding the valid range is assigned, it will be clamped.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

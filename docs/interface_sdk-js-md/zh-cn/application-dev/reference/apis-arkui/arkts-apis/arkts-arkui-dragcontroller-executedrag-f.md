@@ -1,11 +1,5 @@
 # executeDrag
 
-## 导入模块
-
-```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
-```
-
 ## executeDrag
 
 ```TypeScript
@@ -35,7 +29,7 @@ Execute a drag event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| DragItemInfo | 是 | Object used for prompts displayed when the object is dragged. |
+| custom | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo | 是 | Object used for prompts displayed when the object is dragged. |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | Information about the drag event. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DragEventParam&gt; | 是 | Callback that contains the drag event information. |
 
@@ -43,8 +37,8 @@ Execute a drag event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -65,9 +59,9 @@ struct DragControllerPage {
   @State text: string = ''
 
   @Builder
-  draggingBuilder() {
+  DraggingBuilder() {
     Column() {
-      Text('DraggingBuilder')
+      Text("DraggingBuilder")
         .fontColor(Color.White)
         .fontSize(12)
     }
@@ -83,7 +77,7 @@ struct DragControllerPage {
         .onTouch((event?: TouchEvent) => {
           if (event) {
             if (event.type == TouchType.Down) {
-              let text = new unifiedDataChannel.PlainText();
+              let text = new unifiedDataChannel.PlainText()
               text.textContent = 'drag text'
               text.abstract = 'abstract'
               let unifiedData = new unifiedDataChannel.UnifiedData(text)
@@ -162,7 +156,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| DragItemInfo | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| custom | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -176,8 +170,8 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 

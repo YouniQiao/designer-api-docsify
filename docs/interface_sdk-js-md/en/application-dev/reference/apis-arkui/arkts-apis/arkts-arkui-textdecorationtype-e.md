@@ -1,6 +1,6 @@
 # TextDecorationType
 
-Type of text modifier.
+Text decoration type.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ Type of text modifier.
 ## None
 
 ```TypeScript
-None = 0
+None
 ```
 
-Do not use text decorative lines.
+No text decorations.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ Do not use text decorative lines.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextDecorationType-None = 0--><!--Device-TextDecorationType-None = 0-End-->
+<!--Device-TextDecorationType-None--><!--Device-TextDecorationType-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Underline
 
 ```TypeScript
-Underline = 1
+Underline
 ```
 
-Underline the words.
+Line below the text.
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ Underline the words.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextDecorationType-Underline = 1--><!--Device-TextDecorationType-Underline = 1-End-->
+<!--Device-TextDecorationType-Underline--><!--Device-TextDecorationType-Underline-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Overline
 
 ```TypeScript
-Overline = 2
+Overline
 ```
 
-Text is in all uppercase.
+Line above the text.
 
 **Since:** 7
 
@@ -66,17 +66,17 @@ Text is in all uppercase.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextDecorationType-Overline = 2--><!--Device-TextDecorationType-Overline = 2-End-->
+<!--Device-TextDecorationType-Overline--><!--Device-TextDecorationType-Overline-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LineThrough
 
 ```TypeScript
-LineThrough = 3
+LineThrough
 ```
 
-A modifier line that passes through the text.
+Line through the text.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ A modifier line that passes through the text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextDecorationType-LineThrough = 3--><!--Device-TextDecorationType-LineThrough = 3-End-->
+<!--Device-TextDecorationType-LineThrough--><!--Device-TextDecorationType-LineThrough-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

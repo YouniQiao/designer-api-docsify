@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## create
 
 ```TypeScript

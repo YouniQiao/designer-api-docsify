@@ -1,6 +1,6 @@
 # HuksCryptoExtensionCertInfo
 
-[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)中的certs数组中的元素。
+Represents the information of certificate.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoE
 cert: Uint8Array
 ```
 
-证书。
+The content of the certificate.
 
 **Type:** Uint8Array
 
@@ -40,7 +40,7 @@ cert: Uint8Array
 purpose: certificateManager.CertificatePurpose
 ```
 
-表示证书链对应密钥的使用类型。
+The type of the certificate, sign or encrypt.
 
 **Type:** certificateManager.CertificatePurpose
 
@@ -58,7 +58,7 @@ purpose: certificateManager.CertificatePurpose
 resourceId: string
 ```
 
-资源ID。JSON格式，能够映射到Ukey中的某个资源。
+The resource index of the certificate.
 
 **Type:** string
 

@@ -1,5 +1,10 @@
 # DownloadRequestOptions
 
+> **NOTE：**
+> 
+> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
+> [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -24,7 +29,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when API call is complete.
 
 **Since:** 3
 

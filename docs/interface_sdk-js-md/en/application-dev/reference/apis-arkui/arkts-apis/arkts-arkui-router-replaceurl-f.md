@@ -12,19 +12,14 @@ import { router } from 'kits/@kit.ArkUI';
 function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
+Replaces the current page with another one in the application and destroys the current page.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)
-> 替代。replaceUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 9
 
@@ -44,22 +39,20 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 替换页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异常响应回调。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The UI execution context is not found. This error code is thrown only in the standard system. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 200002 | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 class RouterParams {
   data1: string;
 
@@ -73,7 +66,7 @@ router.replaceUrl({
   params: new RouterParams('message')
 }, (err) => {
   if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+    console.error(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
     return;
   }
   console.info('replaceUrl success');
@@ -87,19 +80,15 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions): Promise<void>
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。
+Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the  
+[Navigation](../../../ui/arkts-navigation-architecture.md) component.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)替代。replaceUrl需先通过
-> [UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 9
 
@@ -119,27 +108,25 @@ function replaceUrl(options: RouterOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 替换页面描述信息。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The UI execution context is not found. This error code is thrown only in the standard system. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 200002 | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 import { BusinessError } from '@kit.BasicServicesKit';
 
 class RouterParams {
@@ -155,10 +142,10 @@ router.replaceUrl({
   params: new RouterParams('message')
 })
   .then(() => {
-    console.info(`replaceUrl finish`);
+    console.error(`replaceUrl finish`);
   })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  .catch((err: ESObject) => {
+    console.error(`replaceUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
   })
 ```
 
@@ -169,19 +156,14 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
+Replaces the current page with another one in the application and destroys the current page.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)
-> 替代。replaceUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 9
 
@@ -201,23 +183,21 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 替换页面描述信息。 |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | 替换页面使用的模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异常响应回调。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The UI execution context is not found. This error code is thrown only in the standard system. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 200002 | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 class RouterParams {
   data1: string;
 
@@ -231,7 +211,7 @@ router.replaceUrl({
   params: new RouterParams('message')
 }, router.RouterMode.Standard, (err) => {
   if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+    console.error(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
     return;
   }
   console.info('replaceUrl success');
@@ -245,19 +225,14 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
+Replaces the current page with another one in the application and destroys the current page.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)
-> 替代。replaceUrl需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 9
 
@@ -277,34 +252,32 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 替换页面描述信息。 |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | 跳转页面使用的模式。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Failed to get the delegate. This error code is thrown only in the standard system. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 200002 | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 import { BusinessError } from '@kit.BasicServicesKit';
 
 class RouterParams {
-  data1: string;
+  data1:string;
 
-  constructor(str: string) {
+  constructor(str:string) {
     this.data1 = str;
   }
 }
@@ -314,10 +287,10 @@ router.replaceUrl({
   params: new RouterParams('message')
 }, router.RouterMode.Standard)
   .then(() => {
-    console.info(`replaceUrl finish`);
+    console.error(`replaceUrl finish`);
   })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  .catch((err: ESObject) => {
+    console.error(`replaceUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
   })
 ```
 

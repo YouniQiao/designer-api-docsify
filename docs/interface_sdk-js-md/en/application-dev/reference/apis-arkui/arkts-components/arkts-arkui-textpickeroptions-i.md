@@ -1,6 +1,6 @@
 # TextPickerOptions
 
-文本选择器的参数说明。
+Defines the configuration options of the text picker.
 
 **Since:** 8
 
@@ -16,17 +16,13 @@
 columnWidths?: LengthMetrics[]
 ```
 
-设置每一列的列宽。
+Custom widths for each column.
 
-> 默认值：每一列的列宽相等，为组件宽度除以列数。
+Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.
 
-> **说明：**
-> 
-> 1. 当文本长度大于列宽时，文本被截断。
-> 2. 当设置为异常值时，使用默认值。
-> 3. 支持设置为Undefined和Null，不支持Undefined[]和Null[]。
-> 4. 当columnWidths数组长度与实际列数不匹配时，超出列数的列宽值将被忽略；未指定列宽的列将均分组件剩余可用宽度
-> （组件宽度减去已指定列宽之和）。
+**NOTE：**
+
+1. Text truncation occurs when content exceeds column width.2. Invalid values are treated as the default value.3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]** or **Null[]**.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)[]
 
@@ -50,15 +46,11 @@ columnWidths?: LengthMetrics[]
 range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
-选择器的数据选择列表。不可设置为空数组，若设置为空数组，则不显示；若动态变化为空数组，则保持当前正常值显示。
+Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array,no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
 
-> **说明：**
-> 
-> 1. 单列数据选择器使用string[]，[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)，[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]类型。
-> 2. 多列非联动数据选择器使用string[][]类型。
-> 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]类型。
-> 4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。
-> 5. range的类型及列数不可以动态修改。
+**NOTE：**
+
+1. Single-column pickers: string[], [Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md), or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]2. Multi-column independent pickers: string[][]3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories).5. The type and number of columns in the range cannot be dynamically modified.
 
 **Type:** string[] \| string[][] \| Resource \| TextPickerRangeContent[] \| TextCascadePickerRangeContent[]
 
@@ -78,17 +70,14 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 selected?: number | number[]
 ```
 
-设置选中项在数据选择列表中的索引值，索引从0开始。
+Index of the selected item in the data list. The index is zero-based.
 
-> 默认值：0
+Default value: **0**
 
-> **说明：**
-> 
-> 1. 单列数据选择器使用number类型。
-> 2. 多列非联动数据选择器使用number[]类型，数组长度与列数一致。
-> 3. 多列联动数据选择器使用number[]类型，数组长度与层级数一致。
-> 4. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-> 5. 未设置该属性或设置的值无效时，使用默认值。
+**NOTE：**
+
+1. Single-column pickers: number2. Multi-column pickers: number[]3. Since API version 10, this parameter supports two-way binding through  
+ [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number \| number[]
 
@@ -110,19 +99,14 @@ selected?: number | number[]
 value?: ResourceStr | ResourceStr[]
 ```
 
-设置选中项的值，优先级低于selected。
+Value of the selected item. The priority of this parameter is lower than that of **selected**.
 
-默认值：数据选择列表中第一个元素的值。
+Default value: value of the first item in the data list.
 
-> **说明：**
-> 
-> 1. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-> 2. 从API version 20开始，支持[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)类型。
-> 3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
-> 4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)类型。
-> 5. 多列非联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]类型，数组长度与列数一致。
-> 6. 多列联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]类型，数组长度与层级数一致。
-> 7. 当selected和value均未设置，或selected值无效时，使用默认值。
+**NOTE：**
+
+1. Since API version 10, this parameter supports two-way binding through  
+ [\$\$](../../../ui/state-management/arkts-two-way-sync.md).2. The [Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md) type is supported since API version 20.3. This parameter works only when the picker contains text only. It does not work when the picker contains images or mixed content.4. Single-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)5. Multi-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ResourceStr[]
 

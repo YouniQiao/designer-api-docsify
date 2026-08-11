@@ -1,6 +1,6 @@
 # KeyEventData
 
-按键注入描述信息。
+Defines the key event to inject.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 keyEvent: KeyEvent
 ```
 
-按键注入描述信息。
+Key event to inject.
 
 **Type:** [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md)
 

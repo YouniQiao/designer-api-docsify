@@ -6,7 +6,7 @@
 function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallback<Array<MissionInfo>>): void
 ```
 
-获取所有任务信息。使用callback异步回调。
+Obtains information about all missions. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| numMax | number | Yes | 任务信息数量上限。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | 回调函数，返回任务信息数组。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
 function getMissionInfos(deviceId: string, numMax: number): Promise<Array<MissionInfo>>
 ```
 
-获取所有任务信息。使用Promise异步回调。
+Obtains information about all missions. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -76,14 +76,14 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| numMax | number | Yes | 任务信息数量上限。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| numMax | number | Yes | Maximum number of missions whose information can be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise对象，返回任务信息数组。 |
+| Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise used to return the array of mission information obtained. |
 
 ## Examples
 

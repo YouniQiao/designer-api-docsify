@@ -1,8 +1,6 @@
 # DynamicLayoutInterface
 
-动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。
-
-> **说明：**
+Defines the dynamic layout container.
 
 **Since:** 24
 
@@ -24,7 +22,7 @@ import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
 (algorithm: LayoutAlgorithm): DynamicLayoutAttribute
 ```
 
-动态布局容器。
+Defines the dynamic layout container.
 
 **Since:** 24
 
@@ -44,7 +42,7 @@ import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | 指定动态布局组件的布局算法。取非法值时，按照[堆叠布局算法](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md) 布局子组件，子组件堆叠排列。 |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to [StackLayoutAlgorithm](../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm). |
 
 **Return value:**
 

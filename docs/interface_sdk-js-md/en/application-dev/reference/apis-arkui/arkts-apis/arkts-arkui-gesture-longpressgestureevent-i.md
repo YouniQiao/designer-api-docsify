@@ -1,6 +1,6 @@
 # LongPressGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+Defines event info for long press gesture.
 
 **Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
@@ -18,7 +18,7 @@
 repeat: boolean
 ```
 
-是否为重复触发事件。true表示为重复触发事件，false表示非重复触发事件。
+Indicates whether an event is triggered repeatedly.
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # Pkcs12Data
 
-P12（PKCS #12）数据，包含私钥、证书和其他证书。
+P12(PKCS #12) data, which includes private key, certificate, and other certificates.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 cert?: X509Cert
 ```
 
-和私钥匹配的证书。
+The certificate that matches the private key.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
@@ -42,7 +42,7 @@ cert?: X509Cert
 otherCerts?: Array<X509Cert>
 ```
 
-其他证书。
+Other certificates.
 
 **Type:** Array&lt;X509Cert&gt;
 
@@ -62,7 +62,7 @@ otherCerts?: Array<X509Cert>
 privateKey?: string | Uint8Array
 ```
 
-私钥。**string**对应PEM格式，**Uint8Array**对应DER格式。
+Private key. **string** corresponds to PEM format, and **Uint8Array** corresponds to DER format.
 
 **Type:** string \| Uint8Array
 

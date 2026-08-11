@@ -1,6 +1,6 @@
 # SaveDescription
 
-保存控件的文本描述。
+Enumerates the text that can be displayed on the save button.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 DOWNLOAD = 0
 ```
 
-保存控件的文字描述为“下载”。
+Download
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ DOWNLOAD = 0
 DOWNLOAD_FILE = 1
 ```
 
-保存控件的文字描述为“下载文件”。
+Download File
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ DOWNLOAD_FILE = 1
 SAVE = 2
 ```
 
-保存控件的文字描述为“保存”。
+Save
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ SAVE = 2
 SAVE_IMAGE = 3
 ```
 
-保存控件的文字描述为“保存图片”。
+Save Image
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ SAVE_IMAGE = 3
 SAVE_FILE = 4
 ```
 
-保存控件的文字描述为“保存文件”。
+Save File
 
 **Since:** 10
 
@@ -116,7 +116,7 @@ SAVE_FILE = 4
 DOWNLOAD_AND_SHARE = 5
 ```
 
-保存控件的文字描述为“下载分享”。
+Download and Share
 
 **Since:** 10
 
@@ -136,7 +136,7 @@ DOWNLOAD_AND_SHARE = 5
 RECEIVE = 6
 ```
 
-保存控件的文字描述为“接收”。
+Receive
 
 **Since:** 10
 
@@ -156,7 +156,7 @@ RECEIVE = 6
 CONTINUE_TO_RECEIVE = 7
 ```
 
-保存控件的文字描述为“继续接收”。
+Continue to Receive
 
 **Since:** 10
 
@@ -176,7 +176,7 @@ CONTINUE_TO_RECEIVE = 7
 SAVE_TO_GALLERY = 8
 ```
 
-保存控件的文字描述为“保存至图库”。
+Save to gallery
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ SAVE_TO_GALLERY = 8
 EXPORT_TO_GALLERY = 9
 ```
 
-保存控件的文字描述为“导出”。
+Export to gallery
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ EXPORT_TO_GALLERY = 9
 QUICK_SAVE_TO_GALLERY = 10
 ```
 
-保存控件的文字描述为“快速保存图片”。
+Quick save to gallery
 
 **Since:** 12
 
@@ -236,7 +236,7 @@ QUICK_SAVE_TO_GALLERY = 10
 RESAVE_TO_GALLERY = 11
 ```
 
-保存控件的文字描述为“重新保存”。
+Resave to gallery
 
 **Since:** 12
 
@@ -256,7 +256,7 @@ RESAVE_TO_GALLERY = 11
 SAVE_ALL = 12
 ```
 
-保存控件的文字描述为“全部保存”。
+Save all
 
 **Since:** 18
 

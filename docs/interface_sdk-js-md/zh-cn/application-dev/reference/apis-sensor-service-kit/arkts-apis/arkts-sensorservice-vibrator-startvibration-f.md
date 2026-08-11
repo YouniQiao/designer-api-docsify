@@ -1,11 +1,5 @@
 # startVibration
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## startVibration
 
 ```TypeScript
@@ -38,10 +32,10 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported |
-| 201 | Permission denied |
-| 14600101 | Device operation failed |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed |
 
 ## 示例
 
@@ -57,7 +51,7 @@ try {
   vibrator.isSupportEffect('haptic.notice.success', (err: BusinessError, state: boolean) => {
     if (err) {
       console.error(`Failed to query effect. Code: ${err.code}, message: ${err.message}`);
-      return;
+       return;
     }
     console.info('Succeed in querying effect');
     if (state) {
@@ -71,7 +65,7 @@ try {
         }, (error: BusinessError) => {
           if (error) {
             console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-       return;
+      return;
           }
           console.info('Succeed in starting vibration');
 
@@ -204,10 +198,10 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 14600101 | Device operation failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 
@@ -232,16 +226,13 @@ try {
           usage: 'notification' // 根据实际选择类型归属不同的开关管控
         }).then(() => {
           console.info('Succeed in starting vibration');
-        }).catch((error: BusinessError) => {
-          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+
         });
       } catch (err) {
         let e: BusinessError = err as BusinessError;
         console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
       }
     }
-  }, (error: BusinessError) => {
-    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
   })
 } catch (error) {
   let e: BusinessError = error as BusinessError;

@@ -12,7 +12,7 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 ```
 
-查询符合特定APN信息的APN ID。适用于企业移动网络配置审计场景，例如查找特定配置的APN、验证APN配置是否存在、为APN管理操作提供APN ID参数，帮助企业查找和管理APN配置，为APN的更新和删除操作提供必要的参数信息。
+Queries the APN ID. This API is suitable for enterprise mobile network configuration audit scenarios, such as finding APNs with specific configurations, verifying whether an APN configuration exists, and providing APN ID parameters for APN management operations. It helps enterprises locate and manage APN configurations, and supplies the necessary parameter information for updating and deleting APNs.
 
 **Since:** 20
 
@@ -30,22 +30,22 @@ function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | APN的查询条件。设置后系统将根据这些条件筛选匹配的APN配置，返回符合条件的APN ID列表。&lt;br/&gt;- apnName：APN配置的名称 标识符，可选。&lt;br/&gt;- mcc：3位数字的移动国家代码，可选。&lt;br/&gt;- mnc：2-3位数字的移动网络代码，可选。&lt;br/&gt;- apn：接入点名称，可选。&lt;br/&gt;- type：APN的服务类型，可选。&lt;br/&gt;- user：APN身份验证的用户名，可选。&lt;br/&gt;- proxy：普通数据连接的代理服务器地址，可选。&lt;br/&gt;- mmsproxy：彩信服务的专用代理地址，可选。&lt;br/&gt;- authType：APN的认证协议类型，可 选。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | APN information. After the setting, the system filters the APN configurations based on the specified conditions and returns the list of APN IDs that meet the conditions. &lt;br&gt;- **apnName**: APN identifier, which is optional. &lt;br&gt;- **mcc**: 3-digit mobile country code (MCC), which is optional. &lt;br&gt;- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. &lt;br&gt;- **apn**: access point name, which is optional. &lt;br&gt;- **type**: APN service type, which is optional. &lt;br&gt;- **user**: user name for APN authentication, which is optional. &lt;br&gt;- **proxy**: address of the proxy server for a common data connection, which is optional. &lt;br&gt;- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. &lt;br&gt;- **authType**: authentication protocol type of the APN, which is optional. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 满足要求的APN ID。 |
+| Array&lt;string&gt; | APN ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -80,7 +80,7 @@ try {
 function queryApn(admin: Want, apnId: string): Record<string, string>
 ```
 
-查询特定APN的APN参数信息。适用于企业移动网络配置审计场景，例如检查特定APN的配置参数、验证APN配置是否正确、审计移动网络接入点配置，帮助企业审核和验证APN配置，确保移动网络配置符合要求。
+Queries the APN parameter information. This API is suitable for enterprise mobile network configuration audit scenarios, such as checking the configuration parameters of a specific APN, verifying whether the APN configuration is correct, and auditing mobile network access point settings. It helps enterprises review and validate APN configurations to ensure that mobile network settings meet requirements.
 
 **Since:** 20
 
@@ -98,22 +98,22 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnId | string | Yes | 指定的APN ID。设置后将查询该APN ID对应的详细参数配置信息。可以通过 [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn)获取设备信息。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnId | string | Yes | Specified APN ID. After the setting, the system queries the detailed parameter settings corresponding to the APN ID. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | 指定APN ID的APN参数信息。&lt;br/&gt;- apnName：APN配置的名称标识符。&lt;br/&gt;- mcc：3位数字的移动国家代码。&lt;br/&gt;- mnc：2 -3位数字的移动网络代码。&lt;br/&gt;- apn：接入点名称。&lt;br/&gt;- type：APN的服务类型。&lt;br/&gt;- user：APN身份验证的用户名。&lt;br/&gt;- proxy：普通数据连接的代理服务器地址。&lt;br/&gt;- mmsproxy：彩信服务的专用代理地址。&lt;br/&gt;- authType：APN的认证协议类型。 |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | APN parameter information of the specified APN ID. &lt;br&gt;- **apnName**: APN identifier. &lt;br&gt;- **mcc**: 3-digit mobile country code (MCC). &lt;br&gt;- **mnc**: 2-digit or 3-digit mobile network code (MNC). &lt;br&gt;- **apn**: access point name. &lt;br&gt;- **type**: APN service type. &lt;br&gt;- **user**: user name for APN authentication. &lt;br&gt;- **proxy**: address of the proxy server for a common data connection. &lt;br&gt;- **mmsproxy**: dedicated proxy address of the MMS service. &lt;br&gt;- **authType**: authentication protocol type of the APN. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

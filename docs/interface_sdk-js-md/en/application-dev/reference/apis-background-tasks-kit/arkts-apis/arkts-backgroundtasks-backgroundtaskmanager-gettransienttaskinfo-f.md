@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function getTransientTaskInfo(): Promise<TransientTaskInfo>
 ```
 
-获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。
+Obtains all transient task information, including the remaining quota of the current day. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -26,15 +26,15 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TransientTaskInfo&gt; | Promise对象，返回所有短时任务信息。 |
+| Promise&lt;TransientTaskInfo&gt; | Promise that returns all transient task information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9900004 | System service operation failed. |
-| 9900003 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
-| 9900001 | Caller information verification failed for a transient task. |
+| [9900004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900004-system-service-failure) | System service operation failed. |
+| [9900003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # RichEditorResponseType
 
-菜单的响应类型。
+ResponseType for contextMenu
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 RIGHT_CLICK = 0
 ```
 
-通过鼠标右键触发菜单弹出。
+Right click.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ RIGHT_CLICK = 0
 LONG_PRESS = 1
 ```
 
-通过长按触发菜单弹出。
+Long press.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ LONG_PRESS = 1
 SELECT = 2
 ```
 
-通过鼠标选中触发菜单弹出。
+Selected by mouse.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-默认类型，不指定Span类型时生效。
+When no other types are explicitly specified, this type will be matched.
 
 **Since:** 23
 

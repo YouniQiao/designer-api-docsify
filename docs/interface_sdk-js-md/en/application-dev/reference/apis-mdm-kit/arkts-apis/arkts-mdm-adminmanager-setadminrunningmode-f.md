@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function setAdminRunningMode(admin: Want, mode: RunningMode): void
 ```
 
-设置设备管理应用的运行模式。
+Sets the running mode of the device administrator application.
 
 **Since:** 19
 
@@ -30,16 +30,16 @@ function setAdminRunningMode(admin: Want, mode: RunningMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| mode | [RunningMode](arkts-mdm-adminmanager-runningmode-e.md) | Yes | 运行模式。取值为DEFAULT表示默认用户运行模式，即应用在首次开机后的用户下运行。取值为MULTI_USER表示多用户运行模式，即应用能够在多个用户下同时运行。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| mode | [RunningMode](arkts-mdm-adminmanager-runningmode-e.md) | Yes | Running mode. &lt;br&gt;The value **DEFAULT** means the application runs under the default user (user after the first device power- on). The value **MULTI_USER** means the application runs under multiple users at the same time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9200001 | The application is not an administrator application of the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
 ## Examples
 

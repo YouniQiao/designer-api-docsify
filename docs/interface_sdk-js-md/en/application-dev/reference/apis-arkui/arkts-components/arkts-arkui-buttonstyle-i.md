@@ -1,6 +1,6 @@
 # ButtonStyle
 
-设置侧边栏控制按钮的样式。
+Describes the style of the sidebar control button.
 
 **Since:** 8
 
@@ -16,19 +16,17 @@
 height?: number
 ```
 
-设置侧边栏控制按钮的高度。
+Height of the sidebar control button.
 
-默认值：
+Default value:
 
-API version 9及之前版本：32vp
+API version 9 and earlier versions: **32vp**
 
-从API version 10开始：24vp
+API version 10 and later versions: **24vp**
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -48,9 +46,9 @@ API version 9及之前版本：32vp
 icons?: ButtonIconOptions
 ```
 
-设置侧边栏控制按钮的图标。
+Icons of the sidebar control button.
 
-资源获取错误以及未设置该属性时，使用默认图标。
+If the resource fails to be obtained or this attribute is not set, the default icon is used.
 
 **Type:** [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
 
@@ -70,15 +68,13 @@ icons?: ButtonIconOptions
 left?: number
 ```
 
-设置侧边栏控制按钮距离容器左界限的间距。
+Spacing between the sidebar control button and the left of the container.
 
-默认值：16vp
+Default value: **16vp**
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -98,15 +94,13 @@ left?: number
 top?: number
 ```
 
-设置侧边栏控制按钮距离容器上界限的间距。
+Spacing between the sidebar control button and the top of the container.
 
-默认值：48vp
+Default value: **48vp**
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -126,19 +120,17 @@ top?: number
 width?: number
 ```
 
-设置侧边栏控制按钮的宽度。
+Width of the sidebar control button.
 
-默认值：
+Default value:
 
-API version 9及之前版本：32vp
+API version 9 and earlier versions: **32vp**
 
-从API version 10开始：24vp
+API version 10 and later versions: **24vp**
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Value range: [0, +∞).
 
 **Type:** number
 

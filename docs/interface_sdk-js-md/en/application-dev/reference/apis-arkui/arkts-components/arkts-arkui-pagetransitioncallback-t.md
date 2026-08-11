@@ -4,7 +4,7 @@
 declare type PageTransitionCallback = (type: RouteType, progress: number) => void
 ```
 
-页面转场事件回调。
+Represents the callback for page transition events.
 
 **Since:** 18
 

@@ -1,11 +1,5 @@
 # run
 
-## 导入模块
-
-```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## run
 
 ```TypeScript
@@ -47,12 +41,12 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 28800004 | Running startup tasks timeout. |
-| 28800003 | An error occurred while running the startup tasks. |
-| 28800002 | The startup tasks have circular dependencies. |
-| 16000050 | Internal error. |
-| 28800001 | Startup task or its dependency not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
 ## 示例
 
@@ -68,14 +62,15 @@ export default class EntryAbility extends UIAbility {
     try {
       // 手动调用run方法
       startupManager.run(startParams).then(() => {
-        hilog.info(0x0000, 'testTag', 'StartupTest startupManager run then, startParams = %{public}s.', startParams.join(','));
-      }).catch((error: BusinessError) => {
-        hilog.error(0x0000, 'testTag', 'StartupTest promise catch failed, error code: %{public}d, error msg: %{public}s.', error.code, error.message);
+        console.info(`StartupTest startupManager run then, startParams = ${startParams}.`);
+      }).catch((err: Error) => {
+        let error = err as BusinessError;
+        console.error(`StartupTest promise catch failed, error code: ${error.code}, error msg: ${error.message}.`);
       });
     } catch (error) {
       let errMsg = (error as BusinessError).message;
       let errCode = (error as BusinessError).code;
-      hilog.error(0x0000, 'testTag', 'startupManager.run failed, err code: %{public}d, err msg: %{public}s.', errCode, errMsg);
+      console.error(`Startup.run failed, err code: ${errCode}, err msg: ${errMsg}.`);
     }
   }
 
@@ -120,11 +115,11 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 28800004 | Running startup tasks timeout. |
-| 28800003 | An error occurred while running the startup tasks. |
-| 28800002 | The startup tasks have circular dependencies. |
-| 16000050 | Internal error. |
-| 28800001 | Startup task or its dependency not found. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
 ## 示例
 
@@ -155,9 +150,10 @@ export default class MyAbilityStage extends AbilityStage {
       // 手动调用run方法
       startupManager.run(['StartupTask_001', 'libentry_001'], this.context, config).then(() => {
         hilog.info(0x0000, 'testTag', '%{public}s', 'startupManager.run success');
-      }).catch((error: BusinessError) => {
+      }).catch((err: Error) => {
+        let error = err as BusinessError;
         hilog.error(0x0000, 'testTag', `startupManager.run promise catch error code: ${error.code}, error msg: ${error.message}`);
-      });
+      })
     } catch (error) {
       hilog.error(0x0000, 'testTag', `startupManager.run catch error code: ${error.code}, error msg: ${error.message}`);
     }

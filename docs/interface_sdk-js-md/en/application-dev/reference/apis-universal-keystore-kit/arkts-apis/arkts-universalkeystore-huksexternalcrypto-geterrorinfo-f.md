@@ -12,7 +12,7 @@ import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 function getErrorInfo(): HuksExternalErrorInfo
 ```
 
-查询上次接口调用产生的详细错误信息。
+Get the detailed error information.
 
 **Since:** 26.0.0
 
@@ -28,33 +28,5 @@ function getErrorInfo(): HuksExternalErrorInfo
 
 | Type | Description |
 | --- | --- |
-| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | 返回的详细错误信息。 |
-
-## Examples
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const resourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: "testKey"
-});
-
-const params: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
-  {
-    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_UKEY_PIN,
-    value: StringToUint8Array(pin)
-  }
-];
-
-try {
-  await huksExternalCrypto.authUkeyPin(resourceId, params);
-} catch (error) {
-  const errorInfo = huksExternalCrypto.getErrorInfo();
-  console.info(`errno: ${errorInfo.errno}`);
-  console.info(`errorDesc: ${errorInfo.errorDesc}`);
-}
-```
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | The returned error information. |
 

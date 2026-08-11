@@ -1,6 +1,6 @@
 # UpgradeFlag (System API)
 
-仅供内部系统使用标志位
+Upgrade flag, which is for internal use only.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 NOT_UPGRADE = 0
 ```
 
-模块无需升级。
+No module needs an upgrade.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ NOT_UPGRADE = 0
 SINGLE_UPGRADE = 1
 ```
 
-单个模块需要升级。
+A single module needs an upgrade.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ SINGLE_UPGRADE = 1
 RELATION_UPGRADE = 2
 ```
 
-关系模块需要升级。
+The module that has a relationship with the current one needs an upgrade.
 
 **Since:** 9
 

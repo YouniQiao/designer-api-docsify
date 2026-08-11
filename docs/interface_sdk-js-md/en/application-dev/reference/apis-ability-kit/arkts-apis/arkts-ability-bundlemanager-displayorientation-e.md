@@ -1,8 +1,7 @@
 # DisplayOrientation
 
-标识该Ability的显示模式。仅适用于FA模型的[PageAbility](../../../application-models/pageability-overview.md)。
-
-&lt;!--Table: 40%; 10%; 50%--&gt;
+Enumerates the display orientations of the ability. It is applicable only to  
+[PageAbility](../../../application-models/pageability-overview.md) in the FA model.
 
 **Since:** 9
 
@@ -18,7 +17,7 @@
 UNSPECIFIED = 0
 ```
 
-表示未定义方向模式，由系统判定。
+Unspecified. The orientation is determined by the system.
 
 **Since:** 9
 
@@ -36,7 +35,7 @@ UNSPECIFIED = 0
 LANDSCAPE = 1
 ```
 
-表示横屏显示模式。
+Landscape.
 
 **Since:** 9
 
@@ -54,7 +53,7 @@ LANDSCAPE = 1
 PORTRAIT = 2
 ```
 
-表示竖屏显示模式。
+Portrait.
 
 **Since:** 9
 
@@ -72,7 +71,7 @@ PORTRAIT = 2
 FOLLOW_RECENT = 3
 ```
 
-表示跟随上一个显示模式。
+The last display orientation is used.
 
 **Since:** 9
 
@@ -90,7 +89,7 @@ FOLLOW_RECENT = 3
 LANDSCAPE_INVERTED = 4
 ```
 
-表示反向横屏显示模式。
+Reverse landscape.
 
 **Since:** 9
 
@@ -108,7 +107,7 @@ LANDSCAPE_INVERTED = 4
 PORTRAIT_INVERTED = 5
 ```
 
-表示反向竖屏显示模式。
+Reverse portrait.
 
 **Since:** 9
 
@@ -126,7 +125,7 @@ PORTRAIT_INVERTED = 5
 AUTO_ROTATION = 6
 ```
 
-表示传感器在旋转到横向和竖向时，页面会自动旋转。
+Automatically rotates when the sensor changes to landscape or portrait mode.
 
 **Since:** 9
 
@@ -144,7 +143,7 @@ AUTO_ROTATION = 6
 AUTO_ROTATION_LANDSCAPE = 7
 ```
 
-表示传感器在旋转到横向时，页面会自动旋转。
+Automatically rotates when the sensor changes to landscape mode.
 
 **Since:** 9
 
@@ -162,7 +161,7 @@ AUTO_ROTATION_LANDSCAPE = 7
 AUTO_ROTATION_PORTRAIT = 8
 ```
 
-表示传感器在旋转到竖向时，页面会自动旋转。
+Automatically rotates when the sensor changes to portrait mode.
 
 **Since:** 9
 
@@ -180,7 +179,7 @@ AUTO_ROTATION_PORTRAIT = 8
 AUTO_ROTATION_RESTRICTED = 9
 ```
 
-表示受开关控制的自动旋转模式。
+Switched-determined auto rotation.
 
 **Since:** 9
 
@@ -198,7 +197,7 @@ AUTO_ROTATION_RESTRICTED = 9
 AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 ```
 
-表示受开关控制的自动横向旋转模式。
+Switched-determined auto rotation in the horizontal direction.
 
 **Since:** 9
 
@@ -216,7 +215,7 @@ AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 AUTO_ROTATION_PORTRAIT_RESTRICTED = 11
 ```
 
-表示受开关控制的自动竖向旋转模式。
+Switched-determined auto rotation in the vertical direction.
 
 **Since:** 9
 
@@ -234,7 +233,7 @@ AUTO_ROTATION_PORTRAIT_RESTRICTED = 11
 LOCKED = 12
 ```
 
-表示锁定模式。
+Locked.
 
 **Since:** 9
 
@@ -252,7 +251,7 @@ LOCKED = 12
 AUTO_ROTATION_UNSPECIFIED = 13
 ```
 
-受开关控制和由系统判定的自动旋转模式。
+Auto rotation controlled by the switch and determined by the system.
 
 **Since:** 12
 
@@ -270,7 +269,7 @@ AUTO_ROTATION_UNSPECIFIED = 13
 FOLLOW_DESKTOP = 14
 ```
 
-跟随桌面的旋转模式。
+Following the orientation of the home screen.
 
 **Since:** 12
 

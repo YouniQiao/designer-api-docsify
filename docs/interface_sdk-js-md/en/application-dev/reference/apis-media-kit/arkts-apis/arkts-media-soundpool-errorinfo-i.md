@@ -1,6 +1,6 @@
 # ErrorInfo
 
-错误信息。
+Describes the error information.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 errorCode: T
 ```
 
-错误码。errorCode的类型T为[BusinessError](../../../reference/apis-basic-services-kit/js-apis-base.md)类型。
+Error code. The type of **errorCode** is [BusinessError](../../../reference/apis-basic-services-kit/js-apis-base.md).
 
 **Type:** T
 
@@ -34,7 +34,7 @@ errorCode: T
 errorType?: ErrorType
 ```
 
-表示错误发生阶段。
+Stage at which the error occurred.
 
 **Type:** [ErrorType](arkts-media-soundpool-errortype-e.md)
 
@@ -52,7 +52,7 @@ errorType?: ErrorType
 soundId?: int
 ```
 
-发生错误的资源ID，load方法能够获取soundId。
+ID of the resource where the error occurred. It can be obtained by calling **load**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,7 +70,7 @@ soundId?: int
 streamId?: int
 ```
 
-发生错误的音频流ID，play方法能够获取streamId。
+ID of the audio stream where the error occurred. It can be obtained by calling **play**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

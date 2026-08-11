@@ -34,21 +34,6 @@ function openDoubleClickSettingsPage(context: Context): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16900020 | 1. The setting page cannot be opened through redirection. 2. Internal error |
-| 16900010 | 1. The parameter is incorrect. 2. The parameter is not transferred or the transferred parameter is invalid. |
-
-## Examples
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  settings.openDoubleClickSettingsPage(context);
-} catch (err) {
-  console.error(`Failed to open the DoubleClick settings page. code: ${err?.code}, message: ${err?.message}`);
-}
-```
+| [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) | 1. The setting page cannot be opened through redirection. 2. Internal error |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | 1. The parameter is incorrect. 2. The parameter is not transferred or the transferred parameter is invalid. |
 

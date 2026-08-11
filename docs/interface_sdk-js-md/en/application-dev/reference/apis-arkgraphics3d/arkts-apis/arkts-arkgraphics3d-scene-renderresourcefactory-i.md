@@ -1,6 +1,6 @@
 # RenderResourceFactory
 
-渲染资源工厂，用于创建可在共享RenderContext的场景间共享的资源。
+The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 createImage(params: SceneResourceParameters): Promise<Image>
 ```
 
-创建图像.
+Create an image.
 
 **Since:** 20
 
@@ -30,13 +30,13 @@ createImage(params: SceneResourceParameters): Promise<Image>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建图像的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating an image |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | 返回创建的图像 |
+| Promise&lt;[Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | promise an image |
 
 ## createImageStream
 
@@ -44,7 +44,7 @@ createImage(params: SceneResourceParameters): Promise<Image>
 createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 ```
 
-创建图像流.
+Create an image stream.
 
 **Since:** 26.0.0
 
@@ -60,13 +60,13 @@ createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建图像流的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating an image stream |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md)&gt; | 返回创建的图像流 |
+| Promise&lt;[ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md)&gt; | promise an image stream |
 
 ## createMesh
 
@@ -74,7 +74,7 @@ createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>
 ```
 
-从顶点数组创建网格.
+Create a Mesh from an array of vertices.
 
 **Since:** 20
 
@@ -88,14 +88,14 @@ createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建网格对象的参数 |
-| geometry | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Yes | 要创建的几何形状类型 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a Mesh object |
+| geometry | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Yes | what sort of a geometric shape to create |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md)&gt; | 返回创建的网格 |
+| Promise&lt;[MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md)&gt; | promise a Mesh |
 
 ## createSampler
 
@@ -103,7 +103,7 @@ createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promi
 createSampler(params:SceneResourceParameters): Promise<Sampler>
 ```
 
-创建采样器.
+Create a Sampler.
 
 **Since:** 20
 
@@ -117,13 +117,13 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建采样器的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of create a sampler |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)&gt; | 返回创建的采样器 |
+| Promise&lt;[Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)&gt; | promise a sampler |
 
 ## createScene
 
@@ -131,7 +131,7 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 createScene(uri?: ResourceStr): Promise<Scene>
 ```
 
-从指定的资源URI创建一个新的场景。如果不指定URI，则创建一个空场景，使用Promise异步回调。
+Create a new scene from a Resource.If uri is not provided, will return an empty scene.
 
 **Since:** 20
 
@@ -145,13 +145,13 @@ createScene(uri?: ResourceStr): Promise<Scene>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | 创建场景的资源 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | the resource of creating a scene |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Scene&gt; | 返回创建的场景 |
+| Promise&lt;Scene&gt; | promise a scene |
 
 ## createShader
 
@@ -159,7 +159,7 @@ createScene(uri?: ResourceStr): Promise<Scene>
 createShader(params: SceneResourceParameters): Promise<Shader>
 ```
 
-创建着色器.
+Create a shader.
 
 **Since:** 20
 
@@ -173,11 +173,11 @@ createShader(params: SceneResourceParameters): Promise<Shader>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建着色器的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a shader |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)&gt; | 返回创建的着色器 |
+| Promise&lt;[Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)&gt; | promise a shader |
 

@@ -18,7 +18,7 @@ Define LocalStoragePropRef decoration variable interface.
 resetOnReuse(): void
 ```
 
-重置@StoragePropRef变量的源
+Reset source for this @StoragePropRef variable
 
 **Since:** 26.0.0
 

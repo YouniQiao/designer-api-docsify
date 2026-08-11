@@ -1,6 +1,6 @@
 # AuthIntent (System API)
 
-表示认证意图的枚举。
+Enumerates the authentication intents.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 UNLOCK = 1
 ```
 
-解锁意图。
+Unlock.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ UNLOCK = 1
 SILENT_AUTH = 2
 ```
 
-静默认证意图。
+Silent authentication.
 
 **Since:** 14
 
@@ -54,7 +54,7 @@ SILENT_AUTH = 2
 QUESTION_AUTH = 3
 ```
 
-密保问题认证意图。
+Security question authentication.
 
 **Since:** 14
 
@@ -72,7 +72,7 @@ QUESTION_AUTH = 3
 ABANDONED_PIN_AUTH = 4
 ```
 
-废弃PIN码认证意图。用户修改锁屏密码后，旧的PIN码被废弃。废弃PIN存在期间，用户如果忘记密码可以通过废弃PIN认证通过后重置锁屏密码。
+Abandoned PIN authentication. After a user changes the lock screen password, the old PIN is abandoned. If a user forgets the current password, the user can reset the lock screen password after passing the authentication with the abandoned PIN.
 
 **Since:** 20
 

@@ -12,7 +12,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>
 ```
 
-根据CloudService类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudService的实现接口。使用Promise异步回调。
+Creates a RemoteObject instance based on a CloudService instance.The system uses this object to call the APIs of the CloudService instance.This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -28,13 +28,13 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes | CloudService类的实例。 |
+| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes | Instance of the CloudService class. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudService的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ScannerOptionValue
 
-定义扫描仪选项值的接口。
+Defines the scanner option value.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 boolValue?: boolean
 ```
 
-布尔值。
+Value of the Boolean type.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ boolValue?: boolean
 numValue?: int
 ```
 
-数值。
+Value of the number type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ numValue?: int
 strValue?: string
 ```
 
-字符串值。
+Value of the string type.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ strValue?: string
 valueType: OptionValueType
 ```
 
-值类型。
+Value type.
 
 **Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 

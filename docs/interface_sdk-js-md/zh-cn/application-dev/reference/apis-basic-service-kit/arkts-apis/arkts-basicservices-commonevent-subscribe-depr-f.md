@@ -33,7 +33,7 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 import Base from '@ohos.base';
 import CommonEventManager from '@ohos.commonEventManager';
 
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
+let subscriber:CommonEventManager.CommonEventSubscriber;// 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
 
 // 订阅者信息
 let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
@@ -41,27 +41,27 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 订阅公共事件回调
-let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
+function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`subscribe failed, code is ${err.code}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // 创建订阅者回调
-let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`createSubscriber failed, code is ${err.code}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-         // 订阅公共事件
-        commonEvent.subscribe(subscriber, subscribeCallBack);
+        // Subscribe to a common event.
+        commonEvent.subscribe(subscriber, subscribeCB);
     }
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCallBack);
+commonEvent.createSubscriber(subscribeInfo, createCB);
 ```
 

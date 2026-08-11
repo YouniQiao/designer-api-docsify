@@ -12,6 +12,6 @@ The module defines the ability information. An application can obtain its own ab
 
 | Name | Description |
 | --- | --- |
-| [AbilityInfo](arkts-ability-abilityinfo-i.md) | Ability信息。 |
-| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) | 描述窗口尺寸。  **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。 |
+| [AbilityInfo](arkts-ability-abilityinfo-i.md) | The module defines the ability information. |
+| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) | Describes the window size.  **Atomic service API**: This API can be used in atomic services since API version 11. |
 

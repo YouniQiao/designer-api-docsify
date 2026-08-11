@@ -41,7 +41,7 @@ spanRange: [
 
 Span内容在RichEditor内的起始和结束位置。
 
-**类型：** [         int,         int     ]
+**类型：** [         int,         int     ]
 
 **起始版本：** 23
 

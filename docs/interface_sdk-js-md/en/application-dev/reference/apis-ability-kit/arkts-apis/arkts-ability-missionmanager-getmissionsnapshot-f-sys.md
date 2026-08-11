@@ -12,7 +12,7 @@ import { missionManager } from 'kits/@kit.AbilityKit';
 function getMissionSnapShot(deviceId: string, missionId: int, callback: AsyncCallback<MissionSnapshot>): void
 ```
 
-获取任务快照。使用callback异步回调。
+Obtains the snapshot of a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,17 +30,17 @@ function getMissionSnapShot(deviceId: string, missionId: int, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;MissionSnapshot&gt; | Yes | 执行结果回调函数，返回任务快照信息。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -71,7 +71,7 @@ try {
 function getMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>
 ```
 
-获取任务快照。使用Promise异步回调。
+Obtains the snapshot of a given mission. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -89,22 +89,22 @@ function getMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务ID。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionSnapshot&gt; | Promise对象，返回任务快照信息。 |
+| Promise&lt;MissionSnapshot&gt; | Promise used to return the snapshot information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

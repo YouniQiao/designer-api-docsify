@@ -86,7 +86,7 @@ bindSelectionMenu的长按响应时长为600ms，
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | 是 | 选择菜单的类型。 |
+| spanType | [TextSpanType](../arkts-apis/arkts-arkui-text-textspantype-e.md) | 是 | 选择菜单的类型。 |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 选择菜单的内容。 |
 | responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | 是 | 选择菜单的响应类型。 |
 | options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 | 选择菜单的配置选项，用于自定义选择菜单的行为。包含菜单出现、消失、显示、隐藏等回调配置项。 &lt;br&gt;默认值：不设置时，使用系统默认的选择菜单配置。 |

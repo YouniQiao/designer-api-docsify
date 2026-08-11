@@ -1,6 +1,6 @@
 # OsAccountSubProfileEvent (System API)
 
-枚举系统账号子profile的事件。
+Enumerates the events of an OS account sub-profile.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 CREATED = 0
 ```
 
-CREATED事件。系统账号子profile创建完成时触发。
+CREATED event.Triggered when an OS account sub-profile creation is completed.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ CREATED事件。系统账号子profile创建完成时触发。
 DELETED = 1
 ```
 
-DELETED事件。当系统账号子Profile删除完成时触发。
+DELETED event.Triggered when an OS account sub-profile deletion is completed.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ DELETED事件。当系统账号子Profile删除完成时触发。
 SWITCHING = 2
 ```
 
-SWITCHING事件。当系统账号子Profile切换开始时触发。
+SWITCHING event.Triggered when an OS account sub-profile switch is about to happen.
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ SWITCHING事件。当系统账号子Profile切换开始时触发。
 SWITCHED = 3
 ```
 
-SWITCHED事件。系统账号子profile切换完成时触发。
+SWITCHED event.Triggered when an OS account sub-profile switch is completed.
 
 **Since:** 26.0.0
 

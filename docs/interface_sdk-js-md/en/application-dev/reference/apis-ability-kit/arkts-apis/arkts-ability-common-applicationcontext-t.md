@@ -4,7 +4,7 @@
 export type ApplicationContext = _ApplicationContext.default
 ```
 
-应用上下文，继承自Context。
+Defines the application context. It inherits from Context.
 
 **Since:** 9
 

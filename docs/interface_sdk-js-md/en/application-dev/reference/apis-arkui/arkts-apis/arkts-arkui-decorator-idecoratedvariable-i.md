@@ -1,6 +1,6 @@
 # IDecoratedVariable
 
-定义状态变量接口
+Define decorated variable interface.
 
 **Since:** 23
 

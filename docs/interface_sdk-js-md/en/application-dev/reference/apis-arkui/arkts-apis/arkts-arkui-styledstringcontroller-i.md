@@ -1,6 +1,6 @@
 # StyledStringController
 
-定义StyledString控制器。
+Defines a styled string controller.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 getStyledString(): MutableStyledString
 ```
 
-获取富文本组件显示的属性字符串。
+Obtains the styled string displayed in the rich text component.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ getStyledString(): MutableStyledString
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component. |
 
 ## setStyledString
 
@@ -42,7 +42,7 @@ getStyledString(): MutableStyledString
 setStyledString(styledString: StyledString): void
 ```
 
-设置富文本组件显示的属性字符串。
+Sets the styled string displayed in the rich text component.
 
 **Since:** 12
 
@@ -60,5 +60,5 @@ setStyledString(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类[MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 

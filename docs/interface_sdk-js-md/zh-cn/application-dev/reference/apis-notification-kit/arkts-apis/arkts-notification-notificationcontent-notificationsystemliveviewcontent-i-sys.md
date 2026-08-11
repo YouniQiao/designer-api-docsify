@@ -44,7 +44,7 @@ liveViewType?: LiveViewTypes
 
 实况窗类型。默认值为LIVE_VIEW_ACTIVITY。
 
-**类型：** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
+**类型：** [LiveViewTypes](arkts-notification-notificationmanager-liveviewtypes-t-sys.md)
 
 **起始版本：** 18
 

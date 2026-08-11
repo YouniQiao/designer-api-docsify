@@ -4,7 +4,7 @@
 declare type Vector2 = import('../api/arkui/Graphics').Vector2
 ```
 
-二维向量类型，包含x和y坐标，表示位置坐标关系。
+Defines the two-dimensional vector, which contains the x and y coordinates and indicates the position relationship.
 
 **Since:** 26.0.0
 

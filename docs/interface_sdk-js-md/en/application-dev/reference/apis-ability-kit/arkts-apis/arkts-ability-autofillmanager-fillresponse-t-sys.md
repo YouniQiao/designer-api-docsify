@@ -4,7 +4,7 @@
 export type FillResponse = _AutoFillRequest.FillResponse
 ```
 
-自动填充的响应信息。
+Defines the information about the response to an auto-fill request.
 
 **Since:** 11
 

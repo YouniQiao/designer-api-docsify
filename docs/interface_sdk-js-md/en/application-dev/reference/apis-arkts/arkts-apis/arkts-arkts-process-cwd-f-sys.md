@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function cwd(): string
 ```
 
-返回当前工作目录。
+Return the current work directory;
 
 **Since:** 7
 
@@ -28,5 +28,5 @@ function cwd(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前工作目录。 |
+| string | Return the current work directory. |
 

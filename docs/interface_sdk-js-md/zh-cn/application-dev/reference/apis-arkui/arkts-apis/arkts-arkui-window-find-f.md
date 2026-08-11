@@ -1,11 +1,5 @@
 # find
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## find
 
 ```TypeScript

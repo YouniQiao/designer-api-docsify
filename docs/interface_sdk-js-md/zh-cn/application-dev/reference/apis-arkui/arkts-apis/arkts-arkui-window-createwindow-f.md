@@ -1,11 +1,5 @@
 # createWindow
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## createWindow
 
 ```TypeScript
@@ -43,17 +37,19 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
-| 1300002 | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
-| 1300001 | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| 1300006 | This window context is abnormal. |
-| 1300004 | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 1300009 | The parent window is invalid. |
-| 1300008 | The display device is abnormal.<br>**适用版本：** 9 - 16 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -81,6 +77,38 @@ export default class EntryAbility extends UIAbility {
       });
     } catch (exception) {
       console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    let windowClass: window.Window | undefined = undefined;
+    let config: window.Configuration = {
+      name: "test",
+      windowType: window.WindowType.TYPE_DIALOG,
+      ctx: this.context
+    };
+    try {
+      window.createWindow(config, (err: BusinessError<void> | null, data: window.Window | undefined): void => {
+        if (err?.code) {
+          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
+          return;
+        }
+        windowClass = data;
+        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
+        windowClass!.resize(500, 1000);
+      });
+    } catch (err: Error) {
+      console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
     }
   }
 }
@@ -129,17 +157,19 @@ function createWindow(config: Configuration): Promise<Window>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
-| 1300002 | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
-| 1300001 | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| 1300006 | This window context is abnormal. |
-| 1300004 | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 1300009 | The parent window is invalid. |
-| 1300008 | The display device is abnormal.<br>**适用版本：** 9 - 16 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -164,6 +194,34 @@ export default class EntryAbility extends UIAbility {
       });
     } catch (exception) {
       console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    let config: window.Configuration = {
+      name: "test",
+      windowType: window.WindowType.TYPE_DIALOG,
+      ctx: this.context
+    };
+    try {
+      window.createWindow(config).then((value:window.Window) => {
+        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
+        value.resize(500, 1000);
+      }).catch((err: Error)=> {
+        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (err: Error) {
+      console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
     }
   }
 }

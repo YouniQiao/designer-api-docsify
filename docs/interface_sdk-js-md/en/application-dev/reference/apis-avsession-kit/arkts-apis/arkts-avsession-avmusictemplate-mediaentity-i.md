@@ -1,6 +1,6 @@
 # MediaEntity
 
-媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+The definition of MediaEntity.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 desc?: string
 ```
 
-媒体资源的描述。
+Description of the media resource.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ desc?: string
 imageUrl: string
 ```
 
-媒体资源的封面图片URL。
+Cover image url of the media resource.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ imageUrl: string
 mediaId: string
 ```
 
-媒体资源的ID。
+Unique ID of the media resource.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ mediaId: string
 mediaType: EntityType
 ```
 
-媒体资源的类型。
+Type of the media resource.
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
@@ -102,7 +102,7 @@ mediaType: EntityType
 parentId: string
 ```
 
-父节点的媒体资源ID。
+Parent id of the media resource.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ parentId: string
 parentMediaType: EntityType
 ```
 
-父节点的媒体资源类型。
+Parent media type of the media resource.
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
@@ -142,7 +142,7 @@ parentMediaType: EntityType
 playState: PlaybackState
 ```
 
-媒体资源的播放状态。
+Play state of the media resource.
 
 **Type:** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
@@ -162,7 +162,7 @@ playState: PlaybackState
 title: string
 ```
 
-媒体资源的标题。
+Title of the media resource.
 
 **Type:** string
 

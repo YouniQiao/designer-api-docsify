@@ -1,6 +1,6 @@
 # AudioRendererChangeInfo
 
-描述音频渲染器更改信息。
+Describes the audio renderer change event.
 
 **Since:** 9
 
@@ -42,7 +42,9 @@ Uid for audio renderer client application.
 readonly rendererState: AudioState
 ```
 
-**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
+Audio state.
+
+**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-media-audiostate-t.md)
 
 **Since:** 9
 

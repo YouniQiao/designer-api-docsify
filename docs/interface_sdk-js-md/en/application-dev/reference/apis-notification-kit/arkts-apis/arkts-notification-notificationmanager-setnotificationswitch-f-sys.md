@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>
 ```
 
-设置通知开关状态。使用Promise异步回调。
+Sets the notification switch state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -32,41 +32,25 @@ function setNotificationSwitch(switchName: string, switchState: boolean, userId:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switchName | string | Yes | 通知开关名称。取值为：DEAL（交易类通知聚合开关）、LOGISTICS（物流类通知聚合开关）。 |
-| switchState | boolean | Yes | 是否开启通知开关。 - true：表示开启。 - false：表示关闭。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
+| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregated switch for transaction notifications) or **LOGISTICS** (aggregated switch for logistics notifications). |
+| switchState | boolean | Yes | Whether to enable the notification switch. &lt;br&gt; - **true**: enable. &lt;br&gt; - **false**: disable. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. Database operation failed. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let switchName: string = 'DEAL';
-let switchState: boolean = true;
-let userId: number = 100;
-
-notificationManager.setNotificationSwitch(switchName, switchState, userId).then(() => {
-    console.info('setNotificationSwitch success');
-}).catch((err: BusinessError) => {
-    console.error(`setNotificationSwitch failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. Database operation failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 

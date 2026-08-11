@@ -5,12 +5,6 @@
 - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)：用于添加指定Filter效果到组件上。  
 - [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)：用于添加指定VisualEffect效果到组件上。
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## 汇总
 
 ### 命名空间

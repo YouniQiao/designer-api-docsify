@@ -1,6 +1,6 @@
 # AntiAliasingLevel
 
-缩放时的插值算法。可根据缩放质量和性能需求选择合适的级别。
+Enumerates the anti-aliasing levels.
 
 **Since:** 12
 
@@ -16,9 +16,7 @@
 NONE = 0
 ```
 
-最近邻插值算法。
-
-速度最快，放大时会有明显的马赛克/锯齿感，适合对性能要求高、对画质要求低的快速缩放场景。
+Nearest neighbor interpolation.
 
 **Since:** 12
 
@@ -36,9 +34,7 @@ NONE = 0
 LOW = 1
 ```
 
-双线性插值算法。
-
-适合一般缩放场景。
+Bilinear interpolation.
 
 **Since:** 12
 
@@ -56,9 +52,7 @@ LOW = 1
 MEDIUM = 2
 ```
 
-双线性插值算法，同时开启Mipmap。
-
-适合缩小图片的场景，能极好地消除大幅缩小时的混叠与纹理闪烁。
+Bilinear interpolation with mipmap enabled. You are advised to use this value when zooming out an image.
 
 **Since:** 12
 
@@ -76,9 +70,7 @@ MEDIUM = 2
 HIGH = 3
 ```
 
-三次卷积插值算法。
-
-适合对画质要求较高的放大场景。
+Cubic interpolation.
 
 **Since:** 12
 

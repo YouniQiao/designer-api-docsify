@@ -4,7 +4,7 @@
 export type SkillUrl = _Skill.SkillUri
 ```
 
-SkillUri信息。
+Defines the SkillUri information.
 
 **Since:** 12
 

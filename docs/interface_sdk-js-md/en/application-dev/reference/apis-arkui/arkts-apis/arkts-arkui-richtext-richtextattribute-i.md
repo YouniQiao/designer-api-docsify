@@ -1,6 +1,6 @@
 # RichTextAttribute
 
-定义RichText属性函数。
+Defines the RichText attribute functions.
 
 **Inheritance/Implementation:** RichTextAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -18,7 +18,7 @@
 default attributeModifier(modifier: AttributeModifier<RichTextAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置属性修饰符。
+Set the attribute modifier
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<RichTextAttribute> | Attri
 default onComplete(callback: (() => void) | undefined): this
 ```
 
-当富文本加载结束时触发。
+Triggered when the RichText loading ends.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ default onComplete(callback: (() => void) | undefined): this
 default onStart(callback: (() => void) | undefined): this
 ```
 
-当富文本加载开始时触发。
+Triggered when the RichText loading starts.
 
 **Since:** 23
 

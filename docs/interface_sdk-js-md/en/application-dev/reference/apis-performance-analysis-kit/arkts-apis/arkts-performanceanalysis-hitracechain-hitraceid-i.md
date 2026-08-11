@@ -1,6 +1,6 @@
 # HiTraceId
 
-此接口为HiTraceId对象接口。用于标识分布式跟踪链中的唯一节点，在需要跨线程、跨进程、跨设备跟踪业务流程的场景中使用，例如电商下单流程、支付流程、分布式服务调用链等。
+Defines a **HiTraceId** object.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 chainId: bigint
 ```
 
-跟踪链标识。
+Call chain ID.
 
 **Type:** bigint
 
@@ -40,7 +40,7 @@ chainId: bigint
 flags?: int
 ```
 
-跟踪标志位，默认值为0。
+Trace flag. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ flags?: int
 parentSpanId?: int
 ```
 
-父分支标识，默认值为0。
+Parent span ID. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ parentSpanId?: int
 spanId?: int
 ```
 
-分支标识，默认值为0。
+Span ID. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

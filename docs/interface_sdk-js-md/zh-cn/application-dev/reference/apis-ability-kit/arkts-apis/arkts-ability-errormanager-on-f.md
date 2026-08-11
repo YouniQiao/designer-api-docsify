@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
-```
-
 ## on('error')
 
 ```TypeScript
@@ -43,8 +37,8 @@ function on(type: 'error', observer: ErrorObserver): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16000003 | 指定的ID不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | 指定的ID不存在。 |
 
 ## 示例
 
@@ -102,13 +96,13 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示注册主线程消息处理耗时监听器。 |
 | timeout | number | 是 | 表示事件执行阈值（单位：毫秒）。 阈值必须大于0。 单位为毫秒（ms）。 |
-| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | 是 | 注册主线程消息处理耗时监听器。 |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 | 注册主线程消息处理耗时监听器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 
 ## 示例
 
@@ -123,7 +117,7 @@ let observer: errorManager.LoopObserver = {
 };
 
 try {
-  errorManager.on('loopObserver', 1, observer);
+  errorManager.on("loopObserver", 1, observer);
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
@@ -163,8 +157,8 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 请在主线程中调用。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 请在主线程中调用。 |
 
 ## 示例
 
@@ -182,7 +176,7 @@ let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise:
   }
 };
 
-errorManager.on('unhandledRejection', observer);
+errorManager.on("unhandledRejection", observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throw new Error('uncaught error');
@@ -219,8 +213,8 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
 
 ## 示例
 
@@ -236,7 +230,7 @@ const promiseFunc = (observer: errorManager.GlobalError) => {
 };
 
 errorManager.on('globalUnhandledRejectionDetected', promiseFunc);
-// 建议在抛出promise异常时，使用async抛出异常。
+// 建议在抛出Promise异常时，使用async抛出异常。
 const throwError = async () => {
   throw new Error('uncaught error');
 };
@@ -283,7 +277,7 @@ function on(type: 'freeze', observer: FreezeObserver): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 
 ## 示例
 
@@ -295,7 +289,7 @@ const freezeCallback = () => {
   console.info('freezecallback');
 };
 try {
-  errorManager.on('freeze', freezeCallback);
+  errorManager.on("freeze", freezeCallback);
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
@@ -333,8 +327,8 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
 
 ## 示例
 
@@ -343,11 +337,11 @@ import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const errorFunc = (observer: errorManager.GlobalError) => {
-  console.info('result name :' + observer.name);
-  console.info('result message :' + observer.message);
-  console.info('result stack :' + observer.stack);
-  console.info('result instanceName :' + observer.instanceName);
-  console.info('result instanceType :' + observer.instanceType);
+    console.info('result name :' + observer.name);
+    console.info('result message :' + observer.message);
+    console.info('result stack :' + observer.stack);
+    console.info('result instanceName :' + observer.instanceName);
+    console.info('result instanceType :' + observer.instanceType);
 };
 
 try {

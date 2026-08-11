@@ -1,11 +1,6 @@
 # EventMsg (System API)
 
-键鼠穿越事件。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用[CooperateMessage](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatemessage-i-sys.md/arkts-distributedservice-cooperate-cooperatemessage-i-sys.md)替
-> 代。
+Enumerates screen hopping events.
 
 **Since:** 9
 
@@ -27,7 +22,7 @@
 MSG_COOPERATE_INFO_START = 200
 ```
 
-键鼠穿越消息，表示键鼠穿越开始。
+Screen hopping starts.
 
 **Since:** 9
 
@@ -49,7 +44,7 @@ MSG_COOPERATE_INFO_START = 200
 MSG_COOPERATE_INFO_SUCCESS = 201
 ```
 
-键鼠穿越消息，表示键鼠穿越成功。
+Screen hopping succeeds.
 
 **Since:** 9
 
@@ -71,7 +66,7 @@ MSG_COOPERATE_INFO_SUCCESS = 201
 MSG_COOPERATE_INFO_FAIL = 202
 ```
 
-键鼠穿越消息，表示键鼠穿越失败。
+Screen hopping fails.
 
 **Since:** 9
 
@@ -93,7 +88,7 @@ MSG_COOPERATE_INFO_FAIL = 202
 MSG_COOPERATE_STATE_ON = 500
 ```
 
-键鼠穿越状态，表示键鼠穿越状态开启。
+Screen hopping is enabled.
 
 **Since:** 9
 
@@ -115,7 +110,7 @@ MSG_COOPERATE_STATE_ON = 500
 MSG_COOPERATE_STATE_OFF = 501
 ```
 
-键鼠穿越状态，表示键鼠穿越状态关闭。
+Screen hopping is disabled.
 
 **Since:** 9
 

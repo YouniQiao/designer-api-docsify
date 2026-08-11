@@ -32,5 +32,5 @@ export declare function RichText(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichTextAttribute](arkts-arkui-richtext-richtextattribute-i.md) |  |
+| [RichTextAttribute](../arkts-components/arkts-arkui-richtext-attribute.md) |  |
 

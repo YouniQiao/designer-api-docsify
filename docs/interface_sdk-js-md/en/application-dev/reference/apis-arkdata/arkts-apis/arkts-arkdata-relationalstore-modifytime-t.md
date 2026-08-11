@@ -4,7 +4,7 @@
 type ModifyTime = Map<PRIKeyType, UTCTime>
 ```
 
-用于存储数据库表的主键和修改时间的数据类型。
+Indicates the primary key and UTC time of the modified rows.
 
 **Since:** 10
 

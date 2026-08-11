@@ -1,8 +1,8 @@
 # PageIntentInfo (System API)
 
-PageIntentInfo用于描述  
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)装饰器支持的参数，例如目标页面的  
-[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
+Describes the parameters supported by the  
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) decorator, such as the  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) name of the target page.
 
 **Since:** 20
 
@@ -26,8 +26,8 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly navDestinationName: string
 ```
 
-表示与意图绑定  
-[NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
+Name of the  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)component bound to the intent.
 
 **Type:** string
 
@@ -49,7 +49,7 @@ readonly navDestinationName: string
 readonly navigationId: string
 ```
 
-表示与意图绑定[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)的id。
+ID of the [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) component bound to the intent.
 
 **Type:** string
 
@@ -71,7 +71,7 @@ readonly navigationId: string
 readonly pagePath: string
 ```
 
-页面名称。
+Page name.
 
 **Type:** string
 
@@ -93,7 +93,7 @@ readonly pagePath: string
 readonly uiAbility: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 

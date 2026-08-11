@@ -1,15 +1,15 @@
 # EffectType
 
-使用效果模板种类的枚举值。
+Enum of using the effects template mode.
 
- **效果模板：**
+**Effect Template: **
 
-| 设备类型 | 模糊半径(单位: px) | 饱和度 | 亮度 | 颜色 |  
+| Device Type | Fuzzy Radius (Unit: px) | Saturation | Brightness | Color |  
 | -------- | ---- | ---------------------- | -------- | -------- |  
-| 移动设备 | 0 | 0 | 0 | '#ffffffff'，显示为白色。 |  
-| 2in1设备：深色模式 | 80 | 1.5 | 1.0 | '#e52e3033'，显示为淡红色的半透明效果。 |  
-| 2in1设备：浅色模式 | 80 | 1.9 | 1.0 | '#e5ffffff'，显示为半透明的深红色。 |  
-| Tablet设备 | 0 | 0 | 0 | '#ffffffff'，显示为白色。 |
+| Mobile device | 0 | 0 | 0 | '#ffffffff', displayed as white.|  
+| 2-in-1 device: dark mode | 80 | 1.5 | 1.0 | '#e52e3033', displayed as a semi-transparent light red.|  
+| 2-in-1 device: light mode | 80 | 1.9 | 1.0 | '#e5ffffff', displayed as a semi-transparent dark red.|  
+| Tablet | 0 | 0 | 0 | '#ffffffff', displayed as white.|
 
 **Since:** 14
 
@@ -25,7 +25,7 @@
 DEFAULT = 0
 ```
 
-使用&lt;!--Del--&gt;父级EffectComponent定义的&lt;!--DelEnd--&gt;效果模板进行定义。
+Define use the effects template defined by the parent effectComponent.
 
 **Since:** 14
 
@@ -45,7 +45,7 @@ DEFAULT = 0
 WINDOW_EFFECT = 1
 ```
 
-使用窗口定义的效果模板进行定义。
+Define use the effects template defined by the window.
 
 **Since:** 14
 

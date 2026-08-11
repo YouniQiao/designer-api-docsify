@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
-```
-
 ## height
 
 ```TypeScript

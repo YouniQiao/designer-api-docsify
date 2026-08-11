@@ -1,11 +1,5 @@
 # getGraphicsMemorySummary
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getGraphicsMemorySummary
 
 ```TypeScript
@@ -40,7 +34,7 @@ function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11400104 | Failed to get the application memory due to a remote exception. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
 
 ## 示例
 

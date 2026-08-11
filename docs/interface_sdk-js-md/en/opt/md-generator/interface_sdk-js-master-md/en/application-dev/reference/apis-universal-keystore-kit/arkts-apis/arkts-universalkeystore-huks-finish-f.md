@@ -1,0 +1,69 @@
+# finish
+
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
+## finish
+
+```TypeScript
+function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
+```
+
+Finishes the key operation. This API uses an asynchronous callback to return the result.
+
+The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [huks.finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession)(handle:
+
+<!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
+**System capability:** SystemCapability.Security.Huks.Extension
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handle | number | Yes |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes |
+
+
+## finish
+
+```TypeScript
+function finish(handle: number, options: HuksOptions): Promise<HuksResult>
+```
+
+Finishes the key operation. This API uses a promise to return the result.
+
+The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [huks.finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession)(
+
+<!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
+
+**System capability:** SystemCapability.Security.Huks.Extension
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handle | number | Yes |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;HuksResult&gt; |

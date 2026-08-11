@@ -1,11 +1,5 @@
 # createPixelMapUsingAllocator
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createPixelMapUsingAllocator
 
 ```TypeScript
@@ -41,11 +35,13 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | Unsupported operation. |
-| 7600302 | Memory copy failed. |
-| 7600301 | Memory alloc failed. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,6 +57,25 @@ function createPixelMapUsingAllocator() {
   image.createPixelMapUsingAllocator(color, opts, image.AllocatorType.DMA).then((pixelMap: image.PixelMap) => {
     console.info('Succeeded in creating the PixelMap.');
   }).catch((err: BusinessError) => {
+    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+function createPixelMapUsingAllocator() {
+  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
+  let opts: image.InitializationOptions = {
+    size: { height: 4, width: 6 },
+    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
+    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
+    editable: true
+  };
+  image.createPixelMapUsingAllocator(color, opts, image.AllocatorType.DMA).then((pixelMap: image.PixelMap) => {
+    console.info('Succeeded in creating the PixelMap.');
+  }).catch((err: Error) => {
     console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
   });
 }

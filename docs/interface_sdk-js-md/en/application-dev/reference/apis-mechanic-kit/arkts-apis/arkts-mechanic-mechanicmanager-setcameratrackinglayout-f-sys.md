@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 ```
 
-设置相机跟踪布局
+Sets the camera tracking layout for this mechanical device.
 
 **Since:** 20
 
@@ -28,16 +28,16 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trackingLayout | [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Yes | 跟踪布局 |
+| trackingLayout | [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Yes | Camera tracking layout. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
-| 33300003 | Feature not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
 ## Examples
 

@@ -6,7 +6,7 @@ typedef struct ArkUI_ActiveChildrenInfo ArkUI_ActiveChildrenInfo
 
 ## Overview
 
-Define ActiveChildenInfo class information.
+Defines active child node information.
 
 **Since**: 14
 

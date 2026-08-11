@@ -4,7 +4,7 @@
 export type CursorContextChangeCallback = (x: double, y: double, height: double) => void
 ```
 
-光标上下文变化（cursorContextChange）事件的回调函数类型，用于定义该事件触发时执行的回调函数格式。
+The callback of 'cursorContextChange' event.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ export type CursorContextChangeCallback = (x: double, y: double, height: double)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | x为光标上端的x坐标值，单位为px |
-| y | double | Yes | y为光标上端的y坐标值，单位为px。 |
-| height | double | Yes | height为光标的高度值，单位为px。 |
+| x | double | Yes | the left point of the cursor, unit is px. |
+| y | double | Yes | the top point of the cursor, unit is px. |
+| height | double | Yes | the height of the cursor, unit is px. |
 

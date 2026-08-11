@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function queryPrinterInfoByIp(printerIp: string): Promise<void>
 ```
 
-根据ip查询打印机信息。
+Query printer info by ip.
 
 **Since:** 24
 
@@ -32,7 +32,7 @@ function queryPrinterInfoByIp(printerIp: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | 打印机IP。 |
+| printerIp | string | Yes | Indicates the printer IP. &lt;br&gt;Indicates the printer IP. |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ function queryPrinterInfoByIp(printerIp: string): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100005 | Invalid printer IP. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Invalid printer IP. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

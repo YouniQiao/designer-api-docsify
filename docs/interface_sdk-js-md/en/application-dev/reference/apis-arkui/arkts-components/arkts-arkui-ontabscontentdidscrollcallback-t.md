@@ -4,13 +4,22 @@
 declare type OnTabsContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void
 ```
 
-Tabs滑动时触发的回调。  
-> **说明：**
-> - 例如，当前选中的页签索引为0，从第0页切换到第1页的动画过程中，每帧都会对视窗内所有页面触发回调，当视窗内有第0页和第1页两页时，每帧会触发两次回调。其中，第一次回调的selectedIndex为0、index为0、
-> position为当前帧第0页相对于动画开始前第0页的移动比例，mainAxisLength为主轴方向上第0页的长度。第二次回调的selectedIndex仍为0、index为1、position为当前帧第1页相对于动画开始前第0
-> 页的移动比例，mainAxisLength为主轴方向上第1页的长度。
+Defines the callback triggered when content in the **Tabs** component scrolls.  
+> **NOTE：**
 > 
-> - 若动画曲线为弹簧插值曲线，从第0页切换到第1页的动画过程中，可能会因为离手时的位置和速度，先过滑到第2页，再回弹到第1页，该过程中每帧会对视窗内第1页和第2页触发回调。
+> - For example, when the index of the currently selected tab page is **0**, during a transition animation from page
+> 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1 are
+> both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as **0**,
+> **index** as **0**, **position** as the ratio of how much page 0 has moved relative to its position before the
+> animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The second
+> callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1 has moved
+> relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the length of page
+> 1 on the main axis.
+> 
+> - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,
+> due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide
+> past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2
+> within the viewport on every frame.
 
 **Since:** 23
 
@@ -28,8 +37,8 @@ Tabs滑动时触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | number | Yes | 当前选中页面的索引。例如，当前选中的页签索引为0，从第0页切换到第1页的动画过程中，每一次回调的selectedIndex都为0。 |
-| index | number | Yes | 视窗内页面的索引。例如，页面滑动过程中，视窗内有第0页和第1页两页时，每帧会触发两次回调。其中，第一次回调的index为0，第二次回调的index为1。 |
-| position | number | Yes | 视窗内页面的索引。例如，页面滑动过程中，视窗内有第0页和第1页两页时，每帧会触发两次回调。其中，第一次回调的index为0，第二次回调的index为1。 |
-| mainAxisLength | number | Yes | 视窗内页面的索引。例如，页面滑动过程中，视窗内有第0页和第1页两页时，每帧会触发两次回调。其中，第一次回调的index为0，第二次回调的index为1。 |
+| selectedIndex | number | Yes | Index of the currently selected page. For example, if the index of the currently selected tab page is **0**, the value of **selectedIndex** in each callback is **0** during the animation of switching from page 0 to page 1. |
+| index | number | Yes | Index of a page in the viewport. For example, if there are two pages (page 0 and page 1) in the viewport during page transition, the callback is triggered twice in each frame. In the first callback, the index is 0. In the second callback, the index is 1. |
+| position | number | Yes | Position of the page specified by **index** relative to the start position of the **Tabs** main axis (start position of the page corresponding to **selectedIndex**). For example, in a horizontal **Tabs** component, with the currently selected tab index being 0, if a frame occurs where page 0 occupies 30% of the viewport and page 1 occupies 70%, two callbacks will be triggered for that frame during the animation from page 0 to page 1 (switching left). In the first callback, the value of **position** is **-0.7**, indicating that page 0 in the current frame is on the left of the start position of the main axis of **Tabs**, and its left edge is 70% of the viewport away from the starting position (meaning page 0 has moved left by 70% of the viewport). In the second callback, the value of **position** is **0.3**, indicating that page 1 in the current frame is on the right of the start position of the main axis of **Tabs**, and its left edge is 30% of the viewport away from the starting position (meaning page 1 has moved left by 70% of the viewport). |
+| mainAxisLength | number | Yes | Length of the page specified by **index** along the main axis, in vp. For example, if the index of a callback is **0** and the **mainAxisLength** of this callback is **360**, the length of page 0 of the current frame in the main axis direction is 360 vp. This parameter indicates the page width for horizontal tabs, and the page height for vertical tabs. |
 

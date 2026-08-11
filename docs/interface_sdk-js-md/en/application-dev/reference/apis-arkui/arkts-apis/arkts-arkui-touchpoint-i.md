@@ -1,6 +1,6 @@
 # TouchPoint
 
-配置跟手点坐标，不配置时，默认居中。
+Defines the coordinates of the touch point. If it is not set, the touch point is centered.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 x: Dimension
 ```
 
-跟手点X轴坐标。
+X coordinate of the touch point.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -38,7 +38,7 @@ x: Dimension
 y: Dimension
 ```
 
-跟手点Y轴坐标。
+Y coordinate of the touch point.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

@@ -9,4 +9,4 @@ Defines the macros, enumerated values, data structures,and error codes used by O
 
 | Name | Description |
 | -- | -- |
-| [native_huks_type.h](capi-native-huks-type-h.md) | Defines the enums, structs, and macros used in the HUKS functions. |
+| [native_huks_type.h](capi-native-huks-type-h.md) | Defines enums, structs, macros, and error codes in HUKS. |

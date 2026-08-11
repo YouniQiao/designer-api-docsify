@@ -1,6 +1,6 @@
 # IMonitor
 
-当监听的变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型即为IMonitor类型。
+Define IMonitor interface
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 value<T>(path?: string): IMonitorValue<T> | undefined
 ```
 
-获取指定path的变化信息。
+Return the pair of the value before the most recent change and current value for given path.If path does not exist, return undefined; If path is not specified, return the value pair corresponding to the first path in dirty.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | No | 可选，被监听变量的路径。未指定时默认使用变化路径数组dirty中的第一个路径。 |
+| path | string | No | Listened property name |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 dirty: Array<string>
 ```
 
-变化路径的数组。
+Array of changed paths(keys)
 
 **Type:** Array&lt;string&gt;
 

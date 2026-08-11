@@ -1,6 +1,6 @@
 # HoverHandAction（系统接口）
 
-Enum for hover hand actions.
+悬停手势动作枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enum for hover hand actions.
 DOWN = 0
 ```
 
-Indicates the hover hand enters the detection area.
+表示悬停手势进入检测区域。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates the hover hand enters the detection area.
 UP = 1
 ```
 
-Indicates the hover hand leaves the detection area.
+表示悬停手势离开检测区域。
 
 **起始版本：** 26.0.0
 

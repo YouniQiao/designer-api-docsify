@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function isAuthorizedApp(keyUri: string): Promise<boolean>
 ```
 
-表示当前应用是否由指定的用户凭据授权。使用Promise异步回调。
+Checks whether this application is authorized by the specified user credential. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,21 +28,21 @@ function isAuthorizedApp(keyUri: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | 表示用户授权给应用使用的凭据的唯一标识符，长度限制256字节以内。 |
+| keyUri | string | Yes | Unique identifier of the credential authorized by the user to the application. The value contains up to 256 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回查询应用是否被授权的结果，true为已授权，false为未授权。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the application is authorized. The value **true** means authorized; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -58,8 +58,7 @@ try {
     } else {
       console.info('The application is not authorized by the user.');
     }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to check if the application is authorized. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

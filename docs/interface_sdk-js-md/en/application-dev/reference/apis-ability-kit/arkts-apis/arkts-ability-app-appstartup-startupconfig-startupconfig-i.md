@@ -1,6 +1,6 @@
 # StartupConfig
 
-本模块提供[应用启动框架](../../../application-models/app-startup.md)配置信息的定义。
+The module defines the configuration of [AppStartup](../../../application-models/app-startup.md).
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { StartupConfig } from 'kits/@kit.AbilityKit';
 startupListener?: StartupListener
 ```
 
-表示启动框架的监听器，该监听器将在所有启动任务完成时调用。
+AppStartup listener, which is called when all the startup tasks are complete.
 
 **Type:** [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
 
@@ -42,7 +42,7 @@ startupListener?: StartupListener
 timeoutMs?: int
 ```
 
-执行所有启动任务的超时时间（单位：毫秒），默认值为10000毫秒。
+Timeout for executing all startup tasks, measured in ms. The default value is 10000 ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

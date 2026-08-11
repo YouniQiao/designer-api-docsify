@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## 汇总
 
 ### 函数

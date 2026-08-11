@@ -2,7 +2,7 @@
 
 有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。
 
-**继承/实现关系：** GlobalError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
+**继承/实现关系：** GlobalError extends [Error](Error)
 
 **起始版本：** 18
 
@@ -11,12 +11,6 @@
 <!--Device-errorManager-export interface GlobalError extends Error--><!--Device-errorManager-export interface GlobalError extends Error-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## 导入模块
-
-```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
-```
 
 ## instanceName
 

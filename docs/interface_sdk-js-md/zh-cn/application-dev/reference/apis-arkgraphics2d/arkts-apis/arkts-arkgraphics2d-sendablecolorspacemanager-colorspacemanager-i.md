@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
-## 导入模块
-
-```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## getColorSpaceName
 
 ```TypeScript
@@ -46,7 +40,7 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 
@@ -81,7 +75,7 @@ getGamma(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 
@@ -116,7 +110,7 @@ getWhitePoint(): collections.Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
 
 ## 示例
 

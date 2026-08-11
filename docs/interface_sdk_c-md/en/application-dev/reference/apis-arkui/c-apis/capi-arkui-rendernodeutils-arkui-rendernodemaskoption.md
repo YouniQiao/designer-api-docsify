@@ -6,7 +6,7 @@ typedef struct ArkUI_RenderNodeMaskOption ArkUI_RenderNodeMaskOption
 
 ## Overview
 
-Render node mask option.
+Defines a render node mask option.
 
 **Since**: 20
 

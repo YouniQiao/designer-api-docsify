@@ -12,7 +12,7 @@ import { Environment } from 'kits/@kit.CoreFileKit';
 function getUserDownloadDir(): string
 ```
 
-获取当前用户预授权下载目录的沙箱路径。
+Obtains the sandbox path of the pre-authorized **Download** directory.
 
 **Since:** 11
 
@@ -29,14 +29,14 @@ function getUserDownloadDir(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前用户预授权下载目录的沙箱路径。 |
+| string | Sandbox path of the **Download** directory obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
 | 13900042 | Unknown error. |
 
 ## Examples

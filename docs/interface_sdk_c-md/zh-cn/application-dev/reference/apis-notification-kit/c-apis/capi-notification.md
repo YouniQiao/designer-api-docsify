@@ -1,0 +1,12 @@
+# NOTIFICATION
+
+## 概述
+
+Notification向应用提供通知服务的能力，包括查询当前应用通知的使能状态等。
+
+**起始版本：** 13
+## 文件汇总
+
+| 名称 | 描述 |
+| -- | -- |
+| [notification.h](capi-notification-h.md) | 定义通知服务API接口。 |

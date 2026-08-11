@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
-```
-
 ## dismiss
 
 ```TypeScript
@@ -44,7 +38,7 @@ reason: DismissReason
 
 无法关闭对话框的原因。
 
-**类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**类型：** [DismissReason](arkts-arkui-common-dismissreason-e.md)
 
 **起始版本：** 26.1.0
 

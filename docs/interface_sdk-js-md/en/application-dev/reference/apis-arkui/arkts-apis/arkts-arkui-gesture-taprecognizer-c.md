@@ -1,6 +1,6 @@
 # TapRecognizer
 
-点击手势识别器对象，继承自[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+Defines the tap gesture recognizer.
 
 **Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -18,7 +18,7 @@
 getTapCount(): int
 ```
 
-返回预设点击手势识别器连续点击次数阈值。
+Returns the tap gesture's count.
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ getTapCount(): int
 
 | Type | Description |
 | --- | --- |
-| int | 预设点击手势识别器连续点击次数阈值。&lt;br/&gt;取值范围：[0, +∞) |
+| int | the count of the tap gesture. |
 

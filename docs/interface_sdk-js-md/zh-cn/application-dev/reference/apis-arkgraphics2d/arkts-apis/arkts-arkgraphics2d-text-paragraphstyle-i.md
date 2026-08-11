@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## align
 
 ```TypeScript
@@ -434,7 +428,7 @@ verticalAlign?: TextVerticalAlign
 文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的heightScale）或行内不同字号（即设置  
 [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
 
-**类型：** [TextVerticalAlign](../../apis-arkui/arkts-apis/arkts-arkui-textverticalalign-e.md)
+**类型：** [TextVerticalAlign](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textverticalalign-e.md)
 
 **起始版本：** 20
 

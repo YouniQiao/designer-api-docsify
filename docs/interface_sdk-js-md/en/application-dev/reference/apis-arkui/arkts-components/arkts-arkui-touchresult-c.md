@@ -1,6 +1,6 @@
 # TouchResult
 
-自定义事件分发结果，开发者通过返回结果来影响事件分发。
+Defines the custom event dispatch result. You can influence event dispatch by returning specific results.
 
 **Since:** 11
 
@@ -16,9 +16,10 @@
 id?: string
 ```
 
-子组件的唯一标识。
+Unique ID of the child component.
 
-当strategy为TouchTestStrategy.DEFAULT时，id是可选的；当strategy是TouchTestStrategy.FORWARD_COMPETITION或TouchTestStrategy.FORWARD时，id是必需的（如果没有返回id，则当成TouchTestStrategy.DEFAULT处理）。
+If **strategy** is set to **TouchTestStrategy.DEFAULT**, **id** is optional. If **strategy** is set to  
+**TouchTestStrategy.FORWARD_COMPETITION** or **TouchTestStrategy.FORWARD**, **id** is mandatory. If **id** is not returned, the strategy **TouchTestStrategy.DEFAULT** is used.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ id?: string
 strategy: TouchTestStrategy
 ```
 
-事件派发策略。
+Event dispatch strategy.
 
 **Type:** [TouchTestStrategy](../arkts-apis/arkts-arkui-common-touchteststrategy-e.md)
 

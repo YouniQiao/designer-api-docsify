@@ -1,10 +1,6 @@
-# @ohos.data.unifiedDataChannel(标准化数据通路)
+# @ohos.data.unifiedDataChannel
 
-本模块为统一数据管理框架（Unified Data Management Framework，UDMF）的组成部分，针对多对多跨应用数据共享的不同业务场景提供了标准化的数据通路，提供了标准化的数据接入与读取接口。同时对文本、图片等数据类型提供了标准化定义，方便不同应用间进行数据交互，减少数据类型适配的工作量。
-
-**设计逻辑：** UDMF采用统一数据模型，将不同类型的数据封装为UnifiedData对象，通过Intention标识不同的数据通路类型（如DATA_HUB、DRAG等），实现跨应用数据共享。数据写入时生成唯一标识符key，数据读取时通过key或intention查询获取。
-
-UDMF处理数据时，不会解析用户数据的内容，存储路径安全性较低，不建议传输个人敏感数据和隐私数据。
+As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChannel** module provides unified data channels and standard data access interfaces for many-to-many data sharing across applications. It also provides definitions for uniform data types, such as text and image, to streamline data interaction between different applications and minimize the workload of data type adaptation. Although the UDMF does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
 
 **Since:** 10
 
@@ -28,70 +24,70 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md#convertrecordstoentries) | 本接口用于将传入的data转换成多样式数据结构。若原data使用多个record去承载同一份数据的不同数据格式，则可以使用此接口将原data转换为多样式数据结构。  当满足以下规则时进行转换，传入的data经转换后变为多样式数据结构：  1. data中的record数量大于1；2. data中的properties中的tag值为"records_to_entries_data_format"。  否则不会产生任何行为。 |
-| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata) | 删除UDMF公共数据通路的数据，返回删除的数据集，使用callback异步回调。 |
-| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata-1) | 删除UDMF公共数据通路的数据，返回删除的数据集，使用Promise异步回调。 |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) | 将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用callback异步回调。  **实现机制：** 系统接收UnifiedData对象后，验证数据完整性并序列化存储。根据intention值路由到对应存储空间，生成唯一标识符key。数据在公共数据通路中由系统管理有效期，默认策略为应用退出后自动清理。 |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata-1) | 将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用Promise异步回调。 |
-| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata) | 查询UDMF公共数据通路的数据，使用callback异步回调。 |
-| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata-1) | 查询UDMF公共数据通路的数据，使用Promise异步回调。 |
-| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md#removeappshareoptions) | 清除[setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖拽通道数据恢复到默认使用范围。 |
-| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions) | 设置应用内拖拽通道数据可使用的范围[ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)，目前仅支持DRAG类型数据通道的管控设置。调用成功后，应用内拖拽通道数据的使用范围被设置为指定的ShareOptions值。 |
-| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata) | 更新已写入UDMF的公共数据通路的数据，使用callback异步回调。 |
-| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata-1) | 更新已写入UDMF的公共数据通路的数据，使用Promise异步回调。 |
+| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md#convertrecordstoentries) | Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.  This API is used only when the following rules are met:  1. The number of records in data is greater than 1.2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**. |
+| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata) | Deletes data from the UDMF public data channel. This API uses an asynchronous callback to return the result. |
+| [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md#deletedata-1) | Deletes data from the UDMF public data channel. This API uses a promise to return the result. |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) | Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted. |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata-1) | Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted. |
+| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata) | Queries data in the UDMF public data channel. This API uses an asynchronous callback to return the result. |
+| [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata-1) | Queries data in the UDMF public data channel. This API uses a promise to return the result. |
+| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md#removeappshareoptions) | Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions). |
+| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions) | Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for the application data. Currently, only the drag-and-drop data channel is supported. |
+| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata) | Updates the data in the UDMF public data channel. This API uses an asynchronous callback to return the result. |
+| [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata-1) | Updates the data in the UDMF public data channel. This API uses a promise to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [ApplicationDefinedRecord](arkts-arkdata-unifieddatachannel-applicationdefinedrecord-c.md) | ApplicationDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是应用自定义数据类型的基类，用于描述仅在应用生态内部流通的自定义数据类型，应用可基于此类进行自定义数据类型的扩展。 |
-| [Audio](arkts-arkdata-unifieddatachannel-audio-c.md) | 音频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述音频文件。 |
-| [File](arkts-arkdata-unifieddatachannel-file-c.md) | File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  [Image](arkts-arkdata-unifieddatachannel-image-c.md)、[Video](arkts-arkdata-unifieddatachannel-video-c.md)、  [Folder](arkts-arkdata-unifieddatachannel-folder-c.md)等具体子类。 |
-| [Folder](arkts-arkdata-unifieddatachannel-folder-c.md) | 文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述文件夹。 |
-| [HTML](arkts-arkdata-unifieddatachannel-html-c.md) | HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超文本标记语言数据。 |
-| [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md) | [Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超链接类型数据。 |
-| [Image](arkts-arkdata-unifieddatachannel-image-c.md) | 图片类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述图片文件。 |
-| [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md) | [Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述纯文本类数据。 |
-| [Summary](arkts-arkdata-unifieddatachannel-summary-c.md) | 描述统一数据对象的数据摘要，包括数据类型和大小。 |
-| [SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md) | 系统定义的桌面图标类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。 |
-| [SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md) | 系统定义的桌面卡片类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。 |
-| [SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md) | 与系统侧定义的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)数据类型对应的图片数据类型，是  [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类，仅保存PixelMap的二进制数据。 |
-| [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md) | SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在OpenHarmony系统范围内流通的特有数据类型，推荐开发者优先使用SystemDefinedRecord的子类描述数据，如  [SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md)、  [SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md)、  [SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md)等具体子类。 |
-| [Text](arkts-arkdata-unifieddatachannel-text-c.md) | 文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如  [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md)、  [HTML](arkts-arkdata-unifieddatachannel-html-c.md)等具体子类。 |
-| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | 表示UDMF统一数据对象，提供封装一组数据记录的方法。 |
-| [UnifiedDataProperties](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) | 定义统一数据对象中所有数据记录的属性，包含时间戳、标签、粘贴范围以及一些附加数据等。 |
-| [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) | 对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。 |
-| [Video](arkts-arkdata-unifieddatachannel-video-c.md) | 视频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述视频文件。 |
+| [ApplicationDefinedRecord](arkts-arkdata-unifieddatachannel-applicationdefinedrecord-c.md) | Represents the custom data type for applications only. It is a child class of  [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of custom data types of applications. Applications can extend custom data types based on this class. |
+| [Audio](arkts-arkdata-unifieddatachannel-audio-c.md) | Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe an audio file. |
+| [File](arkts-arkdata-unifieddatachannel-file-c.md) | Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of the data of the file type. You are advised to use the child class of **File**, for example,  [Image](arkts-arkdata-unifieddatachannel-image-c.md), [Video](arkts-arkdata-unifieddatachannel-video-c.md), and  [Folder](arkts-arkdata-unifieddatachannel-folder-c.md), to describe data. |
+| [Folder](arkts-arkdata-unifieddatachannel-folder-c.md) | Represents the folder data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a folder. |
+| [HTML](arkts-arkdata-unifieddatachannel-html-c.md) | Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md). |
+| [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md) | Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md). |
+| [Image](arkts-arkdata-unifieddatachannel-image-c.md) | Represents the image data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe images. |
+| [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md) | Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md). |
+| [Summary](arkts-arkdata-unifieddatachannel-summary-c.md) | Summarizes the data information of the **unifiedData** object, including the data type and size. |
+| [SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md) | Represents the data of the home screen icon defined by the system. It is a child class of  [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md). |
+| [SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md) | Represents the service widget data defined by the system. It is a child class of  [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md). |
+| [SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md) | Represents the image data type corresponding to [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md) and holds only binary data of **PixelMap**. |
+| [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md) | Represents specific data types defined by OpenHarmony. It is a child class of  [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example,  [SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md),  [SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md), and  [SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md), to describe OpenHarmony-specific data. |
+| [Text](arkts-arkdata-unifieddatachannel-text-c.md) | Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of text data. You are advised to use the child class of **Text**, for example,  [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md), [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md), and  [HTML](arkts-arkdata-unifieddatachannel-html-c.md), to describe data. |
+| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | Provides APIs for encapsulating a set of data records. |
+| [UnifiedDataProperties](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) | Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,and additional data. |
+| [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) | An abstract definition of the data content supported by the UDMF. A **UnifiedRecord** object contains one or more data records, for example, a text record, an image record, or an HTML record. Since API version 15, different styles of the same content can be added to a **UnifiedRecord** object. Data users can obtain the corresponding styles as required. |
+| [Video](arkts-arkdata-unifieddatachannel-video-c.md) | Represents video data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a video file. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | 用于描述被加载数据的类型与数量。  - 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。  - 在**数据接收方**中使用，表示期望加载的数据类型与数量，可根据需要设置该字段。 |
-| [DataLoadParams](arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | 用于在延迟加载场景下描述发送方的数据加载策略。  当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。 |
-| [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | 表示从UDMF获取数据时的参数，包含目标路径、文件冲突选项、进度条类型等。  具体使用示例可见[拖拽异步获取数据]。 |
-| [Options](arkts-arkdata-unifieddatachannel-options-i.md) | UDMF提供的数据操作接口包含三个可选参数：intention、key和visibility。如果接口不需要这些参数，可以不填，具体要求请参阅该接口的参数说明。 |
-| [ProgressInfo](arkts-arkdata-unifieddatachannel-progressinfo-i.md) | 定义进度上报的数据。 |
+| [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | Defines type and quantity of the data to load.  - Used by the **data sender** to define the data range that can be provided. This field is mandatory.  - Used by the **data receiver** to define the expected data type and quantity. This field is optional. |
+| [DataLoadParams](arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | Defines the data loading policy for the data sender in the lazy loading scenario.  If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect. |
+| [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving file conflicts, and progress indicator type.  For details, see  [Obtaining Data Asynchronously Through Drag-and-Drop]. |
+| [Options](arkts-arkdata-unifieddatachannel-options-i.md) | Defines the data operation performed by the UDMF. It includes three optional parameters: **intention**, **key**, and **visibility**. The three parameters can be left unspecified. For details, see the parameter description of the specific API. |
+| [ProgressInfo](arkts-arkdata-unifieddatachannel-progressinfo-i.md) | Represents the progress information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FileConflictOptions](arkts-arkdata-unifieddatachannel-fileconflictoptions-e.md) | 表示文件拷贝冲突时的可选策略的枚举。 |
-| [Intention](arkts-arkdata-unifieddatachannel-intention-e.md) | UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF数据通路所面向的不同业务场景。 |
-| [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md) | 表示从UDMF获取数据时的状态码的枚举。 |
-| [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md) | 表示进度条指示选项的枚举，可选择是否采用系统默认进度显示。 |
-| [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | UDMF支持的设备内使用范围类型枚举。 |
-| [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | 拖拽场景下的URI授权策略。 |
-| [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) | 表示数据的可见性等级枚举。 |
+| [FileConflictOptions](arkts-arkdata-unifieddatachannel-fileconflictoptions-e.md) | Enumerates the options for resolving file copy conflicts. |
+| [Intention](arkts-arkdata-unifieddatachannel-intention-e.md) | Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to which the UDMF data channels apply. |
+| [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md) | Enumerates the status codes returned when data is obtained from the UDMF. |
+| [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md) | Enumerates the progress indicator options. |
+| [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Enumerates the options for using **UnifiedData** in a device. |
+| [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | Defines URI permissions for drag intention. |
+| [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) | Enumerates the data visibility levels. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md) | 用于延迟加载数据的处理函数。支持数据发送方根据接收方传入的信息，动态生成数据，实现更灵活、精准的数据交互策略。  该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用异步处理函数  [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md)。 |
-| [DataProgressListener](arkts-arkdata-unifieddatachannel-dataprogresslistener-t.md) | 定义获取进度信息和数据的监听回调函数。 |
-| [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md) | 用于延迟加载数据的处理函数。支持数据发送方根据接收方传入的信息，动态生成数据，实现更灵活、精准的数据交互策略。  该处理函数为异步函数，返回Promise对象，不阻塞主线程，可处理复杂业务逻辑、执行长耗时任务。 |
-| [GetDelayData](arkts-arkdata-unifieddatachannel-getdelaydata-t.md) | 对UnifiedData的延迟封装，支持延迟获取数据。当数据接收方请求特定类型数据时，系统会触发此回调函数，数据发送方可在回调中动态生成数据，而非提前准备所有数据。当前只支持同设备剪贴板场景。 |
-| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | 用于表示统一数据记录允许的数据字段类型。 |
+| [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies.  This API is a synchronous function and is applicable to simple service logic. If the service logic is complex and the execution time lasts for more than 3s, you are advised to use the asynchronous handler  [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md). |
+| [DataProgressListener](arkts-arkdata-unifieddatachannel-dataprogresslistener-t.md) | Defines the callback used to return the data retrieval progress information and data obtained. |
+| [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies.  This API is an asynchronous function, which uses a promise to return the result. It does not block the main thread and can be used to process time-consuming tasks with complex service logic. |
+| [GetDelayData](arkts-arkdata-unifieddatachannel-getdelaydata-t.md) | Defines a function used to obtain a deferred **UnifiedData** object. Currently, it can be used only in the pasteboard application of the same device. |
+| [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Enumerates the data field types allowed in a unified data record. |
 

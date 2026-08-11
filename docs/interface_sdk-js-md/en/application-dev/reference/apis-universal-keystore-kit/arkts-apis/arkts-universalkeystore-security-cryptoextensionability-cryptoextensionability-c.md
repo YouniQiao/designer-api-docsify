@@ -23,7 +23,7 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-请求Ukey认证PIN码。使用Promise异步回调。
+Callback to be called to verify PIN of the provider handle.
 
 **Since:** 22
 
@@ -37,14 +37,14 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 资源句柄。 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，authState非0，表示认证请求成功。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 34800006 - Ukey PIN码错误。 34800007 - Ukey PIN码被锁 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800006 - The UKey PIN is not correct. Please check the PIN you entered. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 
 ## onClearUkeyPinAuthState
 
@@ -53,7 +53,7 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-清除应用维度PIN码的认证状态。使用Promise异步回调。
+Callback to clear the PIN auth state of the provider handle.
 
 **Since:** 22
 
@@ -67,14 +67,14 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 资源句柄 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，表示清除PIN码认证状态成功。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onCloseResource
 
@@ -83,7 +83,7 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-根据参数中的handle，关闭Ukey的密钥资源。使用Promise异步回调。
+Callback to be called to close the resource handle.
 
 **Since:** 22
 
@@ -97,14 +97,14 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 会话句柄。 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | 函数返回的promise。 HuksCryptoExtensionResult.resultCode可能具有以下值： 0-操作成功 34800000 -加密扩展中发生错误。可能原因： 1.输入参数非法。 2.加密扩展遇到无法解析的错误状态。 34800002-UKey驱动程序错误。这意味着UKey驱动程序中发生了未知错误。 34800004 -句柄不存在。可能原因： 1.输入的句柄无效。 2.huks服务和加密扩展的状态不一致。由于异常， huks服务持有的句柄没有被释放。 34800005 -句柄不可用，可能是因为状态不一致 在加密扩展和UKey之间。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onEnumCertificates
 
@@ -113,7 +113,7 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
       Promise<HuksCryptoExtensionResult>
 ```
 
-枚举Extension下所有Ukey设备的证书信息。使用Promise异步回调。
+Callback to list all certificates of the provider.
 
 **Since:** 22
 
@@ -127,13 +127,13 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | No | 操作属性 |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，certs成员非空，包含获取的所有证书。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800001 - The UKey does not exist. Possible causes: 1. The UKey has been removed. 2. The crypto extension maintained an error UKey state. 34800002 - Failed to call the UKey driver interface. Please check the UKey's connection and driver status. |
 
 ## onExportCertificate
 
@@ -142,7 +142,7 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-查询指定resourceId下的证书。使用Promise异步回调。
+Callback to export certificates specified by the resource id.
 
 **Since:** 22
 
@@ -156,14 +156,14 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | 资源ID。 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | No | 操作属性 |
+| resourceId | string | Yes | resourceId indicates the resource id of the extension. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | No | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，certs成员非空，包含获取的单本证书。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800001 - The UKey does not exist. Possible causes: 1. The UKey has been removed. 2. The crypto extension maintained an error UKey state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The resourceId does not exist. This indicates that the resourceId has an incorrect device name, application name, or container name. |
 
 ## onExportKeyItem
 
@@ -171,7 +171,7 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-用于导出指定密钥的公钥。使用Promise异步回调。
+Callback to export the public key specified by the resource handle.
 
 **Since:** 26.0.0
 
@@ -187,14 +187,14 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 待导出公钥的资源句柄 |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | 导出公钥操作的属性参数。 |
+| handle | string | Yes | Indicates the resource handle of the key to be exported. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties of the export public key operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，outData携带导出的公钥数据。调用失败时，resultCode携带错误码信息，errInfo携带详细错误信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values. 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - Failed to call the UKey driver interface. Please check the UKey's connection and driver status. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onFinishSession
 
@@ -203,7 +203,7 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
       Promise<HuksCryptoExtensionResult>
 ```
 
-三段式密钥会话结束操作。使用Promise异步回调。
+Callback to do the finish operation.
 
 **Since:** 22
 
@@ -217,14 +217,14 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initHandle | string | Yes | 资源句柄。 |
-| params | huks.HuksOptions \| HuksCryptoExtensionParams | Yes | 操作属性。 |
+| initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
+| params | huks.HuksOptions \| HuksCryptoExtensionParams | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800003 - Ukey PIN码未认证。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 34800007 - Ukey PIN码被锁。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800003 - The UKey PIN is not authenticated. Please verify the UKey PIN first. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 
 ## onGenerateKeyItem
 
@@ -232,7 +232,7 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-用于在扩展设备内生成密钥对。使用Promise异步回调。
+Callback to generate a key pair specified by the resource handle.
 
 **Since:** 26.0.0
 
@@ -248,14 +248,14 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 待生成密钥的资源句柄。 |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | 密钥生成操作的属性参数。 |
+| handle | string | Yes | Indicates the resource handle of the key to be generated. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the properties of the key generation operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，表示生成密钥成功。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - Failed to call the UKey driver interface. Please check the UKey's connection and driver status. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onGetProperty
 
@@ -264,7 +264,7 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-查询操作回调。
+Callback to be called to do general get operations of the provider.
 
 **Since:** 22
 
@@ -278,15 +278,15 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | handle表示onOpenResource打开的句柄。 |
-| propertyId | string | Yes | propertyId表示属性函数的名称，GMT 0016-2023中定义。 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| propertyId | string | Yes | propertyId indicates the name of the property function to be operated as defined in GMT 0016-2023. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | 函数返回的promise。 HuksCryptoExtensionResult.resultCode可能具有以下值： 0-操作成功 34800000 -加密扩展中发生错误。可能原因： 1.输入参数非法。 2.加密扩展遇到无法解析的错误状态。 34800002-UKey驱动程序错误。这意味着UKey驱动程序中发生了未知错误。 34800003-UKey PIN未鉴权。请先验证UKey PIN码。 34800004 -句柄不存在。可能原因： 1.输入的句柄无效。 2.huks服务和加密扩展的状态不一致。由于异常， huks服务持有的句柄没有被释放。 34800005 -句柄不可用，可能是因为状态不一致 在加密扩展和UKey之间。 34800007-UKey PIN被锁定，因为已超过允许的最大尝试次数。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800003 - The UKey PIN is not authenticated. Please verify the UKey PIN first. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 
 ## onGetResourceId
 
@@ -294,7 +294,7 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-回调以获取加密扩展的资源ID。
+Callback to get the resource ID of the crypto extension.
 
 **Since:** 26.0.0
 
@@ -310,13 +310,13 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | 获取资源ID所需的属性参数。 |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties of the get resource ID operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | params - 获取资源ID所需的属性参数。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. |
 
 ## onGetUkeyPinAuthState
 
@@ -325,7 +325,7 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
       HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-获取Ukey的PIN码认证状态。使用Promise异步回调。
+Callback to get the PIN auth state of the provider handle.
 
 **Since:** 22
 
@@ -339,14 +339,14 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 资源句柄。 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，HuksCryptoExtensionResult的authState成员非空，为获取的PIN码认证状态。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onImportCertificate
 
@@ -355,7 +355,7 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
       certInfo: HuksCryptoExtensionCertInfo): Promise<HuksCryptoExtensionResult>
 ```
 
-导入指定资源句柄的证书。使用Promise异步回调。
+Callback to import a certificate specified by the resource handle.
 
 **Since:** 26.0.0
 
@@ -371,15 +371,15 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 导入证书的资源句柄。 |
+| handle | string | Yes | Indicates the import certificate's resource handle. |
 | params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties for the import certificate operation. |
-| certInfo | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes | 待导入的证书信息。需指定证书类型（purpose） |
+| certInfo | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes | Indicates the certificate information to be imported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，表示导入证书成功。调用失败时，resultCode携带错误码信息，errInfo携带详细错误信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values. 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - Failed to call the UKey driver interface. Please check the UKey's connection and driver status. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onImportWrappedKeyItem
 
@@ -388,7 +388,7 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
       wrappedKey: Uint8Array): Promise<HuksCryptoExtensionResult>
 ```
 
-用于导入加密封装的密钥对。使用Promise异步回调。
+Callback to import the wrapped key pair specified by the resource handle.
 
 **Since:** 26.0.0
 
@@ -404,16 +404,16 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 待导入密钥的资源句柄。 |
-| wrappingHandle | string | Yes | 待导入密钥的资源句柄。 |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | 导入密钥所需的属性 |
-| wrappedKey | Uint8Array | Yes | 封装密钥数据，格式由密钥扩展定义。 |
+| handle | string | Yes | Indicates the resource handle of the wrapped key to be imported. |
+| wrappingHandle | string | Yes | Indicates the resource handle of the key used to unwrap the imported key. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the needed properties for the import wrapped key operation. |
+| wrappedKey | Uint8Array | Yes | Indicates the wrapped key data, which format is defined by the crypto extension. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，表示导入密钥成功。调用失败时，resultCode携带错误码信息，errInfo携带详细错误信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800001 - Ukey不存在。 34800002 - Ukey驱动错误。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. If the function execution fails, the extension needs to set the detailed error information in HuksCryptoExtensionResult.errInfo. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - Failed to call the UKey driver interface. Please check the UKey's connection and driver status. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of HUKS service and crypto extension are inconsistent. Due to an exception, the handle held by HUKS service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. |
 
 ## onInitSession
 
@@ -422,7 +422,7 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
       Promise<HuksCryptoExtensionResult>
 ```
 
-三段式初始化密钥会话操作。使用Promise异步回调。
+Callback to do the initialize operation.
 
 **Since:** 22
 
@@ -436,14 +436,14 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 资源句柄。 |
-| params | huks.HuksOptions \| HuksCryptoExtensionParams | Yes | 操作属性。 |
+| handle | string | Yes | handle indicates the handle opened by onOpenResource. |
+| params | huks.HuksOptions \| HuksCryptoExtensionParams | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0，handle成员非空。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800003 - Ukey PIN码未认证。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 34800007 - Ukey PIN码被锁。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800003 - The UKey PIN is not authenticated. Please verify the UKey PIN first. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 
 ## onOpenResource
 
@@ -452,7 +452,7 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-打开资源句柄回调，在加密操作之前需打开资源，获取句柄。注意：返回的句柄必须被onCloseResource关闭。
+Callback to be called to open the resource handle before crypto operations.NOTE: the handle returned must be closed by onCloseResource.
 
 **Since:** 22
 
@@ -466,14 +466,14 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | resourceId表示资源ID |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | 操作属性。 |
+| resourceId | string | Yes | resourceId indicates the resource id of the provider. |
+| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| HuksCryptoExtensionParam[] | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | 函数返回的promise。 HuksCryptoExtensionResult.resultCode可能具有以下值： 0-操作成功 34800000 -加密扩展中发生错误。可能原因： 1.输入参数非法。 2.加密扩展遇到无法解析的错误状态。 34800001-UKey不存在。可能原因： 1.UKey已经被移除。 2.加密扩展维护了一个错误的UKey状态。 34800002-UKey驱动程序错误。这意味着UKey驱动程序中发生了未知错误。 34800004-resourceId不存在。这说明resourceId、设备名称、应用名称或容器名称错误。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800001 - The UKey does not exist. Possible causes: 1. The UKey has been removed. 2. The crypto extension maintained an error UKey state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800004 - The resourceId does not exist. This indicates that the resourceId has an incorrect device name, application name, or container name. |
 
 ## onSetProperty
 
@@ -482,7 +482,7 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
       Promise<HuksCryptoExtensionResult>
 ```
 
-根据参数中的handle和propertyId设置属性。使用Promise异步回调。
+Callback to perform set operations of the provider.
 
 **Since:** 26.0.0
 
@@ -498,15 +498,15 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | string | Yes | 资源句柄。 |
-| propertyId | string | Yes | 查找操作的属性名称，是GMT 0016-2023中定义的SKF接口名，要业务针对接口名适配。 |
-| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | 操作属性。 |
+| handle | string | Yes | Indicates the resource handle for the set operation. |
+| propertyId | string | Yes | Indicates the ID of the property needed to set. Currently supports part of the method names defined in GMT 0016-2023 and self-defined methods. |
+| params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes | Indicates the operation parameters. This parameter contains parameters related to the property ID needed to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise用于返回HuksCryptoExtensionResult。 HuksCryptoExtensionResult.resultCode可能具有以下值： 0-操作成功。 34800000 -加密扩展中发生错误。可能原因： 1.输入参数非法。 2.加密扩展遇到无法解析的错误状态。 34800002 -调用UKey驱动接口失败。请检查UKey连接和驱动程序状态。 34800003-UKey PIN未鉴权。请先验证UKey PIN码。 34800004 -句柄不存在。可能原因： 1.输入的句柄无效。 2.HUKS服务和加密扩展的状态不一致。由于异常， HUKS服务持有的句柄没有释放。 34800005 -句柄不可用，可能是因为状态不一致 在加密扩展和UKey之间。 34800007-UKey PIN被锁定，因为已超过允许的最大尝试次数。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful. 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - Failed to call the UKey driver interface. Please check the UKey connection and driver status. 34800003 - The UKey PIN is not authenticated. Please verify the UKey PIN first. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of HUKS service and crypto extension are inconsistent. Due to an exception, the handle held by HUKS service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 
 ## onUpdateSession
 
@@ -515,7 +515,7 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
       Promise<HuksCryptoExtensionResult>
 ```
 
-三段式密钥会话更新数据操作。使用Promise异步回调。
+Callback to do update operation.
 
 **Since:** 22
 
@@ -529,12 +529,12 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initHandle | string | Yes | 资源句柄。 |
+| initHandle | string | Yes | initHandle indicates the handle returned by onInitSession. |
 | params | huks.HuksOptions \| HuksCryptoExtensionParams | Yes | params indicates the properties of the operation<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; | Promise对象。 当调用成功时，resultCode为0。调用失败时，resultCode携带错误码信息。 可能返回的错误码值： 0 - 调用成功。 34800000 - 密钥扩展错误。 34800002 - Ukey驱动错误。 34800003 - Ukey PIN码未认证。 34800004 - 句柄不存在。 34800005 - 句柄不可用。 34800007 - Ukey PIN码被锁。 |
+| Promise&lt;HuksCryptoExtensionResult&gt; | Promise used to return HuksCryptoExtensionResult. HuksCryptoExtensionResult.resultCode may have the following values: 0 - The operation is successful 34800000 - An error occurred in the crypto extension. Possible causes: 1. The input parameter is invalid. 2. The crypto extension encountered an unresolvable error state. 34800002 - The UKey driver error. This means an unknown error has occurred in the UKey driver. 34800003 - The UKey PIN is not authenticated. Please verify the UKey PIN first. 34800004 - The handle does not exist. Possible causes: 1. The handle you entered is invalid. 2. The states of huks service and crypto extension are inconsistent. Due to an exception, the handle held by huks service was not released. 34800005 - The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey. 34800007 - The UKey PIN is locked because the maximum allowed number of attempts has been exceeded. |
 

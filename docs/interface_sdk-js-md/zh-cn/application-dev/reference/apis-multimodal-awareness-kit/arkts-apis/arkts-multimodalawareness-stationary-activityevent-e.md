@@ -1,6 +1,6 @@
 # ActivityEvent
 
-Enumerates the device status events.
+设备状态事件。
 
 **起始版本：** 9
 
@@ -16,7 +16,7 @@ Enumerates the device status events.
 ENTER = 1
 ```
 
-Enter event.
+进入事件，表示设备进入静止状态时触发。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ Enter event.
 EXIT = 2
 ```
 
-Exit event.
+退出事件，表示设备退出静止状态时触发。
 
 **起始版本：** 9
 
@@ -48,7 +48,7 @@ Exit event.
 ENTER_EXIT = 3
 ```
 
-Enter and exit events.
+进入和退出事件，表示设备进入和退出静止状态时均会触发。
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # ImageReceiverOptions
 
-ImageReceiver的初始化选项。
+Describes the initialization options for ImageReceiver.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 capacity?: int
 ```
 
-可同时访问的最大图像数量。该值必须为正整数，且小于或等于64张。
-
-该参数仅作为期望值，实际capacity由设备硬件决定。
+Maximum number of images that can be accessed simultaneously.The value range is all integers, The value must be a positive integer less than or equal to 64.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,9 +42,7 @@ capacity?: int
 size?: Size
 ```
 
-图像的大小，包括宽与高，且值都大于0。单位：像素（px）。
-
-该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
+Image size, with both the width and height greater than 0.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

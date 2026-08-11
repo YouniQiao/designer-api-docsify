@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 ```
 
-根据打印机ID查询推荐的打印机驱动程序。
+Query recommend printer drivers by printer ID.
 
 **Since:** 24
 
@@ -32,7 +32,7 @@ function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID。 |
+| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Indicates the printer ID. |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100005 | Can not find the printer in system. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Can not find the printer in system. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

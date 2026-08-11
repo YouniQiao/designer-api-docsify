@@ -12,11 +12,11 @@ import { media } from 'kits/@kit.MediaKit';
 function createAVTranscoder(): Promise<AVTranscoder>
 ```
 
-创建视频转码实例。使用Promise异步回调。
+Creates an AVTranscoder instance. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 可创建的视频转码实例不能超过2个。
+> A maximum of 2 AVTranscoder instances can be created.
 
 **Since:** 12
 
@@ -32,13 +32,13 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVTranscoder&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
+| Promise&lt;AVTranscoder&gt; | Promise used to return the result. If the operation is successful, an AVTranscoder instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 
@@ -83,11 +83,11 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVTranscoder \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
+| Promise&lt;AVTranscoder \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **undefined** is returned. The instance can be used for video transcoding. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 

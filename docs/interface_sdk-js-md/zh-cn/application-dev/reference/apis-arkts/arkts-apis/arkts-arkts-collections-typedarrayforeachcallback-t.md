@@ -5,7 +5,7 @@ type TypedArrayForEachCallback<ElementType, ArrayType> =
     (value: ElementType, index: number, array: ArrayType) => void
 ```
 
-ArkTS TypedArray遍历函数类型。
+ArkTS TypedArray遍历函数类型，被TypedArray类的'forEach'接口使用。
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # CheckboxFrameNode
 
-定义Checkbox类型的FrameNode。
+Define the Checkbox type of FrameNode.
 
 **Inheritance/Implementation:** CheckboxFrameNode extends [TypedFrameNode<CheckboxAttribute>](TypedFrameNode<CheckboxAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: CheckboxOptions): CheckboxAttribute
 ```
 
-初始化Checkbox类型的FrameNode。
+Initialize Checkbox FrameNode.
 
 **Since:** 23
 

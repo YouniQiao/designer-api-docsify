@@ -16,7 +16,7 @@ Defining StorageLink annotation StorageLink is used to create a two-way data syn
 property: string
 ```
 
-用于标识AppStorage的属性。
+The give property in AppStorage.
 
 **Type:** string
 

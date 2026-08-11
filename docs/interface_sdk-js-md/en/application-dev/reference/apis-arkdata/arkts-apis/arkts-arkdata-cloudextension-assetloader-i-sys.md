@@ -1,6 +1,6 @@
 # AssetLoader (System API)
 
-提供资产上传下载接口的类。
+Provides APIs for uploading and downloading assets.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>
 ```
 
-通过该接口实现资产的下载。使用Promise异步回调。
+Downloads assets. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -40,16 +40,16 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 表名。 |
-| gid | string | Yes | 数据上云后生成的唯一标记。 |
-| prefix | string | Yes | 表示资产下载目录的前缀信息。 |
-| assets | Array&lt;CloudAsset&gt; | Yes | 表示需要下载的资产。 |
+| table | string | Yes | Table name. |
+| gid | string | Yes | Unique identifier generated for the data added to the cloud. |
+| prefix | string | Yes | Asset prefix information. |
+| assets | Array&lt;CloudAsset&gt; | Yes | Assets to download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise对象，返回资产下载结果，包含资产ID和资产哈希值。 |
+| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset download result, including the asset IDs and asset hash values. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ class MyAssetLoader implements cloudExtension.AssetLoader {
 upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>
 ```
 
-通过该接口实现资产的上传。使用Promise异步回调。
+Uploads assets. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -86,15 +86,15 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 表名。 |
-| gid | string | Yes | 表示GID，数据上云后生成的唯一标记。 |
-| assets | Array&lt;CloudAsset&gt; | Yes | 表示需要上传的资产。 |
+| table | string | Yes | Table name. |
+| gid | string | Yes | Unique identifier generated for the data added to the cloud. |
+| assets | Array&lt;CloudAsset&gt; | Yes | Assets to upload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise对象，返回资产上云的结果，包含资产ID和资产哈希值。 |
+| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset upload result, including the asset IDs and asset hash values. |
 
 ## Examples
 

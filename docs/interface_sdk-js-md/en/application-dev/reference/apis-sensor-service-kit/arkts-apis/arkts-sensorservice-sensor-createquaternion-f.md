@@ -12,13 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-将旋转矢量转换为四元数，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)
-> 替代。
+Converts a rotation vector into a quaternion. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -36,8 +30,8 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 异步返回四元数。 |
+| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
 
 ## Examples
 
@@ -64,12 +58,7 @@ sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-将旋转矢量转换为四元数，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)替代。
+Converts a rotation vector into a quaternion. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -87,13 +76,13 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | 表示旋转矢量。 |
+| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回四元数。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the quaternion. |
 
 ## Examples
 

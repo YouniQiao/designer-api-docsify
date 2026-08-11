@@ -1,6 +1,11 @@
-# @ohos.bytrace(性能打点)
+# @ohos.bytrace(Performance Tracing)
 
-本模块提供了追踪进程轨迹的能力，用于应用性能分析场景。开发者可以通过性能打点来追踪关键代码段的执行时间，定位性能瓶颈，优化应用性能。适用于应用启动耗时分析、业务流程性能监控、帧率分析等场景。
+The **bytrace** module implements performance tracing for processes.
+
+> **NOTE：**
+> 
+> - The APIs provided by this module are deprecated since API version 8. You are advised to use the new APIs
+> [@ohos.hiTraceMeter](arkts-hitracemeter.md) instead.
 
 **Since:** 7
 
@@ -20,7 +25,7 @@
 
 | Name | Description |
 | --- | --- |
-| [finishTrace](arkts-performanceanalysis-bytrace-finishtrace-f.md#finishtrace) | 标记一个时间片跟踪事件的结束。 |
-| [startTrace](arkts-performanceanalysis-bytrace-starttrace-f.md#starttrace) | 标记一个时间片跟踪任务的开始。  如果有多个相同name的任务需要追踪或者对同一个任务要追踪多次，并且这些跟踪任务会同时被执行，则每次调用startTrace的taskId必须不一致。如果具有相同name的跟踪任务是串行执行的，则taskId可以相同。在下面bytrace.finishTrace的示例中会举例说明。 |
-| [traceByValue](arkts-performanceanalysis-bytrace-tracebyvalue-f.md#tracebyvalue) | 标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。 |
+| [finishTrace](arkts-performanceanalysis-bytrace-finishtrace-f.md#finishtrace) | Marks the end of a timeslice trace task.  > **NOTE：** >  > To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in > **startTrace**. |
+| [startTrace](arkts-performanceanalysis-bytrace-starttrace-f.md#starttrace) | Marks the start of a timeslice trace task.  > **NOTE：** >  > If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be > performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks > with the same name are not performed at the same time, the same task ID can be used. For details, see the > bytrace.finishTrace example. |
+| [traceByValue](arkts-performanceanalysis-bytrace-tracebyvalue-f.md#tracebyvalue) | Defines a numeric variable that indicates the number of timeslice trace tasks. |
 

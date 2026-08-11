@@ -1,6 +1,8 @@
 # DeviceManager
 
-设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
+**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
+**dmInstance**.
 
 **Since:** 7
 
@@ -30,7 +32,7 @@ authenticateDevice(
     ): void
 ```
 
-认证设备。
+Authenticates a device.
 
 **Since:** 7
 
@@ -52,16 +54,16 @@ authenticateDevice(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | Yes | 设备信息。 |
-| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i-sys.md) | Yes | 认证参数。 |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | Yes | Device information. |
+| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i-sys.md) | Yes | Authentication parameter. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -136,7 +138,7 @@ try {
 deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void
 ```
 
-删除凭据信息。
+Deletes credential information.
 
 **Since:** 10
 
@@ -156,15 +158,15 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryInfo | string | Yes | 删除凭据信息。长度范围1~64000字符。 |
+| queryInfo | string | Yes | Credential information to delete. The value is a string of 1 to 64000 characters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -210,7 +212,7 @@ try {
 getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 ```
 
-通过指定设备的网络标识获取该设备的信息。使用callback异步回调。
+Obtains the information about a specific device based on the network ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -232,15 +234,15 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | 设备的网络标识。长度范围1~255字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | 获取指定设备信息。 |
+| networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the information about the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -272,7 +274,7 @@ try {
 getDeviceInfo(networkId: string): Promise<DeviceInfo>
 ```
 
-通过指定设备的网络标识获取该设备的信息。使用Promise异步回调。
+Obtains the information about a specific device based on the network ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -294,20 +296,20 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | 设备的网络标识。长度范围1~255字符。 |
+| networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -332,7 +334,7 @@ dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
 getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 ```
 
-获取本地设备信息。使用callback异步回调。
+Obtains local device information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -354,14 +356,14 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | 获取本地设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | Yes | Callback used to return the local device information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -392,7 +394,7 @@ try {
 getLocalDeviceInfo(): Promise<DeviceInfo>
 ```
 
-获取本地设备信息。使用Promise异步回调。
+Obtains local device information. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -414,13 +416,13 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -443,7 +445,7 @@ dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
 getLocalDeviceInfoSync(): DeviceInfo
 ```
 
-同步获取本地设备信息。
+Obtains local device information synchronously.
 
 **Since:** 8
 
@@ -465,15 +467,15 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | Type | Description |
 | --- | --- |
-| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | 返回本地设备列表。 |
+| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | List of local devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -497,7 +499,7 @@ try {
 getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 ```
 
-获取所有可信设备列表。使用callback异步回调。
+Obtains all trusted devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -519,14 +521,14 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -556,7 +558,7 @@ try {
 getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 ```
 
-获取所有可信设备列表。使用Promise异步回调。
+Obtains all trusted devices. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -578,13 +580,13 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -607,7 +609,7 @@ dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) =
 getTrustedDeviceListSync(): Array<DeviceInfo>
 ```
 
-同步获取所有可信设备列表。
+Obtains all trusted devices synchronously.
 
 **Since:** 7
 
@@ -629,15 +631,15 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -661,7 +663,7 @@ try {
 getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 ```
 
-打开软总线系统端的心跳模式，让周围处于下线状态的可信设备快速上线，同时刷新已上线的可信设备列表。
+Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices online and updates the list of online trusted devices.
 
 **Since:** 10
 
@@ -681,22 +683,22 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isRefresh | boolean | Yes | 是否打开心跳模式，刷新可信列表，true表示打开心跳模式，false表示关闭心跳模式。 |
+| isRefresh | boolean | Yes | Whether to enable the heartbeat mode and update the list of online trusted devices. The value **true** means to enable the heartbeat mode and update the list of online trusted devices and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -720,7 +722,7 @@ try {
 importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void
 ```
 
-导入凭据信息。
+Imports credential information.
 
 **Since:** 10
 
@@ -740,15 +742,15 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialInfo | string | Yes | 导入凭据信息。长度范围1~64000字符。 |
+| credentialInfo | string | Yes | Credential information to import. The value is a string of 1 to 64000 characters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -823,7 +825,7 @@ try {
 off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 ```
 
-取消ui状态变更回调。
+Unsubscribes from UI status changes.
 
 **Since:** 9
 
@@ -845,15 +847,15 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'uiStateChange' | Yes | 取消注册的设备管理器 ui 状态回调，固定为uiStateChange。 |
+| type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -876,7 +878,7 @@ try {
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
 ```
 
-取消注册设备状态回调。
+Unsubscribes from changes in the device state.
 
 **Since:** 7
 
@@ -898,15 +900,15 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
+| type | 'deviceStateChange' | Yes | Event type, which has a fixed value of **deviceStateChange**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -944,7 +946,7 @@ try {
 off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void
 ```
 
-取消注册设备发现回调。
+Unsubscribes from device discovery events.
 
 **Since:** 7
 
@@ -966,15 +968,15 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceFound' | Yes | 取消注册设备发现回调，固定为deviceFound。 |
+| type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1012,7 +1014,7 @@ try {
 off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void
 ```
 
-取消注册设备发现失败回调。
+Unsubscribes from device discovery failures.
 
 **Since:** 7
 
@@ -1034,15 +1036,15 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverFail' | Yes | 取消注册设备发现失败回调，固定为discoverFail。 |
+| type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1072,7 +1074,7 @@ try {
 off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 ```
 
-取消注册设备发布成功回调。
+Unsubscribes from device information publication success events.
 
 **Since:** 9
 
@@ -1092,15 +1094,15 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishSuccess' | Yes | 取消注册设备发布成功回调，固定为publishSuccess。 |
+| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1129,7 +1131,7 @@ try {
 off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void
 ```
 
-取消注册设备发布失败回调。
+Unsubscribes from device information publication failures.
 
 **Since:** 9
 
@@ -1149,15 +1151,15 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishFail' | Yes | 取消注册设备发布失败回调，固定为publishFail。 |
+| type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1187,7 +1189,7 @@ try {
 off(type: 'serviceDie', callback?: () => void): void
 ```
 
-取消注册设备管理服务死亡监听。
+Unsubscribes from dead events of the **DeviceManager** service.
 
 **Since:** 7
 
@@ -1209,15 +1211,15 @@ off(type: 'serviceDie', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceDie' | Yes | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () =&gt; void | No | 取消注册serviceDie的回调方法。 |
+| type | 'serviceDie' | Yes | Event type, which has a fixed value of **serviceDie**. |
+| callback | () =&gt; void | No | Callback used to return the dead event of the **DeviceManager** service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1242,7 +1244,7 @@ try {
 on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
 ```
 
-ui状态变更回调。
+Subscribes to UI status changes.
 
 **Since:** 9
 
@@ -1264,15 +1266,15 @@ ui状态变更回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'uiStateChange' | Yes | 注册的设备管理器 ui 状态回调，以便在状态改变时通知应用，固定为uiStateChange。 |
+| type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1308,7 +1310,7 @@ try {
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
 ```
 
-注册设备状态回调。
+Subscribes to changes in the device state.
 
 **Since:** 7
 
@@ -1330,15 +1332,15 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | 注册设备状态回调，固定为deviceStateChange。 |
+| type | 'deviceStateChange' | Yes | Event type. The value is **deviceStateChange**, which indicates a device state change event. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1376,7 +1378,7 @@ try {
 on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void
 ```
 
-注册发现设备回调监听。
+Subscribes to device discovery events.
 
 **Since:** 7
 
@@ -1398,15 +1400,15 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceFound' | Yes | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为deviceFound。 |
+| type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1444,7 +1446,7 @@ try {
 on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void
 ```
 
-注册设备发现失败回调监听。
+Subscribes to device discovery failures.
 
 **Since:** 7
 
@@ -1466,15 +1468,15 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoverFail' | Yes | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFail。 |
+| type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1504,7 +1506,7 @@ try {
 on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 ```
 
-注册发布设备发现回调监听。
+Subscribes to device information publication success events.
 
 **Since:** 9
 
@@ -1524,15 +1526,15 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishSuccess' | Yes | 注册发布设备成功回调，以便将发布成功时通知应用程序，固定为publishSuccess。 |
+| type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1561,7 +1563,7 @@ try {
 on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void
 ```
 
-注册设备发布失败回调监听。
+Subscribes to device information publication failures.
 
 **Since:** 9
 
@@ -1581,15 +1583,15 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishFail' | Yes | 注册设备发布失败回调，以便在发布设备失败时通知应用程序，固定为publishFail。 |
+| type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1619,7 +1621,7 @@ try {
 on(type: 'serviceDie', callback: () => void): void
 ```
 
-注册设备管理服务死亡监听。
+Subscribes to dead events of the **DeviceManager** service.
 
 **Since:** 7
 
@@ -1641,15 +1643,15 @@ on(type: 'serviceDie', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceDie' | Yes | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () =&gt; void | Yes | 注册serviceDie的回调方法。 |
+| type | 'serviceDie' | Yes | Event type, which has a fixed value of **serviceDie**. |
+| callback | () =&gt; void | Yes | Callback invoked when a dead event of the **DeviceManager** service occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1674,7 +1676,7 @@ try {
 publishDeviceDiscovery(publishInfo: PublishInfo): void
 ```
 
-发布设备发现。发布状态持续两分钟，超过两分钟会停止发布。
+Publishes device information for discovery purposes. The publish process lasts 2 minutes.
 
 **Since:** 9
 
@@ -1694,17 +1696,17 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| publishInfo | [PublishInfo](arkts-distributedservice-devicemanager-publishinfo-i-sys.md) | Yes | 发布设备发现信息。 |
+| publishInfo | [PublishInfo](arkts-distributedservice-devicemanager-publishinfo-i-sys.md) | Yes | Device information to publish. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
-| 11600105 | Publish unavailable. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) | Publish unavailable. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1743,7 +1745,7 @@ try {
 release(): void
 ```
 
-设备管理实例不再使用后，通过该方法释放DeviceManager实例。
+Releases this **DeviceManager** instance when it is no longer used.
 
 **Since:** 7
 
@@ -1765,9 +1767,9 @@ release(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1790,7 +1792,7 @@ try {
 requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void
 ```
 
-获取凭据的注册信息。
+Obtains the registration information of the credential.
 
 **Since:** 10
 
@@ -1810,15 +1812,15 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | string | Yes | 请求凭据信息。最大长度255字符。 |
+| requestInfo | string | Yes | Request credential information. The value contains a maximum of 255 characters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ registerInfo: string }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1861,7 +1863,7 @@ try {
 setUserOperation(operateAction: number, params: string): void
 ```
 
-设置用户ui操作行为。
+Sets a user operation.
 
 **Since:** 9
 
@@ -1883,16 +1885,16 @@ setUserOperation(operateAction: number, params: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operateAction | number | Yes | 用户操作动作。取值范围为0~5。 |
-| params | string | Yes | 表示用户的输入参数。长度范围1~255字符。 |
+| operateAction | number | Yes | User operation. The value ranges from 0 to 5. |
+| params | string | Yes | Input parameters of the user. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1924,7 +1926,7 @@ try {
 startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 ```
 
-发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。
+Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be discovered.
 
 **Since:** 8
 
@@ -1946,17 +1948,17 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | 发现信息。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | Subscription information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 11600104 | Discovery unavailable. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -2000,7 +2002,7 @@ try {
 startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 ```
 
-发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。
+Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be discovered.
 
 **Since:** 9
 
@@ -2022,18 +2024,18 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | 发现信息。 |
-| filterOptions | string | No | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | Yes | Subscription information. |
+| filterOptions | string | No | Options for filtering discovered devices. Optional. The default value is **undefined**, indicating that discovery of offline devices. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 11600104 | Discovery unavailable. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -2099,7 +2101,7 @@ try {
 stopDeviceDiscovery(subscribeId: number): void
 ```
 
-停止发现周边设备。
+Stops device discovery.
 
 **Since:** 7
 
@@ -2121,16 +2123,16 @@ stopDeviceDiscovery(subscribeId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeId | number | Yes | 发现标识。取值范围为1~65535。 |
+| subscribeId | number | Yes | Subscription ID. The value ranges from 1 to 65535. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -2155,7 +2157,7 @@ try {
 unAuthenticateDevice(deviceInfo: DeviceInfo): void
 ```
 
-解除认证设备。
+Deauthenticates a device.
 
 **Since:** 8
 
@@ -2177,16 +2179,16 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | Yes | 设备信息。 |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | Yes | Device information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -2225,7 +2227,7 @@ try {
 unPublishDeviceDiscovery(publishId: number): void
 ```
 
-停止发布设备发现。
+Stops publishing device information.
 
 **Since:** 9
 
@@ -2245,16 +2247,16 @@ unPublishDeviceDiscovery(publishId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| publishId | number | Yes | 发布标识。 取值范围为1~2147483647。 |
+| publishId | number | Yes | Publish ID. The value ranges from 1 to 2147483647. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -2279,7 +2281,7 @@ try {
 verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void
 ```
 
-验证认证信息。
+Verifies authentication information.
 
 **Since:** 7
 
@@ -2299,15 +2301,15 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authInfo | [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | Yes | 认证信息。 |
+| authInfo | [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | Yes | Authentication information. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, level: number }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

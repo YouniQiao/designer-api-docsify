@@ -12,7 +12,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-快速修复的补丁安装接口。使用callback异步回调。
+Applies a quick fix patch. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,18 +30,18 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
+| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 18500002 | Invalid patch package. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -69,7 +69,7 @@ try {
 function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 ```
 
-快速修复的补丁安装接口。使用Promise异步回调。
+Applies a quick fix patch. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -87,23 +87,23 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
+| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 18500002 | Invalid patch package. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-invalid-patch-package) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

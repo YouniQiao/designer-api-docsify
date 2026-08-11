@@ -135,7 +135,7 @@ default unionMode(mode: UnionMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) \| undefined | 是 | 融合效果模式。 |
+| mode | [UnionMode](../arkts-components/arkts-arkui-unionmode-e-sys.md) \| undefined | 是 | 融合效果模式。 |
 
 **返回值：**
 

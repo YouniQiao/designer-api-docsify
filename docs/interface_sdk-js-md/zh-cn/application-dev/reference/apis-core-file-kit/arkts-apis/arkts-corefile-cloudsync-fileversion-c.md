@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## clearFileConflict
 
 ```TypeScript
@@ -58,6 +52,8 @@ clearFileConflict(uri: string): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,6 +73,29 @@ fileVersion.isFileConflict(uri).then((isConflictRet: boolean) => {
 fileVersion.clearFileConflict(uri).then(() => {
   console.info("clean file conflict flag success");
 }).catch((err: BusinessError) => {
+  console.error("clean file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+let isConflict: boolean = false;
+fileVersion.isFileConflict(uri).then<boolean>((isConflictRet: boolean): void => {
+  isConflict = isConflictRet;
+  console.info("current file is conflict: " + isConflictRet);
+}).catch((err: BusinessError<void>): void => {
+  console.error(`get current file conflict flag failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.clearFileConflict(uri).then<void>((): void => {
+  console.info("clean file conflict flag success");
+}).catch((err: BusinessError<void>): void => {
   console.error("clean file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -206,6 +225,8 @@ getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryV
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -221,6 +242,25 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
     console.info("get history versionId: " + versionList[i].versionId);
   }
 }).catch((err: BusinessError) => {
+  console.error("get history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+let limit: int = 10;
+fileVersion.getHistoryVersionList(uri, limit).then<Array<cloudSync.HistoryVersion>>((versionList: Array<cloudSync.HistoryVersion>): void => {
+  for(let i = 0, len = versionList.length; i < len; i++) {
+    console.info("get history versionId: " + versionList[i].versionId);
+  }
+}).catch((err: BusinessError<void>): void => {
   console.error("get history version failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -270,6 +310,8 @@ isFileConflict(uri: string): Promise<boolean>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -282,6 +324,22 @@ let uri = fileUri.getUriFromPath(path);
 fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
   console.info("current file is conflict: " + isConflict);
 }).catch((err: BusinessError) => {
+  console.error("get current file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+fileVersion.isFileConflict(uri).then<boolean>((isConflict: boolean): void => {
+  console.info("current file is conflict: " + isConflict);
+}).catch((err: BusinessError<void>): void => {
   console.error("get current file conflict flag failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -332,6 +390,8 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -363,6 +423,39 @@ fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then(() => {
   console.info("replace file with history version success.");
 }).catch((err: BusinessError) => {
   console.error("replace file with history version failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+let versionId: string = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
+let callback = (data: cloudSync.VersionDownloadProgress): void => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+let versionUri: string = "";
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then<string>((fileUri: string): void => {
+  versionUri = fileUri;
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError<void>): void => {
+  console.error(`download history version file failed with error message: ${err.message}, error code: ${err.code}`);
+});
+fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then<void>((): void => {
+  console.info("replace file with history version success.");
+}).catch((err: BusinessError<void>): void => {
+  console.error("replace file with history version filed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

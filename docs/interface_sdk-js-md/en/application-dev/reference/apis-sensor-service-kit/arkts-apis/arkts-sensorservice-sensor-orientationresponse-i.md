@@ -1,6 +1,6 @@
 # OrientationResponse
 
-方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 alpha: double
 ```
 
-设备围绕Z轴的旋转角度，即方位角。单位：degree（度）；取值范围：[0, 360]。
+Rotation angle of the device around the z-axis, in degrees. The value ranges from 0 to 360.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ alpha: double
 beta: double
 ```
 
-设备围绕X轴的旋转角度，即俯仰角。单位：degree（度）；取值范围：[-180, 180]。
+Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ±180.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ beta: double
 gamma: double
 ```
 
-设备围绕Y轴的旋转角度，即翻转角。单位：degree（度）；取值范围：[-90, 90]。
+Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ±90.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

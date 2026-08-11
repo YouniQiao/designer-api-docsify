@@ -16,7 +16,7 @@ Define SyncMonitor MethodDecorator. Decorator path parameters are the same as de
 path: string[]
 ```
 
-监听V2状态变量变量名
+Listened property name.
 
 **Type:** string[]
 

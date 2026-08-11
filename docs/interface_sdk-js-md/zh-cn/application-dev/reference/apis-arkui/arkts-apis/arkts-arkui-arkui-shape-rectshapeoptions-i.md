@@ -14,12 +14,6 @@ RectShape 的构造函数参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
-```
-
 ## radius
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # BundleInstaller (System API)
 
-本模块提供设备上安装、升级和卸载应用的能力。
+The module provides APIs for you to install, uninstall, and recover bundles on devices.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@
 install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
 ```
 
-在应用中安装hap，支持多hap安装。使用callback异步回调。
+Install an application in a HAP.
 
 **Since:** 7
 
@@ -44,9 +44,9 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFilePaths | Array&lt;string&gt; | Yes | 指示存储HAP的沙箱路径。 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| bundleFilePaths | Array&lt;string&gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | Parameters required for bundle installation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 
 ## recover
 
@@ -54,7 +54,7 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
 ```
 
-恢复一个应用程序，使用callback异步回调。当预置应用被卸载后，可以通过此接口进行恢复。
+recover an application.
 
 **Since:** 8
 
@@ -76,9 +76,9 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用Bundle名称。 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定应用恢复所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| bundleName | string | Yes | Bundle name. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | Parameters required for bundle recovery. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 
 ## uninstall
 
@@ -86,7 +86,7 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
 ```
 
-卸载应用程序，使用callback异步回调，返回安装状态信息。
+Uninstall an application.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用Bundle名称。 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | 指定卸载所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| bundleName | string | Yes | Bundle name. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | Parameters required for bundle uninstall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 

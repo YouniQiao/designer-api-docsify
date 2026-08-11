@@ -1,11 +1,5 @@
 # cancelReminderOnDisplay
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## cancelReminderOnDisplay
 
 ```TypeScript
@@ -38,10 +32,12 @@ function cancelReminderOnDisplay(reminderId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1700003 | The reminder does not exist. |
-| 1700007 | If the input parameter is not valid parameter. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
@@ -51,6 +47,19 @@ let reminderId: number = 1;
 reminderAgentManager.cancelReminderOnDisplay(reminderId).then(() => {
   console.info("cancel display reminder  succeed");
 }).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: int = 1;
+reminderAgentManager.cancelReminderOnDisplay(reminderId).then(() => {
+  console.info("cancel display reminder succeeded");
+}).catch((err): void => {
   console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```

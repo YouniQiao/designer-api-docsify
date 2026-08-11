@@ -1,6 +1,6 @@
 # ThreeFingersTap
 
-三指轻点手势事件。
+Defines a three-finger tap gesture event.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 type: ActionType
 ```
 
-手势事件类型。如：手势开始、手势更新、手势结束等。
+Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 

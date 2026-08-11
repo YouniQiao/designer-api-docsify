@@ -1,6 +1,6 @@
 # SeekMode
 
-视频跳转模式选项。
+Seek mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 PreviousKeyframe
 ```
 
-跳转到前一个最近的关键帧。
+Sync to keyframes before the time point.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PreviousKeyframe
 NextKeyframe
 ```
 
-跳转到后一个最近的关键帧。
+Sync to keyframes after the time point.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ NextKeyframe
 ClosestKeyframe
 ```
 
-跳转到最近的关键帧。
+Sync to closest keyframes.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ ClosestKeyframe
 Accurate
 ```
 
-精准跳转，不论是否为关键帧。
+Seek to frames closest the time point.
 
 **Since:** 23
 

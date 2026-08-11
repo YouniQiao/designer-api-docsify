@@ -1,10 +1,6 @@
 # NodeAdapter
 
-NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](lazy_for_each)实现接口功能。
-
-> **说明：**
-> 
-> 入参不能为负数，入参为负数时不做处理。
+Used for lazy loading of typeNode.
 
 **Since:** 23
 
@@ -20,11 +16,7 @@ NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](lazy_fo
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。
-
-> **说明：**
-> 
-> 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
+Add a NodeAdapter to bind to the node.A node can only be bound to one NodeAdapter. Binding failure returns false.
 
 **Since:** 23
 
@@ -40,14 +32,14 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | 定义懒加载的NodeAdapter类。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定的FrameNode节点。 |
+| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | Define lazy loading classes. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 绑定结果，返回true绑定成功，false绑定失败。 |
+| boolean | Return the binding result. |
 
 ## constructor
 
@@ -55,7 +47,7 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 constructor()
 ```
 
-NodeAdapter的构造函数。
+Constructor.
 
 **Since:** 23
 
@@ -73,7 +65,7 @@ NodeAdapter的构造函数。
 static detachNodeAdapter(node: FrameNode): void
 ```
 
-解除绑定操作，解除FrameNode节点绑定的NodeAdapter。
+Remove the bound NodeAdapter from the node.A node can only be bound to one NodeAdapter.
 
 **Since:** 23
 
@@ -89,7 +81,7 @@ static detachNodeAdapter(node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 要解除绑定的FrameNode节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Unbind the FrameNode node. |
 
 ## dispose
 
@@ -97,7 +89,7 @@ static detachNodeAdapter(node: FrameNode): void
 dispose(): void
 ```
 
-立即释放当前的NodeAdapter。如果是已绑定的状态，会先进行解绑操作，再释放当前的NodeAdapter。
+Dispose the NodeAdapter immediately.
 
 **Since:** 23
 
@@ -115,8 +107,7 @@ dispose(): void
 getAllAvailableItems(): Array<FrameNode>
 ```
 
-获取所有有效数据。有效节点数据包括显示在屏幕上的节点以及预加载的节点。其中预加载节点的数量可依照LazyForEach的  
-[使用限制](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#使用限制)，调整父容器的cachedCount属性进行设置。
+Obtain all data results.
 
 **Since:** 23
 
@@ -132,13 +123,15 @@ getAllAvailableItems(): Array<FrameNode>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FrameNode&gt; | FrameNode数据节点集合。 |
+| Array&lt;FrameNode&gt; | Return all valid FrameNode collections. |
 
 ## insertItem
 
 ```TypeScript
 insertItem(start: int, count: int): void
 ```
+
+Define data insertion operations.Insert a specified amount of data starting from the index value.
 
 **Since:** 23
 
@@ -154,8 +147,8 @@ insertItem(start: int, count: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | 新增的节点开始索引值。取值范围：[0, +∞) |
-| count | int | Yes | 新增数据节点的数量。取值范围：[0, +∞) |
+| start | int | Yes | Start Insert index values for data. |
+| count | int | Yes | Insert the number of data. |
 
 ## isDisposed
 
@@ -163,7 +156,7 @@ insertItem(start: int, count: int): void
 isDisposed(): boolean
 ```
 
-查询当前NodeAdapter对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
+Get if the NodeAdapter is disposed.
 
 **Since:** 23
 
@@ -179,13 +172,15 @@ isDisposed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 后端实体节点是否解除引用。true为节点已与后端实体节点解除引用，false为节点未与后端实体节点解除引用。 |
+| boolean | Returns true if the NodeAdapter is disposed, false otherwise. |
 
 ## moveItem
 
 ```TypeScript
 moveItem(from: int, to: int): void
 ```
+
+Define data movement operations. Move data from the starting index to the ending index.
 
 **Since:** 23
 
@@ -201,14 +196,16 @@ moveItem(from: int, to: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | int | Yes | 数据移动的原始索引值。取值范围：[0, +∞) |
-| to | int | Yes | 数据移动的目的索引值。取值范围：[0, +∞) |
+| from | int | Yes | Starting index value. |
+| to | int | Yes | End index value. |
 
 ## onAttachToNode
 
 ```TypeScript
 onAttachToNode(target: FrameNode): void
 ```
+
+This callback will be triggered when a FrameNode is bound.
 
 **Since:** 23
 
@@ -224,13 +221,15 @@ onAttachToNode(target: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定NodeAdapter的FrameNode节点。 |
+| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
 
 ## onCreateChild
 
 ```TypeScript
 onCreateChild(index: int): FrameNode
 ```
+
+Call this callback when loading for the first time or when a new node slides in.
 
 **Since:** 23
 
@@ -246,13 +245,13 @@ onCreateChild(index: int): FrameNode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 加载节点索引值。取值范围：[0, +∞) |
+| index | int | Yes | Load the index value of the data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | 返回开发者创建的FrameNode节点。 |
+| [FrameNode](arkts-arkui-framenode-c.md) | Returns the FrameNode node that loads the node. |
 
 ## onDetachFromNode
 
@@ -278,6 +277,8 @@ This callback will be triggered when the binding is released.
 onDisposeChild(id: int, node: FrameNode): void
 ```
 
+Called when the child node is about to be destroyed.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -292,14 +293,16 @@ onDisposeChild(id: int, node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | 即将销毁的子节点id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 即将销毁的FrameNode节点。 |
+| id | int | Yes | The child node ID that is about to be destroyed. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode node that is about to be destroyed. |
 
 ## onGetChildId
 
 ```TypeScript
 onGetChildId(index: int): int
 ```
+
+Call this callback when loading for the first time or when a new node slides in.Used to generate custom IDs,developers need to ensure the uniqueness of the IDs themselves.
 
 **Since:** 23
 
@@ -315,19 +318,21 @@ onGetChildId(index: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 加载节点索引值。取值范围：[0, +∞) |
+| index | int | Yes | Load the index value of the data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回开发者自定义生成的Id，需要开发者自行保证Id的唯一性。 |
+| int | Returning the developer's custom ID requires the developer to ensure its uniqueness. |
 
 ## onUpdateChild
 
 ```TypeScript
 onUpdateChild(id: int, node: FrameNode): void
 ```
+
+Call this callback when reloading or reusing.
 
 **Since:** 23
 
@@ -343,8 +348,8 @@ onUpdateChild(id: int, node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | 复用节点的id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 被复用的FrameNode节点。 |
+| id | int | Yes | The child node ID that is about to be reloaded. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Reused FrameNode nodes. |
 
 ## reloadAllItems
 
@@ -352,7 +357,7 @@ onUpdateChild(id: int, node: FrameNode): void
 reloadAllItems(): void
 ```
 
-重新加载全部数据操作。实际调用了LazyForEach中的[OnDataReloaded](arkts-arkui-lazyforeach-datachangelistener-i.md#ondatareloaded)接口通知组件重新加载所有数据。
+Define the operation of reloading all data.
 
 **Since:** 23
 
@@ -370,6 +375,8 @@ reloadAllItems(): void
 reloadItem(start: int, count: int): void
 ```
 
+Define the data reload operation.Reload a specified amount of data starting from the index value.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -384,14 +391,16 @@ reloadItem(start: int, count: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | 重新加载的节点开始索引值。&lt;br/&gt;取值范围：[0, +∞) |
-| count | int | Yes | 重新加载数据节点的数量。&lt;br/&gt;取值范围：[0, +∞) |
+| start | int | Yes | Start loading index values for data. |
+| count | int | Yes | Load the number of data. |
 
 ## removeItem
 
 ```TypeScript
 removeItem(start: int, count: int): void
 ```
+
+Define data deletion operations.Delete a specified amount of data starting from the index value.
 
 **Since:** 23
 
@@ -407,8 +416,8 @@ removeItem(start: int, count: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | 删除的节点开始索引值。取值范围：[0, +∞) |
-| count | int | Yes | 删除数据节点的数量。取值范围：[0, +∞) |
+| start | int | Yes | Start deleting index values for data. |
+| count | int | Yes | Delete the number of data. |
 
 ## totalNodeCount
 

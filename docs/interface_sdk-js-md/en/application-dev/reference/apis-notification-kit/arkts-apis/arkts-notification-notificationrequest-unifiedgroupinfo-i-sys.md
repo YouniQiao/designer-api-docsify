@@ -1,6 +1,6 @@
 # UnifiedGroupInfo (System API)
 
-描述通知智能聚合信息字段。
+Describes the fields of notification intelligent unification information.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 content?: string
 ```
 
-聚合组摘要正文。
+Unified group summary.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ content?: string
 extraInfo?: { [key: string]: any }
 ```
 
-其他聚合信息。
+Other unification information.
 
 **Type:** { [key: string]: any }
 
@@ -58,7 +58,7 @@ extraInfo?: { [key: string]: any }
 key?: string
 ```
 
-聚合组ID。
+Unified group ID.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ key?: string
 sceneName?: string
 ```
 
-聚合场景名称。
+Name of a unification scene.
 
 **Type:** string
 
@@ -98,7 +98,7 @@ sceneName?: string
 title?: string
 ```
 
-聚合组标题。
+Unified group title.
 
 **Type:** string
 

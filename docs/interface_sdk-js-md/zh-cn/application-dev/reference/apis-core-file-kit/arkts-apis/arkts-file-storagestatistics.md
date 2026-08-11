@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## 汇总
 
 ### 函数

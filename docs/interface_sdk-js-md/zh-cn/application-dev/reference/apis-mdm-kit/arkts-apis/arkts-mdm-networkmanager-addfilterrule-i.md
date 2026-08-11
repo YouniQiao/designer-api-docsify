@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
-```
-
 ## action
 
 ```TypeScript
@@ -84,7 +78,7 @@ direction: Direction
 
 规则链。
 
-**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
+**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 10
 
@@ -124,7 +118,7 @@ protocol?: Protocol
 
 网络协议。
 
-**类型：** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
+**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **起始版本：** 10
 

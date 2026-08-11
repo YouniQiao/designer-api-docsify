@@ -1,6 +1,6 @@
 # FoldState (System API)
 
-定义设备的折展状态枚举类型。
+Define the folding state of wallpaper
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 NORMAL = 0
 ```
 
-设备默认状态。
+Indicates the device type is normal device.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ NORMAL = 0
 UNFOLD_ONCE_STATE = 1
 ```
 
-一次展开态。
+Indicates the once unfold state.
 
 **Since:** 14
 
@@ -54,7 +54,7 @@ UNFOLD_ONCE_STATE = 1
 UNFOLD_TWICE_STATE = 2
 ```
 
-二次展开态。
+Indicates the secondary unfold state.
 
 **Since:** 14
 

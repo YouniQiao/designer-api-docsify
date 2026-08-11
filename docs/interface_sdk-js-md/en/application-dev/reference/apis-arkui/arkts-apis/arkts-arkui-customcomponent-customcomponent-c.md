@@ -1,6 +1,6 @@
 # CustomComponent
 
-定义自定义组件类
+Definition of custom component class.
 
 **Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent<T_Options>](BaseCustomComponent<T_Options>)
 
@@ -47,6 +47,44 @@ Implementation for creating a custom component
 | initializers | () =&gt; S_Options | No | initial data for all the fields in custom component |
 | reuseId | string | No | reuse id for reusable. Only valid if custom component decorated with @Reusable |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
+
+## _invokeImpl
+
+```TypeScript
+static _invokeImpl<S extends CustomComponent<S, S_Options>, S_Options>(
+        @Builder styles: ((instance: S) => void) | undefined,
+        factory: () => S,
+        initializers?: () => S_Options,
+        reuseId?: string,
+        content?: CustomBuilder,
+        options?: CustomComponentV1InvokeOptions
+    ): void
+```
+
+Implementation for creating a custom component
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Builder
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CustomComponent-static _invokeImpl<S extends CustomComponent<S, S_Options>, S_Options>(        @Builder styles: ((instance: S) => void) | undefined,        factory: () => S,        initializers?: () => S_Options,        reuseId?: string,        content?: CustomBuilder,        options?: CustomComponentV1InvokeOptions    ): void--><!--Device-CustomComponent-static _invokeImpl<S extends CustomComponent<S, S_Options>, S_Options>(        @Builder styles: ((instance: S) => void) | undefined,        factory: () => S,        initializers?: () => S_Options,        reuseId?: string,        content?: CustomBuilder,        options?: CustomComponentV1InvokeOptions    ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| styles | ((instance: S) =&gt; void) \| undefined | Yes | styles of custom component |
+| factory | () =&gt; S | Yes | factory to create instance of custom component |
+| initializers | () =&gt; S_Options | No | initial data for all the fields in custom component |
+| reuseId | string | No | reuse id for reusable. Only valid if custom component decorated with @Reusable |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
+| options | [CustomComponentV1InvokeOptions](arkts-arkui-customcomponent-customcomponentv1invokeoptions-i.md) | No | additional invoke options |
 
 ## aboutToReuse
 

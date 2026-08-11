@@ -12,7 +12,7 @@ import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>
 ```
 
-根据应用包名、扩展组件类型、资源信息标志、应用分身ID获取应用的扩展组件资源。使用同步方式返回。
+Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type, resource flags, and clone ID. This API returns the result synchronously.
 
 **Since:** 20
 
@@ -30,25 +30,25 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
-| extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | 应用的扩展组件类型，仅支持ExtensionAbilityType.INPUT_METHOD 、ExtensionAbilityType.SHARE、ExtensionAbilityType.ACTION。 |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源信息标志，指示需要获取的资源信息的内容。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 应用分身的ID，默认值是0。取值范围0~5，取值为0表示主应用。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | ExtensionAbility type. Only **ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** are supported. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource information flags, which indicate the type of resource information to obtain. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | ID of the application clone. The default value is **0**. The value ranges from 0 to 5. The value **0** indicates the main application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的扩展组件资源，包含图标和名称等信息。 |
+| Array&lt;LauncherAbilityResourceInfo&gt; | ExtensionAbility resource information of the application, including the icon and name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700061 | AppIndex not in valid range or not found. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

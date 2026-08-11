@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-## 导入模块
-
-```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## 汇总
 
 ### 函数

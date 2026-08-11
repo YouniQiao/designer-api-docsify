@@ -1,6 +1,6 @@
 # AxisRange
 
-输入设备的轴信息。
+Defines the axis range of an input device.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 axis: AxisType
 ```
 
-输入设备的轴类型。
+Axis type of an input device.
 
 **Type:** [AxisType](../../apis-arkui/arkts-apis/arkts-arkui-axistype-e.md)
 
@@ -40,7 +40,7 @@ axis: AxisType
 flat: int
 ```
 
-轴的基准值。
+Benchmark value of the axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ flat: int
 fuzz: int
 ```
 
-轴的模糊值。
+Fuzzy value of the axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ fuzz: int
 max: int
 ```
 
-轴的最大值。
+Maximum value of the axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ max: int
 min: int
 ```
 
-轴的最小值。
+Minimum value of the axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ min: int
 resolution: int
 ```
 
-轴的分辨率。
+Resolution of the axis.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +130,7 @@ resolution: int
 source: SourceType
 ```
 
-输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
+Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
 **Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 

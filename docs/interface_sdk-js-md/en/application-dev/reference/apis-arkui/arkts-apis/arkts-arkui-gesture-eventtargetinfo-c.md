@@ -1,6 +1,6 @@
 # EventTargetInfo
 
-手势识别器对应组件的信息。
+Defines the event target information.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 getId(): string
 ```
 
-返回当前组件的组件标识。
+Returns the component's inspector id.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ getId(): string
 
 | Type | Description |
 | --- | --- |
-| string | 当前组件的[组件标识]{ |
+| string | the inspector id of the component |
 
 ## getUniqueId
 
@@ -40,7 +40,7 @@ getId(): string
 getUniqueId(): int
 ```
 
-返回当前组件的唯一id。
+Returns the component's unique id.
 
 **Since:** 26.0.0
 
@@ -56,5 +56,5 @@ getUniqueId(): int
 
 | Type | Description |
 | --- | --- |
-| int | 当前组件的唯一id。 |
+| int | the unique id of the component |
 

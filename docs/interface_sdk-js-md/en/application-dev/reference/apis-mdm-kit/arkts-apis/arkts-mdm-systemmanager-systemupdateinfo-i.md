@@ -1,6 +1,6 @@
 # SystemUpdateInfo
 
-待更新的系统版本信息。
+Represents information about the system version to update.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 firstReceivedTime: number
 ```
 
-第一次收到系统更新包的时间（单位：秒）。
+Time when the system update package is received for the first time, in seconds.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ firstReceivedTime: number
 packageType: string
 ```
 
-待更新的系统更新包类型，类型分为normal和patch类型。
+Type of the system update package to update. The value can be **normal** or **patch**.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ packageType: string
 versionName: string
 ```
 
-待更新的系统版本名称。
+System version to update.
 
 **Type:** string
 

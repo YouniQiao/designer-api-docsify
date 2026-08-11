@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 navigationId: ResourceStr
 ```
 
-The navigationId that need observation
+The navigationId that need observation.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

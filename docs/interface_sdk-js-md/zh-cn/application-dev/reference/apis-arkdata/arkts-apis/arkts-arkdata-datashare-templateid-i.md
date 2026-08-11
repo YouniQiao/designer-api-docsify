@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## bundleNameOfOwner
 
 ```TypeScript

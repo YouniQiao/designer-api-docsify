@@ -4,7 +4,7 @@
 export type NotificationTime = _NotificationTime
 ```
 
-通知计时信息。
+Describes the notification timing information.
 
 **Since:** 11
 

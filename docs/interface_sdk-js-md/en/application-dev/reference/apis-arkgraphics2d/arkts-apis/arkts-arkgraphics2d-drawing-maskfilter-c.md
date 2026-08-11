@@ -1,14 +1,15 @@
 # MaskFilter
 
-蒙版滤镜对象，用于对绘制内容施加模糊效果。
+Implements a mask filter.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 12开始支持。
+> - The initial APIs of this class are supported since API version 12.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 12
 
@@ -30,7 +31,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 ```
 
-创建具有模糊效果的蒙版滤镜。
+Creates a mask filter with a blur effect.
 
 **Since:** 12
 
@@ -44,20 +45,20 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
-| sigma | number | Yes | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | Blur type. |
+| sigma | number | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。 |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | Maskfilter** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlurMaskFilter
 
@@ -65,7 +66,7 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | undefined
 ```
 
-创建具有模糊效果的蒙版滤镜。
+Creates a mask filter with a blur effect.
 
 **Since:** 23
 
@@ -79,18 +80,18 @@ static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | und
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
-| sigma | double | Yes | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Yes | Blur type. |
+| sigma | double | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | MaskFilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

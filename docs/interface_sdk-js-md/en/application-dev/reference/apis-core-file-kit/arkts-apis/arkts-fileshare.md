@@ -1,6 +1,6 @@
 # @ohos.fileshare
 
-提供文件分享能力。
+Provides fileshare APIS
 
 **Since:** 9
 
@@ -22,50 +22,50 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatepermission) | 激活多个已持久化授权的文件或目录，使用Promise异步回调。 |
-| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkpersistentpermission) | 校验所选择的多个文件或目录URI是否已持久化授权，使用Promise异步回调。 |
-| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatepermission) | 取消激活多个已持久化授权的文件或目录，使用Promise异步回调。 |
-| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistpermission) | 对所选择的多个文件或目录URI进行持久化授权，使用Promise异步回调。 |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokepermission) | 对所选择的多个文件或目录URI取消持久化授权，使用Promise异步回调。 |
+| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatepermission) | Enable the URI that have been permanently authorized |
+| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkpersistentpermission) | Check persistent permissions for the URI. |
+| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatepermission) | Stop the authorized URI that has been enabled |
+| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistpermission) | Set persistence permissions for the URI |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokepermission) | Revoke persistence permissions for the URI |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkpathpermission) | 异步方法校验所选择的多个文件或目录是否有临时或持久化授权，使用Promise异步回调。 |
-| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getpersistentpolicy) | 获取应用程序的持久化授权策略，使用Promise异步回调。 |
-| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getshareddirectoryinfo) | 获取所有应用捐献的沙箱目录。使用Promise异步回调。 |
-| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantshareddirectorypermission) | 授予应用捐献目录的临时访问权限。使用Promise异步回调。 |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission) | 为应用授予公共目录文件URI的临时访问权限，使用Callback异步回调。 |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-1) | 为应用授予公共目录文件URI的临时访问权限，使用Promise异步回调。 |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-2) | 给应用授予目标文件临时权限，使用Promise异步回调。 |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-1) | 撤销指定应用的全部持久化文件授权，使用Promise异步回调。 |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-2) | 撤销指定应用对URI的持久化授权，使用Promise异步回调。 |
-| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeshareddirectorypermission) | 撤销应用的捐献目录临时访问权限。使用Promise异步回调。 |
+| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkpathpermission) | Check permissions for the path. |
+| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getpersistentpolicy) | Get all persistence permissions for the application. |
+| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getshareddirectoryinfo) | Gets the shared sandbox directories of applications |
+| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantshareddirectorypermission) | Provides a permission grant for application-shared directories |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission) | Provides grant uri permission for app |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-1) | Provides grant uri permission for app |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-2) | Grant URI permissions for an application. |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-1) | Revoke all persistence permissions for the application. |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-2) | Revoke persistence permissions for the URI. |
+| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeshareddirectorypermission) | Revokes permission for application-shared directories |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | 需要查询的文件或目录的信息。 |
-| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | 授予或激活权限失败的URI策略结果。 |
-| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | 需要授予或激活URI访问权限的策略信息。 |
+| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path. |
+| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI. |
+| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md) | 应用程序向系统捐献的目录信息。 |
+| [SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md) | The directory information shared with the system by the application. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | 枚举授予或激活权限的URI访问模式。 |
-| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | 枚举授予或激活权限策略失败的URI对应的错误码。 |
-| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | 枚举所查询策略信息对应的授权模式。 |
+| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types. |
+| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation. |
+| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path. |
 

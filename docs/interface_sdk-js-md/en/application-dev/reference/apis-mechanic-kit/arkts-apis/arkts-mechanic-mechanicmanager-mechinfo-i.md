@@ -1,6 +1,6 @@
 # MechInfo
 
-机械设备信息
+Mechanical device information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 mechDeviceType: MechDeviceType
 ```
 
-机械设备类型
+Type of the mechanical device.
 
 **Type:** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
@@ -40,7 +40,7 @@ mechDeviceType: MechDeviceType
 mechId: int
 ```
 
-机械设备ID
+ID of the mechanical device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ mechId: int
 mechName: string
 ```
 
-机械设备名称
+Name of the mechanical device.
 
 **Type:** string
 

@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function offApplicationFocusStateChange(callback?: Callback<boolean>): void
 ```
 
-关闭应用进程获焦状态变化的监听。
+Unregister the callback for application process focus state changes.
 
 **Since:** 26.0.0
 
@@ -29,22 +29,4 @@ function offApplicationFocusStateChange(callback?: Callback<boolean>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result whether application process focused or not. If not provided, all callbacks for the given event type will be removed. |
-
-## Examples
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-const callback = (bool: boolean) => {
-  // ...
-}
-try {
-  window.onApplicationFocusStateChange(callback);
-  window.offApplicationFocusStateChange(callback);
-  // Unregister all the callbacks that have been registered through on().
-  window.offApplicationFocusStateChange(); 
-} catch (exception) {
-  console.error(`Failed to enable or disable the listener for application focus state changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
 

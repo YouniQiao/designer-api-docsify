@@ -13,12 +13,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## generateKeyPair
 
 ```TypeScript
@@ -51,9 +45,9 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因：参数类型不正确。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：参数类型不正确。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -130,11 +124,13 @@ generateKeyPair(): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -177,6 +173,51 @@ function testGenerateKeyPair() {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt("166484678330980230918288017058118750588936475825075636160948086324584506253050733641653846374072496744751373749513800668308592471875927510262190610484075661191955336781308738545148462904698011665231210784009585531833742255763058353244797364068379260289632671394123437886363152901206340520347078776281501407017"),
+    q: BigInt("22136567887935188521122291396237495404238014904987508308073618539643"),
+    g: BigInt("31431106800686660210719504187936474649951169233459600933271043344986900452096905678402332127191280905097978014715716847063988554957190923585487931844988906222454145404829468544959657389200810483171610136624344260441375546451841847753251202124107818741854127006757173424804029343596388967724568105310582438077"),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt("17151574244286446262852711552260633032889574813459849237631670562777"),
+    pk: BigInt("122481462760261281537933930327074654922520342706632667362863059195007078325664832084167283707829801130185756952585086523755112278127045105337478944738740971392867045662092290058737805402824260644308348496645265005145482163276902936269594425436610316947077436440924891874036982298199295240775886921373610618219"),
+  }
+  return dsaKeyPairSpec;
+}
+
+async function testGenerateKeyPair()
+{
+  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+  try {
+    let keyPair = await asyKeyGeneratorBySpec.generateKeyPair();
+    console.info('generateKeyPair result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generateKeyPair failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
 ## generateKeyPairSync
 
 ```TypeScript
@@ -209,9 +250,9 @@ generateKeyPairSync(): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -294,9 +335,9 @@ generatePriKey(callback: AsyncCallback<PriKey>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因：必填参数未指定。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：必填参数未指定。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -374,11 +415,13 @@ generatePriKey(): Promise<PriKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -421,6 +464,50 @@ function testGeneratePriKey() {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt("166484678330980230918288017058118750588936475825075636160948086324584506253050733641653846374072496744751373749513800668308592471875927510262190610484075661191955336781308738545148462904698011665231210784009585531833742255763058353244797364068379260289632671394123437886363152901206340520347078776281501407017"),
+    q: BigInt("22136567887935188521122291396237495404238014904987508308073618539643"),
+    g: BigInt("31431106800686660210719504187936474649951169233459600933271043344986900452096905678402332127191280905097978014715716847063988554957190923585487931844988906222454145404829468544959657389200810483171610136624344260441375546451841847753251202124107818741854127006757173424804029343596388967724568105310582438077"),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt("17151574244286446262852711552260633032889574813459849237631670562777"),
+    pk: BigInt("122481462760261281537933930327074654922520342706632667362863059195007078325664832084167283707829801130185756952585086523755112278127045105337478944738740971392867045662092290058737805402824260644308348496645265005145482163276902936269594425436610316947077436440924891874036982298199295240775886921373610618219"),
+  }
+  return dsaKeyPairSpec;
+}
+
+async function testGeneratePriKey() {
+  try {
+    let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+    let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+    let keyGenPromise = await asyKeyGeneratorBySpec.generatePriKey();
+    console.info('generatePriKey result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generatePriKey failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
 ## generatePriKeySync
 
 ```TypeScript
@@ -454,9 +541,9 @@ generatePriKeySync(): PriKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -537,9 +624,9 @@ generatePubKey(callback: AsyncCallback<PubKey>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因：参数类型不正确。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：参数类型不正确。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -617,11 +704,13 @@ generatePubKey(): Promise<PubKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -664,6 +753,51 @@ function testGeneratePubKey() {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt("166484678330980230918288017058118750588936475825075636160948086324584506253050733641653846374072496744751373749513800668308592471875927510262190610484075661191955336781308738545148462904698011665231210784009585531833742255763058353244797364068379260289632671394123437886363152901206340520347078776281501407017"),
+    q: BigInt("22136567887935188521122291396237495404238014904987508308073618539643"),
+    g: BigInt("31431106800686660210719504187936474649951169233459600933271043344986900452096905678402332127191280905097978014715716847063988554957190923585487931844988906222454145404829468544959657389200810483171610136624344260441375546451841847753251202124107818741854127006757173424804029343596388967724568105310582438077"),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt("17151574244286446262852711552260633032889574813459849237631670562777"),
+    pk: BigInt("122481462760261281537933930327074654922520342706632667362863059195007078325664832084167283707829801130185756952585086523755112278127045105337478944738740971392867045662092290058737805402824260644308348496645265005145482163276902936269594425436610316947077436440924891874036982298199295240775886921373610618219"),
+  }
+  return dsaKeyPairSpec;
+}
+
+async function testGeneratePubKey()
+{
+  try {
+    let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+    let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+    let keyGenPromise = await asyKeyGeneratorBySpec.generatePubKey();
+    console.info('generatePubKey result: success.');
+  } catch(err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generatePubKey failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
 ## generatePubKeySync
 
 ```TypeScript
@@ -697,9 +831,9 @@ generatePubKeySync(): PubKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 

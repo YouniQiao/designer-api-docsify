@@ -13,6 +13,6 @@ The module defines plugin information, which is obtained through the
 
 | Name | Description |
 | --- | --- |
-| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md) | 插件信息。 |
-| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md) | 插件的模块信息。 |
+| [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md) | Defines the plugin information. |
+| [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md) | Defines the module information of a plugin. |
 

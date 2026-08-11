@@ -4,12 +4,12 @@
 
 ```TypeScript
 export declare function RelativeContainer(
-
+    
     content_?: CustomBuilder,
 ): RelativeContainerAttribute
 ```
 
-相对布局组件，用于复杂场景中元素对齐的布局。
+Defines RelativeContainer Component.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ export declare function RelativeContainer(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function RelativeContainer(    content_?: CustomBuilder,): RelativeContainerAttribute--><!--Device-unnamed-export declare function RelativeContainer(    content_?: CustomBuilder,): RelativeContainerAttribute-End-->
+<!--Device-unnamed-export declare function RelativeContainer(        content_?: CustomBuilder,): RelativeContainerAttribute--><!--Device-unnamed-export declare function RelativeContainer(        content_?: CustomBuilder,): RelativeContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,7 +25,7 @@ export declare function RelativeContainer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 定义子组件的Builder函数。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -45,9 +45,9 @@ export declare function RelativeContainer(
 
 Defines RelativeContainer Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

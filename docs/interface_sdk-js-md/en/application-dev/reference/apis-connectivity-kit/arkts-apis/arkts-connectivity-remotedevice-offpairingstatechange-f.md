@@ -12,7 +12,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 function offPairingStateChange(callback?: Callback<PairingStateParam>): void
 ```
 
-取消订阅星闪配对状态更改事件。
+Unsubscribes from NearLink pairing state change events.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function offPairingStateChange(callback?: Callback<PairingStateParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PairingStateParam&gt; | No | 用于监听配对状态事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PairingStateParam&gt; | No | Callback function used to listen for the pairing state event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

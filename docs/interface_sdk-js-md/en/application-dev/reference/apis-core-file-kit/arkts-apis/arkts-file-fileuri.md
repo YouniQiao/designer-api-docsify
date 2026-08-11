@@ -1,6 +1,6 @@
-# @ohos.file.fileuri(文件URI)
+# @ohos.file.fileuri
 
-提供文件URI相关接口，可用于URI与应用沙箱路径之间的转换。
+Provides fileUri APIS
 
 **Since:** 15
 
@@ -22,11 +22,11 @@ import { fileUri } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | 通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。 |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri表示文件的URI，继承自uri.URI。 |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file. |
 

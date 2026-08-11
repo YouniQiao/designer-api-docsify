@@ -1,6 +1,6 @@
 # WearDetectionResponse
 
-佩戴检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the wear detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** WearDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 value: double
 ```
 
-设备佩戴状态。取值范围：0（未佩戴）或1（已佩戴）。
+Whether the device is being worn. The value **1** means that the device is being worn, and **0** means the opposite.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

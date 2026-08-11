@@ -1,6 +1,6 @@
 # DataFilter
 
-联系人数据过滤项。
+Defines the contact data filter item.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 field: DataField
 ```
 
-联系人数据字段。
+Contact data field.
 
 **Type:** [DataField](arkts-contacts-contact-datafield-e.md)
 
@@ -42,7 +42,7 @@ field: DataField
 options: Array<FilterOptions>
 ```
 
-联系人过滤参数，数组中多个FilterOptions之间是“或”的关系，数组的最大长度为3。
+Contact filtering parameter. Multiple filter options in the array are ORed. The maximum length of the array is 3.
 
 **Type:** Array&lt;FilterOptions&gt;
 

@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function getAddedPrinters(): Promise<Array<string>>
 ```
 
-获取系统中已添加的打印机列表，使用Promise异步回调。
+Obtains the list of printers added to the system. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -28,13 +28,13 @@ function getAddedPrinters(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回包含所有已添加打印机的打印机ID的列表。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of all added printers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 

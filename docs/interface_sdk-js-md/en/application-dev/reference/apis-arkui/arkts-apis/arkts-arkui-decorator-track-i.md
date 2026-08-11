@@ -1,5 +1,7 @@
 # Track
 
+Defining Track annotation Track is a decorator used to decorate properties of class objects.Any changes to the properties decorated by Track will trigger only updates to the UI associated with those properties.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

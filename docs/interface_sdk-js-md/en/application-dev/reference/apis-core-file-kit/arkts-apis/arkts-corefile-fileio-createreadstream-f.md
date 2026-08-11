@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 ```
 
-以同步方法打开文件可读流。
+Creates a readable stream. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -26,14 +26,14 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
-| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt;- end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
+| path | string | Yes | Path of the file. |
+| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | No | The options are as follows: &lt;br&gt;- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position. &lt;br&gt;- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -46,7 +46,7 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900004 | Interrupted system call |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

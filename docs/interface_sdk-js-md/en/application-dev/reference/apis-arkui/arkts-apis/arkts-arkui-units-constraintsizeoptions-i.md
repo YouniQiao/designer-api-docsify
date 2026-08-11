@@ -1,12 +1,6 @@
 # ConstraintSizeOptions
 
-约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。
-
-> **说明：**
-> 
-> 在[Row](../../apis-arkui/arkts-components/arkts-arkui-row-i)、[Column](../../apis-arkui/arkts-components/arkts-arkui-column-i)、
-> [RelativeContainer](../../apis-arkui/arkts-components/arkts-arkui-relative_container-i)组件中，width、height设置auto表示自适应子组件。在
-> [TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)组件中，width设置auto表示自适应文本宽度。
+Defines the constrain size options.
 
 **Since:** 23
 
@@ -22,7 +16,7 @@
 maxHeight?: Length
 ```
 
-元素最大高度。
+Defines the max height.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -42,7 +36,7 @@ maxHeight?: Length
 maxWidth?: Length
 ```
 
-元素最大宽度。
+Defines the max width.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -62,7 +56,7 @@ maxWidth?: Length
 minHeight?: Length
 ```
 
-元素最小高度。
+Defines the min height.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -82,7 +76,7 @@ minHeight?: Length
 minWidth?: Length
 ```
 
-元素最小宽度。
+Defines the min width.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

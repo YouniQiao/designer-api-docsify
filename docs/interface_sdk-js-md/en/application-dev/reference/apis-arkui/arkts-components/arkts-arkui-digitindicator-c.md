@@ -1,14 +1,16 @@
 # DigitIndicator
 
-构造数字指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **说明：**
-
-> 按组翻页时，数字导航点显示的子节点数量不包括占位节点。
-
-> 数字导航点文本最大的字体缩放倍数[maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale)为2。
-
-> 页码的镜像显示依据为系统的RTL状态。
+> **NOTE：**
+> 
+> When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
+> placeholder nodes.
+> 
+> The maximum value of [maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale) for the digit-style navigation indicator is
+> **2**.
+> 
+> The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends [Indicator<DigitIndicator>](Indicator<DigitIndicator>)
 
@@ -26,14 +28,17 @@
 constructor()
 ```
 
-DotIndicator的构造函数。
+A constructor used to create a **DotIndicator** object.
 
-> **说明：**
-
-> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
+> **NOTE：**
 > 
-> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
+> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
+> distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
+> The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
+> **selectedItemHeight**.
+> 
+> - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
+> **maxDisplayCount** parameter to set the number of dots to be displayed.
 
 **Since:** 10
 
@@ -55,7 +60,7 @@ DotIndicator的构造函数。
 digitFont(value: Font): DigitIndicator
 ```
 
-Swiper组件数字导航点的字体样式。按组翻页时，数字导航点显示的子节点数量不包括占位节点。
+Sets the font style of the digit-style navigation indicator.
 
 **Since:** 10
 
@@ -75,13 +80,13 @@ Swiper组件数字导航点的字体样式。按组翻页时，数字导航点�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | 设置Swiper组件数字导航点的字体样式。&lt;br/&gt;只支持Font中size和weight参数，family和style设置不生效。&lt;br/&gt;默认值：&lt;br/&gt;{ size: 14,  weight: FontWeight.Normal } |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the digit-style navigation indicator.&lt;br&gt;Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.&lt;br&gt;Default value:&lt;br&gt;{ size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## fontColor
 
@@ -89,7 +94,7 @@ Swiper组件数字导航点的字体样式。按组翻页时，数字导航点�
 fontColor(value: ResourceColor): DigitIndicator
 ```
 
-Swiper组件数字导航点的字体颜色。
+Sets the font color of the digit-style navigation indicator.
 
 **Since:** 10
 
@@ -109,13 +114,13 @@ Swiper组件数字导航点的字体颜色。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedDigitFont
 
@@ -123,7 +128,7 @@ Swiper组件数字导航点的字体颜色。
 selectedDigitFont(value: Font): DigitIndicator
 ```
 
-选中Swiper组件数字导航点的字体样式。
+Sets the font style of the selected digit-style navigation indicator.
 
 **Since:** 10
 
@@ -143,13 +148,13 @@ selectedDigitFont(value: Font): DigitIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | 设置选中Swiper组件数字导航点的字体样式。&lt;br/&gt;默认值：&lt;br/&gt;{ size: 14, weight: FontWeight.Normal } |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the selected digit-style navigation indicator.&lt;br&gt;Default value:&lt;br&gt;{?size:?1 4,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedFontColor
 
@@ -157,7 +162,7 @@ selectedDigitFont(value: Font): DigitIndicator
 selectedFontColor(value: ResourceColor): DigitIndicator
 ```
 
-选中Swiper组件数字导航点的字体颜色。
+Sets the font color of the selected digit-style navigation indicator.
 
 **Since:** 10
 
@@ -177,11 +182,11 @@ selectedFontColor(value: ResourceColor): DigitIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置选中Swiper组件数字导航点的字体颜色。&lt;br/&gt;默认值：'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
 

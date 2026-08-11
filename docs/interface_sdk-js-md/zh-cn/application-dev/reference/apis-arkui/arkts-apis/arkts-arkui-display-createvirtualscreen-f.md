@@ -1,11 +1,5 @@
 # createVirtualScreen
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## createVirtualScreen
 
 ```TypeScript
@@ -40,12 +34,14 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function createVirtualScreen can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,6 +59,27 @@ display.createVirtualScreen(config).then((screenId: number) => {
   console.info(`Succeeded in creating the virtual screen. ScreenId: ${screenId}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config : display.VirtualScreenConfig = {
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: '',
+  supportsFocus: false
+};
+
+display.createVirtualScreen(config).then((screenId: long) => {
+  console.info(`Succeeded in creating the virtual screen.ScreenId : ${screenId}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

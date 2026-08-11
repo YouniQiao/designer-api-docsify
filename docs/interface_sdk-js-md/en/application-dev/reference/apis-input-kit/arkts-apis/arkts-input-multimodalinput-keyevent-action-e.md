@@ -1,6 +1,6 @@
 # Action
 
-按键事件类型。
+Key event type.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 CANCEL = 0
 ```
 
-按键取消。
+Cancellation of a key action.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ CANCEL = 0
 DOWN = 1
 ```
 
-按键按下。
+Key press.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ DOWN = 1
 UP = 2
 ```
 
-按键抬起。
+Key release.
 
 **Since:** 9
 

@@ -12,9 +12,9 @@ import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>
 ```
 
-调用此接口获取属性值并返回结果。使用Promise异步回调。
+Obtains a property value. This API uses a promise to return the result.
 
-propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义的SKF接口名作为属性ID，支持的ID包括如下：
+The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT0016-2023 can be used as property IDs. The supported IDs are as follows:
 
 - SKF_EnumDev  
 - SKF_GetDevInfo  
@@ -35,31 +35,31 @@ propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) 获取，该接口的返回结果中附带resourceId。 |
-| propertyId | string | Yes | 查找操作的属性名称，是GMT 0016-2023中定义的SKF接口名，应用开发者需要针对接口名进行适配。 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | 需要传递给 [Extension Ability](arkts-security-cryptoextensionability.md)的输入参数。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)是非法参数。 |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) . The result contains **resourceId**. |
+| propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 001 6-2023. You need to make adaptation based on the API name. |
+| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed to [Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HuksExternalCryptoParam&gt;&gt; | Promise对象，返回调用接口的结果。当调用成功时，返回结果为HuksExternalCryptoParam类型的数组，包 含要查询的属性。 |
+| Promise&lt;Array&lt;HuksExternalCryptoParam&gt;&gt; | Promise that returns the operation result. If the call is successful, an array of the **HuksExternalCryptoParam** type is returned, containing the properties to be queried. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12000023 | The UKey PIN is not authenticated. |
-| 801 | API is not supported. |
-| 12000006 | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
-| 12000005 | IPC communication failed. |
-| 12000021 | The UKey PIN is locked. |
-| 12000020 | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
-| 12000018 | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
-| 12000014 | If the memory is insufficient. |
-| 12000012 | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
-| 12000011 | If the cached resource ID is not found. |
-| 12000024 | If the provider or UKey is busy. |
+| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | The UKey PIN is not authenticated. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | The UKey PIN is locked. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | If the memory is insufficient. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | If the cached resource ID is not found. |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | If the provider or UKey is busy. |
 
 ## Examples
 
@@ -78,7 +78,7 @@ const testResourceId = JSON.stringify({
 let propertyId = "SKF_EnumDev";
 const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
 
-console.info('promise: await huksExternalCrypto getProperty.');
+console.info(`promise: await huksExternalCrypto getProperty`);
 async function testFunction() : Promise<void>
 {
   try {

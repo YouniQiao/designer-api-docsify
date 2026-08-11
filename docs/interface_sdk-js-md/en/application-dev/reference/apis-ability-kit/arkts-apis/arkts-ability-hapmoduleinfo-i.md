@@ -1,6 +1,6 @@
 # HapModuleInfo
 
-HAP信息。
+The module defines the HAP module information.
 
 **Since:** 9
 
@@ -16,8 +16,9 @@ HAP信息。
 readonly abilitiesInfo: Array<AbilityInfo>
 ```
 
-当前模块所有Ability的信息。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ABILITY获取。
+Information about all ability components of the current module. The information can be obtained by passing in  
+**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-i.md)&gt;
 
@@ -37,7 +38,7 @@ readonly abilitiesInfo: Array<AbilityInfo>
 readonly codePath: string
 ```
 
-模块的安装路径。
+Installation path of the module.
 
 **Type:** string
 
@@ -57,7 +58,7 @@ readonly codePath: string
 readonly dependencies: Array<Dependency>
 ```
 
-模块运行依赖的动态共享库列表。
+Dynamic shared libraries on which the module depends.
 
 **Type:** Array&lt;Dependency&gt;
 
@@ -77,7 +78,7 @@ readonly dependencies: Array<Dependency>
 readonly description: string
 ```
 
-模块描述信息。
+Module description.
 
 **Type:** string
 
@@ -97,7 +98,7 @@ readonly description: string
 readonly descriptionId: long
 ```
 
-描述信息的资源ID值。
+ID of the module description.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -117,7 +118,7 @@ readonly descriptionId: long
 readonly deviceTypes: Array<string>
 ```
 
-模块支持安装运行的[设备类型](../../../quick-start/module-configuration-file.md#devicetypes标签)的集合。
+Array of [device types](../../../quick-start/module-configuration-file.md#devicetypes) that the module supports for installation and running.
 
 **Type:** Array&lt;string&gt;
 
@@ -137,8 +138,8 @@ readonly deviceTypes: Array<string>
 readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 ```
 
-当前模块所有ExtensionAbility的信息。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY获取。
+Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags**parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)&gt;
 
@@ -158,8 +159,9 @@ readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 readonly fileContextMenuConfig: string
 ```
 
-模块的文件菜单配置。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_MENU获取。
+File menu configuration of the module. The information can be obtained by passing in  
+**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** string
 
@@ -179,7 +181,7 @@ readonly fileContextMenuConfig: string
 readonly hashValue: string
 ```
 
-模块的Hash值。
+Hash value of the module.
 
 **Type:** string
 
@@ -199,9 +201,9 @@ readonly hashValue: string
 readonly icon: string
 ```
 
-当前模块入口Ability的[图标](../../../quick-start/layered-image.md)，取值为图标资源文件的索引，与模块配置文件中  
-[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)或  
-[extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的icon字段值一致。若未配置入口Ability，则为空。
+[Icon](../../../quick-start/layered-image.md) for the entry ability of the current module. It is the index of the icon resource file and should match the value of **icon** in the  
+[abilities](../../../quick-start/module-configuration-file.md#abilities) or  
+[extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
 
 **Type:** string
 
@@ -221,7 +223,7 @@ readonly icon: string
 readonly iconId: long
 ```
 
-当前模块入口Ability的图标[资源ID](../../../quick-start/resource-categories-and-access.md#资源目录)值。若未配置入口Ability，则为0。
+[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the icon for the entry ability of the current module. If no entry ability is configured, this parameter is left empty.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -241,7 +243,7 @@ readonly iconId: long
 readonly installationFree: boolean
 ```
 
-模块是否支持免安装（无需用户通过应用市场显式安装），取值为true表示支持免安装，取值为false表示不支持免安装。
+Whether the module supports the installation-free feature. Installation-free means that the module does not need to be explicitly installed through an app market. **true** if the module supports installation-free, **false**otherwise.
 
 **Type:** boolean
 
@@ -261,8 +263,8 @@ readonly installationFree: boolean
 readonly label: string
 ```
 
-当前模块入口Ability的名称，取值为字符串资源的索引，与模块配置文件中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)或  
-[extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)的label字段值一致。若未配置入口Ability，则为空。
+Label of the entry ability of the current module. It is the index of a string resource and should match the value of **label** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or  
+[extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
 
 **Type:** string
 
@@ -282,7 +284,7 @@ readonly label: string
 readonly labelId: long
 ```
 
-当前模块入口Ability名称的[资源ID](../../../quick-start/resource-categories-and-access.md#资源目录)值。若未配置入口Ability，则为0。
+[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the label for the entry ability of the current module. If no entry ability is configured, this parameter is left empty.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -302,7 +304,7 @@ readonly labelId: long
 readonly mainElementName: string
 ```
 
-当前模块的入口UIAbility名称或者ExtensionAbility名称。
+Name of the UIAbility or ExtensionAbility that serves as the entry of the current module.
 
 **Type:** string
 
@@ -322,8 +324,8 @@ readonly mainElementName: string
 readonly metadata: Array<Metadata>
 ```
 
-当前模块的元数据。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_METADATA获取。
+Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -343,7 +345,7 @@ readonly metadata: Array<Metadata>
 readonly name: string
 ```
 
-模块名称。
+Module name.
 
 **Type:** string
 
@@ -363,7 +365,7 @@ readonly name: string
 readonly nativeLibraryPath: string
 ```
 
-应用程序内模块本地库文件路径。
+Local library file path of the module in the application.
 
 **Type:** string
 
@@ -381,7 +383,7 @@ readonly nativeLibraryPath: string
 readonly preloads: Array<PreloadItem>
 ```
 
-原子化服务中模块的预加载列表。
+Preloaded modules in the atomic service.
 
 **Type:** Array&lt;PreloadItem&gt;
 
@@ -401,8 +403,9 @@ readonly preloads: Array<PreloadItem>
 readonly routerMap: Array<RouterItem>
 ```
 
-[模块的路由表配置](../../../quick-start/module-configuration-file.md#routermap标签)。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ROUTER_MAP获取。
+[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and  
+**GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;RouterItem&gt;
 
@@ -422,7 +425,7 @@ readonly routerMap: Array<RouterItem>
 readonly type: bundleManager.ModuleType
 ```
 
-标识当前模块的类型。
+Type of the module.
 
 **Type:** bundleManager.ModuleType
 

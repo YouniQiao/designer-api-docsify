@@ -1,11 +1,15 @@
 # ErrorType
 
-端云同步失败类型，为枚举类型。
+Enumerates the device-cloud sync errors.
 
-- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。  
-- 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量；  
-- 触发同步时，非充电场景下，若电量低于10%，则不允许同步  
-- 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。
+- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
+unavailable. If the mobile data network is available, the synchronization can be performed normally.  
+- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  
+will be return when the current upload is complete.  
+- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
+allowed.  
+- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
+the cloud.
 
 **Since:** 12
 
@@ -21,7 +25,7 @@
 NO_ERROR = 0
 ```
 
-没有错误。
+No error.
 
 **Since:** 12
 
@@ -37,7 +41,7 @@ NO_ERROR = 0
 NETWORK_UNAVAILABLE = 1
 ```
 
-所有网络不可用。
+No network is available.
 
 **Since:** 12
 
@@ -53,7 +57,7 @@ NETWORK_UNAVAILABLE = 1
 WIFI_UNAVAILABLE = 2
 ```
 
-WIFI不可用。
+Wi-Fi is unavailable.
 
 **Since:** 12
 
@@ -69,7 +73,7 @@ WIFI不可用。
 BATTERY_LEVEL_LOW = 3
 ```
 
-低电量（低于10%）。
+The battery level is lower than 10%.
 
 **Since:** 12
 
@@ -85,7 +89,7 @@ BATTERY_LEVEL_LOW = 3
 BATTERY_LEVEL_WARNING = 4
 ```
 
-告警电量（低于15%）。
+The battery level is lower than 15%.
 
 **Since:** 12
 
@@ -101,7 +105,7 @@ BATTERY_LEVEL_WARNING = 4
 CLOUD_STORAGE_FULL = 5
 ```
 
-云端空间不足。
+The cloud space is insufficient.
 
 **Since:** 12
 
@@ -117,7 +121,7 @@ CLOUD_STORAGE_FULL = 5
 LOCAL_STORAGE_FULL = 6
 ```
 
-本地空间不足。
+The local space is insufficient.
 
 **Since:** 12
 
@@ -133,7 +137,7 @@ LOCAL_STORAGE_FULL = 6
 DEVICE_TEMPERATURE_TOO_HIGH = 7
 ```
 
-设备温度过高。
+The device temperature is too high.
 
 **Since:** 12
 
@@ -149,7 +153,7 @@ DEVICE_TEMPERATURE_TOO_HIGH = 7
 REMOTE_SERVER_ABNORMAL = 8
 ```
 
-远端服务不可用。
+The remote service is unavailable.
 
 **Since:** 20
 

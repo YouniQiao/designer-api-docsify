@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## isSpatializationEnabledForCurrentDevice
 
 ```TypeScript
@@ -72,7 +66,7 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offSpatializationEnabledChangeForCurrentDevice
 
@@ -100,7 +94,7 @@ Unsubscribes to the spatialization enable state change events by the current dev
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('spatializationEnabledChangeForCurrentDevice')
 
@@ -129,7 +123,7 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onSpatializationEnabledChangeForCurrentDevice
 
@@ -157,5 +151,5 @@ Subscribes to the spatialization enable state change events by the current devic
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 

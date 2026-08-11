@@ -12,20 +12,17 @@ import { router } from 'kits/@kit.ArkUI';
 function getParams(): Object
 ```
 
-获取发起跳转的页面往当前页传入的参数。
+Obtains the parameters passed from the page that initiates redirection to the current page.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 8开始支持，从API version 18开始废弃，建议使用[getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)替代。
-> getParams需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
-> 
-> getParams只获取当前页面的参数，并不会清除页面关联的参数。
+> **getParams** obtains only the parameters of the current page and does not clear the parameters associated with
+> the page.
 
 **Since:** 8
 
@@ -45,7 +42,7 @@ function getParams(): Object
 
 | Type | Description |
 | --- | --- |
-| Object | 发起跳转的页面往当前页传入的参数。 |
+| Object | Parameters passed from the page that initiates redirection to the current page. |
 
 ## Examples
 

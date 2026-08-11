@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>
 ```
 
-以注册用户身份对SMB设备进行身份验证，并获取可用打印机。
+Authenticate SMB device as registered user and get available printers.
 
 **Since:** 24
 
@@ -32,9 +32,9 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Yes | 要进行身份验证的SMB主机。 |
-| username | string | Yes | 用于鉴权的用户名。 |
-| password | string | Yes | 用于身份验证的密码。 |
+| host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Yes | The SMB host to authenticate. &lt;br&gt;The SMB host to authenticate. |
+| username | string | Yes | The username for authentication. &lt;br&gt;User name used for authentication. |
+| password | string | Yes | The password for authentication. &lt;br&gt;Password used for authentication. |
 
 **Return value:**
 
@@ -46,9 +46,9 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | 13100014 | Invalid login account or password. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
 | 13100012 | SMB account is locked due to multiple failed login attempts. |
 

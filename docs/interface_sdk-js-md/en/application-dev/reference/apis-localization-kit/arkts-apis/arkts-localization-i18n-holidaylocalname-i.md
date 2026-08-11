@@ -1,6 +1,6 @@
 # HolidayLocalName
 
-节假日名称在不同语言下的翻译。
+Represents the name of a holiday in different languages.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 language: string
 ```
 
-语言，例如ar，en，tr。
+Language, for example, "ar", "en", or "tr".
 
 **Type:** string
 
@@ -42,7 +42,7 @@ language: string
 name: string
 ```
 
-节假日的本地名称，例如Sacrifice Feast（宰牲节）的土耳其语名称为Kurban Bayrami。
+Local name of a holiday. For example, the Turkish name of Sacrifice Feast is Kurban Bayrami.
 
 **Type:** string
 

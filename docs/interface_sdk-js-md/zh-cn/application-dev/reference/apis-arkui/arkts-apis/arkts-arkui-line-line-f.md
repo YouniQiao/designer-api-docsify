@@ -24,7 +24,7 @@ export declare function Line(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [LineOptions](../arkts-components/arkts-arkui-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # ActionButton
 
-弹出的提醒中按钮的类型和标题。
+Describes the button displayed for a reminder.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 dataShareUpdate?: DataShareUpdate
 ```
 
-点击按钮将更新应用数据库。
+The application database will be updated after a click on the button.
 
 **Type:** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
@@ -42,7 +42,7 @@ dataShareUpdate?: DataShareUpdate
 wantAgent?: WantAgent
 ```
 
-点击按钮跳转的ability信息。
+Information about the ability that is displayed after the button is clicked.
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

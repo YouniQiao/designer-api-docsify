@@ -1,7 +1,6 @@
 # NotificationInfo
 
-通知订阅扩展能力中  
-[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage)回调的通知信息。
+The **NotificationInfo** module describes the notification information delivered to the onReceiveMessage callback of ExtensionAbility for notification subscriptions.
 
 **Since:** 22
 
@@ -17,7 +16,7 @@
 readonly appIndex: int
 ```
 
-创建通知的应用的分身索引标识，仅在分身应用中生效。
+Index of the application clone that creates the notification. It takes effect only for application clones.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -35,7 +34,7 @@ readonly appIndex: int
 readonly appName?: string
 ```
 
-创建通知的应用名称。
+Name of the application that creates the notification.
 
 **Type:** string
 
@@ -53,7 +52,7 @@ readonly appName?: string
 readonly bundleName: string
 ```
 
-创建通知的应用包名。
+Bundle name of the application that creates the notification.
 
 **Type:** string
 
@@ -71,7 +70,7 @@ readonly bundleName: string
 readonly content: NotificationExtensionContent
 ```
 
-通知内容。包含通知的标题和正文。
+Notification content, which includes the title and body of the notification.
 
 **Type:** [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
 
@@ -89,7 +88,7 @@ readonly content: NotificationExtensionContent
 readonly deliveryTime?: long
 ```
 
-通知发布的时间戳。数据格式：时间戳。单位：毫秒。
+Timestamp when the notification is published. Data format: timestamp. Unit: millisecond.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -107,7 +106,7 @@ readonly deliveryTime?: long
 readonly groupName?: string
 ```
 
-通知组名称。
+Name of the notification group.
 
 **Type:** string
 
@@ -125,7 +124,7 @@ readonly groupName?: string
 readonly hashCode: string
 ```
 
-通知的唯一标识符。
+Unique identifier of the notification.
 
 **Type:** string
 
@@ -143,7 +142,7 @@ readonly hashCode: string
 readonly notificationSlotType: notificationManager.SlotType
 ```
 
-通知渠道类型，标识通知所属的渠道分类（如社交通讯、服务提醒等）。不同渠道类型对应不同的提醒方式。
+Notification slot type, which identifies the slot category of the notification (such as social communication and service reminder). Different slot types correspond to different reminder types.
 
 **Type:** notificationManager.SlotType
 

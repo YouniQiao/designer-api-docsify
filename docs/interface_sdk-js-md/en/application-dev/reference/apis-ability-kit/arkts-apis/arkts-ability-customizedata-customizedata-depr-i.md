@@ -1,10 +1,11 @@
 # CustomizeData
 
-自定义元数据。
+The CustomizeData module provides custom metadata.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[Metadata](arkts-ability-metadata-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [Metadata](arkts-ability-metadata-i.md) instead.
 
 **Since:** 7
 
@@ -24,7 +25,7 @@
 extra: string
 ```
 
-标识用户自定义数据格式，标签值为标识该数据的资源的索引值。
+Custom format of the data element. The value is an index to the resource that identifies the data.
 
 **Type:** string
 
@@ -48,7 +49,7 @@ extra: string
 name: string
 ```
 
-标识自定义数据项的键名称。
+Key that identifies a data element.
 
 **Type:** string
 
@@ -72,7 +73,7 @@ name: string
 value: string
 ```
 
-标识自定义数据项的值名称。
+Value of the data element.
 
 **Type:** string
 

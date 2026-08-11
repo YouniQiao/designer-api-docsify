@@ -1,11 +1,5 @@
 # getFontPathsByType
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## getFontPathsByType
 
 ```TypeScript
@@ -38,6 +32,8 @@ function getFontPathsByType(fontType: SystemFontType): Array<string>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -46,6 +42,32 @@ import { text } from '@kit.ArkGraphics2D'
 struct GetFontPathsByTypeTest {
   build() {
     Column({ space: 10 }) {
+      Button("get font path")
+        .onClick(() => {
+          let fontList = text.getFontPathsByType(text.SystemFontType.ALL)
+          console.info("file count: " + fontList.length)
+          for (let index = 0; index < fontList.length; index++) {
+            console.info("file path: " + fontList[index])
+          }
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import {Entry, Component, Column, Button, FlexAlign} from '@ohos.arkui.component'
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct GetFontPathsByTypeTest {
+  build() {
+    Column() {
       Button("get font path")
         .onClick(() => {
           let fontList = text.getFontPathsByType(text.SystemFontType.ALL)

@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md) | WorkSchedulerExtensionContext是WorkSchedulerExtensionAbility的上下文环境，继承自  [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。  WorkSchedulerExtensionContext可直接作为WorkSchedulerExtension的上下文环境，提供允许访问特定于WorkSchedulerExtensionAbility的资源的能力。 |
+| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md) | The **WorkSchedulerExtensionContext** module, inherited from  [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md), provides a context environment for the  **WorkSchedulerExtensionAbility**.  This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**. |
 <!--DelEnd-->
 

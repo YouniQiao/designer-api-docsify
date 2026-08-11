@@ -12,7 +12,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 function clearFileCache(): void
 ```
 
-清除保存下载内容的文件缓存。
+Clears this file cache.
 
 **Since:** 23
 

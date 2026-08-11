@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function injectEvent({ KeyEvent: KeyEvent }): void
 ```
 
-按键(包括单个按键和组合键)注入。
+Injects keys (including single keys and combination keys).
 
 **Since:** 8
 
@@ -35,9 +35,9 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**Applicable version:** 12 and later |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -58,7 +58,6 @@ struct Index {
               keyDownDuration: 0,
               isIntercepted: false
             }
-            // Inject Event
             inputEventClient.injectEvent({ KeyEvent: backKeyDown });
 
             let backKeyUp: inputEventClient.KeyEvent = {
@@ -67,10 +66,9 @@ struct Index {
               keyDownDuration: 0,
               isIntercepted: false
             };
-            // Inject Event
             inputEventClient.injectEvent({ KeyEvent: backKeyUp });
           } catch (error) {
-            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to inject KeyEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -85,7 +83,7 @@ struct Index {
 function injectEvent(keyEvent: KeyEventInfo): void
 ```
 
-按键(包括单个按键和组合键)注入。
+Inject system keys.
 
 **Since:** 23
 
@@ -101,13 +99,13 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i.md) | Yes | 按键注入描述信息。. |
+| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i.md) | Yes | the key event to be injected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

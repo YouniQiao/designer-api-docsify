@@ -1,8 +1,6 @@
 # RingStyleOptions
 
-环形无刻度样式选项。
-
-继承自[ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)。
+Defines the ring style Options.
 
 **Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
 
@@ -20,7 +18,7 @@
 shadow?: boolean
 ```
 
-进度条阴影开关。true：表示打开进度条阴影；false：表示关闭进度条阴影。默认值：false。
+Enables progress shadow.Default value: false.
 
 **Type:** boolean
 
@@ -40,7 +38,7 @@ shadow?: boolean
 status?: ProgressStatus
 ```
 
-设置进度条状态。当设置为ProgressStatus.LOADING时会开启检查更新动效，此时设置进度值不生效。当从ProgressStatus.LOADING设置为ProgressStatus.PROGRESSING时，检查更新动效会执行到终点再停止。默认值：ProgressStatus.PROGRESSING。
+The status of progress, default is PROGRESSING. Set to LOADING status will trigger the loading animation.Default value: ProgressStatus.PROGRESSING.
 
 **Type:** [ProgressStatus](../arkts-components/arkts-arkui-progressstatus-e.md)
 
@@ -60,7 +58,7 @@ status?: ProgressStatus
 strokeWidth?: Length
 ```
 
-设置进度条宽度（不支持百分比设置）。默认值：4vp。
+Defines the strokeWidth property.Default value: 4vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

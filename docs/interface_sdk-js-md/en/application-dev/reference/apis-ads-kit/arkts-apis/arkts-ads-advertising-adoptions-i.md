@@ -1,6 +1,6 @@
 # AdOptions
 
-广告配置参数。
+Defines the ad configuration.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-自定义参数。
+Custom parameters.
 
 &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
@@ -44,11 +44,11 @@ import { advertising } from 'kits/@kit.AdsKit';
 adContentClassification?: string
 ```
 
-设置广告内容分级上限。
+Sets the maximum ad content rating.
 
-W：3+，所有受众。PI：7+，家长指导。J：12+，青少年。A：16+/18+，成人受众。
+W: ages 3+, all audiences.PI: ages 7+, parental guidance.J: ages 12+, teen.A: ages 16+/18+, adult audience.
 
-不填以业务逻辑为准。
+If not set, the business logic prevails.
 
 **Type:** string
 
@@ -68,11 +68,11 @@ W：3+，所有受众。PI：7+，家长指导。J：12+，青少年。A：16+/1
 nonPersonalizedAd?: number
 ```
 
-设置是否只请求非个性化广告。
+Sets whether to request only non-personalized ads.
 
-0：请求个性化广告与非个性化广告。1：只请求非个性化广告。
+0: Request both personalized and non-personalized ads.1: Request only non-personalized ads.
 
-不填以业务逻辑为准。
+If not set, the business logic prevails.
 
 **Type:** number
 
@@ -92,12 +92,12 @@ nonPersonalizedAd?: number
 tagForChildProtection?: number
 ```
 
-是否希望根据 COPPA 的规定将您的内容视为面向儿童的内容。
+Whether you want your content to be treated as child-directed for purposes of COPPA.
 
--1：默认值，不确定。  
-0：不希望。1：希望。
+-1: Default value, unspecified.  
+0: No.1: Yes.
 
-默认为-1。
+The default value is -1.
 
 **Type:** number
 

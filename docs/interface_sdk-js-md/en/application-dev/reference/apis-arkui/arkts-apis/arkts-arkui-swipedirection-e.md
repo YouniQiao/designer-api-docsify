@@ -1,6 +1,6 @@
 # SwipeDirection
 
-定义滑动手势的触发方向。
+Enumerates the directions in which the swipe gesture can be recognized.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 None
 ```
 
-任何方向均不可触发。
+Swiping disabled.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ None
 Horizontal
 ```
 
-水平方向，手指滑动方向与x轴夹角小于45度时触发。
+Horizontal direction. The gesture is triggered when the angle between the finger moving direction and the x-axis is less than 45 degrees.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Horizontal
 Vertical
 ```
 
-竖直方向，手指滑动方向与y轴夹角小于45度时触发。
+Vertical direction. The gesture is triggered when the angle between the finger moving direction and the y-axis is less than 45 degrees.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Vertical
 All
 ```
 
-所有方向。
+All directions.
 
 **Since:** 8
 

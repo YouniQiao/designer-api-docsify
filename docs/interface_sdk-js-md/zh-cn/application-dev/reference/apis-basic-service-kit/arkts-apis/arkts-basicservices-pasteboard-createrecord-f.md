@@ -1,11 +1,5 @@
 # createRecord
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createRecord
 
 ```TypeScript
@@ -46,5 +40,5 @@ function createRecord(mimeType: string, value: ValueType): PasteDataRecord
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 

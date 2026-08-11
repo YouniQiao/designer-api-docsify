@@ -1,6 +1,6 @@
 # PrimaryButton
 
-鼠标主键类型。
+Type of the primary mouse button.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 LEFT = 0
 ```
 
-鼠标左键。
+Left button.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ LEFT = 0
 RIGHT = 1
 ```
 
-鼠标右键。
+Right button.
 
 **Since:** 10
 

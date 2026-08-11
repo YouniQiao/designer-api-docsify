@@ -1,11 +1,11 @@
 # ImageSpan
 
-ImageSpan是[Text]{@link ./text}、[ContainerSpan]{@link ./container_span}组件的子组件，用于在文本中显示行内图片，支持设置图片对齐方式、缩放类型、加载占位图和颜色滤镜
-等，适用于需要在文本段落中嵌入图片实现图文混排的场景。
+As a child of the [Text]{@link ./text} and [ContainerSpan]{@link ./container_span} components, the **ImageSpan**
+component is used to display inline images.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## ImageSpan
 
@@ -13,7 +13,7 @@ ImageSpan是[Text]{@link ./text}、[ContainerSpan]{@link ./container_span}组件
 ImageSpan(value: ResourceStr | PixelMap)
 ```
 
-定义ImageSpan组件构造函数。
+Defines the constructor of ImageSpan.
 
 **Since:** 10
 
@@ -31,7 +31,7 @@ ImageSpan(value: ResourceStr | PixelMap)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | 图片的数据源，支持本地图片和网络图片。 <br>使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考 [声明权限](docroot://security/AccessToken/declare-permissions.md)。 <br>当使用相对路径引用图片资源时，例如`ImageSpan("common/test.jpg")`，不支持跨包/跨模块调用该ImageSpan组件，建议使用`\$r`方式来管理需全局使用的图片资源。 <br>- 支持的图片格式包括png、jpg、bmp、svg、gif、webp和heif。 <br>- 支持`Base64`字符串。格式`data:image/[png\|jpeg\|bmp\|webp\|heif];base64,[base64 data]`，其中`[base64 data]`为`Base64`字符串数 据。 <br>- 支持file://data/storage路径前缀的字符串，用于读取本应用安装目录下file文件夹下的图片资源。需要保证应用安装目录路径下的文件有可读权限。 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Image source. Both local and network images are supported.<br>When using an image referenced using a relative path, for example, **ImageSpan("common/test.jpg")**, the **ImageSpan** component cannot be called across bundles or modules. Therefore, you are advised to use **\$r** to reference image resources that need to be used globally.<br>- The supported formats include PNG, JPG, BMP, SVG, GIF, and HEIF.<br>- Base64 strings are supported. The value format is data:image/[png\|jpeg\|bmp\|webp\|heif];base64, [base64 data], where *[base64 data]* is a Base64 string.<br>- Character string prefixed with file://data/ storage, which is used to read image resources in the file folder in the application installation directory. Ensure that the application has the read permission to the files in the specified path. |
 
 ## Summary
 

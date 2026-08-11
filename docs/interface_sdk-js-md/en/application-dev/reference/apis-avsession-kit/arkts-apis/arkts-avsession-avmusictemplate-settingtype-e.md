@@ -1,6 +1,6 @@
 # SettingType
 
-表示设置类型的枚举。
+Enumeration of setting type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 SWITCH = 0
 ```
 
-开关设置，用于控制功能的开启或关闭。
+Switch, the type of setting is used to control the on/off status of a function.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SWITCH = 0
 LIST = 1
 ```
 
-列表设置，用于从多个选项中选择一个选项。
+List, this type of setting is used for selecting one option from multiple choices.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ LIST = 1
 JUMP = 2
 ```
 
-跳转设置，用于跳转到另一个界面。
+Jump, this type of setting is used to jump to another interface.
 
 **Since:** 23
 

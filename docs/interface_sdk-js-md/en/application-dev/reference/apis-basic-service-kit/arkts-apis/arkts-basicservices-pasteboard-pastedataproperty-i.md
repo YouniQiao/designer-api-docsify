@@ -1,6 +1,7 @@
 # PasteDataProperty
 
-定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等，该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty)方法，才能设置到剪贴板中。
+Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the  
+[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty) method.
 
 **Since:** 7
 
@@ -22,7 +23,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 additions: Record<string, object>
 ```
 
-设置其他附加属性数据。不支持动态追加属性，只能通过重新赋值的方式修改附加值，具体见相关示例setProperty， 默认为空。
+Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re-assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
@@ -42,7 +43,8 @@ additions: Record<string, object>
 localOnly: boolean
 ```
 
-配置剪贴板内容是否为“仅在本地”，true表示仅在本地有效，false表示允许跨设备传输。默认值为false。其值会被shareOption属性覆盖，推荐使用[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)属性。
+Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the  
+[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) attribute instead.
 
 **Type:** boolean
 
@@ -62,7 +64,7 @@ localOnly: boolean
 readonly mimeTypes: Array<string>
 ```
 
-剪贴板内容条目的数据类型，非重复的类型列表。
+Data types of all records in PasteData.
 
 **Type:** Array&lt;string&gt;
 
@@ -82,7 +84,7 @@ readonly mimeTypes: Array<string>
 shareOption: ShareOption
 ```
 
-指示剪贴板数据可以粘贴到的范围，默认值为CROSSDEVICE。与localOnly属性互斥，设置shareOption会影响localOnly的实际值。
+Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
 
 **Type:** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
@@ -102,7 +104,7 @@ shareOption: ShareOption
 tag: string
 ```
 
-用户自定义标签，默认为空。
+Custom tag. This parameter is left empty by default.
 
 **Type:** string
 
@@ -122,7 +124,7 @@ tag: string
 readonly timestamp: long
 ```
 
-剪贴板数据的写入时间戳（单位：已开机时间的ns数）。
+Timestamp when data is written to the pasteboard (unit: nanoseconds since the device is powered on).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

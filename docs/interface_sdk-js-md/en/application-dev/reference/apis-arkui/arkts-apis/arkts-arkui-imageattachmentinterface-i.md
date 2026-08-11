@@ -1,6 +1,6 @@
 # ImageAttachmentInterface
 
-定义图片设置项接口。
+Defines the ImageAttachmentInterface.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 colorFilter?: ColorFilterType
 ```
 
-获取属性字符串的图片颜色滤镜效果。
+Image color filter of the styled string.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -38,7 +38,7 @@ colorFilter?: ColorFilterType
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-设置图片布局。不传入时使用默认布局（外边距、内边距和圆角均为0）。
+Image layout.
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -60,9 +60,9 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
+Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
 
-默认值：ImageFit.Cover
+Default value: **ImageFit.Cover**
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -84,9 +84,10 @@ objectFit?: ImageFit
 size?: SizeOptions
 ```
 
-设置图片大小，不支持百分比。
+Image size, which does not support percentage values.
 
-size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。比如当objectFit的值为Cover时，图片高度为组件高度减去组件上下的内边距，图片宽度为组件宽度减去组件左右的内边距。
+The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is  
+**Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
@@ -108,7 +109,7 @@ size的默认值与objectFit的值有关，不同的objectFit的值对应size的
 value: PixelMap
 ```
 
-设置图片数据源。
+Image data source.
 
 **Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -130,9 +131,9 @@ value: PixelMap
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。
+Alignment mode of the image with the text.
 
-默认值：ImageSpanAlignment.BOTTOM
+Default value: **ImageSpanAlignment.BOTTOM**
 
 **Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 

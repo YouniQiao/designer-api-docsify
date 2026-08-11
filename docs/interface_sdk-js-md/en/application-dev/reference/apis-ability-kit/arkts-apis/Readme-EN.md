@@ -383,6 +383,8 @@
   <!--Del-->
   - [getProcessMemoryByPid(system api)](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getProcessRunningInfos(system api)](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getRunningMultiAppInfo(system api)](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getRunningProcessInfoByBundleName(system api)](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md)<!--DelEnd-->
@@ -496,27 +498,28 @@
   - [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md)
   - [AppPreloadType](arkts-ability-application-apppreloadtype-e.md)
 - [@ohos.app.ability.autoFillManager](arkts-app-ability-autofillmanager.md)
+  - [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md)
   - [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md)
+  - [AutoFillCallback](arkts-ability-autofillmanager-autofillcallback-i.md)
   - [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md)
   <!--Del-->
   - [AutoFillPopupConfig(system api)](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillRect(system api)](arkts-ability-autofillmanager-autofillrect-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillTriggerType(system api)](arkts-ability-autofillmanager-autofilltriggertype-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillType(system api)](arkts-ability-autofillmanager-autofilltype-t-sys.md)<!--DelEnd-->
+  - [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md)
+  - [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t.md)
+  - [AutoFillType](arkts-ability-autofillmanager-autofilltype-t.md)
   <!--Del-->
   - [CustomData(system api)](arkts-ability-autofillmanager-customdata-t-sys.md)<!--DelEnd-->
+  - [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md)
   - [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md)
   <!--Del-->
   - [FillRequestCallback(system api)](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FillResponse(system api)](arkts-ability-autofillmanager-fillresponse-t-sys.md)<!--DelEnd-->
   - [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md)
+  - [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md)
+  - [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md)
   - [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md)
-  <!--Del-->
-  - [PageNodeInfo(system api)](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md)<!--DelEnd-->
+  - [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md)
   <!--Del-->
   - [PopupPlacement(system api)](arkts-ability-autofillmanager-popupplacement-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -526,8 +529,7 @@
   - [SaveRequestCallback(system api)](arkts-ability-autofillmanager-saverequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateRequest(system api)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ViewData(system api)](arkts-ability-autofillmanager-viewdata-t-sys.md)<!--DelEnd-->
+  - [ViewData](arkts-ability-autofillmanager-viewdata-t.md)
 - [@ohos.app.ability.autoStartupManager](arkts-app-ability-autostartupmanager.md)
   - [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f.md)
   - [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md)
@@ -539,6 +541,8 @@
   - [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f.md)
   - [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f.md)
 - [@ohos.app.ability.childProcessManager](arkts-app-ability-childprocessmanager.md)
+  - [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md)
+  - [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md)
   - [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md)
   - [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md)
   - [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md)
@@ -567,6 +571,8 @@
   <!--Del-->
   - [AutoStartupInfo(system api)](arkts-ability-common-autostartupinfo-t-sys.md)<!--DelEnd-->
   - [BaseContext](arkts-ability-common-basecontext-t.md)
+  <!--Del-->
+  - [CliToolEvent(system api)](arkts-ability-common-clitoolevent-t-sys.md)<!--DelEnd-->
   - [ConnectOptions](arkts-ability-common-connectoptions-t.md)
   - [Context](arkts-ability-common-context-t.md)
   - [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md)
@@ -574,11 +580,19 @@
   - [ExtensionContext](arkts-ability-common-extensioncontext-t.md)
   - [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md)
   - [FormExtensionContext](arkts-ability-common-formextensioncontext-t.md)
+  <!--Del-->
+  - [FunctionInfo(system api)](arkts-ability-common-functioninfo-t-sys.md)<!--DelEnd-->
   - [LiveFormExtensionContext](arkts-ability-common-liveformextensioncontext-t.md)
   - [PacMap](arkts-ability-common-pacmap-t.md)
   - [PhotoEditorExtensionContext](arkts-ability-common-photoeditorextensioncontext-t.md)
   <!--Del-->
   - [ServiceExtensionContext(system api)](arkts-ability-common-serviceextensioncontext-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolEventCallback(system api)](arkts-ability-common-tooleventcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolInfo(system api)](arkts-ability-common-toolinfo-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolSummary(system api)](arkts-ability-common-toolsummary-t-sys.md)<!--DelEnd-->
   - [UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md)
   - [UIExtensionContext](arkts-ability-common-uiextensioncontext-t.md)
   - [UIServiceExtensionConnectCallback](arkts-ability-common-uiserviceextensionconnectcallback-t.md)
@@ -843,6 +857,7 @@
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
   - [WantAgent](arkts-ability-wantagent-t.md)
 - [@ohos.app.ability.wantConstant](arkts-app-ability-wantconstant.md)
+  - [Action](arkts-ability-wantconstant-action-e.md)
   - [Flags](arkts-ability-wantconstant-flags-e.md)
   - [Params](arkts-ability-wantconstant-params-e.md)
   <!--Del-->
@@ -964,6 +979,8 @@
   - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
   <!--Del-->
   - [getForegroundApplications(system api)](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getProcessRunningInformation(system api)](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md)<!--DelEnd-->
   - [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md)
   - [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md)
   - [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md)
@@ -1014,8 +1031,12 @@
   - [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md)
   - [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md)
   - [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)
+  <!--Del-->
+  - [getApplicationInfos(system api)](arkts-ability-bundle-getapplicationinfos-f-sys.md)<!--DelEnd-->
   - [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md)
   - [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)
+  <!--Del-->
+  - [getBundleInfos(system api)](arkts-ability-bundle-getbundleinfos-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getBundleInstaller(system api)](arkts-ability-bundle-getbundleinstaller-f-sys.md)<!--DelEnd-->
   - [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md)
@@ -1038,6 +1059,14 @@
   - [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
   - [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
   - [LaunchMode](arkts-ability-bundle-launchmode-e.md)
+  <!--Del-->
+  - [ModuleRemoveFlag(system api)](arkts-ability-bundle-moduleremoveflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryShortCutFlag(system api)](arkts-ability-bundle-queryshortcutflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShortcutExistence(system api)](arkts-ability-bundle-shortcutexistence-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SignatureCompareResult(system api)](arkts-ability-bundle-signaturecompareresult-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.appControl](arkts-bundle-appcontrol.md)
   <!--Del-->
   - [deleteDisposedStatus(system api)](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md)<!--DelEnd-->
@@ -1079,6 +1108,8 @@
   - [ControlType(system api)](arkts-ability-appcontrol-controltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DisposedType(system api)](arkts-ability-appcontrol-disposedtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PageJumpMode(system api)](arkts-ability-appcontrol-pagejumpmode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UninstallComponentType(system api)](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.appDomainVerify](arkts-bundle-appdomainverify.md)
@@ -1139,6 +1170,8 @@
   <!--Del-->
   - [getAppCloneIdentityBySandboxDataDir(system api)](arkts-ability-bundlemanager-getappcloneidentitybysandboxdatadir-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getAppClonePreference(system api)](arkts-ability-bundlemanager-getappclonepreference-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getApplicationInfo(system api)](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getApplicationInfoSync(system api)](arkts-ability-bundlemanager-getapplicationinfosync-f-sys.md)<!--DelEnd-->
@@ -1155,8 +1188,7 @@
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
   - [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)
-  <!--Del-->
-  - [getBundleInstallStatus(system api)](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md)<!--DelEnd-->
+  - [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md)
   - [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md)
   - [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md)
   <!--Del-->
@@ -1226,6 +1258,8 @@
   - [setAdditionalInfo(system api)](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
   <!--Del-->
+  - [setAppClonePreference(system api)](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [setApplicationEnabled(system api)](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setApplicationEnabledSync(system api)](arkts-ability-bundlemanager-setapplicationenabledsync-f-sys.md)<!--DelEnd-->
@@ -1236,6 +1270,8 @@
   - [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)
   - [AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md)
   - [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md)
+  <!--Del-->
+  - [AppClonePreference(system api)](arkts-ability-bundlemanager-appclonepreference-t-sys.md)<!--DelEnd-->
   - [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)
   <!--Del-->
   - [AppProvisionInfo(system api)](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)<!--DelEnd-->
@@ -1276,6 +1312,8 @@
   - [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)
   - [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
   <!--Del-->
+  - [AppClonePreferenceMode(system api)](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [AppDistributionType(system api)](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ApplicationFlag(system api)](arkts-ability-bundlemanager-applicationflag-e-sys.md)<!--DelEnd-->
@@ -1284,8 +1322,7 @@
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag(system api)](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BundleInstallStatus(system api)](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md)<!--DelEnd-->
+  - [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md)
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
   - [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
@@ -1490,6 +1527,7 @@
   - [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md)
   - [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f.md)
   - [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)
+  - [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f.md)
   - [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md)
   - [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)
   - [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md)
@@ -1690,7 +1728,7 @@
   - [AbilityStageMonitor](arkts-abilitystagemonitor.md)
     - [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md)
   - [AbilityStartCallback](arkts-abilitystartcallback.md)
-    - [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md)
+    - [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md)
   - [AbilityStartCallback](arkts-abilitystartcallback.md)
     - [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md)
     - [OnResultFn](arkts-ability-onresultfn-t.md)
@@ -1718,6 +1756,8 @@
   - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)
     <!--Del-->
     - [AppForegroundStateObserver(system api)](arkts-ability-appforegroundstateobserver-i-sys.md)<!--DelEnd-->
+  - [AppServiceExtensionContext](arkts-appserviceextensioncontext.md)
+    - [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
   - [AppStateData](arkts-appstatedata.md)
     - [AppStateData](arkts-ability-appstatedata-c.md)
   - [ApplicationContext](arkts-applicationcontext.md)
@@ -1741,28 +1781,23 @@
     <!--Del-->
     - [PopupPlacement(system api)](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)<!--DelEnd-->
   - [AutoFillRect](arkts-autofillrect.md)
-    <!--Del-->
-    - [AutoFillRect(system api)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
+    - [AutoFillRect](arkts-ability-autofillrect-i.md)
   - [AutoFillRequest](arkts-autofillrequest.md)
+    - [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md)
     - [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
-    <!--Del-->
-    - [FillRequest(system api)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillRequestCallback(system api)](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillResponse(system api)](arkts-ability-autofillrequest-fillresponse-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [SaveRequest(system api)](arkts-ability-autofillrequest-saverequest-i-sys.md)<!--DelEnd-->
+    - [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md)
     <!--Del-->
     - [SaveRequestCallback(system api)](arkts-ability-autofillrequest-saverequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [UpdateRequest(system api)](arkts-ability-autofillrequest-updaterequest-i-sys.md)<!--DelEnd-->
   - [AutoFillTriggerType](arkts-autofilltriggertype.md)
-    <!--Del-->
-    - [AutoFillTriggerType(system api)](arkts-ability-autofilltriggertype-e-sys.md)<!--DelEnd-->
+    - [AutoFillTriggerType](arkts-ability-autofilltriggertype-e.md)
   - [AutoFillType](arkts-autofilltype.md)
-    <!--Del-->
-    - [AutoFillType(system api)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
+    - [AutoFillType](arkts-ability-autofilltype-e.md)
   - [AutoStartupCallback](arkts-autostartupcallback.md)
     <!--Del-->
     - [AutoStartupCallback(system api)](arkts-ability-autostartupcallback-i-sys.md)<!--DelEnd-->
@@ -1849,8 +1884,7 @@
     <!--Del-->
     - [MultiAppMode(system api)](arkts-ability-multiappmode-e-sys.md)<!--DelEnd-->
   - [PageNodeInfo](arkts-pagenodeinfo.md)
-    <!--Del-->
-    - [PageNodeInfo(system api)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
+    - [PageNodeInfo](arkts-ability-pagenodeinfo-i.md)
   - [PhotoEditorExtensionContext](arkts-photoeditorextensioncontext.md)
     - [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
   - [ProcessData](arkts-processdata.md)
@@ -1870,6 +1904,9 @@
     - [RunningMultiInstanceInfo(system api)](arkts-ability-runningmultiinstanceinfo-i-sys.md)<!--DelEnd-->
   - [SendableContext](arkts-sendablecontext.md)
     - [SendableContext](arkts-ability-sendablecontext-i.md)
+  - [ServiceExtensionContext](arkts-serviceextensioncontext.md)
+    <!--Del-->
+    - [ServiceExtensionContext(system api)](arkts-ability-serviceextensioncontext-c-sys.md)<!--DelEnd-->
   - [ToolEventCallback](arkts-tooleventcallback.md)
     <!--Del-->
     - [ToolEventCallback(system api)](arkts-ability-tooleventcallback-i-sys.md)<!--DelEnd-->
@@ -1892,6 +1929,9 @@
     - [UIExtensionContext(system api)](arkts-ability-uiextensioncontext-c-sys.md)<!--DelEnd-->
   - [UIServiceExtensionConnectCallback](arkts-uiserviceextensionconnectcallback.md)
     - [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md)
+  - [UIServiceExtensionContext](arkts-uiserviceextensioncontext.md)
+    <!--Del-->
+    - [UIServiceExtensionContext(system api)](arkts-ability-uiserviceextensioncontext-c-sys.md)<!--DelEnd-->
   - [UIServiceHostProxy](arkts-uiservicehostproxy.md)
     <!--Del-->
     - [UIServiceHostProxy(system api)](arkts-ability-uiservicehostproxy-i-sys.md)<!--DelEnd-->
@@ -1963,7 +2003,11 @@
   - [BundleInfo](arkts-bundleinfo.md)
     - [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md)
     - [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md)
+    <!--Del-->
+    - [AppClonePreference(system api)](arkts-ability-bundleinfo-appclonepreference-i-sys.md)<!--DelEnd-->
     - [BundleInfo](arkts-ability-bundleinfo-i.md)
+    <!--Del-->
+    - [BundleInfo(system api)](arkts-ability-bundleinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BundleOptions(system api)](arkts-ability-bundleinfo-bundleoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->

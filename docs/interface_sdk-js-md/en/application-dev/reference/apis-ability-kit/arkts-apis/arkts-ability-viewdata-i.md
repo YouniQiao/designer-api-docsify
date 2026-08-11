@@ -1,10 +1,10 @@
 # ViewData
 
-查看自动填充的数据。
+The module defines the view data used for auto-fill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export default interface ViewData--><!--Device-unnamed-export default interface ViewData-End-->
 
@@ -16,7 +16,7 @@
 abilityName: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -36,17 +36,17 @@ Ability名称。
 bundleName: string
 ```
 
-包名称。
+Bundle name.The value cannot exceed 512 characters.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ViewData-bundleName: string--><!--Device-ViewData-bundleName: string-End-->
 
@@ -58,7 +58,8 @@ bundleName: string
 isOtherAccount: boolean
 ```
 
-表示是否拉起密码箱中其他账号信息供用户选择。true为拉起其他账号信息，false为不拉起其他账号信息。
+Whether to display other account information saved in the password box for the user to select. **true** to display,  
+**false** otherwise.
 
 **Type:** boolean
 
@@ -78,7 +79,8 @@ isOtherAccount: boolean
 isUserSelected: boolean
 ```
 
-表示填充内容是否由用户选择。true为用户选择，false为非用户选择。
+Whether the content to be filled is selected by the user. **true** if the content is selected by the user, and  
+**false** otherwise.
 
 **Type:** boolean
 
@@ -98,7 +100,7 @@ isUserSelected: boolean
 moduleName: string
 ```
 
-模块名称。
+Module name.
 
 **Type:** string
 
@@ -118,17 +120,17 @@ moduleName: string
 pageNodeInfos: Array<PageNodeInfo>
 ```
 
-页面节点信息。
+Page node information.
 
-**Type:** Array&lt;[PageNodeInfo](arkts-ability-pagenodeinfo-i-sys.md)&gt;
+**Type:** Array&lt;[PageNodeInfo](arkts-ability-pagenodeinfo-i.md)&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>--><!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>-End-->
 
@@ -140,17 +142,17 @@ pageNodeInfos: Array<PageNodeInfo>
 pageRect: AutoFillRect
 ```
 
-该页面记录了信息。
+Coordinates, width, and height of the page.
 
-**Type:** [AutoFillRect](arkts-ability-autofillrect-i-sys.md)
+**Type:** [AutoFillRect](arkts-ability-autofillrect-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ViewData-pageRect: AutoFillRect--><!--Device-ViewData-pageRect: AutoFillRect-End-->
 
@@ -162,17 +164,17 @@ pageRect: AutoFillRect
 pageUrl: string
 ```
 
-页面url。
+URL of the page.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ViewData-pageUrl: string--><!--Device-ViewData-pageUrl: string-End-->
 

@@ -37,7 +37,7 @@ static connect<T extends object>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ttype | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | 是 | class type of the stored value. |
+| ttype | Class | 是 | class type of the stored value. |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | the function generating the default value |
 | connectOptions | [BaseConnectOptions](arkts-arkui-persistencev2-baseconnectoptions-i.md)&lt;T&gt; | 否 | additional connect options. |
 
@@ -74,7 +74,7 @@ static connect<T extends object>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ttype | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | 是 | class type of the stored value. |
+| ttype | Class | 是 | class type of the stored value. |
 | key | string | 是 | alias name of the key. |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | the function generating the default value |
 | connectOptions | [BaseConnectOptions](arkts-arkui-persistencev2-baseconnectoptions-i.md)&lt;T&gt; | 否 | additional connect options. |
@@ -107,7 +107,7 @@ static globalConnect<T extends object>(params: ConnectOptions<T>): T | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-common-connectoptions-t.md)&lt;T&gt; | 是 | application-level storage parameters. |
+| params | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-ability-connectoptions-t.md)&lt;T&gt; | 是 | application-level storage parameters. |
 
 **返回值：**
 

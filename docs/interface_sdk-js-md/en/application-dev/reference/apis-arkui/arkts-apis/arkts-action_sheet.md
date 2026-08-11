@@ -12,24 +12,24 @@
 
 | Name | Description |
 | --- | --- |
-| [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md) | 弹窗中按钮的样式。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md) | 弹窗相对alignment所在位置的偏移量。 |
-| [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 列表选择弹窗的样式。 |
-| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | 弹窗关闭的信息。 |
-| [SheetInfo](arkts-arkui-sheetinfo-i.md) | 弹窗中的选项内容，每一项支持设置文本、图标以及选中的回调。 |
+| [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md) | Provides button style configuration for the dialog box.  > **NOTE：** >  > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md) | Alignment mode of the dialog box. |
+| [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Provides **ActionSheet** configuration options. |
+| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
+| [SheetInfo](arkts-arkui-sheetinfo-i.md) | Defines the option content in the dialog box. You can configure the text, icon, and callback for each option. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ActionSheetOptions](arkts-arkui-actionsheetoptions-i-sys.md) | 列表选择弹窗的样式。 |
+| [ActionSheetOptions](arkts-arkui-actionsheetoptions-i-sys.md) | Provides **ActionSheet** configuration options. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMode](arkts-arkui-immersivemode-t.md) | 弹窗的蒙层效果。 |
-| [LevelMode](arkts-arkui-levelmode-t.md) | 弹窗的显示层级。 |
+| [ImmersiveMode](arkts-arkui-immersivemode-t.md) | Defines the overlay effect for the dialog box. |
+| [LevelMode](arkts-arkui-levelmode-t.md) | Defines the display level mode for the dialog box. |
 

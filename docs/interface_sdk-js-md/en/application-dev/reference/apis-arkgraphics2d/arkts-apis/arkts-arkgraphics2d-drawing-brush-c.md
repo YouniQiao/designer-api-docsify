@@ -1,15 +1,13 @@
 # Brush
 
-画刷对象，用于设置图形的填充样式，包括颜色、抗锯齿、混合模式、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果及图像滤波器等，并支持获取颜色、透明度、抗锯齿等属性及重置画刷为初始状态。
+Defines a brush, which is used to describe the style and color to fill in a shape.
 
-画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)方法绑定到画布后生效，绘制完成后通过  
-[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md)。
-
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 11
 
@@ -31,7 +29,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor()
 ```
 
-构造一个新的画刷对象。默认配置：新建画刷默认抗锯齿关闭、混合模式为SRC_OVER，且未设置颜色滤波器、蒙版滤波器、着色器效果、阴影层效果和图像滤波器。
+A constructor used to create a **Brush** object.
 
 **Since:** 12
 
@@ -47,7 +45,7 @@ constructor()
 constructor(brush: Brush)
 ```
 
-复制构造一个新的画刷对象。
+Copies a **Brush** object to create a new one.
 
 **Since:** 12
 
@@ -61,13 +59,13 @@ constructor(brush: Brush)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | 待复制的画刷对象。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | Brush** object to copy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getAlpha
 
@@ -81,7 +79,7 @@ ArkTS-Sta:
 getAlpha(): int
 ```
 
-获取画刷的透明度。
+Obtains the alpha value of this brush.
 
 **Since:** 12
 
@@ -95,7 +93,7 @@ getAlpha(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画刷的透明度，取值范围为[0, 255]的整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Alpha value of the brush. The return value is an integer ranging from 0 to 255. |
 
 ## getColor
 
@@ -103,7 +101,7 @@ getAlpha(): int
 getColor(): common2D.Color
 ```
 
-获取画刷的颜色。
+Obtains the color of this brush.
 
 **Since:** 12
 
@@ -117,7 +115,7 @@ getColor(): common2D.Color
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。 |
+| common2D.Color | Color of the brush. |
 
 ## getColor
 
@@ -125,7 +123,7 @@ getColor(): common2D.Color
 getColor(): common2D.Color | undefined
 ```
 
-获取画刷的颜色。
+Obtains the color of this brush.
 
 **Since:** 23
 
@@ -139,7 +137,7 @@ getColor(): common2D.Color | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。获取颜色失败时返回undefined。 |
+| common2D.Color | Returns a 32-bit (ARGB) variable that describes the color. |
 
 ## getColor4f
 
@@ -147,7 +145,7 @@ getColor(): common2D.Color | undefined
 getColor4f(): common2D.Color4f
 ```
 
-获取画刷的颜色，与[getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。
+Obtains the brush color. The difference between this method and [getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor) is that this method returns a floating point number.
 
 **Since:** 20
 
@@ -161,7 +159,7 @@ getColor4f(): common2D.Color4f
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。 |
+| common2D.Color4f | Color of the brush. |
 
 ## getColor4f
 
@@ -169,7 +167,7 @@ getColor4f(): common2D.Color4f
 getColor4f(): common2D.Color4f | undefined
 ```
 
-获取画刷的颜色，与[getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。
+Obtains the color of a brush. The color is used by the brush to outline a shape.
 
 **Since:** 24
 
@@ -183,7 +181,7 @@ getColor4f(): common2D.Color4f | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。获取颜色失败时返回undefined。 |
+| common2D.Color4f | Returns four floating point values that describes the color. |
 
 ## getColorFilter
 
@@ -191,7 +189,7 @@ getColor4f(): common2D.Color4f | undefined
 getColorFilter(): ColorFilter
 ```
 
-获取画刷的颜色滤波器。
+Obtains the color filter of this brush.
 
 **Since:** 12
 
@@ -205,7 +203,7 @@ getColorFilter(): ColorFilter
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回画刷的颜色滤波器，用于对绘制内容进行颜色调整，如伽马校正、颜色矩阵变换等。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## getColorFilter
 
@@ -213,7 +211,7 @@ getColorFilter(): ColorFilter
 getColorFilter(): ColorFilter | undefined
 ```
 
-获取画刷的颜色滤波器。
+Obtains the color filter of this brush.
 
 **Since:** 23
 
@@ -227,7 +225,7 @@ getColorFilter(): ColorFilter | undefined
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回颜色滤波器，用于对绘制内容进行颜色调整，如伽马校正、颜色矩阵变换等。获取颜色滤波器失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | ColorFilter. |
 
 ## getHexColor
 
@@ -241,7 +239,7 @@ ArkTS-Sta:
 getHexColor(): int
 ```
 
-获取画刷颜色的16进制ARGB格式值。与[getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor)的区别是返回值类型为16进制ARGB格式的32位无符号整数。
+Obtains the color of this brush.
 
 **Since:** 18
 
@@ -255,7 +253,7 @@ getHexColor(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画刷的颜色，以16进制ARGB格式的32位无符号整数表示。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
 
 ## isAntiAlias
 
@@ -263,7 +261,7 @@ getHexColor(): int
 isAntiAlias(): boolean
 ```
 
-获取画刷是否开启抗锯齿属性。
+Checks whether anti-aliasing is enabled for this brush.
 
 **Since:** 12
 
@@ -277,7 +275,7 @@ isAntiAlias(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回画刷是否开启抗锯齿属性，true表示开启，false表示关闭。 |
+| boolean | Check result. The value **true** means that anti-aliasing is enabled, and **false** means the opposite. |
 
 ## reset
 
@@ -285,7 +283,7 @@ isAntiAlias(): boolean
 reset(): void
 ```
 
-重置当前画刷为初始状态，清除已设置的颜色、透明度、抗锯齿、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果、混合模式和图像滤波器等属性。初始状态的具体取值：抗锯齿关闭、混合模式为SRC_OVER，且未设置颜色滤波器、蒙版滤波器、着色器效果、阴影层效果和图像滤波器。如需使用上述属性，需要重新调用对应的set接口进行设置。
+Resets this brush to the initial state.
 
 **Since:** 12
 
@@ -307,7 +305,7 @@ ArkTS-Sta:
 setAlpha(alpha: int): void
 ```
 
-设置画刷的透明度。调用setAlpha后，渲染时以setAlpha设置的透明度为准，覆盖setColor中Color对象的alpha通道值。
+Sets an alpha value for this brush.
 
 **Since:** 11
 
@@ -321,13 +319,13 @@ setAlpha(alpha: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用于表示透明度的取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setAntiAlias
 
@@ -335,7 +333,7 @@ setAlpha(alpha: int): void
 setAntiAlias(aa: boolean): void
 ```
 
-设置画刷是否开启抗锯齿。开启后，图形边缘显示更平滑。未调用此接口设置时，系统默认关闭抗锯齿。
+Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
 **Since:** 11
 
@@ -349,13 +347,13 @@ setAntiAlias(aa: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aa | boolean | Yes | 表示是否开启抗锯齿，true表示开启，false表示关闭。 |
+| aa | boolean | Yes | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBlendMode
 
@@ -363,7 +361,7 @@ setAntiAlias(aa: boolean): void
 setBlendMode(mode: BlendMode): void
 ```
 
-设置画刷的混合模式。未调用此接口设置时，系统默认的混合模式为SRC_OVER。
+Sets a blend mode for this brush. If this API is not called, the default blend mode is **SRC_OVER**.
 
 **Since:** 11
 
@@ -377,13 +375,13 @@ setBlendMode(mode: BlendMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 颜色的混合模式，用于控制绘制时源颜色与已有目标颜色的混合方式。未调用此接口设置时，系统默认的混合模式为SRC_OVER。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -391,7 +389,7 @@ setBlendMode(mode: BlendMode): void
 setColor(color: common2D.Color): void
 ```
 
-设置画刷的颜色。设置的颜色将作为图形填充的基础颜色，在未设置ShaderEffect时以该颜色进行渲染填充。
+Sets a color for this brush.
 
 **Since:** 11
 
@@ -405,13 +403,13 @@ setColor(color: common2D.Color): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -425,7 +423,8 @@ ArkTS-Sta:
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-设置画刷的颜色。性能优于[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)接口，推荐使用本接口。
+Sets a color for this brush. This API provides better performance than  
+[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor) and is recommended.
 
 **Since:** 12
 
@@ -439,16 +438,16 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的透明度通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的红色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的绿色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的蓝色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -462,7 +461,7 @@ ArkTS-Sta:
 setColor(color: int): void
 ```
 
-设置画刷的颜色。与[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)的区别是支持通过16进制ARGB数值直接设置颜色。
+Sets a color for this brush.
 
 **Since:** 18
 
@@ -476,13 +475,13 @@ setColor(color: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 16进制ARGB格式的颜色，以32位无符号整数表示，格式为0xAARRGGBB，其中AA为透明度通道，RR为红色通道， GG为绿色通道，BB为蓝色通道，取值范围均为0x00到0xFF，整体取值范围为[0x00000000, 0xFFFFFFFF]。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor4f
 
@@ -490,7 +489,8 @@ setColor(color: int): void
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-设置画刷的颜色以及标准色域。与[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)的区别是可以单独设置色域，适用于需要单独设置色域的场景。
+Sets the color and standard color gamut for this brush. The difference between this method and  
+[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor) is that the color gamut can be set separately.
 
 **Since:** 20
 
@@ -504,8 +504,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | Yes | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0， 小于0.0时，取0.0。颜色值在colorSpace参数指定的色域下进行映射。 |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | 标准色域对象，需通过 [colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)方法创建，与color4f配合使 用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
+| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 ## setColorFilter
 
@@ -513,7 +513,7 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 setColorFilter(filter: ColorFilter | null): void
 ```
 
-设置画刷的颜色滤波器。
+Sets a color filter for this brush.
 
 **Since:** 11
 
@@ -527,13 +527,13 @@ setColorFilter(filter: ColorFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) \| null | Yes | 颜色滤波器，用于对绘制内容进行颜色调整（如伽马校正、颜色矩阵变换等）。null表示清空颜色滤波器。<br>**Since:** 20 |
+| filter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) \| null | Yes | Defines a color filter. If **null** is passed in, the color filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setImageFilter
 
@@ -541,7 +541,7 @@ setColorFilter(filter: ColorFilter | null): void
 setImageFilter(filter: ImageFilter | null): void
 ```
 
-设置画刷的图像滤波器。
+Sets an image filter for this brush.
 
 **Since:** 12
 
@@ -555,13 +555,13 @@ setImageFilter(filter: ImageFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | Yes | 图像滤波器，用于对绘制内容进行模糊、锐化等图像处理。null表示清空图像滤波器。 |
+| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | Yes | Image filter. If **null** is passed in, the image filter effect of the brush will be cleared. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMaskFilter
 
@@ -569,7 +569,7 @@ setImageFilter(filter: ImageFilter | null): void
 setMaskFilter(filter: MaskFilter | null): void
 ```
 
-设置画刷的蒙版滤波器。
+Adds a mask filter for this brush.
 
 **Since:** 12
 
@@ -583,13 +583,13 @@ setMaskFilter(filter: MaskFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | Yes | 蒙版滤波器，用于对绘制图形边缘进行模糊处理等场景。null表示清空蒙版滤波器。<br>**Since:** 20 |
+| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | Yes | Mask filter. If **null** is passed in, the mask filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShaderEffect
 
@@ -597,7 +597,7 @@ setMaskFilter(filter: MaskFilter | null): void
 setShaderEffect(shaderEffect: ShaderEffect | null): void
 ```
 
-设置画刷的着色器效果。
+Sets the shader effect for this brush.
 
 **Since:** 12
 
@@ -611,13 +611,13 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | Yes | 着色器效果对象，用于实现渐变填充、图案填充等复杂绘制效果。null表示清空着色器效果。<br>**Since:** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShadowLayer
 
@@ -625,7 +625,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 setShadowLayer(shadowLayer: ShadowLayer | null): void
 ```
 
-设置画刷的阴影层效果。当前仅在通过Canvas的[drawTextBlob](arkts-arkgraphics2d-drawing-canvas-c.md#drawtextblob)等方法绘制文字时生效。
+Sets a shadow layer for this brush. The shadow layer effect takes effect only when text is drawn.
 
 **Since:** 12
 
@@ -639,11 +639,11 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | Yes | 阴影层对象，用于给画刷添加阴影效果。null表示清空阴影层效果。该阴影层效果仅在绘制文字时生效。<br>**Since:** 20 |
+| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layer is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

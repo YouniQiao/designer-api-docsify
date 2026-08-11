@@ -1,6 +1,6 @@
 # TypeConstructorWithArgs
 
-含有任意入参的类构造器。
+Represents a class constructor that accepts arbitrary arguments.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 new(...args: any): T
 ```
 
-创建并返回一个指定类型T的实例。
+Creates and returns an instance of the specified type T.
 
 **Since:** 12
 
@@ -40,11 +40,11 @@ new(...args: any): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | any | Yes | 创建类型T实例时传入的构造参数，用于初始化实例。 |
+| args | any | Yes | Function arguments. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 通过new方法创建的T类型实例。默认不传入任何构造参数。 |
+| T | Instance of the T type. |
 

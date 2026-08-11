@@ -65,7 +65,7 @@ pixelMap?: PixelMap
 
 设置拖拽过程中显示的图片。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 8
 

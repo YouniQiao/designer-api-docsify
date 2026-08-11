@@ -1,6 +1,6 @@
 # CertChainData
 
-证书链数据，在证书链校验时，作为入参传入。
+Defines the certificate chain data, which is passed in as input parameters during certificate chain verification.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 count: int
 ```
 
-传入的数据中，包含的证书数量。
+Number of certificates contained in the input data.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ count: int
 data: Uint8Array
 ```
 
-证书数据。
+Certificate data.
 
 **Type:** Uint8Array
 
@@ -62,7 +62,7 @@ data: Uint8Array
 encodingFormat: EncodingFormat
 ```
 
-编码格式。
+Certificate encoding format.
 
 **Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 

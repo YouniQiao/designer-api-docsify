@@ -1,11 +1,5 @@
 # getApplicationQuickFixInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getApplicationQuickFixInfo
 
 ```TypeScript
@@ -37,11 +31,11 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [18500001](../errorcode-ability.md#18500001-指定的包名无效) | The bundle does not exist or no patch has been applied. |
 
 ## 示例
 
@@ -100,11 +94,11 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [18500001](../errorcode-ability.md#18500001-指定的包名无效) | The bundle does not exist or no patch has been applied. |
 
 ## 示例
 

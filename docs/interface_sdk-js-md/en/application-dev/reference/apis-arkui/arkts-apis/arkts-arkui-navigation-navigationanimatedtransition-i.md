@@ -1,6 +1,6 @@
 # NavigationAnimatedTransition
 
-自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。
+Navigation transition animation protocol.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 onTransitionEnd?: (success: boolean) => void
 ```
 
-转场完成回调。
-
-success：转场是否成功。
+This method is called after the transition ends to notify whether the transition was successful.
 
 **Since:** 23
 
@@ -42,9 +40,7 @@ success：转场是否成功。
 transition: (transitionProxy: NavigationTransitionProxy) => void
 ```
 
-自定义转场动画执行回调。
-
-transitionProxy：自定义转场动画代理对象。
+Configure the animations associated with custom transition.
 
 **Since:** 23
 
@@ -68,7 +64,7 @@ transitionProxy：自定义转场动画代理对象。
 isInteractive?: boolean
 ```
 
-本次转场动画是否为可交互转场。true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。默认值： false。
+Indicates whether it is an interactive transition.Default value: false.
 
 **Type:** boolean
 
@@ -90,7 +86,7 @@ isInteractive?: boolean
 timeout?: int
 ```
 
-动画超时结束时间。单位为： ms，取值应为≥0的整数，不可交互动画默认超时时间为1000ms。可交互动画无默认值。
+Define the limit duration of the transition animation.Unit: ms, The value must be an integer greater than or equal to 0, The default timeout period for non-interactive animations is 1000 ms.There is no default value for interactive animations.
 
 **Type:** int
 

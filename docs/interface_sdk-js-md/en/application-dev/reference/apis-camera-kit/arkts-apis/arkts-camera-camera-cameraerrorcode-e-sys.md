@@ -1,8 +1,8 @@
 # CameraErrorCode
 
-相机错误码。
+Enumerates the camera error codes,
 
-接口使用不正确以及on接口监听error状态返回。
+which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
 
 **Since:** 10
 

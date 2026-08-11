@@ -1,6 +1,6 @@
 # AbilityStartCallback
 
-定义拉起UIExtensionAbility执行结果的回调。
+The module describes the callback invoked to return the UIExtensionAbility startup result.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onError(code: int, name: string, message: string): void
 ```
 
-拉起UIExtensionAbility执行失败的回调。
+Called when the UIExtensionAbility fails to start.
 
 **Since:** 23
 
@@ -34,9 +34,9 @@ onError(code: int, name: string, message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | 拉起UIExtensionAbility执行失败时返回的结果码。 |
-| name | string | Yes | 拉起UIExtensionAbility执行失败时返回的名称。 |
-| message | string | Yes | 拉起UIExtensionAbility执行失败时返回的错误信息。 |
+| code | int | Yes | Result code returned when the UIExtensionAbility fails to start &lt;br&gt;The value range is all integers. |
+| name | string | Yes | Name returned when the UIExtensionAbility fails to start. |
+| message | string | Yes | Error information returned when the UIExtensionAbility fails to start. |
 
 ## onResult
 
@@ -44,7 +44,7 @@ onError(code: int, name: string, message: string): void
 onResult?: OnResultFn
 ```
 
-拉起UIExtensionAbility终止时的回调。
+Called when the UIExtensionAbility is terminated.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ onResult?: OnResultFn
 completionHandler?: CompletionHandlerForAbilityStartCallback
 ```
 
-用于返回拉起指定类型的Ability组件的回调结果。
+Callback invoked when the ability of a specified type is started.
 
 **Type:** [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
 

@@ -7,7 +7,7 @@ export declare function LoadingProgress(
 ): LoadingProgressAttribute
 ```
 
-创建加载进度组件。
+Defines the LoadingProgress component.
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ export declare function LoadingProgress(
 ): LoadingProgressAttribute
 ```
 
-定义LoadingProgress组件。
+Defines LoadingProgress Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -52,7 +52,7 @@ export declare function LoadingProgress(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LoadingProgressAttribute&gt; | Yes | LoadingProgress属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LoadingProgressAttribute&gt; | Yes | LoadingProgress attribute instance |
 
 **Return value:**
 

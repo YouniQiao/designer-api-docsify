@@ -1,6 +1,6 @@
 # USBAccessoryHandle
 
-USB配件句柄。
+Describes the USB accessory handle.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 accessoryFd: int
 ```
 
-配件文件描述符。合法的accessoryFd是正整数。
+Accessory file descriptor. A valid **accessoryFd** is a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

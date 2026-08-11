@@ -12,7 +12,7 @@ import { performanceMonitor } from 'kits/@kit.ArkUI';
 function end(scene: string): void
 ```
 
-用于标记用户场景结束，用户场景结束时调用此接口。
+End monitoring an application scene.
 
 **Since:** 23
 
@@ -30,5 +30,5 @@ function end(scene: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | string | Yes | 用户场景id，与begin配对严格保持一致，否则本次场景监测无效。 |
+| scene | string | Yes | Indicates the scene name. It must be the same with the { |
 

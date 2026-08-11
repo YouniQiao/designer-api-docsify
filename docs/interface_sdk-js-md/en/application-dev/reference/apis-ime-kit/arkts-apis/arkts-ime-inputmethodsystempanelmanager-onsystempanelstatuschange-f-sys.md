@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 ```
 
-订阅系统面板状态改变事件。
+Subscribe to the system panel status change event.
 
 **Since:** 26.0.0
 
@@ -30,11 +30,11 @@ function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemPanelStatus&gt; | Yes | 当系统面板状态改变时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemPanelStatus&gt; | Yes | callback triggered when the system panel status changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

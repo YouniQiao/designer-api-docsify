@@ -4,7 +4,7 @@
 declare type DrawingColorFilter = import('../api/@ohos.graphics.drawing').default.ColorFilter
 ```
 
-颜色滤波器对象。
+Represents a color filter object.
 
 **Since:** 12
 

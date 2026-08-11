@@ -1,6 +1,6 @@
 # DeviceType (System API)
 
-表示设备类型的枚举类。
+Enumerates the device types.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 UNKNOWN_TYPE = 0
 ```
 
-未知设备。
+Unknown device type.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ UNKNOWN_TYPE = 0
 SPEAKER = 0x0A
 ```
 
-智能音箱。
+Smart speaker.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ SPEAKER = 0x0A
 PHONE = 0x0E
 ```
 
-手机。
+Phone.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ PHONE = 0x0E
 TABLET = 0x11
 ```
 
-平板。
+Tablet
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ TABLET = 0x11
 WEARABLE = 0x6D
 ```
 
-智能穿戴。
+Wearable
 
 **Since:** 7
 
@@ -120,7 +120,7 @@ WEARABLE = 0x6D
 CAR = 0x83
 ```
 
-车。
+Car.
 
 **Since:** 7
 
@@ -140,7 +140,7 @@ CAR = 0x83
 TV = 0x9C
 ```
 
-智慧屏。
+Smart TV
 
 **Since:** 7
 

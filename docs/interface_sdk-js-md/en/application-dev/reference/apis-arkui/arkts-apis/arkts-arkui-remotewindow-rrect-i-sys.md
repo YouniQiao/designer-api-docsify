@@ -1,6 +1,6 @@
 # RRect (System API)
 
-圆角矩形。
+Round rect.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 height: double
 ```
 
-动画窗口高度大小，单位为px。
+Height of the round rect, in pixels.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ height: double
 left: double
 ```
 
-动画窗口左上角相对于屏幕横坐标，单位为px。
+The X-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** double
 
@@ -62,7 +62,7 @@ left: double
 radius: double
 ```
 
-动画窗口圆角大小，单位为px。
+Radius of the round corner of the round rect, in pixels.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ radius: double
 top: double
 ```
 
-动画窗口左上角相对于屏幕纵坐标，单位为px。
+The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** double
 
@@ -106,7 +106,7 @@ top: double
 width: double
 ```
 
-动画窗口宽度大小，单位为px。
+Width of the round rect, in pixels.
 
 **Type:** double
 

@@ -26,7 +26,7 @@ style默认值：TextDecorationStyle.SOLID
 
 thicknessScale默认值：1.0
 
-**类型：** [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md)
+**类型：** [DecorationStyleInterface](../arkts-apis/arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **起始版本：** 10
 
@@ -154,7 +154,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](../arkts-apis/arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # DistributedOrigin (System API)
 
-表示数据来源。请使用枚举名称而非枚举值。
+Describes the data origin sources.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@
 ORI_LOCAL = 0
 ```
 
-表示本地数据。
+Indicates the data source is local.
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ ORI_LOCAL = 0
 ORI_CLOUD = 1
 ```
 
-表示云端同步的数据。
+Indicates the data source is cloud.
 
 **Since:** 24
 
@@ -58,7 +58,7 @@ ORI_CLOUD = 1
 ORI_REMOTE = 2
 ```
 
-表示端端同步的数据。
+Indicates the data source is remote.
 
 **Since:** 24
 

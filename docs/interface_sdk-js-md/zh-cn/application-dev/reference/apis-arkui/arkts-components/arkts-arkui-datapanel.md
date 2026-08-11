@@ -34,7 +34,7 @@ DataPanel(options: DataPanelOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | 是 | 数据面板配置选项，用于设置数据面板的数据值列表、最大值和数据面板类型。 |
+| options | [DataPanelOptions](../arkts-apis/arkts-arkui-datapanel-datapaneloptions-i.md) | 是 | 数据面板配置选项，用于设置数据面板的数据值列表、最大值和数据面板类型。 |
 
 ## 汇总
 

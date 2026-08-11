@@ -1,6 +1,6 @@
 # Direction
 
-光标移动方向。
+Enumerates the moving direction of cursor
 
 **Since:** 10
 
@@ -16,9 +16,7 @@
 CURSOR_UP = 1
 ```
 
-向上。
-
-**使用场景：**输入法请求光标向上移动时使用，如多行文本中上移光标。
+Cursor moves up
 
 **Since:** 10
 
@@ -34,9 +32,7 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
-向下。
-
-**使用场景：**输入法请求光标向下移动时使用。
+Cursor moves down
 
 **Since:** 10
 
@@ -52,9 +48,7 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
-向左。
-
-**使用场景：**输入法请求光标向左移动时使用，如删除左侧字符前移动光标。
+Cursor moves left
 
 **Since:** 10
 
@@ -70,9 +64,7 @@ CURSOR_LEFT
 CURSOR_RIGHT
 ```
 
-向右。
-
-**使用场景：**输入法请求光标向右移动时使用。
+Cursor moves right
 
 **Since:** 10
 

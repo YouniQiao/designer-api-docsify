@@ -1,6 +1,6 @@
 # TypeConstructor
 
-类构造函数。
+Represents a class constructor.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 new(): T
 ```
 
-创建并返回一个指定类型T的实例。
+Creates and returns an instance of the specified type T.
 
 **Since:** 12
 
@@ -40,5 +40,5 @@ new(): T
 
 | Type | Description |
 | --- | --- |
-| T | T类型的实例。 |
+| T | Instance of the T type. |
 

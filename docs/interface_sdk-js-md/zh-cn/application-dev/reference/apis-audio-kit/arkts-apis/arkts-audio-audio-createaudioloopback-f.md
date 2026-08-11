@@ -1,11 +1,5 @@
 # createAudioLoopback
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## createAudioLoopback
 
 ```TypeScript
@@ -40,8 +34,8 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800104 | Loopback mode is unsupported. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |
 
 ## 示例
 
@@ -92,6 +86,24 @@ Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800104 | Loopback mode is unsupported. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioLoopback: audio.AudioLoopback;
+
+audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
+  if (data != null) {
+    audioLoopback = data;
+    console.info('AudioLoopback Created : SUCCESS');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`AudioLoopback Created : ERROR : ${err}`);
+});
+```
 

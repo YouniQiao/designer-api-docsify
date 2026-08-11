@@ -4,7 +4,7 @@
 type DeviceSelectCallback = (selectPurpose: int) => DeviceSelectResult
 ```
 
-伴随设备选择回调函数类型。当系统需要用户选择伴随设备时（如添加模板或执行认证），会调用此回调，应用需返回用户选择的设备信息。
+Defines the callback triggered for the companion device selection. When the system requires the user to select a companion device (for example, when adding a template or performing authentication), this callback is triggered.The application needs to return the information about the selected device.
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ type DeviceSelectCallback = (selectPurpose: int) => DeviceSelectResult
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectPurpose | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 选择目的。用于标识当前设备选择的意图，取值参见[SelectPurpose](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md)。 SELECT_ADD_DEVICE(1)表示选择添加模板的设备，SELECT_AUTH_DEVICE(2)表示选择认证设备。厂商可自定义扩展值（大于等于10000）。应用应根据selectPurpose返回包含对应设备信息 的DeviceSelectResult。 |
+| selectPurpose | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Selection purpose. It identifies the purpose of the current device selection. For details about the value, see [SelectPurpose](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md). **SELECT_ADD_DEVICE(1)** means to select the device for adding a template, and **SELECT_AUTH_DEVICE(2)** means to select the device for authentication. Vendors can customize the extended value (greater than or equal to 10000). The application should return the corresponding device list based on the selection purpose. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DeviceSelectResult](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | 用于向系统返回用户选择的设备信息，以便系统执行后续的添加模板或认证操作。包含用户选择的设备信息列表（deviceKeys）和可选的扩展上下文（ selectionContext）。 |
+| [DeviceSelectResult](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | Device selection result. It contains the device information list (**deviceKeys**) selected by the user and the optional extended context (**selectionContext**). |
 

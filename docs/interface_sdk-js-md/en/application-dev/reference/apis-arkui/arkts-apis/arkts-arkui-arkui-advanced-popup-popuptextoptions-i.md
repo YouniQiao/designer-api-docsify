@@ -1,6 +1,6 @@
 # PopupTextOptions
 
-设置文本样式。
+Defines the popup text options
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 fontColor?: ResourceColor
 ```
 
-设置文本字体颜色。
-
-默认值：`\$r('sys.color.ohos_id_color_text_secondary')`
+Set the text font color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -46,13 +44,7 @@ fontColor?: ResourceColor
 fontSize?: number | string | Resource
 ```
 
-设置文本字体大小。
-
-默认值：`\$r('sys.float.ohos_id_text_size_body2')` 
-
-string类型可选值：可以转化为数字的字符串（如'10'）或带长度单位的字符串（如'10px'），不支持设置百分比字符串。
-
-number：取值范围(0,+∞)。
+Set the text font size.
 
 **Type:** number \| string \| Resource
 
@@ -74,13 +66,7 @@ number：取值范围(0,+∞)。
 fontWeight?: number | FontWeight | string
 ```
 
-设置文本字体粗细。
-
-number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
-
-string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
-
-默认值：FontWeight.Regular
+Set the text font weight.
 
 **Type:** number \| FontWeight \| string
 
@@ -102,11 +88,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 text?: ResourceStr
 ```
 
-设置文本内容。 
-
-**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
-
-**ArkTS-Sta起始版本：** 23
+Set the text display content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

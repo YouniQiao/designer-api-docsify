@@ -12,13 +12,12 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 function emit(event: InnerEvent, data?: EventData): void
 ```
 
-发送指定事件。
+Emits a specified event.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 7
 
@@ -34,10 +33,12 @@ function emit(event: InnerEvent, data?: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | 发送的事件，其中[EventPriority](arkts-basicservices-emitter-eventpriority-e.md)用于指定事件被发送的优先级。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | 事件携带的数据，默认为空。 |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) specifies the emit priority of the event. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 let eventData: emitter.EventData = {
@@ -55,6 +56,28 @@ let innerEvent: emitter.InnerEvent = {
 emitter.emit(innerEvent, eventData);
 ```
 
+ArkTS-Sta example:
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // The types are now compatible.
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
 
 ## emit
 
@@ -62,13 +85,12 @@ emitter.emit(innerEvent, eventData);
 function emit(eventId: string, data?: EventData): void
 ```
 
-发送指定事件。
+Emits a specified event.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 11
 
@@ -84,20 +106,20 @@ function emit(eventId: string, data?: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
 
 ```TypeScript
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter.emit('eventId', eventData);
+emitter.emit("eventId", eventData);
 ```
 
 
@@ -107,9 +129,7 @@ emitter.emit('eventId', eventData);
 function emit(eventId: string): void
 ```
 
-发送指定事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits the specified event.
 
 **Since:** 23
 
@@ -123,7 +143,13 @@ function emit(eventId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+
+## Examples
+
+```TypeScript
+emitter.emit("eventId");
+```
 
 
 ## emit
@@ -132,9 +158,7 @@ function emit(eventId: string): void
 function emit(eventId: string, data: EventData): void
 ```
 
-发送指定事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits the specified event.
 
 **Since:** 23
 
@@ -148,8 +172,25 @@ function emit(eventId: string, data: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | 事件携带的数据。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | Data passed in the event. |
+
+## Examples
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // The types are now compatible.
+};
+
+emitter.emit("eventId", eventData);
+```
 
 
 ## emit
@@ -158,13 +199,12 @@ function emit(eventId: string, data: EventData): void
 function emit<T>(eventId: string, data?: GenericEventData<T>): void
 ```
 
-发送指定事件。
+Emits a specified event.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 12
 
@@ -180,8 +220,8 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
 
@@ -200,7 +240,7 @@ class Sample {
 let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
-emitter.emit('eventId', eventData);
+emitter.emit("eventId", eventData);
 ```
 
 
@@ -210,9 +250,7 @@ emitter.emit('eventId', eventData);
 function emit<T>(eventId: string, data: GenericEventData<T>): void
 ```
 
-发送指定事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits the specified event.
 
 **Since:** 23
 
@@ -226,8 +264,8 @@ function emit<T>(eventId: string, data: GenericEventData<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | Yes | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | Yes | Data passed in the event. |
 
 
 ## emit
@@ -236,13 +274,12 @@ function emit<T>(eventId: string, data: GenericEventData<T>): void
 function emit(eventId: string, options: Options, data?: EventData): void
 ```
 
-发送指定优先级事件。
+Emits an event of a specified priority.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 11
 
@@ -258,11 +295,13 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 let eventData: emitter.EventData = {
@@ -276,7 +315,7 @@ let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
 };
 
-emitter.emit('eventId', options, eventData);
+emitter.emit("eventId", options, eventData);
 ```
 
 
@@ -286,9 +325,7 @@ emitter.emit('eventId', options, eventData);
 function emit(eventId: string, options: Options): void
 ```
 
-发送指定优先级事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits an event of a specified priority.
 
 **Since:** 23
 
@@ -302,8 +339,18 @@ function emit(eventId: string, options: Options): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+
+## Examples
+
+```TypeScript
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit("eventId", options);
+```
 
 
 ## emit
@@ -312,9 +359,7 @@ function emit(eventId: string, options: Options): void
 function emit(eventId: string, options: Options, data: EventData): void
 ```
 
-发送指定优先级事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits an event of a specified priority.
 
 **Since:** 23
 
@@ -328,9 +373,28 @@ function emit(eventId: string, options: Options, data: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | Data passed in the event. |
+
+## Examples
+
+```TypeScript
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // The types are now compatible.
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit("eventId", options, eventData);
+```
 
 
 ## emit
@@ -339,13 +403,12 @@ function emit(eventId: string, options: Options, data: EventData): void
 function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 ```
 
-发送指定优先级事件。
+Emits an event of a specified priority.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 12
 
@@ -361,11 +424,13 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 @Sendable
@@ -386,7 +451,30 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter.emit('eventId', options, eventData);
+emitter.emit("eventId", options, eventData);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit("eventId", options, eventData);
 ```
 
 
@@ -396,9 +484,7 @@ emitter.emit('eventId', options, eventData);
 function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): void
 ```
 
-发送指定优先级事件。
-
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[ArkTS-Sta并发迁移规则](../../quick-start/arkts-dyn-to-sta-concurrency-rules.md)
+Emits an event of a specified priority.
 
 **Since:** 23
 
@@ -412,7 +498,7 @@ function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | Yes | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | Yes | Data passed in the event. |
 

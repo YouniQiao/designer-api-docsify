@@ -1,6 +1,6 @@
 # MemberPurchaseType
 
-表示会员购买类型的枚举。
+Enumeration of MemberPurchaseType.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 'normal'
 ```
 
-常规购买。
+normal.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 'normal'
 BANNER = 'banner'
 ```
 
-会员推广海报购买。
+banner.
 
 **Since:** 23
 

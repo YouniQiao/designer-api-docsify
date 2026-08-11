@@ -6,7 +6,7 @@
 declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher
 ```
 
-监听文件或者目录的变化，使用callback异步回调。
+Listens for file or directory changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | 待监视文件的应用沙箱路径。 |
-| events | number | Yes | ?1:?监听文件或者目录是否发生重命名。&lt;br/&gt;-?2：监听文件或者目录内容的是否修改。&lt;br/&gt;-?3：两者都有。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 每发生变化一次，调用一次此函数。 |
+| filename | string | Yes | Application sandbox path of the file. |
+| events | number | Yes | 1**: The file or directory is renamed.&lt;br&gt;- **2**: The file or directory is modified.&lt; br&gt;- **3**: The file or directory is modified and renamed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Called each time a change is detected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Watcher](arkts-corefile-watcher-t.md) | Promise对象。返回文件变化监听的实例。 |
+| [Watcher](arkts-corefile-watcher-t.md) | Promise that returns the file change. |
 

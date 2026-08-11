@@ -1,6 +1,6 @@
 # MultiDownloadProgress
 
-云文件批量缓存的进度信息。
+Represents the batch download progress of a file from the Drive Kit.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 getFailedFiles(): Array<FailedFileInfo>
 ```
 
-获取批量缓存失败的文件列表。
+Obtains the list of files that fail to be downloaded in batches.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ getFailedFiles(): Array<FailedFileInfo>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FailedFileInfo&gt; | 返回缓存失败的文件URI列表及其对应的错误类型。 |
+| Array&lt;FailedFileInfo&gt; | List of file URIs that fail to be downloaded and the corresponding error types. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 getSuccessfulFiles(): Array<string>
 ```
 
-获取批量缓存成功的文件列表。
+Obtains the list of files that are successfully downloaded in batches.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ getSuccessfulFiles(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 数组类型，返回缓存成功的文件URI列表。 |
+| Array&lt;string&gt; | List of URIs of the files that are successfully downloaded. The value is an array. |
 
 **Error codes:**
 
@@ -140,7 +140,8 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 downloadedSize: long
 ```
 
-已缓存的文件大小，取值范围为 [0, INT64_MAX)，单位：Byte。如果进度异常，返回值为 INT64_MAX。
+Size of the downloaded file, in bytes. The value range is  
+[0, INT64_MAX). If the progress is abnormal, the value **INT64_MAX** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -158,7 +159,7 @@ downloadedSize: long
 errType: DownloadErrorType
 ```
 
-返回批量缓存任务执行失败时的错误类型。
+Type of the error returned when the batch download fails.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
@@ -176,7 +177,7 @@ errType: DownloadErrorType
 failedCount: int
 ```
 
-缓存失败的文件数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
+Number of files that fail to be downloaded. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -194,7 +195,7 @@ failedCount: int
 state: State
 ```
 
-批量缓存任务的执行状态。
+Execution state of the batch download.
 
 **Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
@@ -212,7 +213,8 @@ state: State
 successfulCount: int
 ```
 
-缓存成功的文件数量，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
+Number of successfully downloaded files. The value ranges from 0 to 400. If the progress is abnormal, the value  
+**-1** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -230,7 +232,7 @@ successfulCount: int
 taskId: long
 ```
 
-批量缓存任务的ID，取值范围为0到INT64_MAX。如果进度异常，返回值为-1。
+ID of a batch download task. The value ranges from 0 to INT64_MAX. If the progress is abnormal, the value **-1**is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -248,7 +250,7 @@ taskId: long
 totalCount: int
 ```
 
-文件总数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
+Total number of files. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -266,7 +268,8 @@ totalCount: int
 totalSize: long
 ```
 
-待缓存的文件总大小，取值范围为 [0, INT64_MAX)，单位为 Byte。如果进度异常，返回值为 INT64_MAX。
+Total size of the files to be downloaded, in bytes. The value range is  
+[0, INT64_MAX). If the progress is abnormal, the value **INT64_MAX** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

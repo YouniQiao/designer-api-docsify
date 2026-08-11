@@ -1,6 +1,6 @@
 # NavDestinationContext
 
-NavDestination上下文信息。
+Indicates the context of NavDestination.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination上下文信息。
 getConfigInRouteMap(): RouteMapConfig | undefined
 ```
 
-获取当前NavDestination的路由配置信息。
+Get configuration of current Destination in module.json
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 mode?: NavDestinationMode
 ```
 
-当前NavDestination的类型。
+The mode of NavDestination.
 
 **Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
@@ -60,7 +60,7 @@ mode?: NavDestinationMode
 navDestinationId?: string
 ```
 
-当前NavDestination的唯一ID，由系统自动生成，和组件通用属性id无关。
+Get the unique id of NavDestination, which is different from common property id of Component.
 
 **Type:** string
 
@@ -80,7 +80,7 @@ navDestinationId?: string
 pathInfo: NavPathInfo
 ```
 
-跳转NavDestination时指定的参数。
+Get path info.
 
 **Type:** [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md)
 
@@ -100,7 +100,7 @@ pathInfo: NavPathInfo
 pathStack: NavPathStack
 ```
 
-当前NavDestination所处的导航控制器。
+Get stack of the Navigation where the NavDestination is located.
 
 **Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 

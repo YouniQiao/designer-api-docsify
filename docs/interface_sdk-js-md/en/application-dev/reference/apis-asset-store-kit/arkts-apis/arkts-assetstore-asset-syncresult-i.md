@@ -1,6 +1,6 @@
 # SyncResult
 
-关键资产同步的结果。
+Represents the sync result of an asset.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 readonly failedCount?: number
 ```
 
-关键资产同步失败的数量。
+Number of assets that fail to be synced.
 
 **Type:** number
 
@@ -40,7 +40,8 @@ readonly failedCount?: number
 readonly resultCode: number
 ```
 
-关键资产同步的结果码。同步成功时结果码为0，同步失败时结果码参考[ErrorCode](arkts-assetstore-asset-errorcode-e.md)。
+Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see  
+[ErrorCode](arkts-assetstore-asset-errorcode-e.md) for the result code.
 
 **Type:** number
 
@@ -58,7 +59,7 @@ readonly resultCode: number
 readonly totalCount?: number
 ```
 
-触发同步的关键资产总数。
+Total number of assets to be synced.
 
 **Type:** number
 

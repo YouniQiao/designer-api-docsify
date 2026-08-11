@@ -1,6 +1,6 @@
 # ConnectionReason
 
-连接原因的枚举。
+Enum for the connection reason.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 CONNECTION_SUCCESS = 0
 ```
 
-连接成功。
+Connection succeeded.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ CONNECTION_SUCCESS = 0
 CONNECTION_FAILURE = 1
 ```
 
-连接失败。
+Connection failed.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ CONNECTION_FAILURE = 1
 CONNECTION_LOCAL_DISCONNECT = 2
 ```
 
-已由用户断开连接。
+Local device initiated disconnection.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ CONNECTION_LOCAL_DISCONNECT = 2
 CONNECTION_REMOTE_DISCONNECT = 3
 ```
 
-远端设备触发断连。
+Remote device initiated disconnection.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ CONNECTION_REMOTE_DISCONNECT = 3
 CONNECTION_FAIL_ACB_CONNECTION = 4
 ```
 
-连接失败：超过ACB连接限制。
+Connection failed: ACB connection failed. The remote device may be powered off or out of range.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ CONNECTION_FAIL_ACB_CONNECTION = 4
 CONNECTION_FAIL_SERVICE_DISCOVERY = 5
 ```
 
-连接失败：服务发现失败。
+Connection failed: Service discovery failed.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ CONNECTION_FAIL_SERVICE_DISCOVERY = 5
 CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6
 ```
 
-连接失败：在远端设备上找不到可用的服务。
+Connection failed: No available services found on the remote device.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6
 CONNECTION_FAIL_CONNECTION_NUM_LIMITED = 7
 ```
 
-连接失败：超过ACB连接限制。
+Connection failed: Connection limit exceeded.
 
 **Since:** 26.0.0
 

@@ -6,7 +6,7 @@
 declare function unlinkSync(path: string): void
 ```
 
-以同步方法删除文件。
+Removes a file. This API returns the result synchronously.
 
 **Since:** 6
 
@@ -24,5 +24,5 @@ declare function unlinkSync(path: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待删除文件的应用沙箱路径。 |
+| path | string | Yes | Application sandbox path of the file. |
 

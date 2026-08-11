@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## inData
 
 ```TypeScript

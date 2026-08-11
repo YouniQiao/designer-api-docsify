@@ -4,7 +4,7 @@
 type ActiveStreamsVolumeInfoArray = Array<Readonly<ActiveStreamVolumeInfo>>
 ```
 
-ActiveStreamVolumeInfo数组。
+ActiveStreamVolumeInfo array.
 
 **Since:** 24
 

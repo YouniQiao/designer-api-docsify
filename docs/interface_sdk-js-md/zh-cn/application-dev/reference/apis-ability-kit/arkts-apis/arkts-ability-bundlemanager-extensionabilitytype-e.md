@@ -20,7 +20,7 @@
 FORM = 0
 ```
 
-[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md)：卡片扩展能力，提供卡片开发能力。
+[FormExtensionAbility](@ohos.app.form.FormExtensionAbility)：卡片扩展能力，提供卡片开发能力。
 
 **起始版本：** 9
 
@@ -374,7 +374,7 @@ InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，�
 FENCE = 24
 ```
 
-[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md)：为开发者提供地理围栏相关的能力，继承自ExtensionAbility。
+[FenceExtensionAbility](@ohos.app.ability.FenceExtensionAbility:FenceExtensionAbility)：为开发者提供地理围栏相关的能力，继承自ExtensionAbility。
 
 **起始版本：** 18
 
@@ -422,7 +422,7 @@ AssetAccelerationExtensionAbility：资源预下载扩展能力，提供在设�
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)：为开发者提供卡片编辑的能力，继承自UIExtensionAbility。
+[FormEditExtensionAbility](@ohos.app.form.FormEditExtensionAbility:FormEditExtensionAbility)：为开发者提供卡片编辑的能力，继承自UIExtensionAbility。
 
 **起始版本：** 18
 
@@ -470,7 +470,7 @@ APP_SERVICE = 29
 LIVE_FORM = 30
 ```
 
-[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-liveformextensionability.md/arkts-app-form-liveformextensionability.md)：互动卡片相关扩展能力，提供互动卡片创建、销毁的生命周期回调。
+[LiveFormExtensionAbility](@ohos.app.form.LiveFormExtensionAbility)：互动卡片相关扩展能力，提供互动卡片创建、销毁的生命周期回调。
 
 **起始版本：** 20
 
@@ -572,7 +572,7 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-fusionconnectivity-partneragentextensionability.md/arkts-fusionconnectivity-partneragentextensionability.md)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
+[PartnerAgentExtensionAbility](@ohos.FusionConnectivity.PartnerAgentExtensionAbility)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
 
 **模型约束**：此接口仅可在Stage模型下使用。
 

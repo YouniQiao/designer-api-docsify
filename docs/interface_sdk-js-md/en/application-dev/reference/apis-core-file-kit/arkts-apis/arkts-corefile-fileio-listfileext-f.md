@@ -15,9 +15,9 @@ function listFileExt(
 ): Promise<string[]>
 ```
 
-列出目录下所有文件名，支持递归列出和自定义文件名过滤。使用Promise异步回调。
+Lists all files in a directory. This API supports recursive listing of files and file filtering. This API uses a promise to return the result.
 
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 26.0.0
 
@@ -33,14 +33,14 @@ function listFileExt(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise对象，返回文件名数组。 |
+| Promise&lt;string[]&gt; | Promise used to return the files names listed. |
 
 **Error codes:**
 

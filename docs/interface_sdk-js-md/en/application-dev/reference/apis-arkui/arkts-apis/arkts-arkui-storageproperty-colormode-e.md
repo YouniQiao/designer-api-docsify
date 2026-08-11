@@ -1,6 +1,6 @@
 # ColorMode
 
-系统当前深浅色模式。
+Defines the ColorMode of device.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 LIGHT = 0
 ```
 
-浅色模式。
+Light mode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ LIGHT = 0
 DARK = 1
 ```
 
-深色模式。
+Dark mode.
 
 **Since:** 23
 

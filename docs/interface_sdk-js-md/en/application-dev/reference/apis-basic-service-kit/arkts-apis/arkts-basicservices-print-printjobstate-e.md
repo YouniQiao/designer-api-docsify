@@ -1,6 +1,6 @@
 # PrintJobState
 
-打印任务状态的枚举。
+Enumerates the print job states.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 PRINT_JOB_PREPARE = 0
 ```
 
-表示打印任务的初始状态。
+The printer is prepared for the print job.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ PRINT_JOB_PREPARE = 0
 PRINT_JOB_QUEUED = 1
 ```
 
-表示打印任务传送到打印机。
+The print job is on the print queue of the printer.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ PRINT_JOB_QUEUED = 1
 PRINT_JOB_RUNNING = 2
 ```
 
-表示执行打印任务。
+The print job is being executed.
 
 **Since:** 14
 
@@ -64,7 +64,7 @@ PRINT_JOB_RUNNING = 2
 PRINT_JOB_BLOCKED = 3
 ```
 
-表示打印任务已被阻止。
+The print job is blocked.
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ PRINT_JOB_BLOCKED = 3
 PRINT_JOB_COMPLETED = 4
 ```
 
-表示打印任务完成。
+The print job is complete.
 
 **Since:** 14
 

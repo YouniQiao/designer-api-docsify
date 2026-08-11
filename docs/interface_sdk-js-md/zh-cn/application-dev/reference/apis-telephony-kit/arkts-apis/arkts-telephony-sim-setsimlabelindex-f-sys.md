@@ -1,11 +1,5 @@
 # setSimLabelIndex（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## setSimLabelIndex
 
 ```TypeScript
@@ -43,12 +37,12 @@ function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 8300999 | Unknown error code. |
-| 202 | Nonsystem applications use system APIs. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 

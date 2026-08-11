@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
-## 导入模块
-
-```TypeScript
-import { DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
-```
-
 ## complete
 
 ```TypeScript

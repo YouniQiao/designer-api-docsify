@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## 汇总
 
 ### 函数

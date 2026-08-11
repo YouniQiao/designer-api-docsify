@@ -1,6 +1,6 @@
 # Options
 
-用于提供创建数据库的配置信息。
+Provides KV store configuration.
 
 **Since:** 9
 
@@ -22,7 +22,12 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 autoSync?: boolean
 ```
 
-设置数据库是否支持跨设备自动同步。默认为false，即只支持手动同步。配置为true，即只支持在跨设备Call调用实现的多端协同中生效，其他场景无法生效。
+Whether to enable auto sync across devices. The default value is **false**, indicating that only manual sync is supported. If this parameter is set to **true**, &lt;!--RP1--&gt;it takes effect only in  
+[device collaboration using cross-device calls](../../../application-models/hop-multi-device-collaboration.md#using-cross-device-call).&lt;!--RP1End--&gt;
+
+SystemCapability.DistributedDataManager.KVStore.Core
+
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **Type:** boolean
 
@@ -44,7 +49,10 @@ autoSync?: boolean
 backup?: boolean
 ```
 
-设置数据库文件是否备份，true为备份，false为不备份，默认为true。
+Whether to back up the database files. The value **true** means to back up the database files, and the value  
+**false** means the opposite. The default value is **true**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -64,7 +72,9 @@ backup?: boolean
 createIfMissing?: boolean
 ```
 
-当数据库文件不存在时是否创建数据库，true为创建，false为不创建，默认为true。
+Whether to create a database when database files do not exist. The value **true** means to create a database, and  the value **false** means the opposite. The default value is **true**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -84,7 +94,10 @@ createIfMissing?: boolean
 encrypt?: boolean
 ```
 
-设置数据库文件是否加密，true为加密，false为不加密，默认为false。
+Whether to encrypt the database files. The value **true** means to encrypt the database files, and the value  
+**false** means the opposite. The default value is **false**.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** boolean
 
@@ -104,7 +117,9 @@ encrypt?: boolean
 kvStoreType?: KVStoreType
 ```
 
-设置要创建的数据库类型，默认为DEVICE_COLLABORATION，即多设备协同数据库。
+Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
 
@@ -124,7 +139,7 @@ kvStoreType?: KVStoreType
 rootDir?: string
 ```
 
-设置数据库文件存储路径，不设置即为默认路径（context.databaseDir）。不能设置空字符串，创建数据库和删除数据库时目录必须有访问权限且存在，关闭数据库不校验此参数。
+Specifies the root directory relative to the database
 
 **Type:** string
 
@@ -144,7 +159,9 @@ rootDir?: string
 schema?: Schema
 ```
 
-设置定义存储在数据库中的值，默认为undefined，即不使用Schema。
+Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
+
+SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
 
@@ -164,7 +181,9 @@ schema?: Schema
 securityLevel: SecurityLevel
 ```
 
-设置数据库安全级别。
+Security level of the KV store.
+
+SystemCapability.DistributedDataManager.KVStore.Core
 
 **Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 

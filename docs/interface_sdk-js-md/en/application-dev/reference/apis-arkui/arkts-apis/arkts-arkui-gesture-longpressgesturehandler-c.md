@@ -1,6 +1,6 @@
 # LongPressGestureHandler
 
-长按手势处理器对象类型。
+Defines the LongPressGesture handler.
 
 **Inheritance/Implementation:** LongPressGestureHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
 
@@ -18,7 +18,7 @@
 constructor(options?: LongPressGestureHandlerOptions)
 ```
 
-长按手势处理器的构造函数。
+Constructor parameters.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ constructor(options?: LongPressGestureHandlerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No | 长按手势处理器配置参数。 |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No |  |
 
 ## onAction
 
@@ -42,7 +42,7 @@ constructor(options?: LongPressGestureHandlerOptions)
 onAction(event: Callback<GestureEvent>): this
 ```
 
-设置长按手势处理器识别成功回调。
+LongPress gesture recognition success callback.
 
 **Since:** 23
 
@@ -58,13 +58,13 @@ onAction(event: Callback<GestureEvent>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 长按手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前长按手势处理器对象。 |
+| this |  |
 
 ## onActionCancel
 
@@ -72,7 +72,7 @@ onAction(event: Callback<GestureEvent>): this
 onActionCancel(event: Callback<GestureEvent>): this
 ```
 
-设置长按手势处理器取消回调。长按手势处理器识别成功后，接收到触摸取消事件时触发回调。
+The LongPress gesture is successfully recognized and a callback is triggered when the touch cancel event is received.
 
 **Since:** 23
 
@@ -88,13 +88,13 @@ onActionCancel(event: Callback<GestureEvent>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 长按手势处理器取消回调。该回调会返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前长按手势处理器对象。 |
+| this |  |
 
 ## onActionEnd
 
@@ -102,7 +102,7 @@ onActionCancel(event: Callback<GestureEvent>): this
 onActionEnd(event: Callback<GestureEvent>): this
 ```
 
-设置长按手势处理器结束回调。长按手势处理器识别成功后，最后一根手指抬起时触发回调。
+The LongPress gesture is successfully recognized. When the finger is lifted, the callback is triggered.
 
 **Since:** 23
 
@@ -118,11 +118,11 @@ onActionEnd(event: Callback<GestureEvent>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 长按手势处理器结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前长按手势处理器对象。 |
+| this |  |
 

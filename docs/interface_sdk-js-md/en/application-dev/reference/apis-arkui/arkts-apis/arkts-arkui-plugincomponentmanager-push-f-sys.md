@@ -12,7 +12,7 @@ import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
 export function push(param: PushParameterForStage, callback: AsyncCallback<void>): void
 ```
 
-组件提供方向组件使用方主动发送组件与数据。组件使用方需通过onPush事件监听接收数据。
+Plugin component push method used to send the information of the template it provides.
 
 **Since:** 23
 
@@ -30,6 +30,6 @@ export function push(param: PushParameterForStage, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | 组件提供方要发送的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 此次接口调用的异步回调。 |
+| param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Plugin component push event callback. |
 

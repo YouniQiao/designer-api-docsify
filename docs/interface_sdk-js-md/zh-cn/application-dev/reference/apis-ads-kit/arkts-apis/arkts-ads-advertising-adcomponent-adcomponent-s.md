@@ -20,12 +20,6 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
-## 导入模块
-
-```TypeScript
-import { AdComponent } from 'kits/@kit.AdsKit';
-```
-
 ## adRenderer
 
 ```TypeScript

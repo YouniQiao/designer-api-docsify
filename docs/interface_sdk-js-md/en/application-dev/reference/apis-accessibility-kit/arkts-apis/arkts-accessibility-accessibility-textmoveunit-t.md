@@ -4,7 +4,7 @@
 type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'
 ```
 
-文本无障碍导航移动粒度。
+Enumerates the movement units for traversing the node text.
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'
 
 | Type | Description |
 | --- | --- |
-| 'char' | 表示以字符为移动粒度遍历节点文本。 |
-| 'word' | 表示以词为移动粒度遍历节点文本。 |
-| 'line' | 表示以行为移动粒度遍历节点文本。 |
-| 'page' | 表示以页为移动粒度遍历节点文本。 |
-| 'paragraph' | 表示以段落为移动粒度遍历节点文本。 |
+| 'char' | The movement unit for traversing the node text is by character. |
+| 'word' | The movement unit for traversing the node text is by word. |
+| 'line' | The movement unit for traversing the node text is by line. |
+| 'page' | The movement unit for traversing the node text is by page. |
+| 'paragraph' | The movement unit for traversing the node text is by paragraph. |
 

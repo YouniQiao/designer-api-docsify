@@ -1,6 +1,6 @@
 # TextShadowStyle
 
-文本阴影对象说明。
+Defines TextShadowStyle.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 constructor(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-文本阴影对象的构造函数。
-
-ShadowOptions对象中不支持fill字段。
+constructor.
 
 **Since:** 23
 
@@ -34,7 +32,7 @@ ShadowOptions对象中不支持fill字段。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt; | Yes | 文本阴影设置项。 |
+| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt; | Yes | text shadow value. |
 
 ## textShadow
 
@@ -42,7 +40,7 @@ ShadowOptions对象中不支持fill字段。
 readonly textShadow: Array<ShadowOptions>
 ```
 
-获取属性字符串的文本阴影。
+Get the textShadow value of the StyledString.
 
 **Type:** Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 

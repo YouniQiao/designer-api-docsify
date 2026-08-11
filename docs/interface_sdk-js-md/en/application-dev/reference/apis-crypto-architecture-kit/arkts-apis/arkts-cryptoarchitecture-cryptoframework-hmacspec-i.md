@@ -1,10 +1,10 @@
 # HmacSpec
 
-消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为HMAC计算的输入。
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md). It is used as an input parameter for HMAC computation.
 
-> **说明：**
+> **NOTE：**
 > 
-> mdName是必选参数，表示HMAC摘要算法。
+> **mdName** specifies the HMAC message digest algorithm. It is mandatory.
 
 **Inheritance/Implementation:** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
 
@@ -28,7 +28,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 mdName: string
 ```
 
-摘要算法名。
+Message digest algorithm.
 
 **Type:** string
 

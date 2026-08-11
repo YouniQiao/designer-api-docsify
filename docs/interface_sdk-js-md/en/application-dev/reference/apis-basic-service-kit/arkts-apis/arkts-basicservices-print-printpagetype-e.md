@@ -1,6 +1,6 @@
 # PrintPageType
 
-打印纸张类型的枚举。
+Enumerates the print page types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 PAGE_ISO_A3 = 0
 ```
 
-表示A3。
+A3.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ PAGE_ISO_A3 = 0
 PAGE_ISO_A4 = 1
 ```
 
-表示A4。
+A4.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ PAGE_ISO_A4 = 1
 PAGE_ISO_A5 = 2
 ```
 
-表示A5。
+A5.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ PAGE_ISO_A5 = 2
 PAGE_JIS_B5 = 3
 ```
 
-表示B5。
+B5.
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ PAGE_JIS_B5 = 3
 PAGE_ISO_C5 = 4
 ```
 
-表示C5。
+C5.
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ PAGE_ISO_C5 = 4
 PAGE_ISO_DL = 5
 ```
 
-表示DL。
+DL.
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ PAGE_ISO_DL = 5
 PAGE_LETTER = 6
 ```
 
-表示Letter。
+Letter.
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ PAGE_LETTER = 6
 PAGE_LEGAL = 7
 ```
 
-表示Legal。
+Legal.
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ PAGE_LEGAL = 7
 PAGE_PHOTO_4X6 = 8
 ```
 
-表示4x6相纸。
+4 x 6 photo paper.
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ PAGE_PHOTO_4X6 = 8
 PAGE_PHOTO_5X7 = 9
 ```
 
-表示5x7相纸。
+5 x 7 photo paper.
 
 **Since:** 11
 
@@ -176,7 +176,7 @@ PAGE_PHOTO_5X7 = 9
 PAGE_INT_DL_ENVELOPE = 10
 ```
 
-表示INT DL ENVELOPE。
+International envelope DL.
 
 **Since:** 11
 
@@ -192,7 +192,7 @@ PAGE_INT_DL_ENVELOPE = 10
 PAGE_B_TABLOID = 11
 ```
 
-表示B Tabloid。
+B Tabloid.
 
 **Since:** 11
 

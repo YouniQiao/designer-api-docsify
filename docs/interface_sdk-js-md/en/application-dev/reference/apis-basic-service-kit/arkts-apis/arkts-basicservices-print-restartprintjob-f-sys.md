@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function restartPrintJob(jobId: string): Promise<void>
 ```
 
-重新打印之前打印过的打印任务，使用Promise异步回调。
+Restarts a print job that has been finished before. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,20 +30,20 @@ function restartPrintJob(jobId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 之前打印过的打印任务ID。 |
+| jobId | string | Yes | ID of a print job that has been finished before. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

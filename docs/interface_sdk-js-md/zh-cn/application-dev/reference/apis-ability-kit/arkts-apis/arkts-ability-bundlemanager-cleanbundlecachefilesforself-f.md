@@ -1,11 +1,5 @@
 # cleanBundleCacheFilesForSelf
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## cleanBundleCacheFilesForSelf
 
 ```TypeScript

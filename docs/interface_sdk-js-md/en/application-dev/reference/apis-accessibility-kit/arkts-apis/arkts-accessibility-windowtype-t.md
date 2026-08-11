@@ -4,7 +4,7 @@
 export type WindowType = 'application' | 'system'
 ```
 
-表示窗口的类型。
+Enumerates the window types.
 
 **Since:** 9
 
@@ -16,6 +16,6 @@ export type WindowType = 'application' | 'system'
 
 | Type | Description |
 | --- | --- |
-| 'application' | 表示应用窗口类型。 |
-| 'system' | 表示系统窗口类型。 |
+| 'application' | Application window. |
+| 'system' | System window. |
 

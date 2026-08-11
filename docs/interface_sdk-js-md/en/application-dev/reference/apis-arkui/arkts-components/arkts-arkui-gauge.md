@@ -1,23 +1,25 @@
 # Gauge
 
-数据量规图表组件，用于将数据展示为环形图表。适用于展示任务完成进度、性能指标、数据占比等场景，支持自定义颜色、起止角度、指针样式、阴影效果等多种视觉配置，能够直观地呈现数据状态，提升用户对数据的理解和交互体验。
+The **Gauge** component represents a gauge that displays data in a circular format.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
+> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
 
-## 子组件
+## Child Components
 
-可以包含单个子组件。
+This component can contain only one child component.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)，不支持循环渲染控制
-> [ForEach]{@link ./for_each}和[LazyForEach]{@link ./lazy_for_each}。
+> - Supported child component types: built-in and custom components, including
+> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding
+> [ForEach]{@link ./for_each} and [LazyForEach]{@link ./lazy_for_each}.
 > 
-> - 建议使用文本组件构建当前数值文本和辅助文本。
+> - You are advised to use the **Text** component to build the current value and auxiliary text.
 > 
-> - 若子组件宽高为百分比形式，则百分比基准为以外圆作为内切圆的矩形的宽和高。
+> - If the width and height of the child component are in percentage, the reference range is the rectangle that has
+> the outer ring as its inscribed circle.
 
 ## Gauge
 
@@ -25,7 +27,7 @@
 Gauge(options: GaugeOptions)
 ```
 
-创建数据量规图表组件。
+Creates a gauge.
 
 **Since:** 8
 
@@ -43,7 +45,7 @@ Gauge(options: GaugeOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GaugeOptions](../arkts-apis/arkts-arkui-gauge-gaugeoptions-i.md) | Yes | 数据量规图表组件参数。 |
+| options | [GaugeOptions](../arkts-apis/arkts-arkui-gauge-gaugeoptions-i.md) | Yes | Settings of the gauge. |
 
 ## Summary
 

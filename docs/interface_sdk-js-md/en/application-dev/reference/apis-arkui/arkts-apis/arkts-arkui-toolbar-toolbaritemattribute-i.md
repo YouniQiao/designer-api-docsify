@@ -1,6 +1,6 @@
 # ToolBarItemAttribute
 
-定义ToolBarItem组件的属性方法。
+Defines the ToolBarItem component attribute functions.
 
 **Since:** 23
 
@@ -16,11 +16,11 @@
 applyAttributesFinish(): void
 ```
 
-通知ToolBarItem已完成属性设置。
+Notify ToolBarItem has finished setting up its attributes.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +34,7 @@ applyAttributesFinish(): void
 debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-设置组件的源代码重定向信息。
+Set the component's source code redirection information.
 
 **Since:** 26.0.0
 
@@ -50,8 +50,8 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLine | string | Yes | 源代码行。 |
-| moduleName | string | No | 组件所属的模块。 |
+| sourceLine | string | Yes | the source code line. |
+| moduleName | string | No | module to which the component belongs. |
 
 **Return value:**
 
@@ -65,11 +65,11 @@ debugLine(sourceLine: string, moduleName?: string): this
 setToolBarItemOptions(options?: ToolBarItemOptions): this
 ```
 
-设置toolbar item选项。
+Sets toolbar item options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,11 +81,11 @@ setToolBarItemOptions(options?: ToolBarItemOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | 列选项 |
+| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | column options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | ToolBarItemAttribute实例 |
+| this | ToolBarItemAttribute instance |
 

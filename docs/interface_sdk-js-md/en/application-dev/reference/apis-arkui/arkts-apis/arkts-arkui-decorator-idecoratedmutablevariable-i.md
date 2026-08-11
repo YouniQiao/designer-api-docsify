@@ -1,6 +1,6 @@
 # IDecoratedMutableVariable
 
-定义可读写状态变量接口
+Define decorated mutable variable interface.
 
 **Inheritance/Implementation:** IDecoratedMutableVariable extends [IDecoratedReadableVariable<T>](IDecoratedReadableVariable<T>)
 

@@ -38,7 +38,7 @@ Define Preview colorMode
 deviceType?: string
 ```
 
-定义预览设备类型
+Define Preview deviceType
 
 **Type:** string
 
@@ -60,7 +60,7 @@ deviceType?: string
 dpi?: number
 ```
 
-定义预览dpi
+Define Preview dpi
 
 **Type:** number
 

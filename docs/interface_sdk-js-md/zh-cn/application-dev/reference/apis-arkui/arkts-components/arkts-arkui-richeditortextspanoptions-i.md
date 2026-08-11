@@ -110,7 +110,7 @@ url信息。
 
 默认值：undefined
 
-**类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](../arkts-apis/arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 

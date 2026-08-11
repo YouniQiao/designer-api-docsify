@@ -62,7 +62,7 @@ Y coordinate of the accessibility hover point relative to the upper edge of the 
 globalDisplayX?: number
 ```
 
-相对于全局显示的点的 Y 坐标。
+X coordinate of the point relative to the global display.
 
 **Type:** number
 
@@ -84,11 +84,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+Y coordinate of the point relative to the global display.
 
 **Type:** number
 

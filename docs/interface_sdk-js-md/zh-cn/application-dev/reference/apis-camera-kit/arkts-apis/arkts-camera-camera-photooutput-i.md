@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## capture
 
 ```TypeScript
@@ -46,8 +40,8 @@ capture(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## capture
 
@@ -77,8 +71,8 @@ capture(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## capture
 
@@ -109,9 +103,9 @@ capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## capture
 
@@ -147,9 +141,9 @@ capture(setting: PhotoCaptureSetting): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## enableAutoExtendedGainmapDelivery
 
@@ -181,9 +175,9 @@ enableAutoExtendedGainmapDelivery(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400103 | Session not config, only throw in session usage. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## enableMirror
 
@@ -216,9 +210,9 @@ enableMirror(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## enableMovingPhoto
 
@@ -250,9 +244,9 @@ enableMovingPhoto(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 201 | permission denied. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getActiveProfile
 
@@ -282,7 +276,7 @@ getActiveProfile(): Profile
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getPhotoRotation
 
@@ -329,8 +323,8 @@ getPhotoRotation(deviceDegree?: int): ImageRotation
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getSupportedMovingPhotoVideoCodecTypes
 
@@ -360,7 +354,7 @@ getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isAutoExtendedGainmapDeliverySupported
 
@@ -440,7 +434,7 @@ isMovingPhotoSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -476,7 +470,7 @@ isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPriorit
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 
 ## off('photoAvailable')
 
@@ -1513,7 +1507,7 @@ setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setPhotoQualityPrioritization
 
@@ -1546,6 +1540,6 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 

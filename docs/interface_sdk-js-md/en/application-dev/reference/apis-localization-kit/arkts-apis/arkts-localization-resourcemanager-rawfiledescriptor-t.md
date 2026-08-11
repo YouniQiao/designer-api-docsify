@@ -4,7 +4,7 @@
 export type RawFileDescriptor = _RawFileDescriptor
 ```
 
-表示rawfile文件所在HAP的文件描述符信息。
+Describes the file descriptor information of the HAP where the rawfile is located.
 
 **Since:** 9
 

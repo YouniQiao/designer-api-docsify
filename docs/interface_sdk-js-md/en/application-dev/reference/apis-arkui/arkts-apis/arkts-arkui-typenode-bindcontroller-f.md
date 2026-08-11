@@ -6,7 +6,7 @@
 export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void
 ```
 
-将文本控制器[TextController](arkts-arkui-text-textcontroller-c.md)绑定到[Text](arkts-arkui-typenode-text-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
+Binds a [TextController](arkts-arkui-text-textcontroller-c.md) instance to a [Text](arkts-arkui-typenode-text-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -24,16 +24,16 @@ export function bindController(node: FrameNode, controller: TextController, node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定文本控制器的目标节点。 |
-| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes | 文本控制器。 |
-| nodeType | 'Text' | Yes | 绑定文本控制器的目标节点的节点类型为Text。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes | TextController** instance to bind. |
+| nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -42,7 +42,7 @@ export function bindController(node: FrameNode, controller: TextController, node
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-将控制器[SwiperController](arkts-arkui-swiper-swipercontroller-c.md)绑定到[Swiper](arkts-arkui-typenode-swiper-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
+Binds a [SwiperController](arkts-arkui-swiper-swipercontroller-c.md) instance to the [Swiper](arkts-arkui-typenode-swiper-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -60,16 +60,16 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定控制器的目标节点。 |
-| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes | Swiper容器组件的控制器。 |
-| nodeType | 'Swiper' | Yes | 绑定控制器的目标节点的节点类型为Swiper。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes | SwiperController** instance. |
+| nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -78,7 +78,7 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-将滚动控制器[Scroller](arkts-arkui-scroll-scroller-c.md)绑定到[Scroll](arkts-arkui-typenode-scroll-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+Binds the [Scroller](arkts-arkui-scroll-scroller-c.md) to the [Scroll](arkts-arkui-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 15
 
@@ -96,16 +96,16 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定滚动控制器的目标节点。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | 滚动控制器。 |
-| nodeType | 'Scroll' | Yes | 绑定滚动控制器的目标节点的节点类型为Scroll。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'Scroll' | Yes | Node type, which is **Scroll** in this API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
-| 100021 | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
 
 
 ## bindController
@@ -114,7 +114,7 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-将滚动控制器[Scroller](arkts-arkui-scroll-scroller-c.md)绑定到[List](arkts-arkui-typenode-list-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+Binds a [Scroller](arkts-arkui-scroll-scroller-c.md) instance to the [List](arkts-arkui-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -132,16 +132,16 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定滚动控制器的目标节点。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | 滚动控制器。 |
-| nodeType | 'List' | Yes | 绑定滚动控制器的目标节点的节点类型为List。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -150,7 +150,9 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-将输入框控制器[TextInputController](arkts-arkui-textinput-textinputcontroller-c.md)绑定到[TextInput](arkts-arkui-typenode-textinput-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
+Binds the [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md) to the [TextInput](arkts-arkui-typenode-textinput-t.md) node. Cross  
+-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API  
+supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -168,16 +170,16 @@ export function bindController(node: FrameNode, controller: TextInputController,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定输入框控制器的目标节点。 |
-| controller | [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) | Yes | 输入框控制器。 |
-| nodeType | 'TextInput' | Yes | 绑定输入框控制器的目标节点的节点类型为TextInput。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| controller | [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) | Yes | Input box controller. |
+| nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -186,7 +188,7 @@ export function bindController(node: FrameNode, controller: TextInputController,
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void
 ```
 
-将滚动控制器[Scroller](arkts-arkui-scroll-scroller-c.md)绑定到[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+Binds a [Scroller](arkts-arkui-scroll-scroller-c.md) instance to the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -204,16 +206,16 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定滚动控制器的目标节点。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | 滚动控制器。 |
-| nodeType | 'WaterFlow' | Yes | 绑定滚动控制器的目标节点的节点类型为WaterFlow。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -222,7 +224,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-将输入框控制器[TextAreaController](arkts-arkui-textarea-textareacontroller-c.md)绑定到[TextArea](arkts-arkui-typenode-textarea-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
+Binds a [TextAreaController](arkts-arkui-textarea-textareacontroller-c.md) instance to the [TextArea](arkts-arkui-typenode-textarea-t.md) node.Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -240,16 +242,16 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定输入框控制器的目标节点。 |
-| controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | Yes | 输入框控制器。 |
-| nodeType | 'TextArea' | Yes | 绑定输入框控制器的目标节点的节点类型为TextArea。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | Yes | Input box controller. |
+| nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 
 ## bindController
@@ -258,7 +260,7 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-将滚动控制器[Scroller](arkts-arkui-scroll-scroller-c.md)绑定到[Grid](arkts-arkui-typenode-grid-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+Binds a [Scroller](arkts-arkui-scroll-scroller-c.md) instance to the [Grid](arkts-arkui-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -276,14 +278,14 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 绑定滚动控制器的目标节点。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | 滚动控制器。 |
-| nodeType | 'Grid' | Yes | 绑定滚动控制器的目标节点的节点类型为Grid。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | Scroll controller. |
+| nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

@@ -1,6 +1,6 @@
 # LineHeightStyle
 
-文本行高对象说明。
+Describes the text line height style.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 constructor(lineHeight: LengthMetrics)
 ```
 
-文本行高的构造函数。
+A constructor used to create a text line height style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ constructor(lineHeight: LengthMetrics)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本行高设置项。如果LengthMetrics的unit值是PERCENT，当前设置不生效。LengthMetrics的value值大于0时，文本行高设置 生效，否则文本行高自适应字体大小。 |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 
 ## constructor
 
@@ -42,16 +42,20 @@ constructor(lineHeight: LengthMetrics)
 constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 ```
 
-文本行高及倍数的构造函数。
+A constructor used to create a text line height and multiple.
 
-> **说明：**
+> **NOTE：**
 > 
-> - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度
-> 与倍数的乘积。
+> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),
+> only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line
+> and the multiplier.
 > 
-> - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)设置行高和行间距。
+> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and
+> [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
 > 
-> - lineHeightMultiple等于0时等效于设置为1。
+> - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
+
+**Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -69,8 +73,8 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本行高设置项。LengthMetrics的value值大于0时，文本行高设置生效，否则文本行高自适应字体大小。 |
-| lineHeightMultiple | number | No | 文本行高的倍数值。 &lt;br&gt;取值范围：[0, +∞)，支持小数。 &lt;br&gt;**说明：** &lt;br&gt;与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积； &lt;br&gt;小于0或undefined时不生效； &lt;br&gt;等于0时等效于设置为1。 |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeightMultiple | number | No | Multiplier for the text line height.&lt;br&gt;Value range: [0, +∞). Decimals are supported. |
 
 ## lineHeight
 
@@ -78,9 +82,9 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 readonly lineHeight: number
 ```
 
-获取属性字符串的文本行高。
+Text line height of the styled string.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -102,9 +106,9 @@ readonly lineHeight: number
 readonly lineHeightMultiple?: number
 ```
 
-文本行高的倍数值。实际生效的行高为该行最高的字体高度与倍数的乘积。
+Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.
 
-**说明：** lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效。lineHeightMultiple小于0或undefined时不生效。lineHeightMultiple等于0时等效于设置为1。
+**Since**: 26.0.0
 
 **Type:** number
 

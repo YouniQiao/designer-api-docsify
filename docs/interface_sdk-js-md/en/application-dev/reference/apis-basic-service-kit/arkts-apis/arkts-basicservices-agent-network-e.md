@@ -1,8 +1,8 @@
 # Network
 
-定义网络选项。
+Defines network options.
 
-网络不满足设置条件时，未执行的任务会等待执行，执行中的任务将失败或暂停。
+If the network does not meet the preset conditions, the tasks that have not been executed will await for execution, and the tasks that are being executed will fail or pause.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 ANY
 ```
 
-表示不限网络类型。
+Network of any type.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ ANY
 WIFI
 ```
 
-表示无线网络。
+Wi-Fi network.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ WIFI
 CELLULAR
 ```
 
-表示蜂窝数据网络。
+Cellular data network.
 
 **Since:** 10
 

@@ -12,13 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-根据旋转矩阵计算设备的方向，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)
-> 替代。
+Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -36,8 +30,8 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array&lt;number&gt; | Yes | 表示旋转矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 异步返回围绕z、x、y轴方向的旋转角度，单位度（°）。 |
+| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 ## Examples
 
@@ -64,12 +58,7 @@ sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: Arra
 function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 ```
 
-根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)替代。
+Obtains the device direction based on the rotation matrix. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -87,13 +76,13 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array&lt;number&gt; | Yes | 表示旋转矩阵。 |
+| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回围绕z、x、y轴方向的旋转角度，单位度（°）。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 ## Examples
 

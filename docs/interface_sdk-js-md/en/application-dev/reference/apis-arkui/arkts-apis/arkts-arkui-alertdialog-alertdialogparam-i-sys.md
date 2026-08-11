@@ -1,6 +1,6 @@
 # AlertDialogParam
 
-警告弹窗的样式。
+Base param used for AlertDialog.show method.
 
 **Since:** 23
 

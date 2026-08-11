@@ -1,6 +1,6 @@
 # SliderShowStepOptions
 
-Slider刻度点的无障碍文本信息。
+Defines the accessibility information of slider step point.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@ Slider刻度点的无障碍文本信息。
 stepsAccessibility?: Map<double, SliderStepItemAccessibility>
 ```
 
-用于设置刻度点提供辅助功能文本，供屏幕阅读器等工具读取，增强无障碍功能。 
-
-Key取值范围：[0, INT32_MAX]，当Key设定为负数和小数时，设定项不生效。 
-
-默认值：{}
+Map key value range: [0, INT32_MAX]. When the key value is set to a negative double or a decimal,the setting does not take effect.
 
 **Type:** Map&lt;double, SliderStepItemAccessibility&gt;
 

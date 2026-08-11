@@ -1,6 +1,6 @@
 # ActionMenuSuccessResponse
 
-操作菜单的响应结果。
+Defines the response of ShowActionMenu.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 index: number
 ```
 
-选中按钮在buttons数组中的索引，从0开始。
+Defines the index of data.
 
 **Type:** number
 

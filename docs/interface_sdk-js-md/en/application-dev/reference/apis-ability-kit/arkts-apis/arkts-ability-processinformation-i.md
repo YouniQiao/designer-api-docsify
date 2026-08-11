@@ -1,7 +1,7 @@
 # ProcessInformation
 
-运行进程信息，可以通过appManager的  
-[getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)来获取运行进程信息。
+The module defines the process information. The information can be obtained through  
+[getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) of appManager.
 
 **Since:** 9
 
@@ -17,7 +17,7 @@
 appCloneIndex?: int
 ```
 
-分身应用索引。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -37,7 +37,7 @@ appCloneIndex?: int
 bundleNames: Array<string>
 ```
 
-进程中所有运行的Bundle名称。
+Names of all running bundles in the process.
 
 **Type:** Array&lt;string&gt;
 
@@ -59,7 +59,7 @@ bundleNames: Array<string>
 bundleType: bundleManager.BundleType
 ```
 
-当前进程运行的包类型。
+Type of the bundle running in the process.
 
 **Type:** bundleManager.BundleType
 
@@ -79,7 +79,10 @@ bundleType: bundleManager.BundleType
 isPreload?: boolean
 ```
 
-进程是否为预加载。当进程是预加载且还未被某个组件启动请求所使用时为true；反之为false。
+Indicates whether the process is in the preload state.
+
+- `true`: The process is currently in the preload state.  
+- `false`: The process is either not a preload process, or its preload state has been consumed.
 
 **Type:** boolean
 
@@ -101,7 +104,7 @@ isPreload?: boolean
 pid: int
 ```
 
-进程ID。
+Process ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -123,7 +126,7 @@ pid: int
 processName: string
 ```
 
-进程名称。
+Process name.
 
 **Type:** string
 
@@ -145,7 +148,7 @@ processName: string
 state: appManager.ProcessState
 ```
 
-当前进程运行状态。
+Running status of the process.
 
 **Type:** appManager.ProcessState
 
@@ -165,7 +168,7 @@ state: appManager.ProcessState
 uid: int
 ```
 
-应用程序的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

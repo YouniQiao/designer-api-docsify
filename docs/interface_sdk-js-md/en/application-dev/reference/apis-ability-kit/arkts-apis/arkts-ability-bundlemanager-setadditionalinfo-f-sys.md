@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 ```
 
-设置指定应用的额外信息。此接口仅供应用市场调用。
+Sets additional information for an application. This API can be called only by AppGallery.
 
 **Since:** 11
 
@@ -30,18 +30,18 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定应用的包名。 |
-| additionalInfo | string | Yes | 需要设置的应用的额外信息。 |
+| bundleName | string | Yes | Bundle name. |
+| additionalInfo | string | Yes | Additional information to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700053 | The caller is not AppGallery. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter bundleName is empty. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700053](../errorcode-bundle.md#17700053-not-invoked-by-appgallery) | The caller is not AppGallery. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

@@ -36,14 +36,3 @@ Check whether Bluetooth is available.
 | --- | --- |
 | 2900099 | Operation failed. |
 
-## Examples
-
-```TypeScript
-try {
-    let isSupported: boolean = access.isBluetoothSupported();
-    console.info("isSupported: " + isSupported);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-

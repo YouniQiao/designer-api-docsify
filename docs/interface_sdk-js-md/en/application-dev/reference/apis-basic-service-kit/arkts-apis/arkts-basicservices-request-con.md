@@ -6,7 +6,7 @@
 const ERROR_CANNOT_RESUME: int
 ```
 
-下载任务错误码：网络原因导致恢复下载失败。
+(Download error codes) Failure to resume the download due to network errors.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ const ERROR_CANNOT_RESUME: int
 const ERROR_DEVICE_NOT_FOUND: int
 ```
 
-下载任务错误码：找不到SD卡等存储设备。
+(Download error codes) Failure to find a storage device such as a memory card.
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ const ERROR_DEVICE_NOT_FOUND: int
 const ERROR_FILE_ALREADY_EXISTS: int
 ```
 
-下载任务错误码：要下载的文件已存在，下载会话无法覆盖现有文件。
+(Download error codes) Failure to download the file because it already exists.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ const ERROR_FILE_ALREADY_EXISTS: int
 const ERROR_FILE_ERROR: int
 ```
 
-下载任务错误码：文件操作失败。
+(Download error codes) File operation failed.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ const ERROR_FILE_ERROR: int
 const ERROR_HTTP_DATA_ERROR: int
 ```
 
-下载任务错误码：HTTP传输失败。
+(Download error codes) HTTP transmission failed.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ const ERROR_HTTP_DATA_ERROR: int
 const ERROR_INSUFFICIENT_SPACE: int
 ```
 
-下载任务错误码：存储空间不足。
+(Download error codes) Insufficient storage space.
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ const ERROR_INSUFFICIENT_SPACE: int
 const ERROR_OFFLINE: int
 ```
 
-下载任务错误码：网络未连接。
+(Download error codes) No network connection.
 
 **Since:** 9
 
@@ -118,7 +118,7 @@ const ERROR_OFFLINE: int
 const ERROR_TOO_MANY_REDIRECTS: int
 ```
 
-下载任务错误码：网络重定向过多导致的错误。
+(Download error codes) Error caused by too many network redirections.
 
 **Since:** 7
 
@@ -134,7 +134,7 @@ const ERROR_TOO_MANY_REDIRECTS: int
 const ERROR_UNHANDLED_HTTP_CODE: int
 ```
 
-下载任务错误码：无法识别的HTTP代码。
+(Download error codes) Unidentified HTTP code.
 
 **Since:** 7
 
@@ -150,9 +150,9 @@ const ERROR_UNHANDLED_HTTP_CODE: int
 const ERROR_UNKNOWN: int
 ```
 
-下载任务错误码：未知错误。
+(Download error codes) Unknown error.
 
-例如：API version 12及以下版本，系统仅支持串行地尝试连接域名相关IP，不支持单个IP的连接时间控制。若DNS返回的首个IP被阻塞，可能会由于握手超时导致ERROR_UNKNOWN错误。
+In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
 
 **Since:** 7
 
@@ -168,7 +168,7 @@ const ERROR_UNKNOWN: int
 const ERROR_UNSUPPORTED_NETWORK_TYPE: int
 ```
 
-下载任务错误码：网络类型不匹配。
+(Download error codes) Network type mismatch.
 
 **Since:** 9
 
@@ -184,7 +184,7 @@ const ERROR_UNSUPPORTED_NETWORK_TYPE: int
 const EXCEPTION_FILEIO: int
 ```
 
-特有错误码：文件操作异常。
+(Specific error codes) Abnormal file operation.
 
 **Since:** 9
 
@@ -200,7 +200,7 @@ const EXCEPTION_FILEIO: int
 const EXCEPTION_FILEPATH: int
 ```
 
-特有错误码：文件路径异常。
+(Specific error codes) Abnormal file path.
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ const EXCEPTION_FILEPATH: int
 const EXCEPTION_OTHERS: int
 ```
 
-特有错误码：其他错误。
+(Specific error codes) Other errors.
 
 **Since:** 9
 
@@ -232,7 +232,7 @@ const EXCEPTION_OTHERS: int
 const EXCEPTION_PARAMCHECK: int
 ```
 
-通用错误码：参数检查失败。
+(Universal error codes) Parameter check failed.
 
 **Since:** 9
 
@@ -248,7 +248,7 @@ const EXCEPTION_PARAMCHECK: int
 const EXCEPTION_PERMISSION: int
 ```
 
-通用错误码：权限校验失败。
+(Universal error codes) Permission verification failed.
 
 **Since:** 9
 
@@ -264,7 +264,7 @@ const EXCEPTION_PERMISSION: int
 const EXCEPTION_SERVICE: int
 ```
 
-特有错误码：服务异常。
+(Specific error codes) Abnormal service.
 
 **Since:** 9
 
@@ -280,7 +280,7 @@ const EXCEPTION_SERVICE: int
 const EXCEPTION_UNSUPPORTED: int
 ```
 
-通用错误码：该设备不支持此API。
+(Universal error codes) The device does not support this API.
 
 **Since:** 9
 
@@ -296,7 +296,7 @@ const EXCEPTION_UNSUPPORTED: int
 const NETWORK_MOBILE: int
 ```
 
-网络类型：使用蜂窝网络时允许下载的位标志。
+(Network type) Bit flag download allowed on a mobile network.
 
 **Since:** 6
 
@@ -312,7 +312,7 @@ const NETWORK_MOBILE: int
 const NETWORK_WIFI: int
 ```
 
-网络类型：使用WLAN时允许下载的位标志。
+(Network type) Bit flag download allowed on a WLAN.
 
 **Since:** 6
 
@@ -328,7 +328,7 @@ const NETWORK_WIFI: int
 const PAUSED_BY_USER: int
 ```
 
-下载任务暂停原因：用户暂停会话。
+(Causes of download pause) The user paused the session.
 
 **Since:** 9
 
@@ -344,7 +344,7 @@ const PAUSED_BY_USER: int
 const PAUSED_QUEUED_FOR_WIFI: int
 ```
 
-下载任务暂停原因：文件大小超过了使用蜂窝网络会话允许的最大值，下载被暂停并等待WLAN连接。
+(Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session.
 
 **Since:** 7
 
@@ -360,7 +360,7 @@ const PAUSED_QUEUED_FOR_WIFI: int
 const PAUSED_UNKNOWN: int
 ```
 
-下载任务暂停原因：未知原因导致暂停下载。
+(Causes of download pause) Download paused due to unknown reasons.
 
 **Since:** 7
 
@@ -376,9 +376,9 @@ const PAUSED_UNKNOWN: int
 const PAUSED_WAITING_FOR_NETWORK: int
 ```
 
-下载任务暂停原因：网络问题导致下载暂停。
+(Causes of download pause) Download paused due to a network connection problem.
 
-例如：网络断开。
+Example: network disconnection
 
 **Since:** 7
 
@@ -394,7 +394,7 @@ const PAUSED_WAITING_FOR_NETWORK: int
 const PAUSED_WAITING_TO_RETRY: int
 ```
 
-下载任务暂停原因：网络错误导致下载会话将被重试。
+(Causes of download pause) Download paused due to network error and then retried.
 
 **Since:** 7
 
@@ -410,7 +410,7 @@ const PAUSED_WAITING_TO_RETRY: int
 const SESSION_FAILED: int
 ```
 
-下载任务状态码：下载会话已失败，将不会重试。
+(Download task status codes) Download failure without retry.
 
 **Since:** 7
 
@@ -426,7 +426,7 @@ const SESSION_FAILED: int
 const SESSION_PAUSED: int
 ```
 
-下载任务状态码：下载会话已暂停。
+(Download task status codes) Download paused.
 
 **Since:** 7
 
@@ -442,7 +442,7 @@ const SESSION_PAUSED: int
 const SESSION_PENDING: int
 ```
 
-下载任务状态码：下载会话正在被调度中。
+(Download task status codes) Download pending.
 
 **Since:** 7
 
@@ -458,7 +458,7 @@ const SESSION_PENDING: int
 const SESSION_RUNNING: int
 ```
 
-下载任务状态码：下载会话正在进行中。
+(Download task status codes) Download in progress.
 
 **Since:** 7
 
@@ -474,7 +474,7 @@ const SESSION_RUNNING: int
 const SESSION_SUCCESSFUL: int
 ```
 
-下载任务状态码：下载会话已完成。
+(Download task status codes) Successful download.
 
 **Since:** 7
 

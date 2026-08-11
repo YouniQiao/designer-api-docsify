@@ -1,6 +1,6 @@
 # OnProgressChangeEvent
 
-定义网页加载进度变化时触发该回调。
+Represents the callback invoked when the web page loading progress changes.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 newProgress: number
 ```
 
-新的加载进度，取值范围为0到100的整数。单位：%。
+The new progress of the page.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # PINAuth (System API)
 
-PIN码认证基类。
+Provides APIs for PIN authentication.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 constructor()
 ```
 
-创建PIN码认证的实例。
+Creates a PIN authentication instance.
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
 registerInputer(inputer: IInputer): void
 ```
 
-注册PIN码输入器。
+Registers a PIN inputer.
 
 **Since:** 8
 
@@ -72,18 +72,18 @@ registerInputer(inputer: IInputer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | PIN码输入器，用于获取PIN码。 |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | PIN inputer, which is used to obtain the PIN. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid inputer. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300103 | The credential inputer already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid inputer. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
 
 ## Examples
 
@@ -111,7 +111,7 @@ try {
 unregisterInputer(): void
 ```
 
-解注册PIN码输入器。
+Unregisters this PIN inputer.
 
 **Since:** 8
 
@@ -129,8 +129,8 @@ unregisterInputer(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # MaximizeOptions
 
-最大化窗口时的可选配置。
+Optional configuration for maximizing.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 acrossDisplayPresentation?: AcrossDisplayPresentation
 ```
 
-参数控制主窗口的瀑布模式策略。该参数只能在具有折叠功能的2in1设备上正确调用。如果在其他设备类型上调用，则没有任何效果。
+The parameter controls the across-display mode policy of main windows.This parameter can be called properly only on 2-in-1 devices with folding capabilities.If it is called on other device types, it has no effect.
 
 **Type:** [AcrossDisplayPresentation](arkts-arkui-window-acrossdisplaypresentation-e.md)
 
@@ -44,7 +44,7 @@ acrossDisplayPresentation?: AcrossDisplayPresentation
 maximizePresentation?: MaximizePresentation
 ```
 
-窗口最大化时的布局。
+Layout when the window is maximized.
 
 **Type:** [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md)
 
@@ -66,7 +66,7 @@ maximizePresentation?: MaximizePresentation
 snapshotAnimationConfig?: WindowSnapshotAnimationConfig
 ```
 
-截图动效的配置。如果未指定，将使用系统默认动效。当持续时间和延迟参数都设置为0时，表示截图动效被取消。
+The configuration of snapshot animation. If not specified, the system default animation will be used.When both the duration and delay parameters are set to 0, it means the snapshot animation is canceled.
 
 **Type:** [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
 

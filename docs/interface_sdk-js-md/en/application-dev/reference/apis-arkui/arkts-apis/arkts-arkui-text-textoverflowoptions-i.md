@@ -1,10 +1,8 @@
 # TextOverflowOptions
 
-文本超长显示方式对象。
+Text overflow options.
 
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -20,11 +18,9 @@
 overflow: TextOverflow | undefined
 ```
 
-文本超长时的显示方式。
+Text overflow option. Use TextOverflow::NONE when the value is undefined.
 
-默认值：TextOverflow.Clip
-
-取值undefined时，按默认值处理。
+Anonymous Object Rectification.
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md) \| undefined
 

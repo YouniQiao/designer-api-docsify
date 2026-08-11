@@ -1,6 +1,6 @@
 # SubscribeCallbackData (System API)
 
-返回携带系统属性值的通知信息。
+Returns notification information carrying system property values.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 readonly notificationClassification?: NotificationClassification
 ```
 
-通知分类信息。仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
+Notification classification information. It exists only when **enableClassification** in NotificationSubscribeInfo is **true**.
 
 **Type:** [NotificationClassification](arkts-notification-notificationsubscriber-notificationclassification-i-sys.md)
 
@@ -40,7 +40,10 @@ readonly notificationClassification?: NotificationClassification
 readonly reason?: int
 ```
 
-删除原因（1:点击通知后删除通知，2:用户删除通知） 。
+Reason for deletion. The options are as follows:
+
+- **1**: The notification is deleted after being tapped.  
+- **2**: The notification is deleted by the user.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -60,7 +63,7 @@ readonly reason?: int
 readonly request: NotificationRequest
 ```
 
-通知内容。
+Notification content.
 
 **Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)
 
@@ -80,7 +83,7 @@ readonly request: NotificationRequest
 readonly sortingMap?: NotificationSortingMap
 ```
 
-通知排序信息。
+Notification sorting information.
 
 **Type:** [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)
 
@@ -100,7 +103,7 @@ readonly sortingMap?: NotificationSortingMap
 readonly sound?: string
 ```
 
-通知声音。
+Notification sound.
 
 **Type:** string
 
@@ -120,7 +123,7 @@ readonly sound?: string
 readonly vibrationValues?: Array<long>
 ```
 
-通知振动。
+Notification vibration.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
@@ -137,10 +140,10 @@ readonly vibrationValues?: Array<long>
 ## voiceContent
 
 ```TypeScript
-voiceContent?: VoiceContent
+readonly voiceContent?: VoiceContent
 ```
 
-通知语音播报内容。
+Voice broadcast content of the notification.
 
 **Type:** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
@@ -150,7 +153,7 @@ voiceContent?: VoiceContent
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SubscribeCallbackData-voiceContent?: VoiceContent--><!--Device-SubscribeCallbackData-voiceContent?: VoiceContent-End-->
+<!--Device-SubscribeCallbackData-readonly voiceContent?: VoiceContent--><!--Device-SubscribeCallbackData-readonly voiceContent?: VoiceContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

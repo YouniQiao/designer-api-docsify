@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-发送私有命令。
+Send private command.
 
 **Since:** 26.0.0
 
@@ -30,18 +30,18 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt; | Yes | 将要发送的命令数据。最大大小32KB。 |
+| commandData | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt; | Yes | command data which will be sent. Max size 32KB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回的Promise。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800026 | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
-| 202 | not system application. |
+| [12800026](../errorcode-inputmethod-framework.md#12800026-input-method-system-panel-error) | input method system panel error. Possible causes: 1. the system panel not connected. 2. ipc failed due to the large amount of data transferred or other reasons. 3. the caller is not system panel. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

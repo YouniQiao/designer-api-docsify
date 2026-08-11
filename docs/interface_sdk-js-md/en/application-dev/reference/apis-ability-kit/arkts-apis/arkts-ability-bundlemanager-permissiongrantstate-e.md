@@ -1,6 +1,6 @@
 # PermissionGrantState
 
-权限授予状态。
+Enumerates the permission grant states.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 PERMISSION_DENIED = -1
 ```
 
-拒绝授予权限。
+Permission denied.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ PERMISSION_DENIED = -1
 PERMISSION_GRANTED = 0
 ```
 
-授予权限。
+Permission granted.
 
 **Since:** 9
 

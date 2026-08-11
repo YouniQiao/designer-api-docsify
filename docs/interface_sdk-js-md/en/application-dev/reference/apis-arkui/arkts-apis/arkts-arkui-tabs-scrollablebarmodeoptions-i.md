@@ -1,6 +1,6 @@
 # ScrollableBarModeOptions
 
-Scrollable模式下的TabBar的布局样式对象。
+Provides an interface for the options for the scrollable bar mode including margin and nonScrollableLayoutStyle.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Scrollable模式下的TabBar的布局样式对象。
 margin?: Dimension
 ```
 
-Scrollable模式下的TabBar的左右边距（不支持百分比设置）。单位：vp。 默认值： 0。
+Left and right margin of the tab bar in scrollable mode. It cannot be set in percentage.Unit: vp. Default value: 0.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -38,7 +38,7 @@ Scrollable模式下的TabBar的左右边距（不支持百分比设置）。单�
 nonScrollableLayoutStyle?: LayoutStyle
 ```
 
-Scrollable模式下不滚动时的页签排布方式。默认值： LayoutStyle.ALWAYS_CENTER。
+Tab layout mode of the tab bar when not scrolling in scrollable mode.Default value: LayoutStyle.ALWAYS_CENTER.
 
 **Type:** [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md)
 

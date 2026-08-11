@@ -12,7 +12,7 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 ```
 
-获取所有系统快捷键，使用Promise异步回调。
+Obtains all system shortcut keys. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -26,13 +26,13 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise对象，返回所有系统快捷键的列表。 |
+| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise used to return the list of all system shortcut keys. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## Examples
 
@@ -47,11 +47,10 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          // Obtains all system shortcut keys.
           inputConsumer.getAllSystemHotkeys().then((data: Array<inputConsumer.HotkeyOptions>) => {
-            console.info(`Succeeded in getting list of system hotkeys: ${JSON.stringify(data)}.`);
+            console.info(`List of system hotkeys : ${JSON.stringify(data)}`);
           }).catch((error: BusinessError) => {
-            console.error(`Failed to get all system hotkeys, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Get all system hotkeys failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           })
         })
     }

@@ -42,7 +42,7 @@ blurOptions?: BlurOptions
 
 灰阶模糊参数，默认为[0,0]。
 
-**类型：** [BlurOptions](arkts-arkui-bluroptions-i.md)
+**类型：** [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md)
 
 **默认值：** { grayScale: [0,1] } [since 11 - 11] @default { grayScale: [0,0] } [since 12]
 

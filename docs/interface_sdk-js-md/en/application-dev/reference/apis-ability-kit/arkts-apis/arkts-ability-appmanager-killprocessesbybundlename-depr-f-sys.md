@@ -6,7 +6,7 @@
 function killProcessesByBundleName(bundleName: string): Promise<void>
 ```
 
-通过Bundle名称终止进程。使用Promise异步回调。
+Kill processes by bundle name
 
 **Since:** 8
 
@@ -28,13 +28,13 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示Bundle名称。 |
+| bundleName | string | Yes | bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ appManager.killProcessesByBundleName(bundleName)
 function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>)
 ```
 
-通过Bundle名称终止进程。使用callback异步回调。
+Kill processes by bundle name
 
 **Since:** 8
 
@@ -81,8 +81,8 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当通过Bundle名称终止进程成功，err为undefined，否则为错误对象。 |
+| bundleName | string | Yes | bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | cut off the callback function of the account process. |
 
 ## Examples
 

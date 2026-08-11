@@ -1,6 +1,6 @@
 # LiquidMaterialEffectParam (System API)
 
-材质效果参数，用于控制材质的折射、反射、扰动和叠加颜色等显示属性。
+Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color.
 
 **Since:** 22
 
@@ -24,7 +24,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 distortFactor : double
 ```
 
-扰动效果系数。值大于等于0，值小于0时表示无扰动效果。
+The perturbation effect coefficient. The value must be greater than or equal to 0.Values less than 0 indicate no perturbation effect.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ distortFactor : double
 distortProgress : double
 ```
 
-扰动效果进度。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1。0表示开始扰动，1表示结束扰动。
+The perturbation effect progress. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. 0 indicates the start of perturbation, and 1 indicates the end.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ distortProgress : double
 enable : boolean
 ```
 
-是否开启材质效果。true表示开启，false表示关闭。
+Whether to enable the material effect. true means enabled, false means disabled.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ enable : boolean
 materialFactor : double
 ```
 
-材质系数。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1。值为0表示无材质效果，使用叠加颜色填充，值越大材质效果越明显。
+The material coefficient. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A value of 0 means no material effect and the overlay color is used for filling; a larger value indicates a more obvious material effect.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -104,7 +104,7 @@ materialFactor : double
 reflectionFactor : double
 ```
 
-反射系数。取值范围为[0, 10]，小于0时取值为0，大于10时取值为10。值为0表示无反射效果，值越大反射强度越高。
+The reflection coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no reflection effect;a larger value indicates stronger reflection.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -124,7 +124,7 @@ reflectionFactor : double
 refractionFactor : double
 ```
 
-折射效果系数。取值范围为[0, 10]，小于0时取值为0，大于10时取值为10。值为0表示无折射效果，值越大折射强度越高。
+The refraction coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no refraction effect;a larger value indicates stronger refraction.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -144,8 +144,7 @@ refractionFactor : double
 ripplePosition?: Array<[double, double]>
 ```
 
-水波效果作用的位置。当需要在多个指定位置同时触发水波效果时传入此参数。不传入时默认无水波位置， 水波效果不生效。数组中每个位置包含x和y两个维度，坐标为归一化坐标，[0, 0]表示左上角，  
- [1, 1]表示右下角。最多支持10个位置坐标，超出则整体无效。
+The positions where the ripple effect is applied. Pass this parameter when you need to trigger ripple effects at multiple specified positions simultaneously. If not passed, there are no ripple positions by default,and the ripple effect will not take effect. Each position in the array contains x and y dimensions,using normalized coordinates where [0, 0] represents the top-left corner and [1, 1] represents the bottom-right corner. A maximum of 10 position coordinates are supported; exceeding this will make the entire parameter invalid.
 
 **Type:** ArkTS-Dyn: Array&lt;[number, number]&gt;  <br>ArkTS-Sta：Array&lt;[double, double]&gt;
 
@@ -165,7 +164,7 @@ ripplePosition?: Array<[double, double]>
 rippleProgress : double
 ```
 
-水波效果进度。值大于等于0，值小于0时表示无水波效果。
+The ripple effect progress. The value must be greater than or equal to 0.Values less than 0 indicate no ripple effect.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -185,7 +184,7 @@ rippleProgress : double
 tintColor : [double, double, double, double]
 ```
 
-材质叠加的颜色，四个变量分别对应RGBA。取值范围为[0, 1]，小于0时取值为0，大于1时取值为1。
+The overlay color of the material, where the four variables correspond to RGBA respectively.The value range for each is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1.
 
 **Type:** ArkTS-Dyn: [number, number, number, number]  <br>ArkTS-Sta：[double, double, double, double]
 

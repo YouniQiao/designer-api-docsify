@@ -1,6 +1,6 @@
 # DisplayState
 
-显示设备的状态枚举。
+Enumerates the states of a display.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 STATE_UNKNOWN = 0
 ```
 
-表示显示设备状态未知。
+Unknown.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ STATE_UNKNOWN = 0
 STATE_OFF = 1
 ```
 
-表示显示设备状态为关闭。
+The display is shut down.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ STATE_OFF = 1
 STATE_ON = 2
 ```
 
-表示显示设备状态为开启。
+The display is powered on.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ STATE_ON = 2
 STATE_DOZE = 3
 ```
 
-表示显示设备为低电耗模式。
+The display is in sleep mode.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ STATE_DOZE = 3
 STATE_DOZE_SUSPEND = 4
 ```
 
-表示显示设备为睡眠模式，CPU为挂起状态。
+The display is in sleep mode, and the CPU is suspended.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ STATE_DOZE_SUSPEND = 4
 STATE_VR = 5
 ```
 
-表示显示设备为VR模式。
+The display is in VR mode.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ STATE_VR = 5
 STATE_ON_SUSPEND = 6
 ```
 
-表示显示设备为开启状态，CPU为挂起状态。
+The display is powered on, and the CPU is suspended.
 
 **Since:** 7
 

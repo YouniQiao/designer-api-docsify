@@ -12,12 +12,6 @@ Quick thumbnail object
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## release
 
 ```TypeScript
@@ -46,7 +40,7 @@ Release quick thumbnail object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## captureId
 

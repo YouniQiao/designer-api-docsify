@@ -34,7 +34,7 @@ Constructor.
 invoke(origin: string, allow: boolean, retain: boolean): void
 ```
 
-Report the geolocation permission status from users.
+Sets the geolocation permission status of a web page.
 
 **Since:** 8
 

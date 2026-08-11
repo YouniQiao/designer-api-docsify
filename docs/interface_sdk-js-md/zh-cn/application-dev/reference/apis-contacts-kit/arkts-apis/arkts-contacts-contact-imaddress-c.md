@@ -10,19 +10,13 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: -1
 ```
 
-自定义邮箱类型，默认值为0。
+自定义即时消息类型，默认值为-1。
 
 **类型：** -1
 
@@ -182,7 +176,7 @@ YAHOO即时消息类型，默认值为2。
 static readonly INVALID_LABEL_ID: -2
 ```
 
-无效邮箱类型，默认值为-1。
+无效的即时消息类型，默认值为-2。
 
 **类型：** -2
 
@@ -222,7 +216,7 @@ imAddress: string
 labelId?: number
 ```
 
-邮箱的类型。
+即时消息类型。
 
 **类型：** number
 
@@ -242,7 +236,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+即时消息类型名称。
 
 **类型：** string
 

@@ -38,7 +38,7 @@ Disable menu action by action id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | Yes | menu item id to disable @static |
+| items | Array&lt;[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)&gt; | Yes | menu item id to disable @static |
 
 ## disableSystemServiceMenuItems
 
@@ -70,7 +70,7 @@ Disable all system service menus, such as translation and ai writer.True means d
 setMenuOptions(options: TextMenuOptions): void
 ```
 
-设置文本菜单选项。
+Set text menu options.
 
 **Since:** 23
 

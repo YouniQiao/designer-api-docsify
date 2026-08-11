@@ -1,11 +1,5 @@
 # getAlternateIcons
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAlternateIcons
 
 ```TypeScript
@@ -34,7 +28,7 @@ function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700311 | Failed to obtain the alternate icon. |
+| [17700311](../errorcode-bundle.md#17700311-查询备用图标失败) | Failed to obtain the alternate icon. |
 
 ## 示例
 

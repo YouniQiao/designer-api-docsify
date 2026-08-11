@@ -6,7 +6,7 @@
 declare function getInspectorNodeById(id: number): object
 ```
 
-根据节点id获取inspector节点信息。
+Get inspector node info by node id.
 
 **Since:** 7
 

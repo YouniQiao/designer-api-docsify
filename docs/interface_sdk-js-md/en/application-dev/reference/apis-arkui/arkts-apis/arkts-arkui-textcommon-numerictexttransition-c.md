@@ -1,9 +1,6 @@
 # NumericTextTransition
 
-数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，  
-[copyOption](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#copyoption9)属性无效。当文本存在子组件时或通过属性字符串设置时，数字翻牌失效。
-
-NumericTextTransition继承自[ContentTransition](arkts-arkui-textcommon-contenttransition-c.md)。
+Defines the numeric text content transition class.
 
 **Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-textcommon-contenttransition-c.md)
 
@@ -21,7 +18,7 @@ NumericTextTransition继承自[ContentTransition](arkts-arkui-textcommon-content
 constructor(options?: NumericTextTransitionOptions)
 ```
 
-用于创建NumericTextTransition对象的构造函数。
+constructor.
 
 **Since:** 24
 
@@ -37,7 +34,7 @@ constructor(options?: NumericTextTransitionOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-textcommon-numerictexttransitionoptions-i.md)。 |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | The options of numeric text transition. |
 
 ## enableBlur
 
@@ -45,13 +42,7 @@ constructor(options?: NumericTextTransitionOptions)
 enableBlur?: boolean
 ```
 
-是否开启翻牌模糊效果。
-
-默认值：false
-
-true：开启翻牌模糊效果。
-
-false：不开启翻牌模糊效果。
+Define whether enable blur effect.
 
 **Type:** boolean
 
@@ -71,9 +62,7 @@ false：不开启翻牌模糊效果。
 flipDirection?: FlipDirection
 ```
 
-翻牌方向。
-
-默认值：FlipDirection.DOWN
+The flip direction of numeric text transition.
 
 **Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
 

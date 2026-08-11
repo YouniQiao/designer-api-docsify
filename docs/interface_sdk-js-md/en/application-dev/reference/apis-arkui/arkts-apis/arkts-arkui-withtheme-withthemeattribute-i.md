@@ -1,6 +1,6 @@
 # WithThemeAttribute
 
-不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+Defines the WithTheme attribute functions..
 
 **Since:** 23
 
@@ -16,11 +16,11 @@
 default applyAttributesFinish(): void
 ```
 
-通知组件已完成设置其属性。
+Notify the component is finished setting up its attributes.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +34,7 @@ default applyAttributesFinish(): void
 default debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-设置组件的源码跳转信息。
+Set the component's source code redirection information.
 
 **Since:** 26.0.0
 
@@ -50,8 +50,8 @@ default debugLine(sourceLine: string, moduleName?: string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLine | string | Yes | 源代码行。 |
-| moduleName | string | No | 组件所属的模块。 |
+| sourceLine | string | Yes | the source code line. |
+| moduleName | string | No | module to which the component belongs. |
 
 **Return value:**
 
@@ -65,11 +65,11 @@ default debugLine(sourceLine: string, moduleName?: string): this
 default setWithThemeOptions(options: WithThemeOptions | undefined): this
 ```
 
-设置WithTheme选项。
+Sets the WithTheme options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,11 +81,11 @@ default setWithThemeOptions(options: WithThemeOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | 创建WithTheme的选项。 |
+| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | The options to create a WithTheme. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回WithThemeAttribute的实例。 |
+| this | Returns instance of WithThemeAttribute. |
 

@@ -12,7 +12,7 @@ import { serial } from 'kits/@kit.BasicServicesKit';
 function getSerialPortList(): Promise<SerialPort[]>
 ```
 
-获取串口列表。使用Promise异步回调。
+Obtains the serial port list. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -34,6 +34,6 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
 

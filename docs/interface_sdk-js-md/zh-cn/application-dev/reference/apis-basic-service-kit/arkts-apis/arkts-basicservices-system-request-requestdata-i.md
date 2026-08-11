@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
-## 导入模块
-
-```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
-```
-
 ## name
 
 ```TypeScript

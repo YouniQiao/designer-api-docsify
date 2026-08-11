@@ -1,6 +1,6 @@
 # AudioRendererOptions
 
-音频渲染器选项信息。
+Describes audio renderer configurations.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 privacyType?: AudioPrivacyType
 ```
 
-表示音频流是否可以被其他应用录制，默认值为0。
+Whether the audio stream can be recorded by other applications. The default value is **0**.
 
 **Type:** [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
 
@@ -40,7 +40,7 @@ privacyType?: AudioPrivacyType
 rendererInfo: AudioRendererInfo
 ```
 
-音频渲染器信息。
+Describes audio renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
@@ -58,7 +58,7 @@ rendererInfo: AudioRendererInfo
 streamInfo: AudioStreamInfo
 ```
 
-音频流信息。
+Describes audio stream information.
 
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 

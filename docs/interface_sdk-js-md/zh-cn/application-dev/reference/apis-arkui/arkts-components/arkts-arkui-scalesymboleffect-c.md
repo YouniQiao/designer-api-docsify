@@ -39,7 +39,7 @@ ScaleSymbolEffect的构造函数，缩放动效。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
-| direction | [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md) | 否 | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 &lt;br&gt;默认值：EffectDirection.DOWN |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 &lt;br&gt;默认值：EffectDirection.DOWN |
 
 ## direction
 
@@ -51,7 +51,7 @@ direction?: EffectDirection
 
 默认值：EffectDirection.DOWN
 
-**类型：** [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md)
+**类型：** [EffectDirection](arkts-arkui-effectdirection-e.md)
 
 **起始版本：** 12
 

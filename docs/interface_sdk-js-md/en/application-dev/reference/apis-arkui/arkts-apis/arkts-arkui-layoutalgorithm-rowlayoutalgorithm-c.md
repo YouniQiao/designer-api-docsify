@@ -1,11 +1,6 @@
 # RowLayoutAlgorithm
 
-水平方向线性布局算法类。
-
-> **说明：**
-> 
-> RowLayoutAlgorithm类对象可以作为
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
+Defines the row layout algorithm.
 
 **Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
@@ -25,11 +20,13 @@
 constructor(option?: RowLayoutAlgorithmOptions)
 ```
 
-水平方向线性布局算法类的构造函数。
+constructor.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)--><!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)-End-->
 
@@ -39,7 +36,7 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | 水平方向线性布局算法的构造入参， 设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
+| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
 
 ## alignItems
 
@@ -47,13 +44,15 @@ constructor(option?: RowLayoutAlgorithmOptions)
 public alignItems?: VerticalAlign
 ```
 
-所有子组件在垂直方向上的对齐格式。非法值：按默认值处理。
+Sets the alignment format of the subassembly in the vertical direction.
 
 **Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign-End-->
 
@@ -65,14 +64,15 @@ public alignItems?: VerticalAlign
 public isReverse?: boolean
 ```
 
-子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性  
-[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)影响，如果[direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction)属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。非法值：按默认值处理。
+Whether the main axis is reversed.
 
 **Type:** boolean
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RowLayoutAlgorithm-public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-public isReverse?: boolean-End-->
 
@@ -84,13 +84,15 @@ public isReverse?: boolean
 public justifyContent?: FlexAlign
 ```
 
-所有子组件在水平方向上的对齐格式。非法值：按默认值处理。
+Alignment mode of the child components along the horizontal axis.
 
 **Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign-End-->
 
@@ -102,13 +104,15 @@ public justifyContent?: FlexAlign
 public space?: LengthMetrics
 ```
 
-横向布局元素水平方向间距。非法值：按默认值处理。
+Horizontal layout element spacing.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RowLayoutAlgorithm-public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-public space?: LengthMetrics-End-->
 

@@ -1,17 +1,12 @@
 # InsightIntentEntryExecutor
 
-本模块提供  
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)装饰器的意图执行基类，必须与@InsightIntentEntry装饰器联合使用。开发者需要在继承该基类的子类中，实现[onExecute()](InsightIntentEntryExecutor.InsightIntentEntryExecutor#onExecute)意图执行回调，并使用@InsightIntentEntry装饰器来装饰子类。
+The class of insight intent entry executor.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-unnamed-export default class InsightIntentEntryExecutor<T>--><!--Device-unnamed-export default class InsightIntentEntryExecutor<T>-End-->
+<!--Device-unnamed-declare class InsightIntentEntryExecutor<T>--><!--Device-unnamed-declare class InsightIntentEntryExecutor<T>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,4 +15,118 @@
 ```TypeScript
 import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
 ```
+
+## onExecute
+
+```TypeScript
+onExecute(): Promise<insightIntent.IntentResult<T>>
+```
+
+Called when insight intent execute.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>--><!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
+
+## context
+
+```TypeScript
+context: InsightIntentContext
+```
+
+The insight intent context.
+
+**Type:** [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InsightIntentEntryExecutor-context: InsightIntentContext--><!--Device-InsightIntentEntryExecutor-context: InsightIntentContext-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## executeMode
+
+```TypeScript
+executeMode: insightIntent.ExecuteMode
+```
+
+The insight intent execute mode.
+
+**Type:** insightIntent.ExecuteMode
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode--><!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## uiExtensionSession
+
+```TypeScript
+uiExtensionSession?: UIExtensionContentSession
+```
+
+The UIExtension content session.
+
+**Type:** [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession--><!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## windowStage
+
+```TypeScript
+windowStage?: window.WindowStage
+```
+
+The window stage.
+
+**Type:** window.WindowStage
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage--><!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

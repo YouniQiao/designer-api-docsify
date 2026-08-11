@@ -4,7 +4,7 @@
 export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData.default
 ```
 
-UIAbility首帧绘制完成回调上报数据结构。
+Defines the data structure reported when the first frame rendering of the UIAbility is complete.
 
 **Since:** 12
 

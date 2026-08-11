@@ -1,6 +1,6 @@
 # I18NUtil
 
-国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。
+Provides util functions.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 static convertCanonicalLocaleIdentifier(locale: string): string
 ```
 
-将区域ID调整成符合[BCP47](https://www.rfc-editor.org/info/bcp47/)标准的格式。
+Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-editor.org/info/bcp47) standard.
 
 **Since:** 26.0.0
 
@@ -40,13 +40,13 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | 区域ID。 |
+| locale | string | Yes | Locale string to be converted, which consists of the language, script, and country/region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 有效的区域ID会返回符合[BCP47](https://www.rfc-editor.org/info/bcp47/)标准格式的区域ID。无效的区域ID会返回空字符串。 |
+| string | If the input locale ID is valid, a locale ID that complies with the [BCP47](https://www.rfc-editor.org/info/bcp47) standard will be returned. If the input locale ID is invalid, an empty string is returned. |
 
 ## getBestMatchLocale
 
@@ -54,7 +54,7 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 static getBestMatchLocale(locale: string, localeList: string[]): string
 ```
 
-在指定区域列表中获取与某个区域最佳匹配的区域。
+Obtains the locale that best matches a region from the specified locale list.
 
 **Since:** 23
 
@@ -70,21 +70,21 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | 待匹配的[区域ID字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，如：zh-Hans- CN。 |
-| localeList | string[] | Yes | 指定的区域ID字符串列表。 |
+| locale | string | Yes | Locale ID, for example, "zh-Hans-CN". |
+| localeList | string[] | Yes | List of locale IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 与某个区域最佳匹配的区域ID。当指定区域列表中没有匹配的区域时，返回空字串。 |
+| string | ID of the locale that best matches a region. If no matching locale is found, an empty string is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getDateOrder
 
@@ -92,7 +92,7 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 static getDateOrder(locale: string): string
 ```
 
-获取某区域日期中年、月、日的排列顺序。
+Obtains the sequence of the year, month, and day in the specified locale.
 
 **Since:** 23
 
@@ -108,13 +108,13 @@ static getDateOrder(locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
+| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 该区域年、月、日的排列顺序。“y”表示年，“L”表示月，“d”表示日。 |
+| string | Sequence of the year, month, and day in the locale. "y" indicates the year, "L" indicates the month, and "d" indicates the day. |
 
 ## getThreeLetterLanguage
 
@@ -122,9 +122,8 @@ static getDateOrder(locale: string): string
 static getThreeLetterLanguage(locale: string): string
 ```
 
-将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。
-
-例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
+Converts a language code from two letters to three letters. For example, the two-letter language code of Chinese is "zh", and the corresponding three-letter language code is "zho". For details, see  
+[ISO 639](https://www.iso.org/iso-639-language-code).
 
 **Since:** 23
 
@@ -140,20 +139,20 @@ static getThreeLetterLanguage(locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | 待转换的语言二字母代码，如：zh。 |
+| locale | string | Yes | Two-letter code of the language to be converted, for example, "zh". |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回待转换语言二字母代码对应的三字母代码。 |
+| string | Language code after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getThreeLetterRegion
 
@@ -161,9 +160,8 @@ static getThreeLetterLanguage(locale: string): string
 static getThreeLetterRegion(locale: string): string
 ```
 
-将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
-
-例如，中国的二字母地区代码是CN, 三字母是CHN。
+Converts a region code from two letters to three letters. For example, the two-letter region code of China is"CN", and the corresponding three-letter region code is "CHN". For details, see  
+[ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 23
 
@@ -179,20 +177,20 @@ static getThreeLetterRegion(locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | 待转换的地区二字母代码，如：CN。 |
+| locale | string | Yes | Two-letter country/region code to be converted, for example, "CN". |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回待转换地区二字母代码对应的三字母代码。 |
+| string | Region code after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getTimePeriodName
 
@@ -200,7 +198,7 @@ static getThreeLetterRegion(locale: string): string
 static getTimePeriodName(hour:int, locale?: string): string
 ```
 
-获取指定时间在某区域的本地化表达。
+Obtains the localized expression of the specified time in the specified locale.
 
 **Since:** 23
 
@@ -216,21 +214,21 @@ static getTimePeriodName(hour:int, locale?: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hour | int | Yes | 指定的时间，例如16。 |
-| locale | string | No | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。如：zh-Hans-CN。 &lt;br&gt;默认值：系统当前区域ID。 |
+| hour | int | Yes | Specified time, for example, 16. &lt;br&gt;The value should be an integer. |
+| locale | string | No | System locale, which consists of the language, script, and country/region. for example, "zh-Hans-CN". The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 指定时间在某区域的本地化表达。 |
+| string | Localized expression of the specified time in the specified locale. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getUnicodeWrappedFilePath
 
@@ -238,9 +236,7 @@ static getTimePeriodName(hour:int, locale?: string): string
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-对文件路径进行本地化处理。
-
-例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+Localizes a file path for the specified locale. For example, /data/out/tmp is changed to tmp/out/data/ after localization.
 
 **Since:** 23
 
@@ -256,21 +252,21 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待处理的路径，如：/data/out/tmp。 |
-| delimiter | string | No | 路径分隔符，默认值：/。 |
-| locale | Intl.Locale | No | 区域对象，默认值：系统区域对象。 |
+| path | string | Yes | Path to mirror, for example, "/data/out/tmp". |
+| delimiter | string | No | Path delimiter. The default value is "/"". |
+| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 本地化处理后的文件路径。如果区域对象表示的语言是镜像语言，则处理后的文件路径包含方向控制符，保证文件路径镜像显示。 |
+| string | File path after localization. If the specified locale object corresponds to an RTL language, the processed file path contains a direction control character to ensure that the file path is displayed in mirror mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setUnicodeWrappedBidiDirection
 
@@ -278,11 +274,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string
 ```
 
-设置整段文本中部分文本方向，包括RTL、LTR。
-
-> **说明：**
-> 
-> 在强字符（指具有明确书写方向的字符）中不生效。
+Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right).Note: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
 
 **Since:** 26.0.0
 
@@ -300,14 +292,14 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 需要设置方向的文本。 |
-| direction | 'RTL' \| 'LTR' | Yes | 'RTL'表示从右到左，'LTR'表示从左到右。 |
+| text | string | Yes | Input characters need to set direction. |
+| direction | 'RTL' \| 'LTR' | Yes | The value can be "RTL" or "LTR". "RTL" indicates setting the input text direction from right to left. "LTR" indicates setting the input text direction from left to right. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 设置方向后的文本。 |
+| string | Processed Text. |
 
 ## unitConvert
 
@@ -315,7 +307,7 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string
 ```
 
-将fromUnit的单位转换为toUnit的单位，并根据区域与风格进行格式化。
+Converts one measurement unit into another and formats the unit based on the specified locale and style.
 
 **Since:** 23
 
@@ -331,15 +323,15 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 需要转换的单位。 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 转换成的目标单位。 |
-| value | double | Yes | 需要转换的单位的数量值。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
-| style | string | No | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 &lt;br&gt;不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| value | double | Yes | Value of the measurement unit to be converted. |
+| locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
+| style | string | No | Style used for formatting. The value can be long, short, or narrow. The default value is short. For details about the meaning or display effect of different values, see Number and Unit of Measurement Formatting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 转换单位后的度量衡格式化结果。 |
+| string | String converted to the measurement unit after formatting. |
 

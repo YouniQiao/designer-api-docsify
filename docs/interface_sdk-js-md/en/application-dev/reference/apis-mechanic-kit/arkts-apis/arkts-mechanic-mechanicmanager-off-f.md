@@ -33,20 +33,18 @@ Unsubscribes from device attachment state change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
 ## Examples
 
 ```TypeScript
-// Define the callback function for device connection state changes.
 let callback = (result: mechanicManager.AttachStateChangeInfo) => {
   console.info(`'callback result:' ${result}`);
 };
 
 console.info('Unregister');
-// Unregister the attachStateChange event listener.
 mechanicManager.off("attachStateChange", callback);
-console.info('Succeeded in unregistering callback.');
+console.info('Unregister: success');
 ```
 
 
@@ -56,7 +54,7 @@ console.info('Succeeded in unregistering callback.');
 function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void
 ```
 
-设置相机跟踪布局
+Unsubscribes from tracking events.
 
 **Since:** 20
 
@@ -77,19 +75,17 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
 ## Examples
 
 ```TypeScript
-// Define the callback function for tracking state changes.
 let callback = (result: mechanicManager.TrackingEventInfo) => {
   console.info(`'callback result:' ${result}`);
 };
 
 console.info('Unregister');
-// Unregister the trackingStateChange event listener.
 mechanicManager.off("trackingStateChange", callback);
-console.info('Succeeded in unregistering callback.');
+console.info('Unregister: success');
 ```
 

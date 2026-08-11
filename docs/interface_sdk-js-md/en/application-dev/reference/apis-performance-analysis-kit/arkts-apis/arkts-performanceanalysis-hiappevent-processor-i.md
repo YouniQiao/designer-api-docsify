@@ -1,6 +1,6 @@
 # Processor
 
-可以上报事件的数据处理者对象。用于事件的上报和管理，开发者可自定义数据处理配置，满足不同的数据处理需求。
+Defines a data processor for reporting and managing events. You can customize processor configurations as required.
 
 **Since:** 11
 
@@ -22,9 +22,9 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 appId?: string
 ```
 
-应用id，默认为空字符串。传入字符串长度不能超过8KB，超过时会被置为默认值。
+Application ID. It is left empty by default. The length of the input string cannot exceed 8 KB. If the length exceeds 8 KB, the default value is used.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -44,9 +44,9 @@ appId?: string
 batchReport?: int
 ```
 
-事件上报阈值，当事件条数达到阈值时上报事件。传入数值必须大于0且小于1000，不在数值范围内会被置为默认值0，不进行上报。
+Event reporting threshold. When the number of events reaches the threshold, an event is reported. The value must be greater than **0** and less than **1000**. If the value is not within the range, the default value **0** is used and no events are reported.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,9 +66,9 @@ batchReport?: int
 configId?: int
 ```
 
-数据处理者配置id。传入数值必须大于或等于0，小于0时会被置为默认值0。传入的值大于0时，与数据处理者的名称name共同唯一标识数据处理者。
+Configuration ID for data processor. The input value must be greater than or equal to **0**. If the input value is less than **0**, the default value 0 is used. If the input value is greater than 0, the value uniquely identifies a data processor with its name.
 
-**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -88,9 +88,9 @@ configId?: int
 configName?: string
 ```
 
-数据处理者的配置名称，支持从配置文件中加载对应配置，默认为空。只能包含大小写字母、数字、下划线和\$，不能以数字开头，长度非空且不超过256个字符。
+Name of the data processor configuration, which can be loaded from the configuration file. By default, this parameter is left empty. It can contain only letters, digits, underscores (_), and dollar signs (\$). It cannot start with a digit and cannot exceed 256 characters.
 
-**原子化服务API：** 从API version 20开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 20.
 
 **Type:** string
 
@@ -110,13 +110,11 @@ configName?: string
 customConfigs?: Record<string, string>
 ```
 
-自定义扩展参数。传入参数名和参数值不符合规格会默认不配置扩展参数，其规格定义如下：
+Custom extended parameters. If the input parameter name and value do not meet the specifications, extended parameters are not configured by default. The specifications are as follows:
 
-- 参数名为string类型，首字符必须为字母字符或\$字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过32个字符。  
-- 参数值为string类型，参数值长度需在1024个字符以内。  
-- 参数个数需在32个以内。
+&lt;br&gt;- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters(a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter.&lt;br&gt;- A parameter value is a string contains a maximum of 1024 characters.&lt;br&gt;- The number of parameters must be less than 32.
 
-**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -136,9 +134,9 @@ customConfigs?: Record<string, string>
 debugMode?: boolean
 ```
 
-是否开启debug模式，默认值为false。配置值为true表示开启debug模式，false表示不开启debug模式。
+Whether to enable the debug mode. The default value is **false**. The value **true** means to enable the debugging mode, and the value **false** means the opposite.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** boolean
 
@@ -158,9 +156,9 @@ debugMode?: boolean
 eventConfigs?: AppEventReportConfig[]
 ```
 
-数据处理者可以上报的事件描述配置数组。默认为空数组。
+Event description configuration array that can be reported by the data processor. The default value is an empty array.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md)[]
 
@@ -180,9 +178,9 @@ eventConfigs?: AppEventReportConfig[]
 name: string
 ```
 
-数据处理者的名称。名称只能包含大小写字母、数字、下划线和 \$，不能以数字开头，长度非空且不超过256个字符。
+Name of a data processor. The value is string that contains a maximum of 256 characters, including digits (0 to9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must not start with a digit.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -202,9 +200,9 @@ name: string
 onBackgroundReport?: boolean
 ```
 
-当应用程序进入后台时是否上报事件，默认值为false。配置值为true表示上报事件，false表示不上报事件。
+Whether to report an event when an application switches to the background. The default value is **false**. The value **true** means to report events, and the value **false** means the opposite.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** boolean
 
@@ -224,9 +222,9 @@ onBackgroundReport?: boolean
 onStartReport?: boolean
 ```
 
-数据处理者在启动时是否上报事件，默认值为false。配置值为true表示上报事件，false表示不上报事件。
+Whether to report an event when the data processor starts. The default value is **false**. The value **true**means to report events, and the value **false** means the opposite.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** boolean
 
@@ -246,9 +244,9 @@ onStartReport?: boolean
 periodReport?: int
 ```
 
-事件定时上报时间周期，单位为秒。传入数值必须大于或等于0，小于0时会被置为默认值0，不进行定时上报。
+Interval for event reporting, in seconds. The input value must be greater than or equal to **0**. If the input value is less than **0**, the default value **0** is used and periodic reporting is not performed.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -268,9 +266,9 @@ periodReport?: int
 routeInfo?: string
 ```
 
-服务器位置信息，默认为空字符串。传入字符串长度不能超过8KB，超过时会被置为默认值。
+Server location information. It is left empty by default. The length of the input string cannot exceed 8 KB. If the length exceeds 8 KB, the default value is used.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -290,9 +288,9 @@ routeInfo?: string
 userIds?: string[]
 ```
 
-数据处理者可以上报的用户ID的name数组。name对应[setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid)接口的name参数。默认为空数组。
+Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) API. The default value is an empty array.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 
@@ -312,9 +310,9 @@ userIds?: string[]
 userProperties?: string[]
 ```
 
-数据处理者可以上报的用户属性的name数组。name对应[setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty)接口的name参数。默认为空数组。
+Name array of user properties that can be reported by the data processor. **name** corresponds to the **name**parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) API. The default value is an empty array.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+**Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 

@@ -8,7 +8,7 @@ export declare function SymbolSpan(
 ): SymbolSpanAttribute
 ```
 
-定义SymbolSpan组件。
+Defines SymbolSpan Component.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function SymbolSpan(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | Yes | 符号图标资源。 |
+| value | [Resource](arkts-arkui-resource-t.md) | Yes |  |
 
 **Return value:**
 
@@ -41,7 +41,7 @@ export declare function SymbolSpan(
 ): SymbolSpanAttribute
 ```
 
-定义SymbolSpan组件。
+Defines SymbolSpan Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function SymbolSpan(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolSpanAttribute&gt; | Yes | SymbolSpan属性的实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolSpanAttribute&gt; | Yes | SymbolSpan attribute instance |
 
 **Return value:**
 

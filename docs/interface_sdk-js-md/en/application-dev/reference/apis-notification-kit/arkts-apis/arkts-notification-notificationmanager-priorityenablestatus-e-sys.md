@@ -1,6 +1,6 @@
 # PriorityEnableStatus (System API)
 
-描述应用通知的优先级开关状态。
+Describes the enabling status of the priority notification for an application.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 DISABLE = 0
 ```
 
-应用通知的优先级开关为关闭状态。
+The priority notification is disabled.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ DISABLE = 0
 ENABLE_BY_INTELLIGENT = 1
 ```
 
-应用通知的优先级开关为智能识别状态。
+The priority notification is enabled by intelligent recognition.
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ ENABLE_BY_INTELLIGENT = 1
 ENABLE = 2
 ```
 
-应用通知的优先级开关为全部通知状态。
+The priority notification is enabled for all applications.
 
 **Since:** 23
 

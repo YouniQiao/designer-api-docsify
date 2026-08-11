@@ -1,6 +1,6 @@
 # GraphicsMemorySummary
 
-����Ӧ���Դ����ݣ�����gl��graph���֡�
+Describes the GPU memory data of an application, including the GL and Graph parts.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 gl: int
 ```
 
-gl�Դ��С��RenderService��Ⱦ���̼���������Դռ�õ��ڴ棬����ͼƬ�������ȣ���KBΪ��λ��
+GL memory
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ gl�Դ��С��RenderService��Ⱦ���̼���������
 graph: int
 ```
 
-graph�Դ��С������ͳ�Ƶ�DMA�ڴ�ռ�ã�����ֱ��ͨ���ӿ������DMA buffer��ͨ��allocator_host�����DMA buffer����KBΪ��λ��
+Graph memory
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

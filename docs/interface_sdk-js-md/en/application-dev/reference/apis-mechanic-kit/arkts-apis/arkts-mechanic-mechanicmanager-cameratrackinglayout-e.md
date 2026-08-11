@@ -1,6 +1,6 @@
 # CameraTrackingLayout
 
-相机跟踪布局
+Enumerates the camera tracking layouts.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-系统默认布局
+Default layout.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ DEFAULT = 0
 LEFT = 1
 ```
 
-左侧布局
+Left-side layout.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ LEFT = 1
 MIDDLE = 2
 ```
 
-中间布局
+Middle layout.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ MIDDLE = 2
 RIGHT = 3
 ```
 
-右侧布局
+Right-side layout.
 
 **Since:** 20
 

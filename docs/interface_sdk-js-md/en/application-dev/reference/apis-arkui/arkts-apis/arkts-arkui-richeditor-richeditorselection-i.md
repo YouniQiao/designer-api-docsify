@@ -1,6 +1,6 @@
 # RichEditorSelection
 
-选中内容信息。
+Defines the text information for editing.
 
 **Since:** 23
 
@@ -19,9 +19,9 @@ selection: [
     ]
 ```
 
-选中范围。
+The location info.
 
-**Type:** [         int,         int     ]
+**Type:** [         int,         int     ]
 
 **Since:** 23
 
@@ -39,7 +39,7 @@ selection: [
 spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 ```
 
-span信息。
+The selected text content.
 
 **Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
 

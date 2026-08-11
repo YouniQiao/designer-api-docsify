@@ -4,12 +4,6 @@ The **keyEvent** module provides key events reported by a device. It is inherite
  [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
 
 
-## 导入模块
-
-```TypeScript
-import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
-```
-
 ## 汇总
 
 ### 接口

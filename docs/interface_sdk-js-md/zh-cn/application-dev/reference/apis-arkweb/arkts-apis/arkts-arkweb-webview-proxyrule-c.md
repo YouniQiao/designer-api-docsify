@@ -10,12 +10,6 @@ The ProxyRule used by insertProxyRule.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## getSchemeFilter
 
 ```TypeScript

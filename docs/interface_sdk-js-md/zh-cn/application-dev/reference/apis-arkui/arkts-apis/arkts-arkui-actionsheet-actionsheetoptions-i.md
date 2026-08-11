@@ -736,7 +736,7 @@ offset?: ActionSheetOffset
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
+**类型：** [ActionSheetOffset](arkts-arkui-actionsheet-actionsheetoffset-i.md)
 
 **起始版本：** 23
 

@@ -1,11 +1,11 @@
 # TitlePosition
 
-设置主副标题之间的上下相对位置，默认设置为主标题在副标题之上。
+Defines the vertical position of the title relative to the subtitle in the dialog box. By default, the title is above the subtitle.
 
-| 名称 | 值 | 说明 |  
+| Name| Value| Description|  
 | - | - | - |  
-| TOP | 0 | 设置主标题位于副标题之上。默认值。 |  
-| BOTTOM | 1 | 设置主标题位于副标题之下。 |
+| TOP | 0 | The title is above the subtitle.Default value.|  
+| BOTTOM | 1 | The title is below the subtitle.|
 
 **Since:** 12
 
@@ -21,7 +21,7 @@
 TOP = 0
 ```
 
-设置主标题位于副标题之上。默认值。
+The main title is above the text content.
 
 **Since:** 12
 
@@ -39,7 +39,7 @@ TOP = 0
 BOTTOM = 1
 ```
 
-设置主标题位于副标题之下。
+The main title is below the text content.
 
 **Since:** 12
 

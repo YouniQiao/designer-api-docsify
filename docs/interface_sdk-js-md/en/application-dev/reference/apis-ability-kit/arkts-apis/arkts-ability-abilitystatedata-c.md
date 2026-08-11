@@ -1,7 +1,8 @@
 # AbilityStateData
 
-AbilityStateData是Ability状态信息的数据结构。使用  
-[on](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))注册生命周期变化监听后，可以通过[ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)的onAbilityStateChanged回调的入参获取该数据结构。
+The AbilityStateData module defines a struct for ability state information. Once a lifecycle change listener is registered using  
+[on](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), you can obtain an instance of this struct from the input parameter of the **onAbilityStateChanged** callback of  
+[ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md).
 
 **Since:** 14
 
@@ -17,7 +18,7 @@ AbilityStateData是Ability状态信息的数据结构。使用
 abilityName: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -35,9 +36,8 @@ Ability名称。
 abilityType: int
 ```
 
-[Ability类型](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability类型)：  
-[UIAbility](arkts-app-ability-uiability.md)或  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)等。
+[Ability type](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-types),which can be [UIAbility](arkts-app-ability-uiability.md) or  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -55,7 +55,7 @@ abilityType: int
 appCloneIndex?: int
 ```
 
-应用包的[分身](../../../quick-start/app-clone.md)索引标识。
+Index of an [application clone](../../../quick-start/app-clone.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -73,7 +73,7 @@ appCloneIndex?: int
 bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -91,7 +91,7 @@ bundleName: string
 callerBundleName?: string
 ```
 
-Ability创建时的拉起方Bundle名称。
+Bundle name of the application that triggers the creation of the ability.
 
 **Type:** string
 
@@ -109,11 +109,11 @@ Ability创建时的拉起方Bundle名称。
 isAtomicService: boolean
 ```
 
-判断Ability所属应用是否为原子化服务。
+Whether the ability belongs to an atomic service.
 
-true: 是原子化服务。
+**true**: The ability belongs to an atomic service.
 
-false: 不是原子化服务。
+**false**: The ability does not belong to an atomic service.
 
 **Type:** boolean
 
@@ -131,7 +131,7 @@ false: 不是原子化服务。
 moduleName: string
 ```
 
-Ability所属的模块名称。
+Module name to which the ability belongs.
 
 **Type:** string
 
@@ -149,7 +149,7 @@ Ability所属的模块名称。
 pid: int
 ```
 
-进程ID。
+Process ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -167,16 +167,15 @@ pid: int
 state: int
 ```
 
-Ability状态。
+Ability state.
 
-- [Stage模型](../../../application-models/ability-terminology.md#stage模型)：  
-[UIAbility](arkts-app-ability-uiability.md)的状态参见  
-[UIAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability状态)；  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的状态参见  
-[ExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability状态)；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的状态参见  
-[UIExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability状态)。  
-- [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见  
-[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)。
+- [Stage model](../../../application-models/ability-terminology.md#stage-model): For the  
+[UIAbility](arkts-app-ability-uiability.md), see  
+[UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see  
+[ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see  
+[UIExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability-states).  
+- [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -194,7 +193,7 @@ Ability状态。
 uid: int
 ```
 
-所属应用程序的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

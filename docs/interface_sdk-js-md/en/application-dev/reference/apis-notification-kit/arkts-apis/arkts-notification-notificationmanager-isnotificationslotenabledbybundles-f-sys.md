@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: SlotType): Promise<Map<BundleOption, boolean>>
 ```
 
-批量获取多个应用的指定渠道类型的使能状态。使用Promise异步回调。
+Checks whether a notification slot type is enabled for the specified applications in batch. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,43 +30,22 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | 应用包信息数组。 &lt;br&gt;最大长度为1000且不能为空。 |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | 渠道类型。所有应用共享同一个渠道类型。 |
+| bundles | Array&lt;BundleOption&gt; | Yes | Array of bundle information of the applications. &lt;br&gt;The maximum length is 1000 and cannot be empty. |
+| type | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | Notification slot type. All bundles share the same slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | 以Promise形式返回批量查询结果，key为应用包信息，value为渠道使能状态 （true：使能，false：禁止）。未创建渠道的应用不会出现在返回结果中。 |
+| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the result. The key is the bundle information, and the value **true** means that the notification slot type is enabled, and **false** means the opposite. Bundles whose slot has not been created will not appear in the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain whether the live view switch function is enabled for multiple applications in batches.
-const bundles: Array<notificationManager.BundleOption> = [
-    { bundle: 'com.example.app1', uid: 10001 },
-    { bundle: 'com.example.app2', uid: 10002 },
-];
-
-notificationManager.isNotificationSlotEnabledByBundles(
-    bundles, notificationManager.SlotType.LIVE_VIEW).then((data) => {
-    data.forEach((value: boolean, key: notificationManager.BundleOption) => {
-        console.info(`bundle: ${key.bundle}, enabled: ${value}`);
-    });
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationSlotEnabledByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 

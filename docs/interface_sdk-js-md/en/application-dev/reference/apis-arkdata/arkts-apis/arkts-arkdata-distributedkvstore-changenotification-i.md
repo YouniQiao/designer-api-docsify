@@ -1,6 +1,6 @@
 # ChangeNotification
 
-数据变更时通知的对象，包括插入的数据、更新的数据、删除的数据和设备ID。
+Defines the content of a data change notification, including inserted data, updated data, deleted data, and device ID.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 deleteEntries: Entry[]
 ```
 
-数据删除记录。
+Data deleted.
 
 **Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 
@@ -42,7 +42,7 @@ deleteEntries: Entry[]
 deviceId: string
 ```
 
-设备ID，此处为设备UUID。
+UUID of the device.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ deviceId: string
 insertEntries: Entry[]
 ```
 
-数据添加记录。
+Data inserted.
 
 **Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 
@@ -82,7 +82,7 @@ insertEntries: Entry[]
 updateEntries: Entry[]
 ```
 
-数据更新记录。
+Data updated.
 
 **Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
 

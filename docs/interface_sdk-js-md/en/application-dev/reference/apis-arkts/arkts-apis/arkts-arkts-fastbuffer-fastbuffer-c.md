@@ -1,6 +1,6 @@
 # FastBuffer
 
-FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长度的字节序列，是专门存放二进制数据的缓冲区。
+The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1
 ```
 
-比较当前对象this与目标对象target，并返回比较结果。
+Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
 
 **Since:** 20
 
@@ -38,24 +38,24 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
-| targetStart | number | No | `target`实例中开始的偏移量。默认值：0。取值范围：0 <= targetStart <= target.length。 |
-| targetEnd | number | No | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 <= targetEnd <= target.length。 |
-| sourceStart | number | No | `this`实例中开始的偏移量。默认值：0。取值范围：0 <= sourceStart <= this.length。 |
-| sourceEnd | number | No | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to compare with this buffer |
+| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
+| targetEnd | number | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
+| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
+| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | 返回比较结果。&lt;br/&gt;-1：当前排列在目标前；&lt;br/&gt;0：当前与目标相同；&lt;br/&gt;1：当前排列在目标后。 |
+| -1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -79,9 +79,7 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
-
-如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
+Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
 
 **Since:** 20
 
@@ -97,23 +95,23 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | 要复制到的Buffer或Uint8Array实例。 |
-| targetStart | number | No | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 <= targetStart <= UINT32_MAX。 |
-| sourceStart | number | No | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 <= sourceStart <= UINT32_MAX。 |
-| sourceEnd | number | No | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to copy data into |
+| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin writing |
+| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf from which to begin copying |
+| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to stop copying (not inclusive) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 复制的字节总长度。 |
+| number | The number of bytes copied |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -141,7 +139,7 @@ entries(): IterableIterator<[
         ]>
 ```
 
-返回一个包含key值和value值的迭代器，其中key为字节索引位置，value为该位置的字节值。
+Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Since:** 20
 
@@ -157,7 +155,7 @@ entries(): IterableIterator<[
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[             number, number         ]&gt; |  |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[             number, number         ]&gt; |  |
 
 ## Examples
 
@@ -187,7 +185,7 @@ while (!next.done) {
 equals(otherBuffer: Uint8Array | FastBuffer): boolean
 ```
 
-逐字节比较`this`和otherBuffer是否相等。
+Returns true if both buf and otherBuffer have exactly the same bytes, false otherwise
 
 **Since:** 20
 
@@ -203,19 +201,19 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| FastBuffer | Yes | 比较的目标对象。 |
+| otherBuffer | Uint8Array \| FastBuffer | Yes | The buffer to compare with this buffer for equality |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 若`this`和otherBuffer逐字节相等则返回true，否则返回false。 |
+| boolean | true or false |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -238,7 +236,7 @@ console.info(buf1.equals(buf3).toString());
 fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer
 ```
 
-使用`value`填充当前对象指定位置的数据，默认为循环填充，并返回填充后的FastBuffer对象。
+Fills buf with the specified value. If the offset and end are not given, the entire buf will be filled.
 
 **Since:** 20
 
@@ -254,23 +252,23 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FastBuffer \| Uint8Array \| number | Yes | 用于填充的值。 |
-| offset | number | No | 起始偏移量。默认值：0。取值范围：0 <= offset <= this.length。 |
-| end | number | No | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= end <= this.length。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（`value`为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| value | string \| FastBuffer \| Uint8Array \| number | Yes | The value to fill into the buffer |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to fill buf |
+| end | number | No | end [end = buf.length] Where to stop filling buf (not inclusive) |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] The encoding for value if value is a string |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回填充后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -288,7 +286,7 @@ console.info(b.toString());
 includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
-检查FastBuffer对象是否包含`value`值。
+Returns true if value was found in buf, false otherwise
 
 **Since:** 20
 
@@ -304,15 +302,15 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要搜索的内容。 |
-| byteOffset | number | No | 字节偏移量。若为正数，则从0开始计算偏移量；若为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to search for in the buffer |
+| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf. If negative, then offset is calculated from the end of buf |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 若FastBuffer对象包含`value`值时返回true，否则为false。 |
+| boolean | true or false |
 
 ## Examples
 
@@ -332,7 +330,7 @@ console.info(buf.includes('be').toString());
 indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。
+The index of the first occurrence of value in buf
 
 **Since:** 20
 
@@ -348,15 +346,15 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要查找的内容。 |
-| byteOffset | number | No | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the index for in the buffer |
+| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回第一次出现的位置。 |
+| number | The index of the first occurrence of value in buf, or -1 if buf does not contain value |
 
 ## Examples
 
@@ -376,7 +374,7 @@ console.info(buf.indexOf('is').toString());
 keys(): IterableIterator<number>
 ```
 
-返回一个包含key值的迭代器，其中key为字节索引位置，范围为0到length-1。
+Creates and returns an iterator of buf keys (indices).
 
 **Since:** 20
 
@@ -420,7 +418,7 @@ Output: 0
 lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。
+The index of the last occurrence of value in buf
 
 **Since:** 20
 
@@ -436,15 +434,15 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| FastBuffer \| Uint8Array | Yes | 要搜索的内容。 |
-| byteOffset | number | No | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：this.length - 1。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式。默认值：'utf8'。 |
+| value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the last index for in the buffer |
+| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 最后一次出现`value`值的索引。 |
+| number | The index of the last occurrence of value in buf, or -1 if buf does not contain value |
 
 ## Examples
 
@@ -464,7 +462,7 @@ console.info(buf.lastIndexOf('buffer').toString());
 readBigInt64BE(offset?: number): bigint
 ```
 
-从指定的`offset`处读取有符号的大端序64位整数。
+Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -480,19 +478,19 @@ readBigInt64BE(offset?: number): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Return a signed, big-endian 64-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -511,7 +509,7 @@ console.info(buf.readBigInt64BE(0).toString());
 readBigInt64LE(offset?: number): bigint
 ```
 
-从指定的`offset`处读取有符号的小端序64位整数。
+Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -527,19 +525,19 @@ readBigInt64LE(offset?: number): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Return a signed, little-endian 64-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -558,7 +556,7 @@ console.info(buf.readBigInt64LE(0).toString());
 readBigUInt64BE(offset?: number): bigint
 ```
 
-从指定的`offset`处读取无符号的大端序64位整数。
+Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -574,19 +572,19 @@ readBigUInt64BE(offset?: number): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Return a unsigned, big-endian 64-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -605,7 +603,7 @@ console.info(buf.readBigUInt64BE(0).toString());
 readBigUInt64LE(offset?: number): bigint
 ```
 
-从指定的`offset`处读取无符号的小端序64位整数。
+Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -621,19 +619,19 @@ readBigUInt64LE(offset?: number): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Return a unsigned, little-endian 64-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -652,7 +650,7 @@ console.info(buf.readBigUInt64LE(0).toString());
 readDoubleBE(offset?: number): number
 ```
 
-从指定的`offset`处读取64位大端序双精度值。
+Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Since:** 20
 
@@ -668,19 +666,19 @@ readDoubleBE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a 64-bit, big-endian double |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -698,7 +696,7 @@ console.info(buf.readDoubleBE(0).toString());
 readDoubleLE(offset?: number): number
 ```
 
-从指定的`offset`处读取64位小端序双精度值。
+Reads a 64-bit, little-endian double from buf at the specified offset
 
 **Since:** 20
 
@@ -714,19 +712,19 @@ readDoubleLE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a 64-bit, little-endian double |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -744,7 +742,7 @@ console.info(buf.readDoubleLE(0).toString());
 readFloatBE(offset?: number): number
 ```
 
-从指定的`offset`处读取32位大端序浮点数。
+Reads a 32-bit, big-endian float from buf at the specified offset
 
 **Since:** 20
 
@@ -760,19 +758,19 @@ readFloatBE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a 32-bit, big-endian float |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -790,7 +788,7 @@ console.info(buf.readFloatBE(0).toString());
 readFloatLE(offset?: number): number
 ```
 
-从指定的`offset`处读取32位小端序浮点数。
+Reads a 32-bit, little-endian float from buf at the specified offset
 
 **Since:** 20
 
@@ -806,19 +804,19 @@ readFloatLE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a 32-bit, little-endian float |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -836,7 +834,7 @@ console.info(buf.readFloatLE(0).toString());
 readInt16BE(offset?: number): number
 ```
 
-从指定的`offset`处读取有符号的大端序16位整数。
+Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -852,19 +850,19 @@ readInt16BE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a signed, big-endian 16-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -882,7 +880,7 @@ console.info(buf.readInt16BE(0).toString());
 readInt16LE(offset?: number): number
 ```
 
-从指定的`offset`处读取有符号的小端序16位整数。
+Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -898,19 +896,19 @@ readInt16LE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a signed, little-endian 16-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -928,7 +926,7 @@ console.info(buf.readInt16LE(0).toString());
 readInt32BE(offset?: number): number
 ```
 
-从指定的`offset`处读取有符号的大端序32位整数。
+Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -944,19 +942,19 @@ readInt32BE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a signed, big-endian 32-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -974,7 +972,7 @@ console.info(buf.readInt32BE(0).toString());
 readInt32LE(offset?: number): number
 ```
 
-从指定的`offset`处读取有符号的小端序32位整数。
+Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -990,19 +988,19 @@ readInt32LE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a signed, little-endian 32-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1020,7 +1018,7 @@ console.info(buf.readInt32LE(0).toString());
 readInt8(offset?: number): number
 ```
 
-从指定的`offset`处读取有符号的8位整数。
+Reads a signed 8-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1036,19 +1034,19 @@ readInt8(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Return a signed 8-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1068,7 +1066,7 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,two's complement signed value supporting up to 48 bits of accuracy
 
 **Since:** 20
 
@@ -1084,20 +1082,20 @@ readIntBE(offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1116,7 +1114,7 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,two's complement signed value supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
@@ -1132,20 +1130,20 @@ readIntLE(offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1163,7 +1161,7 @@ console.info(buf.readIntLE(0, 6).toString(16));
 readUInt16BE(offset?: number): number
 ```
 
-从指定的`offset`处读取无符号的大端序16位整数。
+Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1179,19 +1177,19 @@ readUInt16BE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Reads an unsigned, big-endian 16-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1211,7 +1209,7 @@ console.info(buf.readUInt16BE(1).toString(16));
 readUInt16LE(offset?: number): number
 ```
 
-从指定的`offset`处的buf读取无符号的小端序16位整数。
+Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1227,19 +1225,19 @@ readUInt16LE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Reads an unsigned, little-endian 16-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1259,7 +1257,7 @@ console.info(buf.readUInt16LE(1).toString(16));
 readUInt32BE(offset?: number): number
 ```
 
-从指定的`offset`处的buf读取无符号的大端序32位整数。
+Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1275,19 +1273,19 @@ readUInt32BE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Reads an unsigned, big-endian 32-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1305,7 +1303,7 @@ console.info(buf.readUInt32BE(0).toString(16));
 readUInt32LE(offset?: number): number
 ```
 
-从指定的`offset`处的buf读取无符号的小端序32位整数。
+Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1321,19 +1319,19 @@ readUInt32LE(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Reads an unsigned, little-endian 32-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1351,7 +1349,7 @@ console.info(buf.readUInt32LE(0).toString(16));
 readUInt8(offset?: number): number
 ```
 
-从`offset`处读取8位无符号整型数。
+Reads an unsigned 8-bit integer from buf at the specified offset
 
 **Since:** 20
 
@@ -1367,19 +1365,19 @@ readUInt8(offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。 |
+| number | Reads an unsigned 8-bit integer |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1399,7 +1397,7 @@ console.info(buf.readUInt8(1).toString());
 readUIntBE(offset: number, byteLength: number): number
 ```
 
-从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned big-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
@@ -1415,20 +1413,20 @@ readUIntBE(offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | Yes | 要读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。当offset为小数时，返回undefined。 |
+| number |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1446,7 +1444,7 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,little-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
@@ -1462,20 +1460,20 @@ readUIntLE(offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 读取出的内容。当offset为小数时，返回undefined。 |
+| number |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1493,7 +1491,7 @@ console.info(buf.readUIntLE(0, 6).toString(16));
 subarray(start?: number, end?: number): FastBuffer
 ```
 
-截取当前对象指定位置的数据并返回。
+Returns a new FastBuffer that references the same memory as the original, but offset and cropped by the start and end indices.
 
 **Since:** 20
 
@@ -1509,14 +1507,14 @@ subarray(start?: number, end?: number): FastBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | 截取开始位置。默认值：0。 |
-| end | number | No | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。取值范围：start <= end <= this.length。传入null时返回空FastBuffer。 |
+| start | number | No | start [start = 0] Where the new FastBuffer will start |
+| end | number | No | end [end = buf.length] Where the new FastBuffer will end (not inclusive) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Returns a new FastBuffer that references the same memory as the original |
 
 ## Examples
 
@@ -1539,7 +1537,7 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 swap16(): FastBuffer
 ```
 
-将当前对象转换为无符号的16位整数数组，并交换字节顺序。
+Interprets buf as an array of unsigned 16-bit integers and swaps the byte order in-place.
 
 **Since:** 20
 
@@ -1555,13 +1553,13 @@ swap16(): FastBuffer
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The fastbuffer size must be a multiple of 16-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
 
 ## Examples
 
@@ -1582,7 +1580,7 @@ console.info(buf1.toString('hex'));
 swap32(): FastBuffer
 ```
 
-将当前对象转换为无符号的32位整数数组，并交换字节顺序。
+Interprets buf as an array of unsigned 32-bit integers and swaps the byte order in-place.
 
 **Since:** 20
 
@@ -1598,13 +1596,13 @@ swap32(): FastBuffer
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The fastbuffer size must be a multiple of 32-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
 
 ## Examples
 
@@ -1625,7 +1623,7 @@ console.info(buf1.toString('hex'));
 swap64(): FastBuffer
 ```
 
-将当前对象转换为无符号的64位整数数组，并交换字节顺序。
+Interprets buf as an array of unsigned 64-bit integers and swaps the byte order in-place.
 
 **Since:** 20
 
@@ -1641,13 +1639,13 @@ swap64(): FastBuffer
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 交换之后的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The fastbuffer size must be a multiple of 64-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
 
 ## Examples
 
@@ -1668,7 +1666,7 @@ console.info(buf1.toString('hex'));
 toJSON(): Object
 ```
 
-将Buffer转为JSON并返回。
+Returns a JSON representation of buf
 
 **Since:** 20
 
@@ -1684,7 +1682,7 @@ toJSON(): Object
 
 | Type | Description |
 | --- | --- |
-| Object | JSON对象。 |
+| Object | Returns a JSON |
 
 ## Examples
 
@@ -1703,7 +1701,7 @@ console.info(JSON.stringify(obj));
 toString(encoding?: string, start?: number, end?: number): string
 ```
 
-将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
+Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 20
 
@@ -1719,21 +1717,21 @@ toString(encoding?: string, start?: number, end?: number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | 字符编码格式。默认值：'utf8'。 |
-| start | number | No | 开始位置。默认值：0。 |
-| end | number | No | 结束位置。默认值：Buffer.length。 |
+| encoding | string | No | encoding [encoding='utf8'] The character encoding to use |
+| start | number | No | start [start = 0] The byte offset to start decoding at |
+| end | number | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 字符串。当start >= this.length或start > end时返回空字符串。 |
+| string |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -1754,7 +1752,7 @@ console.info(buf1.toString('utf-8'));
 values(): IterableIterator<number>
 ```
 
-返回一个包含FastBuffer字节值的迭代器。
+Creates and returns an iterator for buf values (bytes).
 
 **Since:** 20
 
@@ -1800,7 +1798,7 @@ while (!next.done) {
 write(str: string, offset?: number, length?: number, encoding?: string): number
 ```
 
-在FastBuffer对象的offset偏移处写入指定编码的字符串，写入的字节长度为length。
+Writes string to buf at offset according to the character encoding in encoding
 
 **Since:** 20
 
@@ -1816,23 +1814,23 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | 要写入Buffer的字符串。 |
-| offset | number | No | 偏移量。默认值：0。 |
-| length | number | No | 最大字节长度。默认值：（this.length - offset）。 |
-| encoding | string | No | 字符编码。默认值：'utf8'。 |
+| str | string | Yes | The string to write into the buffer |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write string |
+| length | number | No | length [length = buf.length - offset] Maximum number of bytes to write (written bytes will not exceed buf.length - offset) |
+| encoding | string | No | encoding [encoding='utf8'] The character encoding of string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 写入的字节数。 |
+| number | Number of bytes written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -1856,7 +1854,7 @@ console.info("length = " + length);
 writeBigInt64BE(value: bigint, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
+Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
@@ -1872,20 +1870,20 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | Yes | The 64-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1904,7 +1902,7 @@ console.info("result = " + result);
 writeBigInt64LE(value: bigint, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
+Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
@@ -1920,20 +1918,20 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | Yes | The 64-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1952,7 +1950,7 @@ console.info("result = " + result);
 writeBigUInt64BE(value: bigint, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
+Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
@@ -1968,20 +1966,20 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | Yes | The unsigned 64-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2000,7 +1998,7 @@ console.info("result = " + result);
 writeBigUInt64LE(value: bigint, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
+Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
@@ -2016,20 +2014,20 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | Yes | The unsigned 64-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2048,7 +2046,7 @@ console.info("result = " + result);
 writeDoubleBE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的64位双浮点型数据。
+Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
@@ -2064,20 +2062,20 @@ writeDoubleBE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | number | Yes | The 64-bit big-endian double value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2096,7 +2094,7 @@ console.info("result = " + result);
 writeDoubleLE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的64位双浮点型数据。
+Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
@@ -2112,20 +2110,20 @@ writeDoubleLE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | number | Yes | The 64-bit little-endian double value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2144,7 +2142,7 @@ console.info("result = " + result);
 writeFloatBE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的32位浮点型数据。
+Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
@@ -2160,20 +2158,20 @@ writeFloatBE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The 32-bit big-endian float value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2192,7 +2190,7 @@ console.info("result = " + result);
 writeFloatLE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的32位浮点型数据。
+Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
@@ -2208,20 +2206,20 @@ writeFloatLE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The 32-bit little-endian float value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2240,7 +2238,7 @@ console.info("result = " + result);
 writeInt16BE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的16位有符号整型数据。
+Writes value to buf at the specified offset as big-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
 
@@ -2256,20 +2254,20 @@ writeInt16BE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | Yes | The signed 16-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2288,7 +2286,7 @@ console.info("result = " + result);
 writeInt16LE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的16位有符号整型数据。
+Writes value to buf at the specified offset as little-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
 
@@ -2304,20 +2302,20 @@ writeInt16LE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | Yes | The signed 16-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2336,7 +2334,7 @@ console.info("result = " + result);
 writeInt32BE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的32位有符号整型数据。
+Writes value to buf at the specified offset as big-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
 
@@ -2352,20 +2350,20 @@ writeInt32BE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The signed 32-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2384,7 +2382,7 @@ console.info("result = " + result);
 writeInt32LE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的32位有符号整型数据。
+Writes value to buf at the specified offset as little-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
 
@@ -2400,20 +2398,20 @@ writeInt32LE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The signed 32-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2432,7 +2430,7 @@ console.info("result = " + result);
 writeInt8(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入8位有符号整型数据。
+Writes value to buf at the specified offset. value must be a valid signed 8-bit integer.
 
 **Since:** 20
 
@@ -2448,20 +2446,20 @@ writeInt8(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：-INT8_MAX <= value <= INT8_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| value | number | Yes | The signed 8-bit integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2483,7 +2481,7 @@ console.info("result1 = " + result1);
 writeIntBE(value: number, offset: number, byteLength: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
+Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
@@ -2499,21 +2497,21 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
-| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | Yes | 要写入的字节数。 |
+| value | number | Yes | The big-endian integer value to write |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2532,7 +2530,7 @@ console.info("result = " + result);
 writeIntLE(value: number, offset: number, byteLength: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
+Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
 
@@ -2548,21 +2546,21 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
-| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | Yes | 要写入的字节数。 |
+| value | number | Yes | The little-endian integer value to write |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2581,7 +2579,7 @@ console.info("result = " + result);
 writeUInt16BE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的16位无符号整型数据。
+Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 16-bit integer.
 
 **Since:** 20
 
@@ -2597,20 +2595,20 @@ writeUInt16BE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | Yes | The unsigned 16-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2632,7 +2630,7 @@ console.info("result1 = " + result1);
 writeUInt16LE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的16位无符号整型数据。
+Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 16-bit integer.
 
 **Since:** 20
 
@@ -2648,20 +2646,20 @@ writeUInt16LE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | Yes | The unsigned 16-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2683,7 +2681,7 @@ console.info("result1 = " + result1);
 writeUInt32BE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的32位无符号整型数据。
+Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 32-bit integer.
 
 **Since:** 20
 
@@ -2699,20 +2697,20 @@ writeUInt32BE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT32_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The unsigned 32-bit big-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2731,7 +2729,7 @@ console.info("result = " + result);
 writeUInt32LE(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的32位无符号整型数据。
+Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 32-bit integer.
 
 **Since:** 20
 
@@ -2747,20 +2745,20 @@ writeUInt32LE(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入FastBuffer对象的数据。取值范围：0 <= value <= UINT32_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | Yes | The unsigned 32-bit little-endian integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2779,7 +2777,7 @@ console.info("result = " + result);
 writeUInt8(value: number, offset?: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入8位无符号整型数据。
+Writes value to buf at the specified offset. value must be a valid unsigned 8-bit integer
 
 **Since:** 20
 
@@ -2795,20 +2793,20 @@ writeUInt8(value: number, offset?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围：0 <= value <= UINT8_MAX。 |
-| offset | number | No | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| value | number | Yes | The unsigned 8-bit integer value to write |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2836,7 +2834,7 @@ console.info("result3 = " + result3);
 writeUIntBE(value: number, offset: number, byteLength: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
+Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
@@ -2852,21 +2850,21 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
-| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | Yes | 要写入的字节数。 |
+| value | number | Yes | The unsigned big-endian integer value to write |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2885,7 +2883,7 @@ console.info("result = " + result);
 writeUIntLE(value: number, offset: number, byteLength: number): number
 ```
 
-在FastBuffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
+Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
 
@@ -2901,21 +2899,21 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 写入Buffer的数据。取值范围取决于byteLength。 |
-| offset | number | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | Yes | 要写入的字节数。 |
+| value | number | Yes | The unsigned little-endian integer value to write |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 偏移量offset加上写入的字节数。 |
+| number | offset plus the number of bytes written |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2934,7 +2932,7 @@ console.info("result = " + result);
 buffer: ArrayBuffer
 ```
 
-ArrayBuffer对象。
+The arraybuffer underlying the FastBuffer object
 
 **Type:** ArrayBuffer
 
@@ -2954,7 +2952,7 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。
+The byteOffset of the Buffers underlying ArrayBuffer object
 
 **Type:** number
 
@@ -2974,7 +2972,7 @@ byteOffset: number
 length: number
 ```
 
-FastBuffer对象的字节长度。
+Returns the number of bytes in buf
 
 **Type:** number
 

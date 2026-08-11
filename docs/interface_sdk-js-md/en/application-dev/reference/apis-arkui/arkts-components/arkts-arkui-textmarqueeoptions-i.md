@@ -1,6 +1,6 @@
 # TextMarqueeOptions
 
-Marquee初始化参数。
+Describes the initialization options of the **Marquee** component.
 
 **Since:** 18
 
@@ -16,13 +16,11 @@ Marquee初始化参数。
 delay?: number
 ```
 
-设置每次滚动的时间间隔。
+Time interval between scroll movements.
 
-取值范围：[0, +∞)。设置负数时按默认值处理。
+Default value: **0**
 
-默认值：0
-
-单位：毫秒
+Unit: millisecond
 
 **Type:** number
 
@@ -44,13 +42,13 @@ delay?: number
 fadeout?: boolean
 ```
 
-设置文字超长时的渐隐效果。
+Whether to apply a fade-out effect when the text is too long.
 
-true表示支持渐隐效果，false表示不支持渐隐效果。
+**true** to apply a fade-out effect when the text is too long, **false** otherwise.
 
-当Text内容超出显示范围时，未完全展现的文字边缘将应用渐隐效果。若两端均有文字未完全显示，则两端同时应用渐隐效果。在渐隐效果开启状态下，clip属性将自动锁定为true，不允许设置为false。
+When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -72,11 +70,11 @@ true表示支持渐隐效果，false表示不支持渐隐效果。
 fromStart?: boolean
 ```
 
-设置文本从头开始滚动或反向滚动。
+Whether the text scrolls from the start.
 
-true表示从头开始滚动，false表示反向滚动。
+**true** to scroll from the start, **false** to scroll in reverse.
 
-默认值：true
+Default value: **true**
 
 **Type:** boolean
 
@@ -98,9 +96,9 @@ true表示从头开始滚动，false表示反向滚动。
 loop?: number
 ```
 
-设置重复滚动的次数，小于等于零时无限循环。
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
 
-默认值：-1
+Default value: **-1**
 
 **Type:** number
 
@@ -122,9 +120,9 @@ loop?: number
 marqueeStartPolicy?: MarqueeStartPolicy
 ```
 
-设置跑马灯启动策略，该属性值生效需将start设置为true。
+Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.
 
-默认值：TV设备上默认值为MarqueeStartPolicy.ON_FOCUS，其他设备默认值为MarqueeStartPolicy.DEFAULT
+Default value: **MarqueeStartPolicy.DEFAULT**
 
 **Type:** [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md)
 
@@ -146,11 +144,11 @@ marqueeStartPolicy?: MarqueeStartPolicy
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-跑马灯组件属性更新后，跑马灯的滚动策略。
+Scrolling policy of the marquee after its attributes are updated.
 
-当跑马灯为播放状态，且文本内容宽度超过跑马灯组件宽度时，该属性生效。
+This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.
 
-默认值：MarqueeUpdatePolicy.DEFAULT
+Default value: **MarqueeUpdatePolicy.DEFAULT**
 
 **Type:** [MarqueeUpdatePolicy](../arkts-apis/arkts-arkui-text-marqueeupdatepolicy-e.md)
 
@@ -172,9 +170,9 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯之间的间距。单位：vp。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
+Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.
 
-默认值：48.0vp
+Default value: **48.0vp**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -196,9 +194,9 @@ spacing?: LengthMetrics
 start: boolean
 ```
 
-控制跑马灯进入播放状态。
+Whether to start the marquee.
 
-true表示播放，false表示不播放。
+**true**: Start the marquee. **false**: Do not start the marquee.
 
 **Type:** boolean
 
@@ -220,13 +218,9 @@ true表示播放，false表示不播放。
 step?: number
 ```
 
-滚动动画文本滚动步长。
+Step length of the scrolling animation text.
 
-单位：vp
-
-取值范围：(0, 文本宽度]。设置小于等于0的值时按默认值处理。
-
-默认值：4.0vp
+Default value: **4.0** (in vp)
 
 **Type:** number
 

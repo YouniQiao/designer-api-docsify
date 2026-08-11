@@ -12,22 +12,27 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void
 ```
 
-为设备添加域名过滤规则。
+Adds domain name filtering rules for the device.
 
-API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
+In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+[LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 添加[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后会自动添加默认DENY规则，不在ALLOW规则之内的域名解析数据包将被丢弃或拦截。
+> - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a default **DENY** rule is
+> added automatically to discard or intercept domain name resolution packets that are not covered by the **ALLOW**
+> rule.
 > 
-> - 添加的规则在设备重启后会被清空。
+> - The added rules will be cleared after the device restarts.
 > 
-> - 为避免DNS缓存导致拦截规则失效，建议系统启动后立即配置域名过滤规则。若已因DNS缓存导致拦截失效，重启系统可清除缓存，恢复拦截功能。
+> - To prevent interception rules from becoming ineffective due to DNS caching, it is recommended that you
+> configure domain name filtering rules immediately after the system starts up. If interception fails because of
+> DNS caching, restart the system to clear the cache and restore the interception function.
 > 
-> - 规则匹配顺序：先匹配本接口添加的域名过滤规则，再匹配IP防火墙规则（由[addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addfirewallrule)添加）；在域名规则或IP规则中，均按
-> [Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
+> - Rule matching order: Domain name filtering rules added by this API are matched first, followed by IP firewall
+> rules (added via [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addfirewallrule)). Within both domain name rules and IP
+> rules, matching is performed in the order of ALLOW, DENY, and REJECT [actions](arkts-mdm-networkmanager-action-e.md).
 
 **Since:** 12
 
@@ -45,17 +50,17 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| domainFilterRule | [DomainFilterRule](arkts-mdm-networkmanager-domainfilterrule-i.md) | Yes | 域名过滤规则对象，包含域名、应用UID、IP协议版本等配置项。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| domainFilterRule | [DomainFilterRule](arkts-mdm-networkmanager-domainfilterrule-i.md) | Yes | Domain name filtering rule object, including the domain name, application UID, and IP protocol version. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

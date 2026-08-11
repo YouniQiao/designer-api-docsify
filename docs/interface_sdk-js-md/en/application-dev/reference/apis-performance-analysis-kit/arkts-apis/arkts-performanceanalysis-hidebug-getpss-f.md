@@ -12,11 +12,13 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getPss() : bigint
 ```
 
-��ȡӦ�ý���ʵ��ʹ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Pss��SwapPssֵ����͡�
+Obtains the size of the physical memory actually used by the application process. This API is implemented by summing up the values of **Pss** and **SwapPss** in the **\/proc/{pid}/smaps_rollup** node.
 
-> **ע��**
+> **NOTE：**
 > 
-> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+> Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API
+> in the main thread. You can use this API in the asynchronous thread started by calling
+> [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md) to avoid frame freezing.
 
 **Since:** 8
 
@@ -30,7 +32,7 @@ function getPss() : bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | ����Ӧ�ý���ʵ��ʹ�õ������ڴ��С����λΪKB�� |
+| bigint | Size of the physical memory actually used by the application process, in KB. |
 
 ## Examples
 
@@ -38,6 +40,5 @@ function getPss() : bigint
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let pss: bigint = hidebug.getPss();
-console.info(`pss = ${pss}`);
 ```
 

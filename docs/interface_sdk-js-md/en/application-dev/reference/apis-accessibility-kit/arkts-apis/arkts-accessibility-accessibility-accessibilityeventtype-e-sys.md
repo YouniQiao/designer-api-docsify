@@ -1,6 +1,6 @@
 # AccessibilityEventType (System API)
 
-无障碍事件类型。
+Enumerates accessibility event types.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 TYPE_ACCESSIBILITY_FOCUS = 0
 ```
 
-表示获得无障碍焦点。
+Event of gaining an accessibility focus.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ TYPE_ACCESSIBILITY_FOCUS = 0
 TYPE_ACCESSIBILITY_FOCUS_CLEAR = 1
 ```
 
-表示清除无障碍焦点。
+Event of clearing an accessibility focus.
 
 **Since:** 20
 
@@ -54,7 +54,7 @@ TYPE_ACCESSIBILITY_FOCUS_CLEAR = 1
 TYPE_CLICK = 2
 ```
 
-表示点击组件。
+Event of clicking a component.
 
 **Since:** 20
 
@@ -72,7 +72,7 @@ TYPE_CLICK = 2
 TYPE_LONG_CLICK = 3
 ```
 
-表示长按点击组件。
+Event of long pressing a component.
 
 **Since:** 20
 
@@ -90,7 +90,7 @@ TYPE_LONG_CLICK = 3
 TYPE_SELECT = 4
 ```
 
-表示选择组件。
+Event of selecting a component.
 
 **Since:** 20
 
@@ -108,7 +108,7 @@ TYPE_SELECT = 4
 TYPE_HOVER_ENTER = 5
 ```
 
-表示悬停进入组件。
+Event indicating the mouse pointer enters a component.
 
 **Since:** 20
 
@@ -126,7 +126,7 @@ TYPE_HOVER_ENTER = 5
 TYPE_HOVER_EXIT = 6
 ```
 
-表示悬停离开组件。
+Event indicating the mouse pointer exits a component.
 
 **Since:** 20
 
@@ -144,7 +144,7 @@ TYPE_HOVER_EXIT = 6
 TYPE_FOCUS = 7
 ```
 
-表示组件获得焦点。
+Event indicating the component gains a focus.
 
 **Since:** 20
 
@@ -162,7 +162,7 @@ TYPE_FOCUS = 7
 TYPE_TEXT_UPDATE = 8
 ```
 
-表示组件文本已更改。
+Event indicating the component text has been updated.
 
 **Since:** 20
 
@@ -180,7 +180,7 @@ TYPE_TEXT_UPDATE = 8
 TYPE_TEXT_SELECTION_UPDATE = 9
 ```
 
-表示组件选定文本已更改。
+Event indicating the selected text has been updated.
 
 **Since:** 20
 
@@ -198,7 +198,7 @@ TYPE_TEXT_SELECTION_UPDATE = 9
 TYPE_SCROLL = 10
 ```
 
-表示滚动视图。
+Event of scrolling the view.
 
 **Since:** 20
 
@@ -216,7 +216,7 @@ TYPE_SCROLL = 10
 TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY = 11
 ```
 
-表示主动聚焦。
+Event of auto-focusing.
 
 **Since:** 20
 
@@ -234,7 +234,7 @@ TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY = 11
 TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12
 ```
 
-表示主动播报。
+Event of auto-broadcasting.
 
 **Since:** 20
 
@@ -252,7 +252,7 @@ TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12
 TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13
 ```
 
-表示主动聚焦不打断。
+Event of auto-focusing without interruption.
 
 **Since:** 20
 
@@ -270,7 +270,7 @@ TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13
 TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14
 ```
 
-表示主动播报不打断。
+Event of auto-broadcasting without interruption.
 
 **Since:** 20
 
@@ -288,7 +288,7 @@ TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14
 TYPE_ELEMENT_INFO_CHANGE = 15
 ```
 
-表示组件信息改变。
+Event indicating the component information changes.
 
 **Since:** 20
 
@@ -306,7 +306,7 @@ TYPE_ELEMENT_INFO_CHANGE = 15
 TYPE_SCROLLING = 16
 ```
 
-表示滚动视图中有item被滚出屏幕。
+Event indicating an item is scrolled out of the screen.
 
 **Since:** 20
 
@@ -324,7 +324,7 @@ TYPE_SCROLLING = 16
 TYPE_WINDOW_ADD = 17
 ```
 
-表示添加窗口。
+Event of adding windows.
 
 **Since:** 20
 
@@ -342,7 +342,7 @@ TYPE_WINDOW_ADD = 17
 TYPE_WINDOW_REMOVE = 18
 ```
 
-表示删除窗口。
+Event of deleting windows.
 
 **Since:** 20
 
@@ -360,7 +360,7 @@ TYPE_WINDOW_REMOVE = 18
 TYPE_WINDOW_BOUNDS = 19
 ```
 
-表示窗口边界改变。
+Event indicating the window boundary changes.
 
 **Since:** 20
 
@@ -378,7 +378,7 @@ TYPE_WINDOW_BOUNDS = 19
 TYPE_WINDOW_ACTIVE = 20
 ```
 
-表示切换窗口活动状态
+Event indicating the window activity state changes.
 
 **Since:** 20
 
@@ -396,7 +396,7 @@ TYPE_WINDOW_ACTIVE = 20
 TYPE_WINDOW_FOCUS = 21
 ```
 
-表示窗口焦点发生变化。
+Event indicating the window focus changes.
 
 **Since:** 20
 
@@ -414,7 +414,7 @@ TYPE_WINDOW_FOCUS = 21
 TYPE_WINDOW_PROPERTY = 22
 ```
 
-表示窗口属性变化事件。例如：透明度、大小等。
+Event indicating the window properties change, such as opacity, size, and so on.
 
 **Since:** 20
 
@@ -432,7 +432,7 @@ TYPE_WINDOW_PROPERTY = 22
 TYPE_WINDOW_LAYER = 23
 ```
 
-表示窗口层级变化。
+Event indicating the window layer changes.
 
 **Since:** 20
 
@@ -450,7 +450,7 @@ TYPE_WINDOW_LAYER = 23
 TYPE_TOUCH_BEGIN = 24
 ```
 
-表示开始手指触摸事件。
+Event indicating a touch begins.
 
 **Since:** 20
 
@@ -468,7 +468,7 @@ TYPE_TOUCH_BEGIN = 24
 TYPE_TOUCH_END = 25
 ```
 
-表示结束手指触摸事件。
+Event indicating a touch ends.
 
 **Since:** 20
 
@@ -486,7 +486,7 @@ TYPE_TOUCH_END = 25
 TYPE_PAGE_CONTENT_UPDATE = 26
 ```
 
-表示页面内容刷新。
+Event indicating the page content is updated.
 
 **Since:** 20
 
@@ -504,7 +504,7 @@ TYPE_PAGE_CONTENT_UPDATE = 26
 TYPE_PAGE_STATE_UPDATE = 27
 ```
 
-表示页面状态刷新。
+Event indicating the page state is updated.
 
 **Since:** 20
 
@@ -522,7 +522,7 @@ TYPE_PAGE_STATE_UPDATE = 27
 TYPE_PAGE_OPEN = 28
 ```
 
-表示页面打开。
+Event of opening a page.
 
 **Since:** 20
 
@@ -540,7 +540,7 @@ TYPE_PAGE_OPEN = 28
 TYPE_PAGE_CLOSE = 29
 ```
 
-表示页面关闭。
+Event of closing a page.
 
 **Since:** 20
 
@@ -558,7 +558,7 @@ TYPE_PAGE_CLOSE = 29
 TYPE_SWIPE_LEFT = 30
 ```
 
-表示向左的手势。
+Event indicating the swipe-left gesture.
 
 **Since:** 20
 
@@ -576,7 +576,7 @@ TYPE_SWIPE_LEFT = 30
 TYPE_SWIPE_LEFT_THEN_RIGHT = 31
 ```
 
-表示先向左再向右的手势。
+Event indicating the swipe-left-then-right gesture.
 
 **Since:** 20
 
@@ -594,7 +594,7 @@ TYPE_SWIPE_LEFT_THEN_RIGHT = 31
 TYPE_SWIPE_LEFT_THEN_UP = 32
 ```
 
-表示先向左再向上的手势。
+Event indicating the swipe-left-then-up gesture.
 
 **Since:** 20
 
@@ -612,7 +612,7 @@ TYPE_SWIPE_LEFT_THEN_UP = 32
 TYPE_SWIPE_LEFT_THEN_DOWN = 33
 ```
 
-表示先向左再向下的手势。
+Event indicating the swipe-left-then-down gesture.
 
 **Since:** 20
 
@@ -630,7 +630,7 @@ TYPE_SWIPE_LEFT_THEN_DOWN = 33
 TYPE_SWIPE_RIGHT = 34
 ```
 
-表示向右的手势。
+Event indicating the swipe-right gesture.
 
 **Since:** 20
 
@@ -648,7 +648,7 @@ TYPE_SWIPE_RIGHT = 34
 TYPE_SWIPE_RIGHT_THEN_LEFT = 35
 ```
 
-表示先向右再向左的手势。
+Event indicating the swipe-right-then-left gesture.
 
 **Since:** 20
 
@@ -666,7 +666,7 @@ TYPE_SWIPE_RIGHT_THEN_LEFT = 35
 TYPE_SWIPE_RIGHT_THEN_UP = 36
 ```
 
-表示先向右再向上的手势。
+Event indicating the swipe-right-then-up gesture.
 
 **Since:** 20
 
@@ -684,7 +684,7 @@ TYPE_SWIPE_RIGHT_THEN_UP = 36
 TYPE_SWIPE_RIGHT_THEN_DOWN = 37
 ```
 
-表示先向右再向下的手势。
+Event indicating the swipe-right-then-down gesture.
 
 **Since:** 20
 
@@ -702,7 +702,7 @@ TYPE_SWIPE_RIGHT_THEN_DOWN = 37
 TYPE_SWIPE_UP = 38
 ```
 
-表示向上的手势。
+Event indicating the swipe-up gesture.
 
 **Since:** 20
 
@@ -720,7 +720,7 @@ TYPE_SWIPE_UP = 38
 TYPE_SWIPE_UP_THEN_LEFT = 39
 ```
 
-表示先向上再向左的手势。
+Event indicating the swipe-up-then-left gesture.
 
 **Since:** 20
 
@@ -738,7 +738,7 @@ TYPE_SWIPE_UP_THEN_LEFT = 39
 TYPE_SWIPE_UP_THEN_RIGHT = 40
 ```
 
-表示先向上再向右的手势。
+Event indicating the swipe-up-then-right gesture.
 
 **Since:** 20
 
@@ -756,7 +756,7 @@ TYPE_SWIPE_UP_THEN_RIGHT = 40
 TYPE_SWIPE_UP_THEN_DOWN = 41
 ```
 
-表示先向上再向下的手势。
+Event indicating the swipe-up-then-down gesture.
 
 **Since:** 20
 
@@ -774,7 +774,7 @@ TYPE_SWIPE_UP_THEN_DOWN = 41
 TYPE_SWIPE_DOWN = 42
 ```
 
-表示向下的手势。
+Event indicating the swipe-down gesture.
 
 **Since:** 20
 
@@ -792,7 +792,7 @@ TYPE_SWIPE_DOWN = 42
 TYPE_SWIPE_DOWN_THEN_LEFT = 43
 ```
 
-表示先向下再向左的手势。
+Event indicating the swipe-down-then-left gesture.
 
 **Since:** 20
 
@@ -810,7 +810,7 @@ TYPE_SWIPE_DOWN_THEN_LEFT = 43
 TYPE_SWIPE_DOWN_THEN_RIGHT = 44
 ```
 
-表示先向下再向右的手势。
+Event indicating the swipe-down-then-right gesture.
 
 **Since:** 20
 
@@ -828,7 +828,7 @@ TYPE_SWIPE_DOWN_THEN_RIGHT = 44
 TYPE_SWIPE_DOWN_THEN_UP = 45
 ```
 
-表示先向下再向上的手势。
+Event indicating the swipe-down-then-up gesture.
 
 **Since:** 20
 
@@ -846,7 +846,7 @@ TYPE_SWIPE_DOWN_THEN_UP = 45
 TYPE_TWO_FINGER_SINGLE_TAP = 46
 ```
 
-表示双指单击的手势。
+Event indicating the two-finger single-tap gesture.
 
 **Since:** 20
 
@@ -864,7 +864,7 @@ TYPE_TWO_FINGER_SINGLE_TAP = 46
 TYPE_TWO_FINGER_DOUBLE_TAP = 47
 ```
 
-表示双指双击的手势。
+Event indicating the two-finger double-tap gesture.
 
 **Since:** 20
 
@@ -882,7 +882,7 @@ TYPE_TWO_FINGER_DOUBLE_TAP = 47
 TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48
 ```
 
-表示双指双击且长按的手势。
+Event indicating the two-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -900,7 +900,7 @@ TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48
 TYPE_TWO_FINGER_TRIPLE_TAP = 49
 ```
 
-表示双指三击的手势。
+Event indicating the two-finger triple-tap gesture.
 
 **Since:** 20
 
@@ -918,7 +918,7 @@ TYPE_TWO_FINGER_TRIPLE_TAP = 49
 TYPE_TWO_FINGER_TRIPLE_TAP_AND_HOLD = 50
 ```
 
-表示双指三击且长按的手势。
+Event indicating the two-finger triple-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -936,7 +936,7 @@ TYPE_TWO_FINGER_TRIPLE_TAP_AND_HOLD = 50
 TYPE_THREE_FINGER_SINGLE_TAP = 51
 ```
 
-表示三指单击的手势。
+Event indicating the three-finger single-tap gesture.
 
 **Since:** 20
 
@@ -954,7 +954,7 @@ TYPE_THREE_FINGER_SINGLE_TAP = 51
 TYPE_THREE_FINGER_DOUBLE_TAP = 52
 ```
 
-表示三指双击的手势。
+Event indicating the three-finger double-tap gesture.
 
 **Since:** 20
 
@@ -972,7 +972,7 @@ TYPE_THREE_FINGER_DOUBLE_TAP = 52
 TYPE_THREE_FINGER_DOUBLE_TAP_AND_HOLD = 53
 ```
 
-表示三指双击且长按的手势。
+Event indicating the three-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -990,7 +990,7 @@ TYPE_THREE_FINGER_DOUBLE_TAP_AND_HOLD = 53
 TYPE_THREE_FINGER_TRIPLE_TAP = 54
 ```
 
-表示三指三击的手势。
+Event indicating the three-finger triple-tap gesture.
 
 **Since:** 20
 
@@ -1008,7 +1008,7 @@ TYPE_THREE_FINGER_TRIPLE_TAP = 54
 TYPE_THREE_FINGER_TRIPLE_TAP_AND_HOLD = 55
 ```
 
-表示三指三击且长按的手势。
+Event indicating the three-finger triple-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -1026,7 +1026,7 @@ TYPE_THREE_FINGER_TRIPLE_TAP_AND_HOLD = 55
 TYPE_FOUR_FINGER_SINGLE_TAP = 56
 ```
 
-表示四指单击的手势。
+Event indicating the four-finger single-tap gesture.
 
 **Since:** 20
 
@@ -1044,7 +1044,7 @@ TYPE_FOUR_FINGER_SINGLE_TAP = 56
 TYPE_FOUR_FINGER_DOUBLE_TAP = 57
 ```
 
-表示四指双击的手势。
+Event indicating the four-finger double-tap gesture.
 
 **Since:** 20
 
@@ -1062,7 +1062,7 @@ TYPE_FOUR_FINGER_DOUBLE_TAP = 57
 TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58
 ```
 
-表示四指双击且长按的手势。
+Event indicating the four-finger double-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -1080,7 +1080,7 @@ TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58
 TYPE_FOUR_FINGER_TRIPLE_TAP = 59
 ```
 
-表示四指三击的手势。
+Event indicating the four-finger triple-tap gesture.
 
 **Since:** 20
 
@@ -1098,7 +1098,7 @@ TYPE_FOUR_FINGER_TRIPLE_TAP = 59
 TYPE_FOUR_FINGER_TRIPLE_TAP_AND_HOLD = 60
 ```
 
-表示四指三击且长按的手势。
+Event indicating the four-finger triple-tap-and-hold gesture.
 
 **Since:** 20
 
@@ -1116,7 +1116,7 @@ TYPE_FOUR_FINGER_TRIPLE_TAP_AND_HOLD = 60
 TYPE_THREE_FINGER_SWIPE_UP = 61
 ```
 
-表示三指向上滑动的手势。
+Event indicating the three-finger swipe-up gesture.
 
 **Since:** 20
 
@@ -1134,7 +1134,7 @@ TYPE_THREE_FINGER_SWIPE_UP = 61
 TYPE_THREE_FINGER_SWIPE_DOWN = 62
 ```
 
-表示三指向下滑动的手势。
+Event indicating the three-finger swipe-down gesture.
 
 **Since:** 20
 
@@ -1152,7 +1152,7 @@ TYPE_THREE_FINGER_SWIPE_DOWN = 62
 TYPE_THREE_FINGER_SWIPE_LEFT = 63
 ```
 
-表示三指向左滑动的手势。
+Event indicating the three-finger swipe-left gesture.
 
 **Since:** 20
 
@@ -1170,7 +1170,7 @@ TYPE_THREE_FINGER_SWIPE_LEFT = 63
 TYPE_THREE_FINGER_SWIPE_RIGHT = 64
 ```
 
-表示三指向右滑动的手势。
+Event indicating the three-finger swipe-right gesture.
 
 **Since:** 20
 
@@ -1188,7 +1188,7 @@ TYPE_THREE_FINGER_SWIPE_RIGHT = 64
 TYPE_FOUR_FINGER_SWIPE_UP = 65
 ```
 
-表示四指向上滑动的手势。
+Event indicating the four-finger swipe-up gesture.
 
 **Since:** 20
 
@@ -1206,7 +1206,7 @@ TYPE_FOUR_FINGER_SWIPE_UP = 65
 TYPE_FOUR_FINGER_SWIPE_DOWN = 66
 ```
 
-表示四指向下滑动的手势。
+Event indicating the four-finger swipe-down gesture.
 
 **Since:** 20
 
@@ -1224,7 +1224,7 @@ TYPE_FOUR_FINGER_SWIPE_DOWN = 66
 TYPE_FOUR_FINGER_SWIPE_LEFT = 67
 ```
 
-表示四指向左滑动的手势。
+Event indicating the four-finger swipe-left gesture.
 
 **Since:** 20
 
@@ -1242,7 +1242,7 @@ TYPE_FOUR_FINGER_SWIPE_LEFT = 67
 TYPE_FOUR_FINGER_SWIPE_RIGHT = 68
 ```
 
-表示四指向右滑动的手势。
+Event indicating the four-finger swipe-right gesture.
 
 **Since:** 20
 
@@ -1260,7 +1260,7 @@ TYPE_FOUR_FINGER_SWIPE_RIGHT = 68
 TYPE_PAGE_ACTIVE = 69
 ```
 
-表示页面发生变化。
+Event indicating the page is active.
 
 **Since:** 23
 
@@ -1278,7 +1278,7 @@ TYPE_PAGE_ACTIVE = 69
 TYPE_NOTIFICATION_UPDATE = 70
 ```
 
-表示通知发生变化。
+Event indicating the notification is active.
 
 **Since:** 26.0.0
 
@@ -1327,6 +1327,26 @@ one finger double tap type
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72--><!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## TYPE_TOUCH_GUIDE_GESTURE
+
+```TypeScript
+TYPE_TOUCH_GUIDE_GESTURE = 73
+```
+
+Event indicating the touchGuide gesture.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityEventType-TYPE_TOUCH_GUIDE_GESTURE = 73--><!--Device-AccessibilityEventType-TYPE_TOUCH_GUIDE_GESTURE = 73-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

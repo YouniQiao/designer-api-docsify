@@ -1,11 +1,5 @@
 # getSimOperatorNumericSync
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## getSimOperatorNumericSync
 
 ```TypeScript

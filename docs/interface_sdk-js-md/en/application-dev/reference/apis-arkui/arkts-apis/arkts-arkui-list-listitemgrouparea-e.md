@@ -1,6 +1,6 @@
 # ListItemGroupArea
 
-枚举了ListItemGroup各个区域。
+Declare list item group area
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-ListItemGroup内部ListItem区域、header区域以及footer区域以外的区域。
+The edge of the viewport is in the position of &lt;em&gt;none&lt;/em&gt;.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ListItemGroup内部ListItem区域、header区域以及footer区域以外的区�
 IN_LIST_ITEM_AREA = 1
 ```
 
-ListItemGroup内部ListItem区域。
+The edge of the viewport is in the position of a list item.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ ListItemGroup内部ListItem区域。
 IN_HEADER_AREA = 2
 ```
 
-ListItemGroup内部header区域。
+The edge of the viewport is in the position of a header.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ ListItemGroup内部header区域。
 IN_FOOTER_AREA = 3
 ```
 
-ListItemGroup内部footer区域。
+The edge of the viewport is in the position of a footer.
 
 **Since:** 23
 

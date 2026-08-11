@@ -1,8 +1,6 @@
 # CustomSpan
 
-自定义绘制Span，仅提供基类，具体实现由开发者定义。
-
-自定义绘制Span拖拽显示的缩略图为空白。
+Defines CustomSpan.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@
 invalidate(): void
 ```
 
-主动刷新使用CustomSpan的Text组件。
+Invalidate all components that use the object, which will cause a re-render of all components.
 
 **Since:** 23
 
@@ -36,7 +34,7 @@ invalidate(): void
 abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 ```
 
-绘制自定义绘制Span。
+Draw the custom span.
 
 **Since:** 23
 
@@ -61,7 +59,7 @@ abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 abstract onMeasure(measureInfo: CustomSpanMeasureInfo): CustomSpanMetrics
 ```
 
-获取自定义绘制Span的尺寸大小。
+Measure the size of custom span.
 
 **Since:** 23
 
@@ -83,5 +81,5 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo): CustomSpanMetrics
 
 | Type | Description |
 | --- | --- |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | 自定义绘制Span的尺寸信息。&lt;br/&gt;**说明：** &lt;br/&gt;最终的CustomSpan的高度是由当前Text组件的行高所决定的。当height不传值，则默认取 Text组件的fontSize的值作为CustomSpan的高度；当height大于当前行的其他子组件的高度时，此时height即为Text组件的行高。 |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | CustomSpan Size |
 

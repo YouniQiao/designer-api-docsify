@@ -1,12 +1,10 @@
 # AtomicServiceWeb
 
-为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。
+**AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
 **Since:** 12
 
@@ -30,7 +28,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 onLoadIntercept?: OnLoadInterceptCallback
 ```
 
-当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。默认允许加载。
+Triggered when the resources loading is intercepted.
 
 **Since:** 12
 
@@ -48,7 +46,7 @@ onLoadIntercept?: OnLoadInterceptCallback
 controller: AtomicServiceWebController
 ```
 
-通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。
+Sets the controller of the AtomicServiceWeb.
 
 **Type:** [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md)
 
@@ -70,7 +68,7 @@ controller: AtomicServiceWebController
 darkMode?: WebDarkMode
 ```
 
-设置Web深色模式，默认关闭。
+Sets the dark mode of Web.
 
 **Type:** [WebDarkMode](../../apis-arkweb/arkts-components/arkts-arkweb-webdarkmode-e.md)
 
@@ -92,7 +90,7 @@ darkMode?: WebDarkMode
 forceDarkAccess?: boolean
 ```
 
-设置网页是否开启强制深色模式。true表示设置网页开启强制深色模式，false表示设置网页不开启强制深色模式。默认值：false。该属性仅在darkMode开启深色模式时生效。
+Sets whether to enable forced dark algorithm when the web is in dark mode.
 
 **Type:** boolean
 
@@ -114,7 +112,7 @@ forceDarkAccess?: boolean
 mixedMode?: MixedMode
 ```
 
-设置是否允许加载超文本传输协议（HTTP）和超文本传输安全协议（HTTPS）混合内容，默认不允许加载HTTP和HTTPS混合内容。
+Sets how to load HTTP and HTTPS content.
 
 **Type:** [MixedMode](../../apis-arkweb/arkts-apis/arkts-arkweb-web-mixedmode-e.md)
 
@@ -136,7 +134,7 @@ mixedMode?: MixedMode
 navPathStack?: NavPathStack
 ```
 
-路由栈信息。当使用NavDestination作为页面的根容器时，需传入NavDestination容器对应的NavPathStack处理页面路由。默认值为空。
+The navPathStack to control page route in Navigation and NavDestination.
 
 **Type:** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
 
@@ -156,7 +154,7 @@ navPathStack?: NavPathStack
 nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 ```
 
-设置嵌套滚动选项。nestedScroll为NestedScrollOptions（向前、向后两个方向）类型时，scrollForward、scrollBackward默认滚动选项为NestedScrollMode.SELF_FIRST。nestedScroll为NestedScrollOptionsExt（上下左右四个方向）类型时，scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。
+Sets the nested scroll options.
 
 **Type:** [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) \| NestedScrollOptionsExt
 
@@ -178,7 +176,7 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 onControllerAttached?: Callback<void>
 ```
 
-当Controller成功绑定到Web组件时触发该回调，此回调中不能使用操作网页的相关接口。
+Triggered when The controller is bound to the web component, this controller must be a WebviewController.This callback can not use the interface about manipulating web pages.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -198,7 +196,7 @@ onControllerAttached?: Callback<void>
 onErrorReceive?: Callback<OnErrorReceiveEvent>
 ```
 
-网页加载遇到错误时触发该回调。出于性能考虑，建议此回调中尽量执行简单逻辑。在无网络的情况下，触发此回调。
+Triggered when the web page receives a web resource loading error.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnErrorReceiveEvent&gt;
 
@@ -218,7 +216,7 @@ onErrorReceive?: Callback<OnErrorReceiveEvent>
 onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 ```
 
-网页加载资源时遇到HTTP错误（响应码>=400）触发该回调。
+Triggered when the web page receives a web resource loading HTTP error.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnHttpErrorReceiveEvent&gt;
 
@@ -238,7 +236,7 @@ onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 onMessage?: Callback<OnMessageEvent>
 ```
 
-H5页面通过JS SDK的postMessage()发送消息后，Web组件对应的页面返回或销毁时，触发该回调。
+The callback method to invoke after page is back or destroyed if postMessage() is called in H5 page.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnMessageEvent&gt;
 
@@ -258,7 +256,7 @@ H5页面通过JS SDK的postMessage()发送消息后，Web组件对应的页面�
 onPageBegin?: Callback<OnPageBeginEvent>
 ```
 
-网页开始加载时触发该回调，且只在主frame触发，iframe或者frameset的内容加载时不会触发此回调。
+Triggered at the begin of web page loading.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnPageBeginEvent&gt;
 
@@ -278,7 +276,7 @@ onPageBegin?: Callback<OnPageBeginEvent>
 onPageEnd?: Callback<OnPageEndEvent>
 ```
 
-网页加载完成时触发该回调，且只在主frame触发。
+Triggered at the end of web page loading.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnPageEndEvent&gt;
 
@@ -298,7 +296,7 @@ onPageEnd?: Callback<OnPageEndEvent>
 onProgressChange?: Callback<OnProgressChangeEvent>
 ```
 
-网页加载进度变化时触发该回调。
+Triggered when the page loading progress changes.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnProgressChangeEvent&gt;
 
@@ -318,7 +316,7 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 src: ResourceStr
 ```
 
-网页资源地址，访问网络资源需要在AGC（AppGallery Connect）配置业务域名，访问本地资源仅支持包内文件（\$rawfile）。不支持通过状态变量（例如@State）动态更新地址。加载的网页中支持通过JS SDK提供的接口调用系统能力，具体以JS SDK为准。
+The address of the web page to be displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

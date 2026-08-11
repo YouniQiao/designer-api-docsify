@@ -1,11 +1,5 @@
 # setFoldStatusLocked（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## setFoldStatusLocked
 
 ```TypeScript
@@ -34,11 +28,13 @@ function setFoldStatusLocked(locked: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -49,6 +45,20 @@ try {
   display.setFoldStatusLocked(locked);
 } catch (exception) {
   console.error(`Failed to change the fold status locked mode. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+try {
+  let locked: boolean = false;
+  display.setFoldStatusLocked(locked);
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to change the fold status locked mode. Code: ${error.code} , message: ${error.message}`);
 }
 ```
 

@@ -4,7 +4,7 @@
 export type BundleConfigInfo = _PackInfo.BundleConfigInfo
 ```
 
-包的配置信息。
+Defines the bundle configuration information.
 
 **Since:** 9
 

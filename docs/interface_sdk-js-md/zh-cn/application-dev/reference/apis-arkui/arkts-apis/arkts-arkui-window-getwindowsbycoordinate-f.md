@@ -1,11 +1,5 @@
 # getWindowsByCoordinate
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## getWindowsByCoordinate
 
 ```TypeScript
@@ -44,11 +38,13 @@ function getWindowsByCoordinate(displayId: long, windowNumber?: int, x?: int, y?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -73,6 +69,30 @@ export default class EntryAbility extends UIAbility {
       console.error(`Failed to get window from point. Cause code: ${exception.code}, message: ${exception.message}`);
     }
   }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let displayId = 0;
+  window.getWindowsByCoordinate(displayId).then((data) => {
+    console.info(`Succeeded in getting windows. Data: ${data}`);
+  }).catch((err: Error) => {
+    console.error(`Failed to get window from point. Cause code: ${err.code}, message: ${err.message}`);
+  });
+  window.getWindowsByCoordinate(displayId, 2, 500, 500).then((data) => {
+    console.info(`Succeeded in getting windows. Data: ${data}`);
+  }).catch((err: Error) => {
+    console.error(`Failed to get window from point. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to get window from point. Cause code: ${error.code}, message: ${error.message}`);
 }
 ```
 

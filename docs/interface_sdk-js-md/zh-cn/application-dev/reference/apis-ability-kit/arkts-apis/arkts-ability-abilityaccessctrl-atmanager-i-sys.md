@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## generateCliAuthResult
 
 ```TypeScript
@@ -59,13 +53,13 @@ generateCliAuthResult(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100009 | Common internal error. The account is not logged in, network is not connected or an internal error occurs when generating authorization results. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
-| 12100001 | Invalid parameter. The hostTokenID is 0, the agentID exceeds 48 characters, authInfoList is empty or contains more than 99 items, the cliName in cliInfo of an item in authInfoList is empty or exceeds 256 characters, the subCliName in cliInfo of an item in authInfoList exceeds 256 characters, a permission name in permissionNames of an item in authInfoList is empty or exceeds 256 characters, or the number of permissionNames does not equal the number of authorizationResults in an item in authInfoList. |
-| 202 | Not system application. Interface caller is not a system application. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | A permission name in permissionNames of an item in authInfoList does not exist. |
-| 12100007 | Service exception. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common internal error. The account is not logged in, network is not connected or an internal error occurs when generating authorization results. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The hostTokenID is 0, the agentID exceeds 48 characters, authInfoList is empty or contains more than 99 items, the cliName in cliInfo of an item in authInfoList is empty or exceeds 256 characters, the subCliName in cliInfo of an item in authInfoList exceeds 256 characters, a permission name in permissionNames of an item in authInfoList is empty or exceeds 256 characters, or the number of permissionNames does not equal the number of authorizationResults in an item in authInfoList. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system application. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | A permission name in permissionNames of an item in authInfoList does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -130,11 +124,11 @@ getCliPermissionRequestInfo(agentID: string, cliInfoList: Array<CliInfo>): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100009 | Common inner error. The account is not logged in, network is not connected or an internal error occurs when querying CLI permissions or generating auth results. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
-| 12100001 | Invalid parameter. The agentID exceeds 48 characters, cliInfoList is empty or exceeds 99 items, the cliName of an item in cliInfoList is empty or exceeds 256 characters, the subCliName of an item in cliInfoList exceeds 256 characters, or the CLI command does not exist. |
-| 202 | Not system application. Interface caller is not a system application. |
-| 12100007 | Service exception. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. The account is not logged in, network is not connected or an internal error occurs when querying CLI permissions or generating auth results. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The agentID exceeds 48 characters, cliInfoList is empty or exceeds 99 items, the cliName of an item in cliInfoList is empty or exceeds 256 characters, the subCliName of an item in cliInfoList exceeds 256 characters, or the CLI command does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system application. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -198,12 +192,12 @@ getCliPermissions(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100009 | Common internal error. An internal error occurs when querying CLI permissions or runtime permission information. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
-| 12100001 | Invalid parameter. The hostTokenID is 0, the agentID exceeds 48 characters, cliInfoList is empty or contains more than 99 items, the cliName of an item in cliInfoList is empty or exceeds 256 characters, the subCliName of an item in cliInfoList exceeds 256 characters, or the CLI command does not exist. |
-| 202 | Not system application. Interface caller is not a system application. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100007 | Service exception. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common internal error. An internal error occurs when querying CLI permissions or runtime permission information. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The hostTokenID is 0, the agentID exceeds 48 characters, cliInfoList is empty or contains more than 99 items, the cliName of an item in cliInfoList is empty or exceeds 256 characters, the subCliName of an item in cliInfoList exceeds 256 characters, or the CLI command does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system application. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -256,7 +250,7 @@ getPermissionFlags(tokenID: int, permissionName: Permissions): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 查询的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 查询的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -268,16 +262,18 @@ getPermissionFlags(tokenID: int, permissionName: Permissions): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission specified below. |
-| 12100001 | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist or is not declared in the module.json file. |
-| 12100006 | The operation is not allowed. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission specified below. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, or the permissionName exceeds 256 characters. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not declared in the module.json file. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The operation is not allowed. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -286,6 +282,21 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 atManager.getPermissionFlags(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS').then((data: number) => {
+  console.info(`getPermissionFlags success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionFlags fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+atManager.getPermissionFlags(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS').then((data: int) => {
   console.info(`getPermissionFlags success, result: ${data}`);
 }).catch((err: BusinessError): void => {
   console.error(`getPermissionFlags fail, code: ${err.code}, message: ${err.message}`);
@@ -316,7 +327,7 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 待查询弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 待查询弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -328,13 +339,13 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission specified below. |
-| 12100001 | Invalid parameter. The permissionName exceeds 256 characters, or the specified permission is not a user_grant permission. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100003 | The specified permission does not exist. |
-| 12100004 | This API must be used together with [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus).<br>**适用版本：** 26.1.0+ |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission specified below. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionName exceeds 256 characters, or the specified permission is not a user_grant permission. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | This API must be used together with [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus).<br>**适用版本：** 26.1.0+ |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -384,7 +395,7 @@ getPermissionRequestToggleStatus(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 待查询弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字。 |
+| permissionName | Permissions | 是 | 待查询弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字。 |
 | subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
 **返回值：**
@@ -397,13 +408,13 @@ getPermissionRequestToggleStatus(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12100009 | Common inner error. A database error occurs. |
-| 201 | Permission denied. Interface caller does not have permission specified below. |
-| 12100001 | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, or the specified subProfileId does not exist for the current user. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100003 | The specified permission does not exist. |
-| 12100007 | Service exception. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission specified below. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, or the specified subProfileId does not exist for the current user. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -452,7 +463,7 @@ getPermissionsStatus(tokenID: int, permissionList: Array<Permissions>): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 待获取权限状态的权限名列表。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 待获取权限状态的权限名列表。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -464,14 +475,16 @@ getPermissionsStatus(tokenID: int, permissionList: Array<Permissions>): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0 or the permissionList is empty or exceeds the size limit. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0 or the permissionList is empty or exceeds the size limit. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -479,6 +492,21 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+atManager.getPermissionsStatus(tokenID, ['ohos.permission.CAMERA']).then((data: Array<abilityAccessCtrl.PermissionStatus>) => {
+  console.info(`getPermissionsStatus success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionsStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 atManager.getPermissionsStatus(tokenID, ['ohos.permission.CAMERA']).then((data: Array<abilityAccessCtrl.PermissionStatus>) => {
   console.info(`getPermissionsStatus success, result: ${data}`);
 }).catch((err: BusinessError): void => {
@@ -520,20 +548,31 @@ getVersion(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. Interface caller is not a system app. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let promise = atManager.getVersion();
 promise.then((data: number) => {
   console.info(`getVersion promise: data->${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getVersion fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let promise = atManager.getVersion();
+promise.then((data: int) => {
+  console.info(`getVersion promise: data->${data}`);
 });
 ```
 
@@ -569,7 +608,7 @@ grantPermission(tokenID: int, permissionName: Permissions, permissionFlags: int)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被授予的权限名称。权限名长度不能超过256个字符，超过限制时返回错误码12100001。 |
+| permissionName | Permissions | 是 | 被授予的权限名称。权限名长度不能超过256个字符，超过限制时返回错误码12100001。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
 **返回值：**
@@ -582,16 +621,18 @@ grantPermission(tokenID: int, permissionName: Permissions, permissionFlags: int)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100014 | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist. |
-| 12100006 | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -600,6 +641,22 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 2;
+atManager.grantPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
+  console.info('grantPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`grantPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: int = 2;
 atManager.grantPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
   console.info('grantPermission success');
 }).catch((err: BusinessError): void => {
@@ -641,7 +698,7 @@ grantUserGrantedPermission(tokenID: int, permissionName: Permissions, permission
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被授予的权限名称。超过限制时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 被授予的权限名称。超过限制时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
 **返回值：**
@@ -654,16 +711,18 @@ grantUserGrantedPermission(tokenID: int, permissionName: Permissions, permission
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist or is not a user_grant permission. |
-| 12100006 | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -672,6 +731,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
+  console.info('grantUserGrantedPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
 atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
   console.info('grantUserGrantedPermission success');
 }).catch((err: BusinessError): void => {
@@ -720,7 +798,7 @@ grantUserGrantedPermission(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被授予的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 被授予的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当授予权限成功时，err为undefined，否则为错误对象。 |
 
@@ -728,16 +806,18 @@ grantUserGrantedPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist or is not a user_grant permission. |
-| 12100006 | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GRANT_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The application specified by the tokenID is not allowed to be granted with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -747,6 +827,27 @@ let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager()
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 1;
 atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
   if (err) {
     console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
   } else {
@@ -791,18 +892,18 @@ off(
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | 是 | 订阅事件类型，固定为'permissionStateChange'，权限状态变更事件。 |
 | tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 on注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -817,8 +918,8 @@ try {
   let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
   atManager.off('permissionStateChange', tokenIDList, permissionList);
 } catch (err) {
-  let error = err as BusinessError;
-  console.error(`catch errcode: ${error.code}, message: ${error.message}`);
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -859,17 +960,35 @@ offPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 onPermissionStateChange注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+
+## 示例
+
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
+  let tokenIDList: Array<int> = [appInfo.accessTokenId as int];
+  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+  atManager.offPermissionStateChange(tokenIDList, permissionList);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## on('permissionStateChange')
 
@@ -908,20 +1027,20 @@ on(
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | 是 | 订阅事件类型，固定为'permissionStateChange'，权限状态变更事件。 |
 | tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100008 | Out of memory. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100005 | The registration time has exceeded the limit. |
-| 12100007 | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -982,19 +1101,40 @@ onPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100008 | Out of memory. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100005 | The registration time has exceeded the limit. |
-| 12100007 | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+
+## 示例
+
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
+  let tokenIDList: Array<int> = [appInfo.accessTokenId as int];
+  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+  atManager.onPermissionStateChange(tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## queryStatusByPermission
 
@@ -1023,7 +1163,7 @@ queryStatusByPermission(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 待查询的权限名称列表。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 待查询的权限名称列表。传入无效值时返回错误码12100001。 &lt;br&gt;最大长度为1024且不能为空。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -1035,12 +1175,12 @@ queryStatusByPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100015 | The queried data exceeds the upper limit. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The permissionList is empty or exceeds the size limit. |
-| 202 | Not system application. Interface caller is not a system application. |
-| 12100003 | The specified permission does not exist. |
-| 12100007 | Service exception. |
+| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) | The queried data exceeds the upper limit. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionList is empty or exceeds the size limit. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system application. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -1101,14 +1241,16 @@ queryStatusByTokenID(tokenIDList: Array<int>): Promise<Array<PermissionStatusInf
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100015 | The queried data exceeds the upper limit. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenIDList is empty or exceeds the size limit. |
-| 202 | Not system application. Interface caller is not a system application. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100007 | Service exception. |
+| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) | The queried data exceeds the upper limit. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenIDList is empty or exceeds the size limit. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system application. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -1117,6 +1259,22 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let tokenIDList: Array<number> = [tokenID];
+atManager.queryStatusByTokenID(tokenIDList).then((data: Array<abilityAccessCtrl.PermissionStatusInfo>) => {
+  console.info('queryStatusByTokenID success, data: ' + JSON.stringify(data));
+}).catch((err: BusinessError): void => {
+  console.error(`queryStatusByTokenID fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let tokenIDList: Array<int> = [tokenID];
 atManager.queryStatusByTokenID(tokenIDList).then((data: Array<abilityAccessCtrl.PermissionStatusInfo>) => {
   console.info('queryStatusByTokenID success, data: ' + JSON.stringify(data));
 }).catch((err: BusinessError): void => {
@@ -1166,10 +1324,10 @@ requestPermissionOnApplicationSetting(tokenID: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100001 | Invalid parameter. The tokenID is 0. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100007 | Service exception. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -1227,9 +1385,9 @@ requestPermissionsFromUserWithWindowId(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
 | windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 应用窗口的ID。可通过[window.findWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-findwindow-f.md/arkts-arkui-window-findwindow-f.md#findwindow)(窗口名). [getWindowProperties()](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md/arkts-arkui-window-window-i.md#getwindowproperties).id获取。该参数必须对应当前有效窗口，传入已销毁、不可见或无效 窗口ID时将返回12100001。 &lt;br&gt;取值限定为整数。 |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 权限名列表。建议仅传入当前窗口场景下真正需要的敏感权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前窗口场景下真正需要的敏感权限。 &lt;br&gt;最小长度为1。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
@@ -1241,12 +1399,12 @@ requestPermissionsFromUserWithWindowId(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100009 | Common inner error. An error occurs when creating the popup window or obtaining the user operation result. |
-| 12100001 | Invalid parameter. windowId is invalid. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the popup window or obtaining the user operation result. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. windowId is invalid. |
 
 ## 示例
 
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../security/AccessToken/request-user-authorization.md)。
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
@@ -1256,10 +1414,28 @@ import { window } from '@kit.ArkUI';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 // 请在组件内获取context
 let context: Context = this.getUIContext().getHostContext() as Context;
-let windowId = 0; // 获取方式 let windowId = window.findWindow(窗口名).getWindowProperties().id;
-// 基于窗口ID请求用户授权指定权限
+let windowId: number = 0; // 获取方式 let windowId = window.findWindow(窗口名).getWindowProperties().id;
 atManager.requestPermissionsFromUserWithWindowId(context, windowId, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
-  console.info(`requestPermissionsFromUserWithWindowId success, result: ${data}`);
+  console.info('requestPermissionsFromUserWithWindowId data permissions:' + data.permissions);
+  console.info('requestPermissionsFromUserWithWindowId data authResults:' + data.authResults);
+  console.info('requestPermissionsFromUserWithWindowId data dialogShownResults:' + data.dialogShownResults);
+  console.info('requestPermissionsFromUserWithWindowId data errorReasons:' + data.errorReasons);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionsFromUserWithWindowId fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let context: Context = this.getUIContext().getHostContext() as Context;
+let windowId: int = 0; // 获取方式 let windowId = window.findWindow(窗口name).getWindowProperties().id;
+atManager.requestPermissionsFromUserWithWindowId(context, windowId, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
   console.info('requestPermissionsFromUserWithWindowId data permissions:' + data.permissions);
   console.info('requestPermissionsFromUserWithWindowId data authResults:' + data.authResults);
   console.info('requestPermissionsFromUserWithWindowId data dialogShownResults:' + data.dialogShownResults);
@@ -1310,7 +1486,7 @@ revokePermission(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 | killProcess | boolean | 否 | 是否终止应用进程。 &lt;br&gt;- true表示终止应用进程。 &lt;br&gt;- false表示不终止应用进程。 &lt;br&gt;- 默认值为true。 &lt;br&gt;<br>**起始版本：** 26.0.0 |
 
@@ -1324,16 +1500,18 @@ revokePermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100014 | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
-| 201 | Permission denied. The interface invoker does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The token ID is 0, the permission name exceeds 256 characters or is not declared in the module.json file, or the value of flags is invalid. |
-| 202 | Not a system application. The interface invoker is not a system application. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist. |
-| 12100006 | The specified permission is not allowed to be revoked from the application specified by the tokenID. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The interface invoker does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The token ID is 0, the permission name exceeds 256 characters or is not declared in the module.json file, or the value of flags is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not a system application. The interface invoker is not a system application. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The specified permission is not allowed to be revoked from the application specified by the tokenID. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -1342,6 +1520,29 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 2;
+// 不终止应用进程
+atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, false).then(() => {
+  console.info('revokePermission success, process not killed');
+}).catch((err: BusinessError): void => {
+  console.error(`revokePermission fail, code: ${err.code}, message: ${err.message}`);
+});
+// 终止应用进程（默认行为）
+atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
+  console.info('revokePermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`revokePermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: int = 2;
 // 不终止应用进程
 atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, false).then(() => {
   console.info('revokePermission success, process not killed');
@@ -1392,7 +1593,7 @@ revokeUserGrantedPermission(tokenID: int, permissionName: Permissions, permissio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
 **返回值：**
@@ -1405,16 +1606,18 @@ revokeUserGrantedPermission(tokenID: int, permissionName: Permissions, permissio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist or is not a user_grant permission. |
-| 12100006 | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -1423,6 +1626,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
+  console.info('revokeUserGrantedPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
 atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
   console.info('revokeUserGrantedPermission success');
 }).catch((err: BusinessError): void => {
@@ -1471,7 +1693,7 @@ revokeUserGrantedPermission(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 授权选项。 &lt;br&gt;取值限定为整数。 &lt;br&gt;- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 &lt;br&gt;- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 &lt;br&gt;- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当撤销权限成功时，err为undefined，否则为错误对象。 |
 
@@ -1479,16 +1701,18 @@ revokeUserGrantedPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
-| 12100001 | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100002 | The specified tokenID does not exist. |
-| 12100003 | The specified permission does not exist or is not a user_grant permission. |
-| 12100006 | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.REVOKE_SENSITIVE_PERMISSIONS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters or is not declared in the module.json file, or the flags value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | The application specified by the tokenID is not allowed to be revoked with the specified permission. Either the application is a sandbox or the tokenID is from a remote device. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityAccessCtrl } from '@kit.AbilityKit';
@@ -1498,6 +1722,27 @@ let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager()
 let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
 let permissionFlags: number = 1;
 atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
   if (err) {
     console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
   } else {
@@ -1530,7 +1775,7 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 待设置弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 待设置弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | status | [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 是 | 指定权限的弹窗开关状态值。 |
 
 **返回值：**
@@ -1543,14 +1788,14 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 12100009 | Common inner error. A database error occurs. |
-| 201 | Permission denied. Interface caller does not have permission specified below. |
-| 12100001 | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, or the status value is invalid. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100003 | The specified permission does not exist. |
-| 12100006 | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus).<br>**适用版本：** 26.1.0+ |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission specified below. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, or the status value is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus).<br>**适用版本：** 26.1.0+ |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -1597,7 +1842,7 @@ setPermissionRequestToggleStatus(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | 是 | 待设置弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
+| permissionName | Permissions | 是 | 待设置弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
 | status | [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 是 | 指定权限的弹窗开关状态值。 |
 | subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
@@ -1611,14 +1856,14 @@ setPermissionRequestToggleStatus(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12100009 | Common inner error. A database error occurs. |
-| 201 | Permission denied. Interface caller does not have permission specified below. |
-| 12100001 | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, the status value is invalid, or the specified subProfileId does not exist for the current user. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 12100003 | The specified permission does not exist. |
-| 12100006 | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus). |
-| 12100007 | Service exception. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission specified below. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionName exceeds 256 characters, the specified permission is not a user_grant permission, the status value is invalid, or the specified subProfileId does not exist for the current user. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist. |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus). |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 

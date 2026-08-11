@@ -1,6 +1,6 @@
 # XComponentAttribute
 
-定义XComponent属性。
+Defines the XComponent attribute.
 
 **Inheritance/Implementation:** XComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -18,7 +18,7 @@
 default attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置XComponent组件的属性修改器。
+Call attributeModifier.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<XComponentAttribute> | Att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | XComponent组件的属性修改器。取值为undefined时，不使用attributeModifier。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -48,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<XComponentAttribute> | Att
 default enableAnalyzer(enable: boolean | undefined): this
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。
+Enable image analyzer for XComponent.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ default enableAnalyzer(enable: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | 是否启用AI分析功能。&lt;br&gt;true：开启AI分析；false：关闭AI分析。 &lt;br&gt;默认值：false&lt;br&gt;ArkTS-Sta模式下可不传，不传时使用默认值false。&lt;br&gt;**说明：**仅type为SURFACE或TEXTURE时该功能有效。 |
+| enable | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ default enableAnalyzer(enable: boolean | undefined): this
 default enableSecure(isSecure: boolean | undefined): this
 ```
 
-防止组件内自绘制内容被截屏、录屏。
+Enable privacy protection for XComponent.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ default enableSecure(isSecure: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecure | boolean \| undefined | Yes | 是否开启隐私图层模式。&lt;br&gt;true：开启隐私图层模式；false：关闭隐私图层模式。&lt;br&gt;默认值：false。 &lt;br&gt;ArkTS-Sta模式下可不传，不传时使用默认值false。&lt;br&gt;**说明：**仅type为SURFACE时有效。 |
+| isSecure | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ default enableSecure(isSecure: boolean | undefined): this
 default hdrBrightness(brightness: double | undefined): this
 ```
 
-用于调整组件播放HDR视频的亮度。
+Set hdrBrightness for XComponent.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ default hdrBrightness(brightness: double | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | double \| undefined | Yes | HDR视频的亮度。&lt;br&gt;默认值：1.0&lt;br&gt;取值范围：[0.0, 1.0]。 小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。&lt;br&gt;0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 &lt;br&gt;**说明：**仅type为SURFACE时有效。 |
+| brightness | double \| undefined | Yes | control the brightness of HDR video |
 
 **Return value:**
 
@@ -138,9 +138,7 @@ default hdrBrightness(brightness: double | undefined): this
 default hdrBrightness(brightness: double | undefined, type?: HdrType): this
 ```
 
-调整组件播放HDR视频时的亮度，该接口仅对HDR视频生效。
-
-**说明：**仅XComponent构造参数中的type为SURFACE时该接口生效，否则该接口不生效。
+Set hdrBrightness for XComponent.
 
 **Since:** 24
 
@@ -156,8 +154,8 @@ default hdrBrightness(brightness: double | undefined, type?: HdrType): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | double \| undefined | Yes | HDR内容的亮度。&lt;br&gt;默认值：1.0&lt;br&gt;取值范围：[0.0, 1.0]。 小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。&lt;br&gt;0.0表示内容按照SDR亮度显示，1.0表示内容按照当前允许的最高HDR亮度显示。 &lt;br&gt;ArkTS-Sta模式下可不传，不传时使用默认值1.0。 |
-| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | 显示HDR内容时的HDR类型。&lt;br&gt;默认值：HdrType.DEFAULT |
+| brightness | double \| undefined | Yes | control the brightness of HDR video |
+| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | the HDR type of the XComponent |
 
 **Return value:**
 
@@ -171,7 +169,7 @@ default hdrBrightness(brightness: double | undefined, type?: HdrType): this
 default onDestroy(event: VoidCallback | undefined): this
 ```
 
-插件卸载完成时回调事件。与onSurfaceDestroyed的区别：onDestroy适用于设置libraryname参数的场景，回调无参数；onSurfaceDestroyed适用于未设置libraryname参数的场景，回调参数为surfaceId。
+Called when judging whether the xcomponent is destroyed.
 
 **Since:** 23
 
@@ -187,7 +185,7 @@ default onDestroy(event: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 插件卸载完成时回调事件。&lt;br&gt;ArkTS-Sta模式下可不传。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | Called when judging whether the xcomponent is destroyed. |
 
 **Return value:**
 
@@ -201,7 +199,7 @@ default onDestroy(event: VoidCallback | undefined): this
 default onLoad(callback: VoidCallback | undefined): this
 ```
 
-插件加载完成时回调事件。
+Called when judging whether the xcomponent surface is created.
 
 **Since:** 23
 
@@ -217,7 +215,7 @@ default onLoad(callback: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 插件加载完成时回调事件，用于获取XComponent实例对象的context。&lt;br&gt;ArkTS-Sta模式下可不传。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | Called when judging whether the xcomponent surface is created. |
 
 **Return value:**
 
@@ -231,11 +229,11 @@ default onLoad(callback: VoidCallback | undefined): this
 setXComponentOptions(params: XComponentParameters | XComponentOptions | NativeXComponentParameters): this
 ```
 
-设置XComponent选项。
+Sets xcomponent options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -247,11 +245,11 @@ setXComponentOptions(params: XComponentParameters | XComponentOptions | NativeXC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | Yes | 用于创建XComponent的选项。 |
+| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | Yes | The options to create an XComponent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | XComponentAttribute实例 |
+| this | XComponentAttribute instance |
 

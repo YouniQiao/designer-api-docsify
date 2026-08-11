@@ -1,6 +1,6 @@
 # CameraPosition
 
-枚举，相机位置。
+Enumerates the camera positions.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CAMERA_POSITION_UNSPECIFIED = 0
 ```
 
-相对于设备屏幕没有固定的朝向的相机。
+A camera that does not have a fixed orientation relative to the device screen.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ CAMERA_POSITION_UNSPECIFIED = 0
 CAMERA_POSITION_BACK = 1
 ```
 
-后置相机。
+Rear camera.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ CAMERA_POSITION_BACK = 1
 CAMERA_POSITION_FRONT = 2
 ```
 
-前置相机。
+Front camera.
 
 **Since:** 10
 
@@ -70,9 +70,9 @@ CAMERA_POSITION_FRONT = 2
 CAMERA_POSITION_FOLD_INNER = 3
 ```
 
-折叠态相机。
+Folded camera.
 
-从API version 11开始支持，从API version 12开始废弃。
+This API is supported since API version 11 and deprecated since API version 12.
 
 **Since:** 11
 

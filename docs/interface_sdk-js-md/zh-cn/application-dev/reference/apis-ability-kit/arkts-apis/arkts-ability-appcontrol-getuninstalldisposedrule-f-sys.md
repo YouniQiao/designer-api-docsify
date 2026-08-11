@@ -1,11 +1,5 @@
 # getUninstallDisposedRule（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appControl } from 'kits/@kit.AbilityKit';
-```
-
 ## getUninstallDisposedRule
 
 ```TypeScript
@@ -43,12 +37,12 @@ function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): Uninst
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700061 | AppIndex is not in the valid range. |
-| 17700074 | The specified appIdentifier is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex is not in the valid range. |
+| [17700074](../errorcode-bundle.md#17700074-传入的appidentifier无效) | The specified appIdentifier is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
 
 ## 示例
 

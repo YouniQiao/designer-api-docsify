@@ -1,11 +1,5 @@
 # isBuffer
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## isBuffer
 
 ```TypeScript

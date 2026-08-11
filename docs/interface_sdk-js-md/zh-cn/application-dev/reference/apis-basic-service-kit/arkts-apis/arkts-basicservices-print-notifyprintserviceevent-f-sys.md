@@ -1,11 +1,5 @@
 # notifyPrintServiceEvent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## notifyPrintServiceEvent
 
 ```TypeScript
@@ -42,22 +36,22 @@ function notifyPrintServiceEvent(event: ApplicationEvent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let event : print.ApplicationEvent = print.ApplicationEvent.APPLICATION_CREATED;
 print.notifyPrintServiceEvent(event).then(() => {
     console.info('notifyPrintServiceEvent success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to notify print service event. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
+})
 ```
 
 
@@ -98,22 +92,22 @@ function notifyPrintServiceEvent(event: ApplicationEvent, jobId: string): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let event : print.ApplicationEvent = print.ApplicationEvent.APPLICATION_CREATED;
 let jobId : string = '1';
 print.notifyPrintServiceEvent(event, jobId).then(() => {
     console.info('notifyPrintServiceEvent success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to notify print service event. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
+})
 ```
 

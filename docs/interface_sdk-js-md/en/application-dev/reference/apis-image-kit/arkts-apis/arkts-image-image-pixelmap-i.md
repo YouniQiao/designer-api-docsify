@@ -47,10 +47,10 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980115 | Invalid image parameter. |
-| 62980104 | Failed to initialize the internal object. |
-| 62980108 | Failed to convert the color space. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 
 ## applyColorSpace
 
@@ -84,10 +84,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980115 | Invalid image parameter. |
-| 62980104 | Failed to initialize the internal object. |
-| 62980108 | Failed to convert the color space. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 
 ## applyCrop
 
@@ -127,12 +127,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| 7600204 | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
 
 ## applyCropSync
 
@@ -166,12 +166,12 @@ Crops the PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| 7600204 | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | The specified region is invalid or out of range. |
 
 ## applyFlip
 
@@ -212,12 +212,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyFlipSync
 
@@ -252,12 +252,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyRotate
 
@@ -305,12 +305,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyRotateSync
 
@@ -352,12 +352,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScale
 
@@ -405,12 +405,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScaleSync
 
@@ -452,12 +452,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslate
 
@@ -504,12 +504,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslateSync
 
@@ -550,12 +550,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## clone
 
@@ -583,11 +583,11 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 501 | Resource unavailable. |
-| 62980103 | Image YUV And ASTC types are not supported. |
-| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## cloneSync
 
@@ -615,11 +615,11 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 501 | Resource unavailable. |
-| 62980103 | Image YUV And ASTC types are not supported. |
-| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## convertPixelFormat
 
@@ -653,11 +653,11 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980115 | Invalid input parameter. |
-| 62980274 | The conversion failed. |
-| 62980178 | Failed to create the pixelmap. |
-| 62980276 | The type to be converted is an unsupported target pixel format. |
-| 62980111 | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) | The conversion failed. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
+| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## createAlphaPixelmap
 
@@ -745,8 +745,8 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## createCroppedAndScaledPixelMap
 
@@ -789,10 +789,10 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
-| 7600205 | Unsupported memory format or pixel format. |
-| 7600301 | Memory alloc failed. |
-| 7600204 | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -835,10 +835,10 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
-| 7600205 | Unsupported memory format or pixel format. |
-| 7600301 | Memory alloc failed. |
-| 7600204 | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-invalid-region) | Invalid region. |
 
 ## createScaledPixelMap
 
@@ -880,8 +880,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## createScaledPixelMapSync
 
@@ -923,8 +923,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## crop
 
@@ -1019,8 +1019,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## extractAlphaPixelMap
 
@@ -1054,11 +1054,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| 7600106 | The current PixelMap has been passed across threads. |
-| 7600105 | The current PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## extractAlphaPixelMapSync
 
@@ -1092,11 +1092,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| 7600106 | The current PixelMap has been passed across threads. |
-| 7600105 | The current PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-data-conversion-failed) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## flip
 
@@ -1194,8 +1194,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## getBytesNumberPerRow
 
@@ -1255,9 +1255,9 @@ Obtains the color space of this image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980115 | Invalid image parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980103 | The image data is not supported. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
 
 ## getDensity
 
@@ -1373,7 +1373,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 501 | Resource Unavailable. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## getMetadata
 
@@ -1407,10 +1407,10 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980173 | The DMA memory does not exist. |
-| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## getPixelBytesNumber
 
@@ -1476,7 +1476,7 @@ Obtains the unique ID of this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
 
 ## isReleased
 
@@ -1531,8 +1531,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## opacity
 
@@ -1645,8 +1645,8 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instea
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## readAllPixelsToBuffer
 
@@ -1686,11 +1686,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readAllPixelsToBufferSync
 
@@ -1724,11 +1724,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixels
 
@@ -1826,8 +1826,8 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## readPixelsToArea
 
@@ -1867,11 +1867,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixelsToAreaSync
 
@@ -1905,11 +1905,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## readPixelsToBuffer
 
@@ -2006,8 +2006,8 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## release
 
@@ -2182,8 +2182,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} inste
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scale
 
@@ -2308,8 +2308,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2348,8 +2348,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2389,8 +2389,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## setColorSpace
 
@@ -2420,8 +2420,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980115 | If the image parameter invalid. |
-| 62980111 | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 
 ## setMemoryNameSync
 
@@ -2449,9 +2449,9 @@ Sets a memory name for this PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980286 | Memory format not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
 
 ## setMetadata
 
@@ -2486,10 +2486,10 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980173 | The DMA memory does not exist. |
-| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## setOpacity
 
@@ -2535,12 +2535,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
-| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setOpacitySync
 
@@ -2580,12 +2580,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
-| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-unsupported-data-format) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setTransferDetached
 
@@ -2613,7 +2613,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 501 | Resource Unavailable. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## toSdr
 
@@ -2641,7 +2641,7 @@ Convert pixelmap to standard dynamic range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980137 | Invalid image operation. |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid image operation. |
 
 ## translate
 
@@ -2757,8 +2757,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## unmarshalling
 
@@ -2792,9 +2792,9 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2834,12 +2834,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2873,12 +2873,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writeBufferToPixels
 
@@ -2973,8 +2973,8 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## writePixels
 
@@ -3079,12 +3079,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writePixelsFromAreaSync
 
@@ -3118,12 +3118,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Failed to copy the memory. |
 
 ## writePixelsSync
 
@@ -3158,8 +3158,8 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
 ## isEditable
 

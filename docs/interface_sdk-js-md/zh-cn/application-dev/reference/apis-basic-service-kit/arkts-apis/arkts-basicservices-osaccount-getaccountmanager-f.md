@@ -1,11 +1,5 @@
 # getAccountManager
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getAccountManager
 
 ```TypeScript

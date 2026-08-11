@@ -40,5 +40,5 @@ Set this application's senior mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9300000 | System abnormality. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

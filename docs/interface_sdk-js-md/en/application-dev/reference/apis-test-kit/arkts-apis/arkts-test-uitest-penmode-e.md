@@ -1,6 +1,6 @@
 # PenMode
 
-笔模式枚举。
+Pen mode enum.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 HANDWRITING = 0
 ```
 
-手写模式。
+Handwriting mode.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ HANDWRITING = 0
 AIR_MOUSE = 1
 ```
 
-空鼠模式。
+Air mouse mode.
 
 **Since:** 26.0.0
 

@@ -12,11 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function addRule(rule: bigint): void
 ```
 
-> **˵����**
-> 
-> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)�����
-
-����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������
+Adds one or more rules. HiChecker detects unexpected operations or gives feedback based on the added rules.
 
 **Since:** 8
 
@@ -34,7 +30,7 @@ function addRule(rule: bigint): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫ���ӵĹ��� |
+| rule | bigint | Yes | Rule to be added. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ReactiveComponentContent
 
-定义 ReactiveComponentContent
+Defines ReactiveComponentContent.
 
 **Inheritance/Implementation:** ReactiveComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 
@@ -18,7 +18,7 @@
 constructor(uiContext: UIContext, builder: CustomBuilder, options?: BuildOptions)
 ```
 
-构造函数。
+Constructor.
 
 **Since:** 26.0.0
 
@@ -34,9 +34,9 @@ constructor(uiContext: UIContext, builder: CustomBuilder, options?: BuildOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 ReactiveComponentContent 的 UIContext对象 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | 将被调用来构建 ReactiveComponentContent 的builder。 |
-| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | No | 构建时要使用的选项。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveComponentContent |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Defines the builder that will be called to build ReactiveComponentContent. |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
 
 ## dispose
 
@@ -44,7 +44,7 @@ constructor(uiContext: UIContext, builder: CustomBuilder, options?: BuildOptions
 dispose(): void
 ```
 
-立即解绑 ReactiveComponentContent。
+Dispose the ReactiveComponentContent immediately.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ dispose(): void
 flushState(): void
 ```
 
-立即刷新当前状态变更以更新ReactiveComponentContent。这会强制组件使用最新的状态值进行同步更新。
+Flushes the current state changes to update the ReactiveComponentContent immediately.This forces a synchronous update of the component with the latest state values.
 
 **Since:** 26.0.0
 
@@ -80,7 +80,7 @@ flushState(): void
 isDisposed(): boolean
 ```
 
-获取 ReactiveComponentContent 是否已被解绑。
+Get if the ReactiveComponentContent is disposed.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ isDisposed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果 ReactiveComponentContent 已被解绑则返回 true，否则返回 false。 |
+| boolean | Returns true if the ReactiveComponentContent is disposed, false otherwise. |
 
 ## isTransferred
 
@@ -104,7 +104,7 @@ isDisposed(): boolean
 isTransferred(): boolean
 ```
 
-返回一个标志位，表示当前ReactiveComponentContent是否通过动态-静态转换获取。该转换包含两个方向：从动态转换为静态，以及从静态转换为动态。
+Returns a flag indicating whether the current ReactiveComponentContent was obtained through dynamic-static conversion, includes conversions in both directions: dynamic-to-static and static-to-dynamic.
 
 **Since:** 26.0.0
 
@@ -120,7 +120,7 @@ isTransferred(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果 ReactiveComponentContent 是经过动态和静态状态之间转换得到的，则返回 true，否则返回 false。 |
+| boolean | Returns true if the ReactiveComponentContent was converted between dynamic and static states, otherwise, returns false. |
 
 ## recycle
 
@@ -128,7 +128,7 @@ isTransferred(): boolean
 recycle(): void
 ```
 
-回收 ReactiveComponentContent。
+Recycle the ReactiveComponentContent.
 
 **Since:** 26.0.0
 
@@ -146,7 +146,7 @@ recycle(): void
 reuse(param?: RecordData): void
 ```
 
-基于提供的参数重用ReactiveComponentContent
+Reuse the ReactiveComponentContent based on the provided parameters.
 
 **Since:** 26.0.0
 
@@ -162,7 +162,7 @@ reuse(param?: RecordData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | 用于复用ReactiveComponentContent的参数。该参数将直接用于ReactiveComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定义组件的aboutToReuse生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveComponentContent中的自定义组件将直接使用构造时的数据源。 |
+| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing ReactiveComponentContent. These parameters will be directly applied to the reuse of all top-level custom components in the ReactiveComponentContent. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the ReactiveComponentContent will directly use the data source from the construction phase. |
 
 ## updateConfiguration
 
@@ -170,7 +170,7 @@ reuse(param?: RecordData): void
 updateConfiguration(): void
 ```
 
-通知 ReactiveComponentContent 更新配置以触发重新加载。
+Notify ReactiveComponentContent to update the configuration to trigger a reload of the ReactiveComponentContent.
 
 **Since:** 26.0.0
 

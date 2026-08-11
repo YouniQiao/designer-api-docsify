@@ -52,12 +52,6 @@ ohos.inputMethodEngine侧的输入法应用响应和处理。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 函数

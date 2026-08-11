@@ -1,11 +1,5 @@
 # getQuaternion
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## getQuaternion
 
 ```TypeScript
@@ -33,28 +27,58 @@ function getQuaternion(rotationVector: Array<double>, callback: AsyncCallback<Ar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
   let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
-  sensor.getQuaternion(rotationVector, (err: BusinessError, data: Array<number>) => {
-    if (err) {
-      console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
+  sensor.getQuaternion(rotationVector, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<number>;
+    if (error) {
+      console.error(`Failed to get quaternion. Code: ${error.code}, message: ${error.message}`);
       return;
     }
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    for (let i = 0; i < dataValue.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + dataValue[i]);
     }
   })
-} catch (error) {
+} catch (error: Error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
+  sensor.getQuaternion(rotationVector, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<double>;
+    if (error) {
+      console.error(`Failed to get quaternion. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    for (let i = 0; i < dataValue.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + dataValue[i]);
+    }
+  })
+} catch (error: Error) {
   let e: BusinessError = error as BusinessError;
   console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
 }
@@ -93,29 +117,54 @@ function getQuaternion(rotationVector: Array<double>): Promise<Array<double>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
-    let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
-    const promise = sensor.getQuaternion(rotationVector);
-    promise.then((data: Array<number>) => {
-        for (let i = 0; i < data.length; i++) {
-            console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
-        }
-    }, (err: BusinessError) => {
-        console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
-    });
+  let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
+  const promise = sensor.getQuaternion(rotationVector);
+  promise.then((data: Array<number>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
+  const promise = sensor.getQuaternion(rotationVector);
+  promise.then((data: Array<double>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
 }
 ```
 

@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function enable(): void
 ```
 
-开启星闪。
+Turns on NearLink.
 
 **Since:** 26.0.0
 
@@ -32,9 +32,9 @@ function enable(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
-| 203 | EDM denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | EDM denied. |
 

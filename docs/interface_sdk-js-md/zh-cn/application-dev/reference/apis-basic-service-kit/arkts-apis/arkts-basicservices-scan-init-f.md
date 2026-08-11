@@ -1,11 +1,5 @@
 # init
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## init
 
 ```TypeScript
@@ -34,7 +28,7 @@ function init(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -45,7 +39,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.init().then(() => {
     console.info('scan init success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to init scan. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('scan init failed: ' + JSON.stringify(error));
+})
 ```
 

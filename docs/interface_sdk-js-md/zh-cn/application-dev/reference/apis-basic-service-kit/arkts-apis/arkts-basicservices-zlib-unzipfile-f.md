@@ -1,11 +1,5 @@
 # unzipFile
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## unzipFile
 
 ```TypeScript

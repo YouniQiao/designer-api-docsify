@@ -1,6 +1,6 @@
 # ProximityResponse
 
-距离感应数据改变后的回调函数的响应对象，包含可见物体相对于设备显示屏的接近或远离状态数据。
+Callback invoked when the proximity sensor data changes.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 distance: number
 ```
 
-可见物体相对于设备显示屏的接近或远离状态。取值说明：0表示物体接近屏幕（近状态），大于0表示物体远离屏幕（远状态）。具体远状态数值由硬件传感器决定。
+Distance between a visible object and the device screen.
 
 **Type:** number
 

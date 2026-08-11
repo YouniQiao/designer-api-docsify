@@ -1,6 +1,6 @@
 # AppResponse
 
-定义AppResponse信息。
+Defines the application response information.
 
 **Since:** 3
 
@@ -22,7 +22,7 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'k
 appID: string
 ```
 
-表示应用的包名，用于标识应用的唯一性。
+Bundle name of an application. It uniquely identifies the application.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ appID: string
 appName: string
 ```
 
-表示应用的名称。
+Application name.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ appName: string
 versionCode: number
 ```
 
-表示应用的版本号。
+Application version number.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ versionCode: number
 versionName: string
 ```
 
-表示应用的版本名称。
+Application version name.
 
 **Type:** string
 

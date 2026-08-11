@@ -1,6 +1,6 @@
 # Environment
 
-环境资源.
+Environment resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md).
 
 **Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 backgroundType: EnvironmentBackgroundType
 ```
 
-环境背景类型.
+Environment background type.
 
 **Type:** [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md)
 
@@ -36,7 +36,7 @@ backgroundType: EnvironmentBackgroundType
 environmentImage?: Image | null
 ```
 
-环境图像.
+Environment image. The default value is undefined.
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
@@ -54,7 +54,7 @@ environmentImage?: Image | null
 environmentMapFactor: Vec4
 ```
 
-环境贴图因子.
+Environment map factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -72,11 +72,11 @@ environmentMapFactor: Vec4
 environmentRotation?: Quaternion
 ```
 
-环境旋转
+Rotation of the ambient light. The default value is undefined. The parameter must be a normalized quaternion.
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
-**Default:** Quaternion {x:0, y:0, z:0, w:1} 单位四元数（无旋转）
+**Default:** Quaternion {x:0, y:0, z:0, w:1}
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ environmentRotation?: Quaternion
 indirectDiffuseFactor: Vec4
 ```
 
-环境间接漫反射因子.
+Indirect diffuse factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -112,7 +112,7 @@ indirectDiffuseFactor: Vec4
 indirectSpecularFactor: Vec4
 ```
 
-环境间接镜面反射因子.
+Indirect specular factor.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -130,7 +130,7 @@ indirectSpecularFactor: Vec4
 irradianceCoefficients?: Vec3[]
 ```
 
-辐射系数（九个Vec3的数组）.
+Irradiance coefficients. The default value is undefined.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
@@ -148,7 +148,7 @@ irradianceCoefficients?: Vec3[]
 radianceImage?: Image | null
 ```
 
-环境辐射图像.
+Radiance image. The default value is undefined.
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 

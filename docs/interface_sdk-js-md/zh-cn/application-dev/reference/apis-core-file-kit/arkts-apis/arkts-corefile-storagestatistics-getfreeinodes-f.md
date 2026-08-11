@@ -1,11 +1,5 @@
 # getFreeInodes
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getFreeInodes
 
 ```TypeScript
@@ -39,12 +33,26 @@ function getFreeInodes(): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 storageStatistics.getFreeInodes().then((freeInodes: number) => {
   console.info('getFreeInodes successfully:' + freeInodes);
 }).catch((err: BusinessError) => {
+  console.error(`getFreeInodes failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getFreeInodes().then((freeInodes: long) => {
+  console.info('getFreeInodes successfully:' + freeInodes);
+}).catch((err: BusinessError): void => {
   console.error(`getFreeInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

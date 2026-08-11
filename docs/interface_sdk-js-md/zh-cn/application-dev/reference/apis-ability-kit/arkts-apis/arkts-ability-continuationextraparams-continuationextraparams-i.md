@@ -21,7 +21,7 @@ authInfo?: Record<string, Object>
 
 表示认证的信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 8
 

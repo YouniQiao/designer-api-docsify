@@ -1,11 +1,5 @@
 # getDistributedSessionController（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## getDistributedSessionController
 
 ```TypeScript
@@ -42,16 +36,14 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 6600109 | The remote connection is not established. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
 avSession.getDistributedSessionController(avSession.DistributedSessionType.TYPE_SESSION_REMOTE).then((sessionControllers: Array<avSession.AVSessionController>) => {
   console.info(`Succeeded in getting distributed session controller, length: ${sessionControllers.length}`);
 });

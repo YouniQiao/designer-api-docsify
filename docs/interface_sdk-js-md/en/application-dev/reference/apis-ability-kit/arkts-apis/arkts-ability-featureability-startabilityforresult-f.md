@@ -12,17 +12,20 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function startAbilityForResult(parameter: StartAbilityParameter, callback: AsyncCallback<AbilityResult>): void
 ```
 
-启动一个Ability。使用callback异步回调。启动Ability后，存在如下几种情况：
+Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability:
 
-- 正常情况下可通过调用  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
-- 异常情况下比如杀死Ability会返回异常信息给调用方, 异常信息中resultCode为-1。  
-- 如果被启动的Ability模式是单实例模式, 不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  
+**-1**, is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
+**resultCode** is **-1**, is returned to others.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
@@ -38,8 +41,8 @@ function startAbilityForResult(parameter: StartAbilityParameter, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示被启动的Ability。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | 回调函数。当启动Ability成功，err为undefined，data为ability的启动结果；否则为错误对象。 |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is an AbilityResult object; otherwise, err is an error object. |
 
 ## Examples
 
@@ -78,17 +81,20 @@ featureAbility.startAbilityForResult(
 function startAbilityForResult(parameter: StartAbilityParameter): Promise<AbilityResult>
 ```
 
-启动一个Ability。使用Promise异步回调。启动Ability后，存在如下几种情况：
+Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability:
 
-- 正常情况下可通过调用  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)接口使之终止并且返回结果给调用方。  
-- 异常情况下比如杀死Ability会返回异常信息给调用方, 异常信息中resultCode为-1。  
-- 如果被启动的Ability模式是单实例模式, 不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  
+**-1**, is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
+**resultCode** is **-1**, is returned to others.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
@@ -104,13 +110,13 @@ function startAbilityForResult(parameter: StartAbilityParameter): Promise<Abilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示被启动的Ability。 |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回启动Ability的结果。 |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise used to return the result. |
 
 ## Examples
 

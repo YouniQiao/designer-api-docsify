@@ -1,6 +1,6 @@
 # WrapType
 
-枚举，关键资产支持的加密导入导出类型。
+Enumerates the encrypted import/export types supported by the asset.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 NEVER = 0
 ```
 
-不允许加密导入导出关键资产。
+Encrypted import/export is not allowed for the asset.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ NEVER = 0
 TRUSTED_ACCOUNT = 1
 ```
 
-只在登录可信账号的设备进行加密导入导出关键资产。
+Encrypted import/export is allowed for the asset only on devices where a trusted account is logged in.
 
 **Since:** 18
 

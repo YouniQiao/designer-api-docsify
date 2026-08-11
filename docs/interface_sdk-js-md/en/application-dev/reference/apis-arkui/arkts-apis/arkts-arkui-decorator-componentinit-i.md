@@ -1,6 +1,6 @@
 # ComponentInit
 
-定义ComponentInit方法装饰器。
+Define ComponentInit Method Decorator.
 
 **Since:** 24
 

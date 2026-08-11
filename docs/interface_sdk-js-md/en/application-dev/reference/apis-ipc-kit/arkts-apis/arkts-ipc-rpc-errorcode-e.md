@@ -1,6 +1,6 @@
 # ErrorCode
 
-从API version 9起，IPC支持异常返回功能。错误码对应数值及含义如下，详细说明请参见[ohos.rpc错误码](../../../reference/apis-ipc-kit/errorcode-rpc.md)。
+The APIs of this module return exceptions since API version 9. The following table lists the error codes.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 CHECK_PARAM_ERROR = 401
 ```
 
-检查参数失败。
+Parameter check failed.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ CHECK_PARAM_ERROR = 401
 OS_MMAP_ERROR = 1900001
 ```
 
-执行系统调用mmap失败。
+Failed to call mmap.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ OS_MMAP_ERROR = 1900001
 OS_IOCTL_ERROR = 1900002
 ```
 
-在共享内存文件描述符上执行系统调用ioctl失败。
+Failed to call **ioctl** with the shared memory file descriptor.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ OS_IOCTL_ERROR = 1900002
 WRITE_TO_ASHMEM_ERROR = 1900003
 ```
 
-向共享内存写数据失败。
+Failed to write data to the shared memory.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ WRITE_TO_ASHMEM_ERROR = 1900003
 READ_FROM_ASHMEM_ERROR = 1900004
 ```
 
-从共享内存读数据失败。
+Failed to read data from the shared memory.
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ READ_FROM_ASHMEM_ERROR = 1900004
 ONLY_PROXY_OBJECT_PERMITTED_ERROR = 1900005
 ```
 
-只有proxy对象允许该操作。
+This operation is allowed only on the proxy object.
 
 **Since:** 9
 
@@ -112,7 +112,7 @@ ONLY_PROXY_OBJECT_PERMITTED_ERROR = 1900005
 ONLY_REMOTE_OBJECT_PERMITTED_ERROR = 1900006
 ```
 
-只有remote对象允许该操作。
+This operation is allowed only on the remote object.
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ ONLY_REMOTE_OBJECT_PERMITTED_ERROR = 1900006
 COMMUNICATION_ERROR = 1900007
 ```
 
-和远端对象进行进程间通信失败。
+Failed to communicate with the remote object over IPC.
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ COMMUNICATION_ERROR = 1900007
 PROXY_OR_REMOTE_OBJECT_INVALID_ERROR = 1900008
 ```
 
-非法的代理对象或者远端对象。
+Invalid proxy or remote object.
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ PROXY_OR_REMOTE_OBJECT_INVALID_ERROR = 1900008
 WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR = 1900009
 ```
 
-向MessageSequence写数据失败。
+Failed to write data to MessageSequence.
 
 **Since:** 9
 
@@ -176,7 +176,7 @@ WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR = 1900009
 READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR = 1900010
 ```
 
-读取MessageSequence数据失败。
+Failed to read data from MessageSequence.
 
 **Since:** 9
 
@@ -192,7 +192,7 @@ READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR = 1900010
 PARCEL_MEMORY_ALLOC_ERROR = 1900011
 ```
 
-序列化过程中内存分配失败。
+Failed to allocate memory during serialization.
 
 **Since:** 9
 
@@ -208,7 +208,7 @@ PARCEL_MEMORY_ALLOC_ERROR = 1900011
 CALL_JS_METHOD_ERROR = 1900012
 ```
 
-执行JS回调方法失败。
+Failed to invoke the JS callback.
 
 **Since:** 9
 
@@ -224,7 +224,7 @@ CALL_JS_METHOD_ERROR = 1900012
 OS_DUP_ERROR = 1900013
 ```
 
-执行系统调用dup失败。
+Failed to call dup.
 
 **Since:** 9
 

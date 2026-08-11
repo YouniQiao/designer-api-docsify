@@ -4,7 +4,7 @@
 type OnBufferingUpdateHandler = (infoType: BufferingInfoType, value: int) => void
 ```
 
-播放缓存事件回调方法。
+Describes the callback invoked for the buffering update event.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ type OnBufferingUpdateHandler = (infoType: BufferingInfoType, value: int) => voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| infoType | [BufferingInfoType](arkts-media-multimedia-media-bufferinginfotype-e.md) | Yes | 缓存时间类型。 |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 缓存时间类型的值。 |
+| infoType | [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) | Yes | Buffering information type. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Value of the buffering information type. |
 

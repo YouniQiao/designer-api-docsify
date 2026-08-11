@@ -1,6 +1,6 @@
 # Dir
 
-管理目录，在调用Dir的方法前，需要先通过opendir方法（同步或异步）来构建一个Dir实例。
+Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance.
 
 **Since:** 6
 
@@ -20,7 +20,7 @@
 close(): Promise<void>
 ```
 
-异步关闭目录，使用promise形式返回结果。目录被关闭后，Dir中持有的文件描述将被释放，后续将无法从Dir中读取目录项。
+Closes a directory. This API uses a promise to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 7
 
@@ -55,7 +55,7 @@ dir.close().then(() => {
 close(callback: AsyncCallback<void>): void
 ```
 
-异步关闭目录，使用callback形式返回结果。目录被关闭后，Dir中持有的文件描述将被释放，后续将无法从Dir中读取目录项。
+Closes a directory. This API uses an asynchronous callback to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ dir.close((err: BusinessError) => {
 closeSync(): void
 ```
 
-用于关闭目录。目录被关闭后，Dir中持有的文件描述将被释放，后续将无法从Dir中读取目录项。
+Closes a directory. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 6
 
@@ -116,7 +116,7 @@ dir.closeSync();
 read(): Promise<Dirent>
 ```
 
-读取下一个目录项，使用Promise异步回调。
+Reads the next directory entry. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -134,7 +134,7 @@ read(): Promise<Dirent>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Dirent&gt; | Promise对象。返回表示异步读取目录项的结果。 |
+| Promise&lt;Dirent&gt; | Promise that returns the next directory entry. |
 
 ## Examples
 
@@ -153,7 +153,7 @@ dir.read().then((dirent: fileio.Dirent) => {
 read(callback: AsyncCallback<Dirent>): void
 ```
 
-读取下一个目录项，使用callback异步回调。
+Reads the next directory entry. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -171,7 +171,7 @@ read(callback: AsyncCallback<Dirent>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dirent&gt; | Yes | 异步读取下一个目录项之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dirent&gt; | Yes | Callback invoked when the next directory entry is asynchronously read. |
 
 ## Examples
 
@@ -191,7 +191,7 @@ dir.read((err: BusinessError, dirent: fileio.Dirent) => {
 readSync(): Dirent
 ```
 
-同步读取下一个目录项。
+Reads the next directory entry. This API returns the result synchronously.
 
 **Since:** 6
 
@@ -209,7 +209,7 @@ readSync(): Dirent
 
 | Type | Description |
 | --- | --- |
-| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | 表示一个目录项。 |
+| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | Directory entry read. |
 
 ## Examples
 

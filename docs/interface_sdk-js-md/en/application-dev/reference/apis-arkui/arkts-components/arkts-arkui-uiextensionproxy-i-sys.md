@@ -1,6 +1,6 @@
 # UIExtensionProxy (System API)
 
-该接口用于向UIExtensionAbility发送数据。&lt;br/&gt;当UIExtensionAbility连接成功时，&lt;br/&gt;它从UIExtensionComponent的onRemoteReady回调中返回。
+Implements a **UIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started UIExtensionAbility through the connection established between the two parties.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册异步数据接收回调的监听器。
+Unsubscribes from asynchronous registration of the started UIExtensionAbility through the connection established between the component host and UIExtensionAbility.
 
 **Since:** 11
 
@@ -36,8 +36,8 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | Yes | 事件类型，取值为'asyncReceiverRegister'，表示取消订阅扩展Ability发生异步注册回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调；非空代表取消订阅对应的异步注册回调。<br>**Since:** 18 |
+| type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.&lt;br&gt; If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## off('syncReceiverRegister')
 
@@ -45,7 +45,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册同步数据接收回调的监听器。
+Unsubscribes from synchronous registration of the started UIExtensionAbility through the connection established between the component host and UIExtensionAbility.
 
 **Since:** 11
 
@@ -63,8 +63,8 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | Yes | 事件类型，取值为'syncReceiverRegister'，表示取消订阅扩展Ability发生同步注册回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调；非空代表取消订阅对应的同步注册回调。<br>**Since:** 18 |
+| type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.&lt;br&gt; If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## on('asyncReceiverRegister')
 
@@ -72,7 +72,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。
+Subscribes to asynchronous registration of the started UIExtensionAbility through the connection established between the component host and UIExtensionAbility.
 
 **Since:** 11
 
@@ -90,8 +90,8 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | Yes | 事件类型，取值为'asyncReceiverRegister'，表示订阅扩展Ability发生异步注册回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | 回调函数。扩展Ability注册setReceiveDataCallback后触发的回调。<br>**Since:** 18 |
+| type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after UIExtensionAbility registers the **setReceiveDataCallback** method.<br>**Since:** 18 |
 
 ## on('syncReceiverRegister')
 
@@ -99,7 +99,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。
+Subscribes to synchronous registration of the started UIExtensionAbility through the connection established between the component host and UIExtensionAbility.
 
 **Since:** 11
 
@@ -117,8 +117,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | Yes | 事件类型，取值为'syncReceiverRegister'，表示订阅扩展Ability发生同步注册回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | 回调函数。扩展Ability注册setReceiveDataForResultCallback后触发的回调。<br>**Since:** 18 |
+| type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback. It is triggered after the UIExtensionAbility registers **setReceiveDataForResultCallback**.<br>**Since:** 18 |
 
 ## send
 
@@ -126,7 +126,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 send(data: Record<string, Object>): void
 ```
 
-该接口用于向UIExtensionAbility发送数据。
+Asynchronously sends data from the component host to the started UIExtensionAbility through the connection established between the two parties.
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ send(data: Record<string, Object>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 异步发送给被拉起的UIExtensionAbility的数据。 API version 18之前的版本，data的类型为Object。<br>**Since:** 18 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started UIExtensionAbility. In versions earlier than API version 18, the data type is **Object**.<br>**Since:** 18 |
 
 ## sendSync
 
@@ -152,7 +152,7 @@ send(data: Record<string, Object>): void
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。
+Synchronously sends data from the component host to the started UIExtensionAbility through the connection established between the two parties.
 
 **Since:** 11
 
@@ -170,19 +170,19 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 发送给UIExtensionAbility的数据。<br>**Since:** 18 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started UIExtensionAbility.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| object | data - 从UIExtensionAbility传输回来的数据<br>**Applicable version:** 11 - 17 |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | data - 从UIExtensionAbility传输回来的数据。<br>**Applicable version:** 18 and later |
+| object | data - data transferred from the UIExtensionAbility<br>**Applicable version:** 11 - 17 |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | data - Data transferred from the UIExtensionAbility.<br>**Applicable version:** 18 and later |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100011 | 没有注册响应该请求的回调。 |
-| 100012 | 传输数据失败。 |
+| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to respond to this request. |
+| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
 

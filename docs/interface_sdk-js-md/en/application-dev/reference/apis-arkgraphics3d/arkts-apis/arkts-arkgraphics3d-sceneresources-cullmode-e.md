@@ -1,6 +1,6 @@
 # CullMode
 
-PBR材质剔除模式枚举.
+Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ PBR材质剔除模式枚举.
 NONE = 0
 ```
 
-禁用剔除.
+Culling is disabled.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ NONE = 0
 FRONT = 1
 ```
 
-剔除正面.
+Culls the front faces of geometric objects.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ FRONT = 1
 BACK = 2
 ```
 
-剔除背面.
+Culls the back faces of geometric objects.
 
 **Since:** 20
 

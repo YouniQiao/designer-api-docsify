@@ -1,6 +1,6 @@
 # LightResponse
 
-环境光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 colorTemperature?: double
 ```
 
-色温。单位：K（开尔文）。可选参数，如果该参数不支持则返回固定值（固定值由传感器自定义），支持则返回正常数值。
+Color temperature, in Kelvin. This parameter is optional. If this parameter is not supported, a fixed value (customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ colorTemperature?: double
 infraredLuminance?: double
 ```
 
-红外亮度。单位：cd/m²（坎德拉每平方米）。可选参数，如果该参数不支持则返回固定值（固定值由传感器自定义），支持则返回正常数值。
+Infrared luminance, in cd/m?. This parameter is optional. If this parameter is not supported, a fixed value (customized by the sensor) is returned. If this parameter is supported, a normal value is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -60,7 +60,7 @@ infraredLuminance?: double
 intensity: double
 ```
 
-环境光强度。单位：lux（勒克斯）。
+Illumination, in lux.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

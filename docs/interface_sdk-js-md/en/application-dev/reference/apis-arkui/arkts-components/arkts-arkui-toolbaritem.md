@@ -1,14 +1,16 @@
 # ToolBarItem
 
-可以使用**ToolBarItem**组件，通过[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性向标题栏中添加toolbar item。
+You can use the **ToolBarItem** component to add toolbar items to the title bar using the
+[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
 
-> **说明**
+> **NOTE**
 >
-> 该组件通常与[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)通用属性一起使用。
+> This component is typically used with the
+> [toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
 
-## 子组件
+## Child Components
 
-该组件可以包含单个子组件。
+This component can contain a single child component.
 
 ## ToolBarItem
 
@@ -16,7 +18,8 @@
 ToolBarItem(options?: ToolBarItemOptions)
 ```
 
-默认在标题栏对应分栏开头位置创建工具栏项，分栏位置由绑定该[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar)属性的组件所在分栏位置而定。
+Creates a toolbar item at the beginning of the corresponding column in the title bar by default. The column position is determined by the component's  
+[toolbar](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) attribute configuration.
 
 **Since:** 20
 
@@ -32,7 +35,7 @@ ToolBarItem(options?: ToolBarItemOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | ToolBarItem**的可选参数，包括[ToolBarItemPlacement]{@link ToolBarItemPlacement}类型的**placement**参数。<br>默认值：**placement: ToolBarItemPlacement.TOP_BAR_LEADING |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement]{@link ToolBarItemPlacement} type.<br>Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## Summary
 

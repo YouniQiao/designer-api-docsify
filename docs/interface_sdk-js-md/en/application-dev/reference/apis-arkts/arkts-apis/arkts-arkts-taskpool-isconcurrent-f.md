@@ -12,7 +12,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 function isConcurrent(func: Function): boolean
 ```
 
-检查函数是否为并发函数。
+Checks whether a function is a concurrent function.
 
 **Since:** 12
 
@@ -28,13 +28,13 @@ function isConcurrent(func: Function): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | 需要检查的函数。 |
+| func | Function | Yes | Function to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果被检查函数标注了 [ |
+| boolean | Check result. The value **true** is returned if the function is a concurrent function, that is , a function decorated with [ |
 
 ## Examples
 

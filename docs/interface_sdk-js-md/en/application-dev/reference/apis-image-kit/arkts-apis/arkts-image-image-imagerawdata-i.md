@@ -1,6 +1,6 @@
 # ImageRawData
 
-图像的RAW数据。
+Describes raw data in an image.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 bitsPerPixel: int
 ```
 
-每个像素在缓冲区数据中实际占用的位数。单位：比特（bit）。
+Number of bits that each pixel actually occupies in the buffer data.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ bitsPerPixel: int
 buffer: ArrayBuffer
 ```
 
-图像缓冲区。
+Binary data of the raw image.
 
 **Type:** ArrayBuffer
 

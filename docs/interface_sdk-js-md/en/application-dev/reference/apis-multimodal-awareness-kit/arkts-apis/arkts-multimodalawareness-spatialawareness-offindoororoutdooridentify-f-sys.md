@@ -40,12 +40,12 @@ Unsubscribe from the results of indoor and outdoor recognition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
-| 35100004 | Parameter invalid. |
-| 35100003 | Unsubscription failed. |
-| 35100001 | Service exception. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
+| [35100004](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-invalid-parameter) | Parameter invalid. |
+| [35100003](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100003-unsubscription-failed) | Unsubscription failed. |
+| [35100001](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-service-exception) | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

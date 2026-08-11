@@ -4,7 +4,7 @@
 export type ActiveAndInactiveCallbackType = () => void
 ```
 
-定义激活和非激活函数回调
+Defines active and inactive function callback.
 
 **Since:** 26.0.0
 

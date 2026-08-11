@@ -1,11 +1,5 @@
 # @ohos.InputMethodExtensionAbility(InputMethodExtensionAbility)
 
-## 导入模块
-
-```TypeScript
-import { InputMethodExtensionAbility } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 类

@@ -1,6 +1,6 @@
 # SelectAccountsOptions
 
-表示用于选择账号的选项。
+Defines the options for selecting accounts.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 allowedAccounts?: Array<AppAccountInfo>
 ```
 
-允许的账号数组，默认为空。
+Array of allowed accounts. By default, no value is passed in.
 
 **Type:** Array&lt;AppAccountInfo&gt;
 
@@ -40,7 +40,7 @@ allowedAccounts?: Array<AppAccountInfo>
 allowedOwners?: Array<string>
 ```
 
-允许的账号所有者数组，默认为空。
+Array of the owners of the allowed accounts. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
@@ -58,7 +58,7 @@ allowedOwners?: Array<string>
 requiredLabels?: Array<string>
 ```
 
-认证器的标签标识，默认为空。
+Labels of the authenticator. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 

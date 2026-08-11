@@ -1,11 +1,5 @@
 # allocUninitialized
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## allocUninitialized
 
 ```TypeScript
@@ -38,8 +32,20 @@ function allocUninitialized(size: int): Buffer
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { buffer, JSON } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitialized(10);
+buf.fill(0);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0,0,0,0,0,0,0,0,0]}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
 
 let buf = buffer.allocUninitialized(10);
 buf.fill(0);

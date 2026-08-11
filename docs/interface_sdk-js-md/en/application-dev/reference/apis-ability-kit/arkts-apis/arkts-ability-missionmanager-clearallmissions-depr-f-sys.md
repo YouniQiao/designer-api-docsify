@@ -6,7 +6,7 @@
 function clearAllMissions(callback: AsyncCallback<void>): void
 ```
 
-清理所有未锁定的任务。使用callback异步回调。
+Clears all unlocked missions. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当清理所有未锁定的任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the unlocked missions are cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -55,7 +55,7 @@ try {
 function clearAllMissions(): Promise<void>
 ```
 
-清理所有未锁定的任务。使用Promise异步回调。
+Clears all unlocked missions. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -77,7 +77,7 @@ function clearAllMissions(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

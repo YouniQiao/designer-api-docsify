@@ -15,12 +15,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 函数
@@ -36,7 +30,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 | [execute](arkts-arkts-taskpool-execute-f.md#execute-3) | 将创建好的泛型任务放入taskpool的内部任务队列，校验任务的参数类型和返回值类型。使用Promise异步回调。execute任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。 |
 | [execute](arkts-arkts-taskpool-execute-f.md#execute-4) | 将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。 |
 | [execute](arkts-arkts-taskpool-execute-f.md#execute-5) | 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级、设置超时时间和通过cancel取消任务。使用Promise异步回调。 |
-| [execute](arkts-arkts-taskpool-execute-f.md#execute-6) | 将创建好的泛型任务放入taskpool的内部任务队列，不校验任务的参数类型和返回值类型。使用Promise异步回调。execute任务的校验是结合new GenericsTask一起用的，参数、返回值类型需与new GenericsTask中的类型保持一致。 |
+| [execute](arkts-arkts-taskpool-execute-f.md#execute-6) | 将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。 |
 | [execute](arkts-arkts-taskpool-execute-f.md#execute-7) | 将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。 |
 | [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed) | 延时执行任务。当前执行模式可以设置任务优先级，可通过cancel取消任务。使用Promise异步回调。 |
 | [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed-1) | 延时执行泛型任务，使用Promise异步回调。executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。 |
@@ -45,7 +39,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 | [getTask](arkts-arkts-taskpool-gettask-f.md#gettask) | 通过taskId或taskId与taskName获取对应的Task实例。 |
 | [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md#gettaskpoolinfo) | 获取任务池的线程信息和任务信息。 |
 | [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md#isconcurrent) | 检查函数是否为并发函数。 |
-| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) | 中止任务池中的长时任务，在长时任务执行完成后调用。中止后，执行长时任务的线程可能会被回收。 |
+| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) | 终止任务池中的长时任务，在长时任务执行完成后调用。终止后，执行长时任务的线程可能会被回收。 |
 
 ### 类
 
@@ -66,7 +60,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 | 名称 | 说明 |
 | --- | --- |
 | [Configs](arkts-arkts-taskpool-configs-i.md) | 任务或任务组的配置项。 |
-| [TaskResult](arkts-arkts-taskpool-taskresult-i.md) | 处于等待或执行过程中的任务进行取消操作后，在catch分支里捕获到BusinessError里的补充信息。其他场景下该信息为undefined。 |
+| [TaskResult](arkts-arkts-taskpool-taskresult-i.md) | 对处于等待或执行过程中的任务执行取消操作后，在catch分支里捕获到BusinessError里的补充信息。其他场景下该信息为undefined。 |
 
 ### 枚举
 
@@ -80,5 +74,5 @@ import { taskpool } from 'kits/@kit.ArkTS';
 | 名称 | 说明 |
 | --- | --- |
 | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | 注册的回调函数类型。 |
-| [CallbackFunctionWithError](arkts-arkts-taskpool-callbackfunctionwitherror-t.md) | 注册带有错误码的回调函数类型。 |
+| [CallbackFunctionWithError](arkts-arkts-taskpool-callbackfunctionwitherror-t.md) | 注册接收错误对象的回调函数类型。 |
 

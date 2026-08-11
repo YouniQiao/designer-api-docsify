@@ -1,6 +1,6 @@
 # ReadonlyEnvKey
 
-定义只读系统环境键。
+Defines the readonly system environment key.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 static readonly WINDOW_AVOID_AREA: ReadonlySystemEnvKey<window.UIEnvWindowAvoidAreaInfoVP>
 ```
 
-系统环境变量避让区域键，用于获取窗口的避让区域，单位为vp。
+System environment avoidarea key that is used to obtain the avoid area of the window, measured in vp.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoVP&gt;
 
@@ -38,7 +38,7 @@ static readonly WINDOW_AVOID_AREA: ReadonlySystemEnvKey<window.UIEnvWindowAvoidA
 static readonly WINDOW_AVOID_AREA_PX: ReadonlySystemEnvKey<window.UIEnvWindowAvoidAreaInfoPX>
 ```
 
-系统环境变量避让区域键，用于获取窗口的避让区域，单位px。
+System environment avoidarea key that is used to obtain the avoid area of the window, measured in px.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoPX&gt;
 
@@ -60,7 +60,7 @@ static readonly WINDOW_AVOID_AREA_PX: ReadonlySystemEnvKey<window.UIEnvWindowAvo
 static readonly WINDOW_DISPLAY_ID: ReadonlySystemEnvKey<long>
 ```
 
-系统环境变量屏幕ID键，用于获取窗口的屏幕ID。
+System environmental displayid key that is used to obtain the display id of the window.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;long&gt;
 
@@ -82,7 +82,7 @@ static readonly WINDOW_DISPLAY_ID: ReadonlySystemEnvKey<long>
 static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>
 ```
 
-系统环境变量窗口焦点键，用于获取窗口是否获焦。
+System environment windowisfocused key that is used to obtain whether the window is focused or not.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;boolean&gt;
 
@@ -102,7 +102,7 @@ static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>
 static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>
 ```
 
-系统环境变量窗口激活键，用于获取窗口是否被激活。
+System environment windowishighlighted key that is used to obtain whether the window is highlighted or not.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;boolean&gt;
 
@@ -122,7 +122,7 @@ static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>
 static readonly WINDOW_SIZE: ReadonlySystemEnvKey<window.SizeInVP>
 ```
 
-系统环境变量窗口尺寸键，用于获取窗口的大小，单位为vp。
+System environment windowsize key that is used to obtain the size of the window, measured in vp.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
 
@@ -144,7 +144,7 @@ static readonly WINDOW_SIZE: ReadonlySystemEnvKey<window.SizeInVP>
 static readonly WINDOW_SIZE_PX: ReadonlySystemEnvKey<window.Size>
 ```
 
-系统环境变量窗口尺寸键，用于获取窗口大小，单位px。
+System environment windowsize key that is used to obtain the size of the window, measured in px.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.Size&gt;
 
@@ -166,7 +166,7 @@ static readonly WINDOW_SIZE_PX: ReadonlySystemEnvKey<window.Size>
 static readonly WINDOW_SYSTEM_DENSITY: ReadonlySystemEnvKey<double>
 ```
 
-系统环境变量系统DPI键，用于获取窗口所在屏幕的系统DPI。
+System environmental system density key that is used to obtain the system density of the display  where the window is located.
 
 **Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;double&gt;
 

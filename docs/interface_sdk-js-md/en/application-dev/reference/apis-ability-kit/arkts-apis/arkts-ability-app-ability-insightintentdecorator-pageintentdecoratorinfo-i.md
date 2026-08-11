@@ -1,8 +1,8 @@
 # PageIntentDecoratorInfo
 
-PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)装饰器支持的参数，例如目标页面的  
-[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)名称。
+PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and describes the parameters supported by the  
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) decorator, such as the name of  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) of the target page.
 
 **Inheritance/Implementation:** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -26,8 +26,8 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 navDestinationName?: string
 ```
 
-表示与意图绑定  
-[NavDestination组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)的名称。
+Name of the  
+[NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10)component bound to the intent.
 
 **Type:** string
 
@@ -49,7 +49,7 @@ navDestinationName?: string
 navigationId?: string
 ```
 
-表示与意图绑定的[Navigation组件](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#属性)的id属性。
+ID of the [Navigation](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#attributes)component bound to the intent.
 
 **Type:** string
 
@@ -71,7 +71,7 @@ navigationId?: string
 pagePath: string
 ```
 
-表示与意图绑定的页面路径，该页面需要是一个实际存在的文件。
+Path of the page bound to the intent. The page must be a file that actually exists.
 
 **Type:** string
 
@@ -93,7 +93,7 @@ pagePath: string
 uiAbility?: string
 ```
 
-表示与意图绑定的UIAbility名称。
+Name of the UIAbility bound to the intent.
 
 **Type:** string
 

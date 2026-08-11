@@ -1,6 +1,6 @@
 # TouchRecognizer
 
-触摸识别器对象。
+Represents a touch gesture recognizer.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 cancelTouch(): void
 ```
 
-向当前触摸识别器发送触摸取消事件的信息。
+Sends a touch cancellation event to this touch gesture recognizer.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ cancelTouch(): void
 getEventTargetInfo(): EventTargetInfo
 ```
 
-返回当前触摸识别器对应组件的信息。
+Obtains the information about the component corresponding to this touch gesture recognizer.
 
 **Since:** 20
 
@@ -54,39 +54,7 @@ getEventTargetInfo(): EventTargetInfo
 
 | Type | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前触摸识别器对应组件的信息。 |
-
-## isHostBelongsTo
-
-```TypeScript
-isHostBelongsTo(uniqueId: number): boolean
-```
-
-Check whether the current gesture binding node is a descendant of the passed-in component.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TouchRecognizer-isHostBelongsTo(uniqueId: number): boolean--><!--Device-TouchRecognizer-isHostBelongsTo(uniqueId: number): boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uniqueId | number | Yes | the unique id of the component. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | the query result. |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Information about the component corresponding to the current touch gesture recognizer. |
 
 ## isHostBelongsTo
 
@@ -94,7 +62,7 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 isHostBelongsTo(uniqueId: int): boolean
 ```
 
-返回当前触摸识别器绑定节点是否为传入组件的后代节点。
+Returns whether the node bound to the current touch gesture recognizer is a descendant of the specified component.
 
 **Since:** 26.0.0
 
@@ -112,11 +80,11 @@ isHostBelongsTo(uniqueId: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
+| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前触摸识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |
+| boolean | Whether the node bound to the current touch gesture recognizer is a descendant of the specified component. Returns **true** if the bound node is a descendant, and **false** otherwise. |
 

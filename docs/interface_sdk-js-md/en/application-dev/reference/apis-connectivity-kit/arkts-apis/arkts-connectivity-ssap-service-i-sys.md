@@ -1,6 +1,6 @@
 # Service
 
-SSAP服务。
+Describes the SSAP service.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-属于此服务的事件。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持该字段。
+The events belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
 
 **Type:** [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[]
 
@@ -44,7 +44,7 @@ events?: Event[]
 methods?: Method[]
 ```
 
-属于此服务的方法。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持此字段。
+The methods belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
 
 **Type:** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 

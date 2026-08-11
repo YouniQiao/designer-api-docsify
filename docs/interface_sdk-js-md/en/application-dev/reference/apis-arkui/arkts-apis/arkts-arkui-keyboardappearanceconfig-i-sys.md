@@ -1,6 +1,6 @@
 # KeyboardAppearanceConfig (System API)
 
-键盘外观样式属性。
+Describes the keyboard visual style configuration.
 
 **Since:** 20
 
@@ -18,9 +18,9 @@
 fluidLightMode?: KeyboardFluidLightMode
 ```
 
-键盘的流光效果。
+Keyboard fluid lighting effect.
 
-默认值：KeyboardFluidLightMode.NONE
+Default value: **KeyboardFluidLightMode.NONE**
 
 **Type:** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
 
@@ -42,9 +42,9 @@ fluidLightMode?: KeyboardFluidLightMode
 gradientMode?: KeyboardGradientMode
 ```
 
-键盘的模糊效果。
+Keyboard gradient effect.
 
-默认值：KeyboardGradientMode.NONE
+Default value: **KeyboardGradientMode.NONE**
 
 **Type:** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
 

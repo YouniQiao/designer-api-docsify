@@ -1,7 +1,6 @@
 # AutoFillExtensionContext (System API)
 
-AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，继承自  
-[ExtensionContext](arkts-ability-extensioncontext-c.md)。
+The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 **Inheritance/Implementation:** AutoFillExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
@@ -21,7 +20,7 @@ AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，�
 reloadInModal(customData: CustomData): Promise<void>
 ```
 
-拉起模态页面。使用Promise异步回调。
+Reload autoFillExtension in modal window.
 
 **Since:** 13
 
@@ -39,20 +38,20 @@ reloadInModal(customData: CustomData): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customData | [CustomData](arkts-ability-customdata-i-sys.md) | Yes | 拉起模态页面时的自定义信息。 |
+| customData | [CustomData](arkts-ability-customdata-i-sys.md) | Yes | User defined data. When the modal window of AutoFillExtension needs to be raised again, pass this parameter to the application framework. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 16000050 | Internal error. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 

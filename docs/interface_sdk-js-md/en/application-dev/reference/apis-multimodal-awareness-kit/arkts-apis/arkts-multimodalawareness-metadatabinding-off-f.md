@@ -36,13 +36,14 @@ Unsubscribes from system events that are used to obtain the encoded metadata. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 32100005 | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-unsubscription-failed) | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
 
 ## Examples
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName: string = '';
 try {

@@ -1,8 +1,6 @@
 # GesturePoint
 
-GesturePoint表示手势触摸点。
-
-本模块用于创建辅助功能注入手势所需的手势路径的触摸点信息。
+The **GesturePoint** module provides APIs for creating gesture touch point information required for an accessibility application to inject gestures.
 
 **Since:** 9
 
@@ -24,7 +22,7 @@ import { GesturePoint } from 'kits/@kit.AccessibilityKit';
 constructor(positionX: double, positionY: double)
 ```
 
-构造函数。
+Defines a constructor used to create a **GesturePoint** instance.
 
 **Since:** 9
 
@@ -40,8 +38,8 @@ constructor(positionX: double, positionY: double)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| positionX | double | Yes | 触摸点X坐标，单位为像素（px）。 |
-| positionY | double | Yes | 触摸点Y坐标，单位为像素（px）。 |
+| positionX | double | Yes | X coordinate of the touch point, in pixels (px). |
+| positionY | double | Yes | Y coordinate of the touch point, in pixels (px). |
 
 ## Examples
 
@@ -57,7 +55,7 @@ let gesturePoint = new GesturePoint(1, 2);
 positionX: double
 ```
 
-触摸点X坐标，单位为像素（px）。
+X coordinate of the touch point, in pixels (px).
 
 **Type:** double
 
@@ -75,7 +73,7 @@ positionX: double
 positionY: double
 ```
 
-触摸点Y坐标，单位为像素（px）。
+Y coordinate of the touch point, in pixels (px).
 
 **Type:** double
 

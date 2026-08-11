@@ -1,6 +1,6 @@
 # ExtendableText
 
-定义扩展文本组件
+Defines the Extendable Text.
 
 **Inheritance/Implementation:** ExtendableText implements [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md/arkts-arkui-text-attribute.md)
 
@@ -16,14 +16,14 @@
 
 ```TypeScript
 static $_instantiate<T extends ExtendableText>(
-    factory: ConstructorT<T>, 
-    content?: string | Resource, 
-    value?: TextOptions, 
-    content_?: CustomBuilder
-  ): T
+      factory: ConstructorT<T>, 
+      content?: string | Resource, 
+      value?: TextOptions, 
+      content_?: CustomBuilder
+    ): T
 ```
 
-扩展文本组件构造器
+Constructor of Extendable Text.
 
 **Since:** 26.0.0
 
@@ -31,7 +31,7 @@ static $_instantiate<T extends ExtendableText>(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(    factory: ConstructorT<T>,     content?: string | Resource,     value?: TextOptions,     content_?: CustomBuilder  ): T--><!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(    factory: ConstructorT<T>,     content?: string | Resource,     value?: TextOptions,     content_?: CustomBuilder  ): T-End-->
+<!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T--><!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +54,13 @@ static $_instantiate<T extends ExtendableText>(
 
 ```TypeScript
 static _instantiateImpl<T extends ExtendableText>(
-      styles: CustomBuilderT<T>, 
-      factory: ConstructorT<T>, 
-      content_?: CustomBuilder
-  ): void
+        styles: CustomBuilderT<T>,  
+        factory: ConstructorT<T>, 
+        content_?: CustomBuilder
+    ): void
 ```
 
-扩展文本组件入口
+Entry of Extendable Text.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ static _instantiateImpl<T extends ExtendableText>(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(      styles: CustomBuilderT<T>,       factory: ConstructorT<T>,       content_?: CustomBuilder  ): void--><!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(      styles: CustomBuilderT<T>,       factory: ConstructorT<T>,       content_?: CustomBuilder  ): void-End-->
+<!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,12 +86,12 @@ static _instantiateImpl<T extends ExtendableText>(
 
 ```TypeScript
 public setTextOptions(
-    content?: string | Resource, 
-    value?: TextOptions
-  ): this
+      content?: string | Resource, 
+      value?: TextOptions
+    ): this
 ```
 
-设置文本组件的选项
+Set the Text Options.
 
 **Since:** 26.0.0
 
@@ -99,7 +99,7 @@ public setTextOptions(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableText-public setTextOptions(    content?: string | Resource,     value?: TextOptions  ): this--><!--Device-ExtendableText-public setTextOptions(    content?: string | Resource,     value?: TextOptions  ): this-End-->
+<!--Device-ExtendableText-public setTextOptions(      content?: string | Resource,       value?: TextOptions    ): this--><!--Device-ExtendableText-public setTextOptions(      content?: string | Resource,       value?: TextOptions    ): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

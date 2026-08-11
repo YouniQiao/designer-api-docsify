@@ -4,7 +4,7 @@
 type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void
 ```
 
-检测到白屏时触发此回调。
+Defines a callback triggered when a blank screen is detected.
 
 **Since:** 22
 
@@ -18,5 +18,5 @@ type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [BlankScreenDetectionEventInfo](../arkts-apis/arkts-arkweb-web-blankscreendetectioneventinfo-i.md) | Yes | 检测到白屏时的详细信息。 |
+| event | [BlankScreenDetectionEventInfo](../arkts-apis/arkts-arkweb-web-blankscreendetectioneventinfo-i.md) | Yes | Detailed information when a blank screen is detected. |
 

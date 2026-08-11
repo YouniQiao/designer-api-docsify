@@ -1,7 +1,7 @@
 # StartOptions
 
-StartOptions可以作为启动UIAbility接口（例如  
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example,  
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
 **Since:** 9
 
@@ -23,7 +23,7 @@ import { StartOptions } from 'kits/@kit.AbilityKit';
 completionHandler?: CompletionHandler
 ```
 
-拉起应用结果的操作类，用于处理拉起应用的结果。
+Operation class used to handle the result of an application launch request.
 
 **Type:** [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
 
@@ -45,17 +45,17 @@ completionHandler?: CompletionHandler
 displayId?: long
 ```
 
-屏幕ID，取值为大于等于-1的整数。
+Display ID, which is an integer greater than or equal to -1.
 
-- 取值为-1，表示当前屏幕。  
-- 取值为0，表示主屏幕。  
-- 取值为正整数，表示指定ID的屏幕。
+- The value **-1** means the current screen.  
+- The value **0** means the primary screen.  
+- A positive integer means a specific screen with that ID.
 
-**说明：**
+**NOTE：**
 
-从API version 14开始，默认值是-1，即当前屏幕。
+Starting from API version 14, the default value is **-1**, indicating the current screen.
 
-在API version 14之前版本，默认值为0，即主屏幕。
+In versions earlier than API version 14, the default value is **0**, indicating the primary screen.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -77,14 +77,13 @@ displayId?: long
 hideStartWindow?: boolean
 ```
 
-启动当前应用的UIAbility时，控制是否隐藏窗口的启动页，true表示隐藏启动页，false表示不隐藏启动页。启动页介绍和规格详见  
-[StartWindow](../../../quick-start/module-configuration-file.md#startwindow标签)。
+Whether to hide the starting window for the UIAbility of the current application upon startup. The options include  
+**true** (yes) and **false** (no). For details about the starting window and its specifications, see  
+[StartWindow](../../../quick-start/module-configuration-file.md#startwindow).
 
-**约束：**
+**Constraints**:
 
-1.该功能仅在2in1设备和自由多窗模式下的Tablet设备上生效。
-
-2.该功能仅在启动当前应用的UIAbility时生效。
+1. This property takes effect only on tablets in free windows mode and 2-in-1 devices.2. This property applies only for an attempt to launch the UIAbility of the current application.
 
 **Type:** boolean
 
@@ -104,11 +103,13 @@ hideStartWindow?: boolean
 maxWindowHeight?: int
 ```
 
-窗口最大的高度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
+Maximum height of the window, in vp. You can call  
+[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -128,11 +129,13 @@ maxWindowHeight?: int
 maxWindowWidth?: int
 ```
 
-窗口最大的宽度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
+Maximum width of the window, in vp. You can call  
+[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -152,11 +155,13 @@ maxWindowWidth?: int
 minWindowHeight?: int
 ```
 
-窗口最小的高度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
+Minimum height of the window, in vp. You can call  
+[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -176,11 +181,13 @@ minWindowHeight?: int
 minWindowWidth?: int
 ```
 
-窗口最小的宽度，单位为vp，可以通过[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP)获得当前窗口的尺寸限制。
+Minimum width of the window, in vp. You can call  
+[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -200,15 +207,12 @@ minWindowWidth?: int
 processMode?: contextConstant.ProcessMode
 ```
 
-UIAbility启动后的进程模式。
+Process mode of the UIAbility after it is started.
 
-**约束：**
+**Constraints**:
 
-1.该功能仅在2in1和Tablet设备上生效。
-
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
-
-3.processMode和startupVisibility必须同时设置。
+1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.ProcessMode
 
@@ -228,7 +232,7 @@ UIAbility启动后的进程模式。
 splitRatio?: window.SplitRatioPreference
 ```
 
-分屏比首选项的类型。
+The type of split ratio preference.
 
 **Type:** window.SplitRatioPreference
 
@@ -248,13 +252,15 @@ splitRatio?: window.SplitRatioPreference
 startWindowBackgroundColor?: string
 ```
 
-启动当前应用的UIAbility时，启动页所显示的背景颜色。固定为ARGB格式, 如：`#E5FFFFFF`。如果未配置该字段，则默认采用module.json5文件中startWindowBackground字段的配置。
+Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the  
+**module.json5** file is used by default.
 
-**约束：**
+**Constraints**:
 
-- 启动其他应用的UIAbility时，该字段不生效。  
-- 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+- This property does not take effect for the UIAbility of another application.  
+- This property takes effect only on 2-in-1 devices and tablets.  
+- This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** string
 
@@ -274,14 +280,15 @@ startWindowBackgroundColor?: string
 startWindowIcon?: image.PixelMap
 ```
 
-启动当前应用的UIAbility时，启动页所显示的图标。如果未配置该字段，则默认采用module.json5文件中startWindowIcon字段的配置。
+Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default.
 
-**约束：**
+**Constraints**:
 
-- 启动其他应用的UIAbility时，该字段不生效。  
-- 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
-- 图片数据大小限制为600MB。
+- This property does not take effect for the UIAbility of another application.  
+- This property takes effect only on 2-in-1 devices and tablets.  
+- This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
+- The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
 
@@ -301,15 +308,12 @@ startWindowIcon?: image.PixelMap
 startupVisibility?: contextConstant.StartupVisibility
 ```
 
-UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时，目标UIAbility的窗口不会显示在前台，dock栏也不会有图标，同时目标UIAbility的onForeground生命周期不会被调用。
+Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground**lifecycle of the target UIAbility is not triggered.
 
-**约束：**
+**Constraints**:
 
-1.该功能仅在2in1和Tablet设备上生效。
-
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
-
-3.processMode和startupVisibility必须同时设置。
+1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.StartupVisibility
 
@@ -329,22 +333,21 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
-启动UIAbility时，指定窗口是否显示最大化/窗口化/分屏按键。如果未配置该字段，则默认采用该UIAbility对应的  
-[module.json5配置文件](../../../quick-start/module-configuration-file.md)中  
-[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值。
+Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode**configured under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the  
+[module.json5](../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default.
 
-- FULL_SCREEN：支持全屏模式。  
-- FLOATING：支持悬浮窗模式。  
-- SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模  
-式，支持进入分屏模式。 
+- **FULL_SCREEN**: full-screen mode.  
+- **FLOATING**: floating window mode.  
+- **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not  
+advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode.
 
-在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的  
-[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的  
-[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。 
+When **FULL_SCREEN** and **SPLIT** are both configured for a  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of  
+[targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15, and in full-screen mode if the value is greater than or equal to 15.
 
-**约束：**
+**Constraints**:
 
-&lt;!--RP1--&gt;该功能仅在2in1和Tablet设备上生效。&lt;!--RP1End--&gt;
+&lt;!--RP1--&gt;This property takes effect only on 2-in-1 devices and tablets.&lt;!--RP1End--&gt;
 
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -364,7 +367,7 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 windowCreateParams?: window.WindowCreateParams
 ```
 
-启动UIAbility时的窗口参数。
+Parameters for the window for the UIAbility upon startup.
 
 **Type:** window.WindowCreateParams
 
@@ -384,13 +387,15 @@ windowCreateParams?: window.WindowCreateParams
 windowHeight?: int
 ```
 
-窗口的高度，单位为px。
+Window height, in px.
 
-取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
+The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call  
+[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -410,11 +415,13 @@ windowHeight?: int
 windowLeft?: int
 ```
 
-以指定displayId的屏幕的左顶点为原点，窗口在x轴方向偏移量，单位为px，值为正表示在原点右侧，值为负表示在原点左侧。该参数为整数，非整数将向下取整。当窗口左顶点超出指定displayId的屏幕区域时，限制窗口在指定displayId的屏幕范围内可见。配置该字段时，建议同时配置windowTop。
+Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to configure  
+**windowTop** at the same time.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -434,7 +441,8 @@ windowLeft?: int
 windowMode?: int
 ```
 
-启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md)。
+Window mode for the UIAbility upon startup. For details, see  
+[WindowMode](arkts-ability-abilityconstant-windowmode-e.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -454,11 +462,12 @@ windowMode?: int
 windowTop?: int
 ```
 
-以指定displayId的屏幕的左顶点为原点，窗口在y轴方向偏移量，单位为px，值为正表示在原点下方，值为负表示在原点上方。该参数为整数，非整数将向下取整。当窗口顶部超出指定displayId的屏幕区域时，限制窗口在指定displayId的屏幕范围内可见。配置该字段时，建议同时配置windowLeft。
+Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving downward, and a negative value means moving upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -478,13 +487,15 @@ windowTop?: int
 windowWidth?: int
 ```
 
-窗口的宽度，单位为px。
+Window width, in px.
 
-取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
+The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call  
+[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
 
-**约束：**
+**Constraints**:
 
-该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+This function takes effect only in the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -504,13 +515,11 @@ windowWidth?: int
 withAnimation?: boolean
 ```
 
-启动UIAbility时是否具有动画效果。
+Whether animation effects are used for the UIAbility upon startup. **true** if used, **false** otherwise.
 
-传入true时，跟随系统默认动画效果。传入false时，表示关闭启动UIAbility动画效果，仅在[自由窗口状态](../../../windowmanager/window-terminology.md#自由窗口)的情况下生效。
+**Constraints**:
 
-此参数不填时，默认为undefined，跟随系统默认动画效果。
-
-从&lt;!--RP2--&gt;OpenHarmony 6.1&lt;!--RP2End--&gt;开始支持。
+1. This property takes effect only on 2-in-1 devices and tablets.2. The caller and target must be the same application.
 
 **Type:** boolean
 

@@ -1,12 +1,13 @@
 # ColorFilter
 
-颜色滤波器，用于对图像或图形的颜色进行变换和处理，支持创建混合模式颜色滤波器、组合颜色滤波器、矩阵颜色滤波器、伽马颜色空间转换滤波器、亮度颜色滤波器和光照颜色滤波器等多种类型。
+Defines a color filter.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 11
 
@@ -28,7 +29,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter
 ```
 
-创建指定的颜色和混合模式的颜色滤波器。
+Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 11
 
@@ -42,20 +43,20 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的值是[0, 255]的整数。 |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回基于指定颜色和混合模式创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -63,7 +64,7 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter | undefined
 ```
 
-创建指定的颜色和混合模式的颜色滤波器。
+Creates a ColorFilter object with a given color and blend mode.
 
 **Since:** 23
 
@@ -77,20 +78,20 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的值是[0, 255]的整数。 |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -98,7 +99,7 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter
 ```
 
-创建指定的颜色和混合模式的颜色滤波器。
+Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 18
 
@@ -112,20 +113,20 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color \| number | Yes | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整 数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回基于指定颜色和混合模式创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -133,7 +134,7 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode): ColorFilter | undefined
 ```
 
-创建指定的颜色和混合模式的颜色滤波器。
+Creates a ColorFilter object with a given color and blend mode.
 
 **Since:** 23
 
@@ -147,20 +148,20 @@ static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color \| int | Yes | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整 数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| color | common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeColorFilter
 
@@ -168,7 +169,7 @@ static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode):
 static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter
 ```
 
-创建一个先应用inner进行滤波，再应用outer进行滤波的组合颜色滤波器。
+Creates a **ColorFilter** object by combining another two color filters.
 
 **Since:** 11
 
@@ -182,20 +183,20 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | 组合滤波器中后生效的颜色滤波器。 |
-| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | 组合滤波器中先生效的颜色滤波器。 |
+| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
+| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的组合颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createComposeColorFilter
 
@@ -203,7 +204,7 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter | undefined
 ```
 
-创建一个先应用inner进行滤波，再应用outer进行滤波的组合颜色滤波器。
+Creates a ColorFilter object by combining another two color filters.
 
 **Since:** 23
 
@@ -217,20 +218,20 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | 组合滤波器中后生效的颜色滤波器。 |
-| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | 组合滤波器中先生效的颜色滤波器。 |
+| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
+| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的组合颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createLightingColorFilter
 
@@ -238,7 +239,7 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter
 ```
 
-创建一个光照颜色滤波器，此滤波器会将RGB通道的颜色值乘以乘法颜色（mutColor）并加上加法颜色（addColor），计算结果会被限制在0到255范围内。
+Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color value. The final output stays between 0 and 255.
 
 **Since:** 20
 
@@ -252,14 +253,14 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | common2D.Color \| number | Yes | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| addColor | common2D.Color \| number | Yes | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| mutColor | common2D.Color \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| addColor | common2D.Color \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的光照颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | ColorFilter** object created. |
 
 ## createLightingColorFilter
 
@@ -267,7 +268,7 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 static createLightingColorFilter(mutColor: common2D.Color | int, addColor: common2D.Color | int): ColorFilter | undefined
 ```
 
-创建一个光照颜色滤波器，此滤波器会将RGB通道的颜色值乘以乘法颜色（mutColor）并加上加法颜色（addColor），计算结果会被限制在0到255范围内。
+Makes a color filter with the given mutColor and addColor.
 
 **Since:** 24
 
@@ -281,14 +282,14 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | common2D.Color \| int | Yes | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| addColor | common2D.Color \| int | Yes | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| mutColor | common2D.Color \| int | Yes | The range of color channels must be [0, 255], used to multiply source color. |
+| addColor | common2D.Color \| int | Yes | The range of color channels must be [0, 255], used to add to source color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的光照颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 ## createLinearToSRGBGamma
 
@@ -296,7 +297,7 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 static createLinearToSRGBGamma(): ColorFilter
 ```
 
-创建一个从线性颜色空间转换到SRGB颜色空间的颜色滤波器。
+Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB channels.
 
 **Since:** 11
 
@@ -310,7 +311,7 @@ static createLinearToSRGBGamma(): ColorFilter
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## createLinearToSRGBGamma
 
@@ -318,7 +319,7 @@ static createLinearToSRGBGamma(): ColorFilter
 static createLinearToSRGBGamma(): ColorFilter | undefined
 ```
 
-创建一个从线性颜色空间转换到SRGB颜色空间的颜色滤波器。
+Creates a ColorFilter object that applies the sRGB gamma curve to the RGB channels.
 
 **Since:** 23
 
@@ -332,7 +333,7 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 ## createLumaColorFilter
 
@@ -340,7 +341,7 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 static createLumaColorFilter(): ColorFilter
 ```
 
-创建一个颜色滤波器将其输入的亮度值乘以透明度通道的值，并将红色、绿色和蓝色通道设置为零。
+Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to zero.
 
 **Since:** 11
 
@@ -354,7 +355,7 @@ static createLumaColorFilter(): ColorFilter
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## createLumaColorFilter
 
@@ -362,7 +363,7 @@ static createLumaColorFilter(): ColorFilter
 static createLumaColorFilter(): ColorFilter | undefined
 ```
 
-创建一个颜色滤波器将其输入的亮度值乘以透明度通道的值，并将红色、绿色和蓝色通道设置为零。
+Creates a ColorFilter object that multiplies the luma into the alpha channel and sets the RGB channels to zero.
 
 **Since:** 23
 
@@ -376,7 +377,7 @@ static createLumaColorFilter(): ColorFilter | undefined
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter. |
 
 ## createMatrixColorFilter
 
@@ -384,7 +385,7 @@ static createLumaColorFilter(): ColorFilter | undefined
 static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 ```
 
-创建颜色滤波器，通过4×5颜色矩阵变换颜色。
+Creates a color filter object with a 4*5 color matrix.
 
 **Since:** 12
 
@@ -398,19 +399,19 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; | Yes | 长度为20的数组，表示用于颜色变换的4×5矩阵。 |
+| matrix | Array&lt;double&gt; | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createMatrixColorFilter
 
@@ -418,7 +419,7 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 ```
 
-创建颜色滤波器，通过4×5颜色矩阵变换颜色。
+Creates a color filter object with a 4*5 color matrix.
 
 **Since:** 23
 
@@ -432,19 +433,19 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; | Yes | 长度为20的数组，表示用于颜色变换的4×5矩阵。 |
+| matrix | Array&lt;double&gt; | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSRGBGammaToLinear
 
@@ -452,7 +453,7 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 static createSRGBGammaToLinear(): ColorFilter
 ```
 
-创建一个从SRGB颜色空间转换到线性颜色空间的颜色滤波器。
+Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma curve.
 
 **Since:** 11
 
@@ -466,7 +467,7 @@ static createSRGBGammaToLinear(): ColorFilter
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## createSRGBGammaToLinear
 
@@ -474,7 +475,7 @@ static createSRGBGammaToLinear(): ColorFilter
 static createSRGBGammaToLinear(): ColorFilter | undefined
 ```
 
-创建一个从SRGB颜色空间转换到线性颜色空间的颜色滤波器。
+Creates a ColorFilter object that applies the RGB channels to the sRGB gamma curve.
 
 **Since:** 23
 
@@ -488,5 +489,5 @@ static createSRGBGammaToLinear(): ColorFilter | undefined
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
 

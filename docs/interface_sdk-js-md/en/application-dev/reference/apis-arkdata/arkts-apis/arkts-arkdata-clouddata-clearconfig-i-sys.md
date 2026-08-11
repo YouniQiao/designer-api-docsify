@@ -1,6 +1,6 @@
 # ClearConfig (System API)
 
-端云协同数据库级清除配置。
+Defines the clearance configuration of a device-cloud synergy database.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 dbInfo: Record<string, DBActionInfo>
 ```
 
-要清除数据的库信息及清除规则。键为数据库名称，值为该数据库的清除配置信息。
+Information about the database whose data is to be cleared and the clearance rules. The key is the database name, and the value is the clearance configuration of the database.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, DBActionInfo&gt;
 

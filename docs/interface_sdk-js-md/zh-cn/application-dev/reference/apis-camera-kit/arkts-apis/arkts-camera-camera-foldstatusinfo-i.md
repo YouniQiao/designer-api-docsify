@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## foldStatus
 
 ```TypeScript
@@ -24,7 +18,7 @@ readonly foldStatus: FoldStatus
 
 折叠屏折叠状态。
 
-**类型：** [FoldStatus](../../apis-arkui/arkts-apis/arkts-arkui-enums-foldstatus-e.md)
+**类型：** [FoldStatus](../../apis-arkui/arkts-apis/arkts-arkui-foldstatus-e.md)
 
 **起始版本：** 12
 

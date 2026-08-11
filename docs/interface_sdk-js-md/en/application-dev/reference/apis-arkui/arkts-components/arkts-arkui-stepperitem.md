@@ -1,14 +1,17 @@
 # StepperItem
 
-用作[Stepper]{@link stepper}组件的页面子组件。
+The **StepperItem** component represents a page component used within a [Stepper]{@link stepper} container.
 
-> **说明：**
+> **NOTE**
 
-> - 从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper]{@link swiper}替代。
+> - This component is supported since API version 8 and deprecated since API version 22. You are advised to use
+> [Swiper]{@link swiper} instead.
 
-## 子组件
+> Updates will be marked with a superscript to indicate their
 
-支持单个子组件。
+## Child Components
+
+This component supports only one child component.
 
 ## StepperItem
 
@@ -16,12 +19,9 @@
 StepperItem()
 ```
 
-创建[Stepper]{@link stepper}组件的页面子组件。
+Creates a page component for the [Stepper]{@link stepper} container.
 
-> **说明：**
-
-> 从API version 8开始支持，从API version 22开始废弃，建议使用
-> [Swiper](docroot://reference/apis-arkui/arkui-ts/ts-container-swiper.md#属性)替代。
+> **NOTE：**
 
 **Since:** 8
 

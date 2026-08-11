@@ -1,5 +1,7 @@
 # Computed
 
+Defining Computed annotation Computed is a method decorator that decorates the getter method.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

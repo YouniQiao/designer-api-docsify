@@ -1,23 +1,26 @@
 # AutoFillRequest
 
+The module provides page data and callbacks when a callback is triggered for the AutoFillExtensionAbility.
+
+
 ## Summary
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 自动填充的填充请求。 |
+| [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Fill fail result. |
+| [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Defines the information about an auto-fill request. |
+| [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Defines the information about an auto-saving request. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | 自动填充的填充请求。 |
-| [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 自动填充或者生成密码时的回调对象，可以通过此回调通知客户端成功或者失败。 |
-| [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) | 自动填充响应。 |
-| [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | 保存自动填充的请求。 |
-| [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | 自动保存或者手动保存请求回调。 |
-| [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | 自动填充更新信息。 |
+| [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Implements callbacks for an auto-fill request, which is used to automatically fill in or generate a password. The callbacks can be used to notify the client of the success or failure of the request. |
+| [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) | Defines the information about the response to an auto-fill request. |
+| [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Implements callbacks for an automatic or a manual saving request. |
+| [UpdateRequest](arkts-ability-autofillrequest-updaterequest-i-sys.md) | Defines the information about an auto-update request. |
 <!--DelEnd-->
 

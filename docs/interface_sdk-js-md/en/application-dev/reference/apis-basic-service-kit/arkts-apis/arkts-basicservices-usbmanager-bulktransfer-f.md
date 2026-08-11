@@ -17,15 +17,16 @@ function bulkTransfer(
   ): Promise<int>
 ```
 
-批量传输。使用Promise异步回调。
+Performs bulk transfer. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 单次批量传输的传输数据总量（包括pipe、endpoint、buffer、timeout）请控制在200KB以下，数据总量过大会导致传输失败返回-1。
+> The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a
+> single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.
 > 
-> 在调用接口前需要通过
+> Before calling this API, call the
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
-> claim通信接口。
+> API to claim a communication interface.
 
 **Since:** 9
 
@@ -39,23 +40,23 @@ function bulkTransfer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定设备，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
-| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | 用于确定传输的端口，需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息列表以及endpoint， address用于确定端点地址，direction用于确定端点的方向，interfaceId用于确定所属接口，当前其他属性不做处理。 |
-| buffer | Uint8Array | Yes | 用于写入或读取数据的缓冲区。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 超时时间（单位：毫秒），可选参数，指定时间内等待批量传输完成，若在指定时间内传输完成则正常返回，否则返回超时；默认为0时无限等待直到传输完成。用户按需选择。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
+| buffer | Uint8Array | Yes | Buffer for writing or reading data. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，获取传输或接收到的数据块大小。失败返回其他错误码如下： |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned: |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 
@@ -72,23 +73,18 @@ function bulkTransfer() {
     return;
   }
 
-  let device: usbManager.USBDevice = devicesList?.[0];
+  let device: usbManager.USBDevice = devicesList[0];
   usbManager.requestRight(device.name);
-  if (!usbManager.hasRight(device.name)) {
-    console.error(`request right fail`);
-    return;
-  }
+
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  for (let i = 0; i < device.configs?.[0]?.interfaces.length; i++) {
-    if (device.configs?.[0]?.interfaces?.[i]?.endpoints?.[0]?.attributes == 2) {
-      let endpoint: usbManager.USBEndpoint = device.configs?.[0]?.interfaces?.[i]?.endpoints?.[0];
-      let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[i];
+  for (let i = 0; i < device.configs[0].interfaces.length; i++) {
+    if (device.configs[0].interfaces[i].endpoints[0].attributes == 2) {
+      let endpoint: usbManager.USBEndpoint = device.configs[0].interfaces[i].endpoints[0];
+      let interfaces: usbManager.USBInterface = device.configs[0].interfaces[i];
       let ret: number = usbManager.claimInterface(devicepipe, interfaces);
       let buffer =  new Uint8Array(128);
       usbManager.bulkTransfer(devicepipe, endpoint, buffer).then((ret: number) => {
         console.info(`bulkTransfer = ${ret}`);
-      }).catch((error: BusinessError) => {
-        console.error(`bulkTransfer failed : ${error}`);
       });
     }
   }

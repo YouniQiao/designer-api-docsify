@@ -1,6 +1,6 @@
 # ScrollBarDirection
 
-滚动条方向枚举。
+Enumerates the scrolling directions.
 
 **Since:** 8
 
@@ -13,10 +13,10 @@
 ## Vertical
 
 ```TypeScript
-Vertical = 0
+Vertical
 ```
 
-纵向滚动条。
+Vertical scrollbar.
 
 **Since:** 8
 
@@ -24,17 +24,17 @@ Vertical = 0
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ScrollBarDirection-Vertical = 0--><!--Device-ScrollBarDirection-Vertical = 0-End-->
+<!--Device-ScrollBarDirection-Vertical--><!--Device-ScrollBarDirection-Vertical-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Horizontal
 
 ```TypeScript
-Horizontal = 1
+Horizontal
 ```
 
-横向滚动条。
+Horizontal scrollbar.
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ Horizontal = 1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ScrollBarDirection-Horizontal = 1--><!--Device-ScrollBarDirection-Horizontal = 1-End-->
+<!--Device-ScrollBarDirection-Horizontal--><!--Device-ScrollBarDirection-Horizontal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

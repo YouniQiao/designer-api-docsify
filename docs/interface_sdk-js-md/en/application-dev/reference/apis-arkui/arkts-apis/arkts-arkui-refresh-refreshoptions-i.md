@@ -1,6 +1,6 @@
 # RefreshOptions
 
-用于设置Refresh组件参数。
+Defines the options of refresh component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 builder?: CustomBuilder
 ```
 
-自定义刷新区域显示内容。
+Custom component to display during dragging.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -36,7 +36,7 @@ builder?: CustomBuilder
 promptText?: ResourceStr
 ```
 
-设置刷新区域底部显示的自定义文本。
+The text displayed during refreshing.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -56,7 +56,7 @@ promptText?: ResourceStr
 refreshing: boolean | Bindable<boolean>
 ```
 
-组件当前是否处于刷新中状态。该参数支持\$用于双向绑定变量。
+Whether the current component is being refreshed.This parameter supports \$ for two-way binding of variables.
 
 **Type:** boolean \| Bindable&lt;boolean&gt;
 
@@ -76,7 +76,7 @@ refreshing: boolean | Bindable<boolean>
 refreshingContent?: ComponentContentBase
 ```
 
-自定义刷新区域显示内容。
+Custom component to display during dragging.
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 

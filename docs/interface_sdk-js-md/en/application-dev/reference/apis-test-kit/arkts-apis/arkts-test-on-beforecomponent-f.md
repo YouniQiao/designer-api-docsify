@@ -12,7 +12,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 export function beforeComponent(com: Component): On
 ```
 
-要求目标组件位于由给定{@link Component}指定的另一个组件之前对象，用于相对于组件定位。
+Requires that the target Component which is before another Component that specified by the given {@link Component}object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ export function beforeComponent(com: Component): On
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | Yes | 描述了目标组件在前面的组件。 |
+| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | Yes | describes the Component which the target one is in front of. |
 
 **Return value:**
 
@@ -38,5 +38,5 @@ export function beforeComponent(com: Component): On
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

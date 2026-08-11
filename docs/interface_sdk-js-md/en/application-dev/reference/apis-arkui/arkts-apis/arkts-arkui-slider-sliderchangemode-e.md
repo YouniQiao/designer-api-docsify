@@ -1,6 +1,6 @@
 # SliderChangeMode
 
-滑块的状态值。包括按下、拖动、离开以及点击滑动条使滑块位置时。
+State triggered by the event.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 Begin
 ```
 
-手势/鼠标接触或者按下滑块。
-
-**ArkTS-Dyn起始版本：** 7
-
-**ArkTS-Sta起始版本：** 23
+The user touches or clicks the thumb.
 
 **Since:** 23
 
@@ -38,11 +34,7 @@ Begin
 Moving
 ```
 
-正在拖动滑块过程中。
-
-**ArkTS-Dyn起始版本：** 7
-
-**ArkTS-Sta起始版本：** 23
+The user is dragging the slider.
 
 **Since:** 23
 
@@ -60,15 +52,7 @@ Moving
 End
 ```
 
-手势/鼠标离开滑块。
-
-**说明：**
-
-异常值恢复成默认值时触发，即value设置小于min或大于max。
-
-**ArkTS-Dyn起始版本：** 7
-
-**ArkTS-Sta起始版本：** 23
+The user stops dragging the slider by lifting their finger or releasing the mouse device.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The trigger occurs when an invalid value is restored to the default value, that is, when the value is set to less than min or greater than max.&lt;/p&gt;
 
 **Since:** 23
 
@@ -86,11 +70,7 @@ End
 Click
 ```
 
-点击滑动条使滑块位置移动。
-
-**ArkTS-Dyn起始版本：** 8
-
-**ArkTS-Sta起始版本：** 23
+The user moves the thumb by touching or clicking the track.
 
 **Since:** 23
 

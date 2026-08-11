@@ -1,14 +1,7 @@
 # HapticFeedback
 
-简单而通用的振动效果。根据各设备的马达器件不同，同一振动效果的频率会有差异，但效果的频率趋向是统一的。这几种振动效果是EffectId参数的具体值，使用方法参考  
-[vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)或[vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)接口下发  
-[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)形式振动的示例代码。
-
-> **说明：**
-> 
-> 由于设备存在多样性，建议使用预置效果前先使用
-> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)&lt;
-&gt; sup>10+&lt;/sup&gt;或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)接口查询当前设备是否支持该预置效果。
+Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects correspond to the specific **EffectId** values. For details, see the sample code that demonstrates how to use  
+[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration) to deliver the vibration effect defined by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md).
 
 **Since:** 12
 
@@ -24,7 +17,7 @@
 EFFECT_SOFT = 'haptic.effect.soft'
 ```
 
-较松散的振动效果，频率偏低。适用于轻柔触觉反馈场景。
+Soft vibration, low frequency.
 
 **Since:** 12
 
@@ -40,7 +33,7 @@ EFFECT_SOFT = 'haptic.effect.soft'
 EFFECT_HARD = 'haptic.effect.hard'
 ```
 
-较沉重的振动效果，频率居中。适用于坚定触觉反馈场景。
+Hard vibration, medium frequency.
 
 **Since:** 12
 
@@ -56,7 +49,7 @@ EFFECT_HARD = 'haptic.effect.hard'
 EFFECT_SHARP = 'haptic.effect.sharp'
 ```
 
-较尖锐的振动效果，频率偏高。适用于警示触觉反馈场景。
+Sharp vibration, high frequency.
 
 **Since:** 12
 
@@ -72,7 +65,7 @@ EFFECT_SHARP = 'haptic.effect.sharp'
 EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
 ```
 
-表达成功通知的振动效果。适用于操作成功提醒场景。
+Vibration for a success notification.
 
 **Since:** 18
 
@@ -88,7 +81,7 @@ EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
 EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'
 ```
 
-表达失败通知的振动效果。适用于操作失败提醒场景。
+Vibration for a failure notification.
 
 **Since:** 18
 
@@ -104,7 +97,7 @@ EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'
 EFFECT_NOTICE_WARNING = 'haptic.notice.warning'
 ```
 
-表达警告通知的振动效果。适用于风险警告提醒场景。
+Vibration for an alert.
 
 **Since:** 18
 

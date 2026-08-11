@@ -1,6 +1,6 @@
 # GaugeOptions
 
-数据量规图表选项。
+Defines Gauge constructor options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 max?: double
 ```
 
-当前数据段最大值。默认值：100。&lt;br&gt;**说明：**max小于min时使用默认值0和100。
+Set current segment maximum value.Anonymous Object Rectification.Default value: 100.&lt;br&gt;**Note: * *If max is less than min, the default values 0 and 100 are used.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ max?: double
 min?: double
 ```
 
-当前数据段最小值。默认值：0。
+Set current segment minimum value.Anonymous Object Rectification.Default value: 0.
 
 **Type:** double
 
@@ -56,13 +56,7 @@ min?: double
 value: double | undefined
 ```
 
-量规图的当前数据值，即图中指针指向位置。用于组件创建时量规图初始值的预置。
-
-默认值：0
-
-**说明：**
-
-value不在min和max范围内时使用min作为默认值。
+Set current data value.Anonymous Object Rectification.
 
 **Type:** double \| undefined
 

@@ -6,12 +6,6 @@
  > - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.router](../../../reference/apis-arkui/js-apis-md)。
 
 
-## 导入模块
-
-```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

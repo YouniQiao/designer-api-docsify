@@ -1,6 +1,6 @@
 # ResolvedUIContext
 
-UIContext.resolveUIContext接口的返回值类型，属于UIContext类型的子类，额外包含获取该UIContext的解析策略。
+Defines the result of UIContext.resolveUIContext.This class is a subclass of UIContext and additionally provides the strategy used to obtain this UIContext.
 
 **Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 strategy: ResolveStrategy
 ```
 
-UIContext的解析策略
+Resolving strategy of the UIContext.
 
 **Type:** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 

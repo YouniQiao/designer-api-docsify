@@ -1,11 +1,5 @@
 # startAppTraceCapture
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## startAppTraceCapture
 
 ```TypeScript
@@ -40,12 +34,14 @@ function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): st
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
-| 11400104 | Abnormal trace status. |
-| 11400103 | No write permission on the file. |
-| 11400102 | Capture trace already enabled. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Abnormal trace status. |
+| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) | No write permission on the file. |
+| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) | Capture trace already enabled. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -57,7 +53,27 @@ let limitSize: number = 1024 * 1024;
 
 try {
   let fileName: string = hidebug.startAppTraceCapture(tags, flag, limitSize);
-  console.info(`fileName = ${fileName}`);
+  // code block
+  // ...
+  // code block
+  hidebug.stopAppTraceCapture();
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tags: long[] = [hidebug.tags.ABILITY_MANAGER, hidebug.tags.ARKUI];
+let flag: hidebug.TraceFlag = hidebug.TraceFlag.MAIN_THREAD;
+let limitSize: int = 1024 * 1024;
+
+try {
+  let fileName: string = hidebug.startAppTraceCapture(tags, flag, limitSize);
   // code block
   // ...
   // code block

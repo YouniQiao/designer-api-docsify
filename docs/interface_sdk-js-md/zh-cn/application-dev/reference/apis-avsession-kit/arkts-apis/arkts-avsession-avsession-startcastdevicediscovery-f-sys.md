@@ -1,11 +1,5 @@
 # startCastDeviceDiscovery（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## startCastDeviceDiscovery
 
 ```TypeScript
@@ -34,7 +28,7 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -74,15 +68,15 @@ function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
 ```TypeScript
 let filter = 2;
-avSession.startCastDeviceDiscovery(filter, () => {
-    console.info('Succeeded in starting cast device discovery.');
+avSession.startCastDeviceDiscovery(filter, (err) => {
+  console.info('startCastDeviceDiscovery successfully');
 });
 ```
 
@@ -122,8 +116,8 @@ function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 202 | Not System App.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -131,7 +125,7 @@ function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Pro
 let filter = 2;
 let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
 avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('Succeeded in starting cast device discovery.');
+  console.info('startCastDeviceDiscovery successfully');
 });
 ```
 

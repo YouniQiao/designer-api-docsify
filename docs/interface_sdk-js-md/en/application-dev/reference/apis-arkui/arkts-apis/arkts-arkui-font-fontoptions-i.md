@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 familyName: string | Resource
 ```
 
-设置注册的字体名称。
+The font name to register.
 
 **Type:** string \| Resource
 
@@ -40,11 +40,7 @@ familyName: string | Resource
 familySrc: string | Resource
 ```
 
-设置注册字体文件的路径。
-
-**说明：**
-
-读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。
+The path of the font file.
 
 **Type:** string \| Resource
 

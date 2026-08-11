@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.MultiNavigation
 
-## 导入模块
-
-```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

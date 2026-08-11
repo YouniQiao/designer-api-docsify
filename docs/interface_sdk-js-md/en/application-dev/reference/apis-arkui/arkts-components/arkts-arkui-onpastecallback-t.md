@@ -4,7 +4,7 @@
 declare type OnPasteCallback = (content: string, event: PasteEvent) => void
 ```
 
-粘贴回调。
+Defines the callback used to return the pasted text content.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnPasteCallback = (content: string, event: PasteEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string | Yes | 粘贴的文本内容。 |
-| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | Yes | 用户自定义的粘贴事件。 |
+| content | string | Yes | Text to be pasted. |
+| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | Yes | Custom paste event. |
 

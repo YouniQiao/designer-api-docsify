@@ -9,7 +9,7 @@ export declare function GridCol(
 ): GridColAttribute
 ```
 
-栅格列布局组件。
+Defines GridCol Component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ export declare function GridCol(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | No | 栅格布局子组件参数。 |
+| option | [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | No | GridCol options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
@@ -46,9 +46,9 @@ export declare function GridCol(
 
 Defines GridCol Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,7 +63,7 @@ Defines GridCol Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridColAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## color
 
 ```TypeScript
@@ -84,7 +78,7 @@ textDecoration?: TextDecorationType
 
 装饰线类型，默认为NONE。
 
-**类型：** [TextDecorationType](../../apis-arkui/arkts-apis/arkts-arkui-textdecorationtype-e.md)
+**类型：** [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md)
 
 **起始版本：** 12
 

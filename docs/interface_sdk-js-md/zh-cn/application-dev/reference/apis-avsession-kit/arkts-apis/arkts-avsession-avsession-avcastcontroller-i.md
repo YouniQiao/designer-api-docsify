@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## getAVPlaybackState
 
 ```TypeScript
@@ -46,7 +40,7 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getAVPlaybackState
 
@@ -76,7 +70,7 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getCurrentItem
 
@@ -104,7 +98,7 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getCurrentItem
 
@@ -134,7 +128,7 @@ getCurrentItem(): Promise<AVQueueItem>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getRecommendedResolutionLevel
 
@@ -170,7 +164,7 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getSupportedDecoders
 
@@ -200,7 +194,7 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getSupportedHdrCapabilities
 
@@ -230,7 +224,7 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getSupportedPlaySpeeds
 
@@ -266,7 +260,7 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## getValidCommands
 
@@ -294,7 +288,7 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## getValidCommands
 
@@ -322,7 +316,7 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## off('playbackStateChange')
 
@@ -353,8 +347,8 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('mediaItemChange')
 
@@ -384,8 +378,8 @@ off(type: 'mediaItemChange'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('playNext')
 
@@ -415,8 +409,8 @@ off(type: 'playNext'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('playPrevious')
 
@@ -446,8 +440,8 @@ off(type: 'playPrevious'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('requestPlay')
 
@@ -476,8 +470,8 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('endOfStream')
 
@@ -506,8 +500,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('seekDone')
 
@@ -537,8 +531,8 @@ off(type: 'seekDone'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('validCommandChange')
 
@@ -567,9 +561,9 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('videoSizeChange')
 
@@ -597,13 +591,13 @@ off(type: 'videoSizeChange'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## 示例
 
 ```TypeScript
-avCastController.off('videoSizeChange');
+aVCastController.off('videoSizeChange');
 ```
 
 ## off('error')
@@ -634,14 +628,14 @@ off(type: 'error'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## off('castControlGenericError')
 
@@ -672,7 +666,7 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlIoError')
 
@@ -703,7 +697,7 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlParsingError')
 
@@ -734,7 +728,7 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlDecodingError')
 
@@ -765,7 +759,7 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlAudioRendererError')
 
@@ -796,7 +790,7 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlDrmError')
 
@@ -827,7 +821,7 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('keyRequest')
 
@@ -858,8 +852,8 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## off('customDataChange')
 
@@ -890,7 +884,7 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offCastControlAudioRendererError
 
@@ -1050,7 +1044,7 @@ Unregister listener for custom data sent from remote device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offEndOfStream
 
@@ -1078,7 +1072,7 @@ Unregister endOfStream state callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offError
 
@@ -1100,13 +1094,13 @@ Unregister listens for playback error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## offKeyRequest
 
@@ -1134,7 +1128,7 @@ Unregister listener for drm key request.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offMediaItemChange
 
@@ -1156,7 +1150,7 @@ Unregister listener for current media item playback events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offPlayNext
 
@@ -1178,7 +1172,7 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offPlayPrevious
 
@@ -1200,7 +1194,7 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offPlaybackStateChange
 
@@ -1228,7 +1222,7 @@ Unregister playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offRequestPlay
 
@@ -1256,7 +1250,7 @@ Unregister requested playback command callback sent by remote side or media cent
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offSeekDone
 
@@ -1278,7 +1272,7 @@ Unregister listens for playback events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## offValidCommandChange
 
@@ -1306,8 +1300,8 @@ Unregister the valid commands of the casted session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offVideoSizeChange
 
@@ -1329,7 +1323,13 @@ Unregister listener for video size change event, used at remote side.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+## 示例
+
+```TypeScript
+aVCastController.offVideoSizeChange();
+```
 
 ## on('playbackStateChange')
 
@@ -1363,8 +1363,8 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('mediaItemChange')
 
@@ -1397,8 +1397,8 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('playNext')
 
@@ -1431,8 +1431,8 @@ on(type: 'playNext', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('playPrevious')
 
@@ -1465,8 +1465,8 @@ on(type: 'playPrevious', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('requestPlay')
 
@@ -1497,8 +1497,8 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('endOfStream')
 
@@ -1529,8 +1529,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('seekDone')
 
@@ -1563,8 +1563,8 @@ on(type: 'seekDone', callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('validCommandChange')
 
@@ -1595,9 +1595,9 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('videoSizeChange')
 
@@ -1628,13 +1628,13 @@ on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## 示例
 
 ```TypeScript
-avCastController.on('videoSizeChange', (width: number, height: number) => {
+aVCastController.on('videoSizeChange', (width: number, height: number) => {
   console.info(`width ：${width} `);
   console.info(`height：${height} `);
 });
@@ -1671,14 +1671,14 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## on('castControlGenericError')
 
@@ -1711,21 +1711,21 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6611108 | Operation is not allowed. |
-| 6611104 | The specified playback speed is not supported. |
-| 6611105 | The action failed because either the media source device or the media sink device has been revoked. |
-| 6611106 | The parameter is invalid, for example, the url is illegal to play. |
-| 6611107 | Allocation of memory failed. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6611004 | The runtime check failed. |
-| 6611100 | Cross-device data transmission is locked. |
-| 6611101 | The specified seek mode is not supported. |
-| 6611102 | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| 6611103 | The specified playback mode is not supported. |
-| 6611000 | The error code for cast control is unspecified. |
-| 6611001 | An unspecified error occurs in the remote player. |
-| 6611002 | The playback position falls behind the live window. |
-| 6611003 | The process of cast control times out. |
+| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-设备吊销) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-传入非法参数) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-内存分配失败) | Allocation of memory failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-非法seek目标) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) | The process of cast control times out. |
 
 ## on('castControlIoError')
 
@@ -1758,24 +1758,24 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6612004 | The HTTP server returns an unexpected HTTP response status code. |
-| 6612100 | The media does not contain any contents that can be played. |
-| 6612005 | The file does not exist. |
-| 6612101 | The media cannot be read, for example, because of dust or scratches. |
-| 6612006 | No permission is granted to perform the IO operation. |
-| 6612102 | This resource is already in use. |
-| 6612007 | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| 6612103 | The content using the validity interval has expired. |
-| 6612000 | An unspecified input/output error occurs. |
-| 6612001 | Network connection failure. |
-| 6612002 | Network timeout. |
-| 6612003 | Invalid "Content-Type" HTTP header. |
-| 6612008 | Reading data out of the data bound. |
-| 6612104 | Using the requested content to play is not allowed. |
-| 6612105 | The use of the allowed content cannot be verified. |
-| 6612106 | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| 6612107 | An error occurs when sending packet from source device to sink device. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-文件不存在) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-资源正在使用) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-网络连接失败) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-网络超时) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) | An error occurs when sending packet from source device to sink device. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## on('castControlParsingError')
 
@@ -1808,12 +1808,12 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6613004 | Unsupported feature in the media manifest. |
-| 6613000 | Unspecified error related to content parsing. |
-| 6613001 | Parsing error associated with media container format bit streams. |
-| 6613002 | Parsing error associated with the media manifest. |
-| 6613003 | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-未知解析错误) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-非法类型) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 
 ## on('castControlDecodingError')
 
@@ -1846,13 +1846,13 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6614004 | The format of the content to decode exceeds the capabilities of the device. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6614005 | The format of the content to decode is not supported. |
-| 6614000 | Unspecified decoding error. |
-| 6614001 | Decoder initialization failed. |
-| 6614002 | Decoder query failed. |
-| 6614003 | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) | The format of the content to decode exceeds the capabilities of the device. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) | Decoding the media samples failed. |
 
 ## on('castControlAudioRendererError')
 
@@ -1885,10 +1885,10 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6615000 | Unspecified errors related to the audio renderer. |
-| 6615001 | Initializing the audio renderer failed. |
-| 6615002 | The audio renderer fails to write data. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) | The audio renderer fails to write data. |
 
 ## on('castControlDrmError')
 
@@ -1921,17 +1921,17 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6616004 | Failed to obtain a license. |
-| 6616100 | An error occurs when the DRM processes the key response. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6616005 | The operation is disallowed by the license policy. |
-| 6616006 | An error occurs in the DRM system. |
-| 6616007 | The device has revoked DRM privileges. |
-| 6616000 | Unspecified error related to DRM. |
-| 6616001 | The chosen DRM protection scheme is not supported by the device. |
-| 6616002 | Device provisioning failed. |
-| 6616003 | The DRM-protected content to play is incompatible. |
-| 6616008 | The DRM license being loaded into the open DRM session has expired. |
+| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) | An error occurs when the DRM processes the key response. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm系统错误) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) | The DRM license being loaded into the open DRM session has expired. |
 
 ## on('keyRequest')
 
@@ -1964,8 +1964,8 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## on('customDataChange')
 
@@ -1996,7 +1996,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onCastControlAudioRendererError
 
@@ -2024,9 +2024,9 @@ Register listeners for cast control audio renderer error error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6615000 | Unspecified errors related to the audio renderer. |
-| 6615001 | Initializing the audio renderer failed. |
-| 6615002 | The audio renderer fails to write data. |
+| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) | The audio renderer fails to write data. |
 
 ## onCastControlDecodingError
 
@@ -2054,12 +2054,12 @@ Register listeners for cast control decoding error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6614004 | The format of the content to decode exceeds the capabilities of the device. |
-| 6614005 | The format of the content to decode is not supported. |
-| 6614000 | Unspecified decoding error. |
-| 6614001 | Decoder initialization failed. |
-| 6614002 | Decoder query failed. |
-| 6614003 | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) | The format of the content to decode exceeds the capabilities of the device. |
+| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) | Decoding the media samples failed. |
 
 ## onCastControlDrmError
 
@@ -2087,16 +2087,16 @@ Register listeners for cast control drm error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6616004 | Failed to obtain a license. |
-| 6616100 | An error occurs when the DRM processes the key response. |
-| 6616005 | The operation is disallowed by the license policy. |
-| 6616006 | An error occurs in the DRM system. |
-| 6616007 | The device has revoked DRM privileges. |
-| 6616000 | Unspecified error related to DRM. |
-| 6616001 | The chosen DRM protection scheme is not supported by the device. |
-| 6616002 | Device provisioning failed. |
-| 6616003 | The DRM-protected content to play is incompatible. |
-| 6616008 | The DRM license being loaded into the open DRM session has expired. |
+| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) | An error occurs when the DRM processes the key response. |
+| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm系统错误) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) | The DRM license being loaded into the open DRM session has expired. |
 
 ## onCastControlGenericError
 
@@ -2124,20 +2124,20 @@ Register listeners for cast control generic error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6611108 | Operation is not allowed. |
-| 6611104 | The specified playback speed is not supported. |
-| 6611105 | The action failed because either the media source device or the media sink device has been revoked. |
-| 6611106 | The parameter is invalid, for example, the url is illegal to play. |
-| 6611107 | Allocation of memory failed. |
-| 6611004 | The runtime check failed. |
-| 6611100 | Cross-device data transmission is locked. |
-| 6611101 | The specified seek mode is not supported. |
-| 6611102 | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| 6611103 | The specified playback mode is not supported. |
-| 6611000 | The error code for cast control is unspecified. |
-| 6611001 | An unspecified error occurs in the remote player. |
-| 6611002 | The playback position falls behind the live window. |
-| 6611003 | The process of cast control times out. |
+| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-设备吊销) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-传入非法参数) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-内存分配失败) | Allocation of memory failed. |
+| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-非法seek目标) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) | The process of cast control times out. |
 
 ## onCastControlIoError
 
@@ -2165,23 +2165,23 @@ Register listeners for cast control input/output error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6612004 | The HTTP server returns an unexpected HTTP response status code. |
-| 6612100 | The media does not contain any contents that can be played. |
-| 6612005 | The file does not exist. |
-| 6612101 | The media cannot be read, for example, because of dust or scratches. |
-| 6612006 | No permission is granted to perform the IO operation. |
-| 6612102 | This resource is already in use. |
-| 6612007 | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| 6612103 | The content using the validity interval has expired. |
-| 6612000 | An unspecified input/output error occurs. |
-| 6612001 | Network connection failure. |
-| 6612002 | Network timeout. |
-| 6612003 | Invalid "Content-Type" HTTP header. |
-| 6612008 | Reading data out of the data bound. |
-| 6612104 | Using the requested content to play is not allowed. |
-| 6612105 | The use of the allowed content cannot be verified. |
-| 6612106 | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| 6612107 | An error occurs when sending packet from source device to sink device. |
+| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-文件不存在) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-资源正在使用) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-网络连接失败) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-网络超时) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) | An error occurs when sending packet from source device to sink device. |
 
 ## onCastControlParsingError
 
@@ -2209,11 +2209,11 @@ Register listeners for cast control parsing error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6613004 | Unsupported feature in the media manifest. |
-| 6613000 | Unspecified error related to content parsing. |
-| 6613001 | Parsing error associated with media container format bit streams. |
-| 6613002 | Parsing error associated with the media manifest. |
-| 6613003 | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-未知解析错误) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-非法类型) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 
 ## onCustomDataChange
 
@@ -2241,7 +2241,7 @@ Register listener for custom data sent from remote device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onEndOfStream
 
@@ -2269,7 +2269,7 @@ Register endOfStream state callback.Application needs update the new media resou
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onError
 
@@ -2297,13 +2297,13 @@ Register listeners for playback error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## onKeyRequest
 
@@ -2331,7 +2331,7 @@ Register listener for drm key request.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onMediaItemChange
 
@@ -2359,7 +2359,7 @@ Register listener for current media item playback events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onPlayNext
 
@@ -2387,7 +2387,7 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onPlayPrevious
 
@@ -2415,7 +2415,7 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onPlaybackStateChange
 
@@ -2444,7 +2444,7 @@ Register playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onPlaybackStateChangeAll
 
@@ -2472,7 +2472,7 @@ Register playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onRequestPlay
 
@@ -2500,7 +2500,7 @@ Register requested playback command callback sent by remote side or media center
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onSeekDone
 
@@ -2528,7 +2528,7 @@ Register listens for playback events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## onValidCommandChange
 
@@ -2556,8 +2556,8 @@ Register the valid commands of the casted session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onVideoSizeChange
 
@@ -2585,7 +2585,16 @@ Register listener for video size change event, used at remote side.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+## 示例
+
+```TypeScript
+aVCastController.onVideoSizeChange((width: int, height: int) => {
+  console.info(`width ：${width} `);
+  console.info(`height：${height} `);
+});
+```
 
 ## prepare
 
@@ -2614,9 +2623,9 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
 ## prepare
 
@@ -2652,9 +2661,9 @@ prepare(item: AVQueueItem): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
 ## processMediaKeyResponse
 
@@ -2691,8 +2700,8 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
 ## release
 
@@ -2720,7 +2729,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## release
 
@@ -2750,7 +2759,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## sendControlCommand
 
@@ -2779,10 +2788,10 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
-| 6600105 | Invalid session command |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 
 ## sendControlCommand
 
@@ -2818,10 +2827,10 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
-| 6600105 | Invalid session command |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 
 ## sendCustomData
 
@@ -2845,7 +2854,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 &lt;br&gt;服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 &lt;br&gt;服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -2857,7 +2866,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## start
 
@@ -2892,9 +2901,9 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
 ## start
 
@@ -2936,9 +2945,9 @@ start(item: AVQueueItem): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
 ## update
 
@@ -2974,6 +2983,6 @@ update(item: AVQueueItem): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 

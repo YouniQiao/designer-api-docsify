@@ -1,6 +1,6 @@
 # PiPControlType
 
-控制面板控件类型枚举。
+Enumerates the types of components displayed on the PiP controller.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 VIDEO_PLAY_PAUSE = 0
 ```
 
-播放/暂停直播控件组。
+Play/Pause component group for live video.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ VIDEO_PLAY_PAUSE = 0
 VIDEO_PREVIOUS = 1
 ```
 
-视频上一个控件。
+Previous component in video scenarios.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ VIDEO_PREVIOUS = 1
 VIDEO_NEXT = 2
 ```
 
-视频下一个控件。
+Next component in video scenarios.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ VIDEO_NEXT = 2
 FAST_FORWARD = 3
 ```
 
-视频快进控件
+Fast-forward component in video scenarios.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ FAST_FORWARD = 3
 FAST_BACKWARD = 4
 ```
 
-视频快退控件。
+Rewind component in video scenarios.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ FAST_BACKWARD = 4
 HANG_UP_BUTTON = 5
 ```
 
-挂断控件。
+Hang-up component.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ HANG_UP_BUTTON = 5
 MICROPHONE_SWITCH = 6
 ```
 
-打开/关闭麦克风控件。
+Microphone on/off component.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ MICROPHONE_SWITCH = 6
 CAMERA_SWITCH = 7
 ```
 
-打开/关闭摄像头控件。
+Camera on/off component.
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ CAMERA_SWITCH = 7
 MUTE_SWITCH = 8
 ```
 
-打开/关闭静音控件。
+Mute/Unmute component.
 
 **Since:** 12
 

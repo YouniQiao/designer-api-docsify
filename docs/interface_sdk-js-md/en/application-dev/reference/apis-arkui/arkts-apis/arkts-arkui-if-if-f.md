@@ -9,7 +9,7 @@ export declare function If(
 ): IfAttribute
 ```
 
-定义If组件
+Defines If Component.
 
 **Since:** 26.0.0
 
@@ -25,8 +25,8 @@ export declare function If(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | boolean | Yes | 'If'分支对应的条件 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | 'If'分支需要运行的代码 |
+| condition | boolean | Yes | condition of the branch. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function If(
 ): IfAttribute
 ```
 
-定义If组件。它需要在组件属性设置开始时调用setIfOptions。并且它需要在组件属性设置结束时调用applyAttributeFinish。
+Defines If Component. It requires calling setIfOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,12 +62,12 @@ export declare function If(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IfAttribute&gt; | Yes | 回调来设置If的属性 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | 分支的逻辑代码。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IfAttribute&gt; | Yes | callback to set up If's attributes. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IfAttribute](arkts-arkui-if-ifattribute-i.md) | If的属性。 |
+| [IfAttribute](arkts-arkui-if-ifattribute-i.md) | The attribute of If. |
 

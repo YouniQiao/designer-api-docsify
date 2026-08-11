@@ -1,11 +1,5 @@
 # createFilter
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## createFilter
 
 ```TypeScript
@@ -31,7 +25,6 @@ function createFilter(): Filter
 ## 示例
 
 ```TypeScript
-// 创建Filter实例
-let filter: uiEffect.Filter = uiEffect.createFilter();
+let filter : uiEffect.Filter = uiEffect.createFilter()
 ```
 

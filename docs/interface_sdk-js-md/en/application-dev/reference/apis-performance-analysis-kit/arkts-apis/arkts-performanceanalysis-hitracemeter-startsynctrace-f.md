@@ -12,7 +12,8 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-标记一个同步跟踪耗时任务的开始，分级控制跟踪输出。适用于需要跟踪同步代码块执行耗时的场景，能够帮助开发者定位同步操作的耗时问题，优化应用响应速度。具体示例可参考[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace)中的示例。
+Starts a synchronous trace with the trace output level specified. For details, see  
+[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace).
 
 **Since:** 19
 
@@ -28,9 +29,9 @@ function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | 跟踪输出级别。 |
-| name | string | Yes | 要跟踪的任务名称。由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议name和customArgs的总 长度不要超过420Byte。 |
-| customArgs | string | No | 键值对，格式key=value，多个键值对用逗号分隔，用于记录额外的业务信息或调试信息（如记录函数参数、 返回值等）。当需要附加自定义数据用于同步跟踪的trace分析时传入此参数，不需要附加数据时不传入即可。默认值为空字符串。由于单条trace记录的 总长度限制为512Byte，超过的部分将会被截断，建议name和customArgs的总长度不要超过420Byte。 |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the trace to start. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
 
 ## Examples
 

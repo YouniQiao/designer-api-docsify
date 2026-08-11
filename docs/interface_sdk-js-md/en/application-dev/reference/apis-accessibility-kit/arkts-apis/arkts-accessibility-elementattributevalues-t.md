@@ -4,8 +4,8 @@
 export type ElementAttributeValues = _ElementAttributeValues
 ```
 
-表示节点元素具备的属性名称及属性值类型信息，请参考  
-[ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md)。
+Provides attribute names and value types of a node element. For details, see   
+[ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md).
 
 **Since:** 10
 

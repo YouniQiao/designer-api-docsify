@@ -1,6 +1,6 @@
 # XComponentOptions
 
-定义XComponent的具体配置参数。
+Defines the xcomponent options.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 screenId?: long
 ```
 
-给组件设置关联屏幕ID，通过此项可在组件上显示关联屏幕画面。屏幕ID可通过@ohos.screen模块的getAllScreens接口获取。
-
-默认值：0，表示主屏幕。
-
-**说明：**仅type为SURFACE时有效。
+Identifier of a screen.
 
 **Type:** long
 

@@ -1,6 +1,6 @@
 # DistortionMode (System API)
 
-非线性形变动画模式的枚举。
+Enum for distortion animation mode.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 DISTORTION_AUTO = 0
 ```
 
-distortion动画自适应实现
+Adaptive implementation of distortion animation
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ distortion动画自适应实现
 DISTORTION_ENABLED = 1
 ```
 
-distortion动画一直使能
+Distortion animation is enabled.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ distortion动画一直使能
 DISTORTION_DISABLED = 2
 ```
 
-禁用distortion动画。
+Distortion animation is disabled.
 
 **Since:** 26.0.0
 

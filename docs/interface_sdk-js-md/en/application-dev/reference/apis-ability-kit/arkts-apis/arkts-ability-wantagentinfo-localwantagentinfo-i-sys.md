@@ -1,7 +1,7 @@
 # LocalWantAgentInfo (System API)
 
-定义触发本地WantAgent所需要的信息，可以作为  
-[createLocalWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md#wantagentcreatelocalwantagent20)的入参创建指定的本地WantAgent对象。
+Defines the information required for triggering a local WantAgent object. The information can be used as an input parameter in  
+[createLocalWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md#wantagentcreatelocalwantagent20)to obtain a local WantAgent object.
 
 **Since:** 20
 
@@ -19,7 +19,7 @@
 operationType?: abilityWantAgent.OperationType
 ```
 
-将被执行的动作类型。
+Type of the operation to execute.
 
 **Type:** abilityWantAgent.OperationType
 
@@ -41,7 +41,7 @@ operationType?: abilityWantAgent.OperationType
 requestCode: int
 ```
 
-开发者自定义的请求码，用于标识将被执行的动作。
+Custom request code, which is used to identify the operation to execute.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,7 +63,7 @@ requestCode: int
 wants: Array<Want>
 ```
 
-将被执行的动作列表。当前只支持一个want。传入多个时只取wants数组的第一个成员。
+Array of all Want objects. Currently, only one Want object is supported. If multiple values are passed in, only the first member in the array is used.
 
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 

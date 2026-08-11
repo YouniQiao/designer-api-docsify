@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getPreferredLanguageList(): Array<string>
 ```
 
-获取系统偏好语言列表。
+Obtains the list of preferred languages.
 
 **Since:** 8
 
@@ -30,5 +30,5 @@ export function getPreferredLanguageList(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统偏好语言列表。 |
+| Array&lt;string&gt; | List of preferred languages. |
 

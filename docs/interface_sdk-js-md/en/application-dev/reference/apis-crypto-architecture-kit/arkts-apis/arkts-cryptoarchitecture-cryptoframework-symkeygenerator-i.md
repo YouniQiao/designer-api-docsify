@@ -1,7 +1,7 @@
 # SymKeyGenerator
 
-对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过  
-[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator)方法创建一个SymKeyGenerator实例。
+Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a  
+**SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 
 **Since:** 9
 
@@ -25,14 +25,15 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 ```
 
-将指定数据转换为对称密钥。使用callback异步回调。
+Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制
-> 密钥数据（如传入SHA256对应256位的密钥数据）。
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
+> example, a 256-bit key for SHA256).
 
-如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
+If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
 **Since:** 9
 
@@ -50,16 +51,16 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 指定的对称密钥材料。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | Yes | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to convert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -90,7 +91,7 @@ function testConvertKey() {
 convertKey(key: DataBlob): Promise<SymKey>
 ```
 
-将指定数据转换为对称密钥。使用Promise异步回调。
+Converts specified data into a symmetric key. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -108,21 +109,21 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 指定的密钥材料数据。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise对象，返回对称密钥SymKey。 |
+| Promise&lt;SymKey&gt; | Promise used to return the symmetric key generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -157,15 +158,17 @@ function testConvertKey() {
 convertKeySync(key: DataBlob): SymKey
 ```
 
-将指定数据转换为对称密钥。
+Converts specified data into a symmetric key.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据
-> （如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围
-> 内的任意二进制密钥数据。
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
+> example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is
+> created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is
+> supported.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -181,21 +184,21 @@ convertKeySync(key: DataBlob): SymKey
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 指定的对称密钥材料。 |
+| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | 对称密钥。 |
+| [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | Symmetric key obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -222,16 +225,15 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-获取对称密钥生成器随机生成的密钥。使用callback异步回调。
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
-
-> **说明：**
+> **NOTE：**
 > 
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥
-> 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过
-> [convertKey](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkey)
-> 方式生成对称密钥数据。
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
+> will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random
+> symmetric key generation is not supported. You can generate symmetric key data using
+> [convertKey](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkey).
 
 **Since:** 9
 
@@ -249,14 +251,14 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | Yes | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**Applicable version:** 26.0.0 and later |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -275,9 +277,7 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
 generateSymKey(): Promise<SymKey>
 ```
 
-获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。
-
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+Generates a random key using this symmetric key generator. This API uses a promise to return the result.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
 **Since:** 9
 
@@ -295,14 +295,14 @@ generateSymKey(): Promise<SymKey>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise对象，返回对称密钥SymKey。 |
+| Promise&lt;SymKey&gt; | Promise used to return the symmetric key generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**Applicable version:** 26.0.0 and later |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -325,19 +325,18 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-同步获取对称密钥生成器随机生成的密钥。
+Generates a random key using this symmetric key generator. This API returns the result synchronously.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
-
-> **说明：**
+> **NOTE：**
 > 
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的
-> 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
+> will be randomly generated.
 
-如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过  
-[convertKeySync](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkeysync)方式生成对称密钥数据。
+If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using  
+[convertKeySync](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkeysync).
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateSymKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link generateSymKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -353,14 +352,14 @@ generateSymKeySync(): SymKey
 
 | Type | Description |
 | --- | --- |
-| [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | 返回对称密钥SymKey。 |
+| [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | Symmetric key generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**Applicable version:** 26.0.0 and later |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -383,7 +382,7 @@ function testGenerateSymKeySync() {
 readonly algName: string
 ```
 
-对称密钥生成器指定的算法名称。
+Indicates the algorithm name of the SymKeyGenerator object.
 
 **Type:** string
 

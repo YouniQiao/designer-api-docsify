@@ -4,7 +4,7 @@
 type IconType = Resource | image.PixelMap
 ```
 
-描述图标的类型。
+Describes the icon types.
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ type IconType = Resource | image.PixelMap
 
 | Type | Description |
 | --- | --- |
-| Resource | 表示值类型为图片资源。 |
-| image.PixelMap | 表示值类型为图片。 |
+| Resource | Image resource. |
+| image.PixelMap | Image. |
 

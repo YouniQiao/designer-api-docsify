@@ -1,8 +1,6 @@
 # UIGridEvent
 
-frameNode中[getEvent('Grid')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventgrid19)方法的返回值，可用于给Grid节点设置滚动事件。
-
-UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。
+Defines a UIGridEvent which is used to set event to target component.
 
 **Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
 
@@ -20,9 +18,7 @@ UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecom
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the Grid did scroll.
 
 **Since:** 26.0.0
 
@@ -38,7 +34,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | onDidScroll事件的回调函数。 |
+| callback | [OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Grid did scroll. Passing undefined will unregister the callback. |
 
 ## setOnScrollIndex
 
@@ -46,9 +42,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](onScrollIndex)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the start and end positions of the display change.
 
 **Since:** 26.0.0
 
@@ -64,7 +58,7 @@ setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnGridScrollIndexCallback](../arkts-components/arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | Yes | onScrollIndex事件的回调函数。 |
+| callback | [OnGridScrollIndexCallback](../arkts-components/arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | Yes | callback function, triggered when start or end positions of the display change. Passing undefined will unregister the callback. |
 
 ## setOnWillScroll
 
@@ -72,9 +66,7 @@ setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-设置[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the Grid will scroll.
 
 **Since:** 26.0.0
 
@@ -90,5 +82,5 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | onWillScroll事件的回调函数。 |
+| callback | [OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Grid will scroll. Passing undefined will unregister the callback. |
 

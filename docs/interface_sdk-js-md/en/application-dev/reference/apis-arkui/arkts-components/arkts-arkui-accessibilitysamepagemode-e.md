@@ -1,6 +1,6 @@
 # AccessibilitySamePageMode
 
-当前跨进程嵌入式显示的组件和宿主应用的同page模式。
+Enumerates the same-page modes for cross-process embedded components and their host applications.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 SEMI_SILENT = 0
 ```
 
-跨进程嵌入式显示的组件拉起来的进程的page事件中如果是首次加载页面或者该事件页面的根节点发送的page事件会被忽略。
+Ignores initial page loading events and root node page events from the cross-process embedded component.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ SEMI_SILENT = 0
 FULL_SILENT = 1
 ```
 
-跨进程嵌入式显示的组件将忽略所有的page事件。
+Ignores all page events from the cross-process embedded component.
 
 **Since:** 18
 

@@ -1,5 +1,7 @@
 # AudioCapturerFilter (System API)
 
+Describe audio capturer filter.
+
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
@@ -21,6 +23,8 @@ import { audio } from 'kits/@kit.AudioKit';
 ```TypeScript
 capturerInfo?: AudioCapturerInfo
 ```
+
+Capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 

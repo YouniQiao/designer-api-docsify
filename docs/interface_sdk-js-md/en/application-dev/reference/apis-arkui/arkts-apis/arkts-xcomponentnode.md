@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [XComponentNode](arkts-arkui-xcomponentnode-c.md) | 定义XComponent Node。 |
+| [XComponentNode](arkts-arkui-xcomponentnode-c.md) | Defines XComponent Node. |
 

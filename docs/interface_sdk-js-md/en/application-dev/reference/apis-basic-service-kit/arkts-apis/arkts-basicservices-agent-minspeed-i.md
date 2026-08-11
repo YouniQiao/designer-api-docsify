@@ -1,7 +1,7 @@
 # MinSpeed
 
-任务的最低限速配置。若任务速度持续低于设定值并达到指定时长，则任务失败，失败原因为  
-[LOW_SPEED](arkts-basicservices-agent-faults-e.md)。
+Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is   
+[LOW_SPEED](arkts-basicservices-agent-faults-e.md).
 
 **Since:** 20
 
@@ -23,7 +23,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 duration: int
 ```
 
-允许低于最低速度的持续时间，单位为秒。若任务速度持续低于设定值达到该时长，则任务失败。设置为0表示不启用最低速度限制。
+Duration during which the task speed can be lower than the minimum speed, in seconds. If the task speed is lower than the preset value for a specified period of time, the task fails. If the value is set to **0**, there is no minimum speed limit.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -41,7 +41,7 @@ duration: int
 speed: long
 ```
 
-任务最低速度，单位为字节每秒（B/s）。若任务速度持续低于该值达到指定时长，则任务失败。设置为0表示不启用最低速度限制。
+Minimum speed of a task, in byte/s. If the task speed is lower than this value for a specified period of time, the task fails. If the value is set to **0**, there is no minimum speed limit.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

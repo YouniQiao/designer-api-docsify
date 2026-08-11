@@ -1,6 +1,6 @@
 # EmbeddedWindowModeFollowStrategy
 
-EmbeddedWindowModeFollowStrategy的不同类型的枚举。
+Enumeration of different types of EmbeddedWindowModeFollowStrategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ EmbeddedWindowModeFollowStrategy的不同类型的枚举。
 FOLLOW_HOST_WINDOW_MODE = 0
 ```
 
-跟随宿主应用的窗口模式配置。
+Follow the host application's window mode configuration.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ FOLLOW_HOST_WINDOW_MODE = 0
 FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 ```
 
-跟随EmbeddedUIExtensionAbility的窗口模式配置。
+Follow the EmbeddedUIExtensionAbility's window mode configuration.
 
 **Since:** 26.0.0
 

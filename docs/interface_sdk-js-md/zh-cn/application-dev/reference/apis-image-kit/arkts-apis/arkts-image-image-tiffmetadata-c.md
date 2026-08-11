@@ -10,12 +10,6 @@ TIFF metadata.
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## artist
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # DeviceType
 
-表示设备类型的枚举。
+Enumerates the device types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 INVALID = 0
 ```
 
-无效设备。
+Invalid device.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ INVALID = 0
 EARPIECE = 1
 ```
 
-听筒。
+Built-in earpiece.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ EARPIECE = 1
 SPEAKER = 2
 ```
 
-扬声器。
+Built-in speaker.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ SPEAKER = 2
 WIRED_HEADSET = 3
 ```
 
-有线耳机，带麦克风。
+Wired headset with a microphone.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ WIRED_HEADSET = 3
 WIRED_HEADPHONES = 4
 ```
 
-有线耳机，不带麦克风。
+Wired headset without a microphone.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ WIRED_HEADPHONES = 4
 BLUETOOTH_SCO = 7
 ```
 
-蓝牙设备SCO（Synchronous Connection Oriented）连接。
+Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ BLUETOOTH_SCO = 7
 BLUETOOTH_A2DP = 8
 ```
 
-蓝牙设备A2DP（Advanced Audio Distribution Profile）连接。
+Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ BLUETOOTH_A2DP = 8
 MIC = 15
 ```
 
-麦克风。
+Built-in microphone.
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ MIC = 15
 USB_HEADSET = 22
 ```
 
-USB耳机，带麦克风。
+USB Type-C headset.
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ USB耳机，带麦克风。
 DISPLAY_PORT = 23
 ```
 
-DisplayPort（显示接口，简称DP），用于外接扩展设备。
+Display port (DP), which is used to connect to external devices.
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ DisplayPort（显示接口，简称DP），用于外接扩展设备。
 REMOTE_CAST = 24
 ```
 
-音频被系统应用投送到其他的远程设备。
+Remote cast device.
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ REMOTE_CAST = 24
 USB_DEVICE = 25
 ```
 
-USB设备（不包含USB耳机）。
+USB device (excluding USB headsets).
 
 **Since:** 18
 
@@ -230,7 +230,7 @@ USB设备（不包含USB耳机）。
 HDMI = 27
 ```
 
-HDMI设备（例如HDMI、ARC、eARC等）。
+HDMI device (such as HDMI, ARC, and eARC).
 
 **Since:** 19
 
@@ -246,7 +246,7 @@ HDMI设备（例如HDMI、ARC、eARC等）。
 LINE_DIGITAL = 28
 ```
 
-有线数字设备（例如S/PDIF等）。
+Wired digital device (such as S/PDIF)
 
 **Since:** 19
 
@@ -259,18 +259,18 @@ LINE_DIGITAL = 28
 ## REMOTE_DAUDIO
 
 ```TypeScript
-REMOTE_DAUDIO = 25
+REMOTE_DAUDIO = 29
 ```
 
-Distributed virtual audio device.
+Distributed device.
 
-**Since:** 16
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-DeviceType-REMOTE_DAUDIO = 25--><!--Device-DeviceType-REMOTE_DAUDIO = 25-End-->
+<!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -280,9 +280,7 @@ Distributed virtual audio device.
 HEARING_AID = 30
 ```
 
-助听器设备。
-
-Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Hearing aid audio device.Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
 
 **Since:** 26.0.0
 
@@ -298,9 +296,7 @@ Note: This original device type can be obtained after it is declared via {@link 
 NEARLINK = 31
 ```
 
-星闪设备。
-
-Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Nearlink device.Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
 
 **Since:** 26.0.0
 
@@ -316,7 +312,7 @@ Note: This original device type can be obtained after it is declared via {@link 
 SYSTEM_PRIVATE = 200
 ```
 
-系统私有设备（由于该设备在系统中属于私有设备，因此应用程序可以忽略该设备）。
+System private device. (This device is a private device within the system, and applications can ignore it.)
 
 **Since:** 22
 
@@ -332,7 +328,7 @@ SYSTEM_PRIVATE = 200
 DEFAULT = 1000
 ```
 
-默认设备类型。
+Default device type.
 
 **Since:** 9
 

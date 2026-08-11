@@ -1,6 +1,6 @@
 # PixelMapDrawableDescriptor
 
-支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
+Use the PixelMapDrawableDescriptor class to get the resource of pixelmap or resource descriptor information.
 
 **Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
@@ -24,7 +24,7 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 constructor(src?: image.PixelMap | ResourceStr)
 ```
 
-PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceStr创建。
+Creates a new PixelMapDrawableDescriptor.
 
 **Since:** 26.0.0
 
@@ -40,5 +40,5 @@ PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceSt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr | No | PixelMap类型参数，存储PixelMap图片数据。 支持应用资源、系统资源、沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;）和Base64字符串 用于创建PixelMapDrawableDescriptor。<br>**Since:** 26.0.0 |
+| src | image.PixelMap \| ResourceStr | No | Pixelmap or ResourceStr to create PixelMapDrawableDescriptor. |
 

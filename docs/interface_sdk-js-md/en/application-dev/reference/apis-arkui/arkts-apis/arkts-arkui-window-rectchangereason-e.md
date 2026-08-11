@@ -1,6 +1,6 @@
 # RectChangeReason
 
-窗口矩形（窗口位置及窗口大小）变化的原因。
+Enumerates the reasons for window rectangle (position and size) changes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 UNDEFINED = 0
 ```
 
-默认值。
+Default value.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ UNDEFINED = 0
 MAXIMIZE = 1
 ```
 
-窗口最大化。
+The window is maximized.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ MAXIMIZE = 1
 RECOVER = 2
 ```
 
-窗口恢复到上一次的状态。
+The window is restored to the previous state.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ RECOVER = 2
 MOVE = 3
 ```
 
-窗口拖拽移动。
+The window is moved.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ MOVE = 3
 DRAG = 4
 ```
 
-窗口拖拽缩放。
+The window is zoomed in or out by dragging.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ DRAG = 4
 DRAG_START = 5
 ```
 
-窗口开始拖拽缩放。
+The window starts zooming in or out.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ DRAG_START = 5
 DRAG_END = 6
 ```
 
-窗口结束拖拽缩放。
+The window finishes zooming in or out.
 
 **Since:** 12
 

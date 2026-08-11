@@ -1,6 +1,6 @@
 # EntityInfoItem
 
-实体信息属性。
+Defines a list of entities.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 begin: int
 ```
 
-实体在输入字符串中的起始位置。
+Start position of the entity in the input string.The value should be an integer.
 
 **Type:** int
 
@@ -42,7 +42,7 @@ begin: int
 end: int
 ```
 
-实体在输入字符串中的终止位置。
+End position of the entity the input string.The value should be an integer.
 
 **Type:** int
 
@@ -62,7 +62,7 @@ end: int
 type: string
 ```
 
-实体的类型，当前支持phone_number和date类型。phone_number表示实体类型是电话号码，date表示实体类型是时间日期。
+Entity type. The value can be "phone_number" or "date". "phone_number" indicates that the entity is a phone number, and "date" indicates that the entity is a date.
 
 **Type:** string
 

@@ -82,7 +82,7 @@ Delay of each frame.Unit: ms, The value should be an integer.
 readonly loopCount?: int
 ```
 
-WebP图片动画循环的次数。如果取值为0，则表示不限次数。
+Loop count.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

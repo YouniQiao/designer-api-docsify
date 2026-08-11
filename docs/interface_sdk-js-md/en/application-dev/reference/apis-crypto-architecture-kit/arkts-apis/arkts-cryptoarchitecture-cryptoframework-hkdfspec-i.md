@@ -1,14 +1,17 @@
 # HKDFSpec
 
-密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为HKDF密钥派生函数进行密钥派生时的输入。
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for HKDF key derivation.
 
-> **说明：**
+> **NOTE：**
 > 
-> key指的是用户输入的最初的密钥材料。根据模式的不同info与salt可以传空，但是不可不传。
+> **key** is the original key material entered by the user. An empty string can be passed in for **info** and
+> **salt** based on the mode.
 > 
-> 例如：EXTRACT_AND_EXPAND模式需要输入全部的值，EXTRACT_ONLY模式info可以为空，在构建HKDFSpec的时候，info传入null值。
+> For example, if the mode is **EXTRACT_AND_EXPAND**, all parameter values must be passed in. If the mode is
+> **EXTRACT_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**.
 > 
-> 默认的模式为EXTRACT_AND_EXPAND，"HKDF|SHA256|EXTRACT_AND_EXPAND"等价于"HKDF|SHA256"。
+> The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF|SHA256|EXTRACT_AND_EXPAND** is equivalent to
+> **HKDF|SHA256**.
 
 **Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -32,7 +35,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 info: Uint8Array
 ```
 
-拓展信息。
+Information used to expand the key.
 
 **Type:** Uint8Array
 
@@ -52,7 +55,7 @@ info: Uint8Array
 key: string | Uint8Array
 ```
 
-密钥材料。
+Key material.
 
 **Type:** string \| Uint8Array
 
@@ -72,7 +75,7 @@ key: string | Uint8Array
 keySize: int
 ```
 
-派生得到的密钥字节长度，单位为bytes。
+Length of the derived key, in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -92,7 +95,7 @@ keySize: int
 salt: Uint8Array
 ```
 
-盐值。
+Salt value.
 
 **Type:** Uint8Array
 

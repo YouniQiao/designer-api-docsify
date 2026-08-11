@@ -1,10 +1,10 @@
 # FolderStackOptions
 
-FolderStack悬停态配置项对象，用于描述悬停态状态下需要移到上半屏的子组件相关信息。
-
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,11 +20,9 @@ FolderStack悬停态配置项对象，用于描述悬停态状态下需要移到
 upperItems?: Array<string>
 ```
 
-定义悬停态会被移到上半屏的子组件的id数组。
+Array of IDs of child components that will be moved to the upper half screen in the hover state.
 
-默认值：[]
-
-当悬停触发时，upperItems数组中的子组件自动避让折叠屏折痕区后移到上半屏，其它组件堆叠在下半屏区域。
+On hover, child components with IDs in this array automatically shift away from the crease area and move to the upper half screen, while other components are stacked in the lower half screen.
 
 **Type:** Array&lt;string&gt;
 

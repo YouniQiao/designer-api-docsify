@@ -1,6 +1,6 @@
 # ScanEffectOptions
 
-扫光效果选项。
+Defines the enable scan effect.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 enableScanEffect?: boolean
 ```
 
-扫光效果的开关。仅支持[ProgressType](../arkts-components/arkts-arkui-progresstype-e.md/arkts-arkui-progresstype-e.md)类型为Linear、Ring、Capsule的进度条。true：表示开启扫光效果。false：表示关闭扫光效果。默认值：false。
+Enable scan effect.Default value: false.
 
 **Type:** boolean
 

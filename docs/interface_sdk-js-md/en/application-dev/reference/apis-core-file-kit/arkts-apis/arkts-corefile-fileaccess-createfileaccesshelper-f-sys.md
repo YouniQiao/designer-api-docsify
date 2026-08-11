@@ -12,7 +12,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 function createFileAccessHelper(context: Context): FileAccessHelper
 ```
 
-以同步方法创建连接当前系统内所有文件管理服务的helper对象。
+Creates a **Helper** object to bind with all file management services in the system. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -107,7 +107,8 @@ function createFileAccessHelper02(context: common.UIAbilityContext) {
 function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper
 ```
 
-以同步方法创建连接指定wants的helper对象。
+Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The   
+**Helper** object provides file access and management capabilities.
 
 **Since:** 9
 

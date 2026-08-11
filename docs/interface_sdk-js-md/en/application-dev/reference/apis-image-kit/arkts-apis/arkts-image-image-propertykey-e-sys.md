@@ -1,12 +1,15 @@
 # PropertyKey
 
-表示Exif（Exchangeable image file format）图像信息的枚举。
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
 
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
-- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、  
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修改多个Exif字段）、  
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
+- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
+example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
+- The format example is used only to show how to modify values and read results. For details about how to use them,  
+see   
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(to modify a single Exif field),   
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)(to modify multiple Exif fields),   
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(to read a single Exif field), and   
+[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields).
 
 **Since:** 7
 
@@ -22,7 +25,7 @@
 XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 ```
 
-个性色卡模板名称。
+Describes xtstyle template name.
 
 **Since:** 26.0.0
 
@@ -42,7 +45,7 @@ XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 ```
 
-个性色卡自定义光影。
+Describes xtstyle custom light and shadow.
 
 **Since:** 26.0.0
 
@@ -62,7 +65,7 @@ XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 ```
 
-个性色卡自定义饱和度。
+Describes xtstyle custom saturation.
 
 **Since:** 26.0.0
 
@@ -82,7 +85,7 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 ```
 
-个性色卡自定义色调。
+Describes xtstyle custom hue.
 
 **Since:** 26.0.0
 
@@ -102,7 +105,7 @@ XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 ```
 
-个性色卡曝光参数。
+Describes xtstyle exposure param.
 
 **Since:** 26.0.0
 

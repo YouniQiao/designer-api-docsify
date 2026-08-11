@@ -1,8 +1,9 @@
 # ECCCommonParamsSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公私钥包含的公共参数，随机生成公/私钥。
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the ECC algorithm. It can be used to randomly generate a public or private key.
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
 **Inheritance/Implementation:** ECCCommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 a: bigint
 ```
 
-指定椭圆曲线的第一个系数a。
+First coefficient **a** of the elliptic curve.
 
 **Type:** bigint
 
@@ -50,7 +51,7 @@ a: bigint
 b: bigint
 ```
 
-指定椭圆曲线的第二个系数b。
+Second coefficient **b** of the elliptic curve.
 
 **Type:** bigint
 
@@ -72,7 +73,7 @@ b: bigint
 field: ECField
 ```
 
-指定椭圆曲线的域（当前只支持Fp域）。
+Field of the elliptic curve. Currently, only **Fp** is supported.
 
 **Type:** [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)
 
@@ -94,7 +95,7 @@ field: ECField
 g: Point
 ```
 
-指定基点g。
+Base point g.
 
 **Type:** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 
@@ -116,7 +117,7 @@ g: Point
 h: int
 ```
 
-指定余因子h。
+Cofactor **h**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -138,7 +139,7 @@ h: int
 n: bigint
 ```
 
-ECC算法中基点g的阶n。
+Order **n** of the base point **g** in the ECC algorithm.
 
 **Type:** bigint
 

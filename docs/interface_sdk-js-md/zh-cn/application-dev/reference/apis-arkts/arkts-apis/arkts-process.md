@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { process } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 函数
@@ -74,8 +68,8 @@ import { process } from 'kits/@kit.ArkTS';
 | 名称 | 说明 |
 | --- | --- |
 | [pid](arkts-arkts-process-con.md#pid) | 进程的 ID（PID）。 |
-| [tid](arkts-arkts-process-con.md#tid) | 线程的 ID（TID）。 |
-| [uid](arkts-arkts-process-con.md#uid) | 进程的用户标识（UID）。 |
+| [tid](arkts-arkts-process-con.md#tid) | 当前线程的tid。 |
+| [uid](arkts-arkts-process-con.md#uid) | 进程的用户标识。 |
 
 <!--Del-->
 ### 常量（系统接口）

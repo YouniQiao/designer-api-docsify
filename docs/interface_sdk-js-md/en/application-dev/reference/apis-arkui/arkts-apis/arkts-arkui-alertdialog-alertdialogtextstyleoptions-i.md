@@ -1,6 +1,6 @@
 # AlertDialogTextStyleOptions
 
-弹窗中message的截断方式。
+Defines TextStyle in the AlertDialog.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 wordBreak?: WordBreak
 ```
 
-弹窗message内容的文本截断方式。
-
-默认值：WordBreak.BREAK_ALL
+Set the word break type.
 
 **Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 

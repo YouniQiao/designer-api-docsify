@@ -1,7 +1,6 @@
 # MissionParameter (System API)
 
-作为  
-[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions)的入参，表示同步时所需参数的枚举。
+Parameters corresponding to mission.
 
 **Since:** 9
 
@@ -19,7 +18,7 @@
 deviceId: string
 ```
 
-表示设备ID。
+Device ID.
 
 **Type:** string
 
@@ -43,7 +42,7 @@ deviceId: string
 fixConflict: boolean
 ```
 
-表示是否存在版本冲突，true表示存在冲突，false表示不存在冲突。
+Whether a version conflict exists. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
@@ -67,7 +66,7 @@ fixConflict: boolean
 tag: int
 ```
 
-表示任务的标签，0表示默认标签。
+Tag of the mission. The value **0** means the default tag.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

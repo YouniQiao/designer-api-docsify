@@ -1,11 +1,5 @@
 # getDialogSessionInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { dialogSession } from 'kits/@kit.AbilityKit';
-```
-
 ## getDialogSessionInfo
 
 ```TypeScript
@@ -42,11 +36,11 @@ function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. |
-| 202 | The application is not system-app, can not use system-api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 
 
 ## getDialogSessionInfo
@@ -85,8 +79,8 @@ function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. |
-| 202 | The application is not system-app, can not use system-api. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 

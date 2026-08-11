@@ -1,6 +1,6 @@
 # Configuration
 
-表示当前设备的状态。
+Defines the device configuration.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 colorMode: ColorMode
 ```
 
-颜色模式。
+Color mode.
 
 **Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
 
@@ -42,7 +42,7 @@ colorMode: ColorMode
 deviceType: DeviceType
 ```
 
-设备类型。
+Device type.
 
 **Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
@@ -62,7 +62,7 @@ deviceType: DeviceType
 direction: Direction
 ```
 
-屏幕方向。
+Screen orientation modes.
 
 **Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 
@@ -82,7 +82,7 @@ direction: Direction
 locale: string
 ```
 
-语言文字国家地区。
+Language locale.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ locale: string
 mcc : int
 ```
 
-移动国家码。
+Mobile country code (MCC).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -122,7 +122,7 @@ mcc : int
 mnc : int
 ```
 
-移动网络码。
+Mobile network code (MNC).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -142,7 +142,7 @@ mnc : int
 screenDensity: ScreenDensity
 ```
 
-屏幕密度。
+Screen density
 
 **Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
 

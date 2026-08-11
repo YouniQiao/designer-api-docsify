@@ -1,6 +1,6 @@
 # @ohos.nearlink.constant
 
-nearlinkConstant的定义。
+The definition of nearlinkConstant.
 
 **Since:** 26.0.0
 

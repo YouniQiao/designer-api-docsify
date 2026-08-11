@@ -1,10 +1,6 @@
 # ArcScrollBarOptions
 
-ArcScrollBar的构造函数参数。
-
-> **说明：**
-> 
-> ArcScrollBar与可滚动组件需通过scroller进行绑定后方能实现联动，且ArcScrollBar与可滚动组件仅限于一对一的绑定方式。
+Defines the arc scroll bar options.
 
 **Since:** 23
 
@@ -26,7 +22,7 @@ import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
 scroller: Scroller
 ```
 
-可滚动组件的控制器，用于与可滚动组件进行绑定。
+Describes the controller for scrollable container.
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
@@ -44,7 +40,7 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。
+Sets the state of scroll bar.
 
 **Type:** [BarState](arkts-arkui-barstate-e.md)
 

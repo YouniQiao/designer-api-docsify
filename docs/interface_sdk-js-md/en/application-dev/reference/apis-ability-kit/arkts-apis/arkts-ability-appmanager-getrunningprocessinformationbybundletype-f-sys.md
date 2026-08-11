@@ -13,7 +13,7 @@ function getRunningProcessInformationByBundleType(
     bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>
 ```
 
-根据包类型获取当前运行进程的有关信息。使用Promise异步回调。
+Obtains the information about the running process based on the bundle type. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -31,22 +31,22 @@ function getRunningProcessInformationByBundleType(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleType | bundleManager.BundleType | Yes | 表示要查询的包类型。 |
+| bundleType | bundleManager.BundleType | Yes | Bundle type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回特定包类型的运行进程的信息。 |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the process information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

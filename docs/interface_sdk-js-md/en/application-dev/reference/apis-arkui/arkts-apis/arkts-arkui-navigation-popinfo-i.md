@@ -1,6 +1,6 @@
 # PopInfo
 
-下一个页面返回的回调信息载体。
+Indicates the information of the popped page.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 info: NavPathInfo
 ```
 
-页面触发返回时的当前页面信息，系统自动获取填入，无需开发者传入。
+The info of the popped page.
 
 **Type:** [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md)
 
@@ -36,7 +36,7 @@ info: NavPathInfo
 result: Object
 ```
 
-页面触发返回时的结果，开发者自定义对象。
+The result of the popped page.
 
 **Type:** Object
 

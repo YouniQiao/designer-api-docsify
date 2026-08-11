@@ -12,7 +12,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void
 ```
 
-根据共享资源标识更改共享邀请的状态，使用callback异步回调。
+Changes the invitation confirmation state based on the shared resource ID.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -28,17 +28,17 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | 端云共享数据的资源标识。 |
-| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | 更改邀请的状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | 回调函数。返回更改邀请状态的结果。 |
+| sharingResource | string | Yes | Shared resource ID. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | New confirmation state of the invitation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -61,7 +61,7 @@ cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.
 function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>
 ```
 
-根据共享资源标识更改共享邀请的状态，使用Promise异步回调。
+Changes the invitation confirmation state based on the shared resource ID.This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -77,22 +77,22 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | 端云共享数据的资源标识。 |
-| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | 更改邀请的状态。 |
+| sharingResource | string | Yes | Shared resource ID. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | New confirmation state of the invitation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回更改共享邀请状态的结果。 |
+| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

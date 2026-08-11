@@ -1,6 +1,6 @@
 # DismissReason
 
-关闭原因类型。
+Dismiss reason type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 PRESS_BACK = 0
 ```
 
-点击三键back、侧滑（左滑/右滑）、键盘ESC。
+Touching the Back button, swiping left or right on the screen, or pressing the Esc key.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PRESS_BACK = 0
 TOUCH_OUTSIDE = 1
 ```
 
-点击遮障层时。
+Touching the mask.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ TOUCH_OUTSIDE = 1
 CLOSE_BUTTON = 2
 ```
 
-点击关闭按钮。
+Touching the Close button.
 
 **Since:** 23
 
@@ -70,11 +70,7 @@ CLOSE_BUTTON = 2
 SLIDE_DOWN = 3
 ```
 
-下拉关闭。
-
-**说明：**
-
-该接口仅支持在[半模态转场](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)中使用。
+Slide down&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This API is effective only in sheet transition.&lt;/p&gt;
 
 **Since:** 23
 
@@ -92,11 +88,7 @@ SLIDE_DOWN = 3
 SLIDE = 4
 ```
 
-侧滑（左滑/右滑）关闭。默认表示向右滑动关闭，镜像场景表示向左滑动关闭，不支持选择向左或向右滑动。
-
-**说明：**
-
-该接口仅支持在[半模态转场](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)中使用。
+Slide, not slide down.Default means slide right, after mirroring it means slide left.Choosing to slide left or slide right is not supported.
 
 **Since:** 23
 

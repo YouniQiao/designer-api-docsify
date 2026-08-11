@@ -12,7 +12,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 function showToast(options: ShowToastOptions): void
 ```
 
-创建并显示文本提示框。
+Displays the notification text.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function showToast(options: ShowToastOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | 文本弹窗选项。 |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Options. |
 
 ## Examples
 

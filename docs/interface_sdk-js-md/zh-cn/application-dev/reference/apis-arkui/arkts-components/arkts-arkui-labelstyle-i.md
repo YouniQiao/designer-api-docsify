@@ -46,7 +46,7 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 
 设置Label文本自适应高度的方式。默认值是最大行数优先。
 
-**类型：** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md)
+**类型：** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md)
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # Base64
 
-将包含 Base64 数据的字符串或 Uint8Array 解码为重新分配的 Uint8Array。
+Decodes a string or Uint8Array containing Base64 data into a newly allocated Uint8Array.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { util } from 'kits/@kit.ArkTS';
 constructor()
 ```
 
-用于创建 **Base64** 对象的构造函数。
+A constructor used to create a **Base64** object.
 
 **Since:** 8
 
@@ -46,7 +46,7 @@ constructor()
 decode(src: Uint8Array | string): Promise<Uint8Array>
 ```
 
-将输入内容解码为 Uint8Array 对象。该接口使用 promise 返回结果。
+Decodes the input content into a Uint8Array object. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -64,13 +64,13 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | 要解码的 Uint8Array 对象或字符串。 |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 ## decodeSync
 
@@ -78,7 +78,7 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 decodeSync(src: Uint8Array | string): Uint8Array
 ```
 
-将输入内容解码为 Uint8Array 对象。
+Decodes the input content into a Uint8Array object.
 
 **Since:** 8
 
@@ -96,13 +96,13 @@ decodeSync(src: Uint8Array | string): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | 要解码的 Uint8Array 对象或字符串。 |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| Uint8Array | Uint8Array object obtained. |
 
 ## encode
 
@@ -110,7 +110,7 @@ decodeSync(src: Uint8Array | string): Uint8Array
 encode(src: Uint8Array): Promise<Uint8Array>
 ```
 
-将输入内容编码为 Uint8Array 对象。该接口使用 promise 返回结果。
+Encodes the input content into a Uint8Array object. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -128,13 +128,13 @@ encode(src: Uint8Array): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | 要编码的 Uint8Array 对象。 |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 ## encodeSync
 
@@ -142,7 +142,7 @@ encode(src: Uint8Array): Promise<Uint8Array>
 encodeSync(src: Uint8Array): Uint8Array
 ```
 
-对输入的 Uint8Array 字节数组进行 Base64 编码，并返回编码后的 Uint8Array。
+Performs Base64 encoding on the input Uint8Array byte array and returns the encoded Uint8Array.
 
 **Since:** 8
 
@@ -160,13 +160,13 @@ encodeSync(src: Uint8Array): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | 要编码的 Uint8Array 对象。 |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| Uint8Array | Uint8Array object obtained. |
 
 ## encodeToString
 
@@ -174,7 +174,7 @@ encodeSync(src: Uint8Array): Uint8Array
 encodeToString(src: Uint8Array): Promise<string>
 ```
 
-将输入内容编码为字符串。该接口使用 promise 返回结果。
+Encodes the input content into a string. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -192,13 +192,13 @@ encodeToString(src: Uint8Array): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | 要编码的 Uint8Array 对象。 |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 用于返回获取到的字符串的 promise。 |
+| Promise&lt;string&gt; | Promise used to return the string obtained. |
 
 ## encodeToStringSync
 
@@ -206,7 +206,7 @@ encodeToString(src: Uint8Array): Promise<string>
 encodeToStringSync(src: Uint8Array): string
 ```
 
-对输入的 Uint8Array 字节数组进行 Base64 编码，并返回编码后的字符串。
+Performs Base64 encoding on the input Uint8Array byte array and returns the encoded string.
 
 **Since:** 8
 
@@ -224,11 +224,11 @@ encodeToStringSync(src: Uint8Array): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | 要编码的 Uint8Array 对象。 |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 获取到的字符串。 |
+| string | String obtained. |
 

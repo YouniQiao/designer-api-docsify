@@ -1,7 +1,7 @@
 # PromisifiedFunc
 
 ```TypeScript
-type PromisifiedFunc =  (...args: FixedArray<Any>) => Promise<Any>
+type PromisifiedFunc = (...args: FixedArray<Any>) => Promise<Any>
 ```
 
 The type of promisify return function
@@ -10,7 +10,7 @@ The type of promisify return function
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-util-type PromisifiedFunc =  (...args: FixedArray<Any>) => Promise<Any>--><!--Device-util-type PromisifiedFunc =  (...args: FixedArray<Any>) => Promise<Any>-End-->
+<!--Device-util-type PromisifiedFunc = (...args: FixedArray<Any>) => Promise<Any>--><!--Device-util-type PromisifiedFunc = (...args: FixedArray<Any>) => Promise<Any>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

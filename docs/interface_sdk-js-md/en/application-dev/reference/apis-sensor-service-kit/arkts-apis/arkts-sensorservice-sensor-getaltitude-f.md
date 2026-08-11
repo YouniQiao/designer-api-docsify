@@ -12,13 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void
 ```
 
-根据气压值获取设备所在的海拔高度，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)
-> 替代。
+Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -36,9 +30,9 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | number | Yes | 表示海平面气压值，单位为hPa。 |
-| currentPressure | number | Yes | 表示设备所在高度的气压值，单位为hPa。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步返回设备所在的海拔高度，单位为米。 |
+| seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
 
 ## Examples
 
@@ -62,12 +56,7 @@ sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
 function getAltitude(seaPressure: number, currentPressure: number): Promise<number>
 ```
 
-根据气压值获取设备所在的海拔高度，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)替代。
+Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,14 +74,14 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | number | Yes | 表示海平面气压值，单位为hPa。 |
-| currentPressure | number | Yes | 表示设备所在高度的气压值，单位为hPa。 |
+| seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 使用异步方式返回设备所在的海拔高度（单位：米）。 |
+| Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
 
 ## Examples
 

@@ -45,8 +45,8 @@ Subscribe session event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.EXEC_CLI_TOOL". |
-| 202 | Not system application. Interface caller is not a system app. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.EXEC_CLI_TOOL". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. Interface caller is not a system app. |
 | 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 | 35600032 | The session does not exist. |
 

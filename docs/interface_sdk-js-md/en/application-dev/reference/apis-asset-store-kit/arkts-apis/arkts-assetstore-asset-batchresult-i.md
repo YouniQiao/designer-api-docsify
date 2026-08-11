@@ -1,6 +1,6 @@
 # BatchResult
 
-[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd)、[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate)和[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchremove)批量操作的结果。
+Result object containing batch operation,including {@link batchAdd},{@link batchUpdate},{@link batchRemove}.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 failedCount: number
 ```
 
-批量操作的失败数量，0表示全部成功。
+Failed count of the batch operation, 0 means all success.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ failedCount: number
 failedErrorInfos: Array<BatchErrInfo>
 ```
 
-批量操作中失败的关键资产的错误信息数组，全部成功时为空数组。
+An array of error details for assets that failed in the batch operation,including {@link BatchResult#failedCount} items, which is an empty array if all succeed.
 
 **Type:** Array&lt;BatchErrInfo&gt;
 

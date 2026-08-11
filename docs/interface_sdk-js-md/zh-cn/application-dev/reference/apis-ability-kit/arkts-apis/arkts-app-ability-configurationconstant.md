@@ -10,12 +10,6 @@ ConfigurationConstant模块提供了[Configuration](arkts-ability-app-ability-co
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
-## 导入模块
-
-```TypeScript
-import { ConfigurationConstant } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 枚举

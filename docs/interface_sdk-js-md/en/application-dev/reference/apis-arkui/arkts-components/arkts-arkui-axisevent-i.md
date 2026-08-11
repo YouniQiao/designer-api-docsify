@@ -1,6 +1,6 @@
 # AxisEvent
 
-轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
+Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
@@ -18,7 +18,7 @@
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHorizontalAxisValue
 
@@ -44,7 +44,7 @@ getCurrentLocalPosition?(): Coordinate2D
 getHorizontalAxisValue(): number
 ```
 
-获取此次轴事件的水平轴值。
+Obtains the horizontal axis value of this axis event.
 
 **Since:** 17
 
@@ -62,7 +62,7 @@ getHorizontalAxisValue(): number
 
 | Type | Description |
 | --- | --- |
-| number | 水平轴值。 &lt;br&gt;单位：vp |
+| number | Horizontal axis value. &lt;br&gt;Unit: vp |
 
 ## getPinchAxisScaleValue
 
@@ -70,7 +70,7 @@ getHorizontalAxisValue(): number
 getPinchAxisScaleValue(): number
 ```
 
-返回此次轴事件双指缩放的比例。
+Obtains the two-finger pinch zoom ratio from the axis event.
 
 **Since:** 21
 
@@ -88,7 +88,7 @@ getPinchAxisScaleValue(): number
 
 | Type | Description |
 | --- | --- |
-| number | 双指缩放比例。&lt;br/&gt; **说明：** 缩放比例指的是触控板双指缩放事件触发过程中双指当前的距离与双指最初按下时的距离的比值。&lt;br/&gt;默认值：0 &lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt; |
+| number | Two-finger pinch zoom ratio. &lt;br&gt; Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact. &lt;br&gt;Default value: **0**. &lt;br&gt;Value range: [0, +∞). &lt;br&gt; |
 
 ## getVerticalAxisValue
 
@@ -96,7 +96,7 @@ getPinchAxisScaleValue(): number
 getVerticalAxisValue(): number
 ```
 
-获取此次轴事件的垂直轴值。
+Obtains the vertical axis value of this axis event.
 
 **Since:** 17
 
@@ -114,7 +114,7 @@ getVerticalAxisValue(): number
 
 | Type | Description |
 | --- | --- |
-| number | 垂直轴值。 &lt;br&gt;单位：vp |
+| number | Vertical axis value. &lt;br&gt;Unit: vp |
 
 ## hasAxis
 
@@ -122,7 +122,7 @@ getVerticalAxisValue(): number
 hasAxis(axisType: AxisType): boolean
 ```
 
-检测此轴事件是否包含指定的轴类型。
+Checks whether this axis event contains the specified axis type.
 
 **Since:** 22
 
@@ -140,13 +140,13 @@ hasAxis(axisType: AxisType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | 轴事件的轴类型。 |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | Axis type to check for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 此轴事件是否包含指定的轴类型。 &lt;br&gt;true：包含指定的轴类型；false：不包含指定的轴类型。 |
+| boolean | Whether the axis event contains the specified axis type. &lt;br&gt;**true** if the axis event contains the specified axis type; **false** otherwise. |
 
 ## action
 
@@ -154,7 +154,7 @@ hasAxis(axisType: AxisType): boolean
 action: AxisAction
 ```
 
-轴事件的动作类型。
+Action type of the axis event.
 
 **Type:** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
 
@@ -176,9 +176,9 @@ action: AxisAction
 displayX: number
 ```
 
-鼠标光标在当前应用屏幕坐标系中的X坐标。
+X coordinate of the cursor in the coordinate system of the current application screen.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 
@@ -200,9 +200,9 @@ displayX: number
 displayY: number
 ```
 
-鼠标光标在当前应用屏幕坐标系中的Y坐标。
+Y coordinate of the cursor in the coordinate system of the current application screen.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 
@@ -224,13 +224,16 @@ displayY: number
 eventHandleId?: number
 ```
 
-用于事件处理的唯一标识。
+Unique identifier for event processing.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
+**NOTE：**
 
-多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
+This field is used when dispatching events using the  
+[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
+
+Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
@@ -252,11 +255,12 @@ eventHandleId?: number
 globalDisplayX?: number
 ```
 
-鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
+X coordinate of the cursor in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -278,11 +282,12 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
+Y coordinate of the cursor in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp
 
-取值范围：[0, +∞)
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -304,7 +309,7 @@ globalDisplayY?: number
 propagation: Callback<void>
 ```
 
-激活[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
+Enables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -326,9 +331,9 @@ propagation: Callback<void>
 scrollStep?: number
 ```
 
-鼠标轴滚动步长配置。
+Scroll step length for the mouse wheel.
 
-**说明：** 仅支持鼠标滚轮，取值范围：[0~65535]
+Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
 
 **Type:** number
 
@@ -350,9 +355,9 @@ scrollStep?: number
 windowX: number
 ```
 
-鼠标光标在当前应用窗口坐标系中的X坐标。
+X coordinate of the cursor in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 
@@ -374,9 +379,9 @@ windowX: number
 windowY: number
 ```
 
-鼠标光标在当前应用窗口坐标系中的Y坐标。
+Y coordinate of the cursor in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 
@@ -398,9 +403,10 @@ windowY: number
 x: number
 ```
 
-鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
+X coordinate of the cursor in the  
+[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 
@@ -422,9 +428,10 @@ x: number
 y: number
 ```
 
-鼠标光标在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
+Y coordinate of the cursor in the  
+[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
 
-单位：vp
+Unit: vp
 
 **Type:** number
 

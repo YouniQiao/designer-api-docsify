@@ -12,7 +12,7 @@ import { dragInteraction } from 'kits/@kit.ArkUI';
 function off(type: 'drag', callback?: Callback<DragState>): void
 ```
 
-取消监听拖拽状态。
+Disables listening for dragging status changes.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function off(type: 'drag', callback?: Callback<DragState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'drag' | Yes | 监听类型，固定取值为 'drag'。 |
+| type | 'drag' | Yes | Event type. This field has a fixed value of **drag**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DragState&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types.3.Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types.3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

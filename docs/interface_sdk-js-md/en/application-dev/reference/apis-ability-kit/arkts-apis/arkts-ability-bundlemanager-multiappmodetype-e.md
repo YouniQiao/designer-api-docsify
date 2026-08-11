@@ -1,6 +1,6 @@
 # MultiAppModeType
 
-标识应用多开的模式类型。
+Enumerates the types of the multi-app mode.
 
 **Since:** 12
 
@@ -16,7 +16,8 @@
 UNSPECIFIED = 0
 ```
 
-未指定类型，表示[multiAppMode配置](../../../quick-start/app-configuration-file.md#multiappmode标签)未配置时的默认状态。
+Unspecified. It is the default value of  
+[multiAppMode](../../../quick-start/app-configuration-file.md#multiappmode).
 
 **Since:** 12
 
@@ -32,7 +33,7 @@ UNSPECIFIED = 0
 MULTI_INSTANCE = 1
 ```
 
-[多实例模式](../../../quick-start/multiInstance.md)。常驻进程不支持该字段。
+[Multi-instance mode](../../../quick-start/multiInstance.md). A resident process does not support this value.
 
 **Since:** 12
 
@@ -48,7 +49,7 @@ MULTI_INSTANCE = 1
 APP_CLONE = 2
 ```
 
-[分身模式](../../../quick-start/app-clone.md)。
+[App clone mode](../../../quick-start/app-clone.md)
 
 **Since:** 12
 

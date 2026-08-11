@@ -1,6 +1,6 @@
 # @ohos.bundle.skillManager
 
-本模块提供技能（Skill）信息的查询能力，支持查询应用自身的技能信息、指定应用的技能信息以及所有应用的技能信息。AI代理框架在规划任务时，可通过本模块查询设备上所有应用可用的技能，选择合适的技能来完成用户请求。通过技能信息查询，可以实现智能任务调度、能力匹配优化，提升AI代理的任务执行效率，降低开发者的技能集成复杂度。
+This module provides skill query capabilities for applications.
 
 **Since:** 26.0.0
 
@@ -24,22 +24,22 @@ import { skillManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md#getallskillinfos) | 获取设备上安装应用的所有技能信息。使用Promise异步回调。 |
-| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md#getskillinfo) | 获取指定应用中指定模块下指定名称的技能信息。使用Promise异步回调。 |
-| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md#getskillinfoforself) | 获取本应用中指定模块下指定名称的技能信息。使用Promise异步回调。 |
-| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md#getskillinfos) | 获取指定应用的所有技能信息。使用Promise异步回调。 |
-| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md#getskillinfosforself) | 获取本应用的所有技能信息。使用Promise异步回调。 |
+| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md#getallskillinfos) | Obtains all SkillInfo objects installed on the device.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md#getskillinfo) | Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md#getskillinfoforself) | Obtains SkillInfo of the calling application based on moduleName and skillName. |
+| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md#getskillinfos) | Obtains all SkillInfo of a specified application based on bundleName.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md#getskillinfosforself) | Obtains all SkillInfo objects of the calling application. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) | 技能信息标志，指示需要获取的技能信息的内容。 |
+| [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) | Enumeration of flags used to control what content is populated in a SkillInfo.Multiple flags can be combined using bitwise OR, for example GET_SKILL_INFO_WITH_SRC_ENTRIES \| GET_SKILL_INFO_WITH_DESCRIPTION. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) | 技能配置信息，用于定义AI代理的技能能力。 |
-| [SkillType](arkts-ability-skillmanager-skilltype-t.md) | 技能类型的枚举。 |
+| [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md) | Provides information about a skill, including skill name, type, and associated metadata. |
+| [SkillType](arkts-ability-skillmanager-skilltype-t.md) | Enumerates the skill types. |
 

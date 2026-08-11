@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## offSystemRecordControllerEnabledChange
 
 ```TypeScript
@@ -46,9 +40,9 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
 
 ## 示例
 
@@ -88,10 +82,10 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Memory allocation failed. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio service error occurs like service died. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Memory allocation failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
 
 ## 示例
 

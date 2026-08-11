@@ -25,14 +25,14 @@ export declare function List(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | 否 |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | 否 |  |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListAttribute](arkts-arkui-list-listattribute-i.md) |  |
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |  |
 
 
 ## List
@@ -69,5 +69,5 @@ export declare function List(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListAttribute](arkts-arkui-list-listattribute-i.md) | The attribute of the List. |
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) | The attribute of the List. |
 

@@ -1,6 +1,10 @@
 # EventFilter
 
-日程过滤器，查询日程时进行筛选过滤，获取符合条件的日程。
+Implements an event filter.
+
+You can use [filterById()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbyid),  
+[filterByTime()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytime),  
+[filterByTitle()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
 
 **Since:** 10
 
@@ -22,7 +26,7 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 static filterById(ids: number[]): EventFilter
 ```
 
-根据日程id过滤日程。
+Defines a filter based on the event ID.
 
 **Since:** 10
 
@@ -36,21 +40,19 @@ static filterById(ids: number[]): EventFilter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | number[] | Yes | 日程id数组，日程id需为整数。 |
+| ids | number[] | Yes | An array of event IDs, where each event ID must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id1: number = 0;
@@ -68,7 +70,6 @@ const event2: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -77,21 +78,18 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       console.info(`Succeeded in adding event, id -> ${data}`);
       id1 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
       id2 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     const filter = calendarManager.EventFilter.filterById([id1, id2]);
     calendar.getEvents(filter).then((data: calendarManager.Event[]) => {
       console.info(`Succeeded in getting events filter by id, data -> ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to filter by id. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -104,7 +102,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 static filterByTime(start: number, end: number): EventFilter
 ```
 
-根据日程时间过滤日程。
+Defines a filter based on the event time.
 
 **Since:** 10
 
@@ -118,22 +116,20 @@ static filterByTime(start: number, end: number): EventFilter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 开始时间。格式为13位时间戳。 |
-| end | number | Yes | 结束时间。格式为13位时间戳。 |
+| start | number | Yes | Start time. The value is a 13-digit timestamp. |
+| end | number | Yes | End time. The value is a 13-digit timestamp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const event1: calendarManager.Event = {
@@ -148,7 +144,6 @@ const event2: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -156,20 +151,17 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     await calendar.addEvent(event1).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     const filter = calendarManager.EventFilter.filterByTime(1686931200000, 1687017600000);
     calendar.getEvents(filter).then((data: calendarManager.Event[]) => {
       console.info(`Succeeded in getting events filter by time, data -> ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to filter by time. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -182,7 +174,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 static filterByTitle(title: string): EventFilter
 ```
 
-根据日程标题过滤日程，该条件为模糊匹配。
+Filters events by event title. This API supports fuzzy match.
 
 **Since:** 10
 
@@ -196,21 +188,19 @@ static filterByTitle(title: string): EventFilter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| title | string | Yes | 日程标题。长度建议为[0,5000]字符。 |
+| title | string | Yes | Event title, with a maximum of 5,000 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const event: calendarManager.Event = {
@@ -221,7 +211,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -229,14 +218,12 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     await calendar.addEvent(event).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-       // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     const filter = calendarManager.EventFilter.filterByTitle('MyEvent');
     calendar.getEvents(filter).then((data: calendarManager.Event[]) => {
       console.info(`Succeeded in getting events filter by title, data -> ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to filter by title. Code: ${err.code}, message: ${err.message}`);
     });
   }

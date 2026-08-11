@@ -20,8 +20,8 @@ Represents a position in Cartesian coordinates.Cartesian coordinates use x, y, a
 
 | Name | Description |
 | -- | -- |
-| float x |  |
-| float y |  |
-| float z |  |
+| float x | Normalized X coordinate of an object's left/right dimension when object is in theCartesian coordinate system.<br>Value range is [-1.0, 1.0].<br>**Since**: 26.0.0 |
+| float y | Normalized Y coordinate of an object's front/back dimension when object is in theCartesian coordinate system.<br>Value range is [-1.0, 1.0].<br>**Since**: 26.0.0 |
+| float z | Normalized Z coordinate of an object's upper/lower dimension when object is in theCartesian coordinate system.<br>Value range is [-1.0, 1.0].<br>**Since**: 26.0.0 |
 
 

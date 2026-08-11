@@ -1,6 +1,6 @@
 # IObservedAnyProp
 
-定义IObservableAnyProp类型。
+Defines IObservedAnyProp type.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 addRefAnyProp(): void
 ```
 
-添加对任何一级属性更改的引用。
+Add reference to any one-level property change.
 
 **Since:** 26.0.0
 

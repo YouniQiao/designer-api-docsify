@@ -16,7 +16,7 @@ Defining LocalStorageLink annotation LocalStorageLink is used to create a two-wa
 property: string
 ```
 
-用于标识LocalStorage的属性。
+The give property in LocalStorage.
 
 **Type:** string
 

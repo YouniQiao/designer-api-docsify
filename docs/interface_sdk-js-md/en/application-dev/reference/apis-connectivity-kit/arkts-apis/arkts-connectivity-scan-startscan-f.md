@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.ConnectivityKit';
 function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>
 ```
 
-开始使用过滤器扫描指定的NearLink设备。如果不想使用过滤器，可以将过滤器参数设置为{@code null}。
+Starts scanning for specified NearLink devices with filters.It is allowed to set filter parameter to {@code null} if you do not want to use filter.
 
 **Since:** 26.0.0
 
@@ -30,23 +30,23 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | ScanFilters[] \| null | Yes | 过滤器列表，必选。 如果不需要使用filter，可以设置为{@code null}。 如果要使用过滤器，至少要设置一个过滤器。 |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | 扫描的参数。 默认为低功率模式。 |
+| filters | ScanFilters[] \| null | Yes | The list of filters and this parameter is mandatory. If you do not want to use filter, set this parameter to {@code null}. If you want to use filter, at least one filter should be set. |
+| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | The parameters for scanning, and the low power mode is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | The promise object is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100042 | Empty array. |
 | 36100040 | Integer out of range. |
 | 36100041 | Invalid address. |

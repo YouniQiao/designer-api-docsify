@@ -12,7 +12,7 @@ import { thermal } from 'kits/@kit.BasicServicesKit';
 function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void
 ```
 
-取消订阅热档位变化时的回调提醒。使用callback异步回调。
+Unsubscribes from the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，无返回值。不填该参数则取消所有回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback that returns no value. If this parameter is not set, all callbacks will be unregistered. |
 
 ## Examples
 

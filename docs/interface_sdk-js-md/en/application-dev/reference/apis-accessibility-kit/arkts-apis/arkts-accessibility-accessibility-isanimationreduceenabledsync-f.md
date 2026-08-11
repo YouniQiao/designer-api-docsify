@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isAnimationReduceEnabledSync(): boolean
 ```
 
-使用同步方法判断减弱动效模式是否开启。
+Checks whether animation reduction mode is enabled with a synchronous method.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isAnimationReduceEnabledSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否开启减弱动效模式。返回true表示开启减弱动效模式；返回false表示未开启减弱动效模式。 |
+| boolean | Whether animation reduction mode is enabled. Returns **true** if animation reduction mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

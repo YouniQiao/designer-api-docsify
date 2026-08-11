@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function getPointerSpeed(callback: AsyncCallback<int>): void
 ```
 
-获取鼠标移动速度，使用callback异步回调。
+Obtains the mouse pointer speed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,14 +28,14 @@ function getPointerSpeed(callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当获取鼠标移动速度成功，err为undefined，number为鼠标移动速度；否则为错误对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the mouse pointer speed. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -51,16 +51,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the mouse pointer speed.
             pointer.getPointerSpeed((error: BusinessError, speed: number) => {
               if (error) {
-                console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in getting pointer speed, speed: ${JSON.stringify(speed)}.`);
+              console.info(`Get pointer speed success, speed: ${JSON.stringify(speed)}`);
             });
           } catch (error) {
-            console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -75,7 +74,7 @@ struct Index {
 function getPointerSpeed(): Promise<int>
 ```
 
-获取当前鼠标移动速度，使用Promise异步回调。
+Obtains the mouse pointer speed. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -91,13 +90,13 @@ function getPointerSpeed(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回鼠标移动速度。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the mouse pointer speed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -113,14 +112,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the mouse pointer speed.
             pointer.getPointerSpeed().then(speed => {
-              console.info(`Succeeded in getting pointer speed, speed: ${JSON.stringify(speed)}.`);
+              console.info(`Get pointer speed success, speed: ${JSON.stringify(speed)}`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Get pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Get pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

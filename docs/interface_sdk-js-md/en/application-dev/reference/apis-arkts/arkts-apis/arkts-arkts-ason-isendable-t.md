@@ -4,7 +4,7 @@
 type ISendable = lang.ISendable
 ```
 
-ISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必要的方法和属性。
+Redefines ISendable for convenience.
 
 **Since:** 12
 

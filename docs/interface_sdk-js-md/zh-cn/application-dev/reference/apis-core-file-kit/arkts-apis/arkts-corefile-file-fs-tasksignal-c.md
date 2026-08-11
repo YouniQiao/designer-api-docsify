@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## cancel
 
 ```TypeScript
@@ -41,6 +35,8 @@ cancel(): void
 | 13900043 | No task can be canceled. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,13 +67,51 @@ let options: fileIo.CopyOptions = {
 try {
   fileIo.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError) => {
     if (err) {
-      console.error("copy fail, err: ", err.message);
+      console.error("Failed to copy. Code: ", err.message);
       return;
     }
     console.info("copy success.");
   })
 } catch (err) {
-  console.error("copyFileWithCancel failed, err: ", err.message);
+  console.error("Failed to copy file. Code: ", err.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+let copySignal = new fileIo.TaskSignal;
+let progressListener:fileIo.ProgressListener = (progress:fileIo.Progress) => {
+  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+  if (progress.processedSize / progress.totalSize > 0.5) {
+    copySignal.cancel();
+    console.info("copy cancel.");
+  }
+};
+let options:fileIo.CopyOptions = {
+  "progressListener" : progressListener,
+  "copySignal" : copySignal,
+}
+
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError<void> | null) => {
+    if (err) {
+      console.error(`Failed to copy fail. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in copying');
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to copyFileWithCancel. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

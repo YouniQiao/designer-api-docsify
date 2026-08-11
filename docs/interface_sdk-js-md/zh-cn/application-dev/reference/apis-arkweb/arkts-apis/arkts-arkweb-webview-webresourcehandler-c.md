@@ -10,12 +10,6 @@ Used to intercept url requests. Response headers and body can be sent through We
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## didFail
 
 ```TypeScript
@@ -42,8 +36,8 @@ Notify that this request should be failed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 17100021 | The resource handler is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didFail
 
@@ -72,8 +66,8 @@ Notify that this request should be failed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17100101 | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
-| 17100021 | The resource handler is invalid. |
+| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didFinish
 
@@ -95,7 +89,7 @@ Notify that this request should be finished and there is no more data available.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17100021 | The resource handler is invalid. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didReceiveResponse
 
@@ -123,8 +117,8 @@ Pass response headers to intercepted requests.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| 17100021 | The resource handler is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didReceiveResponseBody
 
@@ -152,6 +146,6 @@ Pass response body data to intercepted requests.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| 17100021 | The resource handler is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 

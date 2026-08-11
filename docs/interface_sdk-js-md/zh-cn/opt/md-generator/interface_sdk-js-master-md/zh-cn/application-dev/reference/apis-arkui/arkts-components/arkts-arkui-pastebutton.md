@@ -1,0 +1,67 @@
+# PasteButton
+
+安全控件的粘贴控件。用户点击粘贴控件，应用可以临时获取读取剪贴板权限。
+<br>**说明**</br>
+<ul><li>
+
+## 核心枚举类型</li>
+
+&lt;li&gt;**[PasteIconStyle]{@link PasteIconStyle}：** 粘贴控件图标风格枚举，用于指定控件展示的图标风格。&lt;/li&gt;&lt;li&gt;**[PasteDescription]{@link PasteDescription}：** 粘贴控件文本描述枚举，用于指定控件展示的文本描述。&lt;/li&gt;&lt;li&gt;**[PasteButtonOnClickResult]{@link PasteButtonOnClickResult}：** 粘贴控件点击结果枚举，用于表示点击后授权是否成功。&lt;/li&gt;&lt;li&gt;
+
+## 核心接口类型</li>
+
+&lt;li&gt;**[PasteButtonOptions]{@link PasteButtonOptions}：** 粘贴控件配置对象，用于指定图标、文字和按钮类型等元素属性。&lt;/li&gt;&lt;li&gt;**[PasteButtonCallback]{@link PasteButtonCallback}：** 粘贴控件点击回调类型，用于返回点击事件、授权结果和错误信息。&lt;/li&gt;&lt;li&gt;
+
+## 子组件</li>
+
+&lt;li&gt;不支持&lt;/li&gt;&lt;/ul&gt;
+
+## PasteButton
+
+```TypeScript
+PasteButton()
+```
+
+默认创建带有图标、文本、背景的粘贴控件。控件创建完成后，用户点击时系统会执行授权校验；授权成功后，应用可读取当前剪贴板内容。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PasteButtonInterface-(): PasteButtonAttribute--><!--Device-PasteButtonInterface-(): PasteButtonAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## PasteButton
+
+```TypeScript
+PasteButton(options: PasteButtonOptions)
+```
+
+使用指定的图标、文本和按钮类型创建粘贴按钮。创建后，系统会触发一个点击按钮时的授权检查。授权成功后，应用将获得临时权限读取剪贴板。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PasteButtonInterface-(options: PasteButtonOptions): PasteButtonAttribute--><!--Device-PasteButtonInterface-(options: PasteButtonOptions): PasteButtonAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数:**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | 是 |
+
+## 汇总
+
+- [PasteButtonOptions](arkts-arkui-pastebutton-pastebuttonoptions-i.md)
+- [PasteButtonCallback](arkts-arkui-pastebutton-pastebuttoncallback-t.md)
+- [PasteButtonOnClickResult](arkts-arkui-pastebutton-pastebuttononclickresult-e.md)
+- [PasteDescription](arkts-arkui-pastebutton-pastedescription-e.md)
+- [PasteIconStyle](arkts-arkui-pastebutton-pasteiconstyle-e.md)

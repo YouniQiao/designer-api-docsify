@@ -1,6 +1,6 @@
 # SendRequestResult
 
-发送请求的响应结果。
+Defines the response to the request.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 code: number
 ```
 
-消息代码。
+Message code.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ code: number
 data: MessageParcel
 ```
 
-发送给对端进程的MessageParcel对象。
+**MessageParcel** object sent to the remote process.
 
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
@@ -70,7 +70,7 @@ data: MessageParcel
 errCode: number
 ```
 
-错误码。
+Error code.
 
 **Type:** number
 
@@ -92,7 +92,7 @@ errCode: number
 reply: MessageParcel
 ```
 
-对端进程返回的MessageParcel对象。
+**MessageParcel** object returned by the remote process.
 
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 

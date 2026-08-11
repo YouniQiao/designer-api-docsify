@@ -6,15 +6,17 @@
 export declare function loadNativeModule(moduleName: string): Object
 ```
 
-同步动态加载native模块，目的是按需加载所需要的模块。使用该接口会增加so文件的加载时间，使用前需评估其对应用性能和功能的影响。
+The **loadNativeModule** API is used to synchronously and dynamically load a native module, that is, only load the required module at a time. Using this API increases the time for loading the .so file. You need to evaluate the impact on the functionality.
 
-> **说明：**
+> **NOTE：**
 > 
-> loadNativeModule加载的模块名称为依赖方oh-package.json5文件的dependencies字段中声明的依赖名称。
+> The name of the module loaded by **loadNativeModule** is the name provided in **dependencies** in the
+> **oh-package.json5** file of the dependency.
 > 
-> loadNativeModule仅支持在Stage模型的UI主线程中加载native模块。
+> **loadNativeModule** can be used only to load native modules in the UI main thread.
 > 
-> 无论moduleName参数使用常量字符串还是变量表达式，都需要配置接口调用的依赖。
+> Dependencies must be configured for the API call regardless of whether the parameter is a constant string or
+> variable expression.
 
 **Since:** 12
 
@@ -32,18 +34,18 @@ export declare function loadNativeModule(moduleName: string): Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 加载的模块名。 |
+| moduleName | string | Yes | Name of the module to load. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | native模块的默认导出，需使用ArkTS的ESObject类型去接收。 |
+| Object | Default export of the native module. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. |
-| 10200301 | Loading native module failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [10200301](../../apis-arkts/errorcode-utils.md#10200301-failed-to-load-the-native-module) | Loading native module failed. |
 

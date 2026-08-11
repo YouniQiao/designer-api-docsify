@@ -1,11 +1,5 @@
 # hasPrivateWindow（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## hasPrivateWindow
 
 ```TypeScript
@@ -41,11 +35,13 @@ function hasPrivateWindow(displayId: long): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -72,6 +68,36 @@ try {
   }
 } catch (exception) {
   console.error(`Failed to obtain the default display object. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+try {
+  displayClass = display.getDefaultDisplaySync();
+
+  let ret: boolean = true;
+  try {
+    ret = display.hasPrivateWindow(displayClass.id);
+  } catch (exception) {
+    let error = exception as BusinessError;
+    console.error(`Failed to check has privateWindow or not. Code: ${error.code} , message: ${error.message}`);
+  }
+  if (ret == undefined) {
+    console.error("Failed to check has privateWindow or not.");
+  }
+  if (ret) {
+    console.info("There has privateWindow.");
+  } else if (!ret) {
+    console.info("There has no privateWindow.");
+  }
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to obtain the default display object. Code: ${error.code} , message: ${error.message}`);
 }
 ```
 

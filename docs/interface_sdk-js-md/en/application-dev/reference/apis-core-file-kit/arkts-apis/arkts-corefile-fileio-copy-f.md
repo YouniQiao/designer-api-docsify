@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>
 ```
 
-拷贝文件或目录。使用Promise异步回调。
+Copies a file or directory. This API uses a promise to return the result.
 
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.
 
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 23
 
@@ -30,21 +30,21 @@ function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcUri | string | Yes | 待复制文件或目录的URI。 |
-| destUri | string | Yes | 目标文件或目录的URI。 |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | No | options中提供拷贝进度回调。不填该参数则无拷贝进度回调。 |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900044 | Network is unreachable |
@@ -78,11 +78,11 @@ function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<v
 function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录。使用callback异步回调。
+Copies a file or directory. This API uses an asynchronous callback to return the result.
 
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.
 
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 23
 
@@ -96,15 +96,15 @@ function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcUri | string | Yes | 待复制文件或目录的URI。 |
-| destUri | string | Yes | 目标文件或目录的URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
@@ -137,11 +137,11 @@ function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): v
 function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录。使用callback异步回调。
+Copies a file or directory. This API uses an asynchronous callback to return the result.
 
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
+File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.
 
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 23
 
@@ -155,16 +155,16 @@ function copy(srcUri: string, destUri: string, options: CopyOptions, callback: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcUri | string | Yes | 待复制文件或目录的URI。 |
-| destUri | string | Yes | 目标文件或目录的URI。 |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | 拷贝进度回调。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
+| srcUri | string | Yes | URI of the file or directory to copy. |
+| destUri | string | Yes | URI of the destination file or directory. |
+| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Callback used to return the copy progress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |

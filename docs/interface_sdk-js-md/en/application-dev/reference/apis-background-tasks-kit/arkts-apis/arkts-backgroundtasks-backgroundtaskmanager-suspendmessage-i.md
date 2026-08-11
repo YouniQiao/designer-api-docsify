@@ -1,6 +1,6 @@
 # SuspendMessage
 
-长时任务暂停原因。
+Describes the reason why a continuous task is suspended.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 message: string
 ```
 
-长时任务暂停的信息。
+Suspension message.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ message: string
 reason: ContinuousTaskSuspendReason
 ```
 
-长时任务暂停的原因。
+Reason why the continuous task is suspended.
 
 **Type:** [ContinuousTaskSuspendReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendreason-e.md)
 

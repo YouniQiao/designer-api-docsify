@@ -12,7 +12,7 @@ import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 export function resourceToSendableResource(resource: Resource): SendableResource
 ```
 
-将Resource对象转换为可用于跨线程传输的SendableResource对象。
+Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission.
 
 **Since:** 12
 
@@ -28,19 +28,19 @@ export function resourceToSendableResource(resource: Resource): SendableResource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource对象。 |
+| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | 转换后的SendableResource对象。 |
+| [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | SendableResource** object after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

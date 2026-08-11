@@ -1,6 +1,6 @@
 # HDRFormat
 
-HDR格式枚举。
+Enumerates the HDR formats.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ HDR格式枚举。
 NONE = 0
 ```
 
-不支持HDR类型。
+Unsupported HDR type.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ NONE = 0
 VIDEO_HLG = 1
 ```
 
-支持视频的HLG格式。
+Videos in Hybrid Log-Gamma (HLG) format.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ VIDEO_HLG = 1
 VIDEO_HDR10 = 2
 ```
 
-支持视频的HDR10格式。
+Videos in HDR10 format.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ VIDEO_HDR10 = 2
 VIDEO_HDR_VIVID = 3
 ```
 
-支持视频的HDR_VIVID格式。
+Videos in HDR_VIVID format.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ VIDEO_HDR_VIVID = 3
 IMAGE_HDR_VIVID_DUAL = 4
 ```
 
-支持图片的HDR_VIVID格式，以dual JPEG格式存储。
+Images in HDR_VIVID format, stored in dual JPEG format.
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ IMAGE_HDR_VIVID_DUAL = 4
 IMAGE_HDR_VIVID_SINGLE = 5
 ```
 
-支持图片的HDR_VIVID格式，以single HEIF格式存储。
+Images in HDR_VIVID format, stored in single HEIF format.
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ IMAGE_HDR_VIVID_SINGLE = 5
 IMAGE_HDR_ISO_DUAL = 6
 ```
 
-支持图片的HDR_ISO格式，以dual JPEG格式存储。
+Images in HDR_ISO format, stored in dual JPEG format.
 
 **Since:** 11
 
@@ -142,7 +142,7 @@ IMAGE_HDR_ISO_DUAL = 6
 IMAGE_HDR_ISO_SINGLE = 7
 ```
 
-支持图片的HDR_ISO格式，以single HEIF格式存储。
+Images in HDR_ISO format, stored in single HEIF format.
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ IMAGE_HDR_ISO_SINGLE = 7
 VIDEO_AIHDR = 8
 ```
 
-支持视频的AIHDR格式。
+Videos in AIHDR format.
 
 **Since:** 24
 

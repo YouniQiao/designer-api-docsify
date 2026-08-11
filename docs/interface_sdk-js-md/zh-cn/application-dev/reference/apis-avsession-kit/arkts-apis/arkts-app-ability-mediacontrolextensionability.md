@@ -3,12 +3,6 @@
 播控扩展能力
 
 
-## 导入模块
-
-```TypeScript
-import { MediaControlExtensionAbility } from 'kits/@kit.AVSessionKit';
-```
-
 ## 汇总
 
 ### 类

@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createGZipSync(): GZip
 ```
 
-创建GZip对象。成功时返回GZip对象实例。
+Creates this **GZip** object. A **GZip** instance is returned upon a success.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createGZipSync(): GZip
 
 | Type | Description |
 | --- | --- |
-| [GZip](arkts-basicservices-zlib-gzip-i.md) | GZip对象实例。 |
+| [GZip](arkts-basicservices-zlib-gzip-i.md) | gzip object instance. |
 
 ## Examples
 

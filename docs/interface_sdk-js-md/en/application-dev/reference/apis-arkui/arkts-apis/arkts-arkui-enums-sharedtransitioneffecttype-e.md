@@ -1,6 +1,6 @@
 # SharedTransitionEffectType
 
-动画类型。
+SharedTransitionEffectType enumeration description
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 Static = 0
 ```
 
-目标页面元素的位置保持不变，支持配置透明度动画。
-
-目前，仅在重定向到目标页面时配置的静态效果才会生效。
+The location of the destination page element remains unchanged, and you can configure the transparency animation.Currently,only the static effect configured for redirecting to the target page takes effect.
 
 **Since:** 23
 
@@ -36,7 +34,7 @@ Static = 0
 Exchange = 1
 ```
 
-将源页面元素移动到目标页面元素的位置并适当缩放。
+Move the source page element to the destination page element location and scale it appropriately.
 
 **Since:** 23
 

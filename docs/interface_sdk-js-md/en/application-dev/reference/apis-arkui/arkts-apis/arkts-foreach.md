@@ -6,12 +6,12 @@
 
 | Name | Description |
 | --- | --- |
-| [ForEach](arkts-arkui-foreach-foreach-f.md#foreach) | 定义ForEach组件。需要在组件属性设置开始时调用setForEachOptions，并在组件属性设置结束时调用applyAttributeFinish。 |
+| [ForEach](arkts-arkui-foreach-foreach-f.md#foreach) | Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md) | 定义组件数据生成函数。 |
-| [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md) | 定义键值生成函数。 |
+| [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md) | Defines item generator function. |
+| [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md) | Defines key generator function. |
 

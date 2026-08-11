@@ -1,6 +1,6 @@
 # PositionRelativeToDoor（系统接口）
 
-Enum for identification result inside and outside the door
+门内外识别接口返回结果中表示门内或门外位置的枚举。
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ Enum for identification result inside and outside the door
 OUTDOOR = 0
 ```
 
-indicates outdoor result
+表示门外。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ indicates outdoor result
 INDOOR = 1
 ```
 
-indicates indoor result
+表示门内。
 
 **起始版本：** 23
 

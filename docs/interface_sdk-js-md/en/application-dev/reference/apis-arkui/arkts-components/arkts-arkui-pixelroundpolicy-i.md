@@ -1,6 +1,6 @@
 # PixelRoundPolicy
 
-指定组件级像素取整的方向。
+Enumerates the directions of pixel rounding at the component level.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 bottom?: PixelRoundCalcPolicy
 ```
 
-组件底部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
+Rounding alignment for the component's bottom edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -42,7 +42,7 @@ bottom?: PixelRoundCalcPolicy
 end?: PixelRoundCalcPolicy
 ```
 
-组件尾部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
+Rounding alignment for the component's end edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -68,7 +68,7 @@ end?: PixelRoundCalcPolicy
 start?: PixelRoundCalcPolicy
 ```
 
-组件前部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
+Rounding alignment for the component's start edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -94,7 +94,7 @@ start?: PixelRoundCalcPolicy
 top?: PixelRoundCalcPolicy
 ```
 
-组件上部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
+Rounding alignment for the component's top edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 

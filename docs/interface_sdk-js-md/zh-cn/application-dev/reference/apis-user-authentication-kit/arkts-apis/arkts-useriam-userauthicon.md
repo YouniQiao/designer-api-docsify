@@ -1,11 +1,5 @@
 # @ohos.userIAM.userAuthIcon(嵌入式用户身份认证控件)
 
-## 导入模块
-
-```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## 汇总
 
 ### 结构体

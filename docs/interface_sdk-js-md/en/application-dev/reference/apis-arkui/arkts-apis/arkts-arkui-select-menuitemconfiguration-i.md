@@ -1,6 +1,6 @@
 # MenuItemConfiguration
 
-菜单项配置接口，用于ContentModifier中。
+MenuItemConfiguration used by menu item content modifier.
 
 **Inheritance/Implementation:** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
@@ -18,7 +18,7 @@
 triggerSelect(index: int, value: string): void
 ```
 
-下拉菜单选中某一项的回调函数。&lt;br/&gt;index：选中菜单项的索引。&lt;br/&gt;value：选中菜单项的文本。&lt;br/&gt;**说明：** &lt;br/&gt;index会赋值给事件[onSelect](../arkts-components/arkts-arkui-onselectcallback-t.md/arkts-arkui-onselectcallback-t.md)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](../arkts-components/arkts-arkui-onselectcallback-t.md/arkts-arkui-onselectcallback-t.md)回调中的文本参数。
+Select this menu item.
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ triggerSelect(index: int, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 菜单项的索引。 |
-| value | string | Yes | 菜单项的文本内容。 |
+| index | int | Yes | The value of menu item index. |
+| value | string | Yes | The value of menu item text. |
 
 ## icon
 
@@ -43,7 +43,7 @@ triggerSelect(index: int, value: string): void
 icon?: ResourceStr
 ```
 
-菜单项的图标。
+Indicates the icon of this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -63,7 +63,7 @@ icon?: ResourceStr
 index: int
 ```
 
-菜单项的索引。
+Indicates the index of the menu item.
 
 **Type:** int
 
@@ -83,7 +83,7 @@ index: int
 selected: boolean
 ```
 
-菜单项是否被选中。
+Indicates whether this menu item is selected or not.
 
 **Type:** boolean
 
@@ -103,11 +103,7 @@ selected: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-下拉选项Symbol图片。
-
-symbolIcon优先级高于icon。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Indicates the symbol icon of this menu item.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -127,7 +123,7 @@ symbolIcon优先级高于icon。
 value: ResourceStr
 ```
 
-菜单项的文本内容。
+Indicates the text of this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -6,7 +6,7 @@
 function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 ```
 
-获取WantAgent实例的用户ID。使用callback异步回调。
+Obtains the UID of a WantAgent.
 
 **Since:** 7
 
@@ -26,8 +26,8 @@ function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 获取WantAgent实例的用户ID的回调方法。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | whose UID to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ wantAgent.getWantAgent({
 function getUid(agent: WantAgent): Promise<number>
 ```
 
-获取WantAgent实例的用户ID。使用Promise异步回调。
+Obtains the UID of a WantAgent.
 
 **Since:** 7
 
@@ -110,13 +110,13 @@ function getUid(agent: WantAgent): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | whose UID to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回获取WantAgent实例的用户ID。 |
+| Promise&lt;number&gt; | Returns the UID of the { |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # AccessibilityExtensionContext
 
-辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。
+The accessibility extension context. Used to configure, query information, and inject gestures.
 
 **Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
@@ -18,7 +18,7 @@
 getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取焦点元素, 使用callback异步回调。
+Obtains the focus element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -34,15 +34,15 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | Yes | 获取的是否是无障碍焦点元素，True表示是，False表示否。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | 回调函数，返回当前对应的焦点元素。 |
+| isAccessibilityFocus | boolean | Yes | Whether the obtained focus element is an accessibility focus. The value **True** means that the obtained focus element is an accessibility focus, and **False** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | Callback used to return the current focus element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getFocusElement
 
@@ -50,7 +50,7 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 ```
 
-获取焦点元素, 使用Promise异步回调。
+Obtains the focus element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -66,20 +66,20 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | No | 获取的是否是无障碍焦点元素，true表示是，false表示否，默认为否。 |
+| isAccessibilityFocus | boolean | No | Whether the obtained element is an accessibility focus. The value **true** indicates that the element is an accessibility focus, and **false** indicates the opposite.&lt;br&gt;Default value: **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回当前对应的焦点元素。 |
+| Promise&lt;AccessibilityElement&gt; | Promise used to return the current focus element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getFocusElement
 
@@ -87,7 +87,7 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取焦点元素, 使用callback异步回调。
+Obtains the focus element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -103,14 +103,14 @@ getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | 回调函数，返回当前对应的焦点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | Callback used to return the current focus element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindowRootElement
 
@@ -118,7 +118,7 @@ getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取指定窗口的根节点元素, 使用callback异步回调。
+Obtains the root element of a window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -134,15 +134,15 @@ getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | 指定窗口的编号，未指定则从当前活跃窗口获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | 回调函数，返回指定窗口的根节点元素。 |
+| windowId | int | Yes | ID of the window whose root element is to be obtained. If this parameter is not specified , it indicates the current active window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | Callback used to return the root element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindowRootElement
 
@@ -150,7 +150,7 @@ getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement
 getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 ```
 
-获取指定窗口的根节点元素, 使用Promise异步回调。
+Obtains the root element of a window. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -166,20 +166,20 @@ getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | No | 指定窗口的编号，未指定则从当前活跃窗口获取。 |
+| windowId | int | No | ID of the window whose root element is to be obtained. If this parameter is not specified , it indicates the current active window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回指定窗口的根节点元素。 |
+| Promise&lt;AccessibilityElement&gt; | Promise used to return the root element of the specified window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindowRootElement
 
@@ -187,7 +187,7 @@ getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取指定窗口的根节点元素, 使用callback异步回调。
+Obtains the root element of a window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -203,14 +203,14 @@ getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | 回调函数，返回指定窗口的根节点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessibilityElement&gt; | Yes | Callback used to return the root element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindows
 
@@ -218,7 +218,7 @@ getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-获取指定屏幕中的所有窗口，使用callback异步回调。
+Obtains the list of windows on a display. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -234,15 +234,15 @@ getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | Yes | 指定的屏幕编号，未指定则从默认主屏幕获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityElement&gt;&gt; | Yes | 回调函数，返回指定屏幕的所有窗口。 |
+| displayId | long | Yes | ID of the display from which the window information is obtained. If this parameter is not specified, it indicates the default main display. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityElement&gt;&gt; | Yes | Callback used to return the window list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindows
 
@@ -250,7 +250,7 @@ getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>
 getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 ```
 
-获取指定屏幕中的所有窗口，使用Promise异步回调。
+Obtains the list of windows on a display. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -266,20 +266,20 @@ getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | No | 指定的屏幕编号，未指定则从默认主屏幕获取。 |
+| displayId | long | No | ID of the display from which the window information is obtained. If this parameter is not specified, it indicates the default main display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise对象，返回指定屏幕的所有窗口。 |
+| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise used to return the window list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## getWindows
 
@@ -287,7 +287,7 @@ getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-获取指定屏幕中的所有窗口，使用callback异步回调。
+Obtains the list of windows on a display. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -303,14 +303,14 @@ getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityElement&gt;&gt; | Yes | 回调函数，返回指定屏幕的所有窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityElement&gt;&gt; | Yes | Callback used to return the window list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## injectGesture
 
@@ -318,7 +318,7 @@ getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 ```
 
-注入手势，使用callback异步回调。
+Injects a gesture. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -336,15 +336,15 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | 表示手势的路径信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，表示注入手势执行结果的回调。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## injectGesture
 
@@ -352,7 +352,7 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 injectGesture(gesturePath: GesturePath): Promise<void>
 ```
 
-注入手势，使用Promise异步回调。
+Injects a gesture. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -370,20 +370,20 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## injectGestureSync
 
@@ -391,7 +391,7 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 injectGestureSync(gesturePath: GesturePath): void
 ```
 
-注入手势。
+Injects a gesture.
 
 **Since:** 10
 
@@ -407,14 +407,14 @@ injectGestureSync(gesturePath: GesturePath): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## setTargetBundleName
 
@@ -422,7 +422,7 @@ injectGestureSync(gesturePath: GesturePath): void
 setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-设置关注的目标包名，使用callback异步回调。
+Sets the concerned target bundle. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -438,14 +438,14 @@ setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | Yes | 设置关注应用的包名，服务接收关注应用的无障碍事件，默认接收所有应用的无障碍事件，取消关注应用则传空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，如果设置关注的目标包名失败，则AsyncCallback中err有数据返回。 |
+| targetNames | Array&lt;string&gt; | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setTargetBundleName
 
@@ -453,7 +453,7 @@ setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): 
 setTargetBundleName(targetNames: Array<string>): Promise<void>
 ```
 
-设置关注的目标包名，使用Promise异步回调。
+Sets the concerned target bundle. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -469,17 +469,17 @@ setTargetBundleName(targetNames: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | Yes | 设置关注应用的包名，服务接收关注应用的无障碍事件，默认接收所有应用的无障碍事件，取消关注应用则传空数组。 |
+| targetNames | Array&lt;string&gt; | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

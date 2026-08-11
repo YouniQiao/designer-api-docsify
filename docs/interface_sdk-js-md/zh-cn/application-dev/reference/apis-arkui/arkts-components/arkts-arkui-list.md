@@ -87,7 +87,7 @@ List(options?: ListOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListOptions](arkts-arkui-listoptions-i.md) | 否 | 设置List组件参数。不传入时使用默认配置。 |
+| options | [ListOptions](../arkts-apis/arkts-arkui-list-listoptions-i.md) | 否 | 设置List组件参数。不传入时使用默认配置。 |
 
 ## 汇总
 

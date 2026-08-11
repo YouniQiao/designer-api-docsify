@@ -1,7 +1,5 @@
 # HapModuleInfo (System API)
 
-FA模型的使用信息属性集合。
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -24,7 +22,7 @@ import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 abilityDescriptionId?: long
 ```
 
-FA的MainAbility descriptionId。
+The description id of main ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +42,7 @@ FA的MainAbility descriptionId。
 abilityIconId?: long
 ```
 
-FA的MainAbility iconId。
+The icon id of main ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +62,7 @@ FA的MainAbility iconId。
 abilityLableId?: long
 ```
 
-FA的MainAbility labelId。
+The ability id of main ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -84,7 +82,7 @@ FA的MainAbility labelId。
 abilityName?: string
 ```
 
-FA的MainAbility名。
+The main ability name of module.
 
 **Type:** string
 
@@ -104,7 +102,7 @@ FA的MainAbility名。
 appLabelId?: long
 ```
 
-FA的应用labelId。
+The label id of application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -124,7 +122,7 @@ FA的应用labelId。
 bundleName: string
 ```
 
-应用名称。
+The bundle name.
 
 **Type:** string
 
@@ -144,7 +142,7 @@ bundleName: string
 descriptionId?: long
 ```
 
-FA所属的应用descriptionId。
+The description id of application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -164,7 +162,7 @@ FA所属的应用descriptionId。
 deviceId?: string
 ```
 
-设备Id。
+The device id of module.
 
 **Type:** string
 
@@ -184,7 +182,7 @@ deviceId?: string
 formRecords: Array<HapFormInfo>
 ```
 
-FA中卡片的使用记录。
+The form usage record list of current module.
 
 **Type:** Array&lt;HapFormInfo&gt;
 
@@ -204,7 +202,7 @@ FA中卡片的使用记录。
 labelId?: long
 ```
 
-FA所属module的labelId。
+The label id of module.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -224,7 +222,7 @@ FA所属module的labelId。
 lastModuleUsedTime: long
 ```
 
-FA的上一次使用时间，单位：ms。
+The last time when the module was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -244,7 +242,7 @@ FA的上一次使用时间，单位：ms。
 launchedCount: int
 ```
 
-FA的启动次数。
+The launch count of module.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -264,7 +262,7 @@ FA的启动次数。
 moduleName: string
 ```
 
-FA所属module名。
+The module name.
 
 **Type:** string
 

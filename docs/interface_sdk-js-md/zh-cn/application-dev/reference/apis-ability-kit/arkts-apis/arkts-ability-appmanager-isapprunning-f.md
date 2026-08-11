@@ -1,11 +1,5 @@
 # isAppRunning
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isAppRunning
 
 ```TypeScript
@@ -45,10 +39,10 @@ function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 16000073 | The app clone index is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
 ## 示例
 
@@ -59,14 +53,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let bundleName = 'ohos.samples.etsclock';
   appManager.isAppRunning(bundleName).then((data: boolean) => {
-      console.info(`data: ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`isAppRunning error, code: ${err.code}, msg:${err.message}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`isAppRunning error, code: ${code}, msg:${message}`);
+    console.info(`data: ${data}`);
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`isAppRunning error, code: ${err.code}, msg:${err.message}`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`isAppRunning error, code: ${err.code}, msg:${err.message}`);
 }
 ```
 

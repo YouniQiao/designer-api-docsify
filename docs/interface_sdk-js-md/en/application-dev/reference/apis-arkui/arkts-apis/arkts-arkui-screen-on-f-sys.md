@@ -12,7 +12,7 @@ import { screen } from 'kits/@kit.ArkUI';
 function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<long>): void
 ```
 
-开启屏幕状态变化的监听。
+Subscribes to events related to the screen state.
 
 **Since:** 9
 
@@ -28,23 +28,22 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | 监听事件。&lt;br/&gt;-eventType为"connect"表示屏幕连接事件。&lt;br/&gt;-eventType为" disconnect"表示断开屏幕连接事件。&lt;br/&gt;-eventType为"change"表示屏幕状态改变事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回屏幕的id，该参数为整数。 |
+| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | Event type.&lt;br&gt;- **connect**: an event indicating that the screen is connected.&lt;br&gt;- **disconnect**: an event indicating that the screen is disconnected.&lt;br&gt;- **change**: an event indicating that the screen state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the screen ID, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`);
+  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`)
 };
-// Subscribe to the screen connection event.
 screen.on('connect', callback);
 ```
 
@@ -55,7 +54,7 @@ screen.on('connect', callback);
 function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<long>): void
 ```
 
-开启屏幕状态变化的监听。
+Subscribes to events related to the screen state.
 
 **Since:** 9
 
@@ -71,23 +70,22 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | 监听事件。&lt;br/&gt;-eventType为"connect"表示屏幕连接事件。&lt;br/&gt;-eventType为" disconnect"表示断开屏幕连接事件。&lt;br/&gt;-eventType为"change"表示屏幕状态改变事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回屏幕的id，该参数为整数。 |
+| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | Event type.&lt;br&gt;- **connect**: an event indicating that the screen is connected.&lt;br&gt;- **disconnect**: an event indicating that the screen is disconnected.&lt;br&gt;- **change**: an event indicating that the screen state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the screen ID, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`);
+  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`)
 };
-// Subscribe to the screen connection event.
 screen.on('connect', callback);
 ```
 
@@ -98,7 +96,7 @@ screen.on('connect', callback);
 function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<long>): void
 ```
 
-开启屏幕状态变化的监听。
+Subscribes to events related to the screen state.
 
 **Since:** 9
 
@@ -114,23 +112,22 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | 监听事件。&lt;br/&gt;-eventType为"connect"表示屏幕连接事件。&lt;br/&gt;-eventType为" disconnect"表示断开屏幕连接事件。&lt;br/&gt;-eventType为"change"表示屏幕状态改变事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | 回调函数。返回屏幕的id，该参数为整数。 |
+| eventType | 'connect' \| 'disconnect' \| 'change' | Yes | Event type.&lt;br&gt;- **connect**: an event indicating that the screen is connected.&lt;br&gt;- **disconnect**: an event indicating that the screen is disconnected.&lt;br&gt;- **change**: an event indicating that the screen state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the screen ID, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`);
+  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`)
 };
-// Subscribe to the screen connection event.
 screen.on('connect', callback);
 ```
 

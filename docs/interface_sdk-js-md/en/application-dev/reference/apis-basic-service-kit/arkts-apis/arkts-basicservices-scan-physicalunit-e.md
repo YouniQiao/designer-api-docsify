@@ -1,6 +1,6 @@
 # PhysicalUnit
 
-定义物理单位的枚举。
+Enumerates the physical units.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SCAN_UNIT_NONE = 0
 ```
 
-无单位。
+No unit.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ SCAN_UNIT_NONE = 0
 SCAN_UNIT_PIXEL = 1
 ```
 
-像素单位。
+Pixel unit.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ SCAN_UNIT_PIXEL = 1
 SCAN_UNIT_BIT = 2
 ```
 
-位单位。
+Bit unit.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ SCAN_UNIT_BIT = 2
 SCAN_UNIT_MM = 3
 ```
 
-毫米单位。
+Millimeter unit.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ SCAN_UNIT_MM = 3
 SCAN_UNIT_DPI = 4
 ```
 
-DPI单位。
+DPI unit.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ DPI单位。
 SCAN_UNIT_PERCENT = 5
 ```
 
-百分比单位。
+Percentage unit.
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ SCAN_UNIT_PERCENT = 5
 SCAN_UNIT_MICROSECOND = 6
 ```
 
-微秒单位。
+Microsecond unit.
 
 **Since:** 20
 

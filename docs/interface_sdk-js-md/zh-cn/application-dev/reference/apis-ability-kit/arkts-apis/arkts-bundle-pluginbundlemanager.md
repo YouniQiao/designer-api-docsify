@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-## 导入模块
-
-```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

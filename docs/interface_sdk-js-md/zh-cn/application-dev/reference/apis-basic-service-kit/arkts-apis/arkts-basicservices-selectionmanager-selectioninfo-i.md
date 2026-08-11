@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## bundleName
 
 ```TypeScript

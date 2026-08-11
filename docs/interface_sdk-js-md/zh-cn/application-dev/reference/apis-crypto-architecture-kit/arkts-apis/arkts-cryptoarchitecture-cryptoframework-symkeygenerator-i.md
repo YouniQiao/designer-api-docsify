@@ -13,12 +13,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## convertKey
 
 ```TypeScript
@@ -50,18 +44,20 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的对称密钥材料。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定的对称密钥材料。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -80,6 +76,31 @@ function testConvertKey() {
   let keyMaterialBlob = genKeyMaterialBlob();
   symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
     console.info('Convert symKey result: success, algName: ' + symKey.algName);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
+
+function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
+    if (symKey != undefined) {
+      console.info('Convert symKey success, algName: ' + symKey.algName);
+    }
   });
 }
 ```
@@ -108,7 +129,7 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的密钥材料数据。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定的密钥材料数据。 |
 
 **返回值：**
 
@@ -120,11 +141,13 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -148,6 +171,34 @@ function testConvertKey() {
     }).catch((error: BusinessError) => {
       console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
     });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
+
+async function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  try {
+    let symKey = await symKeyGenerator.convertKey(keyMaterialBlob);
+    console.info('Convert symKey success, algName：' + symKey.algName);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`Convert symKey failed, ${e.code}, ${e.message}`);
+  }
 }
 ```
 
@@ -181,7 +232,7 @@ convertKeySync(key: DataBlob): SymKey
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 指定的对称密钥材料。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定的对称密钥材料。 |
 
 **返回值：**
 
@@ -193,9 +244,9 @@ convertKeySync(key: DataBlob): SymKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -255,10 +306,12 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -267,6 +320,21 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
   symKeyGenerator.generateSymKey((err, symKey) => {
     console.info('Generate symKey result: success, algName：' + symKey.algName);
   });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testGenerateSymKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    if (symKey != undefined) {
+      console.info('Generate symKey success, algName：' + symKey.algName);
+    }
+  });
+}
 ```
 
 ## generateSymKey
@@ -301,10 +369,12 @@ generateSymKey(): Promise<SymKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -317,6 +387,26 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
     }).catch((error: BusinessError) => {
       console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
     });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function testGenerateSymKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  try {
+    let symKey = await symKeyGenerator.generateSymKey();
+    if (symKey != undefined) {
+      console.info('Generate symKey success, algName: ' + symKey.algName);
+    }
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`Generate symKey failed, ${e.code}, ${e.message}`);
+  }
+}
 ```
 
 ## generateSymKeySync
@@ -359,8 +449,8 @@ generateSymKeySync(): SymKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17620004 | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
-| 17620001 | 内存操作失败。 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 

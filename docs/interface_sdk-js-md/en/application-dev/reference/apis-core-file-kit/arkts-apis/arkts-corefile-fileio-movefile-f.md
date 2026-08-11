@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function moveFile(src: string, dest: string, mode?: int): Promise<void>
 ```
 
-移动文件至目标路径，支持设置冲突处理模式。使用Promise异步回调。
+Moves a file to the target path. You can set the conflict handling mode. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 23
 
@@ -30,15 +30,15 @@ function moveFile(src: string, dest: string, mode?: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| mode | int | No | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| mode | int | No | Move mode. &lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -71,11 +71,11 @@ function moveFile(src: string, dest: string, mode?: int): Promise<void>
 function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。
+Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 23
 
@@ -89,9 +89,9 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -124,11 +124,11 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void
 ```
 
-移动文件至目标路径，支持设置冲突处理模式。使用callback异步回调。
+Moves a file to the target path. You can set the conflict handling mode. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 23
 
@@ -142,10 +142,10 @@ function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| mode | int | Yes | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| mode | int | Yes | Move mode. &lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

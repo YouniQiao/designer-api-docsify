@@ -1,6 +1,6 @@
 # IndexerAlign
 
-索引条提示弹窗的对齐样式枚举。
+indexer align property.
 
 **Since:** 23
 

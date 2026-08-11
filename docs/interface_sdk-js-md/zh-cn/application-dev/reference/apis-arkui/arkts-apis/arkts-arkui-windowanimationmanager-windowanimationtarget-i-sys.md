@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -86,7 +80,7 @@ readonly windowBounds: RRect
 
 /* 动画目标窗口所对应的实际大小。
 
-**类型：** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
+**类型：** [RRect](arkts-arkui-remotewindow-rrect-i-sys.md)
 
 **起始版本：** 9
 

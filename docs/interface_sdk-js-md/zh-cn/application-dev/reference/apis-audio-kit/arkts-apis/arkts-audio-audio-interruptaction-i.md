@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## actionType
 
 ```TypeScript

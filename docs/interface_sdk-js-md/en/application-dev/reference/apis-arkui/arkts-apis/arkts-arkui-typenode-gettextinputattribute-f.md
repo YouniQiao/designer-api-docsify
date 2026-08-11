@@ -6,7 +6,7 @@
 export function getTextInputAttribute(node: FrameNode): TextInputAttribute | undefined
 ```
 
-获取FrameNode的属性实例来设置属性。
+Get the attribute instance of FrameNode to set attributes.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ export function getTextInputAttribute(node: FrameNode): TextInputAttribute | und
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

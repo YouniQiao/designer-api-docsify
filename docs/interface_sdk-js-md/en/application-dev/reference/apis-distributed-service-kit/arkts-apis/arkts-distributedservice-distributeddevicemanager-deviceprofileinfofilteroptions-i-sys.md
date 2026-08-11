@@ -1,6 +1,6 @@
 # DeviceProfileInfoFilterOptions (System API)
 
-设备信息过滤器选项。
+Defines device profile information filter options.
 
 **Since:** 15
 
@@ -24,7 +24,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 deviceIdList?: Array<string>
 ```
 
-表示获取指定deviceId的设备信息，deviceId一般为设备的UDID，如设备无UDID，则取其MAC或SN作为deviceId。默认为空。
+Device ID list.
 
 **Type:** Array&lt;string&gt;
 
@@ -44,10 +44,7 @@ deviceIdList?: Array<string>
 isCloud : boolean
 ```
 
-表示是否需要实时从云端获取设备列表。
-
-- false：表示从设备获取。  
-- true：表示从云端获取。
+Whether to request data from the cloud.
 
 **Type:** boolean
 

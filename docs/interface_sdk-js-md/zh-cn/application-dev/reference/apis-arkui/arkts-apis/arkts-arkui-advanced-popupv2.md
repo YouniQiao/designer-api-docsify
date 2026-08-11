@@ -4,12 +4,6 @@
  无
 
 
-## 导入模块
-
-```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

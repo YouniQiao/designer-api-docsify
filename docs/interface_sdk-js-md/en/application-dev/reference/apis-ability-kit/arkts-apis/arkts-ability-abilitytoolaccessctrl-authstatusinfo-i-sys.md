@@ -1,6 +1,6 @@
 # AuthStatusInfo (System API)
 
-授权状态信息。
+Authorization status information.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 authStatus?: AuthStatus
 ```
 
-授权状态。
+Authorization status.
 
 **Type:** [AuthStatus](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)
 
@@ -38,7 +38,7 @@ authStatus?: AuthStatus
 flag?: long
 ```
 
-授权标志。取值范围：(-∞,+∞)。
+Authorization flag.Value range: (-∞,+∞).
 
 **Type:** long
 

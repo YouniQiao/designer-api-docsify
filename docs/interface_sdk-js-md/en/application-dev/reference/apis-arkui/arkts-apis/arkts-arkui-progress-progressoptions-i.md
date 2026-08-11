@@ -1,6 +1,6 @@
 # ProgressOptions
 
-进度条选项。
+Defines the option of Progress.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 total?: double
 ```
 
-指定进度总长。设置小于等于0的数值时置为100。默认值：100。
+Sets the total of Progress.Default value: 100.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ total?: double
 type?: ProgressType
 ```
 
-指定进度条类型。默认值：ProgressType.Linear。
+Sets the type of Progress.Default value: ProgressType.Linear.
 
 **Type:** [ProgressType](arkts-arkui-progress-progresstype-e.md)
 
@@ -56,7 +56,7 @@ type?: ProgressType
 value: double
 ```
 
-指定当前进度值。设置小于0的数值时置为0，设置大于total的数值时置为total。取值范围：[0, total]。
+Sets the value of Progress.
 
 **Type:** double
 

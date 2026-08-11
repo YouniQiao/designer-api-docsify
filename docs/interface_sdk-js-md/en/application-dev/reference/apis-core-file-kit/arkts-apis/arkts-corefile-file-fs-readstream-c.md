@@ -1,6 +1,10 @@
 # ReadStream
 
-文件可读流，需要先通过fileIo.createReadStream方法来构建一个ReadStream实例。ReadStream继承自数据流基类stream.Readable。ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
+Defines a readable stream. You need to use  
+[fileIo.createReadStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from  
+[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md/arkts-arkts-stream-readableoptions-i.md).
+
+The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)
 
@@ -24,7 +28,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): void
 ```
 
-关闭可读流。
+Closes this readable stream.
 
 **Since:** 12
 
@@ -49,7 +53,7 @@ close(): void
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
+const rs = fs.createReadStream(filePath);
 rs.close();
 ```
 
@@ -59,7 +63,7 @@ rs.close();
 constructor()
 ```
 
-构造一个文件可读流.
+The ReadStream constructor.
 
 **Since:** 12
 
@@ -75,7 +79,7 @@ constructor()
 seek(offset: number, whence?: WhenceType): number
 ```
 
-调整可读流偏移指针位置。
+Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
 
@@ -103,7 +107,7 @@ seek(offset: number, whence?: WhenceType): number
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -111,9 +115,9 @@ seek(offset: number, whence?: WhenceType): number
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-const curOff = rs.seek(5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, current offset is ${curOff}`);
+const rs = fs.createReadStream(filePath);
+const curOff = rs.seek(5, fs.WhenceType.SEEK_SET);
+console.info(`current offset is ${curOff}`);
 rs.close();
 ```
 
@@ -123,7 +127,7 @@ rs.close();
 readonly bytesRead: number
 ```
 
-可读流已经读取的字节数。
+Number of bytes read by the readable stream.
 
 **Type:** number
 
@@ -141,7 +145,7 @@ readonly bytesRead: number
 readonly path: string
 ```
 
-当前可读流对应的文件路径。
+Path of the file corresponding to the readable stream.
 
 **Type:** string
 

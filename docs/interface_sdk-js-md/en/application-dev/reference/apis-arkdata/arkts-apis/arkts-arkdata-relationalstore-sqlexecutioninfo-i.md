@@ -1,6 +1,6 @@
 # SqlExecutionInfo
 
-描述数据库执行的SQL语句的统计信息。
+Represents statistics about SQL statements executed by the database.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 executeTime: long
 ```
 
-表示执行SQL语句的时间，单位为μs。
+Time used to execute the SQL statements, in μs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ executeTime: long
 prepareTime: long
 ```
 
-表示准备SQL和绑定参数的时间，单位为μs。
+Time used to get the SQL statements ready and bind parameters, in μs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,8 +58,7 @@ prepareTime: long
 sql: Array<string>
 ```
 
-表示执行的SQL语句的数组。当  
-[batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)的参数太大时，可能有多个SQL。
+SQL statements executed. If the value of [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert) is too large, multiple SQL statements may be executed.
 
 **Type:** Array&lt;string&gt;
 
@@ -77,7 +76,7 @@ sql: Array<string>
 totalTime: long
 ```
 
-表示执行SQL语句的总时间，单位为μs。
+Total time used to execute the SQL statements, in μs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -95,7 +94,7 @@ totalTime: long
 waitTime: long
 ```
 
-表示获取句柄的时间，单位为μs。
+Time used to obtain the handle, in μs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

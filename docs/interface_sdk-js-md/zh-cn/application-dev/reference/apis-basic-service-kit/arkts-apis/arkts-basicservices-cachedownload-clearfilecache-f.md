@@ -1,11 +1,5 @@
 # clearFileCache
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## clearFileCache
 
 ```TypeScript
@@ -24,9 +18,15 @@ function clearFileCache(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
-  
+cacheDownload.clearFileCache();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
 cacheDownload.clearFileCache();
 ```
 

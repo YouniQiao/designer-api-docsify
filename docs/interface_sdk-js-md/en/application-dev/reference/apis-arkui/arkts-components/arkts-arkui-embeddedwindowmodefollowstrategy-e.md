@@ -1,6 +1,6 @@
 # EmbeddedWindowModeFollowStrategy
 
-窗口模式跟随策略，用于设置窗口模式跟随宿主或EmbeddedUIExtensionAbility。
+Enumeration of different types of EmbeddedWindowModeFollowStrategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 FOLLOW_HOST_WINDOW_MODE = 0
 ```
 
-表示窗口模式跟随宿主。
+Followed the host Window Mode.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ FOLLOW_HOST_WINDOW_MODE = 0
 FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 ```
 
-表示窗口模式跟随EmbeddedUIExtensionAbility。
+Followed the EmbeddedUIExtensionAbility.
 
 **Since:** 26.0.0
 

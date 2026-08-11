@@ -4,7 +4,7 @@
 type PlayForSearchEvent = (command: SearchPlayInfoType, args: SearchPlayInfo) => Promise<OperResult>
 ```
 
-搜播事件。使用Promise异步回调。
+The play for search event.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ type PlayForSearchEvent = (command: SearchPlayInfoType, args: SearchPlayInfo) =>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Yes |  |
-| args | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | Yes |  |
+| command | [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Yes | command |
+| args | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | Yes | args |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回搜播的操作结果对象。 |
+| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
 

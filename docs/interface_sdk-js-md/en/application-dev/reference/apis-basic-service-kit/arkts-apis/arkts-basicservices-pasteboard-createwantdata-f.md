@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createWantData(want: Want): PasteData
 ```
 
-构建一个Want剪贴板内容对象。
+Creates a **PasteData** object of the Want type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createWantData(want: Want): PasteData
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
 ## Examples
 

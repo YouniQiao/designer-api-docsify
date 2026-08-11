@@ -1,6 +1,6 @@
 # CopyOptions
 
-拷贝进度回调监听
+Defines the callback for listening for the copy progress.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 progressListener?: ProgressListener
 ```
 
-拷贝进度监听。
+Listener used to observe the copy progress.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ progressListener?: ProgressListener
 copySignal?: TaskSignal
 ```
 
-取消拷贝信号。
+Signal used to cancel a copy task.
 
 **Type:** [TaskSignal](arkts-corefile-fileio-tasksignal-c.md)
 

@@ -1,6 +1,6 @@
 # ImageAttachment
 
-图片对象说明。
+Describes the image attachment.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 constructor(value: ImageAttachmentInterface)
 ```
 
-图片对象的构造函数。
+A constructor used to create an image object.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ constructor(value: ImageAttachmentInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | 图片设置项。 |
+| value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | Image attachment options. |
 
 ## constructor
 
@@ -42,7 +42,8 @@ constructor(value: ImageAttachmentInterface)
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片的支持。
+A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and  
+[ResourceStr](arkts-arkui-resourcestr-t.md) types.
 
 **Since:** 15
 
@@ -60,7 +61,7 @@ constructor(attachment: Optional<AttachmentType>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | [Optional](arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | Yes | PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片设置项。 |
+| attachment | [Optional](arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md). |
 
 ## colorFilter
 
@@ -68,7 +69,7 @@ constructor(attachment: Optional<AttachmentType>)
 readonly colorFilter?: ColorFilterType
 ```
 
-获取属性字符串的图片颜色滤镜效果。
+Image color filter of the styled string.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -90,7 +91,7 @@ readonly colorFilter?: ColorFilterType
 readonly layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-获取属性字符串的图片布局。
+Image layout of the styled string.
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -112,7 +113,7 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 readonly objectFit?: ImageFit
 ```
 
-获取属性字符串的图片缩放类型。
+Image scale type of the styled string.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -134,9 +135,9 @@ readonly objectFit?: ImageFit
 readonly size?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
+Image size of the styled string.
 
-返回number类型值的单位为`px`。
+Number-type values use px as the unit.
 
 **Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
@@ -158,11 +159,11 @@ readonly size?: SizeOptions
 readonly sizeInVp?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
+Image size of the styled string.
 
-返回number类型值的单位为`vp`。
+Number-type values use vp as the unit.
 
-当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
+If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
 
 **Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
 
@@ -184,11 +185,12 @@ readonly sizeInVp?: SizeOptions
 readonly supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
+Whether to enable  
+[enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
 
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
+**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -210,7 +212,7 @@ true：支持SVG解析新能力；false：保持原有SVG解析能力。
 readonly value: PixelMap
 ```
 
-获取属性字符串的图片数据源。
+Image data source of the styled string.
 
 **Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -232,7 +234,7 @@ readonly value: PixelMap
 readonly verticalAlign?: ImageSpanAlignment
 ```
 
-获取属性字符串的图片对齐方式。
+Image alignment mode of the styled string.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
 

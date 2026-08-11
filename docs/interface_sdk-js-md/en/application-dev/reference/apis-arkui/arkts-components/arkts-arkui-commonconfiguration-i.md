@@ -1,6 +1,6 @@
 # CommonConfiguration
 
-开发者需要自定义class实现ContentModifier接口。
+You need a custom class to implement the **ContentModifier** API.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 contentModifier: ContentModifier<T>
 ```
 
-用于将用户需要的组件信息发送到自定义内容区。
+Content modifier that sends the component information required by users to the custom content area.
 
 **Type:** [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;T&gt;
 
@@ -38,7 +38,7 @@ contentModifier: ContentModifier<T>
 enabled: boolean
 ```
 
-如果该值为true，则contentModifier可用，并且可以响应triggerChange等操作，如果设置为false，则不会响应triggerChange等操作。
+Whether to enable the content modifier and respond to operations such as **triggerChange**. The value **true** means to enable the content modifier and respond to operations such as **triggerChange**, and **false** means the opposite.
 
 **Type:** boolean
 

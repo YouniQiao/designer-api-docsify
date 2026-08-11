@@ -38,5 +38,5 @@ Specifies the displayId to which the target Component belongs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function fdatasyncSync(fd: number): void
 ```
 
-以同步方法实现文件内容的数据同步。
+Synchronizes the data of a file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ declare function fdatasyncSync(fd: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
+| fd | number | Yes | FD of the file. |
 
 **Error codes:**
 

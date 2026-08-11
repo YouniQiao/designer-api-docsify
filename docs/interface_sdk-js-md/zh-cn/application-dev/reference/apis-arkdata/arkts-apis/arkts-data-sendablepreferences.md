@@ -20,12 +20,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
-## 导入模块
-
-```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
-```
-
 ## 汇总
 
 ### 函数

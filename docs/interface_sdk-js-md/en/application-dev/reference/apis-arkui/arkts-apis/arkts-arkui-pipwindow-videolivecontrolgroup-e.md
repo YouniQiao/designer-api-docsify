@@ -1,6 +1,7 @@
 # VideoLiveControlGroup
 
-视频直播控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_LIVE时使用。
+Enumerates the live video component groups. They are used only when  
+[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_LIVE**.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 VIDEO_PLAY_PAUSE = 401
 ```
 
-播放/暂停直播控件组。
+Play/Pause component group for live video.
 
 **Since:** 12
 
@@ -34,7 +35,7 @@ VIDEO_PLAY_PAUSE = 401
 MUTE_SWITCH = 402
 ```
 
-静音控件组。
+Mute/Unmute component group.
 
 **Since:** 12
 

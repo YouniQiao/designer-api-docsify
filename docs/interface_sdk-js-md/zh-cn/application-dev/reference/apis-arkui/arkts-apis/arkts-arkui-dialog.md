@@ -2,12 +2,6 @@
 
 提供统一的Dialog API。
 
-## 导入模块
-
-```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 命名空间

@@ -12,7 +12,7 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void
 ```
 
-查询拉起指定应用的want对象，使用callback异步回调。
+Obtains the Want object that launches the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 程序启动作为入参的回调函数，返回拉起指定应用的want对象。 |
+| bundleName | string | Yes | Bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want object. |
 
 
 ## getLaunchWantForBundle
@@ -40,7 +40,7 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 function getLaunchWantForBundle(bundleName: string): Promise<Want>
 ```
 
-查询拉起指定应用的want对象，使用Promise异步回调。
+Obtains the Want object that launches the specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ function getLaunchWantForBundle(bundleName: string): Promise<Want>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询的应用Bundle名称。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 

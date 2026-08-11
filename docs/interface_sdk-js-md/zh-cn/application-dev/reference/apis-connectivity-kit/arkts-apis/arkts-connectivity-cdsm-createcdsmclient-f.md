@@ -1,11 +1,5 @@
 # createCdsmClient
 
-## 导入模块
-
-```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
-```
-
 ## createCdsmClient
 
 ```TypeScript
@@ -42,10 +36,10 @@ function createCdsmClient(address: string): CdsmClient
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
-| 36100050 | Coordinated Devices Set Management not supported. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 36100041 | Invalid address. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| [36100050](../errorcode-nearlink-service.md#36100050-不支持合作设备集合管理功能) | Coordinated Devices Set Management not supported. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100041](../errorcode-nearlink-service.md#36100041-无效地址) | Invalid address. |
 

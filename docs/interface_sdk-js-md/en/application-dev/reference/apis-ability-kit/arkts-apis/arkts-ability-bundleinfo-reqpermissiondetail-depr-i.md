@@ -1,10 +1,11 @@
 # ReqPermissionDetail
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [ReqPermissionDetail](arkts-ability-bundleinfo-i.md) instead.
 
-应用运行时需向系统申请的权限集合的详细信息。
+Provides the detailed information of the permissions to request from the system.
 
 **Since:** 7
 
@@ -24,7 +25,7 @@
 name: string
 ```
 
-需要使用的权限名称。
+Name of the permission to request.
 
 **Type:** string
 
@@ -48,7 +49,7 @@ name: string
 reason: string
 ```
 
-描述申请权限的原因。
+Reason for requesting the permission.
 
 **Type:** string
 
@@ -72,7 +73,7 @@ reason: string
 usedScene: UsedScene
 ```
 
-权限使用的场景和时机。
+Application scenario and timing for using the permission.
 
 **Type:** [UsedScene](arkts-ability-bundlemanager-usedscene-t.md)
 

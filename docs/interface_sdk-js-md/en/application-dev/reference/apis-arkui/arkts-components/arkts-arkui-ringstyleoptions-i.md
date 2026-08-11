@@ -1,8 +1,9 @@
 # RingStyleOptions
 
-环形无刻度样式选项。
+Options of the ring style without scales.
 
-继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and  
+[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
 **Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
@@ -20,11 +21,11 @@
 shadow?: boolean
 ```
 
-进度条阴影开关。
+Whether to enable the shadow effect.
 
-true：表示打开进度条阴影；false：表示关闭进度条阴影。
+**true**: The shadow effect is enabled. **false**: The shadow effect is disabled.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -46,9 +47,10 @@ true：表示打开进度条阴影；false：表示关闭进度条阴影。
 status?: ProgressStatus
 ```
 
-设置进度条状态。当设置为ProgressStatus.LOADING时会开启检查更新动效，此时设置进度值不生效。当从ProgressStatus.LOADING设置为ProgressStatus.PROGRESSING时，检查更新动效会执行到终点再停止。
+Progress state. When this parameter is set to **ProgressStatus.LOADING**, the update check animation is enabled,and the progress value setting does not take effect. When the value changes from **ProgressStatus.LOADING** to  
+**ProgressStatus.PROGRESSING**, the update check animation runs to completion and then stops.
 
-默认值：ProgressStatus.PROGRESSING
+Default value: **ProgressStatus.PROGRESSING**
 
 **Type:** [ProgressStatus](arkts-arkui-progressstatus-e.md)
 
@@ -70,13 +72,9 @@ status?: ProgressStatus
 strokeWidth?: Length
 ```
 
-设置进度条宽度。
+Stroke width of the progress indicator. Percentage values are not supported.
 
-默认值：4.0vp
-
-取值范围：大于0的数值，不支持百分比设置。
-
-超出取值范围或设置非法值时按默认值处理。
+Default value: **4.0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

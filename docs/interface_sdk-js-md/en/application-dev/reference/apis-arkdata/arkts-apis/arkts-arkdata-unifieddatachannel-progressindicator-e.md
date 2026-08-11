@@ -1,6 +1,6 @@
 # ProgressIndicator
 
-表示进度条指示选项的枚举，可选择是否采用系统默认进度显示。
+Enumerates the progress indicator options.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不采用系统默认进度显示。
+Do not use the default progress indicator.
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ NONE = 0
 DEFAULT = 1
 ```
 
-采用系统默认进度显示，500ms内获取数据完成将不会拉起默认进度条。
+Use the default progress indicator. If data is obtained within 500 ms, the default progress bar is not started.
 
 **Since:** 15
 

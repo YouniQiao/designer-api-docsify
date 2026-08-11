@@ -1,10 +1,12 @@
 # ListDividerOptions
 
-用于设置List或ListItemGroup组件的分割线样式。
+Defines the divider style of the list or list item group.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,9 +22,9 @@
 color?: ResourceColor
 ```
 
-分割线颜色。
+Color of the divider.Anonymous Object Rectification.
 
-默认值：0x08000000
+&lt;p&gt;&lt;strong&gt;Default value&lt;/strong&gt;: 0x08000000&lt;/p&gt;
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -46,17 +48,9 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与列表侧边结束端的距离。
+Distance between the divider and the end edge of the list.Anonymous Object Rectification.
 
-默认值：0
-
-单位：vp
-
-**说明：**
-
-设置为负数或者百分比时，按默认值处理。
-
-endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
+&lt;p&gt;&lt;strong&gt;Default value&lt;/strong&gt;: **0**&lt;br&gt;Unit: vp&lt;br&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;If this parameter is set to a negative number or a percentage, the default value will be used.&lt;br&gt;If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -80,17 +74,9 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 startMargin?: Length
 ```
 
-分割线与列表侧边起始端的距离。
+Distance between the divider and the start edge of the list.Anonymous Object Rectification.
 
-默认值：0
-
-单位：vp
-
-**说明：**
-
-设置为负数或者百分比时，按默认值处理。
-
-endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
+&lt;p&gt;&lt;strong&gt;Default value&lt;/strong&gt;: **0**&lt;br&gt;Unit: vp&lt;br&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;If this parameter is set to a negative number or a percentage, the default value will be used.&lt;br&gt;If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -114,13 +100,9 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 strokeWidth: Length
 ```
 
-分割线的线宽。
+Width of the divider.&lt;br&gt;Unit: vp Anonymous Object Rectification.
 
-单位：vp
-
-**说明：**
-
-设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;If this parameter is set to a negative number, a percentage, or a value greater than or equal to the length of the list content area, the value &lt;strong&gt;0&lt;/strong&gt; will be used.&lt;/p&gt;
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

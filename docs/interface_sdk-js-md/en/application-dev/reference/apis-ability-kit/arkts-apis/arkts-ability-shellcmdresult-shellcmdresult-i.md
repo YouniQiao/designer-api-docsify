@@ -1,10 +1,10 @@
 # ShellCmdResult
 
-本模块提供Shell命令执行结果的能力。
+The **ShellCmdResult** module provides the shell command execution result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
+> The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 exitCode: int
 ```
 
-Shell命令的结果码。
+Result code of the shell command.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ Shell命令的结果码。
 stdResult: string
 ```
 
-Shell命令的标准输出内容。
+Standard output of the shell command.
 
 **Type:** string
 

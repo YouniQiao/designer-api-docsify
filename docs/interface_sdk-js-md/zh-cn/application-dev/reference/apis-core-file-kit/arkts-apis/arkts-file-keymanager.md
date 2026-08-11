@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Encryption
 
-## 导入模块
-
-```TypeScript
-import { keyManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## 汇总
 
 <!--Del-->

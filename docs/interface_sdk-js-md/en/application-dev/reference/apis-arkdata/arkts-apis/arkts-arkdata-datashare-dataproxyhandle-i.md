@@ -1,7 +1,7 @@
 # DataProxyHandle
 
-数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle)构建一个实例。
+Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using  
+[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle).
 
 **Since:** 20
 
@@ -23,7 +23,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-根据URI删除指定的共享配置项。使用Promise异步回调。只有配置发布方能删除共享配置项。
+Deletes the specified shared configuration items based on URIs. This API uses a promise to return the result.Only the publisher is allowed to delete shared configuration items.
 
 **Since:** 20
 
@@ -39,21 +39,21 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | string[] | Yes | 表示需要删除的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度 为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内 不允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。 |
+| uris | string[] | Yes | URI array of the shared configuration items to be deleted, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| Promise&lt;DataProxyResult[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -68,7 +68,7 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
     console.info(`URI: ${result.uri}, Result: ${result.result}`);
   });
 }).catch((error: BusinessError) => {
-  console.error(`Failed to delete config. code: ${error.code}, message: ${error.message}`);
+  console.error('Error deleting config:', error);
 });
 ```
 
@@ -78,7 +78,7 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-删除当前发布者发布的所有共享配置项。使用Promise异步回调。只有配置发布方能删除共享配置项。
+Deletes all the data published by the publisher.Only the data publisher can delete the data.
 
 **Since:** 26.0.0
 
@@ -94,35 +94,20 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| Promise&lt;DataProxyResult[]&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## Examples
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to delete all configs. Code: ${error.code}, message: ${error.message}`);
-});
-```
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## get
 
@@ -130,7 +115,7 @@ dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxy
 get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 ```
 
-根据URI获取指定的共享配置项。使用Promise异步回调。只有发布者和允许列表中指定的应用可以访问该共享配置项。
+Obtains a specified shared configuration item based on the URI. This API uses a promise to return the result.Only the publisher and applications in the allowed list can access the shared configuration item.
 
 **Since:** 20
 
@@ -146,21 +131,21 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | string[] | Yes | 表示需要获取的共享配置的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为6 4。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允 许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。从API版本26.0.0开始，获取的共享配置项的值长度不能超出 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制。超出限制时，对应获取操作结果的返回值状态码 [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)为OVER_LIMIT。 |
+| uris | string[] | Yes | URI array of the shared configuration items to be obtained, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyGetResult[]&gt; | Promise对象。返回批量获取操作的结果数组。 |
+| Promise&lt;DataProxyGetResult[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -175,7 +160,7 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
     console.info(`URI: ${result.uri}, Result: ${result.result}, AllowList: ${result.allowList}`);
   });
 }).catch((error: BusinessError) => {
-  console.error(`Failed to get config. code: ${error.code}, message: ${error.message}`);
+  console.error('Error getting config:', error);
 });
 ```
 
@@ -185,7 +170,8 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
 getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
-获取指定 URI 下的所有多值类型数据。只有发布者和位于 [allowList](arkts-arkdata-datashare-proxydata-i.md#allowlist) 中的应用程序才能获取此数据。该 API 使用 Promise异步回调。
+Obtains all multi-value data under a specified URI. Only the publisher and the applications in the  
+[allowList](arkts-arkdata-datashare-proxydata-i.md#allowlist) can obtain the data. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -201,54 +187,23 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要操作的数据所对应的URI。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 数据代理操作的配置。 |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; | Promise对象，用于返回URI下所有值的数组。 |
+| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; | Promise used to return an array of all values under the URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## Examples
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle!.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  let result: ValueType[] = await dataProxyHandle?.getValues(testUri, config);
-  console.info(`getValues success. Values: ` + JSON.stringify(result));
-} catch (error) {
-  console.error(`getValues failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## off
 
@@ -261,7 +216,7 @@ off(
     ): DataProxyResult[]
 ```
 
-取消订阅指定URI对应代理数据变更事件。
+Unsubscribes from the change event of the proxy data corresponding to a specified URI.
 
 **Since:** 20
 
@@ -277,23 +232,23 @@ off(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 订阅的事件/回调类型，支持的事件为'dataChange'。 |
-| uris | string[] | Yes | 表示要取消订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长 度为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用 内不允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | No | 回调函数。表示指定取消订阅的callback通知，如果为空、undefined或null，则取消订阅这些 URI下所有的通知事件。 |
+| event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
+| uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | Batch operation result array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -305,7 +260,7 @@ const config: dataShare.DataProxyConfig = {
 };
 const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
   if (err) {
-    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+    console.error('err:', err);
   } else {
     changes.forEach((change) => {
       console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
@@ -358,8 +313,8 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## on
 
@@ -372,11 +327,10 @@ on(
     ): DataProxyResult[]
 ```
 
-订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。
+Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
 
-触发通知：配置发布方调用[publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish)、  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete)、  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete)接口发布、删除指定配置或者删除所有配置时会自动触发通知。
+When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish) or  
+[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
 
@@ -392,23 +346,23 @@ on(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 订阅的事件/回调类型，支持的事件为'dataChange'，当配置发布方修改配置时，触发该事件。 |
-| uris | string[] | Yes | 表示要订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为 64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不 允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。从API版本26.0.0开始，当变更的共享配置内容长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制时，该共享配置内容会被截断。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | Yes | 回调函数。当配置发布方修改配置时会回调该函数。 |
+| event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
+| uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | Batch operation result array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -420,7 +374,7 @@ const config: dataShare.DataProxyConfig = {
 };
 const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
   if (err) {
-    console.error(`Failed to receive data change notification. Code: ${err.code}, message: ${err.message}`);
+    console.error('err:', err);
   } else {
     changes.forEach((change) => {
       console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
@@ -473,8 +427,8 @@ Registers observers to observe proxy data change specified by the given URIs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## publish
 
@@ -482,7 +436,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-发布共享配置项。使用Promise异步回调。发布后，发布者和允许列表中指定的应用可以访问该共享配置项。如果要发布的URI已经存在，则更新对应的共享配置项。如果发布的配置项中存在任一URI的长度超出上限或者格式校验失败，则当前发布操作失败。只有发布者才允许更新共享配置项。API版本26.0.0之前，每个应用支持最多32个共享配置；从API版本26.0.0开始，每个应用支持最多64个共享配置。
+Publishes shared configuration items. This API uses a promise to return the result. After shared configuration items are published, the publisher and the applications in the allowlist can access these items. If the URI to be published already exists, the corresponding shared configuration item is updated. If any URI in the configuration item to be published exceeds the maximum length or fails the format verification, the current publish operation fails. Only the publisher can update shared configuration items. Each application supports a maximum of 32 shared configurations.
 
 **Since:** 20
 
@@ -498,21 +452,21 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | Yes | 表示需要创建或者更新的共享配置项数组。API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为64。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 表示数据代理操作的配置。从API版本26.0.0开始，如果发布的配置项中存在任一值的长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制，则当前发布操作失败。 |
+| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| Promise&lt;DataProxyResult[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -520,11 +474,11 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 const newConfigData: dataShare.ProxyData[] = [{
   uri: 'datashareproxy://com.example.app1/config1',
   value: 'Value1',
-  allowList: ['appIdentifier2', 'appIdentifier3'], // The string here is only an example. Replace it with the actual appIdentifier of the application during use.
+  allowList: ['appIdentifier2', 'appIdentifier3'], // This string is for reference only. Replace it with the actual application identifier.
 }, {
   uri: 'datashareproxy://com.example.app1/config2',
   value: 'Value2',
-  allowList: ['appIdentifier3', 'appIdentifier4'], // The string here is only an example. Replace it with the actual appIdentifier of the application during use.
+  allowList: ['appIdentifier3', 'appIdentifier4'], // This string is for reference only. Replace it with the actual application identifier.
 }];
 const config: dataShare.DataProxyConfig = {
   type: dataShare.DataProxyType.SHARED_CONFIG,
@@ -534,7 +488,7 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
     console.info(`URI: ${result.uri}, Result: ${result.result}`);
   });
 }).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+  console.error('Error publishing config:', error);
 });
 ```
 
@@ -550,7 +504,7 @@ ArkTS-Sta:
 putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>
 ```
 
-将一个值写入到已发布的数据中。该操作仅支持对多值类型数据执行。若传入的**key**不存在，则添加新的值；若传入的**key**已存在，则更新该key对应的值。默认情况下，单条数据（即URI）在单次应用中最多可添加10个值，每个值最大长度为4096字节。同时，单条数据（即一个URI）在单次应用中所有值总长度受限于数据发布时指定的**maxValueLength**参数值。请注意，该API中**maxValueLength**参数不生效。该API使用Pr omise异步回调。
+Puts a value into the published data. This operation can be performed only on multi-value type data. If the input **key** does not exist, a new value is added. If the input **key** already exists, the value corresponding to the key is updated. By default, a maximum of 10 values can be added to a single data record (that is, a URI)for a single application, and the maximum length of each value is 4096 bytes. In addition, the total length of all values in a single data record is limited by the value of the **maxValueLength** parameter that is specified during data publishing. Note that the **maxValueLength** parameter does not take effect in this API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -566,56 +520,25 @@ putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要操作的数据所对应的URI。 |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 添加的值所对应的Key，对同一个应用来说是唯一的。 &lt;br&gt;取值范围为全体整数。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 待添加的值。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 数据代理操作的配置。 |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The key corresponding to the added value. It is unique for the same application. &lt;br&gt;The value range is all integers. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | The value to be put. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## Examples
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  await dataProxyHandle?.putValue(testUri, 1, 'hello', config);
-  console.info(`putValue success`);
-} catch (error) {
-  console.error(`putValue failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## removeValue
 
@@ -629,7 +552,7 @@ ArkTS-Sta:
 removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 ```
 
-移除键对应的值。该操作仅能对多值类型数据执行。仅能移除本应用添加过的值。使用Promise异步回调。
+Removes the value corresponding to the key. This operation can be performed only on multi-value type data. Only values added by this application can be removed. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -645,53 +568,22 @@ removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要操作的数据所对应的URI。 |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 添加的值所对应的key。 &lt;br&gt;取值范围为全体整数。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | 数据代理操作的配置。 |
+| uri | string | Yes | Indicates the URI of the data to operate. |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The key corresponding to the added value. &lt;br&gt;The value range is all integers. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## Examples
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  await dataProxyHandle?.removeValue(testUri, 0, config);
-  console.info(`removeValue success`);
-} catch (error) {
-  console.error(`removeValue failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 

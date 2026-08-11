@@ -1,6 +1,6 @@
 # @ohos.accessibility.config
 
-本模块提供系统辅助功能的配置，包括辅助扩展的启用与关闭、高对比度文字显示、鼠标键、无障碍字幕配置等。
+The **accessibility.config** module provides APIs for configuring system accessibility features, including accessibility extension, high-contrast text, mouse buttons, and captions.
 
 **Since:** 9
 
@@ -25,24 +25,26 @@ import { config } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability) | 关闭辅助扩展。使用Promise异步回调。 |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-1) | 关闭辅助扩展，使用callback异步回调。 |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability) | 启用辅助扩展。使用Promise异步回调。 |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-1) | 启用辅助扩展，使用callback异步回调。 |
-| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) | 启用辅助扩展，并指定[ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md)作为辅助扩展应用状态变化的回调函数。使用Promise异步回调。 |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability) | Disables an accessibility extension ability. This API uses a promise to return the result. |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-1) | Disables an accessibility extension ability. This API uses an asynchronous callback to return the result. |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability) | Enables an accessibility extension ability. This API uses a promise to return the result. |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-1) | Enables an accessibility extension ability. This API uses an asynchronous callback to return the result. |
+| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) | Enables the auxiliary extension ability and specifies [ConnectCallback](ConnectCallback) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result. |
 | [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getseniormodestateforapp) | Get the senior mode state for app. |
-| [off](arkts-accessibility-config-off-f-sys.md#off) | 取消启用的辅助扩展的列表变化监听，使用callback异步回调。 |
-| [off](arkts-accessibility-config-off-f-sys.md#off-1) | 取消已安装的辅助扩展的列表变化监听，使用callback异步回调。 |
+| [off](arkts-accessibility-config-off-f-sys.md#off) | Cancels a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous callback to return the result. |
+| [off](arkts-accessibility-config-off-f-sys.md#off-1) | Cancels a listener for changes in the list of installed accessibility extension abilities. This API uses an asynchronous callback to return the result. |
 | [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offenabledaccessibilityextensionlistchange) | Unregister listener that watches for changes in the enabled status of accessibility extensions. |
 | [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md#offinstalledaccessibilitylistchange) | Unregister listener that watches for changes in the installed status of accessibility extensions. |
 | [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp) | Unregister the observer for application's senior mode state changes. |
-| [on](arkts-accessibility-config-on-f-sys.md#on) | 添加启用的辅助扩展的列表变化监听，使用callback异步回调。 |
-| [on](arkts-accessibility-config-on-f-sys.md#on-1) | 添加已安装的辅助扩展的列表变化监听，使用callback异步回调。 |
+| [on](arkts-accessibility-config-on-f-sys.md#on) | Adds a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous callback to return the result. |
+| [on](arkts-accessibility-config-on-f-sys.md#on-1) | Adds a listener for changes in the list of installed accessibility extension abilities. This API uses an asynchronous callback to return the result. |
 | [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md#onenabledaccessibilityextensionlistchange) | Register the listener that watches for changes in the enabled status of accessibility extensions. |
 | [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md#oninstalledaccessibilitylistchange) | Register the listener that watches for changes in the installed status of accessibility extensions. |
 | [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onseniormodestatechangeforapp) | Register an observer for anyone application's senior mode state changes. |
-| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setmagnificationstate) | 触发或者关闭放大手势功能的放大效果，使用前需要保证放大手势功能已开启。 |
+| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setmagnificationstate) | Sets the magnification state. Ensure that magnification is enabled before calling this API. |
 | [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setseniormodestateforapp) | Set the senior mode state for app. |
+| [startBlinking](arkts-accessibility-config-startblinking-f-sys.md#startblinking) | Enable the flash or screen to blink for flash alert. |
+| [stopBlinking](arkts-accessibility-config-stopblinking-f-sys.md#stopblinking) | Stop the flash or screen to blink for flash alert. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -51,8 +53,18 @@ import { config } from 'kits/@kit.AccessibilityKit';
 | Name | Description |
 | --- | --- |
 | [AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md) | Indicates the senior mode information of an application. |
-| [Config](arkts-accessibility-config-config-i-sys.md) | 用于属性的设置、获取与监听。 |
-| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | 通过[enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调用。 |
+| [Config](arkts-accessibility-config-config-i-sys.md) | Implements configuration, acquisition, and listening for properties. |
+| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [BlinkResultCode](arkts-accessibility-config-blinkresultcode-e-sys.md) | Enumerates the result codes for blinking operations. |
+| [BlinkingMode](arkts-accessibility-config-blinkingmode-e-sys.md) | Blinking Mode Enumeration |
+| [BlinkingScenario](arkts-accessibility-config-blinkingscenario-e-sys.md) | Blinking Scenario Enumeration |
 <!--DelEnd-->
 
 <!--Del-->
@@ -60,10 +72,10 @@ import { config } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md) | 用于不同时间长短的点击重复时间。 |
-| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | 颜色滤镜功能开启时（[daltonizationState](daltonizationState)设置为true)，颜色滤镜的配置(即设置的DaltonizationColorFilter的值)生效；颜色滤镜功能关闭时（[daltonizationState](daltonizationState)设置为false)，显示为正常类型。 |
-| [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md) | 描述AccessibilityExtensionAbility断开连接的回调接口。 |
-| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | 忽略重复点击功能开启时（[ignoreRepeatClick](ignoreRepeatClick)设置为true)，忽略重复点击的配置(即设置的RepeatClickInterval的值)生效；忽略重复点击功能关闭时（[ignoreRepeatClick](ignoreRepeatClick)设置为false)，显示为正常类型。 |
+| [ClickResponseTime](arkts-accessibility-config-clickresponsetime-t-sys.md) | Defines the length of time for a click. |
+| [DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md) | Enumerates the daltonization filters.The configuration of **DaltonizationColorFilter** takes effect only when  [daltonizationState](daltonizationState) is set to **true**; the normal type is used when  [daltonizationState](daltonizationState) is set to **false**. |
+| [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md) | Describes the callback to be invoked when the connection to **AccessibilityExtensionAbility** is disconnected. |
+| [RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md) | Defines the interval between repeated clicks.The configuration of **RepeatClickInterval** takes effect when [ignoreRepeatClick](ignoreRepeatClick) is set to **true**; the normal type is used when [ignoreRepeatClick](ignoreRepeatClick) is set to **false**. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -71,13 +83,13 @@ import { config } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [audioBalance](arkts-accessibility-config-con-sys.md#audiobalance) | 表示左右声道音量平衡的配置。取值范围为-1.0~1.0。默认值为0.0。 |
-| [audioMono](arkts-accessibility-config-con-sys.md#audiomono) | 表示单声道音频的配置。true表示已启用单声道音频，false表示未启用单声道音频，默认值为false。 |
-| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickresponsetime) | 表示点击持续时间功能配置。 |
-| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) | 表示颜色滤镜功能启动状态。配合daltonizationColorFilter使用。true表示已启用颜色滤镜功能，false表示未启用颜色滤镜功能，默认值为false。 |
-| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) | 表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。 |
-| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) | 表示忽略重复点击功能配置。 |
+| [audioBalance](arkts-accessibility-config-con-sys.md#audiobalance) | Audio balance for the left and right audio channels. The value ranges from -1.0 to 1.0.  Default value: **0.0** |
+| [audioMono](arkts-accessibility-config-con-sys.md#audiomono) | Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the opposite.  Default value: **false** |
+| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickresponsetime) | Length of time required for a click. |
+| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) | Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates that daltonization is enabled, and **false** indicates the opposite.  Default value: **false** |
+| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) | Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value  **true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.  Default value: **false** |
+| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) | Interval between repeated clicks. |
 | [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) | Indicates the configuration of screen magnification. |
-| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) | 表示辅助扩展快捷键的列表配置。取值为辅助应用的名称，格式为：['bundleName/abilityName']。 |
+| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) | List of target applications for the accessibility shortcut keys. The value format is ['bundleName/abilityName']. |
 <!--DelEnd-->
 

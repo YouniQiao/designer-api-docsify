@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## isEnhancedRoutingSupported
 
 ```TypeScript
@@ -74,8 +68,8 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
-| 6800301 | Audio service error occurs, such as the service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, such as the service died. |
 
 ## selectInputDeviceForAudioCapturer
 
@@ -112,8 +106,8 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
-| 6800301 | Audio service error occurs, such as the service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, such as the service died. |
 
 ## selectOutputDevice
 
@@ -149,8 +143,8 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
-| 6800301 | Audio service error occurs, such as the service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, such as the service died. |
 
 ## selectOutputDeviceForAudioRenderer
 
@@ -187,6 +181,6 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
-| 6800301 | Audio service error occurs, such as the service died. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, such as the service died. |
 

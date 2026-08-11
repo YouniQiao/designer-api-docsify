@@ -1,6 +1,6 @@
 # USBPort (System API)
 
-USB设备端口。
+Represents a USB port.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 id: int
 ```
 
-USB端口唯一标识。
+Unique identifier of a USB port.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ USB端口唯一标识。
 status: USBPortStatus
 ```
 
-USB端口角色。
+USB port role.
 
 **Type:** [USBPortStatus](arkts-basicservices-usb-usbportstatus-i-sys.md)
 
@@ -64,7 +64,7 @@ USB端口角色。
 supportedModes: PortModeType
 ```
 
-USB端口所支持的模式的数字组合掩码。
+Numeric mask combination for the supported mode list.
 
 **Type:** [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md)
 

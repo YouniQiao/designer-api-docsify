@@ -1,11 +1,11 @@
 # IconStyle
 
-设置关闭按钮的色调样式，默认为亮色调。
+Sets the color style of the close button. By default, the close button is set to light color.
 
-| 名称 | 值 | 说明 |  
+| Name| Value| Description|  
 | - | - | - |  
-| DARK | 0 | 设置关闭按钮为暗色调。 |  
-| LIGHT | 1 | 设置关闭按钮为亮色调。默认值。 |
+| DARK | 0 | The close button is in dark color.|  
+| LIGHT | 1 | The close button is in light color.Default value.|
 
 **Since:** 12
 
@@ -21,7 +21,7 @@
 DARK = 0
 ```
 
-设置关闭按钮为暗色调。
+Sets the button icon to dark.
 
 **Since:** 12
 
@@ -39,7 +39,7 @@ DARK = 0
 LIGHT = 1
 ```
 
-设置关闭按钮为亮色调。默认值。
+Sets the button icon to light.
 
 **Since:** 12
 

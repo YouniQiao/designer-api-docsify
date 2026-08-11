@@ -1,6 +1,6 @@
 # FlowItemFrameNode
 
-定义FlowItem类型的FrameNode。
+Define the FlowItem type of FrameNode.
 
 **Inheritance/Implementation:** FlowItemFrameNode extends [TypedFrameNode<FlowItemAttribute>](TypedFrameNode<FlowItemAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(): FlowItemAttribute
 ```
 
-初始化FlowItem类型的FrameNode。
+Initialize FlowItem FrameNode.
 
 **Since:** 23
 

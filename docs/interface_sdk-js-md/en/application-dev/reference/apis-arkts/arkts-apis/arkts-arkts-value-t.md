@@ -4,7 +4,7 @@
 type Value = string | double | Decimal
 ```
 
-表示用于构建Decimal的参数类型。
+The type used to denote decimal value
 
 **Since:** 12
 

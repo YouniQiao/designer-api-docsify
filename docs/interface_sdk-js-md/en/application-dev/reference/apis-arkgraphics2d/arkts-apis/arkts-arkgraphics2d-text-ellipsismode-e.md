@@ -1,8 +1,8 @@
 # EllipsisMode
 
-省略号类型枚举。
+Enumerates the ellipsis styles.
 
-EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。
+**EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
 
 **Since:** 12
 
@@ -18,7 +18,8 @@ EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。
 START = 0
 ```
 
-开头省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
+Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in  
+[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
 
@@ -36,7 +37,8 @@ START = 0
 MIDDLE = 1
 ```
 
-中间省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
+Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in  
+[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
 
@@ -54,7 +56,8 @@ MIDDLE = 1
 END = 2
 ```
 
-末尾省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
+Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in  
+[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
 
@@ -72,7 +75,8 @@ END = 2
 MULTILINE_START = 3
 ```
 
-开头省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
+Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in  
+[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 24
 
@@ -90,7 +94,8 @@ MULTILINE_START = 3
 MULTILINE_MIDDLE = 4
 ```
 
-中间省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
+Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in  
+[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 24
 

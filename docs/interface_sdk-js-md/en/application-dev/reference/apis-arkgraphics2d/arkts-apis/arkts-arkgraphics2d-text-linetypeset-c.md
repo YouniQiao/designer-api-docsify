@@ -1,9 +1,10 @@
 # LineTypeset
 
-保存文本内容及样式的载体，可用于计算单行排版信息。
+Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use  
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the  
+[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
 
 **Since:** 18
 
@@ -31,7 +32,7 @@ ArkTS-Sta:
 createLine(startIndex: int, count: int): TextLine
 ```
 
-根据指定的排版区间生成文本行对象。
+Generates a text line object based on the specified layout range.
 
 **Since:** 18
 
@@ -47,20 +48,20 @@ createLine(startIndex: int, count: int): TextLine
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 开始计算排版的起始位置，整数，取值范围为[0, 文本字符总数)。 |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 从指定起始位置开始进行排版的字符个数，取值为 [0,文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。当count为0时，表示排版区间为[startIndex, 文本的最后一个字符位置]。 可以先使用[getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak)获取合理的排版字符总数。 |
+| startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak) to obtain the number of characters that can fit in the layout. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | 根据文本区间字符生成的TextLine对象。 |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | TextLine** object generated based on the characters in the text range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -83,7 +84,7 @@ ArkTS-Sta:
 getLineBreak(startIndex: int, width: double): int
 ```
 
-计算在限定宽度下，从指定位置开始可以排版的字符数。
+Obtains the number of characters that can fit in the layout from the specified position within a limited width.
 
 **Since:** 18
 
@@ -99,20 +100,20 @@ getLineBreak(startIndex: int, width: double): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 开始计算排版的起始位置（包括起始位置）。取值范围需要为[0,文本字符总数）的整数，当参数超出范围时抛出异常。 |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 可用于排版的宽度，大于0的浮点数，单位为物理像素px。 |
+| startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position (inclusive) for calculation. The value is an integer in the range [0, total number of text characters). If the parameter is out of range, an exception is thrown. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Layout width. The value is a floating point number greater than 0, in px. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回在限定排版宽度下，从指定位置开始可排版的字符总数，取值为整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of characters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
