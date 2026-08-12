@@ -221,7 +221,7 @@ ArkUI_DragEvent* OH_ArkUI_NodeEvent_GetDragEvent(ArkUI_NodeEvent* nodeEvent)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* nodeEvent | ArkUI_NodeEvent事件指针。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* nodeEvent | ArkUI_NodeEvent事件指针。 |
 
 **返回：**
 
@@ -245,7 +245,7 @@ ArkUI_PreDragStatus OH_ArkUI_NodeEvent_GetPreDragStatus(ArkUI_NodeEvent* nodeEve
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* nodeEvent | ArkUI_NodeEvent节点对象。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* nodeEvent | ArkUI_NodeEvent节点对象。 |
 
 **返回：**
 
@@ -910,7 +910,7 @@ int32_t OH_ArkUI_CancelDataLoading(ArkUI_ContextHandle uiContext, const char* ke
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | UI实例对象指针。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI实例对象指针。 |
 | const char* key | 表示数据的key值并通过 [OH_ArkUI_DragEvent_StartDataLoading](capi-drag-and-drop-h.md#oh_arkui_dragevent_startdataloading) 返回。 |
 
 **返回：**
@@ -935,7 +935,7 @@ int32_t OH_ArkUI_DisableDropDataPrefetchOnNode(ArkUI_NodeHandle node, bool disab
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 | bool disabled | 表示是禁用数据预取过程。true表示禁止，false表示不禁止。 |
 
 **返回：**
@@ -960,7 +960,7 @@ int32_t OH_ArkUI_SetDragEventStrictReportWithNode(ArkUI_NodeHandle node, bool en
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 | bool enabled | 是否开启严格上报。true表示开启严格上报，false表示关闭严格上报。 |
 
 **返回：**
@@ -985,7 +985,7 @@ int32_t OH_ArkUI_SetDragEventStrictReportWithContext(ArkUI_ContextHandle uiConte
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | UI实例指针。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI实例指针。 |
 | bool enabled | 是否开启严格上报。true表示开启严格上报，false表示关闭严格上报。 |
 
 **返回：**
@@ -1010,7 +1010,7 @@ int32_t OH_ArkUI_SetNodeAllowedDropDataTypes(ArkUI_NodeHandle node, const char* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 | const char* typesArray[] | Indicates the array of types of data that can be dropped. |
 | int32_t count | 数组的长度。 |
 
@@ -1036,7 +1036,7 @@ int32_t OH_ArkUI_DisallowNodeAnyDropDataTypes(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 
 **返回：**
 
@@ -1060,7 +1060,7 @@ int32_t OH_ArkUI_AllowNodeAllDropDataTypes(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 
 **返回：**
 
@@ -1084,7 +1084,7 @@ int32_t OH_ArkUI_SetNodeDraggable(ArkUI_NodeHandle node, bool enabled)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 | bool enabled | 是否支持拖出。true表示支持拖出，false表示不支持拖出。 |
 
 **返回：**
@@ -1109,7 +1109,7 @@ int32_t OH_ArkUI_SetNodeDragPreview(ArkUI_NodeHandle node, OH_PixelmapNative* pr
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标组件节点指针。 |
 | OH_PixelmapNative* preview | 自定义跟手图，使用 pixelmap 格式。 |
 
 **返回：**
@@ -1320,7 +1320,7 @@ int32_t OH_ArkUI_SetNodeDragPreviewOption(ArkUI_NodeHandle node, ArkUI_DragPrevi
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 | [ArkUI_DragPreviewOption](capi-arkui-nativemodule-arkui-dragpreviewoption.md)* option | 自定义参数。 |
 
 **返回：**
@@ -1345,7 +1345,7 @@ ArkUI_DragAction* OH_ArkUI_CreateDragActionWithNode(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 组件节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 组件节点指针。 |
 
 **返回：**
 
@@ -1369,7 +1369,7 @@ ArkUI_DragAction* OH_ArkUI_CreateDragActionWithContext(ArkUI_ContextHandle uiCon
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | UI实例对象指针。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI实例对象指针。 |
 
 **返回：**
 
@@ -1878,7 +1878,7 @@ ArkUI_ErrorCode OH_ArkUI_EnableDropDisallowedBadge(ArkUI_ContextHandle uiContext
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | UI实例对象指针。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI实例对象指针。 |
 | bool enabled | 是否可以显示禁用角标。true表示可以显示禁用角标，false表示不可以显示禁用角标。 |
 
 **返回：**

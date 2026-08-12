@@ -40,8 +40,8 @@ Attach application to the input method service.
 
 | Parameter | Description |
 | -- | -- |
-| InputMethod_TextEditorProxy *textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the lifecycle of textEditorProxy.If the call succeeds, caller cannot release textEditorProxy until the next attach or detach call. |
-| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) *textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the lifecycle of textEditorProxy.If the call succeeds, caller cannot release textEditorProxy until the next attach or detach call. |
+| InputMethod_AttachOptions *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
 | InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
@@ -67,8 +67,8 @@ Attach application to the input method service.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_ContextHandle context | UIContext pointer of the page where the attach will be performed. |
-| InputMethod_TextEditorProxy *textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the lifecycle of textEditorProxy.If the call succeeds, caller cannot release textEditorProxy until the next attach or detach call. |
-| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) *textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance.The caller needs to manage the lifecycle of textEditorProxy.If the call succeeds, caller cannot release textEditorProxy until the next attach or detach call. |
+| InputMethod_AttachOptions *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.The options when attaching input method. |
 | InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) instance.Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
